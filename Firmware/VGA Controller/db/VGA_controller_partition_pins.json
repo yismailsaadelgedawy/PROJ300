@@ -16,6 +16,22 @@
 					"strict" : false
 				},
 				{
+					"name" : "r3",
+					"strict" : false
+				},
+				{
+					"name" : "r2",
+					"strict" : false
+				},
+				{
+					"name" : "r1",
+					"strict" : false
+				},
+				{
+					"name" : "r0",
+					"strict" : false
+				},
+				{
 					"name" : "SW0",
 					"strict" : false
 				},

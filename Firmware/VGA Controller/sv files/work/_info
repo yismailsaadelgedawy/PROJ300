@@ -59,6 +59,56 @@ r1
 !i113 1
 R5
 R6
+vrgb_controller
+R1
+!s110 1706617273
+!i10b 1
+!s100 AMJG3NPzz_9Lgg2bhzW1h2
+R2
+ImL@d@d^UE7N:ORFk02nA^2
+R3
+S1
+R0
+w1706617267
+8C:/Users/minec/Desktop/Work/GitHub Repos/PROJ300/Firmware/VGA Controller/sv files/rgb_controller.sv
+FC:/Users/minec/Desktop/Work/GitHub Repos/PROJ300/Firmware/VGA Controller/sv files/rgb_controller.sv
+!i122 124
+L0 1 61
+R4
+r1
+!s85 0
+31
+!s108 1706617273.000000
+!s107 C:/Users/minec/Desktop/Work/GitHub Repos/PROJ300/Firmware/VGA Controller/sv files/rgb_controller.sv|
+!s90 -reportprogress|300|-work|work|C:/Users/minec/Desktop/Work/GitHub Repos/PROJ300/Firmware/VGA Controller/sv files/rgb_controller.sv|
+!i113 1
+R5
+R6
+vrgb_controller_tb
+R1
+!s110 1706617275
+!i10b 1
+!s100 mU;hbzTW30FbAB]4CJ_aD3
+R2
+IE2[zA9X0H9;z_;IFT?=ml2
+R3
+S1
+R0
+w1706617266
+8C:/Users/minec/Desktop/Work/GitHub Repos/PROJ300/Firmware/VGA Controller/sv files/rgb_controller_tb.sv
+FC:/Users/minec/Desktop/Work/GitHub Repos/PROJ300/Firmware/VGA Controller/sv files/rgb_controller_tb.sv
+!i122 125
+L0 1 89
+R4
+r1
+!s85 0
+31
+!s108 1706617275.000000
+!s107 C:/Users/minec/Desktop/Work/GitHub Repos/PROJ300/Firmware/VGA Controller/sv files/rgb_controller_tb.sv|
+!s90 -reportprogress|300|-work|work|C:/Users/minec/Desktop/Work/GitHub Repos/PROJ300/Firmware/VGA Controller/sv files/rgb_controller_tb.sv|
+!i113 1
+R5
+R6
 vt_ff
 R1
 !s110 1706593555
@@ -156,6 +206,56 @@ r1
 R8
 !s107 C:/Users/minec/Desktop/Work/GitHub Repos/PROJ300/Firmware/VGA Controller/sv files/vsync_cnt_tb.sv|
 !s90 -reportprogress|300|-work|work|C:/Users/minec/Desktop/Work/GitHub Repos/PROJ300/Firmware/VGA Controller/sv files/vsync_cnt_tb.sv|
+!i113 1
+R5
+R6
+vxnor_2
+R1
+Z9 !s110 1706618656
+!i10b 1
+!s100 W[L2IESV0S=0]?MVoCzRg2
+R2
+I=CG;>jIo8Mmgd23WQdCM02
+R3
+S1
+R0
+w1706618642
+8C:/Users/minec/Desktop/Work/GitHub Repos/PROJ300/Firmware/VGA Controller/sv files/xnor_2.sv
+FC:/Users/minec/Desktop/Work/GitHub Repos/PROJ300/Firmware/VGA Controller/sv files/xnor_2.sv
+!i122 126
+L0 1 22
+R4
+r1
+!s85 0
+31
+Z10 !s108 1706618656.000000
+!s107 C:/Users/minec/Desktop/Work/GitHub Repos/PROJ300/Firmware/VGA Controller/sv files/xnor_2.sv|
+!s90 -reportprogress|300|-work|work|C:/Users/minec/Desktop/Work/GitHub Repos/PROJ300/Firmware/VGA Controller/sv files/xnor_2.sv|
+!i113 1
+R5
+R6
+vxnor_2_tb
+R1
+R9
+!i10b 1
+!s100 jhzYmj:MFkMmI]=55ZKMO3
+R2
+I@>6]k8gMla[n4aggR52FL0
+R3
+S1
+R0
+w1706618626
+8C:/Users/minec/Desktop/Work/GitHub Repos/PROJ300/Firmware/VGA Controller/sv files/xnor_2_tb.sv
+FC:/Users/minec/Desktop/Work/GitHub Repos/PROJ300/Firmware/VGA Controller/sv files/xnor_2_tb.sv
+!i122 127
+L0 1 63
+R4
+r1
+!s85 0
+31
+R10
+!s107 C:/Users/minec/Desktop/Work/GitHub Repos/PROJ300/Firmware/VGA Controller/sv files/xnor_2_tb.sv|
+!s90 -reportprogress|300|-work|work|C:/Users/minec/Desktop/Work/GitHub Repos/PROJ300/Firmware/VGA Controller/sv files/xnor_2_tb.sv|
 !i113 1
 R5
 R6

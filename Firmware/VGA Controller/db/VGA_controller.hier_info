@@ -4,9 +4,22 @@ SW0 => hsync_cnt:inst1.rst
 SW0 => t_ff:inst.rst
 SW0 => vsync_cnt:inst2.rst
 SW0 => led0.DATAIN
+SW0 => rgb_controller:inst4.rst
 50MHz_clk => t_ff:inst.clk
 vsync <= vsync_cnt:inst2.vsync
 led0 <= SW0.DB_MAX_OUTPUT_PORT_TYPE
+r3 <= rgb_controller:inst4.r[3]
+r2 <= rgb_controller:inst4.r[2]
+r1 <= rgb_controller:inst4.r[1]
+r0 <= rgb_controller:inst4.r[0]
+g3 <= rgb_controller:inst4.g[3]
+g2 <= rgb_controller:inst4.g[2]
+g1 <= rgb_controller:inst4.g[1]
+g0 <= rgb_controller:inst4.g[0]
+b3 <= rgb_controller:inst4.b[3]
+b2 <= rgb_controller:inst4.b[2]
+b1 <= rgb_controller:inst4.b[1]
+b0 <= rgb_controller:inst4.b[0]
 
 
 |VGA_controller|hsync_cnt:inst1
@@ -104,5 +117,60 @@ clk => count_reg[6].CLK
 clk => count_reg[7].CLK
 clk => count_reg[8].CLK
 clk => count_reg[9].CLK
+
+
+|VGA_controller|rgb_controller:inst4
+r[0] <= colour_reg[8].DB_MAX_OUTPUT_PORT_TYPE
+r[1] <= colour_reg[9].DB_MAX_OUTPUT_PORT_TYPE
+r[2] <= colour_reg[10].DB_MAX_OUTPUT_PORT_TYPE
+r[3] <= colour_reg[11].DB_MAX_OUTPUT_PORT_TYPE
+g[0] <= colour_reg[4].DB_MAX_OUTPUT_PORT_TYPE
+g[1] <= colour_reg[5].DB_MAX_OUTPUT_PORT_TYPE
+g[2] <= colour_reg[6].DB_MAX_OUTPUT_PORT_TYPE
+g[3] <= colour_reg[7].DB_MAX_OUTPUT_PORT_TYPE
+b[0] <= colour_reg[0].DB_MAX_OUTPUT_PORT_TYPE
+b[1] <= colour_reg[1].DB_MAX_OUTPUT_PORT_TYPE
+b[2] <= colour_reg[2].DB_MAX_OUTPUT_PORT_TYPE
+b[3] <= colour_reg[3].DB_MAX_OUTPUT_PORT_TYPE
+row[0] => ~NO_FANOUT~
+row[1] => ~NO_FANOUT~
+row[2] => ~NO_FANOUT~
+row[3] => ~NO_FANOUT~
+row[4] => ~NO_FANOUT~
+row[5] => ~NO_FANOUT~
+row[6] => ~NO_FANOUT~
+row[7] => ~NO_FANOUT~
+row[8] => ~NO_FANOUT~
+row[9] => ~NO_FANOUT~
+column[0] => ~NO_FANOUT~
+column[1] => ~NO_FANOUT~
+column[2] => ~NO_FANOUT~
+column[3] => ~NO_FANOUT~
+column[4] => ~NO_FANOUT~
+column[5] => ~NO_FANOUT~
+column[6] => ~NO_FANOUT~
+column[7] => ~NO_FANOUT~
+column[8] => ~NO_FANOUT~
+column[9] => ~NO_FANOUT~
+rst => Decoder0.IN0
+en => Decoder0.IN1
+clk => colour_reg[0].CLK
+clk => colour_reg[1].CLK
+clk => colour_reg[2].CLK
+clk => colour_reg[3].CLK
+clk => colour_reg[4].CLK
+clk => colour_reg[5].CLK
+clk => colour_reg[6].CLK
+clk => colour_reg[7].CLK
+clk => colour_reg[8].CLK
+clk => colour_reg[9].CLK
+clk => colour_reg[10].CLK
+clk => colour_reg[11].CLK
+
+
+|VGA_controller|xnor_2:inst5
+q <= always0.DB_MAX_OUTPUT_PORT_TYPE
+a => always0.IN0
+b => always0.IN1
 
 
