@@ -1,4 +1,108 @@
 |VGA_controller
-50MHz_clk => ~NO_FANOUT~
+hsync <= hsync_cnt:inst1.hsync
+SW0 => hsync_cnt:inst1.rst
+SW0 => t_ff:inst.rst
+SW0 => vsync_cnt:inst2.rst
+SW0 => led0.DATAIN
+50MHz_clk => t_ff:inst.clk
+vsync <= vsync_cnt:inst2.vsync
+led0 <= SW0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|VGA_controller|hsync_cnt:inst1
+hsync <= hsync~reg0.DB_MAX_OUTPUT_PORT_TYPE
+rgb_en <= rgb_en~reg0.DB_MAX_OUTPUT_PORT_TYPE
+column[0] <= count_reg[0].DB_MAX_OUTPUT_PORT_TYPE
+column[1] <= count_reg[1].DB_MAX_OUTPUT_PORT_TYPE
+column[2] <= count_reg[2].DB_MAX_OUTPUT_PORT_TYPE
+column[3] <= count_reg[3].DB_MAX_OUTPUT_PORT_TYPE
+column[4] <= count_reg[4].DB_MAX_OUTPUT_PORT_TYPE
+column[5] <= count_reg[5].DB_MAX_OUTPUT_PORT_TYPE
+column[6] <= count_reg[6].DB_MAX_OUTPUT_PORT_TYPE
+column[7] <= count_reg[7].DB_MAX_OUTPUT_PORT_TYPE
+column[8] <= count_reg[8].DB_MAX_OUTPUT_PORT_TYPE
+column[9] <= count_reg[9].DB_MAX_OUTPUT_PORT_TYPE
+rst => count_reg.OUTPUTSELECT
+rst => count_reg.OUTPUTSELECT
+rst => count_reg.OUTPUTSELECT
+rst => count_reg.OUTPUTSELECT
+rst => count_reg.OUTPUTSELECT
+rst => count_reg.OUTPUTSELECT
+rst => count_reg.OUTPUTSELECT
+rst => count_reg.OUTPUTSELECT
+rst => count_reg.OUTPUTSELECT
+rst => count_reg.OUTPUTSELECT
+rst => hsync.OUTPUTSELECT
+rst => rgb_en.OUTPUTSELECT
+clk => rgb_en~reg0.CLK
+clk => hsync~reg0.CLK
+clk => count_reg[0].CLK
+clk => count_reg[1].CLK
+clk => count_reg[2].CLK
+clk => count_reg[3].CLK
+clk => count_reg[4].CLK
+clk => count_reg[5].CLK
+clk => count_reg[6].CLK
+clk => count_reg[7].CLK
+clk => count_reg[8].CLK
+clk => count_reg[9].CLK
+
+
+|VGA_controller|t_ff:inst
+q <= q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+t => Equal0.IN2
+rst => Equal0.IN3
+rst => WideNor0.IN1
+rst => Selector0.IN5
+clk => q~reg0.CLK
+
+
+|VGA_controller|vsync_cnt:inst2
+vsync <= vsync~reg0.DB_MAX_OUTPUT_PORT_TYPE
+rgb_en <= rgb_en~reg0.DB_MAX_OUTPUT_PORT_TYPE
+row[0] <= count_reg[0].DB_MAX_OUTPUT_PORT_TYPE
+row[1] <= count_reg[1].DB_MAX_OUTPUT_PORT_TYPE
+row[2] <= count_reg[2].DB_MAX_OUTPUT_PORT_TYPE
+row[3] <= count_reg[3].DB_MAX_OUTPUT_PORT_TYPE
+row[4] <= count_reg[4].DB_MAX_OUTPUT_PORT_TYPE
+row[5] <= count_reg[5].DB_MAX_OUTPUT_PORT_TYPE
+row[6] <= count_reg[6].DB_MAX_OUTPUT_PORT_TYPE
+row[7] <= count_reg[7].DB_MAX_OUTPUT_PORT_TYPE
+row[8] <= count_reg[8].DB_MAX_OUTPUT_PORT_TYPE
+row[9] <= count_reg[9].DB_MAX_OUTPUT_PORT_TYPE
+column[0] => Equal0.IN9
+column[1] => Equal0.IN8
+column[2] => Equal0.IN7
+column[3] => Equal0.IN6
+column[4] => Equal0.IN5
+column[5] => Equal0.IN2
+column[6] => Equal0.IN4
+column[7] => Equal0.IN3
+column[8] => Equal0.IN1
+column[9] => Equal0.IN0
+rst => count_reg.OUTPUTSELECT
+rst => count_reg.OUTPUTSELECT
+rst => count_reg.OUTPUTSELECT
+rst => count_reg.OUTPUTSELECT
+rst => count_reg.OUTPUTSELECT
+rst => count_reg.OUTPUTSELECT
+rst => count_reg.OUTPUTSELECT
+rst => count_reg.OUTPUTSELECT
+rst => count_reg.OUTPUTSELECT
+rst => count_reg.OUTPUTSELECT
+rst => vsync.OUTPUTSELECT
+rst => rgb_en.OUTPUTSELECT
+clk => rgb_en~reg0.CLK
+clk => vsync~reg0.CLK
+clk => count_reg[0].CLK
+clk => count_reg[1].CLK
+clk => count_reg[2].CLK
+clk => count_reg[3].CLK
+clk => count_reg[4].CLK
+clk => count_reg[5].CLK
+clk => count_reg[6].CLK
+clk => count_reg[7].CLK
+clk => count_reg[8].CLK
+clk => count_reg[9].CLK
 
 
