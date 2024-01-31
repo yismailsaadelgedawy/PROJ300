@@ -39,7 +39,7 @@ https://fpgasoftware.intel.com/eula.
 )
 (pin
 	(input)
-	(rect 184 168 352 184)
+	(rect 224 152 392 168)
 	(text "INPUT" (rect 125 0 153 10)(font "Arial" (font_size 6)))
 	(text "SW0" (rect 5 0 28 12)(font "Arial" ))
 	(pt 168 8)
@@ -52,7 +52,7 @@ https://fpgasoftware.intel.com/eula.
 		(line (pt 109 12)(pt 113 8))
 	)
 	(text "VCC" (rect 128 7 148 17)(font "Arial" (font_size 6)))
-	(annotation_block (location)(rect 120 184 184 208))
+	(annotation_block (location)(rect 160 168 224 192))
 )
 (pin
 	(output)
@@ -90,7 +90,7 @@ https://fpgasoftware.intel.com/eula.
 )
 (pin
 	(output)
-	(rect 808 192 984 208)
+	(rect 872 192 1048 208)
 	(text "OUTPUT" (rect 1 0 39 10)(font "Arial" (font_size 6)))
 	(text "led0" (rect 90 0 110 12)(font "Arial" ))
 	(pt 0 8)
@@ -103,7 +103,7 @@ https://fpgasoftware.intel.com/eula.
 		(line (pt 82 8)(pt 78 12))
 		(line (pt 78 12)(pt 82 8))
 	)
-	(annotation_block (location)(rect 984 208 1048 232))
+	(annotation_block (location)(rect 1048 208 1112 232))
 )
 (pin
 	(output)
@@ -589,35 +589,6 @@ https://fpgasoftware.intel.com/eula.
 	(annotation_block (parameter)(rect 80 512 256 552))
 )
 (symbol
-	(rect 344 608 552 704)
-	(text "rgbMUX" (rect 5 0 53 19)(font "Intel Clear" (font_size 8)))
-	(text "inst7" (rect 8 75 30 92)(font "Intel Clear" ))
-	(port
-		(pt 0 32)
-		(input)
-		(text "A[11..0]" (rect 0 0 47 19)(font "Intel Clear" (font_size 8)))
-		(text "A[11..0]" (rect 21 27 68 46)(font "Intel Clear" (font_size 8)))
-		(line (pt 0 32)(pt 16 32)(line_width 3))
-	)
-	(port
-		(pt 0 48)
-		(input)
-		(text "B[11..0]" (rect 0 0 47 19)(font "Intel Clear" (font_size 8)))
-		(text "B[11..0]" (rect 21 43 68 62)(font "Intel Clear" (font_size 8)))
-		(line (pt 0 48)(pt 16 48)(line_width 3))
-	)
-	(port
-		(pt 208 32)
-		(output)
-		(text "colour_data[11..0]" (rect 0 0 108 19)(font "Intel Clear" (font_size 8)))
-		(text "colour_data[11..0]" (rect 79 27 187 46)(font "Intel Clear" (font_size 8)))
-		(line (pt 208 32)(pt 192 32)(line_width 3))
-	)
-	(drawing
-		(rectangle (rect 16 16 192 80))
-	)
-)
-(symbol
 	(rect 80 680 256 760)
 	(text "sprite_ROM_square2" (rect 5 0 107 12)(font "Arial" ))
 	(text "inst8" (rect 8 64 30 81)(font "Intel Clear" ))
@@ -652,6 +623,35 @@ https://fpgasoftware.intel.com/eula.
 	)
 	(annotation_block (parameter)(rect 80 640 256 680))
 )
+(symbol
+	(rect 344 608 552 704)
+	(text "rgbMUX" (rect 5 0 53 19)(font "Intel Clear" (font_size 8)))
+	(text "inst9" (rect 8 75 30 92)(font "Intel Clear" ))
+	(port
+		(pt 0 32)
+		(input)
+		(text "A[11..0]" (rect 0 0 47 19)(font "Intel Clear" (font_size 8)))
+		(text "A[11..0]" (rect 21 27 68 46)(font "Intel Clear" (font_size 8)))
+		(line (pt 0 32)(pt 16 32)(line_width 3))
+	)
+	(port
+		(pt 0 48)
+		(input)
+		(text "B[11..0]" (rect 0 0 47 19)(font "Intel Clear" (font_size 8)))
+		(text "B[11..0]" (rect 21 43 68 62)(font "Intel Clear" (font_size 8)))
+		(line (pt 0 48)(pt 16 48)(line_width 3))
+	)
+	(port
+		(pt 208 32)
+		(output)
+		(text "colour_data[11..0]" (rect 0 0 108 19)(font "Intel Clear" (font_size 8)))
+		(text "colour_data[11..0]" (rect 79 27 187 46)(font "Intel Clear" (font_size 8)))
+		(line (pt 208 32)(pt 192 32)(line_width 3))
+	)
+	(drawing
+		(rectangle (rect 16 16 192 80))
+	)
+)
 (connector
 	(pt 472 224)
 	(pt 472 240)
@@ -663,11 +663,6 @@ https://fpgasoftware.intel.com/eula.
 (connector
 	(pt 496 272)
 	(pt 392 272)
-)
-(connector
-	(text "sw_rst" (rect 362 160 392 177)(font "Intel Clear" ))
-	(pt 384 176)
-	(pt 352 176)
 )
 (connector
 	(text "sw_rst" (rect 464 240 494 257)(font "Intel Clear" ))
@@ -736,11 +731,6 @@ https://fpgasoftware.intel.com/eula.
 (connector
 	(pt 776 400)
 	(pt 872 400)
-)
-(connector
-	(text "sw_rst" (rect 754 184 784 201)(font "Intel Clear" ))
-	(pt 808 200)
-	(pt 744 200)
 )
 (connector
 	(pt 776 432)
@@ -938,6 +928,16 @@ https://fpgasoftware.intel.com/eula.
 	(text "pixel_clk" (rect 362 872 404 889)(font "Intel Clear" ))
 	(pt 448 888)
 	(pt 352 888)
+)
+(connector
+	(text "sw_rst" (rect 818 184 848 201)(font "Intel Clear" ))
+	(pt 808 200)
+	(pt 872 200)
+)
+(connector
+	(text "sw_rst" (rect 402 144 432 161)(font "Intel Clear" ))
+	(pt 424 160)
+	(pt 392 160)
 )
 (junction (pt 800 432))
 (text "VGA Controller Module" (rect 440 80 647 103)(font "Intel Clear" (font_size 12)(bold)))

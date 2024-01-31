@@ -187,7 +187,7 @@ a => always0.IN0
 b => always0.IN1
 
 
-|VGA_controller|rgbMUX:inst7
+|VGA_controller|rgbMUX:inst9
 colour_data[0] <= sprite_MUX:inst1.colour_data[0]
 colour_data[1] <= sprite_MUX:inst1.colour_data[1]
 colour_data[2] <= sprite_MUX:inst1.colour_data[2]
@@ -200,57 +200,57 @@ colour_data[8] <= sprite_MUX:inst1.colour_data[8]
 colour_data[9] <= sprite_MUX:inst1.colour_data[9]
 colour_data[10] <= sprite_MUX:inst1.colour_data[10]
 colour_data[11] <= sprite_MUX:inst1.colour_data[11]
-A[0] => sprite_MUX:inst1.a[0]
 A[0] => selector:inst.a[0]
-A[1] => sprite_MUX:inst1.a[1]
+A[0] => sprite_MUX:inst1.a[0]
 A[1] => selector:inst.a[1]
-A[2] => sprite_MUX:inst1.a[2]
+A[1] => sprite_MUX:inst1.a[1]
 A[2] => selector:inst.a[2]
-A[3] => sprite_MUX:inst1.a[3]
+A[2] => sprite_MUX:inst1.a[2]
 A[3] => selector:inst.a[3]
-A[4] => sprite_MUX:inst1.a[4]
+A[3] => sprite_MUX:inst1.a[3]
 A[4] => selector:inst.a[4]
-A[5] => sprite_MUX:inst1.a[5]
+A[4] => sprite_MUX:inst1.a[4]
 A[5] => selector:inst.a[5]
-A[6] => sprite_MUX:inst1.a[6]
+A[5] => sprite_MUX:inst1.a[5]
 A[6] => selector:inst.a[6]
-A[7] => sprite_MUX:inst1.a[7]
+A[6] => sprite_MUX:inst1.a[6]
 A[7] => selector:inst.a[7]
-A[8] => sprite_MUX:inst1.a[8]
+A[7] => sprite_MUX:inst1.a[7]
 A[8] => selector:inst.a[8]
-A[9] => sprite_MUX:inst1.a[9]
+A[8] => sprite_MUX:inst1.a[8]
 A[9] => selector:inst.a[9]
-A[10] => sprite_MUX:inst1.a[10]
+A[9] => sprite_MUX:inst1.a[9]
 A[10] => selector:inst.a[10]
-A[11] => sprite_MUX:inst1.a[11]
+A[10] => sprite_MUX:inst1.a[10]
 A[11] => selector:inst.a[11]
-B[0] => sprite_MUX:inst1.b[0]
+A[11] => sprite_MUX:inst1.a[11]
 B[0] => selector:inst.b[0]
-B[1] => sprite_MUX:inst1.b[1]
+B[0] => sprite_MUX:inst1.b[0]
 B[1] => selector:inst.b[1]
-B[2] => sprite_MUX:inst1.b[2]
+B[1] => sprite_MUX:inst1.b[1]
 B[2] => selector:inst.b[2]
-B[3] => sprite_MUX:inst1.b[3]
+B[2] => sprite_MUX:inst1.b[2]
 B[3] => selector:inst.b[3]
-B[4] => sprite_MUX:inst1.b[4]
+B[3] => sprite_MUX:inst1.b[3]
 B[4] => selector:inst.b[4]
-B[5] => sprite_MUX:inst1.b[5]
+B[4] => sprite_MUX:inst1.b[4]
 B[5] => selector:inst.b[5]
-B[6] => sprite_MUX:inst1.b[6]
+B[5] => sprite_MUX:inst1.b[5]
 B[6] => selector:inst.b[6]
-B[7] => sprite_MUX:inst1.b[7]
+B[6] => sprite_MUX:inst1.b[6]
 B[7] => selector:inst.b[7]
-B[8] => sprite_MUX:inst1.b[8]
+B[7] => sprite_MUX:inst1.b[7]
 B[8] => selector:inst.b[8]
-B[9] => sprite_MUX:inst1.b[9]
+B[8] => sprite_MUX:inst1.b[8]
 B[9] => selector:inst.b[9]
-B[10] => sprite_MUX:inst1.b[10]
+B[9] => sprite_MUX:inst1.b[9]
 B[10] => selector:inst.b[10]
-B[11] => sprite_MUX:inst1.b[11]
+B[10] => sprite_MUX:inst1.b[10]
 B[11] => selector:inst.b[11]
+B[11] => sprite_MUX:inst1.b[11]
 
 
-|VGA_controller|rgbMUX:inst7|sprite_MUX:inst1
+|VGA_controller|rgbMUX:inst9|sprite_MUX:inst1
 colour_data[0] <= colour_data.DB_MAX_OUTPUT_PORT_TYPE
 colour_data[1] <= colour_data.DB_MAX_OUTPUT_PORT_TYPE
 colour_data[2] <= colour_data.DB_MAX_OUTPUT_PORT_TYPE
@@ -287,11 +287,11 @@ b[8] => colour_data.DATAB
 b[9] => colour_data.DATAB
 b[10] => colour_data.DATAB
 b[11] => colour_data.DATAB
-s[0] => Decoder0.IN0
+s => Decoder0.IN0
 
 
-|VGA_controller|rgbMUX:inst7|selector:inst
-s[0] <= always0.DB_MAX_OUTPUT_PORT_TYPE
+|VGA_controller|rgbMUX:inst9|selector:inst
+s <= always0.DB_MAX_OUTPUT_PORT_TYPE
 a[0] => Equal0.IN35
 a[0] => WideNor0.IN0
 a[1] => Equal0.IN34

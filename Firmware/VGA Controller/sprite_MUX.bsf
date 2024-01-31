@@ -41,9 +41,9 @@ https://fpgasoftware.intel.com/eula.
 	(port
 		(pt 0 64)
 		(input)
-		(text "s[B-1..0]" (rect 0 0 31 12)(font "Arial" ))
-		(text "s[B-1..0]" (rect 21 59 52 71)(font "Arial" ))
-		(line (pt 0 64)(pt 16 64)(line_width 3))
+		(text "s" (rect 0 0 4 12)(font "Arial" ))
+		(text "s" (rect 21 59 25 71)(font "Arial" ))
+		(line (pt 0 64)(pt 16 64)(line_width 1))
 	)
 	(port
 		(pt 200 32)
@@ -52,18 +52,7 @@ https://fpgasoftware.intel.com/eula.
 		(text "colour_data[11..0]" (rect 111 27 179 39)(font "Arial" ))
 		(line (pt 200 32)(pt 184 32)(line_width 3))
 	)
-	(parameter
-		"M"
-		"2"
-		""
-		(type "PARAMETER_SIGNED_DEC")	)
-	(parameter
-		"B"
-		""
-		""
-		(type "PARAMETER_SIGNED_DEC")	)
 	(drawing
 		(rectangle (rect 16 16 184 96)(line_width 1))
 	)
-	(annotation_block (parameter)(rect 216 -64 316 16))
 )

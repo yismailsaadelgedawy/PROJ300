@@ -5,7 +5,15 @@ logic[9:0] row_reg;
 logic[9:0] column_reg;
 logic[9:0] offset_reg;
 
-// ROM for a 4 pixel square
+// ROM for a 4 pixel square //
+
+// coordinates (row,column)
+// (100,100) (100,101)
+// (101,100) (101,101)
+
+// colours
+// red green
+// green red
 logic [11:0] memory [2**M-1:0] = '{
 
     12'hF00, 12'h0F0,

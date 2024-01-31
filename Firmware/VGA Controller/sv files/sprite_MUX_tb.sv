@@ -1,15 +1,13 @@
 module sprite_MUX_tb;
 
-// parameters
-parameter M=2; 
-parameter B=$clog2(M);
+
 
 // internal signals
 
 // inputs
 logic[11:0] a;
 logic[11:0] b;
-logic[B-1:0] s;
+logic s;
 
 // outputs
 logic [11:0] colour_data;
@@ -31,14 +29,14 @@ sprite_MUX dut(
 // testing
 initial begin
 
-    s = 'd0; // a
+    s = 0; // a
     a = 12'hFFF;
     b = 12'h000;
     
     #10ns;
     assert (colour_data == a) $display("passed 1"); else $error("failed 1");
 
-    s = 'd1; // b
+    s = 1; // b
     a = 12'hFFF;
     b = 12'h000;
     

@@ -69,7 +69,7 @@ https://fpgasoftware.intel.com/eula.
 	)
 )
 (symbol
-	(rect 384 368 544 448)
+	(rect 384 368 520 448)
 	(text "selector" (rect 5 0 43 12)(font "Arial" ))
 	(text "inst" (rect 8 64 25 76)(font "Arial" ))
 	(port
@@ -87,31 +87,20 @@ https://fpgasoftware.intel.com/eula.
 		(line (pt 0 48)(pt 16 48)(line_width 3))
 	)
 	(port
-		(pt 160 32)
+		(pt 136 32)
 		(output)
-		(text "s[B-1..0]" (rect 0 0 42 12)(font "Arial" ))
-		(text "s[B-1..0]" (rect 104 27 146 39)(font "Arial" ))
-		(line (pt 160 32)(pt 144 32)(line_width 3))
+		(text "s" (rect 0 0 5 12)(font "Arial" ))
+		(text "s" (rect 111 27 116 39)(font "Arial" ))
+		(line (pt 136 32)(pt 120 32))
 	)
-	(parameter
-		"M"
-		"2"
-		""
-		(type "PARAMETER_SIGNED_DEC")	)
-	(parameter
-		"B"
-		"1"
-		""
-		(type "PARAMETER_SIGNED_DEC")	)
 	(drawing
-		(rectangle (rect 16 16 144 64))
+		(rectangle (rect 16 16 120 64))
 	)
-	(annotation_block (parameter)(rect 384 304 553 361))
 )
 (symbol
 	(rect 720 264 920 376)
 	(text "sprite_MUX" (rect 5 0 60 12)(font "Arial" ))
-	(text "inst1" (rect 8 96 31 108)(font "Arial" ))
+	(text "inst1" (rect 8 96 30 113)(font "Intel Clear" ))
 	(port
 		(pt 0 32)
 		(input)
@@ -129,9 +118,9 @@ https://fpgasoftware.intel.com/eula.
 	(port
 		(pt 0 64)
 		(input)
-		(text "s[B-1..0]" (rect 0 0 42 12)(font "Arial" ))
-		(text "s[B-1..0]" (rect 21 59 63 71)(font "Arial" ))
-		(line (pt 0 64)(pt 16 64)(line_width 3))
+		(text "s" (rect 0 0 5 12)(font "Arial" ))
+		(text "s" (rect 21 59 26 71)(font "Arial" ))
+		(line (pt 0 64)(pt 16 64))
 	)
 	(port
 		(pt 200 32)
@@ -140,36 +129,9 @@ https://fpgasoftware.intel.com/eula.
 		(text "colour_data[11..0]" (rect 105 27 193 39)(font "Arial" ))
 		(line (pt 200 32)(pt 184 32)(line_width 3))
 	)
-	(parameter
-		"M"
-		"2"
-		""
-		(type "PARAMETER_SIGNED_DEC")	)
-	(parameter
-		"B"
-		"1"
-		""
-		(type "PARAMETER_SIGNED_DEC")	)
 	(drawing
 		(rectangle (rect 16 16 184 96))
 	)
-	(annotation_block (parameter)(rect 720 200 889 257))
-)
-(connector
-	(pt 544 400)
-	(pt 584 400)
-	(bus)
-)
-(connector
-	(pt 584 400)
-	(pt 584 328)
-	(bus)
-)
-(connector
-	(text "select_bus[0..0]" (rect 602 312 676 329)(font "Intel Clear" ))
-	(pt 584 328)
-	(pt 720 328)
-	(bus)
 )
 (connector
 	(pt 1000 296)
@@ -211,5 +173,18 @@ https://fpgasoftware.intel.com/eula.
 	(pt 384 416)
 	(pt 304 416)
 	(bus)
+)
+(connector
+	(pt 520 400)
+	(pt 592 400)
+)
+(connector
+	(pt 592 328)
+	(pt 592 400)
+)
+(connector
+	(text "select_line" (rect 602 312 653 329)(font "Intel Clear" ))
+	(pt 720 328)
+	(pt 592 328)
 )
 (text "2-input RGB Controller MUX" (rect 520 80 721 100)(font "Intel Clear" (font_size 10)(bold)))
