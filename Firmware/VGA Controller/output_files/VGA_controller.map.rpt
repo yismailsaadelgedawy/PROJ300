@@ -1,5 +1,5 @@
 Analysis & Synthesis report for VGA_controller
-Tue Jan 30 12:45:50 2024
+Wed Jan 31 06:02:10 2024
 Quartus Prime Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
 
 
@@ -16,9 +16,10 @@ Quartus Prime Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
   8. Registers Removed During Synthesis
   9. General Register Statistics
  10. Multiplexer Restructuring Statistics (Restructuring Performed)
- 11. Post-Synthesis Netlist Statistics for Top Partition
- 12. Elapsed Time Per Partition
- 13. Analysis & Synthesis Messages
+ 11. Parameter Settings for User Entity Instance: sprite_ROM_square:inst6
+ 12. Post-Synthesis Netlist Statistics for Top Partition
+ 13. Elapsed Time Per Partition
+ 14. Analysis & Synthesis Messages
 
 
 
@@ -45,13 +46,13 @@ https://fpgasoftware.intel.com/eula.
 +-------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                  ;
 +---------------------------------+---------------------------------------------+
-; Analysis & Synthesis Status     ; Successful - Tue Jan 30 12:45:50 2024       ;
+; Analysis & Synthesis Status     ; Successful - Wed Jan 31 06:02:10 2024       ;
 ; Quartus Prime Version           ; 20.1.1 Build 720 11/11/2020 SJ Lite Edition ;
 ; Revision Name                   ; VGA_controller                              ;
 ; Top-level Entity Name           ; VGA_controller                              ;
 ; Family                          ; Cyclone V                                   ;
 ; Logic utilization (in ALMs)     ; N/A                                         ;
-; Total registers                 ; 29                                          ;
+; Total registers                 ; 33                                          ;
 ; Total pins                      ; 17                                          ;
 ; Total virtual pins              ; 0                                           ;
 ; Total block memory bits         ; 0                                           ;
@@ -169,18 +170,19 @@ https://fpgasoftware.intel.com/eula.
 +----------------------------+-------------+
 
 
-+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Source Files Read                                                                                                                                                                  ;
-+----------------------------------+-----------------+------------------------------------+-----------------------------------------------------------------------------------------------------+---------+
-; File Name with User-Entered Path ; Used in Netlist ; File Type                          ; File Name with Absolute Path                                                                        ; Library ;
-+----------------------------------+-----------------+------------------------------------+-----------------------------------------------------------------------------------------------------+---------+
-; sv files/xnor_2.sv               ; yes             ; User SystemVerilog HDL File        ; C:/Users/minec/Desktop/Work/GitHub Repos/PROJ300/Firmware/VGA Controller/sv files/xnor_2.sv         ;         ;
-; sv files/rgb_controller.sv       ; yes             ; User SystemVerilog HDL File        ; C:/Users/minec/Desktop/Work/GitHub Repos/PROJ300/Firmware/VGA Controller/sv files/rgb_controller.sv ;         ;
-; sv files/vsync_cnt.sv            ; yes             ; User SystemVerilog HDL File        ; C:/Users/minec/Desktop/Work/GitHub Repos/PROJ300/Firmware/VGA Controller/sv files/vsync_cnt.sv      ;         ;
-; sv files/t_ff.sv                 ; yes             ; User SystemVerilog HDL File        ; C:/Users/minec/Desktop/Work/GitHub Repos/PROJ300/Firmware/VGA Controller/sv files/t_ff.sv           ;         ;
-; sv files/hsync_cnt.sv            ; yes             ; User SystemVerilog HDL File        ; C:/Users/minec/Desktop/Work/GitHub Repos/PROJ300/Firmware/VGA Controller/sv files/hsync_cnt.sv      ;         ;
-; VGA_controller.bdf               ; yes             ; User Block Diagram/Schematic File  ; C:/Users/minec/Desktop/Work/GitHub Repos/PROJ300/Firmware/VGA Controller/VGA_controller.bdf         ;         ;
-+----------------------------------+-----------------+------------------------------------+-----------------------------------------------------------------------------------------------------+---------+
++------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Source Files Read                                                                                                                                                                     ;
++----------------------------------+-----------------+------------------------------------+--------------------------------------------------------------------------------------------------------+---------+
+; File Name with User-Entered Path ; Used in Netlist ; File Type                          ; File Name with Absolute Path                                                                           ; Library ;
++----------------------------------+-----------------+------------------------------------+--------------------------------------------------------------------------------------------------------+---------+
+; sv files/sprite_ROM_square.sv    ; yes             ; User SystemVerilog HDL File        ; C:/Users/minec/Desktop/Work/GitHub Repos/PROJ300/Firmware/VGA Controller/sv files/sprite_ROM_square.sv ;         ;
+; sv files/xnor_2.sv               ; yes             ; User SystemVerilog HDL File        ; C:/Users/minec/Desktop/Work/GitHub Repos/PROJ300/Firmware/VGA Controller/sv files/xnor_2.sv            ;         ;
+; sv files/rgb_controller.sv       ; yes             ; User SystemVerilog HDL File        ; C:/Users/minec/Desktop/Work/GitHub Repos/PROJ300/Firmware/VGA Controller/sv files/rgb_controller.sv    ;         ;
+; sv files/vsync_cnt.sv            ; yes             ; User SystemVerilog HDL File        ; C:/Users/minec/Desktop/Work/GitHub Repos/PROJ300/Firmware/VGA Controller/sv files/vsync_cnt.sv         ;         ;
+; sv files/t_ff.sv                 ; yes             ; User SystemVerilog HDL File        ; C:/Users/minec/Desktop/Work/GitHub Repos/PROJ300/Firmware/VGA Controller/sv files/t_ff.sv              ;         ;
+; sv files/hsync_cnt.sv            ; yes             ; User SystemVerilog HDL File        ; C:/Users/minec/Desktop/Work/GitHub Repos/PROJ300/Firmware/VGA Controller/sv files/hsync_cnt.sv         ;         ;
+; VGA_controller.bdf               ; yes             ; User Block Diagram/Schematic File  ; C:/Users/minec/Desktop/Work/GitHub Repos/PROJ300/Firmware/VGA Controller/VGA_controller.bdf            ;         ;
++----------------------------------+-----------------+------------------------------------+--------------------------------------------------------------------------------------------------------+---------+
 
 
 +-----------------------------------------------------------+
@@ -188,25 +190,25 @@ https://fpgasoftware.intel.com/eula.
 +---------------------------------------------+-------------+
 ; Resource                                    ; Usage       ;
 +---------------------------------------------+-------------+
-; Estimate of Logic utilization (ALMs needed) ; 32          ;
+; Estimate of Logic utilization (ALMs needed) ; 34          ;
 ;                                             ;             ;
-; Combinational ALUT usage for logic          ; 52          ;
+; Combinational ALUT usage for logic          ; 55          ;
 ;     -- 7 input functions                    ; 0           ;
-;     -- 6 input functions                    ; 11          ;
-;     -- 5 input functions                    ; 5           ;
-;     -- 4 input functions                    ; 8           ;
+;     -- 6 input functions                    ; 12          ;
+;     -- 5 input functions                    ; 10          ;
+;     -- 4 input functions                    ; 5           ;
 ;     -- <=3 input functions                  ; 28          ;
 ;                                             ;             ;
-; Dedicated logic registers                   ; 29          ;
+; Dedicated logic registers                   ; 33          ;
 ;                                             ;             ;
 ; I/O pins                                    ; 17          ;
 ;                                             ;             ;
 ; Total DSP Blocks                            ; 0           ;
 ;                                             ;             ;
 ; Maximum fan-out node                        ; t_ff:inst|q ;
-; Maximum fan-out                             ; 29          ;
-; Total fan-out                               ; 298         ;
-; Average fan-out                             ; 2.59        ;
+; Maximum fan-out                             ; 33          ;
+; Total fan-out                               ; 328         ;
+; Average fan-out                             ; 2.69        ;
 +---------------------------------------------+-------------+
 
 
@@ -215,9 +217,9 @@ https://fpgasoftware.intel.com/eula.
 +----------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+--------------------------------------+----------------+--------------+
 ; Compilation Hierarchy Node ; Combinational ALUTs ; Dedicated Logic Registers ; Block Memory Bits ; DSP Blocks ; Pins ; Virtual Pins ; Full Hierarchy Name                  ; Entity Name    ; Library Name ;
 +----------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+--------------------------------------+----------------+--------------+
-; |VGA_controller            ; 52 (0)              ; 29 (0)                    ; 0                 ; 0          ; 17   ; 0            ; |VGA_controller                      ; VGA_controller ; work         ;
+; |VGA_controller            ; 55 (0)              ; 33 (0)                    ; 0                 ; 0          ; 17   ; 0            ; |VGA_controller                      ; VGA_controller ; work         ;
 ;    |hsync_cnt:inst1|       ; 23 (23)             ; 12 (12)                   ; 0                 ; 0          ; 0    ; 0            ; |VGA_controller|hsync_cnt:inst1      ; hsync_cnt      ; work         ;
-;    |rgb_controller:inst4|  ; 1 (1)               ; 4 (4)                     ; 0                 ; 0          ; 0    ; 0            ; |VGA_controller|rgb_controller:inst4 ; rgb_controller ; work         ;
+;    |rgb_controller:inst4|  ; 4 (4)               ; 8 (8)                     ; 0                 ; 0          ; 0    ; 0            ; |VGA_controller|rgb_controller:inst4 ; rgb_controller ; work         ;
 ;    |t_ff:inst|             ; 1 (1)               ; 1 (1)                     ; 0                 ; 0          ; 0    ; 0            ; |VGA_controller|t_ff:inst            ; t_ff           ; work         ;
 ;    |vsync_cnt:inst2|       ; 27 (27)             ; 12 (12)                   ; 0                 ; 0          ; 0    ; 0            ; |VGA_controller|vsync_cnt:inst2      ; vsync_cnt      ; work         ;
 +----------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+--------------------------------------+----------------+--------------+
@@ -229,8 +231,8 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +---------------------------------------+----------------------------------------+
 ; Register name                         ; Reason for Removal                     ;
 +---------------------------------------+----------------------------------------+
-; rgb_controller:inst4|colour_reg[0..7] ; Stuck at GND due to stuck port data_in ;
-; Total Number of Removed Registers = 8 ;                                        ;
+; rgb_controller:inst4|colour_reg[0..3] ; Stuck at GND due to stuck port data_in ;
+; Total Number of Removed Registers = 4 ;                                        ;
 +---------------------------------------+----------------------------------------+
 
 
@@ -239,7 +241,7 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +----------------------------------------------+-------+
 ; Statistic                                    ; Value ;
 +----------------------------------------------+-------+
-; Total registers                              ; 29    ;
+; Total registers                              ; 33    ;
 ; Number of registers using Synchronous Clear  ; 20    ;
 ; Number of registers using Synchronous Load   ; 0     ;
 ; Number of registers using Asynchronous Clear ; 0     ;
@@ -261,30 +263,40 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +--------------------+-----------+---------------+----------------------+------------------------+------------+----------------------------------------------+
 
 
++----------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: sprite_ROM_square:inst6 ;
++----------------+-------+---------------------------------------------+
+; Parameter Name ; Value ; Type                                        ;
++----------------+-------+---------------------------------------------+
+; M              ; 2     ; Signed Integer                              ;
++----------------+-------+---------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
 +-----------------------------------------------------+
 ; Post-Synthesis Netlist Statistics for Top Partition ;
 +-----------------------+-----------------------------+
 ; Type                  ; Count                       ;
 +-----------------------+-----------------------------+
-; arriav_ff             ; 29                          ;
+; arriav_ff             ; 33                          ;
 ;     ENA               ; 4                           ;
 ;     ENA SCLR          ; 10                          ;
 ;     SCLR              ; 10                          ;
-;     plain             ; 5                           ;
-; arriav_lcell_comb     ; 53                          ;
+;     plain             ; 9                           ;
+; arriav_lcell_comb     ; 56                          ;
 ;     arith             ; 20                          ;
 ;         1 data inputs ; 20                          ;
-;     normal            ; 33                          ;
+;     normal            ; 36                          ;
 ;         0 data inputs ; 1                           ;
-;         2 data inputs ; 3                           ;
-;         3 data inputs ; 5                           ;
-;         4 data inputs ; 8                           ;
-;         5 data inputs ; 5                           ;
-;         6 data inputs ; 11                          ;
+;         2 data inputs ; 4                           ;
+;         3 data inputs ; 4                           ;
+;         4 data inputs ; 5                           ;
+;         5 data inputs ; 10                          ;
+;         6 data inputs ; 12                          ;
 ; boundary_port         ; 17                          ;
 ;                       ;                             ;
 ; Max LUT depth         ; 3.00                        ;
-; Average LUT depth     ; 2.11                        ;
+; Average LUT depth     ; 2.07                        ;
 +-----------------------+-----------------------------+
 
 
@@ -303,10 +315,12 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
-    Info: Processing started: Tue Jan 30 12:45:45 2024
+    Info: Processing started: Wed Jan 31 06:02:05 2024
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off VGA_controller -c VGA_controller
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20030): Parallel compilation is enabled and will use 16 of the 16 processors detected
+Info (12021): Found 1 design units, including 1 entities, in source file sv files/sprite_rom_square.sv
+    Info (12023): Found entity 1: sprite_ROM_square File: C:/Users/minec/Desktop/Work/GitHub Repos/PROJ300/Firmware/VGA Controller/sv files/sprite_ROM_square.sv Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file sv files/xnor_2.sv
     Info (12023): Found entity 1: xnor_2 File: C:/Users/minec/Desktop/Work/GitHub Repos/PROJ300/Firmware/VGA Controller/sv files/xnor_2.sv Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file sv files/rgb_controller.sv
@@ -347,11 +361,8 @@ Info (12128): Elaborating entity "rgb_controller" for hierarchy "rgb_controller:
 Warning (10036): Verilog HDL or VHDL warning at rgb_controller.sv(3): object "row_reg" assigned a value but never read File: C:/Users/minec/Desktop/Work/GitHub Repos/PROJ300/Firmware/VGA Controller/sv files/rgb_controller.sv Line: 3
 Warning (10036): Verilog HDL or VHDL warning at rgb_controller.sv(4): object "column_reg" assigned a value but never read File: C:/Users/minec/Desktop/Work/GitHub Repos/PROJ300/Firmware/VGA Controller/sv files/rgb_controller.sv Line: 4
 Info (12128): Elaborating entity "xnor_2" for hierarchy "xnor_2:inst5"
+Info (12128): Elaborating entity "sprite_ROM_square" for hierarchy "sprite_ROM_square:inst6"
 Warning (13024): Output pins are stuck at VCC or GND
-    Warning (13410): Pin "g3" is stuck at GND
-    Warning (13410): Pin "g2" is stuck at GND
-    Warning (13410): Pin "g1" is stuck at GND
-    Warning (13410): Pin "g0" is stuck at GND
     Warning (13410): Pin "b3" is stuck at GND
     Warning (13410): Pin "b2" is stuck at GND
     Warning (13410): Pin "b1" is stuck at GND
@@ -359,13 +370,13 @@ Warning (13024): Output pins are stuck at VCC or GND
 Info (286030): Timing-Driven Synthesis is running
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
-Info (21057): Implemented 73 device resources after synthesis - the final resource count might be different
+Info (21057): Implemented 80 device resources after synthesis - the final resource count might be different
     Info (21058): Implemented 2 input pins
     Info (21059): Implemented 15 output pins
-    Info (21061): Implemented 56 logic cells
-Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 32 warnings
-    Info: Peak virtual memory: 4892 megabytes
-    Info: Processing ended: Tue Jan 30 12:45:50 2024
+    Info (21061): Implemented 63 logic cells
+Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 28 warnings
+    Info: Peak virtual memory: 4884 megabytes
+    Info: Processing ended: Wed Jan 31 06:02:10 2024
     Info: Elapsed time: 00:00:05
     Info: Total CPU time (on all processors): 00:00:06
 

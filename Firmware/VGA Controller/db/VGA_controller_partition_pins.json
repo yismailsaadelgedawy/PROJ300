@@ -32,6 +32,22 @@
 					"strict" : false
 				},
 				{
+					"name" : "g3",
+					"strict" : false
+				},
+				{
+					"name" : "g2",
+					"strict" : false
+				},
+				{
+					"name" : "g1",
+					"strict" : false
+				},
+				{
+					"name" : "g0",
+					"strict" : false
+				},
+				{
 					"name" : "SW0",
 					"strict" : false
 				},

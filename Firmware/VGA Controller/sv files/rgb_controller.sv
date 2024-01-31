@@ -1,4 +1,4 @@
-module rgb_controller (output logic[3:0] r, g, b, input logic[9:0] row, column, input logic rst, en, clk);
+module rgb_controller (output logic[3:0] r, g, b, input logic[9:0] row, column, input logic[11:0] colour_data, input logic rst, en, clk);
 
 logic[9:0] row_reg;
 logic[9:0] column_reg;
@@ -8,6 +8,7 @@ always_comb begin
 
     row_reg = row;
     column_reg = column;
+    
 
     r = colour_reg[11:8];
     g = colour_reg[7:4];
@@ -27,11 +28,6 @@ always_ff @(posedge clk) begin
 
     end
 
-    2'b01 : begin
-
-        colour_reg = 12'hF00;
-
-    end
 
     2'b00 : begin
 
@@ -42,7 +38,7 @@ always_ff @(posedge clk) begin
 
     default : begin
 
-        colour_reg = 12'h000;
+        colour_reg = colour_data;
 
     end
 

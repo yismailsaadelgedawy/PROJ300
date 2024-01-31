@@ -1,5 +1,5 @@
 Fitter report for VGA_controller
-Tue Jan 30 12:46:05 2024
+Wed Jan 31 06:02:25 2024
 Quartus Prime Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
 
 
@@ -61,15 +61,15 @@ https://fpgasoftware.intel.com/eula.
 +-------------------------------------------------------------------------------+
 ; Fitter Summary                                                                ;
 +---------------------------------+---------------------------------------------+
-; Fitter Status                   ; Successful - Tue Jan 30 12:46:05 2024       ;
+; Fitter Status                   ; Successful - Wed Jan 31 06:02:25 2024       ;
 ; Quartus Prime Version           ; 20.1.1 Build 720 11/11/2020 SJ Lite Edition ;
 ; Revision Name                   ; VGA_controller                              ;
 ; Top-level Entity Name           ; VGA_controller                              ;
 ; Family                          ; Cyclone V                                   ;
 ; Device                          ; 5CEBA4F23C7                                 ;
 ; Timing Models                   ; Final                                       ;
-; Logic utilization (in ALMs)     ; 33 / 18,480 ( < 1 % )                       ;
-; Total registers                 ; 29                                          ;
+; Logic utilization (in ALMs)     ; 35 / 18,480 ( < 1 % )                       ;
+; Total registers                 ; 33                                          ;
 ; Total pins                      ; 17 / 224 ( 8 % )                            ;
 ; Total virtual pins              ; 0                                           ;
 ; Total block memory bits         ; 0 / 3,153,920 ( 0 % )                       ;
@@ -157,7 +157,7 @@ https://fpgasoftware.intel.com/eula.
 ; Usage by Processor         ; % Time Used ;
 ;     Processor 1            ; 100.0%      ;
 ;     Processor 2            ;   0.5%      ;
-;     Processor 3            ;   0.4%      ;
+;     Processor 3            ;   0.5%      ;
 ;     Processor 4            ;   0.4%      ;
 ;     Processor 5            ;   0.3%      ;
 ;     Processors 6-16        ;   0.2%      ;
@@ -170,8 +170,8 @@ https://fpgasoftware.intel.com/eula.
 ; Type                ; Total [A + B]      ; From Design Partitions [A] ; From Rapid Recompile [B] ;
 +---------------------+--------------------+----------------------------+--------------------------+
 ; Placement (by node) ;                    ;                            ;                          ;
-;     -- Requested    ; 0.00 % ( 0 / 116 ) ; 0.00 % ( 0 / 116 )         ; 0.00 % ( 0 / 116 )       ;
-;     -- Achieved     ; 0.00 % ( 0 / 116 ) ; 0.00 % ( 0 / 116 )         ; 0.00 % ( 0 / 116 )       ;
+;     -- Requested    ; 0.00 % ( 0 / 123 ) ; 0.00 % ( 0 / 123 )         ; 0.00 % ( 0 / 123 )       ;
+;     -- Achieved     ; 0.00 % ( 0 / 123 ) ; 0.00 % ( 0 / 123 )         ; 0.00 % ( 0 / 123 )       ;
 ;                     ;                    ;                            ;                          ;
 ; Routing (by net)    ;                    ;                            ;                          ;
 ;     -- Requested    ; 0.00 % ( 0 / 0 )   ; 0.00 % ( 0 / 0 )           ; 0.00 % ( 0 / 0 )         ;
@@ -194,7 +194,7 @@ https://fpgasoftware.intel.com/eula.
 +--------------------------------+-----------------------+-------------------------+-------------------+---------------------+-------+
 ; Partition Name                 ; Preservation Achieved ; Preservation Level Used ; Netlist Type Used ; Preservation Method ; Notes ;
 +--------------------------------+-----------------------+-------------------------+-------------------+---------------------+-------+
-; Top                            ; 0.00 % ( 0 / 116 )    ; N/A                     ; Source File       ; N/A                 ;       ;
+; Top                            ; 0.00 % ( 0 / 123 )    ; N/A                     ; Source File       ; N/A                 ;       ;
 ; hard_block:auto_generated_inst ; 0.00 % ( 0 / 0 )      ; N/A                     ; Source File       ; N/A                 ;       ;
 +--------------------------------+-----------------------+-------------------------+-------------------+---------------------+-------+
 
@@ -210,12 +210,12 @@ The pin-out file can be found in C:/Users/minec/Desktop/Work/GitHub Repos/PROJ30
 +-------------------------------------------------------------+--------------------+-------+
 ; Resource                                                    ; Usage              ; %     ;
 +-------------------------------------------------------------+--------------------+-------+
-; Logic utilization (ALMs needed / total ALMs on device)      ; 33 / 18,480        ; < 1 % ;
-; ALMs needed [=A-B+C]                                        ; 33                 ;       ;
-;     [A] ALMs used in final placement [=a+b+c+d]             ; 34 / 18,480        ; < 1 % ;
-;         [a] ALMs used for LUT logic and registers           ; 9                  ;       ;
+; Logic utilization (ALMs needed / total ALMs on device)      ; 35 / 18,480        ; < 1 % ;
+; ALMs needed [=A-B+C]                                        ; 35                 ;       ;
+;     [A] ALMs used in final placement [=a+b+c+d]             ; 36 / 18,480        ; < 1 % ;
+;         [a] ALMs used for LUT logic and registers           ; 12                 ;       ;
 ;         [b] ALMs used for LUT logic                         ; 19                 ;       ;
-;         [c] ALMs used for registers                         ; 6                  ;       ;
+;         [c] ALMs used for registers                         ; 5                  ;       ;
 ;         [d] ALMs used for memory (up to half of total ALMs) ; 0                  ;       ;
 ;     [B] Estimate of ALMs recoverable by dense packing       ; 1 / 18,480         ; < 1 % ;
 ;     [C] Estimate of ALMs unavailable [=a+b+c+d]             ; 0 / 18,480         ; 0 %   ;
@@ -230,20 +230,20 @@ The pin-out file can be found in C:/Users/minec/Desktop/Work/GitHub Repos/PROJ30
 ;     -- Logic LABs                                           ; 5                  ;       ;
 ;     -- Memory LABs (up to half of total LABs)               ; 0                  ;       ;
 ;                                                             ;                    ;       ;
-; Combinational ALUT usage for logic                          ; 53                 ;       ;
+; Combinational ALUT usage for logic                          ; 56                 ;       ;
 ;     -- 7 input functions                                    ; 0                  ;       ;
-;     -- 6 input functions                                    ; 11                 ;       ;
-;     -- 5 input functions                                    ; 5                  ;       ;
-;     -- 4 input functions                                    ; 8                  ;       ;
+;     -- 6 input functions                                    ; 12                 ;       ;
+;     -- 5 input functions                                    ; 10                 ;       ;
+;     -- 4 input functions                                    ; 5                  ;       ;
 ;     -- <=3 input functions                                  ; 29                 ;       ;
-; Combinational ALUT usage for route-throughs                 ; 1                  ;       ;
+; Combinational ALUT usage for route-throughs                 ; 0                  ;       ;
 ;                                                             ;                    ;       ;
-; Dedicated logic registers                                   ; 29                 ;       ;
+; Dedicated logic registers                                   ; 33                 ;       ;
 ;     -- By type:                                             ;                    ;       ;
-;         -- Primary logic registers                          ; 28 / 36,960        ; < 1 % ;
+;         -- Primary logic registers                          ; 32 / 36,960        ; < 1 % ;
 ;         -- Secondary logic registers                        ; 1 / 36,960         ; < 1 % ;
 ;     -- By function:                                         ;                    ;       ;
-;         -- Design implementation registers                  ; 29                 ;       ;
+;         -- Design implementation registers                  ; 33                 ;       ;
 ;         -- Routing optimization registers                   ; 0                  ;       ;
 ;                                                             ;                    ;       ;
 ; Virtual pins                                                ; 0                  ;       ;
@@ -271,11 +271,11 @@ The pin-out file can be found in C:/Users/minec/Desktop/Work/GitHub Repos/PROJ30
 ; Oscillator blocks                                           ; 0 / 1              ; 0 %   ;
 ; Impedance control blocks                                    ; 0 / 3              ; 0 %   ;
 ; Average interconnect usage (total/H/V)                      ; 0.1% / 0.1% / 0.1% ;       ;
-; Peak interconnect usage (total/H/V)                         ; 0.7% / 0.7% / 0.5% ;       ;
-; Maximum fan-out                                             ; 29                 ;       ;
-; Highest non-global fan-out                                  ; 29                 ;       ;
-; Total fan-out                                               ; 299                ;       ;
-; Average fan-out                                             ; 2.56               ;       ;
+; Peak interconnect usage (total/H/V)                         ; 0.7% / 0.8% / 0.6% ;       ;
+; Maximum fan-out                                             ; 33                 ;       ;
+; Highest non-global fan-out                                  ; 33                 ;       ;
+; Total fan-out                                               ; 328                ;       ;
+; Average fan-out                                             ; 2.67               ;       ;
 +-------------------------------------------------------------+--------------------+-------+
 
 
@@ -284,12 +284,12 @@ The pin-out file can be found in C:/Users/minec/Desktop/Work/GitHub Repos/PROJ30
 +-------------------------------------------------------------+----------------------+--------------------------------+
 ; Statistic                                                   ; Top                  ; hard_block:auto_generated_inst ;
 +-------------------------------------------------------------+----------------------+--------------------------------+
-; Logic utilization (ALMs needed / total ALMs on device)      ; 33 / 18480 ( < 1 % ) ; 0 / 18480 ( 0 % )              ;
-; ALMs needed [=A-B+C]                                        ; 33                   ; 0                              ;
-;     [A] ALMs used in final placement [=a+b+c+d]             ; 34 / 18480 ( < 1 % ) ; 0 / 18480 ( 0 % )              ;
-;         [a] ALMs used for LUT logic and registers           ; 9                    ; 0                              ;
+; Logic utilization (ALMs needed / total ALMs on device)      ; 35 / 18480 ( < 1 % ) ; 0 / 18480 ( 0 % )              ;
+; ALMs needed [=A-B+C]                                        ; 35                   ; 0                              ;
+;     [A] ALMs used in final placement [=a+b+c+d]             ; 36 / 18480 ( < 1 % ) ; 0 / 18480 ( 0 % )              ;
+;         [a] ALMs used for LUT logic and registers           ; 12                   ; 0                              ;
 ;         [b] ALMs used for LUT logic                         ; 19                   ; 0                              ;
-;         [c] ALMs used for registers                         ; 6                    ; 0                              ;
+;         [c] ALMs used for registers                         ; 5                    ; 0                              ;
 ;         [d] ALMs used for memory (up to half of total ALMs) ; 0                    ; 0                              ;
 ;     [B] Estimate of ALMs recoverable by dense packing       ; 1 / 18480 ( < 1 % )  ; 0 / 18480 ( 0 % )              ;
 ;     [C] Estimate of ALMs unavailable [=a+b+c+d]             ; 0 / 18480 ( 0 % )    ; 0 / 18480 ( 0 % )              ;
@@ -304,23 +304,23 @@ The pin-out file can be found in C:/Users/minec/Desktop/Work/GitHub Repos/PROJ30
 ;     -- Logic LABs                                           ; 5                    ; 0                              ;
 ;     -- Memory LABs (up to half of total LABs)               ; 0                    ; 0                              ;
 ;                                                             ;                      ;                                ;
-; Combinational ALUT usage for logic                          ; 53                   ; 0                              ;
+; Combinational ALUT usage for logic                          ; 56                   ; 0                              ;
 ;     -- 7 input functions                                    ; 0                    ; 0                              ;
-;     -- 6 input functions                                    ; 11                   ; 0                              ;
-;     -- 5 input functions                                    ; 5                    ; 0                              ;
-;     -- 4 input functions                                    ; 8                    ; 0                              ;
+;     -- 6 input functions                                    ; 12                   ; 0                              ;
+;     -- 5 input functions                                    ; 10                   ; 0                              ;
+;     -- 4 input functions                                    ; 5                    ; 0                              ;
 ;     -- <=3 input functions                                  ; 29                   ; 0                              ;
-; Combinational ALUT usage for route-throughs                 ; 1                    ; 0                              ;
+; Combinational ALUT usage for route-throughs                 ; 0                    ; 0                              ;
 ; Memory ALUT usage                                           ; 0                    ; 0                              ;
 ;     -- 64-address deep                                      ; 0                    ; 0                              ;
 ;     -- 32-address deep                                      ; 0                    ; 0                              ;
 ;                                                             ;                      ;                                ;
 ; Dedicated logic registers                                   ; 0                    ; 0                              ;
 ;     -- By type:                                             ;                      ;                                ;
-;         -- Primary logic registers                          ; 28 / 36960 ( < 1 % ) ; 0 / 36960 ( 0 % )              ;
+;         -- Primary logic registers                          ; 32 / 36960 ( < 1 % ) ; 0 / 36960 ( 0 % )              ;
 ;         -- Secondary logic registers                        ; 1 / 36960 ( < 1 % )  ; 0 / 36960 ( 0 % )              ;
 ;     -- By function:                                         ;                      ;                                ;
-;         -- Design implementation registers                  ; 29                   ; 0                              ;
+;         -- Design implementation registers                  ; 33                   ; 0                              ;
 ;         -- Routing optimization registers                   ; 0                    ; 0                              ;
 ;                                                             ;                      ;                                ;
 ;                                                             ;                      ;                                ;
@@ -337,8 +337,8 @@ The pin-out file can be found in C:/Users/minec/Desktop/Work/GitHub Repos/PROJ30
 ;     -- Registered Output Connections                        ; 0                    ; 0                              ;
 ;                                                             ;                      ;                                ;
 ; Internal Connections                                        ;                      ;                                ;
-;     -- Total Connections                                    ; 299                  ; 0                              ;
-;     -- Registered Connections                               ; 145                  ; 0                              ;
+;     -- Total Connections                                    ; 328                  ; 0                              ;
+;     -- Registered Connections                               ; 163                  ; 0                              ;
 ;                                                             ;                      ;                                ;
 ; External Connections                                        ;                      ;                                ;
 ;     -- Top                                                  ; 0                    ; 0                              ;
@@ -937,11 +937,11 @@ Note: Pin directions (input, output or bidir) are based on device operating in u
 +----------------------------+----------------------+----------------------------------+---------------------------------------------------+----------------------------------+----------------------+---------------------+---------------------------+---------------+-------------------+-------+------------+------+--------------+--------------------------------------+----------------+--------------+
 ; Compilation Hierarchy Node ; ALMs needed [=A-B+C] ; [A] ALMs used in final placement ; [B] Estimate of ALMs recoverable by dense packing ; [C] Estimate of ALMs unavailable ; ALMs used for memory ; Combinational ALUTs ; Dedicated Logic Registers ; I/O Registers ; Block Memory Bits ; M10Ks ; DSP Blocks ; Pins ; Virtual Pins ; Full Hierarchy Name                  ; Entity Name    ; Library Name ;
 +----------------------------+----------------------+----------------------------------+---------------------------------------------------+----------------------------------+----------------------+---------------------+---------------------------+---------------+-------------------+-------+------------+------+--------------+--------------------------------------+----------------+--------------+
-; |VGA_controller            ; 32.5 (0.5)           ; 33.0 (0.5)                       ; 0.5 (0.0)                                         ; 0.0 (0.0)                        ; 0.0 (0.0)            ; 53 (1)              ; 29 (0)                    ; 0 (0)         ; 0                 ; 0     ; 0          ; 17   ; 0            ; |VGA_controller                      ; VGA_controller ; work         ;
-;    |hsync_cnt:inst1|       ; 13.4 (13.4)          ; 14.2 (14.2)                      ; 0.7 (0.7)                                         ; 0.0 (0.0)                        ; 0.0 (0.0)            ; 23 (23)             ; 12 (12)                   ; 0 (0)         ; 0                 ; 0     ; 0          ; 0    ; 0            ; |VGA_controller|hsync_cnt:inst1      ; hsync_cnt      ; work         ;
-;    |rgb_controller:inst4|  ; 1.4 (1.4)            ; 1.5 (1.5)                        ; 0.1 (0.1)                                         ; 0.0 (0.0)                        ; 0.0 (0.0)            ; 1 (1)               ; 4 (4)                     ; 0 (0)         ; 0                 ; 0     ; 0          ; 0    ; 0            ; |VGA_controller|rgb_controller:inst4 ; rgb_controller ; work         ;
-;    |t_ff:inst|             ; 0.7 (0.7)            ; 0.8 (0.8)                        ; 0.2 (0.2)                                         ; 0.0 (0.0)                        ; 0.0 (0.0)            ; 1 (1)               ; 1 (1)                     ; 0 (0)         ; 0                 ; 0     ; 0          ; 0    ; 0            ; |VGA_controller|t_ff:inst            ; t_ff           ; work         ;
-;    |vsync_cnt:inst2|       ; 16.0 (16.0)          ; 16.0 (16.0)                      ; 0.0 (0.0)                                         ; 0.0 (0.0)                        ; 0.0 (0.0)            ; 27 (27)             ; 12 (12)                   ; 0 (0)         ; 0                 ; 0     ; 0          ; 0    ; 0            ; |VGA_controller|vsync_cnt:inst2      ; vsync_cnt      ; work         ;
+; |VGA_controller            ; 34.5 (0.5)           ; 35.0 (0.5)                       ; 0.5 (0.0)                                         ; 0.0 (0.0)                        ; 0.0 (0.0)            ; 56 (1)              ; 33 (0)                    ; 0 (0)         ; 0                 ; 0     ; 0          ; 17   ; 0            ; |VGA_controller                      ; VGA_controller ; work         ;
+;    |hsync_cnt:inst1|       ; 13.1 (13.1)          ; 13.1 (13.1)                      ; 0.0 (0.0)                                         ; 0.0 (0.0)                        ; 0.0 (0.0)            ; 23 (23)             ; 12 (12)                   ; 0 (0)         ; 0                 ; 0     ; 0          ; 0    ; 0            ; |VGA_controller|hsync_cnt:inst1      ; hsync_cnt      ; work         ;
+;    |rgb_controller:inst4|  ; 4.9 (4.9)            ; 4.9 (4.9)                        ; 0.0 (0.0)                                         ; 0.0 (0.0)                        ; 0.0 (0.0)            ; 4 (4)               ; 8 (8)                     ; 0 (0)         ; 0                 ; 0     ; 0          ; 0    ; 0            ; |VGA_controller|rgb_controller:inst4 ; rgb_controller ; work         ;
+;    |t_ff:inst|             ; 0.8 (0.8)            ; 0.8 (0.8)                        ; 0.0 (0.0)                                         ; 0.0 (0.0)                        ; 0.0 (0.0)            ; 1 (1)               ; 1 (1)                     ; 0 (0)         ; 0                 ; 0     ; 0          ; 0    ; 0            ; |VGA_controller|t_ff:inst            ; t_ff           ; work         ;
+;    |vsync_cnt:inst2|       ; 15.0 (15.0)          ; 15.7 (15.7)                      ; 0.7 (0.7)                                         ; 0.0 (0.0)                        ; 0.0 (0.0)            ; 27 (27)             ; 12 (12)                   ; 0 (0)         ; 0                 ; 0     ; 0          ; 0    ; 0            ; |VGA_controller|vsync_cnt:inst2      ; vsync_cnt      ; work         ;
 +----------------------------+----------------------+----------------------------------+---------------------------------------------------+----------------------------------+----------------------+---------------------+---------------------------+---------------+-------------------+-------+------------+------+--------------+--------------------------------------+----------------+--------------+
 Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
 
@@ -971,38 +971,38 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +-----------+----------+----+------+------+----+------+-------+--------+------------------------+--------------------------+
 
 
-+----------------------------------------------------------------------+
-; Pad To Core Delay Chain Fanout                                       ;
-+----------------------------------------+-------------------+---------+
-; Source Pin / Fanout                    ; Pad To Core Index ; Setting ;
-+----------------------------------------+-------------------+---------+
-; SW0                                    ;                   ;         ;
-;      - hsync_cnt:inst1|hsync~2         ; 0                 ; 0       ;
-;      - vsync_cnt:inst2|vsync~1         ; 0                 ; 0       ;
-;      - rgb_controller:inst4|Decoder0~0 ; 0                 ; 0       ;
-;      - hsync_cnt:inst1|hsync~3         ; 0                 ; 0       ;
-;      - t_ff:inst|Selector0~0           ; 0                 ; 0       ;
-;      - vsync_cnt:inst2|count_reg[9]~0  ; 0                 ; 0       ;
-;      - vsync_cnt:inst2|count_reg[9]~1  ; 0                 ; 0       ;
-;      - led0~output                     ; 0                 ; 0       ;
-; 50MHz_clk                              ;                   ;         ;
-;      - t_ff:inst|q                     ; 1                 ; 0       ;
-+----------------------------------------+-------------------+---------+
++------------------------------------------------------------------------+
+; Pad To Core Delay Chain Fanout                                         ;
++------------------------------------------+-------------------+---------+
+; Source Pin / Fanout                      ; Pad To Core Index ; Setting ;
++------------------------------------------+-------------------+---------+
+; SW0                                      ;                   ;         ;
+;      - hsync_cnt:inst1|hsync~2           ; 0                 ; 0       ;
+;      - vsync_cnt:inst2|vsync~1           ; 0                 ; 0       ;
+;      - rgb_controller:inst4|colour_reg~1 ; 0                 ; 0       ;
+;      - hsync_cnt:inst1|hsync~3           ; 0                 ; 0       ;
+;      - t_ff:inst|Selector0~0             ; 0                 ; 0       ;
+;      - vsync_cnt:inst2|count_reg[9]~0    ; 0                 ; 0       ;
+;      - vsync_cnt:inst2|count_reg[9]~1    ; 0                 ; 0       ;
+;      - led0~output                       ; 0                 ; 0       ;
+; 50MHz_clk                                ;                   ;         ;
+;      - t_ff:inst|q                       ; 1                 ; 0       ;
++------------------------------------------+-------------------+---------+
 
 
-+---------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Control Signals                                                                                                                                               ;
-+--------------------------------+----------------------+---------+--------------+--------+----------------------+------------------+---------------------------+
-; Name                           ; Location             ; Fan-Out ; Usage        ; Global ; Global Resource Used ; Global Line Name ; Enable Signal Source Name ;
-+--------------------------------+----------------------+---------+--------------+--------+----------------------+------------------+---------------------------+
-; 50MHz_clk                      ; PIN_M9               ; 1       ; Clock        ; no     ; --                   ; --               ; --                        ;
-; hsync_cnt:inst1|hsync~2        ; MLABCELL_X23_Y39_N57 ; 2       ; Clock enable ; no     ; --                   ; --               ; --                        ;
-; hsync_cnt:inst1|hsync~3        ; MLABCELL_X23_Y39_N9  ; 10      ; Sync. clear  ; no     ; --                   ; --               ; --                        ;
-; t_ff:inst|q                    ; FF_X23_Y39_N56       ; 29      ; Clock        ; no     ; --                   ; --               ; --                        ;
-; vsync_cnt:inst2|count_reg[9]~0 ; LABCELL_X25_Y39_N12  ; 10      ; Sync. clear  ; no     ; --                   ; --               ; --                        ;
-; vsync_cnt:inst2|count_reg[9]~1 ; MLABCELL_X23_Y39_N30 ; 10      ; Clock enable ; no     ; --                   ; --               ; --                        ;
-; vsync_cnt:inst2|vsync~1        ; LABCELL_X24_Y39_N0   ; 2       ; Clock enable ; no     ; --                   ; --               ; --                        ;
-+--------------------------------+----------------------+---------+--------------+--------+----------------------+------------------+---------------------------+
++--------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Control Signals                                                                                                                                              ;
++--------------------------------+---------------------+---------+--------------+--------+----------------------+------------------+---------------------------+
+; Name                           ; Location            ; Fan-Out ; Usage        ; Global ; Global Resource Used ; Global Line Name ; Enable Signal Source Name ;
++--------------------------------+---------------------+---------+--------------+--------+----------------------+------------------+---------------------------+
+; 50MHz_clk                      ; PIN_M9              ; 1       ; Clock        ; no     ; --                   ; --               ; --                        ;
+; hsync_cnt:inst1|hsync~2        ; LABCELL_X25_Y41_N3  ; 2       ; Clock enable ; no     ; --                   ; --               ; --                        ;
+; hsync_cnt:inst1|hsync~3        ; LABCELL_X25_Y41_N45 ; 10      ; Sync. clear  ; no     ; --                   ; --               ; --                        ;
+; t_ff:inst|q                    ; FF_X25_Y41_N20      ; 33      ; Clock        ; no     ; --                   ; --               ; --                        ;
+; vsync_cnt:inst2|count_reg[9]~0 ; LABCELL_X24_Y41_N51 ; 10      ; Sync. clear  ; no     ; --                   ; --               ; --                        ;
+; vsync_cnt:inst2|count_reg[9]~1 ; LABCELL_X24_Y41_N48 ; 10      ; Clock enable ; no     ; --                   ; --               ; --                        ;
+; vsync_cnt:inst2|vsync~1        ; LABCELL_X24_Y41_N36 ; 2       ; Clock enable ; no     ; --                   ; --               ; --                        ;
++--------------------------------+---------------------+---------+--------------+--------+----------------------+------------------+---------------------------+
 
 
 +--------------------------------------------------------+
@@ -1010,21 +1010,21 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +------------------------------+-------------------------+
 ; Routing Resource Type        ; Usage                   ;
 +------------------------------+-------------------------+
-; Block interconnects          ; 104 / 140,056 ( < 1 % ) ;
-; C12 interconnects            ; 9 / 6,048 ( < 1 % )     ;
-; C2 interconnects             ; 16 / 54,648 ( < 1 % )   ;
-; C4 interconnects             ; 15 / 25,920 ( < 1 % )   ;
+; Block interconnects          ; 119 / 140,056 ( < 1 % ) ;
+; C12 interconnects            ; 8 / 6,048 ( < 1 % )     ;
+; C2 interconnects             ; 32 / 54,648 ( < 1 % )   ;
+; C4 interconnects             ; 8 / 25,920 ( < 1 % )    ;
 ; DQS bus muxes                ; 0 / 17 ( 0 % )          ;
 ; DQS-18 I/O buses             ; 0 / 17 ( 0 % )          ;
 ; DQS-9 I/O buses              ; 0 / 17 ( 0 % )          ;
-; Direct links                 ; 13 / 140,056 ( < 1 % )  ;
+; Direct links                 ; 29 / 140,056 ( < 1 % )  ;
 ; Global clocks                ; 0 / 16 ( 0 % )          ;
-; Local interconnects          ; 30 / 36,960 ( < 1 % )   ;
+; Local interconnects          ; 36 / 36,960 ( < 1 % )   ;
 ; Quadrant clocks              ; 0 / 88 ( 0 % )          ;
-; R14 interconnects            ; 13 / 5,984 ( < 1 % )    ;
+; R14 interconnects            ; 14 / 5,984 ( < 1 % )    ;
 ; R14/C12 interconnect drivers ; 20 / 9,504 ( < 1 % )    ;
-; R3 interconnects             ; 55 / 60,192 ( < 1 % )   ;
-; R6 interconnects             ; 46 / 127,072 ( < 1 % )  ;
+; R3 interconnects             ; 56 / 60,192 ( < 1 % )   ;
+; R6 interconnects             ; 56 / 127,072 ( < 1 % )  ;
 ; Spine clocks                 ; 0 / 120 ( 0 % )         ;
 ; Wire stub REs                ; 0 / 7,344 ( 0 % )       ;
 +------------------------------+-------------------------+
@@ -1157,9 +1157,9 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +-----------------+----------------------+-------------------+
 ; Source Clock(s) ; Destination Clock(s) ; Delay Added in ns ;
 +-----------------+----------------------+-------------------+
-; t_ff:inst|q     ; t_ff:inst|q          ; 32.1              ;
-; 50MHz_clk,I/O   ; 50MHz_clk            ; 2.5               ;
-; 50MHz_clk       ; 50MHz_clk            ; 2.5               ;
+; t_ff:inst|q     ; t_ff:inst|q          ; 27.9              ;
+; 50MHz_clk,I/O   ; 50MHz_clk            ; 2.6               ;
+; 50MHz_clk       ; 50MHz_clk            ; 2.6               ;
 +-----------------+----------------------+-------------------+
 Note: For more information on problematic transfers, consider running the Fitter again with the Optimize hold timing option (Settings Menu) turned off.
 This will disable optimization of problematic paths and expose them for further analysis using the Timing Analyzer.
@@ -1170,30 +1170,30 @@ This will disable optimization of problematic paths and expose them for further 
 +------------------------------+------------------------------------+-------------------+
 ; Source Register              ; Destination Register               ; Delay Added in ns ;
 +------------------------------+------------------------------------+-------------------+
-; t_ff:inst|q                  ; t_ff:inst|q                        ; 4.998             ;
-; SW0                          ; t_ff:inst|q                        ; 2.499             ;
-; vsync_cnt:inst2|count_reg[6] ; vsync_cnt:inst2|vsync              ; 1.081             ;
-; hsync_cnt:inst1|count_reg[9] ; hsync_cnt:inst1|rgb_en             ; 1.051             ;
-; vsync_cnt:inst2|count_reg[7] ; vsync_cnt:inst2|vsync              ; 1.045             ;
-; hsync_cnt:inst1|count_reg[4] ; hsync_cnt:inst1|rgb_en             ; 1.011             ;
-; hsync_cnt:inst1|count_reg[5] ; hsync_cnt:inst1|rgb_en             ; 1.007             ;
-; hsync_cnt:inst1|count_reg[8] ; hsync_cnt:inst1|rgb_en             ; 0.994             ;
-; hsync_cnt:inst1|count_reg[6] ; hsync_cnt:inst1|rgb_en             ; 0.991             ;
-; vsync_cnt:inst2|count_reg[5] ; vsync_cnt:inst2|vsync              ; 0.986             ;
-; vsync_cnt:inst2|count_reg[8] ; vsync_cnt:inst2|rgb_en             ; 0.984             ;
-; vsync_cnt:inst2|count_reg[3] ; vsync_cnt:inst2|vsync              ; 0.981             ;
-; vsync_cnt:inst2|count_reg[0] ; vsync_cnt:inst2|vsync              ; 0.968             ;
-; vsync_cnt:inst2|count_reg[2] ; vsync_cnt:inst2|vsync              ; 0.966             ;
-; vsync_cnt:inst2|count_reg[9] ; vsync_cnt:inst2|vsync              ; 0.961             ;
-; hsync_cnt:inst1|count_reg[3] ; hsync_cnt:inst1|rgb_en             ; 0.942             ;
-; hsync_cnt:inst1|count_reg[1] ; hsync_cnt:inst1|rgb_en             ; 0.924             ;
-; hsync_cnt:inst1|count_reg[2] ; hsync_cnt:inst1|rgb_en             ; 0.923             ;
-; hsync_cnt:inst1|count_reg[0] ; hsync_cnt:inst1|rgb_en             ; 0.916             ;
-; vsync_cnt:inst2|count_reg[1] ; vsync_cnt:inst2|vsync              ; 0.907             ;
-; vsync_cnt:inst2|count_reg[4] ; vsync_cnt:inst2|vsync              ; 0.905             ;
-; hsync_cnt:inst1|count_reg[7] ; hsync_cnt:inst1|rgb_en             ; 0.889             ;
-; vsync_cnt:inst2|rgb_en       ; rgb_controller:inst4|colour_reg[9] ; 0.372             ;
-; hsync_cnt:inst1|rgb_en       ; rgb_controller:inst4|colour_reg[9] ; 0.189             ;
+; t_ff:inst|q                  ; t_ff:inst|q                        ; 5.225             ;
+; SW0                          ; t_ff:inst|q                        ; 2.613             ;
+; vsync_cnt:inst2|count_reg[6] ; vsync_cnt:inst2|rgb_en             ; 1.014             ;
+; vsync_cnt:inst2|count_reg[7] ; vsync_cnt:inst2|rgb_en             ; 1.013             ;
+; hsync_cnt:inst1|count_reg[9] ; hsync_cnt:inst1|rgb_en             ; 1.010             ;
+; vsync_cnt:inst2|count_reg[8] ; vsync_cnt:inst2|rgb_en             ; 1.000             ;
+; hsync_cnt:inst1|count_reg[5] ; hsync_cnt:inst1|hsync              ; 0.988             ;
+; hsync_cnt:inst1|count_reg[4] ; hsync_cnt:inst1|hsync              ; 0.988             ;
+; hsync_cnt:inst1|count_reg[8] ; hsync_cnt:inst1|hsync              ; 0.963             ;
+; vsync_cnt:inst2|count_reg[5] ; vsync_cnt:inst2|rgb_en             ; 0.957             ;
+; hsync_cnt:inst1|count_reg[6] ; hsync_cnt:inst1|rgb_en             ; 0.940             ;
+; vsync_cnt:inst2|count_reg[9] ; vsync_cnt:inst2|rgb_en             ; 0.902             ;
+; hsync_cnt:inst1|count_reg[2] ; hsync_cnt:inst1|rgb_en             ; 0.886             ;
+; hsync_cnt:inst1|count_reg[1] ; hsync_cnt:inst1|rgb_en             ; 0.881             ;
+; hsync_cnt:inst1|count_reg[0] ; hsync_cnt:inst1|rgb_en             ; 0.880             ;
+; vsync_cnt:inst2|count_reg[0] ; vsync_cnt:inst2|rgb_en             ; 0.860             ;
+; vsync_cnt:inst2|count_reg[2] ; vsync_cnt:inst2|rgb_en             ; 0.859             ;
+; vsync_cnt:inst2|count_reg[3] ; vsync_cnt:inst2|rgb_en             ; 0.850             ;
+; hsync_cnt:inst1|count_reg[7] ; hsync_cnt:inst1|rgb_en             ; 0.846             ;
+; vsync_cnt:inst2|count_reg[4] ; vsync_cnt:inst2|rgb_en             ; 0.828             ;
+; vsync_cnt:inst2|count_reg[1] ; vsync_cnt:inst2|rgb_en             ; 0.790             ;
+; hsync_cnt:inst1|count_reg[3] ; hsync_cnt:inst1|rgb_en             ; 0.788             ;
+; hsync_cnt:inst1|rgb_en       ; rgb_controller:inst4|colour_reg[5] ; 0.446             ;
+; vsync_cnt:inst2|rgb_en       ; rgb_controller:inst4|colour_reg[5] ; 0.253             ;
 +------------------------------+------------------------------------+-------------------+
 Note: This table only shows the top 24 path(s) that have the largest delay added for hold.
 
@@ -1219,7 +1219,7 @@ Info (332123): Deriving Clock Uncertainty. Please refer to report_sdc in the Tim
 Info (332130): Timing requirements not specified -- quality metrics such as performance may be sacrificed to reduce compilation time.
 Info (176235): Finished register packing
     Extra Info (176219): No registers were packed into other blocks
-Info (11798): Fitter preparation operations ending: elapsed time is 00:00:03
+Info (11798): Fitter preparation operations ending: elapsed time is 00:00:02
 Info (170189): Fitter placement preparation operations beginning
 Info (14951): The Fitter is using Advanced Physical Optimization.
 Info (170190): Fitter placement preparation operations ending: elapsed time is 00:00:02
@@ -1240,10 +1240,10 @@ Info (334004): Delay annotation completed successfully
 Info (11801): Fitter post-fit operations ending: elapsed time is 00:00:02
 Info (144001): Generated suppressed messages file C:/Users/minec/Desktop/Work/GitHub Repos/PROJ300/Firmware/VGA Controller/output_files/VGA_controller.fit.smsg
 Info: Quartus Prime Fitter was successful. 0 errors, 4 warnings
-    Info: Peak virtual memory: 7526 megabytes
-    Info: Processing ended: Tue Jan 30 12:46:05 2024
+    Info: Peak virtual memory: 7524 megabytes
+    Info: Processing ended: Wed Jan 31 06:02:25 2024
     Info: Elapsed time: 00:00:14
-    Info: Total CPU time (on all processors): 00:00:47
+    Info: Total CPU time (on all processors): 00:00:46
 
 
 +----------------------------+

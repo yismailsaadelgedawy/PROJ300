@@ -69,6 +69,7 @@ set_location_assignment PIN_A7 -to b3
 set_location_assignment PIN_A8 -to b2
 set_location_assignment PIN_B7 -to b1
 set_location_assignment PIN_B6 -to b0
+set_global_assignment -name SYSTEMVERILOG_FILE "sv files/sprite_ROM_square.sv"
 set_global_assignment -name SYSTEMVERILOG_FILE "sv files/xnor_2.sv"
 set_global_assignment -name SYSTEMVERILOG_FILE "sv files/rgb_controller.sv"
 set_global_assignment -name SYSTEMVERILOG_FILE "sv files/vsync_cnt.sv"

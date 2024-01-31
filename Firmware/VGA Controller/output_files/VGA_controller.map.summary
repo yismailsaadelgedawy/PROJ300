@@ -1,10 +1,10 @@
-Analysis & Synthesis Status : Successful - Tue Jan 30 12:45:50 2024
+Analysis & Synthesis Status : Successful - Wed Jan 31 06:02:10 2024
 Quartus Prime Version : 20.1.1 Build 720 11/11/2020 SJ Lite Edition
 Revision Name : VGA_controller
 Top-level Entity Name : VGA_controller
 Family : Cyclone V
 Logic utilization (in ALMs) : N/A
-Total registers : 29
+Total registers : 33
 Total pins : 17
 Total virtual pins : 0
 Total block memory bits : 0
