@@ -884,18 +884,6 @@ https://fpgasoftware.intel.com/eula.
 	(pt 184 888)
 )
 (connector
-	(text "row[9..0]" (rect 378 792 419 809)(font "Intel Clear" ))
-	(pt 448 808)
-	(pt 368 808)
-	(bus)
-)
-(connector
-	(text "column[9..0]" (rect 378 808 437 825)(font "Intel Clear" ))
-	(pt 448 824)
-	(pt 368 824)
-	(bus)
-)
-(connector
 	(text "r[3..0]" (rect 658 792 685 809)(font "Intel Clear" ))
 	(pt 640 808)
 	(pt 704 808)
@@ -914,16 +902,6 @@ https://fpgasoftware.intel.com/eula.
 	(bus)
 )
 (connector
-	(text "pixel_clk" (rect 378 872 420 889)(font "Intel Clear" ))
-	(pt 448 888)
-	(pt 368 888)
-)
-(connector
-	(text "sw_rst" (rect 378 840 408 857)(font "Intel Clear" ))
-	(pt 448 856)
-	(pt 368 856)
-)
-(connector
 	(pt 296 872)
 	(pt 448 872)
 )
@@ -939,5 +917,27 @@ https://fpgasoftware.intel.com/eula.
 	(pt 352 840)
 	(bus)
 )
+(connector
+	(text "row[9..0]" (rect 362 792 403 809)(font "Intel Clear" ))
+	(pt 448 808)
+	(pt 352 808)
+	(bus)
+)
+(connector
+	(text "column[9..0]" (rect 362 808 421 825)(font "Intel Clear" ))
+	(pt 448 824)
+	(pt 352 824)
+	(bus)
+)
+(connector
+	(text "sw_rst" (rect 362 840 392 857)(font "Intel Clear" ))
+	(pt 448 856)
+	(pt 352 856)
+)
+(connector
+	(text "pixel_clk" (rect 362 872 404 889)(font "Intel Clear" ))
+	(pt 448 888)
+	(pt 352 888)
+)
 (junction (pt 800 432))
-(text "VGA Controller Module" (rect 520 136 654 155)(font "Intel Clear" (font_size 8)))
+(text "VGA Controller Module" (rect 440 80 647 103)(font "Intel Clear" (font_size 12)(bold)))

@@ -212,4 +212,4 @@ https://fpgasoftware.intel.com/eula.
 	(pt 304 416)
 	(bus)
 )
-(text "2-input RGB Controller MUX" (rect 512 120 678 139)(font "Intel Clear" (font_size 8)))
+(text "2-input RGB Controller MUX" (rect 520 80 721 100)(font "Intel Clear" (font_size 10)(bold)))
