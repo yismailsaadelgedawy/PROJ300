@@ -1,0 +1,2 @@
+Info (10281): Verilog HDL Declaration information at sprite_MUX.sv(1): object "B" differs only in case from object "b" in the same scope File: C:/Users/minec/Desktop/Work/GitHub Repos/PROJ300/Firmware/VGA Controller/sv files/sprite_MUX.sv Line: 1
+Info (10281): Verilog HDL Declaration information at selector.sv(1): object "B" differs only in case from object "b" in the same scope File: C:/Users/minec/Desktop/Work/GitHub Repos/PROJ300/Firmware/VGA Controller/sv files/selector.sv Line: 1
