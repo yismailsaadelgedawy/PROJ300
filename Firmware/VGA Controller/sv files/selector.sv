@@ -4,8 +4,6 @@ module selector #(parameter M=2, B=$clog2(M)) (output logic [B-1:0] s, input log
 // M -> number of ROMs used (rounded up to the next power of 2)
 // B -> number of bits on the select bus
 
-/// the number of inputs need to manually be updated (e.g. adding c) if needed ///
-/// the case statement below has to manually be updated if more ROMs want to be used ///
 
 always_comb begin
 

@@ -941,3 +941,4 @@ https://fpgasoftware.intel.com/eula.
 )
 (junction (pt 800 432))
 (text "VGA Controller Module" (rect 440 80 647 103)(font "Intel Clear" (font_size 12)(bold)))
+(text "this may be cascaded n times to accomodate n+1 ROMs" (rect 336 712 659 730)(font "Intel Clear" (font_size 8)(italic)))
