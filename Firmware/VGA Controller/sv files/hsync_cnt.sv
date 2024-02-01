@@ -1,6 +1,6 @@
-module hsync_cnt (output logic hsync, rgb_en, output logic [9:0] column, input logic rst, clk);
+module hsync_cnt (output logic hsync, rgb_en, output logic [10:0] column, input logic rst, clk);
 
-logic[9:0] count_reg;
+logic[10:0] count_reg;
 
 always_comb begin
 
@@ -27,7 +27,7 @@ always_ff @(posedge clk) begin
     end
 
     // from 0 to 639
-    if (count_reg < 10'd639) begin
+    if (count_reg < 11'd639) begin
 
         rgb_en <= 1;
         hsync <= 1;
@@ -36,7 +36,7 @@ always_ff @(posedge clk) begin
 
 
     // from 640 to 655
-    if (count_reg > 10'd638 && count_reg < 10'd655) begin
+    if (count_reg > 11'd638 && count_reg < 11'd655) begin
 
         rgb_en <= 0;
         hsync <= 1;
@@ -46,7 +46,7 @@ always_ff @(posedge clk) begin
 
 
     // from 656 to 751
-    if (count_reg > 10'd654 && count_reg < 10'd751) begin
+    if (count_reg > 11'd654 && count_reg < 11'd751) begin
 
         rgb_en <= 0;
         hsync <= 0;
@@ -55,14 +55,14 @@ always_ff @(posedge clk) begin
     end
 
     // from 752 to 799
-    if (count_reg > 10'd750 && count_reg < 10'd799) begin
+    if (count_reg > 11'd750 && count_reg < 11'd799) begin
 
         rgb_en <= 0;
         hsync <= 1;
 
     end
 
-    if (count_reg == 10'd800) begin
+    if (count_reg == 11'd800) begin
 
         count_reg <= '0;
         rgb_en <= 1;

@@ -6,12 +6,12 @@ module vsync_cnt_tb;
 // inputs 
 logic clk;
 logic rst;
-logic[9:0] column;
+logic[10:0] column;
 
 // outputs
 logic vsync;
 logic rgb_en;
-logic[9:0] row;
+logic[10:0] row;
 
 
 // wiring
@@ -46,10 +46,10 @@ end
 initial begin
 
     rst = 1;
-    column = 10'd800;
+    column = 11'd800;
     
     #35ns;
-    assert (row == 10'd0) $display("passed reset condition"); else $error("failed reset condition");
+    assert (row == 11'd0) $display("passed reset condition"); else $error("failed reset condition");
     assert (vsync == 1) $display("passed reset condition"); else $error("failed reset condition");
     assert (rgb_en == 1) $display("passed reset condition"); else $error("failed reset condition");
     #5ns;

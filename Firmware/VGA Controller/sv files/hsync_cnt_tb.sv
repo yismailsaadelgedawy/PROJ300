@@ -10,7 +10,7 @@ logic rst;
 // outputs
 logic hsync;
 logic rgb_en;
-logic[9:0] column;
+logic[10:0] column;
 
 
 // wiring
@@ -47,7 +47,7 @@ initial begin
     rst = 1;
     
     #35ns;
-    assert (column == 10'd0) $display("passed reset condition"); else $error("failed reset condition");
+    assert (column == 11'd0) $display("passed reset condition"); else $error("failed reset condition");
     assert (hsync == 1) $display("passed reset condition"); else $error("failed reset condition");
     assert (rgb_en == 1) $display("passed reset condition"); else $error("failed reset condition");
     #5ns;
