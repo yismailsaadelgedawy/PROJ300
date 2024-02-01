@@ -554,9 +554,38 @@ https://fpgasoftware.intel.com/eula.
 	)
 )
 (symbol
+	(rect 344 608 552 704)
+	(text "rgbMUX" (rect 5 0 53 19)(font "Intel Clear" (font_size 8)))
+	(text "inst9" (rect 8 75 30 92)(font "Intel Clear" ))
+	(port
+		(pt 0 32)
+		(input)
+		(text "A[11..0]" (rect 0 0 47 19)(font "Intel Clear" (font_size 8)))
+		(text "A[11..0]" (rect 21 27 68 46)(font "Intel Clear" (font_size 8)))
+		(line (pt 0 32)(pt 16 32)(line_width 3))
+	)
+	(port
+		(pt 0 48)
+		(input)
+		(text "B[11..0]" (rect 0 0 47 19)(font "Intel Clear" (font_size 8)))
+		(text "B[11..0]" (rect 21 43 68 62)(font "Intel Clear" (font_size 8)))
+		(line (pt 0 48)(pt 16 48)(line_width 3))
+	)
+	(port
+		(pt 208 32)
+		(output)
+		(text "colour_data[11..0]" (rect 0 0 108 19)(font "Intel Clear" (font_size 8)))
+		(text "colour_data[11..0]" (rect 79 27 187 46)(font "Intel Clear" (font_size 8)))
+		(line (pt 208 32)(pt 192 32)(line_width 3))
+	)
+	(drawing
+		(rectangle (rect 16 16 192 80))
+	)
+)
+(symbol
 	(rect 80 552 256 632)
-	(text "sprite_ROM_square" (rect 5 0 101 12)(font "Arial" ))
-	(text "inst6" (rect 8 64 30 81)(font "Intel Clear" ))
+	(text "sprite_ROM_square2" (rect 5 0 107 12)(font "Arial" ))
+	(text "inst8" (rect 8 64 30 81)(font "Intel Clear" ))
 	(port
 		(pt 0 32)
 		(input)
@@ -590,8 +619,8 @@ https://fpgasoftware.intel.com/eula.
 )
 (symbol
 	(rect 80 680 256 760)
-	(text "sprite_ROM_square2" (rect 5 0 107 12)(font "Arial" ))
-	(text "inst8" (rect 8 64 30 81)(font "Intel Clear" ))
+	(text "sprite_ROM_square" (rect 5 0 101 12)(font "Arial" ))
+	(text "inst11" (rect 8 64 36 81)(font "Intel Clear" ))
 	(port
 		(pt 0 32)
 		(input)
@@ -622,35 +651,6 @@ https://fpgasoftware.intel.com/eula.
 		(rectangle (rect 16 16 160 64))
 	)
 	(annotation_block (parameter)(rect 80 640 256 680))
-)
-(symbol
-	(rect 344 608 552 704)
-	(text "rgbMUX" (rect 5 0 53 19)(font "Intel Clear" (font_size 8)))
-	(text "inst9" (rect 8 75 30 92)(font "Intel Clear" ))
-	(port
-		(pt 0 32)
-		(input)
-		(text "A[11..0]" (rect 0 0 47 19)(font "Intel Clear" (font_size 8)))
-		(text "A[11..0]" (rect 21 27 68 46)(font "Intel Clear" (font_size 8)))
-		(line (pt 0 32)(pt 16 32)(line_width 3))
-	)
-	(port
-		(pt 0 48)
-		(input)
-		(text "B[11..0]" (rect 0 0 47 19)(font "Intel Clear" (font_size 8)))
-		(text "B[11..0]" (rect 21 43 68 62)(font "Intel Clear" (font_size 8)))
-		(line (pt 0 48)(pt 16 48)(line_width 3))
-	)
-	(port
-		(pt 208 32)
-		(output)
-		(text "colour_data[11..0]" (rect 0 0 108 19)(font "Intel Clear" (font_size 8)))
-		(text "colour_data[11..0]" (rect 79 27 187 46)(font "Intel Clear" (font_size 8)))
-		(line (pt 208 32)(pt 192 32)(line_width 3))
-	)
-	(drawing
-		(rectangle (rect 16 16 192 80))
-	)
 )
 (connector
 	(pt 472 224)

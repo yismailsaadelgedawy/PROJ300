@@ -1,5 +1,5 @@
 Analysis & Synthesis report for VGA_controller
-Wed Jan 31 12:40:50 2024
+Thu Feb 01 05:39:45 2024
 Quartus Prime Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
 
 
@@ -16,8 +16,8 @@ Quartus Prime Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
   8. Registers Removed During Synthesis
   9. General Register Statistics
  10. Multiplexer Restructuring Statistics (Restructuring Performed)
- 11. Parameter Settings for User Entity Instance: sprite_ROM_square:inst6
- 12. Parameter Settings for User Entity Instance: sprite_ROM_square2:inst8
+ 11. Parameter Settings for User Entity Instance: sprite_ROM_square2:inst8
+ 12. Parameter Settings for User Entity Instance: sprite_ROM_square:inst11
  13. Post-Synthesis Netlist Statistics for Top Partition
  14. Elapsed Time Per Partition
  15. Analysis & Synthesis Messages
@@ -47,7 +47,7 @@ https://fpgasoftware.intel.com/eula.
 +-------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                  ;
 +---------------------------------+---------------------------------------------+
-; Analysis & Synthesis Status     ; Successful - Wed Jan 31 12:40:50 2024       ;
+; Analysis & Synthesis Status     ; Successful - Thu Feb 01 05:39:45 2024       ;
 ; Quartus Prime Version           ; 20.1.1 Build 720 11/11/2020 SJ Lite Edition ;
 ; Revision Name                   ; VGA_controller                              ;
 ; Top-level Entity Name           ; VGA_controller                              ;
@@ -195,12 +195,12 @@ https://fpgasoftware.intel.com/eula.
 +---------------------------------------------+-------------+
 ; Resource                                    ; Usage       ;
 +---------------------------------------------+-------------+
-; Estimate of Logic utilization (ALMs needed) ; 39          ;
+; Estimate of Logic utilization (ALMs needed) ; 40          ;
 ;                                             ;             ;
 ; Combinational ALUT usage for logic          ; 63          ;
 ;     -- 7 input functions                    ; 0           ;
-;     -- 6 input functions                    ; 14          ;
-;     -- 5 input functions                    ; 11          ;
+;     -- 6 input functions                    ; 15          ;
+;     -- 5 input functions                    ; 10          ;
 ;     -- 4 input functions                    ; 7           ;
 ;     -- <=3 input functions                  ; 31          ;
 ;                                             ;             ;
@@ -217,18 +217,18 @@ https://fpgasoftware.intel.com/eula.
 +---------------------------------------------+-------------+
 
 
-+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                                                ;
-+------------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+-----------------------------------------+-------------------+--------------+
-; Compilation Hierarchy Node   ; Combinational ALUTs ; Dedicated Logic Registers ; Block Memory Bits ; DSP Blocks ; Pins ; Virtual Pins ; Full Hierarchy Name                     ; Entity Name       ; Library Name ;
-+------------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+-----------------------------------------+-------------------+--------------+
-; |VGA_controller              ; 63 (0)              ; 33 (0)                    ; 0                 ; 0          ; 17   ; 0            ; |VGA_controller                         ; VGA_controller    ; work         ;
-;    |hsync_cnt:inst1|         ; 24 (24)             ; 12 (12)                   ; 0                 ; 0          ; 0    ; 0            ; |VGA_controller|hsync_cnt:inst1         ; hsync_cnt         ; work         ;
-;    |rgb_controller:inst4|    ; 7 (7)               ; 8 (8)                     ; 0                 ; 0          ; 0    ; 0            ; |VGA_controller|rgb_controller:inst4    ; rgb_controller    ; work         ;
-;    |sprite_ROM_square:inst6| ; 4 (4)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |VGA_controller|sprite_ROM_square:inst6 ; sprite_ROM_square ; work         ;
-;    |t_ff:inst|               ; 1 (1)               ; 1 (1)                     ; 0                 ; 0          ; 0    ; 0            ; |VGA_controller|t_ff:inst               ; t_ff              ; work         ;
-;    |vsync_cnt:inst2|         ; 27 (27)             ; 12 (12)                   ; 0                 ; 0          ; 0    ; 0            ; |VGA_controller|vsync_cnt:inst2         ; vsync_cnt         ; work         ;
-+------------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+-----------------------------------------+-------------------+--------------+
++-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                                                   ;
++-------------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+------------------------------------------+--------------------+--------------+
+; Compilation Hierarchy Node    ; Combinational ALUTs ; Dedicated Logic Registers ; Block Memory Bits ; DSP Blocks ; Pins ; Virtual Pins ; Full Hierarchy Name                      ; Entity Name        ; Library Name ;
++-------------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+------------------------------------------+--------------------+--------------+
+; |VGA_controller               ; 63 (0)              ; 33 (0)                    ; 0                 ; 0          ; 17   ; 0            ; |VGA_controller                          ; VGA_controller     ; work         ;
+;    |hsync_cnt:inst1|          ; 23 (23)             ; 12 (12)                   ; 0                 ; 0          ; 0    ; 0            ; |VGA_controller|hsync_cnt:inst1          ; hsync_cnt          ; work         ;
+;    |rgb_controller:inst4|     ; 7 (7)               ; 8 (8)                     ; 0                 ; 0          ; 0    ; 0            ; |VGA_controller|rgb_controller:inst4     ; rgb_controller     ; work         ;
+;    |sprite_ROM_square2:inst8| ; 5 (5)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |VGA_controller|sprite_ROM_square2:inst8 ; sprite_ROM_square2 ; work         ;
+;    |t_ff:inst|                ; 1 (1)               ; 1 (1)                     ; 0                 ; 0          ; 0    ; 0            ; |VGA_controller|t_ff:inst                ; t_ff               ; work         ;
+;    |vsync_cnt:inst2|          ; 27 (27)             ; 12 (12)                   ; 0                 ; 0          ; 0    ; 0            ; |VGA_controller|vsync_cnt:inst2          ; vsync_cnt          ; work         ;
++-------------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+------------------------------------------+--------------------+--------------+
 Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
 
 
@@ -270,18 +270,18 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +--------------------+-----------+---------------+----------------------+------------------------+------------+-------------------------------------------------+
 
 
-+----------------------------------------------------------------------+
-; Parameter Settings for User Entity Instance: sprite_ROM_square:inst6 ;
-+----------------+-------+---------------------------------------------+
-; Parameter Name ; Value ; Type                                        ;
-+----------------+-------+---------------------------------------------+
-; M              ; 2     ; Signed Integer                              ;
-+----------------+-------+---------------------------------------------+
++-----------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: sprite_ROM_square2:inst8 ;
++----------------+-------+----------------------------------------------+
+; Parameter Name ; Value ; Type                                         ;
++----------------+-------+----------------------------------------------+
+; M              ; 2     ; Signed Integer                               ;
++----------------+-------+----------------------------------------------+
 Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
 
 
 +-----------------------------------------------------------------------+
-; Parameter Settings for User Entity Instance: sprite_ROM_square2:inst8 ;
+; Parameter Settings for User Entity Instance: sprite_ROM_square:inst11 ;
 +----------------+-------+----------------------------------------------+
 ; Parameter Name ; Value ; Type                                         ;
 +----------------+-------+----------------------------------------------+
@@ -305,11 +305,11 @@ Note: In order to hide this table in the UI and the text report file, please set
 ;         1 data inputs ; 20                          ;
 ;     normal            ; 44                          ;
 ;         0 data inputs ; 1                           ;
-;         2 data inputs ; 6                           ;
-;         3 data inputs ; 5                           ;
+;         2 data inputs ; 7                           ;
+;         3 data inputs ; 4                           ;
 ;         4 data inputs ; 7                           ;
-;         5 data inputs ; 11                          ;
-;         6 data inputs ; 14                          ;
+;         5 data inputs ; 10                          ;
+;         6 data inputs ; 15                          ;
 ; boundary_port         ; 17                          ;
 ;                       ;                             ;
 ; Max LUT depth         ; 3.00                        ;
@@ -332,10 +332,12 @@ Note: In order to hide this table in the UI and the text report file, please set
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
-    Info: Processing started: Wed Jan 31 12:40:44 2024
+    Info: Processing started: Thu Feb 01 05:39:39 2024
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off VGA_controller -c VGA_controller
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20030): Parallel compilation is enabled and will use 16 of the 16 processors detected
+Info (12021): Found 1 design units, including 1 entities, in source file sv files/sprite_rom_square3.sv
+    Info (12023): Found entity 1: sprite_ROM_square3 File: C:/Users/minec/Desktop/Work/GitHub Repos/PROJ300/Firmware/VGA Controller/sv files/sprite_ROM_square3.sv Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file sv files/sprite_rom_square2.sv
     Info (12023): Found entity 1: sprite_ROM_square2 File: C:/Users/minec/Desktop/Work/GitHub Repos/PROJ300/Firmware/VGA Controller/sv files/sprite_ROM_square2.sv Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file sv files/sprite_mux.sv
@@ -391,8 +393,8 @@ Info (12128): Elaborating entity "sprite_MUX" for hierarchy "rgbMUX:inst9|sprite
 Info (12128): Elaborating entity "selector" for hierarchy "rgbMUX:inst9|selector:inst"
 Warning (10935): Verilog HDL Casex/Casez warning at selector.sv(18): casex/casez item expression overlaps with a previous casex/casez item expression File: C:/Users/minec/Desktop/Work/GitHub Repos/PROJ300/Firmware/VGA Controller/sv files/selector.sv Line: 18
 Warning (10935): Verilog HDL Casex/Casez warning at selector.sv(24): casex/casez item expression overlaps with a previous casex/casez item expression File: C:/Users/minec/Desktop/Work/GitHub Repos/PROJ300/Firmware/VGA Controller/sv files/selector.sv Line: 24
-Info (12128): Elaborating entity "sprite_ROM_square" for hierarchy "sprite_ROM_square:inst6"
 Info (12128): Elaborating entity "sprite_ROM_square2" for hierarchy "sprite_ROM_square2:inst8"
+Info (12128): Elaborating entity "sprite_ROM_square" for hierarchy "sprite_ROM_square:inst11"
 Warning (13024): Output pins are stuck at VCC or GND
     Warning (13410): Pin "b3" is stuck at GND
     Warning (13410): Pin "b2" is stuck at GND
@@ -406,8 +408,8 @@ Info (21057): Implemented 88 device resources after synthesis - the final resour
     Info (21059): Implemented 15 output pins
     Info (21061): Implemented 71 logic cells
 Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 30 warnings
-    Info: Peak virtual memory: 4886 megabytes
-    Info: Processing ended: Wed Jan 31 12:40:50 2024
+    Info: Peak virtual memory: 4899 megabytes
+    Info: Processing ended: Thu Feb 01 05:39:45 2024
     Info: Elapsed time: 00:00:06
     Info: Total CPU time (on all processors): 00:00:07
 

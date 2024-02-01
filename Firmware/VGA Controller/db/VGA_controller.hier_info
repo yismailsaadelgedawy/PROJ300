@@ -330,7 +330,7 @@ b[10] => Equal0.IN37
 b[11] => Equal0.IN36
 
 
-|VGA_controller|sprite_ROM_square:inst6
+|VGA_controller|sprite_ROM_square2:inst8
 q[0] <= <GND>
 q[1] <= <GND>
 q[2] <= <GND>
@@ -425,7 +425,7 @@ column[9] => Equal2.IN30
 column[9] => Equal3.IN30
 
 
-|VGA_controller|sprite_ROM_square2:inst8
+|VGA_controller|sprite_ROM_square:inst11
 q[0] <= <GND>
 q[1] <= <GND>
 q[2] <= <GND>
