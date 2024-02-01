@@ -6,8 +6,8 @@ module rgb_controller_tb;
 logic clk;
 logic rst;
 logic en;
-logic[9:0] row;
-logic[9:0] column;
+logic[9+1:0] row;
+logic[9+1:0] column;
 logic[11:0] colour_data;
 
 // outputs
@@ -79,10 +79,10 @@ initial begin
     #5ns;
     
 
-    en = 0;
+    en = 0; // porch region
 
     #35ns;
-    assert (r == 4'h0) $display("passed red fully on"); else $error("failed red fully on");
+    assert (r == 4'h0) $display("passed red on"); else $error("failed red on");
     assert (g == 4'h0) $display("passed green off"); else $error("failed green off");
     assert (b == 4'h0) $display("passed blue off"); else $error("failed blue off");
     #5ns;

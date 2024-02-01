@@ -2,6 +2,7 @@ module sprite_ROM_square_tb;
 
 
 // offset registers
+// do not forget to match these to the module file before running the tb
 logic signed[9+1:0] offset_row_reg = -'sd10;
 logic signed[9+1:0] offset_column_reg = -'sd10;
 

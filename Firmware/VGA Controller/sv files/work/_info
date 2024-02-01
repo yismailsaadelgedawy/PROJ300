@@ -59,26 +59,76 @@ r1
 !i113 1
 R5
 R6
-vrgb_controller
+vnot4
 R1
-!s110 1706679698
+!s110 1706786625
 !i10b 1
-!s100 3Bc[YGM<5WIkP>JB>Qzio0
+!s100 152bcVcf:bn_mI`CeC3dL2
 R2
-I8VAEFkYOn_i7<WCR2HT[K3
+IUcfdMkBmK=3IEVmzV7F_A0
 R3
 S1
 R0
-w1706679681
-8C:/Users/minec/Desktop/Work/GitHub Repos/PROJ300/Firmware/VGA Controller/sv files/rgb_controller.sv
-FC:/Users/minec/Desktop/Work/GitHub Repos/PROJ300/Firmware/VGA Controller/sv files/rgb_controller.sv
-!i122 136
-L0 1 57
+w1706786477
+8C:/Users/minec/Desktop/Work/GitHub Repos/PROJ300/Firmware/VGA Controller/sv files/not4.sv
+FC:/Users/minec/Desktop/Work/GitHub Repos/PROJ300/Firmware/VGA Controller/sv files/not4.sv
+!i122 185
+L0 1 12
 R4
 r1
 !s85 0
 31
-!s108 1706679698.000000
+!s108 1706786625.000000
+!s107 C:/Users/minec/Desktop/Work/GitHub Repos/PROJ300/Firmware/VGA Controller/sv files/not4.sv|
+!s90 -reportprogress|300|-work|work|C:/Users/minec/Desktop/Work/GitHub Repos/PROJ300/Firmware/VGA Controller/sv files/not4.sv|
+!i113 1
+R5
+R6
+vnot4_tb
+R1
+!s110 1706786628
+!i10b 1
+!s100 Y<QTT5ikneh@[Kk@gN=7V3
+R2
+I?GZBEK2Y@a_4omdGWQ@DJ1
+R3
+S1
+R0
+w1706786619
+8C:/Users/minec/Desktop/Work/GitHub Repos/PROJ300/Firmware/VGA Controller/sv files/not4_tb.sv
+FC:/Users/minec/Desktop/Work/GitHub Repos/PROJ300/Firmware/VGA Controller/sv files/not4_tb.sv
+!i122 186
+L0 1 24
+R4
+r1
+!s85 0
+31
+!s108 1706786627.000000
+!s107 C:/Users/minec/Desktop/Work/GitHub Repos/PROJ300/Firmware/VGA Controller/sv files/not4_tb.sv|
+!s90 -reportprogress|300|-work|work|C:/Users/minec/Desktop/Work/GitHub Repos/PROJ300/Firmware/VGA Controller/sv files/not4_tb.sv|
+!i113 1
+R5
+R6
+vrgb_controller
+R1
+!s110 1706785102
+!i10b 1
+!s100 >b[Y]i@OATOY@L_JT[RT42
+R2
+ICZzAW5?MUMn1aM:6GSo<Q1
+R3
+S1
+R0
+w1706785015
+8C:/Users/minec/Desktop/Work/GitHub Repos/PROJ300/Firmware/VGA Controller/sv files/rgb_controller.sv
+FC:/Users/minec/Desktop/Work/GitHub Repos/PROJ300/Firmware/VGA Controller/sv files/rgb_controller.sv
+!i122 183
+L0 1 58
+R4
+r1
+!s85 0
+31
+!s108 1706785102.000000
 !s107 C:/Users/minec/Desktop/Work/GitHub Repos/PROJ300/Firmware/VGA Controller/sv files/rgb_controller.sv|
 !s90 -reportprogress|300|-work|work|C:/Users/minec/Desktop/Work/GitHub Repos/PROJ300/Firmware/VGA Controller/sv files/rgb_controller.sv|
 !i113 1
@@ -86,24 +136,24 @@ R5
 R6
 vrgb_controller_tb
 R1
-!s110 1706679700
+!s110 1706785104
 !i10b 1
-!s100 dckz0S4N2DWB_Me^DoT1]0
+!s100 L4i7LhFH2_CBS7^ln6E0m3
 R2
-I644<NoPm9VOG8:<cie^930
+IZnL>2lK]HCLk5cAgGhXN>2
 R3
 S1
 R0
-w1706679670
+w1706785094
 8C:/Users/minec/Desktop/Work/GitHub Repos/PROJ300/Firmware/VGA Controller/sv files/rgb_controller_tb.sv
 FC:/Users/minec/Desktop/Work/GitHub Repos/PROJ300/Firmware/VGA Controller/sv files/rgb_controller_tb.sv
-!i122 137
+!i122 184
 L0 1 102
 R4
 r1
 !s85 0
 31
-!s108 1706679700.000000
+!s108 1706785104.000000
 !s107 C:/Users/minec/Desktop/Work/GitHub Repos/PROJ300/Firmware/VGA Controller/sv files/rgb_controller_tb.sv|
 !s90 -reportprogress|300|-work|work|C:/Users/minec/Desktop/Work/GitHub Repos/PROJ300/Firmware/VGA Controller/sv files/rgb_controller_tb.sv|
 !i113 1

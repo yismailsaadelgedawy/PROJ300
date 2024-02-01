@@ -1,7 +1,8 @@
-module rgb_controller (output logic[3:0] r, g, b, input logic[9:0] row, column, input logic[11:0] colour_data, input logic rst, en, clk);
+module rgb_controller (output logic[3:0] r, g, b, input logic[10:0] row, column, input logic[11:0] colour_data, input logic rst, en, clk);
 
-logic[9:0] row_reg;
-logic[9:0] column_reg;
+
+logic[9+1:0] row_reg;   // unused, but just in case
+logic[9+1:0] column_reg; //
 logic[11:0] colour_reg;
 
 always_comb begin
