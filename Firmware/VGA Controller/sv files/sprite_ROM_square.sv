@@ -5,8 +5,8 @@ logic signed[9+1:0] row_reg;
 logic signed[9+1:0] column_reg;
 
 // offset registers
-logic signed[9+1:0] offset_row_reg = 'sd10;
-logic signed[9+1:0] offset_column_reg = 'sd10;
+logic signed[9+1:0] offset_row_reg = -'sd10;
+logic signed[9+1:0] offset_column_reg = -'sd10;
 
 
 // ROM for a 4 pixel square //

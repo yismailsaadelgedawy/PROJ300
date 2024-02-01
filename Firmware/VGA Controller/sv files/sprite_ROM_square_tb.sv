@@ -2,14 +2,14 @@ module sprite_ROM_square_tb;
 
 
 // offset registers
-logic signed[9+1:0] offset_row_reg = 'sd10;
-logic signed[9+1:0] offset_column_reg = 'sd10;
+logic signed[9+1:0] offset_row_reg = -'sd10;
+logic signed[9+1:0] offset_column_reg = -'sd10;
 
 // internal signals
 
 // inputs
-logic signed[9+1:0] row;
-logic signed[9+1:0] column;
+logic [9+1:0] row;
+logic [9+1:0] column;
 
 // outputs
 logic[11:0] q;
