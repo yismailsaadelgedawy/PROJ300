@@ -53,17 +53,17 @@ always_comb begin
 
                 case({row_reg,column_reg})
 
-                    {i1[10:0]+offset_row_reg,i2[10:0]+offset_column_reg} : begin    // stays F00; why?
+                {i1[10:0]+offset_row_reg,i2[10:0]+offset_column_reg} : begin    // stays F00; why?
 
-                        q = memory[address];
+                    q = memory[address];
 
-                    end
+                end
 
-                    // default : begin  // stays 0; why?
+                // default : begin  // stays 0; why?
 
-                    //     q = 12'h000;
+                //     q = 12'h000;
 
-                    // end
+                // end
 
 
                 endcase

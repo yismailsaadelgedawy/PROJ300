@@ -1,5 +1,5 @@
 Analysis & Synthesis report for VGA_controller
-Thu Feb 01 11:38:10 2024
+Fri Feb 02 07:05:19 2024
 Quartus Prime Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
 
 
@@ -17,9 +17,14 @@ Quartus Prime Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
   9. General Register Statistics
  10. Multiplexer Restructuring Statistics (Restructuring Performed)
  11. Parameter Settings for User Entity Instance: sprite_ROM_square:inst11
- 12. Post-Synthesis Netlist Statistics for Top Partition
- 13. Elapsed Time Per Partition
- 14. Analysis & Synthesis Messages
+ 12. Parameter Settings for User Entity Instance: d_ffN:inst18
+ 13. Parameter Settings for User Entity Instance: d_ffN:inst17
+ 14. Parameter Settings for User Entity Instance: clk_divN:inst15
+ 15. Parameter Settings for User Entity Instance: d_ffN:inst14
+ 16. Parameter Settings for User Entity Instance: d_ffN:inst13
+ 17. Post-Synthesis Netlist Statistics for Top Partition
+ 18. Elapsed Time Per Partition
+ 19. Analysis & Synthesis Messages
 
 
 
@@ -46,13 +51,13 @@ https://fpgasoftware.intel.com/eula.
 +-------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                  ;
 +---------------------------------+---------------------------------------------+
-; Analysis & Synthesis Status     ; Successful - Thu Feb 01 11:38:10 2024       ;
+; Analysis & Synthesis Status     ; Successful - Fri Feb 02 07:05:19 2024       ;
 ; Quartus Prime Version           ; 20.1.1 Build 720 11/11/2020 SJ Lite Edition ;
 ; Revision Name                   ; VGA_controller                              ;
 ; Top-level Entity Name           ; VGA_controller                              ;
 ; Family                          ; Cyclone V                                   ;
 ; Logic utilization (in ALMs)     ; N/A                                         ;
-; Total registers                 ; 35                                          ;
+; Total registers                 ; 119                                         ;
 ; Total pins                      ; 30                                          ;
 ; Total virtual pins              ; 0                                           ;
 ; Total block memory bits         ; 0                                           ;
@@ -166,68 +171,79 @@ https://fpgasoftware.intel.com/eula.
 ;                            ;             ;
 ; Usage by Processor         ; % Time Used ;
 ;     Processor 1            ; 100.0%      ;
-;     Processors 2-16        ;   0.0%      ;
+;     Processor 2            ;   0.0%      ;
+;     Processors 3-16        ;   0.0%      ;
 +----------------------------+-------------+
 
 
-+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Source Files Read                                                                                                                                                                     ;
-+----------------------------------+-----------------+------------------------------------+--------------------------------------------------------------------------------------------------------+---------+
-; File Name with User-Entered Path ; Used in Netlist ; File Type                          ; File Name with Absolute Path                                                                           ; Library ;
-+----------------------------------+-----------------+------------------------------------+--------------------------------------------------------------------------------------------------------+---------+
-; sv files/not4.sv                 ; yes             ; User SystemVerilog HDL File        ; C:/Users/minec/Desktop/Work/GitHub Repos/PROJ300/Firmware/VGA Controller/sv files/not4.sv              ;         ;
-; sv files/sprite_MUX.sv           ; yes             ; User SystemVerilog HDL File        ; C:/Users/minec/Desktop/Work/GitHub Repos/PROJ300/Firmware/VGA Controller/sv files/sprite_MUX.sv        ;         ;
-; sv files/selector.sv             ; yes             ; User SystemVerilog HDL File        ; C:/Users/minec/Desktop/Work/GitHub Repos/PROJ300/Firmware/VGA Controller/sv files/selector.sv          ;         ;
-; sv files/sprite_ROM_square.sv    ; yes             ; User SystemVerilog HDL File        ; C:/Users/minec/Desktop/Work/GitHub Repos/PROJ300/Firmware/VGA Controller/sv files/sprite_ROM_square.sv ;         ;
-; sv files/xnor_2.sv               ; yes             ; User SystemVerilog HDL File        ; C:/Users/minec/Desktop/Work/GitHub Repos/PROJ300/Firmware/VGA Controller/sv files/xnor_2.sv            ;         ;
-; sv files/rgb_controller.sv       ; yes             ; User SystemVerilog HDL File        ; C:/Users/minec/Desktop/Work/GitHub Repos/PROJ300/Firmware/VGA Controller/sv files/rgb_controller.sv    ;         ;
-; sv files/vsync_cnt.sv            ; yes             ; User SystemVerilog HDL File        ; C:/Users/minec/Desktop/Work/GitHub Repos/PROJ300/Firmware/VGA Controller/sv files/vsync_cnt.sv         ;         ;
-; sv files/t_ff.sv                 ; yes             ; User SystemVerilog HDL File        ; C:/Users/minec/Desktop/Work/GitHub Repos/PROJ300/Firmware/VGA Controller/sv files/t_ff.sv              ;         ;
-; sv files/hsync_cnt.sv            ; yes             ; User SystemVerilog HDL File        ; C:/Users/minec/Desktop/Work/GitHub Repos/PROJ300/Firmware/VGA Controller/sv files/hsync_cnt.sv         ;         ;
-; VGA_controller.bdf               ; yes             ; User Block Diagram/Schematic File  ; C:/Users/minec/Desktop/Work/GitHub Repos/PROJ300/Firmware/VGA Controller/VGA_controller.bdf            ;         ;
-; rgbMUX.bdf                       ; yes             ; User Block Diagram/Schematic File  ; C:/Users/minec/Desktop/Work/GitHub Repos/PROJ300/Firmware/VGA Controller/rgbMUX.bdf                    ;         ;
-+----------------------------------+-----------------+------------------------------------+--------------------------------------------------------------------------------------------------------+---------+
++---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Source Files Read                                                                                                                                                                              ;
++-------------------------------------+-----------------+------------------------------------+--------------------------------------------------------------------------------------------------------------+---------+
+; File Name with User-Entered Path    ; Used in Netlist ; File Type                          ; File Name with Absolute Path                                                                                 ; Library ;
++-------------------------------------+-----------------+------------------------------------+--------------------------------------------------------------------------------------------------------------+---------+
+; sv files/clk_divN.sv                ; yes             ; User SystemVerilog HDL File        ; C:/Users/minec/Desktop/Work/GitHub Repos/PROJ300/Firmware/VGA Controller/sv files/clk_divN.sv                ;         ;
+; sv files/d_ffN.sv                   ; yes             ; User SystemVerilog HDL File        ; C:/Users/minec/Desktop/Work/GitHub Repos/PROJ300/Firmware/VGA Controller/sv files/d_ffN.sv                   ;         ;
+; sv files/pixel_offset_controller.sv ; yes             ; User SystemVerilog HDL File        ; C:/Users/minec/Desktop/Work/GitHub Repos/PROJ300/Firmware/VGA Controller/sv files/pixel_offset_controller.sv ;         ;
+; sv files/not4.sv                    ; yes             ; User SystemVerilog HDL File        ; C:/Users/minec/Desktop/Work/GitHub Repos/PROJ300/Firmware/VGA Controller/sv files/not4.sv                    ;         ;
+; sv files/sprite_MUX.sv              ; yes             ; User SystemVerilog HDL File        ; C:/Users/minec/Desktop/Work/GitHub Repos/PROJ300/Firmware/VGA Controller/sv files/sprite_MUX.sv              ;         ;
+; sv files/selector.sv                ; yes             ; User SystemVerilog HDL File        ; C:/Users/minec/Desktop/Work/GitHub Repos/PROJ300/Firmware/VGA Controller/sv files/selector.sv                ;         ;
+; sv files/sprite_ROM_square.sv       ; yes             ; User SystemVerilog HDL File        ; C:/Users/minec/Desktop/Work/GitHub Repos/PROJ300/Firmware/VGA Controller/sv files/sprite_ROM_square.sv       ;         ;
+; sv files/xnor_2.sv                  ; yes             ; User SystemVerilog HDL File        ; C:/Users/minec/Desktop/Work/GitHub Repos/PROJ300/Firmware/VGA Controller/sv files/xnor_2.sv                  ;         ;
+; sv files/rgb_controller.sv          ; yes             ; User SystemVerilog HDL File        ; C:/Users/minec/Desktop/Work/GitHub Repos/PROJ300/Firmware/VGA Controller/sv files/rgb_controller.sv          ;         ;
+; sv files/vsync_cnt.sv               ; yes             ; User SystemVerilog HDL File        ; C:/Users/minec/Desktop/Work/GitHub Repos/PROJ300/Firmware/VGA Controller/sv files/vsync_cnt.sv               ;         ;
+; sv files/t_ff.sv                    ; yes             ; User SystemVerilog HDL File        ; C:/Users/minec/Desktop/Work/GitHub Repos/PROJ300/Firmware/VGA Controller/sv files/t_ff.sv                    ;         ;
+; sv files/hsync_cnt.sv               ; yes             ; User SystemVerilog HDL File        ; C:/Users/minec/Desktop/Work/GitHub Repos/PROJ300/Firmware/VGA Controller/sv files/hsync_cnt.sv               ;         ;
+; VGA_controller.bdf                  ; yes             ; User Block Diagram/Schematic File  ; C:/Users/minec/Desktop/Work/GitHub Repos/PROJ300/Firmware/VGA Controller/VGA_controller.bdf                  ;         ;
+; rgbMUX.bdf                          ; yes             ; User Block Diagram/Schematic File  ; C:/Users/minec/Desktop/Work/GitHub Repos/PROJ300/Firmware/VGA Controller/rgbMUX.bdf                          ;         ;
++-------------------------------------+-----------------+------------------------------------+--------------------------------------------------------------------------------------------------------------+---------+
 
 
-+-----------------------------------------------------------+
-; Analysis & Synthesis Resource Usage Summary               ;
-+---------------------------------------------+-------------+
-; Resource                                    ; Usage       ;
-+---------------------------------------------+-------------+
-; Estimate of Logic utilization (ALMs needed) ; 38          ;
-;                                             ;             ;
-; Combinational ALUT usage for logic          ; 61          ;
-;     -- 7 input functions                    ; 0           ;
-;     -- 6 input functions                    ; 14          ;
-;     -- 5 input functions                    ; 12          ;
-;     -- 4 input functions                    ; 4           ;
-;     -- <=3 input functions                  ; 31          ;
-;                                             ;             ;
-; Dedicated logic registers                   ; 35          ;
-;                                             ;             ;
-; I/O pins                                    ; 30          ;
-;                                             ;             ;
-; Total DSP Blocks                            ; 0           ;
-;                                             ;             ;
-; Maximum fan-out node                        ; t_ff:inst|q ;
-; Maximum fan-out                             ; 35          ;
-; Total fan-out                               ; 377         ;
-; Average fan-out                             ; 2.42        ;
-+---------------------------------------------+-------------+
++---------------------------------------------------------+
+; Analysis & Synthesis Resource Usage Summary             ;
++---------------------------------------------+-----------+
+; Resource                                    ; Usage     ;
++---------------------------------------------+-----------+
+; Estimate of Logic utilization (ALMs needed) ; 119       ;
+;                                             ;           ;
+; Combinational ALUT usage for logic          ; 209       ;
+;     -- 7 input functions                    ; 1         ;
+;     -- 6 input functions                    ; 26        ;
+;     -- 5 input functions                    ; 16        ;
+;     -- 4 input functions                    ; 4         ;
+;     -- <=3 input functions                  ; 162       ;
+;                                             ;           ;
+; Dedicated logic registers                   ; 119       ;
+;                                             ;           ;
+; I/O pins                                    ; 30        ;
+;                                             ;           ;
+; Total DSP Blocks                            ; 0         ;
+;                                             ;           ;
+; Maximum fan-out node                        ; SW0~input ;
+; Maximum fan-out                             ; 97        ;
+; Total fan-out                               ; 982       ;
+; Average fan-out                             ; 2.53      ;
++---------------------------------------------+-----------+
 
 
-+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                                                  ;
-+-------------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+------------------------------------------+-------------------+--------------+
-; Compilation Hierarchy Node    ; Combinational ALUTs ; Dedicated Logic Registers ; Block Memory Bits ; DSP Blocks ; Pins ; Virtual Pins ; Full Hierarchy Name                      ; Entity Name       ; Library Name ;
-+-------------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+------------------------------------------+-------------------+--------------+
-; |VGA_controller               ; 61 (0)              ; 35 (0)                    ; 0                 ; 0          ; 30   ; 0            ; |VGA_controller                          ; VGA_controller    ; work         ;
-;    |hsync_cnt:inst1|          ; 26 (26)             ; 13 (13)                   ; 0                 ; 0          ; 0    ; 0            ; |VGA_controller|hsync_cnt:inst1          ; hsync_cnt         ; work         ;
-;    |rgb_controller:inst4|     ; 2 (2)               ; 8 (8)                     ; 0                 ; 0          ; 0    ; 0            ; |VGA_controller|rgb_controller:inst4     ; rgb_controller    ; work         ;
-;    |sprite_ROM_square:inst11| ; 4 (4)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |VGA_controller|sprite_ROM_square:inst11 ; sprite_ROM_square ; work         ;
-;    |t_ff:inst|                ; 1 (1)               ; 1 (1)                     ; 0                 ; 0          ; 0    ; 0            ; |VGA_controller|t_ff:inst                ; t_ff              ; work         ;
-;    |vsync_cnt:inst2|          ; 28 (28)             ; 13 (13)                   ; 0                 ; 0          ; 0    ; 0            ; |VGA_controller|vsync_cnt:inst2          ; vsync_cnt         ; work         ;
-+-------------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+------------------------------------------+-------------------+--------------+
++--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                                                                  ;
++------------------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+-----------------------------------------------+-------------------------+--------------+
+; Compilation Hierarchy Node         ; Combinational ALUTs ; Dedicated Logic Registers ; Block Memory Bits ; DSP Blocks ; Pins ; Virtual Pins ; Full Hierarchy Name                           ; Entity Name             ; Library Name ;
++------------------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+-----------------------------------------------+-------------------------+--------------+
+; |VGA_controller                    ; 209 (0)             ; 119 (0)                   ; 0                 ; 0          ; 30   ; 0            ; |VGA_controller                               ; VGA_controller          ; work         ;
+;    |clk_divN:inst15|               ; 18 (18)             ; 18 (18)                   ; 0                 ; 0          ; 0    ; 0            ; |VGA_controller|clk_divN:inst15               ; clk_divN                ; work         ;
+;    |d_ffN:inst13|                  ; 11 (11)             ; 11 (11)                   ; 0                 ; 0          ; 0    ; 0            ; |VGA_controller|d_ffN:inst13                  ; d_ffN                   ; work         ;
+;    |d_ffN:inst14|                  ; 11 (11)             ; 11 (11)                   ; 0                 ; 0          ; 0    ; 0            ; |VGA_controller|d_ffN:inst14                  ; d_ffN                   ; work         ;
+;    |d_ffN:inst17|                  ; 11 (11)             ; 11 (11)                   ; 0                 ; 0          ; 0    ; 0            ; |VGA_controller|d_ffN:inst17                  ; d_ffN                   ; work         ;
+;    |d_ffN:inst18|                  ; 11 (11)             ; 11 (11)                   ; 0                 ; 0          ; 0    ; 0            ; |VGA_controller|d_ffN:inst18                  ; d_ffN                   ; work         ;
+;    |hsync_cnt:inst1|               ; 27 (27)             ; 13 (13)                   ; 0                 ; 0          ; 0    ; 0            ; |VGA_controller|hsync_cnt:inst1               ; hsync_cnt               ; work         ;
+;    |pixel_offset_controller:inst7| ; 26 (26)             ; 22 (22)                   ; 0                 ; 0          ; 0    ; 0            ; |VGA_controller|pixel_offset_controller:inst7 ; pixel_offset_controller ; work         ;
+;    |rgb_controller:inst4|          ; 2 (2)               ; 8 (8)                     ; 0                 ; 0          ; 0    ; 0            ; |VGA_controller|rgb_controller:inst4          ; rgb_controller          ; work         ;
+;    |sprite_ROM_square:inst11|      ; 60 (60)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |VGA_controller|sprite_ROM_square:inst11      ; sprite_ROM_square       ; work         ;
+;    |t_ff:inst|                     ; 1 (1)               ; 1 (1)                     ; 0                 ; 0          ; 0    ; 0            ; |VGA_controller|t_ff:inst                     ; t_ff                    ; work         ;
+;    |vsync_cnt:inst2|               ; 30 (30)             ; 13 (13)                   ; 0                 ; 0          ; 0    ; 0            ; |VGA_controller|vsync_cnt:inst2               ; vsync_cnt               ; work         ;
+;    |xnor_2:inst5|                  ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |VGA_controller|xnor_2:inst5                  ; xnor_2                  ; work         ;
++------------------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+-----------------------------------------------+-------------------------+--------------+
 Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
 
 
@@ -246,26 +262,28 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +----------------------------------------------+-------+
 ; Statistic                                    ; Value ;
 +----------------------------------------------+-------+
-; Total registers                              ; 35    ;
-; Number of registers using Synchronous Clear  ; 22    ;
+; Total registers                              ; 119   ;
+; Number of registers using Synchronous Clear  ; 62    ;
 ; Number of registers using Synchronous Load   ; 0     ;
 ; Number of registers using Asynchronous Clear ; 0     ;
 ; Number of registers using Asynchronous Load  ; 0     ;
-; Number of registers using Clock Enable       ; 15    ;
+; Number of registers using Clock Enable       ; 37    ;
 ; Number of registers using Preset             ; 0     ;
 +----------------------------------------------+-------+
 
 
-+-------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Multiplexer Restructuring Statistics (Restructuring Performed)                                                                                              ;
-+--------------------+-----------+---------------+----------------------+------------------------+------------+-----------------------------------------------+
-; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output                    ;
-+--------------------+-----------+---------------+----------------------+------------------------+------------+-----------------------------------------------+
-; 3:1                ; 11 bits   ; 22 LEs        ; 0 LEs                ; 22 LEs                 ; Yes        ; |VGA_controller|hsync_cnt:inst1|count_reg[10] ;
-; 4:1                ; 11 bits   ; 22 LEs        ; 0 LEs                ; 22 LEs                 ; Yes        ; |VGA_controller|vsync_cnt:inst2|count_reg[10] ;
-; 7:1                ; 2 bits    ; 8 LEs         ; 8 LEs                ; 0 LEs                  ; Yes        ; |VGA_controller|hsync_cnt:inst1|hsync         ;
-; 7:1                ; 2 bits    ; 8 LEs         ; 8 LEs                ; 0 LEs                  ; Yes        ; |VGA_controller|vsync_cnt:inst2|vsync         ;
-+--------------------+-----------+---------------+----------------------+------------------------+------------+-----------------------------------------------+
++-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Multiplexer Restructuring Statistics (Restructuring Performed)                                                                                                                    ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+---------------------------------------------------------------------+
+; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output                                          ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+---------------------------------------------------------------------+
+; 3:1                ; 11 bits   ; 22 LEs        ; 0 LEs                ; 22 LEs                 ; Yes        ; |VGA_controller|hsync_cnt:inst1|count_reg[6]                        ;
+; 4:1                ; 11 bits   ; 22 LEs        ; 0 LEs                ; 22 LEs                 ; Yes        ; |VGA_controller|vsync_cnt:inst2|count_reg[4]                        ;
+; 32:1               ; 11 bits   ; 231 LEs       ; 0 LEs                ; 231 LEs                ; Yes        ; |VGA_controller|pixel_offset_controller:inst7|column_offset_reg[10] ;
+; 32:1               ; 11 bits   ; 231 LEs       ; 0 LEs                ; 231 LEs                ; Yes        ; |VGA_controller|pixel_offset_controller:inst7|row_offset_reg[1]     ;
+; 7:1                ; 2 bits    ; 8 LEs         ; 8 LEs                ; 0 LEs                  ; Yes        ; |VGA_controller|hsync_cnt:inst1|rgb_en                              ;
+; 7:1                ; 2 bits    ; 8 LEs         ; 8 LEs                ; 0 LEs                  ; Yes        ; |VGA_controller|vsync_cnt:inst2|rgb_en                              ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+---------------------------------------------------------------------+
 
 
 +-----------------------------------------------------------------------+
@@ -278,31 +296,84 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
 
 
++-----------------------------------------------------------+
+; Parameter Settings for User Entity Instance: d_ffN:inst18 ;
++----------------+-------+----------------------------------+
+; Parameter Name ; Value ; Type                             ;
++----------------+-------+----------------------------------+
+; N              ; 11    ; Signed Integer                   ;
++----------------+-------+----------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-----------------------------------------------------------+
+; Parameter Settings for User Entity Instance: d_ffN:inst17 ;
++----------------+-------+----------------------------------+
+; Parameter Name ; Value ; Type                             ;
++----------------+-------+----------------------------------+
+; N              ; 11    ; Signed Integer                   ;
++----------------+-------+----------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++--------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: clk_divN:inst15 ;
++----------------+-------+-------------------------------------+
+; Parameter Name ; Value ; Type                                ;
++----------------+-------+-------------------------------------+
+; N              ; 18    ; Signed Integer                      ;
++----------------+-------+-------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-----------------------------------------------------------+
+; Parameter Settings for User Entity Instance: d_ffN:inst14 ;
++----------------+-------+----------------------------------+
+; Parameter Name ; Value ; Type                             ;
++----------------+-------+----------------------------------+
+; N              ; 11    ; Signed Integer                   ;
++----------------+-------+----------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-----------------------------------------------------------+
+; Parameter Settings for User Entity Instance: d_ffN:inst13 ;
++----------------+-------+----------------------------------+
+; Parameter Name ; Value ; Type                             ;
++----------------+-------+----------------------------------+
+; N              ; 11    ; Signed Integer                   ;
++----------------+-------+----------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
 +-----------------------------------------------------+
 ; Post-Synthesis Netlist Statistics for Top Partition ;
 +-----------------------+-----------------------------+
 ; Type                  ; Count                       ;
 +-----------------------+-----------------------------+
-; arriav_ff             ; 35                          ;
+; arriav_ff             ; 119                         ;
 ;     ENA               ; 4                           ;
-;     ENA SCLR          ; 11                          ;
-;     SCLR              ; 11                          ;
-;     plain             ; 9                           ;
-; arriav_lcell_comb     ; 66                          ;
-;     arith             ; 22                          ;
-;         1 data inputs ; 22                          ;
-;     normal            ; 44                          ;
+;     ENA SCLR          ; 33                          ;
+;     SCLR              ; 29                          ;
+;     plain             ; 53                          ;
+; arriav_lcell_comb     ; 214                         ;
+;     arith             ; 102                         ;
+;         1 data inputs ; 82                          ;
+;         2 data inputs ; 20                          ;
+;     extend            ; 1                           ;
+;         7 data inputs ; 1                           ;
+;     normal            ; 111                         ;
 ;         0 data inputs ; 1                           ;
 ;         1 data inputs ; 4                           ;
-;         2 data inputs ; 4                           ;
-;         3 data inputs ; 5                           ;
+;         2 data inputs ; 54                          ;
+;         3 data inputs ; 6                           ;
 ;         4 data inputs ; 4                           ;
-;         5 data inputs ; 12                          ;
-;         6 data inputs ; 14                          ;
+;         5 data inputs ; 16                          ;
+;         6 data inputs ; 26                          ;
 ; boundary_port         ; 30                          ;
 ;                       ;                             ;
-; Max LUT depth         ; 3.00                        ;
-; Average LUT depth     ; 2.04                        ;
+; Max LUT depth         ; 4.90                        ;
+; Average LUT depth     ; 2.62                        ;
 +-----------------------+-----------------------------+
 
 
@@ -321,10 +392,16 @@ Note: In order to hide this table in the UI and the text report file, please set
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
-    Info: Processing started: Thu Feb 01 11:38:04 2024
+    Info: Processing started: Fri Feb 02 07:05:13 2024
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off VGA_controller -c VGA_controller
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20030): Parallel compilation is enabled and will use 16 of the 16 processors detected
+Info (12021): Found 1 design units, including 1 entities, in source file sv files/clk_divn.sv
+    Info (12023): Found entity 1: clk_divN File: C:/Users/minec/Desktop/Work/GitHub Repos/PROJ300/Firmware/VGA Controller/sv files/clk_divN.sv Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file sv files/d_ffn.sv
+    Info (12023): Found entity 1: d_ffN File: C:/Users/minec/Desktop/Work/GitHub Repos/PROJ300/Firmware/VGA Controller/sv files/d_ffN.sv Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file sv files/pixel_offset_controller.sv
+    Info (12023): Found entity 1: pixel_offset_controller File: C:/Users/minec/Desktop/Work/GitHub Repos/PROJ300/Firmware/VGA Controller/sv files/pixel_offset_controller.sv Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file sv files/not4.sv
     Info (12023): Found entity 1: not4 File: C:/Users/minec/Desktop/Work/GitHub Repos/PROJ300/Firmware/VGA Controller/sv files/not4.sv Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file sv files/sprite_rom_square3.sv
@@ -353,17 +430,17 @@ Info (12021): Found 1 design units, including 1 entities, in source file rgbmux.
     Info (12023): Found entity 1: rgbMUX
 Info (12127): Elaborating entity "VGA_controller" for the top level hierarchy
 Warning (275080): Converted elements in bus name "b" using legacy naming rules. Make any assignments on the new names, not on the original names.
+    Warning (275081): Converted element name(s) from "b[3..0]" to "b3..0"
     Warning (275081): Converted element name(s) from "b[3]" to "b3"
     Warning (275081): Converted element name(s) from "b[2]" to "b2"
     Warning (275081): Converted element name(s) from "b[1]" to "b1"
     Warning (275081): Converted element name(s) from "b[0]" to "b0"
-    Warning (275081): Converted element name(s) from "b[3..0]" to "b3..0"
 Warning (275080): Converted elements in bus name "g" using legacy naming rules. Make any assignments on the new names, not on the original names.
+    Warning (275081): Converted element name(s) from "g[3..0]" to "g3..0"
     Warning (275081): Converted element name(s) from "g[3]" to "g3"
     Warning (275081): Converted element name(s) from "g[2]" to "g2"
     Warning (275081): Converted element name(s) from "g[1]" to "g1"
     Warning (275081): Converted element name(s) from "g[0]" to "g0"
-    Warning (275081): Converted element name(s) from "g[3..0]" to "g3..0"
 Warning (275080): Converted elements in bus name "r" using legacy naming rules. Make any assignments on the new names, not on the original names.
     Warning (275081): Converted element name(s) from "r[3]" to "r3"
     Warning (275081): Converted element name(s) from "r[2]" to "r2"
@@ -385,6 +462,18 @@ Info (12128): Elaborating entity "selector" for hierarchy "rgbMUX:inst9|selector
 Warning (10935): Verilog HDL Casex/Casez warning at selector.sv(18): casex/casez item expression overlaps with a previous casex/casez item expression File: C:/Users/minec/Desktop/Work/GitHub Repos/PROJ300/Firmware/VGA Controller/sv files/selector.sv Line: 18
 Warning (10935): Verilog HDL Casex/Casez warning at selector.sv(24): casex/casez item expression overlaps with a previous casex/casez item expression File: C:/Users/minec/Desktop/Work/GitHub Repos/PROJ300/Firmware/VGA Controller/sv files/selector.sv Line: 24
 Info (12128): Elaborating entity "sprite_ROM_square" for hierarchy "sprite_ROM_square:inst11"
+Info (12128): Elaborating entity "d_ffN" for hierarchy "d_ffN:inst18"
+Info (12128): Elaborating entity "pixel_offset_controller" for hierarchy "pixel_offset_controller:inst7"
+Warning (10036): Verilog HDL or VHDL warning at pixel_offset_controller.sv(20): object "pixel1_row_pos_reg" assigned a value but never read File: C:/Users/minec/Desktop/Work/GitHub Repos/PROJ300/Firmware/VGA Controller/sv files/pixel_offset_controller.sv Line: 20
+Warning (10036): Verilog HDL or VHDL warning at pixel_offset_controller.sv(21): object "pixel2_row_pos_reg" assigned a value but never read File: C:/Users/minec/Desktop/Work/GitHub Repos/PROJ300/Firmware/VGA Controller/sv files/pixel_offset_controller.sv Line: 21
+Warning (10036): Verilog HDL or VHDL warning at pixel_offset_controller.sv(22): object "pixel3_column_pos_reg" assigned a value but never read File: C:/Users/minec/Desktop/Work/GitHub Repos/PROJ300/Firmware/VGA Controller/sv files/pixel_offset_controller.sv Line: 22
+Warning (10036): Verilog HDL or VHDL warning at pixel_offset_controller.sv(23): object "pixel4_column_pos_reg" assigned a value but never read File: C:/Users/minec/Desktop/Work/GitHub Repos/PROJ300/Firmware/VGA Controller/sv files/pixel_offset_controller.sv Line: 23
+Warning (10230): Verilog HDL assignment warning at pixel_offset_controller.sv(54): truncated value with size 32 to match size of target (11) File: C:/Users/minec/Desktop/Work/GitHub Repos/PROJ300/Firmware/VGA Controller/sv files/pixel_offset_controller.sv Line: 54
+Warning (10230): Verilog HDL assignment warning at pixel_offset_controller.sv(60): truncated value with size 32 to match size of target (11) File: C:/Users/minec/Desktop/Work/GitHub Repos/PROJ300/Firmware/VGA Controller/sv files/pixel_offset_controller.sv Line: 60
+Warning (10230): Verilog HDL assignment warning at pixel_offset_controller.sv(66): truncated value with size 32 to match size of target (11) File: C:/Users/minec/Desktop/Work/GitHub Repos/PROJ300/Firmware/VGA Controller/sv files/pixel_offset_controller.sv Line: 66
+Warning (10230): Verilog HDL assignment warning at pixel_offset_controller.sv(72): truncated value with size 32 to match size of target (11) File: C:/Users/minec/Desktop/Work/GitHub Repos/PROJ300/Firmware/VGA Controller/sv files/pixel_offset_controller.sv Line: 72
+Info (12128): Elaborating entity "clk_divN" for hierarchy "clk_divN:inst15"
+Warning (10230): Verilog HDL assignment warning at clk_divN.sv(26): truncated value with size 32 to match size of target (18) File: C:/Users/minec/Desktop/Work/GitHub Repos/PROJ300/Firmware/VGA Controller/sv files/clk_divN.sv Line: 26
 Info (12128): Elaborating entity "not4" for hierarchy "not4:inst8"
 Warning (13024): Output pins are stuck at VCC or GND
     Warning (13410): Pin "b3" is stuck at GND
@@ -399,13 +488,13 @@ Warning (13024): Output pins are stuck at VCC or GND
 Info (286030): Timing-Driven Synthesis is running
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
-Info (21057): Implemented 99 device resources after synthesis - the final resource count might be different
+Info (21057): Implemented 247 device resources after synthesis - the final resource count might be different
     Info (21058): Implemented 6 input pins
     Info (21059): Implemented 24 output pins
-    Info (21061): Implemented 69 logic cells
-Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 35 warnings
-    Info: Peak virtual memory: 4891 megabytes
-    Info: Processing ended: Thu Feb 01 11:38:10 2024
+    Info (21061): Implemented 217 logic cells
+Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 44 warnings
+    Info: Peak virtual memory: 4899 megabytes
+    Info: Processing ended: Fri Feb 02 07:05:19 2024
     Info: Elapsed time: 00:00:06
     Info: Total CPU time (on all processors): 00:00:06
 

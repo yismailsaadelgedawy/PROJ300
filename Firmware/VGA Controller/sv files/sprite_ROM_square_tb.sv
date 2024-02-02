@@ -1,16 +1,13 @@
 module sprite_ROM_square_tb;
 
 
-// offset registers
-// do not forget to match these to the module file before running the tb
-logic signed[9+1:0] offset_row_reg = -'sd10;
-logic signed[9+1:0] offset_column_reg = -'sd10;
-
 // internal signals
 
 // inputs
 logic [9+1:0] row;
 logic [9+1:0] column;
+logic [9+1:0] row_offset;
+logic [9+1:0] column_offset;
 
 // outputs
 logic[11:0] q;
@@ -21,6 +18,8 @@ sprite_ROM_square dut(
     // inputs
     .row(row),
     .column(column),
+    .row_offset(row_offset),
+    .column_offset(column_offset),
 
     // outputs
     .q(q)
@@ -29,6 +28,9 @@ sprite_ROM_square dut(
 
 
 initial begin
+
+    row_offset = -11'sd50;
+    column_offset = 11'sd50;
 
     {row,column} = {11'sd0,11'sd0};
 
@@ -65,22 +67,22 @@ initial begin
 
     // testing offsets
 
-    {row,column} = {11'sd100 + offset_row_reg, 11'sd100 + offset_column_reg};
+    {row,column} = {11'sd100 + row_offset, 11'sd100 + column_offset};
 
     #10ns;
     assert (q == 12'hF00) $display("passed red"); else $error("failed red");
 
-    {row,column} = {11'sd100 + offset_row_reg, 11'sd101 + offset_column_reg};
+    {row,column} = {11'sd100 + row_offset, 11'sd101 + column_offset};
 
     #10ns;
     assert (q == 12'h0F0) $display("passed green"); else $error("failed green");
 
-    {row,column} = {11'sd101 + offset_row_reg, 11'sd100 + offset_column_reg};
+    {row,column} = {11'sd101 + row_offset, 11'sd100 + column_offset};
 
     #10ns;
     assert (q == 12'h0F0) $display("passed green"); else $error("failed green");
 
-    {row,column} = {11'sd101 + offset_row_reg, 11'sd101 + offset_column_reg};
+    {row,column} = {11'sd101 + row_offset, 11'sd101 + column_offset};
 
     #10ns;
     assert (q == 12'hF00) $display("passed red"); else $error("failed red");
