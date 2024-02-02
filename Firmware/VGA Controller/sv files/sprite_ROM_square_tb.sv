@@ -10,6 +10,10 @@ logic [9+1:0] row_offset;
 logic [9+1:0] column_offset;
 
 // outputs
+logic [9+1:0] pixel1_row_pos;
+logic [9+1:0] pixel2_row_pos;
+logic [9+1:0] pixel3_column_pos;
+logic [9+1:0] pixel4_column_pos;
 logic[11:0] q;
 
 // wiring
@@ -22,6 +26,10 @@ sprite_ROM_square dut(
     .column_offset(column_offset),
 
     // outputs
+    .pixel1_row_pos(pixel1_row_pos),
+    .pixel2_row_pos(pixel2_row_pos),
+    .pixel3_column_pos(pixel3_column_pos),
+    .pixel4_column_pos(pixel4_column_pos),
     .q(q)
 );
 
@@ -36,6 +44,11 @@ initial begin
 
     #10ns;
     assert (q == 12'h000) $display("passed 1"); else $error("failed 1");
+
+    assert(pixel1_row_pos == 11'sd100 + row_offset) $display("passed pixel1"); else $error("failed pixel1");
+    assert(pixel2_row_pos == 11'sd101 + row_offset) $display("passed pixel2"); else $error("failed pixel2");
+    assert(pixel3_column_pos == 11'sd100 + column_offset) $display("passed pixel3"); else $error("failed pixel3");
+    assert(pixel4_column_pos == 11'sd101 + column_offset) $display("passed pixel4"); else $error("failed pixel4");
 
 
     {row,column} = {11'sd700,11'sd500};
@@ -86,6 +99,16 @@ initial begin
 
     #10ns;
     assert (q == 12'hF00) $display("passed red"); else $error("failed red");
+
+
+    row_offset = -11'sd75;
+    column_offset = 11'sd75;
+
+    #10ns;
+    assert(pixel1_row_pos == 11'sd100 + row_offset) $display("passed pixel1"); else $error("failed pixel1");
+    assert(pixel2_row_pos == 11'sd101 + row_offset) $display("passed pixel2"); else $error("failed pixel2");
+    assert(pixel3_column_pos == 11'sd100 + column_offset) $display("passed pixel3"); else $error("failed pixel3");
+    assert(pixel4_column_pos == 11'sd101 + column_offset) $display("passed pixel4"); else $error("failed pixel4");
 
     $stop;
 

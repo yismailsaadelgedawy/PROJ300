@@ -58,10 +58,10 @@ initial begin
 
     rst = 1;
     key = 4'b0000;
-    pixel1_row_pos = 'd0;
-    pixel2_row_pos = 'd0;
-    pixel3_column_pos = 'd0;
-    pixel4_column_pos = 'd0;
+    pixel1_row_pos = 11'sd100;
+    pixel2_row_pos = 11'sd101;
+    pixel3_column_pos = 11'sd100;
+    pixel4_column_pos = 11'sd101;
 
     #3ms;
     assert({row_offset,column_offset} == {11'd0,11'd0}) $display("passed reset"); else $error("failed reset");
@@ -119,6 +119,23 @@ initial begin
 
     key = 4'b1010;
     #52.4ms; // 10 cycles
+
+
+    // testing edge detection
+    // (bottom right corner)
+
+    pixel1_row_pos = 11'sd478;
+    pixel2_row_pos = 11'sd479;
+    pixel3_column_pos = 11'sd638;
+    pixel4_column_pos = 11'sd639;
+
+    // key[2] and key[0]
+
+    key = 4'b0100;  // check that the row offset does not increase
+    #10.48ms; // 2 cycles
+
+    key = 4'b0001;  // check that the column offset does not increase
+    #10.48ms; // 2 cycles
 
     
 

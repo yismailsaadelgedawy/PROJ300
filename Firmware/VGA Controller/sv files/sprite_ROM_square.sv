@@ -1,4 +1,13 @@
-module sprite_ROM_square #(parameter M=2) (output logic[11:0] q, input logic[9+1:0] row, column, row_offset, column_offset);
+module sprite_ROM_square #(parameter M=2) (
+
+    output logic [11:0] q,
+    output logic [9+1:0] pixel1_row_pos,
+    output logic [9+1:0] pixel2_row_pos,
+    output logic [9+1:0] pixel3_column_pos,
+    output logic [9+1:0] pixel4_column_pos, 
+    input logic[9+1:0] row, column, row_offset, column_offset
+    
+);
 
 // internal registers
 logic signed[9+1:0] row_reg;
@@ -34,6 +43,11 @@ always_comb begin
 
     offset_row_reg = row_offset;
     offset_column_reg = column_offset;
+
+    pixel1_row_pos = 11'sd100 + offset_row_reg;
+    pixel2_row_pos = 11'sd101 + offset_row_reg;
+    pixel3_column_pos = 11'sd100 + offset_column_reg;
+    pixel4_column_pos = 11'sd101 + offset_column_reg;
 
 
 end

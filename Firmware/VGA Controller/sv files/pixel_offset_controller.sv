@@ -16,23 +16,11 @@ module pixel_offset_controller (
 logic signed [9+1:0] row_offset_reg;
 logic signed [9+1:0] column_offset_reg;
 
-// 4-pixel positions for edge detection
-logic signed [9+1:0] pixel1_row_pos_reg;
-logic signed [9+1:0] pixel2_row_pos_reg;
-logic signed [9+1:0] pixel3_column_pos_reg;
-logic signed [9+1:0] pixel4_column_pos_reg;
-
-
 
 always_comb begin
 
     row_offset = row_offset_reg;
     column_offset = column_offset_reg;
-
-    pixel1_row_pos_reg = pixel1_row_pos;
-    pixel2_row_pos_reg = pixel2_row_pos;
-    pixel3_column_pos_reg = pixel3_column_pos;
-    pixel4_column_pos_reg = pixel4_column_pos;
 
 
 end
@@ -51,25 +39,41 @@ always_ff @(posedge clk) begin
 
     {1'b0,4'b1000} : begin
 
-        row_offset_reg <= row_offset_reg - 1;               // up
+        if (pixel2_row_pos != 11'sd0) begin
+
+            row_offset_reg <= row_offset_reg - 1;               // up
+
+        end
+        
 
     end
 
     {1'b0,4'b0100} : begin
 
-        row_offset_reg <= row_offset_reg + 1;               // down
+        if (pixel1_row_pos != 11'sd479) begin
 
+            row_offset_reg <= row_offset_reg + 1;               // down
+
+        end
     end
 
     {1'b0,4'b0010} : begin
 
-        column_offset_reg <= column_offset_reg - 1;         // left
+        if (pixel3_column_pos != 11'sd0) begin
+
+            column_offset_reg <= column_offset_reg - 1;         // left
+
+        end
 
     end
 
     {1'b0,4'b0001} : begin
 
-        column_offset_reg <= column_offset_reg + 1;         // right
+        if (pixel4_column_pos != 11'sd639) begin
+
+            column_offset_reg <= column_offset_reg + 1;         // right
+
+        end
 
     end
 
