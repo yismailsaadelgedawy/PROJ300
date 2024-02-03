@@ -4,27 +4,27 @@
 			"name" : "Top",
 			"pins" : [
 				{
-					"name" : "led0",
-					"strict" : false
-				},
-				{
-					"name" : "led9",
-					"strict" : false
-				},
-				{
-					"name" : "led8",
-					"strict" : false
-				},
-				{
-					"name" : "led7",
-					"strict" : false
-				},
-				{
-					"name" : "led6",
-					"strict" : false
-				},
-				{
 					"name" : "hsync",
+					"strict" : false
+				},
+				{
+					"name" : "led[9]",
+					"strict" : false
+				},
+				{
+					"name" : "led[8]",
+					"strict" : false
+				},
+				{
+					"name" : "led[7]",
+					"strict" : false
+				},
+				{
+					"name" : "led[6]",
+					"strict" : false
+				},
+				{
+					"name" : "led[0]",
 					"strict" : false
 				},
 				{
@@ -32,55 +32,55 @@
 					"strict" : false
 				},
 				{
-					"name" : "r3",
+					"name" : "g[3]",
 					"strict" : false
 				},
 				{
-					"name" : "r2",
+					"name" : "g[2]",
 					"strict" : false
 				},
 				{
-					"name" : "r1",
+					"name" : "g[1]",
 					"strict" : false
 				},
 				{
-					"name" : "r0",
+					"name" : "g[0]",
 					"strict" : false
 				},
 				{
-					"name" : "g3",
+					"name" : "r[3]",
 					"strict" : false
 				},
 				{
-					"name" : "g2",
+					"name" : "r[2]",
 					"strict" : false
 				},
 				{
-					"name" : "g1",
+					"name" : "r[1]",
 					"strict" : false
 				},
 				{
-					"name" : "g0",
+					"name" : "r[0]",
+					"strict" : false
+				},
+				{
+					"name" : "key[3]",
+					"strict" : false
+				},
+				{
+					"name" : "key[2]",
+					"strict" : false
+				},
+				{
+					"name" : "key[1]",
+					"strict" : false
+				},
+				{
+					"name" : "key[0]",
 					"strict" : false
 				},
 				{
 					"name" : "rst",
-					"strict" : false
-				},
-				{
-					"name" : "key3",
-					"strict" : false
-				},
-				{
-					"name" : "key2",
-					"strict" : false
-				},
-				{
-					"name" : "key1",
-					"strict" : false
-				},
-				{
-					"name" : "key0",
 					"strict" : false
 				},
 				{

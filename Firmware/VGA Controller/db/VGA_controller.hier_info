@@ -1,46 +1,35 @@
 |TopLevel
-led0 <= rst.DB_MAX_OUTPUT_PORT_TYPE
-rst => led0.DATAIN
-rst => VGA_controller:inst.rst
-led9 <= q[3].DB_MAX_OUTPUT_PORT_TYPE
-key3 => not4:inst8.a[3]
-key2 => not4:inst8.a[2]
-key1 => not4:inst8.a[1]
-key0 => not4:inst8.a[0]
-led8 <= q[2].DB_MAX_OUTPUT_PORT_TYPE
-led7 <= q[1].DB_MAX_OUTPUT_PORT_TYPE
-led6 <= q[0].DB_MAX_OUTPUT_PORT_TYPE
-led5 <= <GND>
-led4 <= <GND>
-led3 <= <GND>
-led2 <= <GND>
-led1 <= <GND>
 hsync <= VGA_controller:inst.hsync
 50MHz_clk => VGA_controller:inst.50MHz_clk
+led[0] <= rst.DB_MAX_OUTPUT_PORT_TYPE
+led[1] <= <GND>
+led[2] <= <GND>
+led[3] <= <GND>
+led[4] <= <GND>
+led[5] <= <GND>
+led[6] <= not4:inst8.q[0]
+led[7] <= not4:inst8.q[1]
+led[8] <= not4:inst8.q[2]
+led[9] <= not4:inst8.q[3]
+rst => led[0].DATAIN
+rst => VGA_controller:inst.rst
+key[0] => not4:inst8.a[0]
+key[1] => not4:inst8.a[1]
+key[2] => not4:inst8.a[2]
+key[3] => not4:inst8.a[3]
 vsync <= VGA_controller:inst.vsync
-r3 <= VGA_controller:inst.r3
-r2 <= VGA_controller:inst.r2
-r1 <= VGA_controller:inst.r1
-r0 <= VGA_controller:inst.r0
-g3 <= VGA_controller:inst.g3
-g2 <= VGA_controller:inst.g2
-g1 <= VGA_controller:inst.g1
-g0 <= VGA_controller:inst.g0
-b3 <= VGA_controller:inst.b3
-b2 <= VGA_controller:inst.b2
-b1 <= VGA_controller:inst.b1
-b0 <= VGA_controller:inst.b0
-
-
-|TopLevel|not4:inst8
-q[0] <= a[0].DB_MAX_OUTPUT_PORT_TYPE
-q[1] <= a[1].DB_MAX_OUTPUT_PORT_TYPE
-q[2] <= a[2].DB_MAX_OUTPUT_PORT_TYPE
-q[3] <= a[3].DB_MAX_OUTPUT_PORT_TYPE
-a[0] => q[0].DATAIN
-a[1] => q[1].DATAIN
-a[2] => q[2].DATAIN
-a[3] => q[3].DATAIN
+b[0] <= VGA_controller:inst.b[0]
+b[1] <= VGA_controller:inst.b[1]
+b[2] <= VGA_controller:inst.b[2]
+b[3] <= VGA_controller:inst.b[3]
+g[0] <= VGA_controller:inst.g[0]
+g[1] <= VGA_controller:inst.g[1]
+g[2] <= VGA_controller:inst.g[2]
+g[3] <= VGA_controller:inst.g[3]
+r[0] <= VGA_controller:inst.r[0]
+r[1] <= VGA_controller:inst.r[1]
+r[2] <= VGA_controller:inst.r[2]
+r[3] <= VGA_controller:inst.r[3]
 
 
 |TopLevel|VGA_controller:inst
@@ -58,22 +47,22 @@ rst => d_ffN:inst13.rst
 50MHz_clk => t_ff:inst.clk
 50MHz_clk => clk_divN:inst15.clk_in
 vsync <= vsync_cnt:inst2.vsync
-r3 <= rgb_controller:inst4.r[3]
+b[0] <= rgb_controller:inst4.b[0]
+b[1] <= rgb_controller:inst4.b[1]
+b[2] <= rgb_controller:inst4.b[2]
+b[3] <= rgb_controller:inst4.b[3]
 key[0] => pixel_offset_controller:inst7.key[0]
 key[1] => pixel_offset_controller:inst7.key[1]
 key[2] => pixel_offset_controller:inst7.key[2]
 key[3] => pixel_offset_controller:inst7.key[3]
-r2 <= rgb_controller:inst4.r[2]
-r1 <= rgb_controller:inst4.r[1]
-r0 <= rgb_controller:inst4.r[0]
-g3 <= rgb_controller:inst4.g[3]
-g2 <= rgb_controller:inst4.g[2]
-g1 <= rgb_controller:inst4.g[1]
-g0 <= rgb_controller:inst4.g[0]
-b3 <= rgb_controller:inst4.b[3]
-b2 <= rgb_controller:inst4.b[2]
-b1 <= rgb_controller:inst4.b[1]
-b0 <= rgb_controller:inst4.b[0]
+g[0] <= rgb_controller:inst4.g[0]
+g[1] <= rgb_controller:inst4.g[1]
+g[2] <= rgb_controller:inst4.g[2]
+g[3] <= rgb_controller:inst4.g[3]
+r[0] <= rgb_controller:inst4.r[0]
+r[1] <= rgb_controller:inst4.r[1]
+r[2] <= rgb_controller:inst4.r[2]
+r[3] <= rgb_controller:inst4.r[3]
 
 
 |TopLevel|VGA_controller:inst|hsync_cnt:inst1
@@ -966,5 +955,16 @@ rst => Selector8.IN5
 rst => Selector9.IN5
 rst => Selector10.IN5
 en => Equal0.IN3
+
+
+|TopLevel|not4:inst8
+q[0] <= a[0].DB_MAX_OUTPUT_PORT_TYPE
+q[1] <= a[1].DB_MAX_OUTPUT_PORT_TYPE
+q[2] <= a[2].DB_MAX_OUTPUT_PORT_TYPE
+q[3] <= a[3].DB_MAX_OUTPUT_PORT_TYPE
+a[0] => q[0].DATAIN
+a[1] => q[1].DATAIN
+a[2] => q[2].DATAIN
+a[3] => q[3].DATAIN
 
 

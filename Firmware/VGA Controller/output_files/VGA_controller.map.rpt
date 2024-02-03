@@ -1,5 +1,5 @@
 Analysis & Synthesis report for VGA_controller
-Fri Feb 02 16:02:28 2024
+Sat Feb 03 07:01:32 2024
 Quartus Prime Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
 
 
@@ -51,7 +51,7 @@ https://fpgasoftware.intel.com/eula.
 +-------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                  ;
 +---------------------------------+---------------------------------------------+
-; Analysis & Synthesis Status     ; Successful - Fri Feb 02 16:02:28 2024       ;
+; Analysis & Synthesis Status     ; Successful - Sat Feb 03 07:01:32 2024       ;
 ; Quartus Prime Version           ; 20.1.1 Build 720 11/11/2020 SJ Lite Edition ;
 ; Revision Name                   ; VGA_controller                              ;
 ; Top-level Entity Name           ; TopLevel                                    ;
@@ -393,7 +393,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
-    Info: Processing started: Fri Feb 02 16:02:22 2024
+    Info: Processing started: Sat Feb 03 07:01:26 2024
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off VGA_controller -c VGA_controller
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20030): Parallel compilation is enabled and will use 16 of the 16 processors detected
@@ -432,32 +432,7 @@ Info (12021): Found 1 design units, including 1 entities, in source file rgbmux.
 Info (12021): Found 1 design units, including 1 entities, in source file toplevel.bdf
     Info (12023): Found entity 1: TopLevel
 Info (12127): Elaborating entity "TopLevel" for the top level hierarchy
-Warning (275080): Converted elements in bus name "key" using legacy naming rules. Make any assignments on the new names, not on the original names.
-    Warning (275081): Converted element name(s) from "key[3..0]" to "key3..0"
-    Warning (275081): Converted element name(s) from "key[3]" to "key3"
-    Warning (275081): Converted element name(s) from "key[2]" to "key2"
-    Warning (275081): Converted element name(s) from "key[1]" to "key1"
-    Warning (275081): Converted element name(s) from "key[0]" to "key0"
-Info (12128): Elaborating entity "not4" for hierarchy "not4:inst8"
 Info (12128): Elaborating entity "VGA_controller" for hierarchy "VGA_controller:inst"
-Warning (275080): Converted elements in bus name "b" using legacy naming rules. Make any assignments on the new names, not on the original names.
-    Warning (275081): Converted element name(s) from "b[3..0]" to "b3..0"
-    Warning (275081): Converted element name(s) from "b[3]" to "b3"
-    Warning (275081): Converted element name(s) from "b[2]" to "b2"
-    Warning (275081): Converted element name(s) from "b[1]" to "b1"
-    Warning (275081): Converted element name(s) from "b[0]" to "b0"
-Warning (275080): Converted elements in bus name "g" using legacy naming rules. Make any assignments on the new names, not on the original names.
-    Warning (275081): Converted element name(s) from "g[3]" to "g3"
-    Warning (275081): Converted element name(s) from "g[2]" to "g2"
-    Warning (275081): Converted element name(s) from "g[1]" to "g1"
-    Warning (275081): Converted element name(s) from "g[0]" to "g0"
-    Warning (275081): Converted element name(s) from "g[3..0]" to "g3..0"
-Warning (275080): Converted elements in bus name "r" using legacy naming rules. Make any assignments on the new names, not on the original names.
-    Warning (275081): Converted element name(s) from "r[3..0]" to "r3..0"
-    Warning (275081): Converted element name(s) from "r[3]" to "r3"
-    Warning (275081): Converted element name(s) from "r[2]" to "r2"
-    Warning (275081): Converted element name(s) from "r[1]" to "r1"
-    Warning (275081): Converted element name(s) from "r[0]" to "r0"
 Info (12128): Elaborating entity "hsync_cnt" for hierarchy "VGA_controller:inst|hsync_cnt:inst1"
 Warning (10230): Verilog HDL assignment warning at hsync_cnt.sv(25): truncated value with size 32 to match size of target (11) File: C:/Users/minec/Desktop/Work/GitHub Repos/PROJ300/Firmware/VGA Controller/sv files/hsync_cnt.sv Line: 25
 Info (12128): Elaborating entity "t_ff" for hierarchy "VGA_controller:inst|t_ff:inst"
@@ -481,16 +456,17 @@ Warning (10230): Verilog HDL assignment warning at pixel_offset_controller.sv(64
 Warning (10230): Verilog HDL assignment warning at pixel_offset_controller.sv(74): truncated value with size 32 to match size of target (11) File: C:/Users/minec/Desktop/Work/GitHub Repos/PROJ300/Firmware/VGA Controller/sv files/pixel_offset_controller.sv Line: 74
 Info (12128): Elaborating entity "clk_divN" for hierarchy "VGA_controller:inst|clk_divN:inst15"
 Warning (10230): Verilog HDL assignment warning at clk_divN.sv(26): truncated value with size 32 to match size of target (18) File: C:/Users/minec/Desktop/Work/GitHub Repos/PROJ300/Firmware/VGA Controller/sv files/clk_divN.sv Line: 26
+Info (12128): Elaborating entity "not4" for hierarchy "not4:inst8"
 Warning (13024): Output pins are stuck at VCC or GND
-    Warning (13410): Pin "led5" is stuck at GND
-    Warning (13410): Pin "led4" is stuck at GND
-    Warning (13410): Pin "led3" is stuck at GND
-    Warning (13410): Pin "led2" is stuck at GND
-    Warning (13410): Pin "led1" is stuck at GND
-    Warning (13410): Pin "b3" is stuck at GND
-    Warning (13410): Pin "b2" is stuck at GND
-    Warning (13410): Pin "b1" is stuck at GND
-    Warning (13410): Pin "b0" is stuck at GND
+    Warning (13410): Pin "led[5]" is stuck at GND
+    Warning (13410): Pin "led[4]" is stuck at GND
+    Warning (13410): Pin "led[3]" is stuck at GND
+    Warning (13410): Pin "led[2]" is stuck at GND
+    Warning (13410): Pin "led[1]" is stuck at GND
+    Warning (13410): Pin "b[3]" is stuck at GND
+    Warning (13410): Pin "b[2]" is stuck at GND
+    Warning (13410): Pin "b[1]" is stuck at GND
+    Warning (13410): Pin "b[0]" is stuck at GND
 Info (286030): Timing-Driven Synthesis is running
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
@@ -498,9 +474,9 @@ Info (21057): Implemented 295 device resources after synthesis - the final resou
     Info (21058): Implemented 6 input pins
     Info (21059): Implemented 24 output pins
     Info (21061): Implemented 265 logic cells
-Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 46 warnings
-    Info: Peak virtual memory: 4896 megabytes
-    Info: Processing ended: Fri Feb 02 16:02:28 2024
+Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 22 warnings
+    Info: Peak virtual memory: 4898 megabytes
+    Info: Processing ended: Sat Feb 03 07:01:32 2024
     Info: Elapsed time: 00:00:06
     Info: Total CPU time (on all processors): 00:00:07
 
