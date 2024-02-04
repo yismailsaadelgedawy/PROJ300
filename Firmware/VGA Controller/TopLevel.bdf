@@ -56,7 +56,7 @@ https://fpgasoftware.intel.com/eula.
 )
 (pin
 	(input)
-	(rect 136 176 304 192)
+	(rect 136 200 304 216)
 	(text "INPUT" (rect 125 0 153 10)(font "Arial" (font_size 6)))
 	(text "key[3..0]" (rect 5 0 49 12)(font "Arial" ))
 	(pt 168 8)
@@ -69,7 +69,7 @@ https://fpgasoftware.intel.com/eula.
 		(line (pt 109 12)(pt 113 8))
 	)
 	(text "VCC" (rect 128 7 148 17)(font "Arial" (font_size 6)))
-	(annotation_block (location)(rect 80 176 136 200))
+	(annotation_block (location)(rect 80 200 136 224))
 )
 (pin
 	(output)
@@ -158,7 +158,7 @@ https://fpgasoftware.intel.com/eula.
 )
 (pin
 	(output)
-	(rect 1264 176 1440 192)
+	(rect 1264 224 1440 240)
 	(text "OUTPUT" (rect 1 0 39 10)(font "Arial" (font_size 6)))
 	(text "led[9..1]" (rect 90 0 130 12)(font "Arial" ))
 	(pt 0 8)
@@ -171,11 +171,11 @@ https://fpgasoftware.intel.com/eula.
 		(line (pt 82 8)(pt 78 12))
 		(line (pt 78 12)(pt 82 8))
 	)
-	(annotation_block (location)(rect 1440 176 1504 200))
+	(annotation_block (location)(rect 1440 224 1504 248))
 )
 (pin
 	(output)
-	(rect 1264 160 1440 176)
+	(rect 1264 208 1440 224)
 	(text "OUTPUT" (rect 1 0 39 10)(font "Arial" (font_size 6)))
 	(text "led0" (rect 90 0 110 12)(font "Arial" ))
 	(pt 0 8)
@@ -188,7 +188,7 @@ https://fpgasoftware.intel.com/eula.
 		(line (pt 82 8)(pt 78 12))
 		(line (pt 78 12)(pt 82 8))
 	)
-	(annotation_block (location)(rect 1440 160 1504 184))
+	(annotation_block (location)(rect 1440 208 1504 232))
 )
 (symbol
 	(rect 496 272 648 352)
@@ -475,12 +475,6 @@ https://fpgasoftware.intel.com/eula.
 	(bus)
 )
 (connector
-	(text "key[3..0]" (rect 314 168 355 185)(font "Intel Clear" ))
-	(pt 304 184)
-	(pt 360 184)
-	(bus)
-)
-(connector
 	(text "clk_50" (rect 210 520 241 537)(font "Intel Clear" ))
 	(pt 248 536)
 	(pt 200 536)
@@ -518,12 +512,6 @@ https://fpgasoftware.intel.com/eula.
 	(bus)
 )
 (connector
-	(text "led[9..1]" (rect 1216 168 1254 185)(font "Intel Clear" ))
-	(pt 1264 184)
-	(pt 1216 184)
-	(bus)
-)
-(connector
 	(text "clk_50" (rect 650 200 681 217)(font "Intel Clear" ))
 	(pt 640 216)
 	(pt 712 216)
@@ -532,11 +520,6 @@ https://fpgasoftware.intel.com/eula.
 	(text "led[1]" (rect 410 520 438 537)(font "Intel Clear" ))
 	(pt 400 536)
 	(pt 440 536)
-)
-(connector
-	(text "sw_rst" (rect 1226 152 1256 169)(font "Intel Clear" ))
-	(pt 1264 168)
-	(pt 1216 168)
 )
 (connector
 	(text "clk_50" (rect 210 640 241 657)(font "Intel Clear" ))
@@ -597,5 +580,22 @@ https://fpgasoftware.intel.com/eula.
 	(text "led[5]" (rect 938 520 966 537)(font "Intel Clear" ))
 	(pt 928 536)
 	(pt 968 536)
+)
+(connector
+	(text "key[3..0]" (rect 314 192 355 209)(font "Intel Clear" ))
+	(pt 304 208)
+	(pt 360 208)
+	(bus)
+)
+(connector
+	(text "led[9..1]" (rect 1216 216 1254 233)(font "Intel Clear" ))
+	(pt 1264 232)
+	(pt 1216 232)
+	(bus)
+)
+(connector
+	(text "sw_rst" (rect 1226 200 1256 217)(font "Intel Clear" ))
+	(pt 1264 216)
+	(pt 1216 216)
 )
 (text "Top-Level Schematic" (rect 696 48 917 74)(font "Intel Clear" (font_size 14)(bold)))

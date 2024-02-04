@@ -6,10 +6,7 @@ module pixel_offset_controller_tb;
 logic clk;
 logic rst;
 logic [3:0] key;
-logic [9+1:0] pixel1_row_pos;
-logic [9+1:0] pixel2_row_pos;
-logic [9+1:0] pixel3_column_pos;
-logic [9+1:0] pixel4_column_pos;
+logic [43:0] pixel_pos; // 4*11-bit pixel data
 
 
 // outputs
@@ -24,10 +21,7 @@ pixel_offset_controller dut(
     .clk(clk),
     .rst(rst),
     .key(key),
-    .pixel1_row_pos(pixel1_row_pos),
-    .pixel2_row_pos(pixel2_row_pos),
-    .pixel3_column_pos(pixel3_column_pos),
-    .pixel4_column_pos(pixel4_column_pos),
+    .pixel_pos(pixel_pos),
 
     // out
     .row_offset(row_offset),
@@ -58,10 +52,11 @@ initial begin
 
     rst = 1;
     key = 4'b0000;
-    pixel1_row_pos = 11'sd100;
-    pixel2_row_pos = 11'sd101;
-    pixel3_column_pos = 11'sd100;
-    pixel4_column_pos = 11'sd101;
+
+    pixel_pos[10:0] = 11'sd100;
+    pixel_pos[21:11] = 11'sd101;
+    pixel_pos[32:22] = 11'sd100;
+    pixel_pos[43:33] = 11'sd101;
 
     #3ms;
     assert({row_offset,column_offset} == {11'd0,11'd0}) $display("passed reset"); else $error("failed reset");
@@ -124,10 +119,10 @@ initial begin
     // testing edge detection
     // (bottom right corner)
 
-    pixel1_row_pos = 11'sd478;
-    pixel2_row_pos = 11'sd479;
-    pixel3_column_pos = 11'sd638;
-    pixel4_column_pos = 11'sd639;
+    pixel_pos[10:0] = 11'sd478;
+    pixel_pos[21:11] = 11'sd479;
+    pixel_pos[32:22] = 11'sd638;
+    pixel_pos[43:33] = 11'sd639;
 
     // key[2] and key[0]
 

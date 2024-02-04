@@ -21,7 +21,7 @@ https://fpgasoftware.intel.com/eula.
 */
 (header "symbol" (version "1.2"))
 (symbol
-	(rect 16 16 352 144)
+	(rect 16 16 304 144)
 	(text "sprites" (rect 5 0 45 19)(font "Intel Clear" (font_size 8)))
 	(text "inst" (rect 8 107 24 124)(font "Intel Clear" ))
 	(port
@@ -53,41 +53,20 @@ https://fpgasoftware.intel.com/eula.
 		(line (pt 0 80)(pt 16 80)(line_width 3))
 	)
 	(port
-		(pt 336 32)
+		(pt 288 32)
 		(output)
-		(text "Apixel1_row_pos[10..0]" (rect 0 0 140 19)(font "Intel Clear" (font_size 8)))
-		(text "Apixel1_row_pos[10..0]" (rect 175 27 315 46)(font "Intel Clear" (font_size 8)))
-		(line (pt 336 32)(pt 320 32)(line_width 3))
+		(text "Apixel_pos[43..0]" (rect 0 0 103 19)(font "Intel Clear" (font_size 8)))
+		(text "Apixel_pos[43..0]" (rect 164 27 267 46)(font "Intel Clear" (font_size 8)))
+		(line (pt 288 32)(pt 272 32)(line_width 3))
 	)
 	(port
-		(pt 336 48)
-		(output)
-		(text "Apixel2_row_pos[10..0]" (rect 0 0 140 19)(font "Intel Clear" (font_size 8)))
-		(text "Apixel2_row_pos[10..0]" (rect 175 43 315 62)(font "Intel Clear" (font_size 8)))
-		(line (pt 336 48)(pt 320 48)(line_width 3))
-	)
-	(port
-		(pt 336 64)
-		(output)
-		(text "Apixel3_column_pos[10..0]" (rect 0 0 161 19)(font "Intel Clear" (font_size 8)))
-		(text "Apixel3_column_pos[10..0]" (rect 154 59 315 78)(font "Intel Clear" (font_size 8)))
-		(line (pt 336 64)(pt 320 64)(line_width 3))
-	)
-	(port
-		(pt 336 80)
-		(output)
-		(text "Apixel4_column_pos[10..0]" (rect 0 0 161 19)(font "Intel Clear" (font_size 8)))
-		(text "Apixel4_column_pos[10..0]" (rect 154 75 315 94)(font "Intel Clear" (font_size 8)))
-		(line (pt 336 80)(pt 320 80)(line_width 3))
-	)
-	(port
-		(pt 336 96)
+		(pt 288 48)
 		(output)
 		(text "colour_data[11..0]" (rect 0 0 108 19)(font "Intel Clear" (font_size 8)))
-		(text "colour_data[11..0]" (rect 207 91 315 110)(font "Intel Clear" (font_size 8)))
-		(line (pt 336 96)(pt 320 96)(line_width 3))
+		(text "colour_data[11..0]" (rect 159 43 267 62)(font "Intel Clear" (font_size 8)))
+		(line (pt 288 48)(pt 272 48)(line_width 3))
 	)
 	(drawing
-		(rectangle (rect 16 16 320 112))
+		(rectangle (rect 16 16 272 112))
 	)
 )

@@ -1,13 +1,17 @@
 module sprite_ROM_square #(parameter M=2) (
 
     output logic [11:0] q,
-    output logic [9+1:0] pixel1_row_pos,
-    output logic [9+1:0] pixel2_row_pos,
-    output logic [9+1:0] pixel3_column_pos,
-    output logic [9+1:0] pixel4_column_pos, 
-    input logic[9+1:0] row, column, row_offset, column_offset
+    output logic [43:0] pixel_pos, // 4*11-bit pixel data
+    input logic [9+1:0] row, column, row_offset, column_offset
     
 );
+
+// output logic [43:0] pixel_pos
+// instead of having (11-bits each):
+// output logic [9+1:0] pixel1_row_pos;
+// output logic [9+1:0] pixel2_row_pos;
+// output logic [9+1:0] pixel3_column_pos;
+// output logic [9+1:0] pixel4_column_pos;
 
 // internal registers
 logic signed[9+1:0] row_reg;
@@ -44,10 +48,10 @@ always_comb begin
     offset_row_reg = row_offset;
     offset_column_reg = column_offset;
 
-    pixel1_row_pos = 11'sd100 + offset_row_reg;
-    pixel2_row_pos = 11'sd101 + offset_row_reg;
-    pixel3_column_pos = 11'sd100 + offset_column_reg;
-    pixel4_column_pos = 11'sd101 + offset_column_reg;
+    pixel_pos[10:0] = 11'sd100 + offset_row_reg; // pixel1_row_pos;
+    pixel_pos[21:11] = 11'sd101 + offset_row_reg; // pixel2_row_pos;
+    pixel_pos[32:22] = 11'sd100 + offset_column_reg; // pixel3_column_pos;
+    pixel_pos[43:33] = 11'sd101 + offset_column_reg; // pixel4_column_pos;
 
 
 end
