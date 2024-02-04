@@ -1,5 +1,5 @@
 Timing Analyzer report for VGA_controller
-Sat Feb 03 07:02:01 2024
+Sun Feb 04 11:01:13 2024
 Quartus Prime Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
 
 
@@ -100,26 +100,26 @@ https://fpgasoftware.intel.com/eula.
 ; Number detected on machine ; 16          ;
 ; Maximum allowed            ; 16          ;
 ;                            ;             ;
-; Average used               ; 1.48        ;
+; Average used               ; 1.55        ;
 ; Maximum used               ; 16          ;
 ;                            ;             ;
 ; Usage by Processor         ; % Time Used ;
 ;     Processor 1            ; 100.0%      ;
-;     Processor 2            ;   3.7%      ;
-;     Processor 3            ;   3.7%      ;
-;     Processor 4            ;   3.6%      ;
-;     Processor 5            ;   3.1%      ;
-;     Processor 6            ;   3.1%      ;
-;     Processor 7            ;   3.1%      ;
-;     Processor 8            ;   3.1%      ;
-;     Processor 9            ;   3.1%      ;
-;     Processor 10           ;   3.0%      ;
-;     Processor 11           ;   3.0%      ;
-;     Processor 12           ;   3.0%      ;
-;     Processor 13           ;   3.0%      ;
-;     Processor 14           ;   3.0%      ;
-;     Processor 15           ;   3.0%      ;
-;     Processor 16           ;   3.0%      ;
+;     Processor 2            ;   4.3%      ;
+;     Processor 3            ;   4.3%      ;
+;     Processor 4            ;   4.2%      ;
+;     Processor 5            ;   3.6%      ;
+;     Processor 6            ;   3.6%      ;
+;     Processor 7            ;   3.6%      ;
+;     Processor 8            ;   3.6%      ;
+;     Processor 9            ;   3.6%      ;
+;     Processor 10           ;   3.6%      ;
+;     Processor 11           ;   3.5%      ;
+;     Processor 12           ;   3.5%      ;
+;     Processor 13           ;   3.5%      ;
+;     Processor 14           ;   3.5%      ;
+;     Processor 15           ;   3.5%      ;
+;     Processor 16           ;   3.5%      ;
 +----------------------------+-------------+
 
 
@@ -139,9 +139,9 @@ https://fpgasoftware.intel.com/eula.
 +------------+-----------------+-------------------------------------------------+------+
 ; Fmax       ; Restricted Fmax ; Clock Name                                      ; Note ;
 +------------+-----------------+-------------------------------------------------+------+
-; 165.37 MHz ; 165.37 MHz      ; VGA_controller:inst|t_ff:inst|q                 ;      ;
-; 221.24 MHz ; 221.24 MHz      ; 50MHz_clk                                       ;      ;
-; 348.31 MHz ; 348.31 MHz      ; VGA_controller:inst|clk_divN:inst15|counter[17] ;      ;
+; 158.33 MHz ; 158.33 MHz      ; VGA_controller:inst|t_ff:inst|q                 ;      ;
+; 177.02 MHz ; 177.02 MHz      ; 50MHz_clk                                       ;      ;
+; 341.76 MHz ; 341.76 MHz      ; VGA_controller:inst|clk_divN:inst15|counter[17] ;      ;
 +------------+-----------------+-------------------------------------------------+------+
 This panel reports FMAX for every clock in the design, regardless of the user-specified clock periods.  FMAX is only computed for paths where the source and destination registers or ports are driven by the same clock.  Paths of different clocks, including generated clocks, are ignored.  For paths between a clock and its inversion, FMAX is computed as if the rising and falling edges are scaled along with FMAX, such that the duty cycle (in terms of a percentage) is maintained. Altera recommends that you always use clock constraints and other slack reports for sign-off analysis.
 
@@ -157,9 +157,9 @@ HTML report is unavailable in plain text report export.
 +-------------------------------------------------+--------+---------------+
 ; Clock                                           ; Slack  ; End Point TNS ;
 +-------------------------------------------------+--------+---------------+
-; VGA_controller:inst|t_ff:inst|q                 ; -5.047 ; -202.735      ;
-; VGA_controller:inst|clk_divN:inst15|counter[17] ; -4.782 ; -98.637       ;
-; 50MHz_clk                                       ; -4.229 ; -28.934       ;
+; VGA_controller:inst|t_ff:inst|q                 ; -5.316 ; -192.313      ;
+; 50MHz_clk                                       ; -4.649 ; -393.159      ;
+; VGA_controller:inst|clk_divN:inst15|counter[17] ; -4.258 ; -91.253       ;
 +-------------------------------------------------+--------+---------------+
 
 
@@ -168,9 +168,9 @@ HTML report is unavailable in plain text report export.
 +-------------------------------------------------+-------+---------------+
 ; Clock                                           ; Slack ; End Point TNS ;
 +-------------------------------------------------+-------+---------------+
-; VGA_controller:inst|t_ff:inst|q                 ; 0.414 ; 0.000         ;
-; 50MHz_clk                                       ; 0.442 ; 0.000         ;
-; VGA_controller:inst|clk_divN:inst15|counter[17] ; 0.514 ; 0.000         ;
+; VGA_controller:inst|t_ff:inst|q                 ; 0.410 ; 0.000         ;
+; 50MHz_clk                                       ; 0.440 ; 0.000         ;
+; VGA_controller:inst|clk_divN:inst15|counter[17] ; 0.504 ; 0.000         ;
 +-------------------------------------------------+-------+---------------+
 
 
@@ -191,9 +191,9 @@ No paths to report.
 +-------------------------------------------------+--------+---------------+
 ; Clock                                           ; Slack  ; End Point TNS ;
 +-------------------------------------------------+--------+---------------+
-; VGA_controller:inst|t_ff:inst|q                 ; -0.538 ; -62.839       ;
-; VGA_controller:inst|clk_divN:inst15|counter[17] ; -0.538 ; -18.034       ;
-; 50MHz_clk                                       ; -0.538 ; -15.134       ;
+; 50MHz_clk                                       ; -0.538 ; -115.127      ;
+; VGA_controller:inst|t_ff:inst|q                 ; -0.538 ; -62.867       ;
+; VGA_controller:inst|clk_divN:inst15|counter[17] ; -0.538 ; -17.880       ;
 +-------------------------------------------------+--------+---------------+
 
 
@@ -208,9 +208,9 @@ No synchronizer chains to report.
 +------------+-----------------+-------------------------------------------------+------+
 ; Fmax       ; Restricted Fmax ; Clock Name                                      ; Note ;
 +------------+-----------------+-------------------------------------------------+------+
-; 159.29 MHz ; 159.29 MHz      ; VGA_controller:inst|t_ff:inst|q                 ;      ;
-; 205.93 MHz ; 205.93 MHz      ; 50MHz_clk                                       ;      ;
-; 329.27 MHz ; 329.27 MHz      ; VGA_controller:inst|clk_divN:inst15|counter[17] ;      ;
+; 155.21 MHz ; 155.21 MHz      ; VGA_controller:inst|t_ff:inst|q                 ;      ;
+; 169.49 MHz ; 169.49 MHz      ; 50MHz_clk                                       ;      ;
+; 326.05 MHz ; 326.05 MHz      ; VGA_controller:inst|clk_divN:inst15|counter[17] ;      ;
 +------------+-----------------+-------------------------------------------------+------+
 This panel reports FMAX for every clock in the design, regardless of the user-specified clock periods.  FMAX is only computed for paths where the source and destination registers or ports are driven by the same clock.  Paths of different clocks, including generated clocks, are ignored.  For paths between a clock and its inversion, FMAX is computed as if the rising and falling edges are scaled along with FMAX, such that the duty cycle (in terms of a percentage) is maintained. Altera recommends that you always use clock constraints and other slack reports for sign-off analysis.
 
@@ -220,9 +220,9 @@ This panel reports FMAX for every clock in the design, regardless of the user-sp
 +-------------------------------------------------+--------+---------------+
 ; Clock                                           ; Slack  ; End Point TNS ;
 +-------------------------------------------------+--------+---------------+
-; VGA_controller:inst|t_ff:inst|q                 ; -5.278 ; -202.268      ;
-; VGA_controller:inst|clk_divN:inst15|counter[17] ; -4.700 ; -98.322       ;
-; 50MHz_clk                                       ; -4.190 ; -31.107       ;
+; VGA_controller:inst|t_ff:inst|q                 ; -5.443 ; -190.744      ;
+; 50MHz_clk                                       ; -4.900 ; -399.187      ;
+; VGA_controller:inst|clk_divN:inst15|counter[17] ; -4.255 ; -92.069       ;
 +-------------------------------------------------+--------+---------------+
 
 
@@ -231,9 +231,9 @@ This panel reports FMAX for every clock in the design, regardless of the user-sp
 +-------------------------------------------------+-------+---------------+
 ; Clock                                           ; Slack ; End Point TNS ;
 +-------------------------------------------------+-------+---------------+
-; VGA_controller:inst|t_ff:inst|q                 ; 0.349 ; 0.000         ;
-; 50MHz_clk                                       ; 0.450 ; 0.000         ;
-; VGA_controller:inst|clk_divN:inst15|counter[17] ; 0.548 ; 0.000         ;
+; VGA_controller:inst|t_ff:inst|q                 ; 0.324 ; 0.000         ;
+; 50MHz_clk                                       ; 0.447 ; 0.000         ;
+; VGA_controller:inst|clk_divN:inst15|counter[17] ; 0.540 ; 0.000         ;
 +-------------------------------------------------+-------+---------------+
 
 
@@ -254,9 +254,9 @@ No paths to report.
 +-------------------------------------------------+--------+---------------+
 ; Clock                                           ; Slack  ; End Point TNS ;
 +-------------------------------------------------+--------+---------------+
-; 50MHz_clk                                       ; -0.539 ; -15.901       ;
-; VGA_controller:inst|t_ff:inst|q                 ; -0.538 ; -62.190       ;
-; VGA_controller:inst|clk_divN:inst15|counter[17] ; -0.538 ; -17.855       ;
+; 50MHz_clk                                       ; -0.538 ; -118.754      ;
+; VGA_controller:inst|t_ff:inst|q                 ; -0.538 ; -62.180       ;
+; VGA_controller:inst|clk_divN:inst15|counter[17] ; -0.538 ; -17.646       ;
 +-------------------------------------------------+--------+---------------+
 
 
@@ -271,9 +271,9 @@ No synchronizer chains to report.
 +-------------------------------------------------+--------+---------------+
 ; Clock                                           ; Slack  ; End Point TNS ;
 +-------------------------------------------------+--------+---------------+
-; 50MHz_clk                                       ; -2.980 ; -7.497        ;
-; VGA_controller:inst|t_ff:inst|q                 ; -2.161 ; -81.050       ;
-; VGA_controller:inst|clk_divN:inst15|counter[17] ; -1.893 ; -38.578       ;
+; 50MHz_clk                                       ; -3.033 ; -131.310      ;
+; VGA_controller:inst|t_ff:inst|q                 ; -2.246 ; -75.191       ;
+; VGA_controller:inst|clk_divN:inst15|counter[17] ; -1.549 ; -32.567       ;
 +-------------------------------------------------+--------+---------------+
 
 
@@ -282,9 +282,9 @@ No synchronizer chains to report.
 +-------------------------------------------------+--------+---------------+
 ; Clock                                           ; Slack  ; End Point TNS ;
 +-------------------------------------------------+--------+---------------+
-; VGA_controller:inst|t_ff:inst|q                 ; -0.087 ; -0.180        ;
-; VGA_controller:inst|clk_divN:inst15|counter[17] ; 0.159  ; 0.000         ;
-; 50MHz_clk                                       ; 0.202  ; 0.000         ;
+; VGA_controller:inst|t_ff:inst|q                 ; -0.030 ; -0.108        ;
+; VGA_controller:inst|clk_divN:inst15|counter[17] ; 0.153  ; 0.000         ;
+; 50MHz_clk                                       ; 0.182  ; 0.000         ;
 +-------------------------------------------------+--------+---------------+
 
 
@@ -305,9 +305,9 @@ No paths to report.
 +-------------------------------------------------+--------+---------------+
 ; Clock                                           ; Slack  ; End Point TNS ;
 +-------------------------------------------------+--------+---------------+
-; 50MHz_clk                                       ; -0.464 ; -2.577        ;
-; VGA_controller:inst|clk_divN:inst15|counter[17] ; 0.019  ; 0.000         ;
-; VGA_controller:inst|t_ff:inst|q                 ; 0.036  ; 0.000         ;
+; 50MHz_clk                                       ; -0.467 ; -14.665       ;
+; VGA_controller:inst|clk_divN:inst15|counter[17] ; 0.017  ; 0.000         ;
+; VGA_controller:inst|t_ff:inst|q                 ; 0.026  ; 0.000         ;
 +-------------------------------------------------+--------+---------------+
 
 
@@ -322,9 +322,9 @@ No synchronizer chains to report.
 +-------------------------------------------------+--------+---------------+
 ; Clock                                           ; Slack  ; End Point TNS ;
 +-------------------------------------------------+--------+---------------+
-; 50MHz_clk                                       ; -2.544 ; -6.470        ;
-; VGA_controller:inst|t_ff:inst|q                 ; -1.939 ; -69.933       ;
-; VGA_controller:inst|clk_divN:inst15|counter[17] ; -1.657 ; -33.606       ;
+; 50MHz_clk                                       ; -2.565 ; -111.861      ;
+; VGA_controller:inst|t_ff:inst|q                 ; -2.032 ; -65.059       ;
+; VGA_controller:inst|clk_divN:inst15|counter[17] ; -1.380 ; -29.284       ;
 +-------------------------------------------------+--------+---------------+
 
 
@@ -333,9 +333,9 @@ No synchronizer chains to report.
 +-------------------------------------------------+--------+---------------+
 ; Clock                                           ; Slack  ; End Point TNS ;
 +-------------------------------------------------+--------+---------------+
-; VGA_controller:inst|t_ff:inst|q                 ; -0.110 ; -0.508        ;
-; VGA_controller:inst|clk_divN:inst15|counter[17] ; 0.145  ; 0.000         ;
-; 50MHz_clk                                       ; 0.189  ; 0.000         ;
+; VGA_controller:inst|t_ff:inst|q                 ; -0.071 ; -0.498        ;
+; VGA_controller:inst|clk_divN:inst15|counter[17] ; 0.106  ; 0.000         ;
+; 50MHz_clk                                       ; 0.171  ; 0.000         ;
 +-------------------------------------------------+--------+---------------+
 
 
@@ -356,9 +356,9 @@ No paths to report.
 +-------------------------------------------------+--------+---------------+
 ; Clock                                           ; Slack  ; End Point TNS ;
 +-------------------------------------------------+--------+---------------+
-; 50MHz_clk                                       ; -0.459 ; -2.629        ;
-; VGA_controller:inst|clk_divN:inst15|counter[17] ; 0.051  ; 0.000         ;
-; VGA_controller:inst|t_ff:inst|q                 ; 0.070  ; 0.000         ;
+; 50MHz_clk                                       ; -0.454 ; -14.853       ;
+; VGA_controller:inst|clk_divN:inst15|counter[17] ; 0.050  ; 0.000         ;
+; VGA_controller:inst|t_ff:inst|q                 ; 0.059  ; 0.000         ;
 +-------------------------------------------------+--------+---------------+
 
 
@@ -373,14 +373,14 @@ No synchronizer chains to report.
 +--------------------------------------------------+----------+--------+----------+---------+---------------------+
 ; Clock                                            ; Setup    ; Hold   ; Recovery ; Removal ; Minimum Pulse Width ;
 +--------------------------------------------------+----------+--------+----------+---------+---------------------+
-; Worst-case Slack                                 ; -5.278   ; -0.110 ; N/A      ; N/A     ; -0.539              ;
-;  50MHz_clk                                       ; -4.229   ; 0.189  ; N/A      ; N/A     ; -0.539              ;
-;  VGA_controller:inst|clk_divN:inst15|counter[17] ; -4.782   ; 0.145  ; N/A      ; N/A     ; -0.538              ;
-;  VGA_controller:inst|t_ff:inst|q                 ; -5.278   ; -0.110 ; N/A      ; N/A     ; -0.538              ;
-; Design-wide TNS                                  ; -331.697 ; -0.508 ; 0.0      ; 0.0     ; -96.007             ;
-;  50MHz_clk                                       ; -31.107  ; 0.000  ; N/A      ; N/A     ; -15.901             ;
-;  VGA_controller:inst|clk_divN:inst15|counter[17] ; -98.637  ; 0.000  ; N/A      ; N/A     ; -18.034             ;
-;  VGA_controller:inst|t_ff:inst|q                 ; -202.735 ; -0.508 ; N/A      ; N/A     ; -62.839             ;
+; Worst-case Slack                                 ; -5.443   ; -0.071 ; N/A      ; N/A     ; -0.538              ;
+;  50MHz_clk                                       ; -4.900   ; 0.171  ; N/A      ; N/A     ; -0.538              ;
+;  VGA_controller:inst|clk_divN:inst15|counter[17] ; -4.258   ; 0.106  ; N/A      ; N/A     ; -0.538              ;
+;  VGA_controller:inst|t_ff:inst|q                 ; -5.443   ; -0.071 ; N/A      ; N/A     ; -0.538              ;
+; Design-wide TNS                                  ; -682.0   ; -0.498 ; 0.0      ; 0.0     ; -198.58             ;
+;  50MHz_clk                                       ; -399.187 ; 0.000  ; N/A      ; N/A     ; -118.754            ;
+;  VGA_controller:inst|clk_divN:inst15|counter[17] ; -92.069  ; 0.000  ; N/A      ; N/A     ; -17.880             ;
+;  VGA_controller:inst|t_ff:inst|q                 ; -192.313 ; -0.498 ; N/A      ; N/A     ; -62.867             ;
 +--------------------------------------------------+----------+--------+----------+---------+---------------------+
 
 
@@ -399,8 +399,8 @@ No synchronizer chains to report.
 ; led[3] ; 2.5 V        ; 0 in              ; 0 H/in                  ; 0 F/in                  ; short         ; -                   ; open           ; open             ; open   ; 0 in             ; 0 H/in                 ; 0 F/in                 ; short        ; open          ; open            ; open  ; 0 V                 ; -                  ; n/a           ; n/a             ; n/a         ;
 ; led[2] ; 2.5 V        ; 0 in              ; 0 H/in                  ; 0 F/in                  ; short         ; -                   ; open           ; open             ; open   ; 0 in             ; 0 H/in                 ; 0 F/in                 ; short        ; open          ; open            ; open  ; 0 V                 ; -                  ; n/a           ; n/a             ; n/a         ;
 ; led[1] ; 2.5 V        ; 0 in              ; 0 H/in                  ; 0 F/in                  ; short         ; -                   ; open           ; open             ; open   ; 0 in             ; 0 H/in                 ; 0 F/in                 ; short        ; open          ; open            ; open  ; 0 V                 ; -                  ; n/a           ; n/a             ; n/a         ;
-; led[0] ; 2.5 V        ; 0 in              ; 0 H/in                  ; 0 F/in                  ; short         ; -                   ; open           ; open             ; open   ; 0 in             ; 0 H/in                 ; 0 F/in                 ; short        ; open          ; open            ; open  ; 0 V                 ; -                  ; n/a           ; n/a             ; n/a         ;
 ; vsync  ; 2.5 V        ; 0 in              ; 0 H/in                  ; 0 F/in                  ; short         ; -                   ; open           ; open             ; open   ; 0 in             ; 0 H/in                 ; 0 F/in                 ; short        ; open          ; open            ; open  ; 0 V                 ; -                  ; n/a           ; n/a             ; n/a         ;
+; led0   ; 2.5 V        ; 0 in              ; 0 H/in                  ; 0 F/in                  ; short         ; -                   ; open           ; open             ; open   ; 0 in             ; 0 H/in                 ; 0 F/in                 ; short        ; open          ; open            ; open  ; 0 V                 ; -                  ; n/a           ; n/a             ; n/a         ;
 ; b[3]   ; 2.5 V        ; 0 in              ; 0 H/in                  ; 0 F/in                  ; short         ; -                   ; open           ; open             ; open   ; 0 in             ; 0 H/in                 ; 0 F/in                 ; short        ; open          ; open            ; open  ; 0 V                 ; -                  ; n/a           ; n/a             ; n/a         ;
 ; b[2]   ; 2.5 V        ; 0 in              ; 0 H/in                  ; 0 F/in                  ; short         ; -                   ; open           ; open             ; open   ; 0 in             ; 0 H/in                 ; 0 F/in                 ; short        ; open          ; open            ; open  ; 0 V                 ; -                  ; n/a           ; n/a             ; n/a         ;
 ; b[1]   ; 2.5 V        ; 0 in              ; 0 H/in                  ; 0 F/in                  ; short         ; -                   ; open           ; open             ; open   ; 0 in             ; 0 H/in                 ; 0 F/in                 ; short        ; open          ; open            ; open  ; 0 V                 ; -                  ; n/a           ; n/a             ; n/a         ;
@@ -445,8 +445,8 @@ No synchronizer chains to report.
 ; led[3] ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 2.19e-07 V                   ; 2.4 V               ; -0.039 V            ; 0.21 V                               ; 0.145 V                              ; 4.67e-10 s                  ; 4.63e-10 s                  ; No                         ; Yes                        ; 2.32 V                      ; 2.19e-07 V                  ; 2.4 V              ; -0.039 V           ; 0.21 V                              ; 0.145 V                             ; 4.67e-10 s                 ; 4.63e-10 s                 ; No                        ; Yes                       ;
 ; led[2] ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 1.88e-07 V                   ; 2.35 V              ; -0.0185 V           ; 0.153 V                              ; 0.099 V                              ; 4.6e-10 s                   ; 4.48e-10 s                  ; No                         ; Yes                        ; 2.32 V                      ; 1.88e-07 V                  ; 2.35 V             ; -0.0185 V          ; 0.153 V                             ; 0.099 V                             ; 4.6e-10 s                  ; 4.48e-10 s                 ; No                        ; Yes                       ;
 ; led[1] ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 2.15e-07 V                   ; 2.41 V              ; -0.0495 V           ; 0.18 V                               ; 0.115 V                              ; 4.54e-10 s                  ; 4.44e-10 s                  ; No                         ; Yes                        ; 2.32 V                      ; 2.15e-07 V                  ; 2.41 V             ; -0.0495 V          ; 0.18 V                              ; 0.115 V                             ; 4.54e-10 s                 ; 4.44e-10 s                 ; No                        ; Yes                       ;
-; led[0] ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 2.15e-07 V                   ; 2.41 V              ; -0.0492 V           ; 0.181 V                              ; 0.116 V                              ; 4.54e-10 s                  ; 4.44e-10 s                  ; No                         ; Yes                        ; 2.32 V                      ; 2.15e-07 V                  ; 2.41 V             ; -0.0492 V          ; 0.181 V                             ; 0.116 V                             ; 4.54e-10 s                 ; 4.44e-10 s                 ; No                        ; Yes                       ;
 ; vsync  ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 2.15e-07 V                   ; 2.41 V              ; -0.0495 V           ; 0.18 V                               ; 0.115 V                              ; 4.54e-10 s                  ; 4.44e-10 s                  ; No                         ; Yes                        ; 2.32 V                      ; 2.15e-07 V                  ; 2.41 V             ; -0.0495 V          ; 0.18 V                              ; 0.115 V                             ; 4.54e-10 s                 ; 4.44e-10 s                 ; No                        ; Yes                       ;
+; led0   ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 2.15e-07 V                   ; 2.41 V              ; -0.0492 V           ; 0.181 V                              ; 0.116 V                              ; 4.54e-10 s                  ; 4.44e-10 s                  ; No                         ; Yes                        ; 2.32 V                      ; 2.15e-07 V                  ; 2.41 V             ; -0.0492 V          ; 0.181 V                             ; 0.116 V                             ; 4.54e-10 s                 ; 4.44e-10 s                 ; No                        ; Yes                       ;
 ; b[3]   ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 1.88e-07 V                   ; 2.35 V              ; -0.0185 V           ; 0.153 V                              ; 0.099 V                              ; 4.6e-10 s                   ; 4.48e-10 s                  ; No                         ; Yes                        ; 2.32 V                      ; 1.88e-07 V                  ; 2.35 V             ; -0.0185 V          ; 0.153 V                             ; 0.099 V                             ; 4.6e-10 s                  ; 4.48e-10 s                 ; No                        ; Yes                       ;
 ; b[2]   ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 2.19e-07 V                   ; 2.4 V               ; -0.039 V            ; 0.21 V                               ; 0.145 V                              ; 4.67e-10 s                  ; 4.63e-10 s                  ; No                         ; Yes                        ; 2.32 V                      ; 2.19e-07 V                  ; 2.4 V              ; -0.039 V           ; 0.21 V                              ; 0.145 V                             ; 4.67e-10 s                 ; 4.63e-10 s                 ; No                        ; Yes                       ;
 ; b[1]   ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 2.15e-07 V                   ; 2.41 V              ; -0.0495 V           ; 0.18 V                               ; 0.115 V                              ; 4.54e-10 s                  ; 4.44e-10 s                  ; No                         ; Yes                        ; 2.32 V                      ; 2.15e-07 V                  ; 2.41 V             ; -0.0495 V          ; 0.18 V                              ; 0.115 V                             ; 4.54e-10 s                 ; 4.44e-10 s                 ; No                        ; Yes                       ;
@@ -477,8 +477,8 @@ No synchronizer chains to report.
 ; led[3] ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 2.56e-05 V                   ; 2.38 V              ; -0.026 V            ; 0.249 V                              ; 0.089 V                              ; 4.95e-10 s                  ; 6.01e-10 s                  ; No                         ; Yes                        ; 2.32 V                      ; 2.56e-05 V                  ; 2.38 V             ; -0.026 V           ; 0.249 V                             ; 0.089 V                             ; 4.95e-10 s                 ; 6.01e-10 s                 ; No                        ; Yes                       ;
 ; led[2] ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 2.27e-05 V                   ; 2.34 V              ; -0.0089 V           ; 0.206 V                              ; 0.058 V                              ; 4.97e-10 s                  ; 5.13e-10 s                  ; Yes                        ; Yes                        ; 2.32 V                      ; 2.27e-05 V                  ; 2.34 V             ; -0.0089 V          ; 0.206 V                             ; 0.058 V                             ; 4.97e-10 s                 ; 5.13e-10 s                 ; Yes                       ; Yes                       ;
 ; led[1] ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 2.52e-05 V                   ; 2.38 V              ; -0.0315 V           ; 0.205 V                              ; 0.182 V                              ; 4.74e-10 s                  ; 4.85e-10 s                  ; No                         ; Yes                        ; 2.32 V                      ; 2.52e-05 V                  ; 2.38 V             ; -0.0315 V          ; 0.205 V                             ; 0.182 V                             ; 4.74e-10 s                 ; 4.85e-10 s                 ; No                        ; Yes                       ;
-; led[0] ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 2.52e-05 V                   ; 2.38 V              ; -0.032 V            ; 0.204 V                              ; 0.181 V                              ; 4.74e-10 s                  ; 4.85e-10 s                  ; No                         ; Yes                        ; 2.32 V                      ; 2.52e-05 V                  ; 2.38 V             ; -0.032 V           ; 0.204 V                             ; 0.181 V                             ; 4.74e-10 s                 ; 4.85e-10 s                 ; No                        ; Yes                       ;
 ; vsync  ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 2.52e-05 V                   ; 2.38 V              ; -0.0315 V           ; 0.205 V                              ; 0.182 V                              ; 4.74e-10 s                  ; 4.85e-10 s                  ; No                         ; Yes                        ; 2.32 V                      ; 2.52e-05 V                  ; 2.38 V             ; -0.0315 V          ; 0.205 V                             ; 0.182 V                             ; 4.74e-10 s                 ; 4.85e-10 s                 ; No                        ; Yes                       ;
+; led0   ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 2.52e-05 V                   ; 2.38 V              ; -0.032 V            ; 0.204 V                              ; 0.181 V                              ; 4.74e-10 s                  ; 4.85e-10 s                  ; No                         ; Yes                        ; 2.32 V                      ; 2.52e-05 V                  ; 2.38 V             ; -0.032 V           ; 0.204 V                             ; 0.181 V                             ; 4.74e-10 s                 ; 4.85e-10 s                 ; No                        ; Yes                       ;
 ; b[3]   ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 2.27e-05 V                   ; 2.34 V              ; -0.0089 V           ; 0.206 V                              ; 0.058 V                              ; 4.97e-10 s                  ; 5.13e-10 s                  ; Yes                        ; Yes                        ; 2.32 V                      ; 2.27e-05 V                  ; 2.34 V             ; -0.0089 V          ; 0.206 V                             ; 0.058 V                             ; 4.97e-10 s                 ; 5.13e-10 s                 ; Yes                       ; Yes                       ;
 ; b[2]   ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 2.56e-05 V                   ; 2.38 V              ; -0.026 V            ; 0.249 V                              ; 0.089 V                              ; 4.95e-10 s                  ; 6.01e-10 s                  ; No                         ; Yes                        ; 2.32 V                      ; 2.56e-05 V                  ; 2.38 V             ; -0.026 V           ; 0.249 V                             ; 0.089 V                             ; 4.95e-10 s                 ; 6.01e-10 s                 ; No                        ; Yes                       ;
 ; b[1]   ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 2.52e-05 V                   ; 2.38 V              ; -0.0315 V           ; 0.205 V                              ; 0.182 V                              ; 4.74e-10 s                  ; 4.85e-10 s                  ; No                         ; Yes                        ; 2.32 V                      ; 2.52e-05 V                  ; 2.38 V             ; -0.0315 V          ; 0.205 V                             ; 0.182 V                             ; 4.74e-10 s                 ; 4.85e-10 s                 ; No                        ; Yes                       ;
@@ -509,8 +509,8 @@ No synchronizer chains to report.
 ; led[3] ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.75 V                       ; 4.25e-06 V                   ; 2.9 V               ; -0.107 V            ; 0.378 V                              ; 0.16 V                               ; 2.87e-10 s                  ; 4.28e-10 s                  ; No                         ; No                         ; 2.75 V                      ; 4.25e-06 V                  ; 2.9 V              ; -0.107 V           ; 0.378 V                             ; 0.16 V                              ; 2.87e-10 s                 ; 4.28e-10 s                 ; No                        ; No                        ;
 ; led[2] ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.75 V                       ; 3.54e-06 V                   ; 2.81 V              ; -0.0578 V           ; 0.303 V                              ; 0.28 V                               ; 2.93e-10 s                  ; 3.01e-10 s                  ; No                         ; No                         ; 2.75 V                      ; 3.54e-06 V                  ; 2.81 V             ; -0.0578 V          ; 0.303 V                             ; 0.28 V                              ; 2.93e-10 s                 ; 3.01e-10 s                 ; No                        ; No                        ;
 ; led[1] ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.75 V                       ; 4.14e-06 V                   ; 2.91 V              ; -0.121 V            ; 0.326 V                              ; 0.297 V                              ; 2.74e-10 s                  ; 2.8e-10 s                   ; No                         ; No                         ; 2.75 V                      ; 4.14e-06 V                  ; 2.91 V             ; -0.121 V           ; 0.326 V                             ; 0.297 V                             ; 2.74e-10 s                 ; 2.8e-10 s                  ; No                        ; No                        ;
-; led[0] ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.75 V                       ; 4.14e-06 V                   ; 2.91 V              ; -0.119 V            ; 0.326 V                              ; 0.298 V                              ; 2.74e-10 s                  ; 2.8e-10 s                   ; No                         ; No                         ; 2.75 V                      ; 4.14e-06 V                  ; 2.91 V             ; -0.119 V           ; 0.326 V                             ; 0.298 V                             ; 2.74e-10 s                 ; 2.8e-10 s                  ; No                        ; No                        ;
 ; vsync  ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.75 V                       ; 4.14e-06 V                   ; 2.91 V              ; -0.121 V            ; 0.326 V                              ; 0.297 V                              ; 2.74e-10 s                  ; 2.8e-10 s                   ; No                         ; No                         ; 2.75 V                      ; 4.14e-06 V                  ; 2.91 V             ; -0.121 V           ; 0.326 V                             ; 0.297 V                             ; 2.74e-10 s                 ; 2.8e-10 s                  ; No                        ; No                        ;
+; led0   ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.75 V                       ; 4.14e-06 V                   ; 2.91 V              ; -0.119 V            ; 0.326 V                              ; 0.298 V                              ; 2.74e-10 s                  ; 2.8e-10 s                   ; No                         ; No                         ; 2.75 V                      ; 4.14e-06 V                  ; 2.91 V             ; -0.119 V           ; 0.326 V                             ; 0.298 V                             ; 2.74e-10 s                 ; 2.8e-10 s                  ; No                        ; No                        ;
 ; b[3]   ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.75 V                       ; 3.54e-06 V                   ; 2.81 V              ; -0.0578 V           ; 0.303 V                              ; 0.28 V                               ; 2.93e-10 s                  ; 3.01e-10 s                  ; No                         ; No                         ; 2.75 V                      ; 3.54e-06 V                  ; 2.81 V             ; -0.0578 V          ; 0.303 V                             ; 0.28 V                              ; 2.93e-10 s                 ; 3.01e-10 s                 ; No                        ; No                        ;
 ; b[2]   ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.75 V                       ; 4.25e-06 V                   ; 2.9 V               ; -0.107 V            ; 0.378 V                              ; 0.16 V                               ; 2.87e-10 s                  ; 4.28e-10 s                  ; No                         ; No                         ; 2.75 V                      ; 4.25e-06 V                  ; 2.9 V              ; -0.107 V           ; 0.378 V                             ; 0.16 V                              ; 2.87e-10 s                 ; 4.28e-10 s                 ; No                        ; No                        ;
 ; b[1]   ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.75 V                       ; 4.14e-06 V                   ; 2.91 V              ; -0.121 V            ; 0.326 V                              ; 0.297 V                              ; 2.74e-10 s                  ; 2.8e-10 s                   ; No                         ; No                         ; 2.75 V                      ; 4.14e-06 V                  ; 2.91 V             ; -0.121 V           ; 0.326 V                             ; 0.297 V                             ; 2.74e-10 s                 ; 2.8e-10 s                  ; No                        ; No                        ;
@@ -541,8 +541,8 @@ No synchronizer chains to report.
 ; led[3] ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.75 V                       ; 0.000247 V                   ; 2.85 V              ; -0.0711 V           ; 0.204 V                              ; 0.181 V                              ; 4.55e-10 s                  ; 4.49e-10 s                  ; No                         ; No                         ; 2.75 V                      ; 0.000247 V                  ; 2.85 V             ; -0.0711 V          ; 0.204 V                             ; 0.181 V                             ; 4.55e-10 s                 ; 4.49e-10 s                 ; No                        ; No                        ;
 ; led[2] ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.75 V                       ; 0.000213 V                   ; 2.79 V              ; -0.0324 V           ; 0.139 V                              ; 0.119 V                              ; 4.42e-10 s                  ; 4.33e-10 s                  ; No                         ; Yes                        ; 2.75 V                      ; 0.000213 V                  ; 2.79 V             ; -0.0324 V          ; 0.139 V                             ; 0.119 V                             ; 4.42e-10 s                 ; 4.33e-10 s                 ; No                        ; Yes                       ;
 ; led[1] ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.75 V                       ; 0.000242 V                   ; 2.86 V              ; -0.0814 V           ; 0.36 V                               ; 0.156 V                              ; 3e-10 s                     ; 4.34e-10 s                  ; No                         ; No                         ; 2.75 V                      ; 0.000242 V                  ; 2.86 V             ; -0.0814 V          ; 0.36 V                              ; 0.156 V                             ; 3e-10 s                    ; 4.34e-10 s                 ; No                        ; No                        ;
-; led[0] ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.75 V                       ; 0.000242 V                   ; 2.86 V              ; -0.0805 V           ; 0.358 V                              ; 0.156 V                              ; 3.01e-10 s                  ; 4.34e-10 s                  ; No                         ; No                         ; 2.75 V                      ; 0.000242 V                  ; 2.86 V             ; -0.0805 V          ; 0.358 V                             ; 0.156 V                             ; 3.01e-10 s                 ; 4.34e-10 s                 ; No                        ; No                        ;
 ; vsync  ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.75 V                       ; 0.000242 V                   ; 2.86 V              ; -0.0814 V           ; 0.36 V                               ; 0.156 V                              ; 3e-10 s                     ; 4.34e-10 s                  ; No                         ; No                         ; 2.75 V                      ; 0.000242 V                  ; 2.86 V             ; -0.0814 V          ; 0.36 V                              ; 0.156 V                             ; 3e-10 s                    ; 4.34e-10 s                 ; No                        ; No                        ;
+; led0   ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.75 V                       ; 0.000242 V                   ; 2.86 V              ; -0.0805 V           ; 0.358 V                              ; 0.156 V                              ; 3.01e-10 s                  ; 4.34e-10 s                  ; No                         ; No                         ; 2.75 V                      ; 0.000242 V                  ; 2.86 V             ; -0.0805 V          ; 0.358 V                             ; 0.156 V                             ; 3.01e-10 s                 ; 4.34e-10 s                 ; No                        ; No                        ;
 ; b[3]   ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.75 V                       ; 0.000213 V                   ; 2.79 V              ; -0.0324 V           ; 0.139 V                              ; 0.119 V                              ; 4.42e-10 s                  ; 4.33e-10 s                  ; No                         ; Yes                        ; 2.75 V                      ; 0.000213 V                  ; 2.79 V             ; -0.0324 V          ; 0.139 V                             ; 0.119 V                             ; 4.42e-10 s                 ; 4.33e-10 s                 ; No                        ; Yes                       ;
 ; b[2]   ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.75 V                       ; 0.000247 V                   ; 2.85 V              ; -0.0711 V           ; 0.204 V                              ; 0.181 V                              ; 4.55e-10 s                  ; 4.49e-10 s                  ; No                         ; No                         ; 2.75 V                      ; 0.000247 V                  ; 2.85 V             ; -0.0711 V          ; 0.204 V                             ; 0.181 V                             ; 4.55e-10 s                 ; 4.49e-10 s                 ; No                        ; No                        ;
 ; b[1]   ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.75 V                       ; 0.000242 V                   ; 2.86 V              ; -0.0814 V           ; 0.36 V                               ; 0.156 V                              ; 3e-10 s                     ; 4.34e-10 s                  ; No                         ; No                         ; 2.75 V                      ; 0.000242 V                  ; 2.86 V             ; -0.0814 V          ; 0.36 V                              ; 0.156 V                             ; 3e-10 s                    ; 4.34e-10 s                 ; No                        ; No                        ;
@@ -563,7 +563,7 @@ No synchronizer chains to report.
 +-------------------------------------------------+-------------------------------------------------+----------+----------+----------+----------+
 ; From Clock                                      ; To Clock                                        ; RR Paths ; FR Paths ; RF Paths ; FF Paths ;
 +-------------------------------------------------+-------------------------------------------------+----------+----------+----------+----------+
-; 50MHz_clk                                       ; 50MHz_clk                                       ; 170      ; 0        ; 0        ; 0        ;
+; 50MHz_clk                                       ; 50MHz_clk                                       ; 5050     ; 0        ; 0        ; 0        ;
 ; VGA_controller:inst|clk_divN:inst15|counter[17] ; 50MHz_clk                                       ; 1        ; 1        ; 0        ; 0        ;
 ; VGA_controller:inst|t_ff:inst|q                 ; 50MHz_clk                                       ; 1        ; 1        ; 0        ; 0        ;
 ; VGA_controller:inst|clk_divN:inst15|counter[17] ; VGA_controller:inst|clk_divN:inst15|counter[17] ; 132      ; 0        ; 0        ; 0        ;
@@ -579,7 +579,7 @@ Entries labeled "false path" only account for clock-to-clock false paths and not
 +-------------------------------------------------+-------------------------------------------------+----------+----------+----------+----------+
 ; From Clock                                      ; To Clock                                        ; RR Paths ; FR Paths ; RF Paths ; FF Paths ;
 +-------------------------------------------------+-------------------------------------------------+----------+----------+----------+----------+
-; 50MHz_clk                                       ; 50MHz_clk                                       ; 170      ; 0        ; 0        ; 0        ;
+; 50MHz_clk                                       ; 50MHz_clk                                       ; 5050     ; 0        ; 0        ; 0        ;
 ; VGA_controller:inst|clk_divN:inst15|counter[17] ; 50MHz_clk                                       ; 1        ; 1        ; 0        ; 0        ;
 ; VGA_controller:inst|t_ff:inst|q                 ; 50MHz_clk                                       ; 1        ; 1        ; 0        ; 0        ;
 ; VGA_controller:inst|clk_divN:inst15|counter[17] ; VGA_controller:inst|clk_divN:inst15|counter[17] ; 132      ; 0        ; 0        ; 0        ;
@@ -610,9 +610,9 @@ No non-DPA dedicated SERDES Receiver circuitry present in device or used in desi
 ; Illegal Clocks                  ; 0     ; 0    ;
 ; Unconstrained Clocks            ; 0     ; 0    ;
 ; Unconstrained Input Ports       ; 5     ; 5    ;
-; Unconstrained Input Port Paths  ; 212   ; 212  ;
-; Unconstrained Output Ports      ; 15    ; 15   ;
-; Unconstrained Output Port Paths ; 15    ; 15   ;
+; Unconstrained Input Port Paths  ; 342   ; 342  ;
+; Unconstrained Output Ports      ; 20    ; 20   ;
+; Unconstrained Output Port Paths ; 20    ; 20   ;
 +---------------------------------+-------+------+
 
 
@@ -650,7 +650,12 @@ No non-DPA dedicated SERDES Receiver circuitry present in device or used in desi
 ; g[2]        ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
 ; g[3]        ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
 ; hsync       ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
-; led[0]      ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; led0        ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; led[1]      ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; led[2]      ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; led[3]      ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; led[4]      ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; led[5]      ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
 ; led[6]      ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
 ; led[7]      ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
 ; led[8]      ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
@@ -686,7 +691,12 @@ No non-DPA dedicated SERDES Receiver circuitry present in device or used in desi
 ; g[2]        ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
 ; g[3]        ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
 ; hsync       ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
-; led[0]      ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; led0        ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; led[1]      ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; led[2]      ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; led[3]      ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; led[4]      ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; led[5]      ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
 ; led[6]      ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
 ; led[7]      ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
 ; led[8]      ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
@@ -705,7 +715,7 @@ No non-DPA dedicated SERDES Receiver circuitry present in device or used in desi
 Info: *******************************************************************
 Info: Running Quartus Prime Timing Analyzer
     Info: Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
-    Info: Processing started: Sat Feb 03 07:01:57 2024
+    Info: Processing started: Sun Feb 04 11:01:09 2024
 Info: Command: quartus_sta VGA_controller -c VGA_controller
 Info: qsta_default_script.tcl version: #1
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
@@ -715,8 +725,8 @@ Info (21077): High junction temperature is 85 degrees C
 Critical Warning (332012): Synopsys Design Constraints File file not found: 'VGA_controller.sdc'. A Synopsys Design Constraints File is required by the Timing Analyzer to get proper timing constraints. Without it, the Compiler will not properly optimize the design.
 Info (332142): No user constrained base clocks found in the design. Calling "derive_clocks -period 1.0"
 Info (332105): Deriving Clocks
-    Info (332105): create_clock -period 1.000 -name VGA_controller:inst|t_ff:inst|q VGA_controller:inst|t_ff:inst|q
     Info (332105): create_clock -period 1.000 -name 50MHz_clk 50MHz_clk
+    Info (332105): create_clock -period 1.000 -name VGA_controller:inst|t_ff:inst|q VGA_controller:inst|t_ff:inst|q
     Info (332105): create_clock -period 1.000 -name VGA_controller:inst|clk_divN:inst15|counter[17] VGA_controller:inst|clk_divN:inst15|counter[17]
 Info (332143): No user constrained clock uncertainty found in the design. Calling "derive_clock_uncertainty"
 Info (332123): Deriving Clock Uncertainty. Please refer to report_sdc in the Timing Analyzer to see clock uncertainties.
@@ -724,107 +734,107 @@ Info: Found TIMING_ANALYZER_REPORT_SCRIPT_INCLUDE_DEFAULT_ANALYSIS = ON
 Info: Analyzing Slow 1100mV 85C Model
 Critical Warning (332148): Timing requirements not met
     Info (11105): For recommendations on closing timing, run Report Timing Closure Recommendations in the Timing Analyzer.
-Info (332146): Worst-case setup slack is -5.047
+Info (332146): Worst-case setup slack is -5.316
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):    -5.047            -202.735 VGA_controller:inst|t_ff:inst|q 
-    Info (332119):    -4.782             -98.637 VGA_controller:inst|clk_divN:inst15|counter[17] 
-    Info (332119):    -4.229             -28.934 50MHz_clk 
-Info (332146): Worst-case hold slack is 0.414
+    Info (332119):    -5.316            -192.313 VGA_controller:inst|t_ff:inst|q 
+    Info (332119):    -4.649            -393.159 50MHz_clk 
+    Info (332119):    -4.258             -91.253 VGA_controller:inst|clk_divN:inst15|counter[17] 
+Info (332146): Worst-case hold slack is 0.410
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):     0.414               0.000 VGA_controller:inst|t_ff:inst|q 
-    Info (332119):     0.442               0.000 50MHz_clk 
-    Info (332119):     0.514               0.000 VGA_controller:inst|clk_divN:inst15|counter[17] 
+    Info (332119):     0.410               0.000 VGA_controller:inst|t_ff:inst|q 
+    Info (332119):     0.440               0.000 50MHz_clk 
+    Info (332119):     0.504               0.000 VGA_controller:inst|clk_divN:inst15|counter[17] 
 Info (332140): No Recovery paths to report
 Info (332140): No Removal paths to report
 Info (332146): Worst-case minimum pulse width slack is -0.538
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):    -0.538             -62.839 VGA_controller:inst|t_ff:inst|q 
-    Info (332119):    -0.538             -18.034 VGA_controller:inst|clk_divN:inst15|counter[17] 
-    Info (332119):    -0.538             -15.134 50MHz_clk 
+    Info (332119):    -0.538            -115.127 50MHz_clk 
+    Info (332119):    -0.538             -62.867 VGA_controller:inst|t_ff:inst|q 
+    Info (332119):    -0.538             -17.880 VGA_controller:inst|clk_divN:inst15|counter[17] 
 Info: Analyzing Slow 1100mV 0C Model
 Info (334003): Started post-fitting delay annotation
 Info (334004): Delay annotation completed successfully
 Info (332123): Deriving Clock Uncertainty. Please refer to report_sdc in the Timing Analyzer to see clock uncertainties.
 Critical Warning (332148): Timing requirements not met
     Info (11105): For recommendations on closing timing, run Report Timing Closure Recommendations in the Timing Analyzer.
-Info (332146): Worst-case setup slack is -5.278
+Info (332146): Worst-case setup slack is -5.443
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):    -5.278            -202.268 VGA_controller:inst|t_ff:inst|q 
-    Info (332119):    -4.700             -98.322 VGA_controller:inst|clk_divN:inst15|counter[17] 
-    Info (332119):    -4.190             -31.107 50MHz_clk 
-Info (332146): Worst-case hold slack is 0.349
+    Info (332119):    -5.443            -190.744 VGA_controller:inst|t_ff:inst|q 
+    Info (332119):    -4.900            -399.187 50MHz_clk 
+    Info (332119):    -4.255             -92.069 VGA_controller:inst|clk_divN:inst15|counter[17] 
+Info (332146): Worst-case hold slack is 0.324
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):     0.349               0.000 VGA_controller:inst|t_ff:inst|q 
-    Info (332119):     0.450               0.000 50MHz_clk 
-    Info (332119):     0.548               0.000 VGA_controller:inst|clk_divN:inst15|counter[17] 
+    Info (332119):     0.324               0.000 VGA_controller:inst|t_ff:inst|q 
+    Info (332119):     0.447               0.000 50MHz_clk 
+    Info (332119):     0.540               0.000 VGA_controller:inst|clk_divN:inst15|counter[17] 
 Info (332140): No Recovery paths to report
 Info (332140): No Removal paths to report
-Info (332146): Worst-case minimum pulse width slack is -0.539
+Info (332146): Worst-case minimum pulse width slack is -0.538
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):    -0.539             -15.901 50MHz_clk 
-    Info (332119):    -0.538             -62.190 VGA_controller:inst|t_ff:inst|q 
-    Info (332119):    -0.538             -17.855 VGA_controller:inst|clk_divN:inst15|counter[17] 
+    Info (332119):    -0.538            -118.754 50MHz_clk 
+    Info (332119):    -0.538             -62.180 VGA_controller:inst|t_ff:inst|q 
+    Info (332119):    -0.538             -17.646 VGA_controller:inst|clk_divN:inst15|counter[17] 
 Info: Analyzing Fast 1100mV 85C Model
 Info (334003): Started post-fitting delay annotation
 Info (334004): Delay annotation completed successfully
 Info (332123): Deriving Clock Uncertainty. Please refer to report_sdc in the Timing Analyzer to see clock uncertainties.
 Critical Warning (332148): Timing requirements not met
     Info (11105): For recommendations on closing timing, run Report Timing Closure Recommendations in the Timing Analyzer.
-Info (332146): Worst-case setup slack is -2.980
+Info (332146): Worst-case setup slack is -3.033
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):    -2.980              -7.497 50MHz_clk 
-    Info (332119):    -2.161             -81.050 VGA_controller:inst|t_ff:inst|q 
-    Info (332119):    -1.893             -38.578 VGA_controller:inst|clk_divN:inst15|counter[17] 
-Info (332146): Worst-case hold slack is -0.087
+    Info (332119):    -3.033            -131.310 50MHz_clk 
+    Info (332119):    -2.246             -75.191 VGA_controller:inst|t_ff:inst|q 
+    Info (332119):    -1.549             -32.567 VGA_controller:inst|clk_divN:inst15|counter[17] 
+Info (332146): Worst-case hold slack is -0.030
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):    -0.087              -0.180 VGA_controller:inst|t_ff:inst|q 
-    Info (332119):     0.159               0.000 VGA_controller:inst|clk_divN:inst15|counter[17] 
-    Info (332119):     0.202               0.000 50MHz_clk 
+    Info (332119):    -0.030              -0.108 VGA_controller:inst|t_ff:inst|q 
+    Info (332119):     0.153               0.000 VGA_controller:inst|clk_divN:inst15|counter[17] 
+    Info (332119):     0.182               0.000 50MHz_clk 
 Info (332140): No Recovery paths to report
 Info (332140): No Removal paths to report
-Info (332146): Worst-case minimum pulse width slack is -0.464
+Info (332146): Worst-case minimum pulse width slack is -0.467
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):    -0.464              -2.577 50MHz_clk 
-    Info (332119):     0.019               0.000 VGA_controller:inst|clk_divN:inst15|counter[17] 
-    Info (332119):     0.036               0.000 VGA_controller:inst|t_ff:inst|q 
+    Info (332119):    -0.467             -14.665 50MHz_clk 
+    Info (332119):     0.017               0.000 VGA_controller:inst|clk_divN:inst15|counter[17] 
+    Info (332119):     0.026               0.000 VGA_controller:inst|t_ff:inst|q 
 Info: Analyzing Fast 1100mV 0C Model
 Info (332123): Deriving Clock Uncertainty. Please refer to report_sdc in the Timing Analyzer to see clock uncertainties.
 Critical Warning (332148): Timing requirements not met
     Info (11105): For recommendations on closing timing, run Report Timing Closure Recommendations in the Timing Analyzer.
-Info (332146): Worst-case setup slack is -2.544
+Info (332146): Worst-case setup slack is -2.565
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):    -2.544              -6.470 50MHz_clk 
-    Info (332119):    -1.939             -69.933 VGA_controller:inst|t_ff:inst|q 
-    Info (332119):    -1.657             -33.606 VGA_controller:inst|clk_divN:inst15|counter[17] 
-Info (332146): Worst-case hold slack is -0.110
+    Info (332119):    -2.565            -111.861 50MHz_clk 
+    Info (332119):    -2.032             -65.059 VGA_controller:inst|t_ff:inst|q 
+    Info (332119):    -1.380             -29.284 VGA_controller:inst|clk_divN:inst15|counter[17] 
+Info (332146): Worst-case hold slack is -0.071
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):    -0.110              -0.508 VGA_controller:inst|t_ff:inst|q 
-    Info (332119):     0.145               0.000 VGA_controller:inst|clk_divN:inst15|counter[17] 
-    Info (332119):     0.189               0.000 50MHz_clk 
+    Info (332119):    -0.071              -0.498 VGA_controller:inst|t_ff:inst|q 
+    Info (332119):     0.106               0.000 VGA_controller:inst|clk_divN:inst15|counter[17] 
+    Info (332119):     0.171               0.000 50MHz_clk 
 Info (332140): No Recovery paths to report
 Info (332140): No Removal paths to report
-Info (332146): Worst-case minimum pulse width slack is -0.459
+Info (332146): Worst-case minimum pulse width slack is -0.454
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):    -0.459              -2.629 50MHz_clk 
-    Info (332119):     0.051               0.000 VGA_controller:inst|clk_divN:inst15|counter[17] 
-    Info (332119):     0.070               0.000 VGA_controller:inst|t_ff:inst|q 
+    Info (332119):    -0.454             -14.853 50MHz_clk 
+    Info (332119):     0.050               0.000 VGA_controller:inst|clk_divN:inst15|counter[17] 
+    Info (332119):     0.059               0.000 VGA_controller:inst|t_ff:inst|q 
 Info (332102): Design is not fully constrained for setup requirements
 Info (332102): Design is not fully constrained for hold requirements
 Info: Quartus Prime Timing Analyzer was successful. 0 errors, 6 warnings
-    Info: Peak virtual memory: 5224 megabytes
-    Info: Processing ended: Sat Feb 03 07:02:01 2024
+    Info: Peak virtual memory: 5231 megabytes
+    Info: Processing ended: Sun Feb 04 11:01:13 2024
     Info: Elapsed time: 00:00:04
     Info: Total CPU time (on all processors): 00:00:04
 

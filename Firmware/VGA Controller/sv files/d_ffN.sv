@@ -1,5 +1,6 @@
 module d_ffN #(parameter N=11) (output logic [N-1:0] q, input logic [N-1:0] d, input logic clk, rst, en);
 
+// can also be thought of as an N-bit register
 
 always_ff @(posedge clk) begin
 
