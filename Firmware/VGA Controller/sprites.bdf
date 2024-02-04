@@ -198,14 +198,14 @@ https://fpgasoftware.intel.com/eula.
 		(pt 248 32)
 		(output)
 		(text "q[11..0]" (rect 0 0 37 12)(font "Arial" ))
-		(text "q[11..0]" (rect 196 27 227 39)(font "Arial" ))
+		(text "q[11..0]" (rect 196 27 233 39)(font "Arial" ))
 		(line (pt 248 32)(pt 232 32)(line_width 3))
 	)
 	(port
 		(pt 248 48)
 		(output)
 		(text "pixel_pos[43..0]" (rect 0 0 77 12)(font "Arial" ))
-		(text "pixel_pos[43..0]" (rect 162 43 227 55)(font "Arial" ))
+		(text "pixel_pos[43..0]" (rect 162 43 239 55)(font "Arial" ))
 		(line (pt 248 48)(pt 232 48)(line_width 3))
 	)
 	(parameter
@@ -279,4 +279,4 @@ https://fpgasoftware.intel.com/eula.
 (text "This module ensures that only the non-zero colour data is chosen" (rect 512 520 915 539)(font "Intel Clear" (font_size 8)(bold)))
 (text "May be cascaded n times to accomodate n+1 ROMs" (rect 512 552 823 571)(font "Intel Clear" (font_size 8)(bold)))
 (text "Sprite A" (rect 320 216 368 235)(font "Intel Clear" (font_size 8)(bold)))
-(text "between all the sprites" (rect 512 536 650 555)(font "Intel Clear" (font_size 8)(bold)))
+(text "between all the sprites - allows for multiple sprites to be displayed!" (rect 512 536 921 555)(font "Intel Clear" (font_size 8)(bold)))

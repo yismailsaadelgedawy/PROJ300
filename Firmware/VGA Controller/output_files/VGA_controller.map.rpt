@@ -1,5 +1,5 @@
 Analysis & Synthesis report for VGA_controller
-Sun Feb 04 16:12:44 2024
+Sun Feb 04 16:28:55 2024
 Quartus Prime Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
 
 
@@ -56,7 +56,7 @@ https://fpgasoftware.intel.com/eula.
 +-------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                  ;
 +---------------------------------+---------------------------------------------+
-; Analysis & Synthesis Status     ; Successful - Sun Feb 04 16:12:44 2024       ;
+; Analysis & Synthesis Status     ; Successful - Sun Feb 04 16:28:55 2024       ;
 ; Quartus Prime Version           ; 20.1.1 Build 720 11/11/2020 SJ Lite Edition ;
 ; Revision Name                   ; VGA_controller                              ;
 ; Top-level Entity Name           ; TopLevel                                    ;
@@ -176,7 +176,8 @@ https://fpgasoftware.intel.com/eula.
 ;                            ;             ;
 ; Usage by Processor         ; % Time Used ;
 ;     Processor 1            ; 100.0%      ;
-;     Processors 2-16        ;   0.0%      ;
+;     Processor 2            ;   0.0%      ;
+;     Processors 3-16        ;   0.0%      ;
 +----------------------------+-------------+
 
 
@@ -462,7 +463,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
-    Info: Processing started: Sun Feb 04 16:12:39 2024
+    Info: Processing started: Sun Feb 04 16:28:49 2024
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off VGA_controller -c VGA_controller
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20030): Parallel compilation is enabled and will use 16 of the 16 processors detected
@@ -476,10 +477,6 @@ Info (12021): Found 1 design units, including 1 entities, in source file sv file
     Info (12023): Found entity 1: pixel_offset_controller File: C:/Users/minec/Desktop/Work/GitHub Repos/PROJ300/Firmware/VGA Controller/sv files/pixel_offset_controller.sv Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file sv files/not4.sv
     Info (12023): Found entity 1: not4 File: C:/Users/minec/Desktop/Work/GitHub Repos/PROJ300/Firmware/VGA Controller/sv files/not4.sv Line: 1
-Info (12021): Found 1 design units, including 1 entities, in source file sv files/sprite_rom_square3.sv
-    Info (12023): Found entity 1: sprite_ROM_square3 File: C:/Users/minec/Desktop/Work/GitHub Repos/PROJ300/Firmware/VGA Controller/sv files/sprite_ROM_square3.sv Line: 1
-Info (12021): Found 1 design units, including 1 entities, in source file sv files/sprite_rom_square2.sv
-    Info (12023): Found entity 1: sprite_ROM_square2 File: C:/Users/minec/Desktop/Work/GitHub Repos/PROJ300/Firmware/VGA Controller/sv files/sprite_ROM_square2.sv Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file sv files/sprite_mux.sv
     Info (12023): Found entity 1: sprite_MUX File: C:/Users/minec/Desktop/Work/GitHub Repos/PROJ300/Firmware/VGA Controller/sv files/sprite_MUX.sv Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file sv files/selector.sv
@@ -555,9 +552,9 @@ Info (21057): Implemented 450 device resources after synthesis - the final resou
     Info (21059): Implemented 24 output pins
     Info (21061): Implemented 420 logic cells
 Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 23 warnings
-    Info: Peak virtual memory: 4901 megabytes
-    Info: Processing ended: Sun Feb 04 16:12:44 2024
-    Info: Elapsed time: 00:00:05
+    Info: Peak virtual memory: 4900 megabytes
+    Info: Processing ended: Sun Feb 04 16:28:55 2024
+    Info: Elapsed time: 00:00:06
     Info: Total CPU time (on all processors): 00:00:07
 
 

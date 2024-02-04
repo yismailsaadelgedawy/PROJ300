@@ -1,5 +1,5 @@
 Fitter report for VGA_controller
-Sun Feb 04 16:13:04 2024
+Sun Feb 04 16:29:15 2024
 Quartus Prime Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
 
 
@@ -63,7 +63,7 @@ https://fpgasoftware.intel.com/eula.
 +-------------------------------------------------------------------------------+
 ; Fitter Summary                                                                ;
 +---------------------------------+---------------------------------------------+
-; Fitter Status                   ; Successful - Sun Feb 04 16:13:04 2024       ;
+; Fitter Status                   ; Successful - Sun Feb 04 16:29:15 2024       ;
 ; Quartus Prime Version           ; 20.1.1 Build 720 11/11/2020 SJ Lite Edition ;
 ; Revision Name                   ; VGA_controller                              ;
 ; Top-level Entity Name           ; TopLevel                                    ;
@@ -172,7 +172,7 @@ https://fpgasoftware.intel.com/eula.
 ;     Processor 13           ;   0.7%      ;
 ;     Processor 14           ;   0.7%      ;
 ;     Processor 15           ;   0.7%      ;
-;     Processor 16           ;   0.6%      ;
+;     Processor 16           ;   0.7%      ;
 +----------------------------+-------------+
 
 
@@ -1569,10 +1569,10 @@ Info (334004): Delay annotation completed successfully
 Info (11801): Fitter post-fit operations ending: elapsed time is 00:00:02
 Info (144001): Generated suppressed messages file C:/Users/minec/Desktop/Work/GitHub Repos/PROJ300/Firmware/VGA Controller/output_files/VGA_controller.fit.smsg
 Info: Quartus Prime Fitter was successful. 0 errors, 4 warnings
-    Info: Peak virtual memory: 7563 megabytes
-    Info: Processing ended: Sun Feb 04 16:13:05 2024
-    Info: Elapsed time: 00:00:20
-    Info: Total CPU time (on all processors): 00:00:59
+    Info: Peak virtual memory: 7562 megabytes
+    Info: Processing ended: Sun Feb 04 16:29:15 2024
+    Info: Elapsed time: 00:00:19
+    Info: Total CPU time (on all processors): 00:00:57
 
 
 +----------------------------+
