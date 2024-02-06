@@ -20,7 +20,59 @@
 					"strict" : false
 				},
 				{
-					"name" : "clk50_o",
+					"name" : "disp0[0]",
+					"strict" : false
+				},
+				{
+					"name" : "disp0[1]",
+					"strict" : false
+				},
+				{
+					"name" : "disp0[2]",
+					"strict" : false
+				},
+				{
+					"name" : "disp0[3]",
+					"strict" : false
+				},
+				{
+					"name" : "disp0[4]",
+					"strict" : false
+				},
+				{
+					"name" : "disp0[5]",
+					"strict" : false
+				},
+				{
+					"name" : "disp0[6]",
+					"strict" : false
+				},
+				{
+					"name" : "disp1[0]",
+					"strict" : false
+				},
+				{
+					"name" : "disp1[1]",
+					"strict" : false
+				},
+				{
+					"name" : "disp1[2]",
+					"strict" : false
+				},
+				{
+					"name" : "disp1[3]",
+					"strict" : false
+				},
+				{
+					"name" : "disp1[4]",
+					"strict" : false
+				},
+				{
+					"name" : "disp1[5]",
+					"strict" : false
+				},
+				{
+					"name" : "disp1[6]",
 					"strict" : false
 				},
 				{
@@ -65,10 +117,6 @@
 				},
 				{
 					"name" : "PS2_CLK",
-					"strict" : false
-				},
-				{
-					"name" : "clk50",
 					"strict" : false
 				}
 			]

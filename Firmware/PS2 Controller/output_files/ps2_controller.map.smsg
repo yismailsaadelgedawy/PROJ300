@@ -1,0 +1,1 @@
+Warning (10268): Verilog HDL information at bsy_reader.sv(3): always construct contains both blocking and non-blocking assignments File: C:/Users/minec/Desktop/Work/GitHub Repos/PROJ300/Firmware/PS2 Controller/sv files/bsy_reader.sv Line: 3
