@@ -1,0 +1,89 @@
+|TopLevel
+led1 <= bsy.DB_MAX_OUTPUT_PORT_TYPE
+PS2_DAT => ps2_controller:inst1.data_in
+PS2_DAT => ps2data.DATAIN
+PS2_CLK => ps2_controller:inst1.clk
+PS2_CLK => ps2clk.DATAIN
+sw0 => ps2_controller:inst1.rst
+sw0 => led0.DATAIN
+led0 <= sw0.DB_MAX_OUTPUT_PORT_TYPE
+ps2data <= PS2_DAT.DB_MAX_OUTPUT_PORT_TYPE
+ps2clk <= PS2_CLK.DB_MAX_OUTPUT_PORT_TYPE
+clk50_o <= clk50.DB_MAX_OUTPUT_PORT_TYPE
+clk50 => clk50_o.DATAIN
+led[2] <= bsy_reader:inst2.data_out[0]
+led[3] <= bsy_reader:inst2.data_out[1]
+led[4] <= bsy_reader:inst2.data_out[2]
+led[5] <= bsy_reader:inst2.data_out[3]
+led[6] <= bsy_reader:inst2.data_out[4]
+led[7] <= bsy_reader:inst2.data_out[5]
+led[8] <= bsy_reader:inst2.data_out[6]
+led[9] <= bsy_reader:inst2.data_out[7]
+
+
+|TopLevel|ps2_controller:inst1
+data_out[0] <= data_out[0]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+data_out[1] <= data_out[1]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+data_out[2] <= data_out[2]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+data_out[3] <= data_out[3]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+data_out[4] <= data_out[4]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+data_out[5] <= data_out[5]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+data_out[6] <= data_out[6]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+data_out[7] <= data_out[7]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+bsy <= bsy~reg0.DB_MAX_OUTPUT_PORT_TYPE
+data_in => data_out.DATAB
+clk => bsy~reg0.CLK
+clk => data_out[0]~reg0.CLK
+clk => data_out[1]~reg0.CLK
+clk => data_out[2]~reg0.CLK
+clk => data_out[3]~reg0.CLK
+clk => data_out[4]~reg0.CLK
+clk => data_out[5]~reg0.CLK
+clk => data_out[6]~reg0.CLK
+clk => data_out[7]~reg0.CLK
+clk => count_reg[0].CLK
+clk => count_reg[1].CLK
+clk => count_reg[2].CLK
+clk => count_reg[3].CLK
+rst => bsy~reg0.PRESET
+rst => data_out[0]~reg0.ACLR
+rst => data_out[1]~reg0.ACLR
+rst => data_out[2]~reg0.ACLR
+rst => data_out[3]~reg0.ACLR
+rst => data_out[4]~reg0.ACLR
+rst => data_out[5]~reg0.ACLR
+rst => data_out[6]~reg0.ACLR
+rst => data_out[7]~reg0.ACLR
+rst => count_reg[0].ACLR
+rst => count_reg[1].ACLR
+rst => count_reg[2].ACLR
+rst => count_reg[3].ACLR
+
+
+|TopLevel|bsy_reader:inst2
+data_out[0] <= data_out.DB_MAX_OUTPUT_PORT_TYPE
+data_out[1] <= data_out.DB_MAX_OUTPUT_PORT_TYPE
+data_out[2] <= data_out.DB_MAX_OUTPUT_PORT_TYPE
+data_out[3] <= data_out.DB_MAX_OUTPUT_PORT_TYPE
+data_out[4] <= data_out.DB_MAX_OUTPUT_PORT_TYPE
+data_out[5] <= data_out.DB_MAX_OUTPUT_PORT_TYPE
+data_out[6] <= data_out.DB_MAX_OUTPUT_PORT_TYPE
+data_out[7] <= data_out.DB_MAX_OUTPUT_PORT_TYPE
+data_in[0] => data_out.DATAB
+data_in[1] => data_out.DATAB
+data_in[2] => data_out.DATAB
+data_in[3] => data_out.DATAB
+data_in[4] => data_out.DATAB
+data_in[5] => data_out.DATAB
+data_in[6] => data_out.DATAB
+data_in[7] => data_out.DATAB
+bsy => data_out.OUTPUTSELECT
+bsy => data_out.OUTPUTSELECT
+bsy => data_out.OUTPUTSELECT
+bsy => data_out.OUTPUTSELECT
+bsy => data_out.OUTPUTSELECT
+bsy => data_out.OUTPUTSELECT
+bsy => data_out.OUTPUTSELECT
+bsy => data_out.OUTPUTSELECT
+
+

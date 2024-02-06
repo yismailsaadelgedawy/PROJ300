@@ -1,0 +1,111 @@
+m255
+K4
+z2
+!s11f vlog 2020.1 2020.02, Feb 28 2020
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z0 dC:/Users/minec/Desktop/Work/GitHub Repos/PROJ300/Firmware/PS2 Controller/sv files
+vbsy_reader
+Z1 DXx6 sv_std 3 std 0 22 VYECXdT12H8WgbUP_5Y6:3
+!s110 1707219200
+!i10b 1
+!s100 ai`:gNVd?TYS429C688jQ2
+Z2 !s11b Dg1SIo80bB@j0V0VzS_@n1
+I;Z:en`BW]AKW_W_8BzW@l1
+Z3 VDg1SIo80bB@j0V0VzS_@n1
+S1
+R0
+w1707219194
+8C:/Users/minec/Desktop/Work/GitHub Repos/PROJ300/Firmware/PS2 Controller/sv files/bsy_reader.sv
+FC:/Users/minec/Desktop/Work/GitHub Repos/PROJ300/Firmware/PS2 Controller/sv files/bsy_reader.sv
+!i122 42
+L0 1 21
+Z4 OV;L;2020.1;71
+r1
+!s85 0
+31
+!s108 1707219200.000000
+!s107 C:/Users/minec/Desktop/Work/GitHub Repos/PROJ300/Firmware/PS2 Controller/sv files/bsy_reader.sv|
+!s90 -reportprogress|300|-work|work|C:/Users/minec/Desktop/Work/GitHub Repos/PROJ300/Firmware/PS2 Controller/sv files/bsy_reader.sv|
+!i113 1
+Z5 o-work work
+Z6 tCvgOpt 0
+vbsy_reader_tb
+R1
+!s110 1707219201
+!i10b 1
+!s100 `59E`XGkCB1I<PihIOd?61
+R2
+IJSRaKXZOm>VJ;zS@<`jn72
+R3
+S1
+R0
+w1707219180
+8C:/Users/minec/Desktop/Work/GitHub Repos/PROJ300/Firmware/PS2 Controller/sv files/bsy_reader_tb.sv
+FC:/Users/minec/Desktop/Work/GitHub Repos/PROJ300/Firmware/PS2 Controller/sv files/bsy_reader_tb.sv
+!i122 43
+L0 1 45
+R4
+r1
+!s85 0
+31
+!s108 1707219201.000000
+!s107 C:/Users/minec/Desktop/Work/GitHub Repos/PROJ300/Firmware/PS2 Controller/sv files/bsy_reader_tb.sv|
+!s90 -reportprogress|300|-work|work|C:/Users/minec/Desktop/Work/GitHub Repos/PROJ300/Firmware/PS2 Controller/sv files/bsy_reader_tb.sv|
+!i113 1
+R5
+R6
+vps2_controller
+R1
+!s110 1707217600
+!i10b 1
+!s100 3lB^9z@<g55aM[XACf1393
+R2
+IX;<V>OUkMdEL5ifbN8lN<1
+R3
+S1
+R0
+w1707217597
+8C:/Users/minec/Desktop/Work/GitHub Repos/PROJ300/Firmware/PS2 Controller/sv files/ps2_controller.sv
+FC:/Users/minec/Desktop/Work/GitHub Repos/PROJ300/Firmware/PS2 Controller/sv files/ps2_controller.sv
+!i122 37
+L0 1 67
+R4
+r1
+!s85 0
+31
+!s108 1707217600.000000
+!s107 C:/Users/minec/Desktop/Work/GitHub Repos/PROJ300/Firmware/PS2 Controller/sv files/ps2_controller.sv|
+!s90 -reportprogress|300|-work|work|C:/Users/minec/Desktop/Work/GitHub Repos/PROJ300/Firmware/PS2 Controller/sv files/ps2_controller.sv|
+!i113 1
+R5
+R6
+vps2_controller_tb
+R1
+!s110 1707218076
+!i10b 1
+!s100 aoGMmJXTKBedQ:;ZOWEch0
+R2
+IZJOe`g?i8@i2L03eeJ9Hh3
+R3
+S1
+R0
+w1707218074
+8C:/Users/minec/Desktop/Work/GitHub Repos/PROJ300/Firmware/PS2 Controller/sv files/ps2_controller_tb.sv
+FC:/Users/minec/Desktop/Work/GitHub Repos/PROJ300/Firmware/PS2 Controller/sv files/ps2_controller_tb.sv
+!i122 41
+L0 1 189
+R4
+r1
+!s85 0
+31
+!s108 1707218076.000000
+!s107 C:/Users/minec/Desktop/Work/GitHub Repos/PROJ300/Firmware/PS2 Controller/sv files/ps2_controller_tb.sv|
+!s90 -reportprogress|300|-work|work|C:/Users/minec/Desktop/Work/GitHub Repos/PROJ300/Firmware/PS2 Controller/sv files/ps2_controller_tb.sv|
+!i113 1
+R5
+R6
