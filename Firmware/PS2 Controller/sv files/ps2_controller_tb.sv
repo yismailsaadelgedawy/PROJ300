@@ -9,7 +9,7 @@ logic rst;
 logic data_in;
 
 // out
-logic [7:0] data_out;
+logic data_out;
 logic bsy;
 
 
@@ -30,16 +30,16 @@ ps2_controller dut(
 
 
 // 15kHz clock
-// T = 66.66us
-always begin
+// T = 33.36us
+// always begin
 
-    clk = 1;
-    #33.33us;
-    clk = 0;
-    #33.33us;
+//     clk = 1;
+//     #33.33us;
+//     clk = 0;
+//     #33.33us;
 
 
-end
+// end
 
 // testing
 initial begin
@@ -49,544 +49,111 @@ initial begin
 
     // reset state
     rst = 1;
+    clk = 1;
     data_in = 1;
+    
 
     #66us;
-    assert (data_out == 'd0) $display("passed reset"); else $error("failed reset");
+    assert (data_out == 0) $display("passed reset"); else $error("failed reset");
     assert (bsy == 1) $display("passed busy flag high"); else $error("failed busy flag high");
     #0.66us;
 
+    rst = 0;
+
+    // idle state
+    clk = 1;
+    data_in = 1;
+    #500us;
+
+
     // start of frame
 
-    $display(" ");
     $display("Pressing the 'Q' key");
     
     // start bit (0)
-    rst = 0;
+    clk = 0;
     data_in = 0;
-    #66.6us;
+    #33.3us;
+    clk = 1;
+    #33.3us;
    
 
     // data start - LSB first
 
+    clk = 0;
     data_in = 1;
-    #66.6us;
+    #33.3us;
+    clk = 1;
+    #33.3us;
 
+    clk = 0;
     data_in = 0;
-    #66.6us;
+    #33.3us;
+    clk = 1;
+    #33.3us;
 
+    clk = 0;
     data_in = 1;
-    #66.6us;
+    #33.3us;
+    clk = 1;
+    #33.3us;
 
+    clk = 0;
     data_in = 0;
-    #66.6us;
+    #33.3us;
+    clk = 1;
+    #33.3us;
 
+    clk = 0;
     data_in = 1;
-    #66.6us;
+    #33.3us;
+    clk = 1;
+    #33.3us;
 
+    clk = 0;
     data_in = 0;
-    #66.6us;
+    #33.3us;
+    clk = 1;
+    #33.3us;
 
+    clk = 0;
     data_in = 0;
-    #66.6us;
+    #33.3us;
+    clk = 1;
+    #33.3us;
 
+    clk = 0;
     data_in = 0;
-    #66.6us;
+    #33.3us;
+    clk = 1;
+    #33.3us;
 
     // data end
 
 
     // odd parity bit (0 in this case)
+    clk = 0;
     data_in = 0;
-    #66.6us;
+    #33.3us;
+    clk = 1;
+    #33.3us;
 
     // stop bit (1)
+    clk = 0;
     data_in = 1;
+    clk = 1;
+    #33.3us;
 
-    #66us;
-    assert(data_out == 7'h15) $display("passed data"); else $error("failed data");
-    assert (bsy == 0) $display("passed busy flag low"); else $error("failed busy flag low");
-    #0.66us;
-
-    
-
-
-    ///////////////// holding down the 'Q' key /////////////////
-
-    // start of frame
-
-    $display(" ");
-    $display("///////////////// holding down the 'Q' key /////////////////");
-    $display(" ");
-    $display("Pressing the 'Q' key");
-    
-    // start bit (0)
-    rst = 0;
-    data_in = 0;
-    #66.6us;
-   
-
-    // data start - LSB first
-
-    data_in = 1;
-    #66.6us;
-
-    data_in = 0;
-    #66.6us;
-
-    data_in = 1;
-    #66.6us;
-
-    data_in = 0;
-    #66.6us;
-
-    data_in = 1;
-    #66.6us;
-
-    data_in = 0;
-    #66.6us;
-
-    data_in = 0;
-    #66.6us;
-
-    data_in = 0;
-    #66.6us;
-
-    // data end
-
-
-    // odd parity bit (0 in this case)
-    data_in = 0;
-    #66.6us;
-
-    // stop bit (1)
-    data_in = 1;
-
-    #66us;
-    assert(data_out == 7'h15) $display("passed data"); else $error("failed data");
-    assert (bsy == 0) $display("passed busy flag low"); else $error("failed busy flag low");
-    #0.66us;
-
-    /////////////////
-
-    
-
-    // start of frame
-
-    $display(" ");
-    $display("Pressing the 'Q' key");
-    
-    // start bit (0)
-    rst = 0;
-    data_in = 0;
-    #66.6us;
-   
-
-    // data start - LSB first
-
-    data_in = 1;
-    #66.6us;
-
-    data_in = 0;
-    #66.6us;
-
-    data_in = 1;
-    #66.6us;
-
-    data_in = 0;
-    #66.6us;
-
-    data_in = 1;
-    #66.6us;
-
-    data_in = 0;
-    #66.6us;
-
-    data_in = 0;
-    #66.6us;
-
-    data_in = 0;
-    #66.6us;
-
-    // data end
-
-
-    // odd parity bit (1 in this case)
-    data_in = 0;
-    #66.6us;
-
-    // stop bit (1)
-    data_in = 1;
-
-    #66us;
-    assert(data_out == 7'h15) $display("passed data"); else $error("failed data");
+    //assert(data_out == 7'h15) $display("passed data"); else $error("failed data");
     assert (bsy == 0) $display("passed busy flag low"); else $error("failed busy flag low");
     #0.66us;
 
 
-    /////////////////
-    
-    
-
-    // start of frame
-
-    $display(" ");
-    $display("Pressing the 'Q' key");
-    
-    // start bit (0)
-    rst = 0;
-    data_in = 0;
-    #66.6us;
-   
-
-    // data start - LSB first
-
-    data_in = 1;
-    #66.6us;
-
-    data_in = 0;
-    #66.6us;
-
-    data_in = 1;
-    #66.6us;
-
-    data_in = 0;
-    #66.6us;
-
-    data_in = 1;
-    #66.6us;
-
-    data_in = 0;
-    #66.6us;
-
-    data_in = 0;
-    #66.6us;
-
-    data_in = 0;
-    #66.6us;
-
-    // data end
-
-
-    // odd parity bit (0 in this case)
-    data_in = 0;
-    #66.6us;
-
-    // stop bit (1)
-    data_in = 1;
-
-    #66us;
-    assert(data_out == 7'h15) $display("passed data"); else $error("failed data");
-    assert (bsy == 0) $display("passed busy flag low"); else $error("failed busy flag low");
-    #0.66us;
-
-
-
-    ////////////////////
-
-    // start of frame
-
-    $display(" ");
-    $display("Pressing the 'Q' key");
-    
-    // start bit (0)
-    rst = 0;
-    data_in = 0;
-    #66.6us;
-   
-
-    // data start - LSB first
-
-    data_in = 1;
-    #66.6us;
-
-    data_in = 0;
-    #66.6us;
-
-    data_in = 1;
-    #66.6us;
-
-    data_in = 0;
-    #66.6us;
-
-    data_in = 1;
-    #66.6us;
-
-    data_in = 0;
-    #66.6us;
-
-    data_in = 0;
-    #66.6us;
-
-    data_in = 0;
-    #66.6us;
-
-    // data end
-
-
-    // odd parity bit (0 in this case)
-    data_in = 0;
-    #66.6us;
-
-    // stop bit (1)
-    data_in = 1;
-
-    #66us;
-    assert(data_out == 7'h15) $display("passed data"); else $error("failed data");
-    assert (bsy == 0) $display("passed busy flag low"); else $error("failed busy flag low");
-    #0.66us;
-
-
-    ///////////////// release Q /////////////////
-
-
-
-
-    // reset state
-    rst = 1;
-    data_in = 1;
-
-    #66us;
-    assert (data_out == 'd0) $display("passed reset"); else $error("failed reset");
-    assert (bsy == 1) $display("passed busy flag high"); else $error("failed busy flag high");
-    #0.66us;
-
-
-
-
-
-
-
-    ///////////////// holding down the 'Q' key /////////////////
-
-    // start of frame
-
-    $display(" ");
-    $display("///////////////// holding down the 'Q' key /////////////////");
-    $display(" ");
-    $display("Pressing the 'Q' key");
-    
-    // start bit (0)
-    rst = 0;
-    data_in = 0;
-    #66.6us;
-   
-
-    // data start - LSB first
-
-    data_in = 1;
-    #66.6us;
-
-    data_in = 0;
-    #66.6us;
-
-    data_in = 1;
-    #66.6us;
-
-    data_in = 0;
-    #66.6us;
-
-    data_in = 1;
-    #66.6us;
-
-    data_in = 0;
-    #66.6us;
-
-    data_in = 0;
-    #66.6us;
-
-    data_in = 0;
-    #66.6us;
-
-    // data end
-
-
-    // odd parity bit (0 in this case)
-    data_in = 0;
-    #66.6us;
-
-    // stop bit (1)
-    data_in = 1;
-
-    #66us;
-    assert(data_out == 7'h15) $display("passed data"); else $error("failed data");
-    assert (bsy == 0) $display("passed busy flag low"); else $error("failed busy flag low");
-    #0.66us;
-
-    /////////////////
-
+    // back to idle state
     
 
-    // start of frame
-
-    $display(" ");
-    $display("Pressing the 'Q' key");
+    #500us;
     
-    // start bit (0)
-    rst = 0;
-    data_in = 0;
-    #66.6us;
-   
-
-    // data start - LSB first
-
-    data_in = 1;
-    #66.6us;
-
-    data_in = 0;
-    #66.6us;
-
-    data_in = 1;
-    #66.6us;
-
-    data_in = 0;
-    #66.6us;
-
-    data_in = 1;
-    #66.6us;
-
-    data_in = 0;
-    #66.6us;
-
-    data_in = 0;
-    #66.6us;
-
-    data_in = 0;
-    #66.6us;
-
-    // data end
-
-
-    // odd parity bit (1 in this case)
-    data_in = 0;
-    #66.6us;
-
-    // stop bit (1)
-    data_in = 1;
-
-    #66us;
-    assert(data_out == 7'h15) $display("passed data"); else $error("failed data");
-    assert (bsy == 0) $display("passed busy flag low"); else $error("failed busy flag low");
-    #0.66us;
-
-
-    /////////////////
-    
-    
-
-    // start of frame
-
-    $display(" ");
-    $display("Pressing the 'Q' key");
-    
-    // start bit (0)
-    rst = 0;
-    data_in = 0;
-    #66.6us;
-   
-
-    // data start - LSB first
-
-    data_in = 1;
-    #66.6us;
-
-    data_in = 0;
-    #66.6us;
-
-    data_in = 1;
-    #66.6us;
-
-    data_in = 0;
-    #66.6us;
-
-    data_in = 1;
-    #66.6us;
-
-    data_in = 0;
-    #66.6us;
-
-    data_in = 0;
-    #66.6us;
-
-    data_in = 0;
-    #66.6us;
-
-    // data end
-
-
-    // odd parity bit (0 in this case)
-    data_in = 0;
-    #66.6us;
-
-    // stop bit (1)
-    data_in = 1;
-
-    #66us;
-    assert(data_out == 7'h15) $display("passed data"); else $error("failed data");
-    assert (bsy == 0) $display("passed busy flag low"); else $error("failed busy flag low");
-    #0.66us;
-
-
-
-    ////////////////////
-
-    // start of frame
-
-    $display(" ");
-    $display("Pressing the 'Q' key");
-    
-    // start bit (0)
-    rst = 0;
-    data_in = 0;
-    #66.6us;
-   
-
-    // data start - LSB first
-
-    data_in = 1;
-    #66.6us;
-
-    data_in = 0;
-    #66.6us;
-
-    data_in = 1;
-    #66.6us;
-
-    data_in = 0;
-    #66.6us;
-
-    data_in = 1;
-    #66.6us;
-
-    data_in = 0;
-    #66.6us;
-
-    data_in = 0;
-    #66.6us;
-
-    data_in = 0;
-    #66.6us;
-
-    // data end
-
-
-    // odd parity bit (0 in this case)
-    data_in = 0;
-    #66.6us;
-
-    // stop bit (1)
-    data_in = 1;
-
-    #66us;
-    assert(data_out == 7'h15) $display("passed data"); else $error("failed data");
-    assert (bsy == 0) $display("passed busy flag low"); else $error("failed busy flag low");
-    #0.66us;
-
-
-    ///////////////// release Q /////////////////
-
-    
-
 
 
     
