@@ -1,5 +1,5 @@
 Flow report for ps2_controller
-Tue Feb 06 21:51:20 2024
+Tue Feb 06 22:04:33 2024
 Quartus Prime Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
 
 
@@ -41,7 +41,7 @@ https://fpgasoftware.intel.com/eula.
 +-------------------------------------------------------------------------------+
 ; Flow Summary                                                                  ;
 +---------------------------------+---------------------------------------------+
-; Flow Status                     ; Successful - Tue Feb 06 21:51:15 2024       ;
+; Flow Status                     ; Successful - Tue Feb 06 22:04:29 2024       ;
 ; Quartus Prime Version           ; 20.1.1 Build 720 11/11/2020 SJ Lite Edition ;
 ; Revision Name                   ; ps2_controller                              ;
 ; Top-level Entity Name           ; TopLevel                                    ;
@@ -49,7 +49,7 @@ https://fpgasoftware.intel.com/eula.
 ; Device                          ; 5CEBA4F23C7                                 ;
 ; Timing Models                   ; Final                                       ;
 ; Logic utilization (in ALMs)     ; 12 / 18,480 ( < 1 % )                       ;
-; Total registers                 ; 28                                          ;
+; Total registers                 ; 27                                          ;
 ; Total pins                      ; 29 / 224 ( 13 % )                           ;
 ; Total virtual pins              ; 0                                           ;
 ; Total block memory bits         ; 0 / 3,153,920 ( 0 % )                       ;
@@ -68,7 +68,7 @@ https://fpgasoftware.intel.com/eula.
 +-------------------+---------------------+
 ; Option            ; Setting             ;
 +-------------------+---------------------+
-; Start date & time ; 02/06/2024 21:50:49 ;
+; Start date & time ; 02/06/2024 22:04:06 ;
 ; Main task         ; Compilation         ;
 ; Revision Name     ; ps2_controller      ;
 +-------------------+---------------------+
@@ -79,7 +79,7 @@ https://fpgasoftware.intel.com/eula.
 +-------------------------------------+----------------------------------------+----------------+-------------+------------+
 ; Assignment Name                     ; Value                                  ; Default Value  ; Entity Name ; Section Id ;
 +-------------------------------------+----------------------------------------+----------------+-------------+------------+
-; COMPILER_SIGNATURE_ID               ; 127913727136950.170725624911980        ; --             ; --          ; --         ;
+; COMPILER_SIGNATURE_ID               ; 127913727136950.170725704618184        ; --             ; --          ; --         ;
 ; MAX_CORE_JUNCTION_TEMP              ; 85                                     ; --             ; --          ; --         ;
 ; MIN_CORE_JUNCTION_TEMP              ; 0                                      ; --             ; --          ; --         ;
 ; PARTITION_COLOR                     ; -- (Not supported for targeted family) ; --             ; TopLevel    ; Top        ;
@@ -97,11 +97,11 @@ https://fpgasoftware.intel.com/eula.
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
 ; Module Name          ; Elapsed Time ; Average Processors Used ; Peak Virtual Memory ; Total CPU Time (on all processors) ;
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
-; Analysis & Synthesis ; 00:00:06     ; 1.0                     ; 4898 MB             ; 00:00:06                           ;
-; Fitter               ; 00:00:16     ; 1.0                     ; 7527 MB             ; 00:00:48                           ;
+; Analysis & Synthesis ; 00:00:05     ; 1.0                     ; 4865 MB             ; 00:00:06                           ;
+; Fitter               ; 00:00:13     ; 1.0                     ; 7536 MB             ; 00:00:43                           ;
 ; Assembler            ; 00:00:03     ; 1.0                     ; 4821 MB             ; 00:00:02                           ;
-; Timing Analyzer      ; 00:00:04     ; 1.1                     ; 5220 MB             ; 00:00:03                           ;
-; Total                ; 00:00:29     ; --                      ; --                  ; 00:00:59                           ;
+; Timing Analyzer      ; 00:00:04     ; 1.1                     ; 5211 MB             ; 00:00:03                           ;
+; Total                ; 00:00:25     ; --                      ; --                  ; 00:00:54                           ;
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
 
 

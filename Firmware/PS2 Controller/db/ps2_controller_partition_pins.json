@@ -4,10 +4,6 @@
 			"name" : "Top",
 			"pins" : [
 				{
-					"name" : "led1",
-					"strict" : false
-				},
-				{
 					"name" : "led0",
 					"strict" : false
 				},
