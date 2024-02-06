@@ -3,8 +3,8 @@ Timing Analyzer Summary
 ------------------------------------------------------------
 
 Type  : Slow 1100mV 85C Model Setup 'PS2_CLK'
-Slack : -1.466
-TNS   : -28.623
+Slack : -1.534
+TNS   : -28.049
 
 Type  : Slow 1100mV 85C Model Hold 'PS2_CLK'
 Slack : 0.287
@@ -12,11 +12,11 @@ TNS   : 0.000
 
 Type  : Slow 1100mV 85C Model Minimum Pulse Width 'PS2_CLK'
 Slack : -0.538
-TNS   : -22.526
+TNS   : -21.746
 
 Type  : Slow 1100mV 0C Model Setup 'PS2_CLK'
-Slack : -1.394
-TNS   : -25.668
+Slack : -1.478
+TNS   : -25.847
 
 Type  : Slow 1100mV 0C Model Hold 'PS2_CLK'
 Slack : 0.375
@@ -24,11 +24,11 @@ TNS   : 0.000
 
 Type  : Slow 1100mV 0C Model Minimum Pulse Width 'PS2_CLK'
 Slack : -0.538
-TNS   : -22.513
+TNS   : -21.736
 
 Type  : Fast 1100mV 85C Model Setup 'PS2_CLK'
-Slack : -0.033
-TNS   : -0.294
+Slack : -0.107
+TNS   : -0.957
 
 Type  : Fast 1100mV 85C Model Hold 'PS2_CLK'
 Slack : 0.158
@@ -36,11 +36,11 @@ TNS   : 0.000
 
 Type  : Fast 1100mV 85C Model Minimum Pulse Width 'PS2_CLK'
 Slack : -0.160
-TNS   : -4.504
+TNS   : -4.355
 
 Type  : Fast 1100mV 0C Model Setup 'PS2_CLK'
-Slack : 0.043
-TNS   : 0.000
+Slack : -0.022
+TNS   : -0.182
 
 Type  : Fast 1100mV 0C Model Hold 'PS2_CLK'
 Slack : 0.165
@@ -48,6 +48,6 @@ TNS   : 0.000
 
 Type  : Fast 1100mV 0C Model Minimum Pulse Width 'PS2_CLK'
 Slack : -0.164
-TNS   : -4.662
+TNS   : -4.511
 
 ------------------------------------------------------------

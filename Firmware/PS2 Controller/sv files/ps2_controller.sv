@@ -46,7 +46,7 @@ always_ff @(negedge clk or posedge rst) begin
 
         if (count_reg == 'd11) begin
 
-            count_reg <= 'd0;
+            count_reg <= 'd1;
             data_out <= 'd0; // not necessary, but nice to reset back to zero at EoT
             
 

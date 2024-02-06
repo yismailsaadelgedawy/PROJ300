@@ -1,5 +1,5 @@
 Timing Analyzer report for ps2_controller
-Tue Feb 06 16:32:47 2024
+Tue Feb 06 21:51:20 2024
 Quartus Prime Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
 
 
@@ -106,8 +106,8 @@ https://fpgasoftware.intel.com/eula.
 ; Usage by Processor         ; % Time Used ;
 ;     Processor 1            ; 100.0%      ;
 ;     Processor 2            ;   1.6%      ;
-;     Processor 3            ;   1.6%      ;
-;     Processors 4-16        ;   0.6%      ;
+;     Processor 3            ;   1.5%      ;
+;     Processors 4-16        ;   0.5%      ;
 +----------------------------+-------------+
 
 
@@ -125,7 +125,7 @@ https://fpgasoftware.intel.com/eula.
 +------------+-----------------+------------+------+
 ; Fmax       ; Restricted Fmax ; Clock Name ; Note ;
 +------------+-----------------+------------+------+
-; 405.52 MHz ; 405.52 MHz      ; PS2_CLK    ;      ;
+; 394.63 MHz ; 394.63 MHz      ; PS2_CLK    ;      ;
 +------------+-----------------+------------+------+
 This panel reports FMAX for every clock in the design, regardless of the user-specified clock periods.  FMAX is only computed for paths where the source and destination registers or ports are driven by the same clock.  Paths of different clocks, including generated clocks, are ignored.  For paths between a clock and its inversion, FMAX is computed as if the rising and falling edges are scaled along with FMAX, such that the duty cycle (in terms of a percentage) is maintained. Altera recommends that you always use clock constraints and other slack reports for sign-off analysis.
 
@@ -141,7 +141,7 @@ HTML report is unavailable in plain text report export.
 +---------+--------+------------------+
 ; Clock   ; Slack  ; End Point TNS    ;
 +---------+--------+------------------+
-; PS2_CLK ; -1.466 ; -28.623          ;
+; PS2_CLK ; -1.534 ; -28.049          ;
 +---------+--------+------------------+
 
 
@@ -171,7 +171,7 @@ No paths to report.
 +---------+--------+--------------------------------+
 ; Clock   ; Slack  ; End Point TNS                  ;
 +---------+--------+--------------------------------+
-; PS2_CLK ; -0.538 ; -22.526                        ;
+; PS2_CLK ; -0.538 ; -21.746                        ;
 +---------+--------+--------------------------------+
 
 
@@ -186,7 +186,7 @@ No synchronizer chains to report.
 +------------+-----------------+------------+------+
 ; Fmax       ; Restricted Fmax ; Clock Name ; Note ;
 +------------+-----------------+------------+------+
-; 417.71 MHz ; 417.71 MHz      ; PS2_CLK    ;      ;
+; 403.55 MHz ; 403.55 MHz      ; PS2_CLK    ;      ;
 +------------+-----------------+------------+------+
 This panel reports FMAX for every clock in the design, regardless of the user-specified clock periods.  FMAX is only computed for paths where the source and destination registers or ports are driven by the same clock.  Paths of different clocks, including generated clocks, are ignored.  For paths between a clock and its inversion, FMAX is computed as if the rising and falling edges are scaled along with FMAX, such that the duty cycle (in terms of a percentage) is maintained. Altera recommends that you always use clock constraints and other slack reports for sign-off analysis.
 
@@ -196,7 +196,7 @@ This panel reports FMAX for every clock in the design, regardless of the user-sp
 +---------+--------+-----------------+
 ; Clock   ; Slack  ; End Point TNS   ;
 +---------+--------+-----------------+
-; PS2_CLK ; -1.394 ; -25.668         ;
+; PS2_CLK ; -1.478 ; -25.847         ;
 +---------+--------+-----------------+
 
 
@@ -226,7 +226,7 @@ No paths to report.
 +---------+--------+-------------------------------+
 ; Clock   ; Slack  ; End Point TNS                 ;
 +---------+--------+-------------------------------+
-; PS2_CLK ; -0.538 ; -22.513                       ;
+; PS2_CLK ; -0.538 ; -21.736                       ;
 +---------+--------+-------------------------------+
 
 
@@ -241,7 +241,7 @@ No synchronizer chains to report.
 +---------+--------+------------------+
 ; Clock   ; Slack  ; End Point TNS    ;
 +---------+--------+------------------+
-; PS2_CLK ; -0.033 ; -0.294           ;
+; PS2_CLK ; -0.107 ; -0.957           ;
 +---------+--------+------------------+
 
 
@@ -271,7 +271,7 @@ No paths to report.
 +---------+--------+--------------------------------+
 ; Clock   ; Slack  ; End Point TNS                  ;
 +---------+--------+--------------------------------+
-; PS2_CLK ; -0.160 ; -4.504                         ;
+; PS2_CLK ; -0.160 ; -4.355                         ;
 +---------+--------+--------------------------------+
 
 
@@ -283,11 +283,11 @@ No synchronizer chains to report.
 
 +------------------------------------+
 ; Fast 1100mV 0C Model Setup Summary ;
-+---------+-------+------------------+
-; Clock   ; Slack ; End Point TNS    ;
-+---------+-------+------------------+
-; PS2_CLK ; 0.043 ; 0.000            ;
-+---------+-------+------------------+
++---------+--------+-----------------+
+; Clock   ; Slack  ; End Point TNS   ;
++---------+--------+-----------------+
+; PS2_CLK ; -0.022 ; -0.182          ;
++---------+--------+-----------------+
 
 
 +-----------------------------------+
@@ -316,7 +316,7 @@ No paths to report.
 +---------+--------+-------------------------------+
 ; Clock   ; Slack  ; End Point TNS                 ;
 +---------+--------+-------------------------------+
-; PS2_CLK ; -0.164 ; -4.662                        ;
+; PS2_CLK ; -0.164 ; -4.511                        ;
 +---------+--------+-------------------------------+
 
 
@@ -331,10 +331,10 @@ No synchronizer chains to report.
 +------------------+---------+-------+----------+---------+---------------------+
 ; Clock            ; Setup   ; Hold  ; Recovery ; Removal ; Minimum Pulse Width ;
 +------------------+---------+-------+----------+---------+---------------------+
-; Worst-case Slack ; -1.466  ; 0.158 ; N/A      ; N/A     ; -0.538              ;
-;  PS2_CLK         ; -1.466  ; 0.158 ; N/A      ; N/A     ; -0.538              ;
-; Design-wide TNS  ; -28.623 ; 0.0   ; 0.0      ; 0.0     ; -22.526             ;
-;  PS2_CLK         ; -28.623 ; 0.000 ; N/A      ; N/A     ; -22.526             ;
+; Worst-case Slack ; -1.534  ; 0.158 ; N/A      ; N/A     ; -0.538              ;
+;  PS2_CLK         ; -1.534  ; 0.158 ; N/A      ; N/A     ; -0.538              ;
+; Design-wide TNS  ; -28.049 ; 0.0   ; 0.0      ; 0.0     ; -21.746             ;
+;  PS2_CLK         ; -28.049 ; 0.000 ; N/A      ; N/A     ; -21.746             ;
 +------------------+---------+-------+----------+---------+---------------------+
 
 
@@ -524,7 +524,7 @@ No synchronizer chains to report.
 +------------+----------+----------+----------+----------+----------+
 ; From Clock ; To Clock ; RR Paths ; FR Paths ; RF Paths ; FF Paths ;
 +------------+----------+----------+----------+----------+----------+
-; PS2_CLK    ; PS2_CLK  ; 0        ; 0        ; 0        ; 128      ;
+; PS2_CLK    ; PS2_CLK  ; 0        ; 0        ; 0        ; 132      ;
 +------------+----------+----------+----------+----------+----------+
 Entries labeled "false path" only account for clock-to-clock false paths and not path-based false paths. As a result, actual path counts may be lower than reported.
 
@@ -534,7 +534,7 @@ Entries labeled "false path" only account for clock-to-clock false paths and not
 +------------+----------+----------+----------+----------+----------+
 ; From Clock ; To Clock ; RR Paths ; FR Paths ; RF Paths ; FF Paths ;
 +------------+----------+----------+----------+----------+----------+
-; PS2_CLK    ; PS2_CLK  ; 0        ; 0        ; 0        ; 128      ;
+; PS2_CLK    ; PS2_CLK  ; 0        ; 0        ; 0        ; 132      ;
 +------------+----------+----------+----------+----------+----------+
 Entries labeled "false path" only account for clock-to-clock false paths and not path-based false paths. As a result, actual path counts may be lower than reported.
 
@@ -559,7 +559,7 @@ No non-DPA dedicated SERDES Receiver circuitry present in device or used in desi
 ; Illegal Clocks                  ; 0     ; 0    ;
 ; Unconstrained Clocks            ; 0     ; 0    ;
 ; Unconstrained Input Ports       ; 3     ; 3    ;
-; Unconstrained Input Port Paths  ; 33    ; 33   ;
+; Unconstrained Input Port Paths  ; 32    ; 32   ;
 ; Unconstrained Output Ports      ; 26    ; 26   ;
 ; Unconstrained Output Port Paths ; 68    ; 68   ;
 +---------------------------------+-------+------+
@@ -670,7 +670,7 @@ No non-DPA dedicated SERDES Receiver circuitry present in device or used in desi
 Info: *******************************************************************
 Info: Running Quartus Prime Timing Analyzer
     Info: Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
-    Info: Processing started: Tue Feb 06 16:32:44 2024
+    Info: Processing started: Tue Feb 06 21:51:16 2024
 Info: Command: quartus_sta ps2_controller -c ps2_controller
 Info: qsta_default_script.tcl version: #1
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
@@ -687,10 +687,10 @@ Info: Found TIMING_ANALYZER_REPORT_SCRIPT_INCLUDE_DEFAULT_ANALYSIS = ON
 Info: Analyzing Slow 1100mV 85C Model
 Critical Warning (332148): Timing requirements not met
     Info (11105): For recommendations on closing timing, run Report Timing Closure Recommendations in the Timing Analyzer.
-Info (332146): Worst-case setup slack is -1.466
+Info (332146): Worst-case setup slack is -1.534
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):    -1.466             -28.623 PS2_CLK 
+    Info (332119):    -1.534             -28.049 PS2_CLK 
 Info (332146): Worst-case hold slack is 0.287
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
@@ -700,17 +700,17 @@ Info (332140): No Removal paths to report
 Info (332146): Worst-case minimum pulse width slack is -0.538
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):    -0.538             -22.526 PS2_CLK 
+    Info (332119):    -0.538             -21.746 PS2_CLK 
 Info: Analyzing Slow 1100mV 0C Model
 Info (334003): Started post-fitting delay annotation
 Info (334004): Delay annotation completed successfully
 Info (332123): Deriving Clock Uncertainty. Please refer to report_sdc in the Timing Analyzer to see clock uncertainties.
 Critical Warning (332148): Timing requirements not met
     Info (11105): For recommendations on closing timing, run Report Timing Closure Recommendations in the Timing Analyzer.
-Info (332146): Worst-case setup slack is -1.394
+Info (332146): Worst-case setup slack is -1.478
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):    -1.394             -25.668 PS2_CLK 
+    Info (332119):    -1.478             -25.847 PS2_CLK 
 Info (332146): Worst-case hold slack is 0.375
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
@@ -720,17 +720,17 @@ Info (332140): No Removal paths to report
 Info (332146): Worst-case minimum pulse width slack is -0.538
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):    -0.538             -22.513 PS2_CLK 
+    Info (332119):    -0.538             -21.736 PS2_CLK 
 Info: Analyzing Fast 1100mV 85C Model
 Info (334003): Started post-fitting delay annotation
 Info (334004): Delay annotation completed successfully
 Info (332123): Deriving Clock Uncertainty. Please refer to report_sdc in the Timing Analyzer to see clock uncertainties.
 Critical Warning (332148): Timing requirements not met
     Info (11105): For recommendations on closing timing, run Report Timing Closure Recommendations in the Timing Analyzer.
-Info (332146): Worst-case setup slack is -0.033
+Info (332146): Worst-case setup slack is -0.107
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):    -0.033              -0.294 PS2_CLK 
+    Info (332119):    -0.107              -0.957 PS2_CLK 
 Info (332146): Worst-case hold slack is 0.158
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
@@ -740,31 +740,31 @@ Info (332140): No Removal paths to report
 Info (332146): Worst-case minimum pulse width slack is -0.160
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):    -0.160              -4.504 PS2_CLK 
+    Info (332119):    -0.160              -4.355 PS2_CLK 
 Info: Analyzing Fast 1100mV 0C Model
 Info (332123): Deriving Clock Uncertainty. Please refer to report_sdc in the Timing Analyzer to see clock uncertainties.
-Info (332146): Worst-case setup slack is 0.043
+Critical Warning (332148): Timing requirements not met
+    Info (11105): For recommendations on closing timing, run Report Timing Closure Recommendations in the Timing Analyzer.
+Info (332146): Worst-case setup slack is -0.022
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):     0.043               0.000 PS2_CLK 
+    Info (332119):    -0.022              -0.182 PS2_CLK 
 Info (332146): Worst-case hold slack is 0.165
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
     Info (332119):     0.165               0.000 PS2_CLK 
 Info (332140): No Recovery paths to report
 Info (332140): No Removal paths to report
-Critical Warning (332148): Timing requirements not met
-    Info (11105): For recommendations on closing timing, run Report Timing Closure Recommendations in the Timing Analyzer.
 Info (332146): Worst-case minimum pulse width slack is -0.164
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):    -0.164              -4.662 PS2_CLK 
+    Info (332119):    -0.164              -4.511 PS2_CLK 
 Info (332102): Design is not fully constrained for setup requirements
 Info (332102): Design is not fully constrained for hold requirements
 Info: Quartus Prime Timing Analyzer was successful. 0 errors, 6 warnings
-    Info: Peak virtual memory: 5219 megabytes
-    Info: Processing ended: Tue Feb 06 16:32:47 2024
-    Info: Elapsed time: 00:00:03
+    Info: Peak virtual memory: 5220 megabytes
+    Info: Processing ended: Tue Feb 06 21:51:20 2024
+    Info: Elapsed time: 00:00:04
     Info: Total CPU time (on all processors): 00:00:03
 
 

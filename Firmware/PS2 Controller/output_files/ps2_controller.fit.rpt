@@ -1,5 +1,5 @@
 Fitter report for ps2_controller
-Tue Feb 06 16:32:40 2024
+Tue Feb 06 21:51:11 2024
 Quartus Prime Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
 
 
@@ -64,7 +64,7 @@ https://fpgasoftware.intel.com/eula.
 +-------------------------------------------------------------------------------+
 ; Fitter Summary                                                                ;
 +---------------------------------+---------------------------------------------+
-; Fitter Status                   ; Successful - Tue Feb 06 16:32:40 2024       ;
+; Fitter Status                   ; Successful - Tue Feb 06 21:51:11 2024       ;
 ; Quartus Prime Version           ; 20.1.1 Build 720 11/11/2020 SJ Lite Edition ;
 ; Revision Name                   ; ps2_controller                              ;
 ; Top-level Entity Name           ; TopLevel                                    ;
@@ -72,7 +72,7 @@ https://fpgasoftware.intel.com/eula.
 ; Device                          ; 5CEBA4F23C7                                 ;
 ; Timing Models                   ; Final                                       ;
 ; Logic utilization (in ALMs)     ; 12 / 18,480 ( < 1 % )                       ;
-; Total registers                 ; 29                                          ;
+; Total registers                 ; 28                                          ;
 ; Total pins                      ; 29 / 224 ( 13 % )                           ;
 ; Total virtual pins              ; 0                                           ;
 ; Total block memory bits         ; 0 / 3,153,920 ( 0 % )                       ;
@@ -159,8 +159,8 @@ https://fpgasoftware.intel.com/eula.
 ;                            ;             ;
 ; Usage by Processor         ; % Time Used ;
 ;     Processor 1            ; 100.0%      ;
-;     Processor 2            ;   0.2%      ;
-;     Processor 3            ;   0.2%      ;
+;     Processor 2            ;   0.3%      ;
+;     Processor 3            ;   0.3%      ;
 ;     Processors 4-16        ;   0.1%      ;
 +----------------------------+-------------+
 
@@ -172,13 +172,12 @@ https://fpgasoftware.intel.com/eula.
 +-----------------------------------+------------+---------------------------------------------------+----------------------------+-----------+----------------+---------------------------------------------+------------------+-----------------------+
 ; PS2_CLK~inputCLKENA0              ; Created    ; Placement                                         ; Fitter Periphery Placement ;           ;                ;                                             ;                  ;                       ;
 ; bsy_reader:inst2|data_out[5]      ; Duplicated ; Router Logic Cell Insertion and Logic Duplication ; Routability optimization   ;           ;                ; bsy_reader:inst2|data_out[5]~DUPLICATE      ;                  ;                       ;
-; bsy_reader:inst2|data_out[6]      ; Duplicated ; Router Logic Cell Insertion and Logic Duplication ; Routability optimization   ;           ;                ; bsy_reader:inst2|data_out[6]~DUPLICATE      ;                  ;                       ;
 ; bsy_reader:inst2|data_out[7]      ; Duplicated ; Router Logic Cell Insertion and Logic Duplication ; Routability optimization   ;           ;                ; bsy_reader:inst2|data_out[7]~DUPLICATE      ;                  ;                       ;
 ; ps2_controller:inst1|count_reg[0] ; Duplicated ; Router Logic Cell Insertion and Logic Duplication ; Routability optimization   ;           ;                ; ps2_controller:inst1|count_reg[0]~DUPLICATE ;                  ;                       ;
 ; ps2_controller:inst1|count_reg[1] ; Duplicated ; Router Logic Cell Insertion and Logic Duplication ; Routability optimization   ;           ;                ; ps2_controller:inst1|count_reg[1]~DUPLICATE ;                  ;                       ;
 ; ps2_controller:inst1|count_reg[2] ; Duplicated ; Router Logic Cell Insertion and Logic Duplication ; Routability optimization   ;           ;                ; ps2_controller:inst1|count_reg[2]~DUPLICATE ;                  ;                       ;
 ; ps2_controller:inst1|count_reg[3] ; Duplicated ; Router Logic Cell Insertion and Logic Duplication ; Routability optimization   ;           ;                ; ps2_controller:inst1|count_reg[3]~DUPLICATE ;                  ;                       ;
-; ps2_controller:inst1|data_out[5]  ; Duplicated ; Router Logic Cell Insertion and Logic Duplication ; Routability optimization   ;           ;                ; ps2_controller:inst1|data_out[5]~DUPLICATE  ;                  ;                       ;
+; ps2_controller:inst1|data_out[4]  ; Duplicated ; Router Logic Cell Insertion and Logic Duplication ; Routability optimization   ;           ;                ; ps2_controller:inst1|data_out[4]~DUPLICATE  ;                  ;                       ;
 +-----------------------------------+------------+---------------------------------------------------+----------------------------+-----------+----------------+---------------------------------------------+------------------+-----------------------+
 
 
@@ -262,17 +261,17 @@ The pin-out file can be found in C:/Users/minec/Desktop/Work/GitHub Repos/PROJ30
 ;     -- 7 input functions                                    ; 0                  ;       ;
 ;     -- 6 input functions                                    ; 0                  ;       ;
 ;     -- 5 input functions                                    ; 0                  ;       ;
-;     -- 4 input functions                                    ; 19                 ;       ;
-;     -- <=3 input functions                                  ; 3                  ;       ;
-; Combinational ALUT usage for route-throughs                 ; 4                  ;       ;
+;     -- 4 input functions                                    ; 20                 ;       ;
+;     -- <=3 input functions                                  ; 2                  ;       ;
+; Combinational ALUT usage for route-throughs                 ; 6                  ;       ;
 ;                                                             ;                    ;       ;
-; Dedicated logic registers                                   ; 29                 ;       ;
+; Dedicated logic registers                                   ; 28                 ;       ;
 ;     -- By type:                                             ;                    ;       ;
 ;         -- Primary logic registers                          ; 21 / 36,960        ; < 1 % ;
-;         -- Secondary logic registers                        ; 8 / 36,960         ; < 1 % ;
+;         -- Secondary logic registers                        ; 7 / 36,960         ; < 1 % ;
 ;     -- By function:                                         ;                    ;       ;
 ;         -- Design implementation registers                  ; 21                 ;       ;
-;         -- Routing optimization registers                   ; 8                  ;       ;
+;         -- Routing optimization registers                   ; 7                  ;       ;
 ;                                                             ;                    ;       ;
 ; Virtual pins                                                ; 0                  ;       ;
 ; I/O pins                                                    ; 29 / 224           ; 13 %  ;
@@ -300,10 +299,10 @@ The pin-out file can be found in C:/Users/minec/Desktop/Work/GitHub Repos/PROJ30
 ; Impedance control blocks                                    ; 0 / 3              ; 0 %   ;
 ; Average interconnect usage (total/H/V)                      ; 0.1% / 0.1% / 0.1% ;       ;
 ; Peak interconnect usage (total/H/V)                         ; 0.6% / 0.5% / 0.9% ;       ;
-; Maximum fan-out                                             ; 30                 ;       ;
-; Highest non-global fan-out                                  ; 30                 ;       ;
-; Total fan-out                                               ; 255                ;       ;
-; Average fan-out                                             ; 2.24               ;       ;
+; Maximum fan-out                                             ; 29                 ;       ;
+; Highest non-global fan-out                                  ; 29                 ;       ;
+; Total fan-out                                               ; 256                ;       ;
+; Average fan-out                                             ; 2.23               ;       ;
 +-------------------------------------------------------------+--------------------+-------+
 
 
@@ -336,9 +335,9 @@ The pin-out file can be found in C:/Users/minec/Desktop/Work/GitHub Repos/PROJ30
 ;     -- 7 input functions                                    ; 0                    ; 0                              ;
 ;     -- 6 input functions                                    ; 0                    ; 0                              ;
 ;     -- 5 input functions                                    ; 0                    ; 0                              ;
-;     -- 4 input functions                                    ; 19                   ; 0                              ;
-;     -- <=3 input functions                                  ; 3                    ; 0                              ;
-; Combinational ALUT usage for route-throughs                 ; 4                    ; 0                              ;
+;     -- 4 input functions                                    ; 20                   ; 0                              ;
+;     -- <=3 input functions                                  ; 2                    ; 0                              ;
+; Combinational ALUT usage for route-throughs                 ; 6                    ; 0                              ;
 ; Memory ALUT usage                                           ; 0                    ; 0                              ;
 ;     -- 64-address deep                                      ; 0                    ; 0                              ;
 ;     -- 32-address deep                                      ; 0                    ; 0                              ;
@@ -346,10 +345,10 @@ The pin-out file can be found in C:/Users/minec/Desktop/Work/GitHub Repos/PROJ30
 ; Dedicated logic registers                                   ; 0                    ; 0                              ;
 ;     -- By type:                                             ;                      ;                                ;
 ;         -- Primary logic registers                          ; 21 / 36960 ( < 1 % ) ; 0 / 36960 ( 0 % )              ;
-;         -- Secondary logic registers                        ; 8 / 36960 ( < 1 % )  ; 0 / 36960 ( 0 % )              ;
+;         -- Secondary logic registers                        ; 7 / 36960 ( < 1 % )  ; 0 / 36960 ( 0 % )              ;
 ;     -- By function:                                         ;                      ;                                ;
 ;         -- Design implementation registers                  ; 21                   ; 0                              ;
-;         -- Routing optimization registers                   ; 8                    ; 0                              ;
+;         -- Routing optimization registers                   ; 7                    ; 0                              ;
 ;                                                             ;                      ;                                ;
 ;                                                             ;                      ;                                ;
 ; Virtual pins                                                ; 0                    ; 0                              ;
@@ -366,8 +365,8 @@ The pin-out file can be found in C:/Users/minec/Desktop/Work/GitHub Repos/PROJ30
 ;     -- Registered Output Connections                        ; 0                    ; 0                              ;
 ;                                                             ;                      ;                                ;
 ; Internal Connections                                        ;                      ;                                ;
-;     -- Total Connections                                    ; 255                  ; 0                              ;
-;     -- Registered Connections                               ; 116                  ; 0                              ;
+;     -- Total Connections                                    ; 256                  ; 0                              ;
+;     -- Registered Connections                               ; 117                  ; 0                              ;
 ;                                                             ;                      ;                                ;
 ; External Connections                                        ;                      ;                                ;
 ;     -- Top                                                  ; 0                    ; 0                              ;
@@ -399,9 +398,9 @@ The pin-out file can be found in C:/Users/minec/Desktop/Work/GitHub Repos/PROJ30
 +---------+-------+----------+--------------+--------------+--------------+-----------------------+--------------------+--------+----------------+-----------------+----------+--------------+--------------+-------------+---------------------------+----------------------+-----------+
 ; Name    ; Pin # ; I/O Bank ; X coordinate ; Y coordinate ; Z coordinate ; Combinational Fan-Out ; Registered Fan-Out ; Global ; Input Register ; PCI I/O Enabled ; Bus Hold ; Weak Pull Up ; I/O Standard ; Termination ; Termination Control Block ; Location assigned by ; Slew Rate ;
 +---------+-------+----------+--------------+--------------+--------------+-----------------------+--------------------+--------+----------------+-----------------+----------+--------------+--------------+-------------+---------------------------+----------------------+-----------+
-; PS2_CLK ; D3    ; 2A       ; 0            ; 20           ; 3            ; 30                    ; 0                  ; yes    ; no             ; no              ; no       ; Off          ; 2.5 V        ; Off         ; --                        ; User                 ; no        ;
+; PS2_CLK ; D3    ; 2A       ; 0            ; 20           ; 3            ; 29                    ; 0                  ; yes    ; no             ; no              ; no       ; Off          ; 2.5 V        ; Off         ; --                        ; User                 ; no        ;
 ; PS2_DAT ; G2    ; 2A       ; 0            ; 21           ; 3            ; 2                     ; 0                  ; no     ; no             ; no              ; no       ; Off          ; 2.5 V        ; Off         ; --                        ; User                 ; no        ;
-; sw0     ; U13   ; 4A       ; 33           ; 0            ; 40           ; 30                    ; 0                  ; no     ; no             ; no              ; no       ; Off          ; 2.5 V        ; Off         ; --                        ; User                 ; no        ;
+; sw0     ; U13   ; 4A       ; 33           ; 0            ; 40           ; 29                    ; 0                  ; no     ; no             ; no              ; no       ; Off          ; 2.5 V        ; Off         ; --                        ; User                 ; no        ;
 +---------+-------+----------+--------------+--------------+--------------+-----------------------+--------------------+--------+----------------+-----------------+----------+--------------+--------------+-------------+---------------------------+----------------------+-----------+
 
 
@@ -990,8 +989,8 @@ Note: Pin directions (input, output or bidir) are based on device operating in u
 +--------------------------------+----------------------+----------------------------------+---------------------------------------------------+----------------------------------+----------------------+---------------------+---------------------------+---------------+-------------------+-------+------------+------+--------------+-------------------------------------+----------------------+--------------+
 ; Compilation Hierarchy Node     ; ALMs needed [=A-B+C] ; [A] ALMs used in final placement ; [B] Estimate of ALMs recoverable by dense packing ; [C] Estimate of ALMs unavailable ; ALMs used for memory ; Combinational ALUTs ; Dedicated Logic Registers ; I/O Registers ; Block Memory Bits ; M10Ks ; DSP Blocks ; Pins ; Virtual Pins ; Full Hierarchy Name                 ; Entity Name          ; Library Name ;
 +--------------------------------+----------------------+----------------------------------+---------------------------------------------------+----------------------------------+----------------------+---------------------+---------------------------+---------------+-------------------+-------+------------+------+--------------+-------------------------------------+----------------------+--------------+
-; |TopLevel                      ; 12.0 (0.5)           ; 16.0 (0.5)                       ; 4.0 (0.0)                                         ; 0.0 (0.0)                        ; 0.0 (0.0)            ; 22 (1)              ; 29 (0)                    ; 0 (0)         ; 0                 ; 0     ; 0          ; 29   ; 0            ; |TopLevel                           ; TopLevel             ; work         ;
-;    |bsy_reader:inst2|          ; 2.2 (2.2)            ; 3.0 (3.0)                        ; 0.8 (0.8)                                         ; 0.0 (0.0)                        ; 0.0 (0.0)            ; 0 (0)               ; 11 (11)                   ; 0 (0)         ; 0                 ; 0     ; 0          ; 0    ; 0            ; |TopLevel|bsy_reader:inst2          ; bsy_reader           ; work         ;
+; |TopLevel                      ; 12.0 (0.5)           ; 16.0 (0.5)                       ; 4.0 (0.0)                                         ; 0.0 (0.0)                        ; 0.0 (0.0)            ; 22 (1)              ; 28 (0)                    ; 0 (0)         ; 0                 ; 0     ; 0          ; 29   ; 0            ; |TopLevel                           ; TopLevel             ; work         ;
+;    |bsy_reader:inst2|          ; 2.2 (2.2)            ; 3.0 (3.0)                        ; 0.8 (0.8)                                         ; 0.0 (0.0)                        ; 0.0 (0.0)            ; 0 (0)               ; 10 (10)                   ; 0 (0)         ; 0                 ; 0     ; 0          ; 0    ; 0            ; |TopLevel|bsy_reader:inst2          ; bsy_reader           ; work         ;
 ;    |ps2_controller:inst1|      ; 4.5 (4.5)            ; 7.3 (7.3)                        ; 2.8 (2.8)                                         ; 0.0 (0.0)                        ; 0.0 (0.0)            ; 7 (7)               ; 18 (18)                   ; 0 (0)         ; 0                 ; 0     ; 0          ; 0    ; 0            ; |TopLevel|ps2_controller:inst1      ; ps2_controller       ; work         ;
 ;    |seven_seg_controller:inst| ; 4.8 (4.8)            ; 5.3 (5.3)                        ; 0.4 (0.4)                                         ; 0.0 (0.0)                        ; 0.0 (0.0)            ; 14 (14)             ; 0 (0)                     ; 0 (0)         ; 0                 ; 0     ; 0          ; 0    ; 0            ; |TopLevel|seven_seg_controller:inst ; seven_seg_controller ; work         ;
 +--------------------------------+----------------------+----------------------------------+---------------------------------------------------+----------------------------------+----------------------+---------------------+---------------------------+---------------+-------------------+-------+------------+------+--------------+-------------------------------------+----------------------+--------------+
@@ -1063,9 +1062,8 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ;      - ps2_controller:inst1|count_reg[2]           ; 0                 ; 0       ;
 ;      - ps2_controller:inst1|count_reg[1]           ; 0                 ; 0       ;
 ;      - led0~output                                 ; 0                 ; 0       ;
-;      - ps2_controller:inst1|data_out[5]~DUPLICATE  ; 0                 ; 0       ;
+;      - ps2_controller:inst1|data_out[4]~DUPLICATE  ; 0                 ; 0       ;
 ;      - bsy_reader:inst2|data_out[5]~DUPLICATE      ; 0                 ; 0       ;
-;      - bsy_reader:inst2|data_out[6]~DUPLICATE      ; 0                 ; 0       ;
 ;      - bsy_reader:inst2|data_out[7]~DUPLICATE      ; 0                 ; 0       ;
 ;      - ps2_controller:inst1|count_reg[0]~DUPLICATE ; 0                 ; 0       ;
 ;      - ps2_controller:inst1|count_reg[3]~DUPLICATE ; 0                 ; 0       ;
@@ -1079,17 +1077,17 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +----------------------------------------------------+-------------------+---------+
 
 
-+-----------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Control Signals                                                                                                                                                 ;
-+------------------------------------+--------------------+---------+--------------+--------+----------------------+------------------+---------------------------+
-; Name                               ; Location           ; Fan-Out ; Usage        ; Global ; Global Resource Used ; Global Line Name ; Enable Signal Source Name ;
-+------------------------------------+--------------------+---------+--------------+--------+----------------------+------------------+---------------------------+
-; PS2_CLK                            ; PIN_D3             ; 30      ; Clock        ; yes    ; Global Clock         ; GCLK3            ; --                        ;
-; ps2_controller:inst1|Equal1~0      ; MLABCELL_X37_Y4_N6 ; 9       ; Sync. clear  ; no     ; --                   ; --               ; --                        ;
-; ps2_controller:inst1|bsy           ; FF_X37_Y4_N26      ; 12      ; Clock enable ; no     ; --                   ; --               ; --                        ;
-; ps2_controller:inst1|data_out[0]~0 ; MLABCELL_X37_Y4_N3 ; 9       ; Clock enable ; no     ; --                   ; --               ; --                        ;
-; sw0                                ; PIN_U13            ; 30      ; Async. clear ; no     ; --                   ; --               ; --                        ;
-+------------------------------------+--------------------+---------+--------------+--------+----------------------+------------------+---------------------------+
++------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Control Signals                                                                                                                                                  ;
++------------------------------------+---------------------+---------+--------------+--------+----------------------+------------------+---------------------------+
+; Name                               ; Location            ; Fan-Out ; Usage        ; Global ; Global Resource Used ; Global Line Name ; Enable Signal Source Name ;
++------------------------------------+---------------------+---------+--------------+--------+----------------------+------------------+---------------------------+
+; PS2_CLK                            ; PIN_D3              ; 29      ; Clock        ; yes    ; Global Clock         ; GCLK3            ; --                        ;
+; ps2_controller:inst1|Equal1~0      ; MLABCELL_X37_Y4_N57 ; 9       ; Sync. clear  ; no     ; --                   ; --               ; --                        ;
+; ps2_controller:inst1|bsy           ; FF_X37_Y4_N29       ; 11      ; Clock enable ; no     ; --                   ; --               ; --                        ;
+; ps2_controller:inst1|data_out[0]~0 ; MLABCELL_X37_Y4_N3  ; 9       ; Clock enable ; no     ; --                   ; --               ; --                        ;
+; sw0                                ; PIN_U13             ; 29      ; Async. clear ; no     ; --                   ; --               ; --                        ;
++------------------------------------+---------------------+---------+--------------+--------+----------------------+------------------+---------------------------+
 
 
 +----------------------------------------------------------------------------------------------------+
@@ -1097,7 +1095,7 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +---------+----------+---------+----------------------+------------------+---------------------------+
 ; Name    ; Location ; Fan-Out ; Global Resource Used ; Global Line Name ; Enable Signal Source Name ;
 +---------+----------+---------+----------------------+------------------+---------------------------+
-; PS2_CLK ; PIN_D3   ; 30      ; Global Clock         ; GCLK3            ; --                        ;
+; PS2_CLK ; PIN_D3   ; 29      ; Global Clock         ; GCLK3            ; --                        ;
 +---------+----------+---------+----------------------+------------------+---------------------------+
 
 
@@ -1106,21 +1104,21 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +------------------------------+------------------------+
 ; Routing Resource Type        ; Usage                  ;
 +------------------------------+------------------------+
-; Block interconnects          ; 58 / 140,056 ( < 1 % ) ;
+; Block interconnects          ; 62 / 140,056 ( < 1 % ) ;
 ; C12 interconnects            ; 3 / 6,048 ( < 1 % )    ;
-; C2 interconnects             ; 31 / 54,648 ( < 1 % )  ;
-; C4 interconnects             ; 40 / 25,920 ( < 1 % )  ;
+; C2 interconnects             ; 15 / 54,648 ( < 1 % )  ;
+; C4 interconnects             ; 50 / 25,920 ( < 1 % )  ;
 ; DQS bus muxes                ; 0 / 17 ( 0 % )         ;
 ; DQS-18 I/O buses             ; 0 / 17 ( 0 % )         ;
 ; DQS-9 I/O buses              ; 0 / 17 ( 0 % )         ;
-; Direct links                 ; 10 / 140,056 ( < 1 % ) ;
+; Direct links                 ; 13 / 140,056 ( < 1 % ) ;
 ; Global clocks                ; 1 / 16 ( 6 % )         ;
-; Local interconnects          ; 9 / 36,960 ( < 1 % )   ;
+; Local interconnects          ; 10 / 36,960 ( < 1 % )  ;
 ; Quadrant clocks              ; 0 / 88 ( 0 % )         ;
-; R14 interconnects            ; 28 / 5,984 ( < 1 % )   ;
-; R14/C12 interconnect drivers ; 29 / 9,504 ( < 1 % )   ;
+; R14 interconnects            ; 25 / 5,984 ( < 1 % )   ;
+; R14/C12 interconnect drivers ; 26 / 9,504 ( < 1 % )   ;
 ; R3 interconnects             ; 33 / 60,192 ( < 1 % )  ;
-; R6 interconnects             ; 45 / 127,072 ( < 1 % ) ;
+; R6 interconnects             ; 53 / 127,072 ( < 1 % ) ;
 ; Spine clocks                 ; 1 / 120 ( < 1 % )      ;
 ; Wire stub REs                ; 0 / 7,344 ( 0 % )      ;
 +------------------------------+------------------------+
@@ -1265,7 +1263,7 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +-----------------+----------------------+-------------------+
 ; Source Clock(s) ; Destination Clock(s) ; Delay Added in ns ;
 +-----------------+----------------------+-------------------+
-; PS2_CLK         ; PS2_CLK              ; 12.8              ;
+; PS2_CLK         ; PS2_CLK              ; 14.6              ;
 +-----------------+----------------------+-------------------+
 Note: For more information on problematic transfers, consider running the Fitter again with the Optimize hold timing option (Settings Menu) turned off.
 This will disable optimization of problematic paths and expose them for further analysis using the Timing Analyzer.
@@ -1276,19 +1274,19 @@ This will disable optimization of problematic paths and expose them for further 
 +-----------------------------------+-----------------------------------+-------------------+
 ; Source Register                   ; Destination Register              ; Delay Added in ns ;
 +-----------------------------------+-----------------------------------+-------------------+
-; ps2_controller:inst1|count_reg[1] ; ps2_controller:inst1|count_reg[2] ; 0.648             ;
-; ps2_controller:inst1|count_reg[2] ; ps2_controller:inst1|bsy          ; 0.631             ;
-; ps2_controller:inst1|count_reg[0] ; ps2_controller:inst1|bsy          ; 0.610             ;
-; ps2_controller:inst1|count_reg[3] ; ps2_controller:inst1|count_reg[2] ; 0.579             ;
-; ps2_controller:inst1|data_out[6]  ; ps2_controller:inst1|data_out[5]  ; 0.508             ;
-; ps2_controller:inst1|data_out[4]  ; ps2_controller:inst1|data_out[3]  ; 0.508             ;
-; ps2_controller:inst1|data_out[7]  ; ps2_controller:inst1|data_out[6]  ; 0.494             ;
-; ps2_controller:inst1|data_out[5]  ; ps2_controller:inst1|data_out[4]  ; 0.494             ;
+; ps2_controller:inst1|count_reg[1] ; ps2_controller:inst1|count_reg[3] ; 0.647             ;
+; ps2_controller:inst1|count_reg[2] ; ps2_controller:inst1|count_reg[0] ; 0.632             ;
+; ps2_controller:inst1|count_reg[0] ; ps2_controller:inst1|count_reg[3] ; 0.609             ;
+; ps2_controller:inst1|count_reg[3] ; ps2_controller:inst1|count_reg[2] ; 0.580             ;
+; ps2_controller:inst1|data_out[6]  ; ps2_controller:inst1|data_out[5]  ; 0.507             ;
+; ps2_controller:inst1|data_out[4]  ; ps2_controller:inst1|data_out[3]  ; 0.507             ;
+; ps2_controller:inst1|data_out[7]  ; ps2_controller:inst1|data_out[6]  ; 0.493             ;
+; ps2_controller:inst1|data_out[5]  ; ps2_controller:inst1|data_out[4]  ; 0.493             ;
 ; ps2_controller:inst1|data_out[3]  ; ps2_controller:inst1|data_out[2]  ; 0.324             ;
 ; ps2_controller:inst1|data_out[1]  ; ps2_controller:inst1|data_out[0]  ; 0.324             ;
-; ps2_controller:inst1|data_out[2]  ; bsy_reader:inst2|data_out[2]      ; 0.314             ;
-; ps2_controller:inst1|data_out[0]  ; bsy_reader:inst2|data_out[0]      ; 0.314             ;
-; ps2_controller:inst1|bsy          ; bsy_reader:inst2|data_out[0]      ; 0.141             ;
+; ps2_controller:inst1|data_out[2]  ; bsy_reader:inst2|data_out[2]      ; 0.315             ;
+; ps2_controller:inst1|data_out[0]  ; bsy_reader:inst2|data_out[0]      ; 0.315             ;
+; ps2_controller:inst1|bsy          ; bsy_reader:inst2|data_out[0]      ; 0.142             ;
 +-----------------------------------+-----------------------------------+-------------------+
 Note: This table only shows the top 13 path(s) that have the largest delay added for hold.
 
@@ -1336,19 +1334,19 @@ Info (170195): Router estimated average interconnect usage is 0% of the availabl
 Info (170199): The Fitter performed an Auto Fit compilation.  Optimizations were skipped to reduce compilation time.
     Info (170201): Optimizations that may affect the design's routability were skipped
 Info (170194): Fitter routing operations ending: elapsed time is 00:00:00
-Info (11888): Total time spent on timing analysis during the Fitter is 0.23 seconds.
+Info (11888): Total time spent on timing analysis during the Fitter is 0.21 seconds.
 Info (334003): Started post-fitting delay annotation
 Info (334004): Delay annotation completed successfully
 Info (334003): Started post-fitting delay annotation
 Info (334004): Delay annotation completed successfully
-Info (11801): Fitter post-fit operations ending: elapsed time is 00:00:01
+Info (11801): Fitter post-fit operations ending: elapsed time is 00:00:02
 Warning (171167): Found invalid Fitter assignments. See the Ignored Assignments panel in the Fitter Compilation Report for more information.
 Info (144001): Generated suppressed messages file C:/Users/minec/Desktop/Work/GitHub Repos/PROJ300/Firmware/PS2 Controller/output_files/ps2_controller.fit.smsg
 Info: Quartus Prime Fitter was successful. 0 errors, 10 warnings
-    Info: Peak virtual memory: 7560 megabytes
-    Info: Processing ended: Tue Feb 06 16:32:40 2024
-    Info: Elapsed time: 00:00:14
-    Info: Total CPU time (on all processors): 00:00:43
+    Info: Peak virtual memory: 7527 megabytes
+    Info: Processing ended: Tue Feb 06 21:51:11 2024
+    Info: Elapsed time: 00:00:16
+    Info: Total CPU time (on all processors): 00:00:49
 
 
 +----------------------------+
