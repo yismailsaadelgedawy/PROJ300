@@ -1,6 +1,6 @@
-module bsy_reader (output logic [7:0] data_out, input logic [7:0] data_in, input logic clk, bsy, rst);
+module bsy_reader (output logic [7:0] data_out, input logic [7:0] data_in, input logic bsy, rst);
 
-always_ff @(negedge clk or posedge rst) begin
+always_ff @(posedge rst or negedge bsy) begin
  
     if (rst) begin
 

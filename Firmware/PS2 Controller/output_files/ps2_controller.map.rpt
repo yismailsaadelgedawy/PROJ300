@@ -1,5 +1,5 @@
 Analysis & Synthesis report for ps2_controller
-Tue Feb 06 22:04:11 2024
+Wed Feb 07 10:59:11 2024
 Quartus Prime Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
 
 
@@ -46,7 +46,7 @@ https://fpgasoftware.intel.com/eula.
 +-------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                  ;
 +---------------------------------+---------------------------------------------+
-; Analysis & Synthesis Status     ; Successful - Tue Feb 06 22:04:11 2024       ;
+; Analysis & Synthesis Status     ; Successful - Wed Feb 07 10:59:11 2024       ;
 ; Quartus Prime Version           ; 20.1.1 Build 720 11/11/2020 SJ Lite Edition ;
 ; Revision Name                   ; ps2_controller                              ;
 ; Top-level Entity Name           ; TopLevel                                    ;
@@ -205,8 +205,8 @@ https://fpgasoftware.intel.com/eula.
 ;                                             ;           ;
 ; Maximum fan-out node                        ; sw0~input ;
 ; Maximum fan-out                             ; 22        ;
-; Total fan-out                               ; 223       ;
-; Average fan-out                             ; 2.23      ;
+; Total fan-out                               ; 215       ;
+; Average fan-out                             ; 2.15      ;
 +---------------------------------------------+-----------+
 
 
@@ -234,7 +234,7 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; Number of registers using Synchronous Load   ; 0     ;
 ; Number of registers using Asynchronous Clear ; 21    ;
 ; Number of registers using Asynchronous Load  ; 0     ;
-; Number of registers using Clock Enable       ; 16    ;
+; Number of registers using Clock Enable       ; 8     ;
 ; Number of registers using Preset             ; 0     ;
 +----------------------------------------------+-------+
 
@@ -264,8 +264,7 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; Type                  ; Count                       ;
 +-----------------------+-----------------------------+
 ; arriav_ff             ; 21                          ;
-;     CLR               ; 5                           ;
-;     ENA CLR           ; 8                           ;
+;     CLR               ; 13                          ;
 ;     ENA CLR SCLR      ; 8                           ;
 ; arriav_lcell_comb     ; 24                          ;
 ;     normal            ; 24                          ;
@@ -295,7 +294,7 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
-    Info: Processing started: Tue Feb 06 22:04:06 2024
+    Info: Processing started: Wed Feb 07 10:59:05 2024
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off ps2_controller -c ps2_controller
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20030): Parallel compilation is enabled and will use 16 of the 16 processors detected
@@ -326,9 +325,9 @@ Info (21057): Implemented 66 device resources after synthesis - the final resour
     Info (21059): Implemented 26 output pins
     Info (21061): Implemented 37 logic cells
 Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 4 warnings
-    Info: Peak virtual memory: 4865 megabytes
-    Info: Processing ended: Tue Feb 06 22:04:11 2024
-    Info: Elapsed time: 00:00:05
+    Info: Peak virtual memory: 4866 megabytes
+    Info: Processing ended: Wed Feb 07 10:59:11 2024
+    Info: Elapsed time: 00:00:06
     Info: Total CPU time (on all processors): 00:00:06
 
 

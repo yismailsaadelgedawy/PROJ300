@@ -3,7 +3,6 @@ module bsy_reader_tb;
 // internal wires
 
 // in
-logic clk;
 logic rst;
 logic bsy;
 logic [7:0] data_in;
@@ -16,7 +15,6 @@ logic [7:0] data_out;
 bsy_reader dut(
 
     // in
-    .clk(clk),
     .rst(rst),
     .bsy(bsy),
     .data_in(data_in),
@@ -28,15 +26,15 @@ bsy_reader dut(
 
 // 15kHz clock
 // T = 66.66us
-always begin
+// always begin
 
-    clk = 1;
-    #33.33us;
-    clk = 0;
-    #33.33us;
+//     clk = 1;
+//     #33.33us;
+//     clk = 0;
+//     #33.33us;
 
 
-end
+// end
 
 
 // testing
