@@ -1,5 +1,5 @@
 Analysis & Synthesis report for ps2_controller
-Thu Feb 08 15:13:26 2024
+Thu Feb 08 23:44:34 2024
 Quartus Prime Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
 
 
@@ -19,7 +19,6 @@ Quartus Prime Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
  11. Post-Synthesis Netlist Statistics for Top Partition
  12. Elapsed Time Per Partition
  13. Analysis & Synthesis Messages
- 14. Analysis & Synthesis Suppressed Messages
 
 
 
@@ -46,14 +45,14 @@ https://fpgasoftware.intel.com/eula.
 +-------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                  ;
 +---------------------------------+---------------------------------------------+
-; Analysis & Synthesis Status     ; Successful - Thu Feb 08 15:13:26 2024       ;
+; Analysis & Synthesis Status     ; Successful - Thu Feb 08 23:44:34 2024       ;
 ; Quartus Prime Version           ; 20.1.1 Build 720 11/11/2020 SJ Lite Edition ;
 ; Revision Name                   ; ps2_controller                              ;
 ; Top-level Entity Name           ; TopLevel                                    ;
 ; Family                          ; Cyclone V                                   ;
 ; Logic utilization (in ALMs)     ; N/A                                         ;
-; Total registers                 ; 21                                          ;
-; Total pins                      ; 29                                          ;
+; Total registers                 ; 47                                          ;
+; Total pins                      ; 30                                          ;
 ; Total virtual pins              ; 0                                           ;
 ; Total block memory bits         ; 0                                           ;
 ; Total DSP Blocks                ; 0                                           ;
@@ -175,6 +174,7 @@ https://fpgasoftware.intel.com/eula.
 +----------------------------------+-----------------+------------------------------------+-----------------------------------------------------------------------------------------------------------+---------+
 ; File Name with User-Entered Path ; Used in Netlist ; File Type                          ; File Name with Absolute Path                                                                              ; Library ;
 +----------------------------------+-----------------+------------------------------------+-----------------------------------------------------------------------------------------------------------+---------+
+; sv files/break_code_detector.sv  ; yes             ; User SystemVerilog HDL File        ; C:/Users/minec/Desktop/Work/GitHub Repos/PROJ300/Firmware/PS2 Controller/sv files/break_code_detector.sv  ;         ;
 ; sv files/seven_seg_controller.sv ; yes             ; User SystemVerilog HDL File        ; C:/Users/minec/Desktop/Work/GitHub Repos/PROJ300/Firmware/PS2 Controller/sv files/seven_seg_controller.sv ;         ;
 ; sv files/bsy_reader.sv           ; yes             ; User SystemVerilog HDL File        ; C:/Users/minec/Desktop/Work/GitHub Repos/PROJ300/Firmware/PS2 Controller/sv files/bsy_reader.sv           ;         ;
 ; TopLevel.bdf                     ; yes             ; User Block Diagram/Schematic File  ; C:/Users/minec/Desktop/Work/GitHub Repos/PROJ300/Firmware/PS2 Controller/TopLevel.bdf                     ;         ;
@@ -183,44 +183,45 @@ https://fpgasoftware.intel.com/eula.
 +----------------------------------+-----------------+------------------------------------+-----------------------------------------------------------------------------------------------------------+---------+
 
 
-+---------------------------------------------------------+
-; Analysis & Synthesis Resource Usage Summary             ;
-+---------------------------------------------+-----------+
-; Resource                                    ; Usage     ;
-+---------------------------------------------+-----------+
-; Estimate of Logic utilization (ALMs needed) ; 14        ;
-;                                             ;           ;
-; Combinational ALUT usage for logic          ; 21        ;
-;     -- 7 input functions                    ; 0         ;
-;     -- 6 input functions                    ; 0         ;
-;     -- 5 input functions                    ; 0         ;
-;     -- 4 input functions                    ; 20        ;
-;     -- <=3 input functions                  ; 1         ;
-;                                             ;           ;
-; Dedicated logic registers                   ; 21        ;
-;                                             ;           ;
-; I/O pins                                    ; 29        ;
-;                                             ;           ;
-; Total DSP Blocks                            ; 0         ;
-;                                             ;           ;
-; Maximum fan-out node                        ; sw0~input ;
-; Maximum fan-out                             ; 22        ;
-; Total fan-out                               ; 215       ;
-; Average fan-out                             ; 2.15      ;
-+---------------------------------------------+-----------+
++-----------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Resource Usage Summary                                                         ;
++---------------------------------------------+-------------------------------------------------------+
+; Resource                                    ; Usage                                                 ;
++---------------------------------------------+-------------------------------------------------------+
+; Estimate of Logic utilization (ALMs needed) ; 32                                                    ;
+;                                             ;                                                       ;
+; Combinational ALUT usage for logic          ; 54                                                    ;
+;     -- 7 input functions                    ; 0                                                     ;
+;     -- 6 input functions                    ; 5                                                     ;
+;     -- 5 input functions                    ; 2                                                     ;
+;     -- 4 input functions                    ; 20                                                    ;
+;     -- <=3 input functions                  ; 27                                                    ;
+;                                             ;                                                       ;
+; Dedicated logic registers                   ; 47                                                    ;
+;                                             ;                                                       ;
+; I/O pins                                    ; 30                                                    ;
+;                                             ;                                                       ;
+; Total DSP Blocks                            ; 0                                                     ;
+;                                             ;                                                       ;
+; Maximum fan-out node                        ; PS2controller:inst8|break_code_detector:inst|Equal1~4 ;
+; Maximum fan-out                             ; 26                                                    ;
+; Total fan-out                               ; 385                                                   ;
+; Average fan-out                             ; 2.39                                                  ;
++---------------------------------------------+-------------------------------------------------------+
 
 
-+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                                                                ;
-+--------------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+----------------------------------------------------+----------------------+--------------+
-; Compilation Hierarchy Node     ; Combinational ALUTs ; Dedicated Logic Registers ; Block Memory Bits ; DSP Blocks ; Pins ; Virtual Pins ; Full Hierarchy Name                                ; Entity Name          ; Library Name ;
-+--------------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+----------------------------------------------------+----------------------+--------------+
-; |TopLevel                      ; 21 (0)              ; 21 (0)                    ; 0                 ; 0          ; 29   ; 0            ; |TopLevel                                          ; TopLevel             ; work         ;
-;    |PS2controller:inst1|       ; 7 (0)               ; 21 (0)                    ; 0                 ; 0          ; 0    ; 0            ; |TopLevel|PS2controller:inst1                      ; PS2controller        ; work         ;
-;       |bsy_reader:inst2|       ; 0 (0)               ; 8 (8)                     ; 0                 ; 0          ; 0    ; 0            ; |TopLevel|PS2controller:inst1|bsy_reader:inst2     ; bsy_reader           ; work         ;
-;       |ps2_controller:inst1|   ; 7 (7)               ; 13 (13)                   ; 0                 ; 0          ; 0    ; 0            ; |TopLevel|PS2controller:inst1|ps2_controller:inst1 ; ps2_controller       ; work         ;
-;    |seven_seg_controller:inst| ; 14 (14)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |TopLevel|seven_seg_controller:inst                ; seven_seg_controller ; work         ;
-+--------------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+----------------------------------------------------+----------------------+--------------+
++------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                                                                      ;
++----------------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+--------------------------------------------------------+----------------------+--------------+
+; Compilation Hierarchy Node       ; Combinational ALUTs ; Dedicated Logic Registers ; Block Memory Bits ; DSP Blocks ; Pins ; Virtual Pins ; Full Hierarchy Name                                    ; Entity Name          ; Library Name ;
++----------------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+--------------------------------------------------------+----------------------+--------------+
+; |TopLevel                        ; 54 (0)              ; 47 (0)                    ; 0                 ; 0          ; 30   ; 0            ; |TopLevel                                              ; TopLevel             ; work         ;
+;    |PS2controller:inst8|         ; 40 (1)              ; 47 (0)                    ; 0                 ; 0          ; 0    ; 0            ; |TopLevel|PS2controller:inst8                          ; PS2controller        ; work         ;
+;       |break_code_detector:inst| ; 32 (32)             ; 26 (26)                   ; 0                 ; 0          ; 0    ; 0            ; |TopLevel|PS2controller:inst8|break_code_detector:inst ; break_code_detector  ; work         ;
+;       |bsy_reader:inst2|         ; 0 (0)               ; 8 (8)                     ; 0                 ; 0          ; 0    ; 0            ; |TopLevel|PS2controller:inst8|bsy_reader:inst2         ; bsy_reader           ; work         ;
+;       |ps2_controller:inst1|     ; 7 (7)               ; 13 (13)                   ; 0                 ; 0          ; 0    ; 0            ; |TopLevel|PS2controller:inst8|ps2_controller:inst1     ; ps2_controller       ; work         ;
+;    |seven_seg_controller:inst|   ; 14 (14)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |TopLevel|seven_seg_controller:inst                    ; seven_seg_controller ; work         ;
++----------------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+--------------------------------------------------------+----------------------+--------------+
 Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
 
 
@@ -229,8 +230,8 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +----------------------------------------------+-------+
 ; Statistic                                    ; Value ;
 +----------------------------------------------+-------+
-; Total registers                              ; 21    ;
-; Number of registers using Synchronous Clear  ; 8     ;
+; Total registers                              ; 47    ;
+; Number of registers using Synchronous Clear  ; 33    ;
 ; Number of registers using Synchronous Load   ; 0     ;
 ; Number of registers using Asynchronous Clear ; 21    ;
 ; Number of registers using Asynchronous Load  ; 0     ;
@@ -244,7 +245,7 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +----------------------------------------------+---------+
 ; Inverted Register                            ; Fan out ;
 +----------------------------------------------+---------+
-; PS2controller:inst1|ps2_controller:inst1|bsy ; 8       ;
+; PS2controller:inst8|ps2_controller:inst1|bsy ; 8       ;
 ; Total number of inverted registers = 1       ;         ;
 +----------------------------------------------+---------+
 
@@ -254,7 +255,7 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +--------------------+-----------+---------------+----------------------+------------------------+------------+----------------------------------------------------------------+
 ; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output                                     ;
 +--------------------+-----------+---------------+----------------------+------------------------+------------+----------------------------------------------------------------+
-; 3:1                ; 8 bits    ; 16 LEs        ; 0 LEs                ; 16 LEs                 ; Yes        ; |TopLevel|PS2controller:inst1|ps2_controller:inst1|data_out[0] ;
+; 3:1                ; 8 bits    ; 16 LEs        ; 0 LEs                ; 16 LEs                 ; Yes        ; |TopLevel|PS2controller:inst8|ps2_controller:inst1|data_out[3] ;
 +--------------------+-----------+---------------+----------------------+------------------------+------------+----------------------------------------------------------------+
 
 
@@ -263,19 +264,26 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +-----------------------+-----------------------------+
 ; Type                  ; Count                       ;
 +-----------------------+-----------------------------+
-; arriav_ff             ; 21                          ;
+; arriav_ff             ; 47                          ;
 ;     CLR               ; 13                          ;
 ;     ENA CLR SCLR      ; 8                           ;
-; arriav_lcell_comb     ; 24                          ;
-;     normal            ; 24                          ;
+;     SCLR              ; 25                          ;
+;     plain             ; 1                           ;
+; arriav_lcell_comb     ; 57                          ;
+;     arith             ; 25                          ;
+;         1 data inputs ; 24                          ;
+;         2 data inputs ; 1                           ;
+;     normal            ; 32                          ;
 ;         0 data inputs ; 1                           ;
 ;         1 data inputs ; 2                           ;
-;         2 data inputs ; 1                           ;
+;         2 data inputs ; 2                           ;
 ;         4 data inputs ; 20                          ;
-; boundary_port         ; 29                          ;
+;         5 data inputs ; 2                           ;
+;         6 data inputs ; 5                           ;
+; boundary_port         ; 30                          ;
 ;                       ;                             ;
-; Max LUT depth         ; 2.00                        ;
-; Average LUT depth     ; 0.98                        ;
+; Max LUT depth         ; 3.40                        ;
+; Average LUT depth     ; 2.15                        ;
 +-----------------------+-----------------------------+
 
 
@@ -294,10 +302,14 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
-    Info: Processing started: Thu Feb 08 15:13:20 2024
+    Info: Processing started: Thu Feb 08 23:44:28 2024
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off ps2_controller -c ps2_controller
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20030): Parallel compilation is enabled and will use 16 of the 16 processors detected
+Info (12021): Found 1 design units, including 1 entities, in source file sv files/fine_clk_divn.sv
+    Info (12023): Found entity 1: fine_clk_divN File: C:/Users/minec/Desktop/Work/GitHub Repos/PROJ300/Firmware/PS2 Controller/sv files/fine_clk_divN.sv Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file sv files/break_code_detector.sv
+    Info (12023): Found entity 1: break_code_detector File: C:/Users/minec/Desktop/Work/GitHub Repos/PROJ300/Firmware/PS2 Controller/sv files/break_code_detector.sv Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file sv files/seven_seg_controller.sv
     Info (12023): Found entity 1: seven_seg_controller File: C:/Users/minec/Desktop/Work/GitHub Repos/PROJ300/Firmware/PS2 Controller/sv files/seven_seg_controller.sv Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file sv files/bsy_reader.sv
@@ -308,32 +320,29 @@ Info (12021): Found 1 design units, including 1 entities, in source file sv file
     Info (12023): Found entity 1: ps2_controller File: C:/Users/minec/Desktop/Work/GitHub Repos/PROJ300/Firmware/PS2 Controller/sv files/ps2_controller.sv Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file ps2controller.bdf
     Info (12023): Found entity 1: PS2controller
+Warning (10222): Verilog HDL Parameter Declaration warning at fine_clk_divN.sv(18): Parameter Declaration in module "fine_clk_divN" behaves as a Local Parameter Declaration because the module has a Module Parameter Port List File: C:/Users/minec/Desktop/Work/GitHub Repos/PROJ300/Firmware/PS2 Controller/sv files/fine_clk_divN.sv Line: 18
 Info (12127): Elaborating entity "TopLevel" for the top level hierarchy
+Warning (275043): Pin "led1" is missing source
 Info (12128): Elaborating entity "seven_seg_controller" for hierarchy "seven_seg_controller:inst"
-Info (12128): Elaborating entity "PS2controller" for hierarchy "PS2controller:inst1"
-Info (12128): Elaborating entity "bsy_reader" for hierarchy "PS2controller:inst1|bsy_reader:inst2"
-Info (12128): Elaborating entity "ps2_controller" for hierarchy "PS2controller:inst1|ps2_controller:inst1"
+Info (12128): Elaborating entity "PS2controller" for hierarchy "PS2controller:inst8"
+Info (12128): Elaborating entity "bsy_reader" for hierarchy "PS2controller:inst8|bsy_reader:inst2"
+Info (12128): Elaborating entity "ps2_controller" for hierarchy "PS2controller:inst8|ps2_controller:inst1"
 Warning (10230): Verilog HDL assignment warning at ps2_controller.sv(21): truncated value with size 32 to match size of target (4) File: C:/Users/minec/Desktop/Work/GitHub Repos/PROJ300/Firmware/PS2 Controller/sv files/ps2_controller.sv Line: 21
+Info (12128): Elaborating entity "break_code_detector" for hierarchy "PS2controller:inst8|break_code_detector:inst"
+Warning (10230): Verilog HDL assignment warning at break_code_detector.sv(27): truncated value with size 32 to match size of target (25) File: C:/Users/minec/Desktop/Work/GitHub Repos/PROJ300/Firmware/PS2 Controller/sv files/break_code_detector.sv Line: 27
 Warning (13024): Output pins are stuck at VCC or GND
     Warning (13410): Pin "led1" is stuck at GND
 Info (286030): Timing-Driven Synthesis is running
-Info (144001): Generated suppressed messages file C:/Users/minec/Desktop/Work/GitHub Repos/PROJ300/Firmware/PS2 Controller/output_files/ps2_controller.map.smsg
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
-Info (21057): Implemented 66 device resources after synthesis - the final resource count might be different
-    Info (21058): Implemented 3 input pins
+Info (21057): Implemented 100 device resources after synthesis - the final resource count might be different
+    Info (21058): Implemented 4 input pins
     Info (21059): Implemented 26 output pins
-    Info (21061): Implemented 37 logic cells
-Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 4 warnings
+    Info (21061): Implemented 70 logic cells
+Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 7 warnings
     Info: Peak virtual memory: 4898 megabytes
-    Info: Processing ended: Thu Feb 08 15:13:26 2024
+    Info: Processing ended: Thu Feb 08 23:44:34 2024
     Info: Elapsed time: 00:00:06
-    Info: Total CPU time (on all processors): 00:00:06
-
-
-+------------------------------------------+
-; Analysis & Synthesis Suppressed Messages ;
-+------------------------------------------+
-The suppressed messages can be found in C:/Users/minec/Desktop/Work/GitHub Repos/PROJ300/Firmware/PS2 Controller/output_files/ps2_controller.map.smsg.
+    Info: Total CPU time (on all processors): 00:00:07
 
 

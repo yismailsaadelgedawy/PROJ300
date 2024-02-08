@@ -43,7 +43,7 @@ PS2controller dut(
 initial begin
 
     // simulating the letter
-    // 10010101 = 7'h95
+    // 10010101 = 8'h95
 
     // reset state
     rst = 1;
@@ -151,29 +151,119 @@ initial begin
     #33.3us;
     PS2_CLK = 1;
 
-    assert(data_out == 7'h15) $display("passed data"); else $error("failed data");
+    assert(data_out == 8'h15) $display("passed data"); else $error("failed data");
     
 
     // back to idle state
-    
-
-    #500us;
-
-
-
-
-
 
 
     // idle state
     PS2_CLK = 1;
     PS2_DAT = 1;
-    #500us;
+    #50us;
 
 
     // start of frame
 
-    $display("Pressing the 'Q' key");
+    $display("Releasing the 'Q' key - 0xF0");  // will send 0xF0 = 11110000
+    
+    // start bit (0)
+    PS2_CLK = 0;
+    PS2_DAT = 0;
+    #33.3us;
+    PS2_CLK = 1;
+    #33.3us;
+   
+
+    // data start - LSB first
+
+    PS2_DAT = 0;
+    #5us;
+    PS2_CLK = 0;
+    #33.3us;
+    PS2_CLK = 1;
+    #33.3us;
+
+    PS2_DAT = 0;
+    #5us;
+    PS2_CLK = 0;
+    #33.3us;
+    PS2_CLK = 1;
+    #33.3us;
+
+    PS2_DAT = 0;
+    #5us;
+    PS2_CLK = 0;
+    #33.3us;
+    PS2_CLK = 1;
+    #33.3us;
+
+    PS2_DAT = 0;
+    #5us;
+    PS2_CLK = 0;
+    #33.3us;
+    PS2_CLK = 1;
+    #33.3us;
+
+    PS2_DAT = 1;
+    #5us;
+    PS2_CLK = 0;
+    #33.3us;
+    PS2_CLK = 1;
+    #33.3us;
+
+    PS2_DAT = 1;
+    #5us;
+    PS2_CLK = 0;
+    #33.3us;
+    PS2_CLK = 1;
+    #33.3us;
+
+    PS2_DAT = 1;
+    #5us;
+    PS2_CLK = 0;
+    #33.3us;
+    PS2_CLK = 1;
+    #33.3us;
+
+    PS2_DAT = 1;
+    #5us;
+    PS2_CLK = 0;
+    #33.3us;
+    PS2_CLK = 1;
+    #33.3us;
+
+    // data end
+
+
+    // odd parity bit (1 in this case)
+    PS2_DAT = 1;
+    #5us;
+    PS2_CLK = 0;
+    #33.3us;
+    PS2_CLK = 1;
+    #33.3us;
+
+    // stop bit (1)
+    PS2_DAT = 1;
+    #5us;
+    PS2_CLK = 0;
+    #33.3us;
+    PS2_CLK = 1;
+
+    assert(data_out == 8'hF0) $display("passed data"); else $error("failed data");
+
+
+    // idle state
+    PS2_CLK = 1;
+    PS2_DAT = 1;
+    #50us;
+
+
+
+    // start of frame
+
+    $display("Releasing the 'Q' key - 0x15");
     
     // start bit (0)
     PS2_CLK = 0;
@@ -259,9 +349,10 @@ initial begin
     #33.3us;
     PS2_CLK = 1;
 
-    assert(data_out == 7'h15) $display("passed data"); else $error("failed data");
+    assert(data_out == 8'h00) $display("passed released Q - output 0"); else $error("failed released Q - output 0");
 
-    // back to idle state
+   
+   // back to idle
     
 
     #500us;

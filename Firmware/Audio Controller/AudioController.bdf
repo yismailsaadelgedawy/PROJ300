@@ -72,6 +72,57 @@ https://fpgasoftware.intel.com/eula.
 	(annotation_block (location)(rect 1112 360 1176 384))
 )
 (symbol
+	(rect 296 336 432 432)
+	(text "music_frequencies" (rect 5 0 114 19)(font "Intel Clear" (font_size 8)))
+	(text "inst" (rect 8 75 24 92)(font "Intel Clear" ))
+	(port
+		(pt 0 32)
+		(input)
+		(text "clk" (rect 0 0 16 19)(font "Intel Clear" (font_size 8)))
+		(text "clk" (rect 21 27 37 46)(font "Intel Clear" (font_size 8)))
+		(line (pt 0 32)(pt 16 32))
+	)
+	(port
+		(pt 0 48)
+		(input)
+		(text "rst" (rect 0 0 15 19)(font "Intel Clear" (font_size 8)))
+		(text "rst" (rect 21 43 36 62)(font "Intel Clear" (font_size 8)))
+		(line (pt 0 48)(pt 16 48))
+	)
+	(port
+		(pt 136 32)
+		(output)
+		(text "data[12..0]" (rect 0 0 66 19)(font "Intel Clear" (font_size 8)))
+		(text "data[12..0]" (rect 49 27 115 46)(font "Intel Clear" (font_size 8)))
+		(line (pt 136 32)(pt 120 32)(line_width 3))
+	)
+	(drawing
+		(rectangle (rect 16 16 120 80))
+	)
+)
+(symbol
+	(rect 448 520 656 600)
+	(text "key_detector" (rect 5 0 69 12)(font "Arial" ))
+	(text "inst1" (rect 8 64 30 81)(font "Intel Clear" ))
+	(port
+		(pt 0 32)
+		(input)
+		(text "keyboard_data[7..0]" (rect 0 0 99 12)(font "Arial" ))
+		(text "keyboard_data[7..0]" (rect 21 27 120 39)(font "Arial" ))
+		(line (pt 0 32)(pt 16 32)(line_width 3))
+	)
+	(port
+		(pt 208 32)
+		(output)
+		(text "q[3..0]" (rect 0 0 31 12)(font "Arial" ))
+		(text "q[3..0]" (rect 161 27 192 39)(font "Arial" ))
+		(line (pt 208 32)(pt 192 32)(line_width 3))
+	)
+	(drawing
+		(rectangle (rect 16 16 192 64))
+	)
+)
+(symbol
 	(rect 704 336 856 416)
 	(text "muxN" (rect 5 0 34 12)(font "Arial" ))
 	(text "inst4" (rect 8 64 30 81)(font "Intel Clear" ))
@@ -98,140 +149,18 @@ https://fpgasoftware.intel.com/eula.
 	)
 	(parameter
 		"N"
-		"4"
+		"16"
 		""
 		(type "PARAMETER_SIGNED_DEC")	)
 	(parameter
 		"M"
-		"2"
+		"4"
 		""
 		(type "PARAMETER_SIGNED_DEC")	)
 	(drawing
 		(rectangle (rect 16 16 136 64))
 	)
 	(annotation_block (parameter)(rect 704 280 873 337))
-)
-(symbol
-	(rect 400 328 432 360)
-	(text "GND" (rect 8 16 29 26)(font "Arial" (font_size 6)))
-	(text "inst6" (rect 3 21 25 38)(font "Intel Clear" )(invisible))
-	(port
-		(pt 16 0)
-		(output)
-		(text "1" (rect 18 0 23 12)(font "Courier New" (bold))(invisible))
-		(text "1" (rect 18 0 23 12)(font "Courier New" (bold))(invisible))
-		(line (pt 16 8)(pt 16 0))
-	)
-	(drawing
-		(line (pt 8 8)(pt 16 16))
-		(line (pt 16 16)(pt 24 8))
-		(line (pt 8 8)(pt 24 8))
-	)
-)
-(symbol
-	(rect 360 424 512 504)
-	(text "fine_clk_divN" (rect 5 0 73 12)(font "Arial" ))
-	(text "inst" (rect 8 64 25 76)(font "Arial" ))
-	(port
-		(pt 0 32)
-		(input)
-		(text "clk_in" (rect 0 0 28 12)(font "Arial" ))
-		(text "clk_in" (rect 21 27 49 39)(font "Arial" ))
-		(line (pt 0 32)(pt 16 32))
-	)
-	(port
-		(pt 0 48)
-		(input)
-		(text "rst" (rect 0 0 12 12)(font "Arial" ))
-		(text "rst" (rect 21 43 33 55)(font "Arial" ))
-		(line (pt 0 48)(pt 16 48))
-	)
-	(port
-		(pt 152 32)
-		(output)
-		(text "clk_out" (rect 0 0 35 12)(font "Arial" ))
-		(text "clk_out" (rect 102 27 137 39)(font "Arial" ))
-		(line (pt 152 32)(pt 136 32))
-	)
-	(parameter
-		"f"
-		"493.88"
-		""
-		(type "PARAMETER_SIGNED_FLOAT")	)
-	(drawing
-		(rectangle (rect 16 16 136 64))
-	)
-	(annotation_block (parameter)(rect 360 384 489 422))
-)
-(symbol
-	(rect 360 552 512 632)
-	(text "fine_clk_divN" (rect 5 0 73 12)(font "Arial" ))
-	(text "inst1" (rect 8 64 30 81)(font "Intel Clear" ))
-	(port
-		(pt 0 32)
-		(input)
-		(text "clk_in" (rect 0 0 28 12)(font "Arial" ))
-		(text "clk_in" (rect 21 27 49 39)(font "Arial" ))
-		(line (pt 0 32)(pt 16 32))
-	)
-	(port
-		(pt 0 48)
-		(input)
-		(text "rst" (rect 0 0 12 12)(font "Arial" ))
-		(text "rst" (rect 21 43 33 55)(font "Arial" ))
-		(line (pt 0 48)(pt 16 48))
-	)
-	(port
-		(pt 152 32)
-		(output)
-		(text "clk_out" (rect 0 0 35 12)(font "Arial" ))
-		(text "clk_out" (rect 102 27 137 39)(font "Arial" ))
-		(line (pt 152 32)(pt 136 32))
-	)
-	(parameter
-		"f"
-		"440.00"
-		""
-		(type "PARAMETER_SIGNED_FLOAT")	)
-	(drawing
-		(rectangle (rect 16 16 136 64))
-	)
-	(annotation_block (parameter)(rect 360 512 489 550))
-)
-(symbol
-	(rect 360 680 512 760)
-	(text "fine_clk_divN" (rect 5 0 73 12)(font "Arial" ))
-	(text "inst2" (rect 8 64 30 81)(font "Intel Clear" ))
-	(port
-		(pt 0 32)
-		(input)
-		(text "clk_in" (rect 0 0 28 12)(font "Arial" ))
-		(text "clk_in" (rect 21 27 49 39)(font "Arial" ))
-		(line (pt 0 32)(pt 16 32))
-	)
-	(port
-		(pt 0 48)
-		(input)
-		(text "rst" (rect 0 0 12 12)(font "Arial" ))
-		(text "rst" (rect 21 43 33 55)(font "Arial" ))
-		(line (pt 0 48)(pt 16 48))
-	)
-	(port
-		(pt 152 32)
-		(output)
-		(text "clk_out" (rect 0 0 35 12)(font "Arial" ))
-		(text "clk_out" (rect 102 27 137 39)(font "Arial" ))
-		(line (pt 152 32)(pt 136 32))
-	)
-	(parameter
-		"f"
-		"392.00"
-		""
-		(type "PARAMETER_SIGNED_FLOAT")	)
-	(drawing
-		(rectangle (rect 16 16 136 64))
-	)
-	(annotation_block (parameter)(rect 360 640 489 678))
 )
 (connector
 	(text "clk_50" (rect 450 128 481 145)(font "Intel Clear" ))
@@ -244,79 +173,41 @@ https://fpgasoftware.intel.com/eula.
 	(pt 496 160)
 )
 (connector
-	(text "data[3..0]" (rect 650 352 694 369)(font "Intel Clear" ))
-	(pt 704 368)
-	(pt 640 368)
-	(bus)
+	(pt 856 368)
+	(pt 936 368)
 )
 (connector
-	(text "sel[1..0]" (rect 650 368 687 385)(font "Intel Clear" ))
+	(text "sel[3..0]" (rect 650 368 687 385)(font "Intel Clear" ))
 	(pt 704 384)
 	(pt 640 384)
 	(bus)
 )
 (connector
-	(pt 856 368)
-	(pt 936 368)
+	(text "data[15..0]" (rect 650 352 700 369)(font "Intel Clear" ))
+	(pt 704 368)
+	(pt 640 368)
+	(bus)
 )
 (connector
-	(pt 416 328)
-	(pt 416 312)
+	(text "clk_50" (rect 258 352 289 369)(font "Intel Clear" ))
+	(pt 296 368)
+	(pt 248 368)
 )
 (connector
-	(text "data[0]" (rect 426 296 460 313)(font "Intel Clear" ))
-	(pt 416 312)
-	(pt 472 312)
+	(text "sw_rst" (rect 258 368 288 385)(font "Intel Clear" ))
+	(pt 296 384)
+	(pt 248 384)
 )
 (connector
-	(text "data[1]" (rect 522 440 556 457)(font "Intel Clear" ))
-	(pt 512 456)
-	(pt 544 456)
+	(text "data[12..0]" (rect 442 352 492 369)(font "Intel Clear" ))
+	(pt 432 368)
+	(pt 480 368)
+	(bus)
 )
 (connector
-	(text "data[2]" (rect 522 568 556 585)(font "Intel Clear" ))
-	(pt 512 584)
-	(pt 544 584)
-)
-(connector
-	(text "data[3]" (rect 522 696 556 713)(font "Intel Clear" ))
-	(pt 512 712)
-	(pt 544 712)
-)
-(connector
-	(text "sw_rst" (rect 322 712 352 729)(font "Intel Clear" ))
-	(pt 360 728)
-	(pt 312 728)
-)
-(connector
-	(text "sw_rst" (rect 322 584 352 601)(font "Intel Clear" ))
-	(pt 360 600)
-	(pt 312 600)
-)
-(connector
-	(text "sw_rst" (rect 322 456 352 473)(font "Intel Clear" ))
-	(pt 360 472)
-	(pt 312 472)
-)
-(connector
-	(text "clk_50" (rect 322 440 353 457)(font "Intel Clear" ))
-	(pt 360 456)
-	(pt 312 456)
-)
-(connector
-	(text "clk_50" (rect 322 568 353 585)(font "Intel Clear" ))
-	(pt 360 584)
-	(pt 312 584)
-)
-(connector
-	(text "clk_50" (rect 322 696 353 713)(font "Intel Clear" ))
-	(pt 360 712)
-	(pt 312 712)
+	(text "sel[3..0]" (rect 666 536 703 553)(font "Intel Clear" ))
+	(pt 656 552)
+	(pt 720 552)
+	(bus)
 )
 (text "Audio Controller Module" (rect 536 40 794 66)(font "Intel Clear" (font_size 14)(bold)))
-(text "B" (rect 240 432 248 451)(font "Intel Clear" (font_size 8)))
-(text "A" (rect 240 584 248 603)(font "Intel Clear" (font_size 8)))
-(text "G" (rect 240 712 249 731)(font "Intel Clear" (font_size 8)))
-(text "Frequencies (lowest -> highest)" (rect 272 232 463 251)(font "Intel Clear" (font_size 8)(bold_italic)))
-(text "OFF" (rect 240 328 263 347)(font "Intel Clear" (font_size 8)))
-(text "octave IV" (rect 272 248 313 265)(font "Intel Clear" (font_size 6)(bold_italic)))

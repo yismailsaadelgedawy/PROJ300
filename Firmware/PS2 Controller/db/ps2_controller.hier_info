@@ -1,13 +1,13 @@
 |TopLevel
 led0 <= sw0.DB_MAX_OUTPUT_PORT_TYPE
 sw0 => led0.DATAIN
-sw0 => PS2controller:inst1.rst
+sw0 => PS2controller:inst8.sw0
 ps2data <= PS2_DAT.DB_MAX_OUTPUT_PORT_TYPE
 PS2_DAT => ps2data.DATAIN
-PS2_DAT => PS2controller:inst1.PS2_DAT
+PS2_DAT => PS2controller:inst8.PS2_DAT
 ps2clk <= PS2_CLK.DB_MAX_OUTPUT_PORT_TYPE
 PS2_CLK => ps2clk.DATAIN
-PS2_CLK => PS2controller:inst1.PS2_CLK
+PS2_CLK => PS2controller:inst8.PS2_CLK
 led1 <= <GND>
 disp0[6] <= inst3[0].DB_MAX_OUTPUT_PORT_TYPE
 disp0[5] <= inst3[1].DB_MAX_OUTPUT_PORT_TYPE
@@ -16,6 +16,7 @@ disp0[3] <= inst3[3].DB_MAX_OUTPUT_PORT_TYPE
 disp0[2] <= inst3[4].DB_MAX_OUTPUT_PORT_TYPE
 disp0[1] <= inst3[5].DB_MAX_OUTPUT_PORT_TYPE
 disp0[0] <= inst3[6].DB_MAX_OUTPUT_PORT_TYPE
+clk50 => PS2controller:inst8.clk_50
 disp1[6] <= inst4[0].DB_MAX_OUTPUT_PORT_TYPE
 disp1[5] <= inst4[1].DB_MAX_OUTPUT_PORT_TYPE
 disp1[4] <= inst4[2].DB_MAX_OUTPUT_PORT_TYPE
@@ -23,14 +24,14 @@ disp1[3] <= inst4[3].DB_MAX_OUTPUT_PORT_TYPE
 disp1[2] <= inst4[4].DB_MAX_OUTPUT_PORT_TYPE
 disp1[1] <= inst4[5].DB_MAX_OUTPUT_PORT_TYPE
 disp1[0] <= inst4[6].DB_MAX_OUTPUT_PORT_TYPE
-led[2] <= PS2controller:inst1.data_out[0]
-led[3] <= PS2controller:inst1.data_out[1]
-led[4] <= PS2controller:inst1.data_out[2]
-led[5] <= PS2controller:inst1.data_out[3]
-led[6] <= PS2controller:inst1.data_out[4]
-led[7] <= PS2controller:inst1.data_out[5]
-led[8] <= PS2controller:inst1.data_out[6]
-led[9] <= PS2controller:inst1.data_out[7]
+led[2] <= PS2controller:inst8.data_out[0]
+led[3] <= PS2controller:inst8.data_out[1]
+led[4] <= PS2controller:inst8.data_out[2]
+led[5] <= PS2controller:inst8.data_out[3]
+led[6] <= PS2controller:inst8.data_out[4]
+led[7] <= PS2controller:inst8.data_out[5]
+led[8] <= PS2controller:inst8.data_out[6]
+led[9] <= PS2controller:inst8.data_out[7]
 
 
 |TopLevel|seven_seg_controller:inst
@@ -58,7 +59,7 @@ data[6] => Decoder1.IN1
 data[7] => Decoder1.IN0
 
 
-|TopLevel|PS2controller:inst1
+|TopLevel|PS2controller:inst8
 data_out[0] <= bsy_reader:inst2.data_out[0]
 data_out[1] <= bsy_reader:inst2.data_out[1]
 data_out[2] <= bsy_reader:inst2.data_out[2]
@@ -69,11 +70,12 @@ data_out[6] <= bsy_reader:inst2.data_out[6]
 data_out[7] <= bsy_reader:inst2.data_out[7]
 PS2_DAT => ps2_controller:inst1.data_in
 PS2_CLK => ps2_controller:inst1.clk
-rst => ps2_controller:inst1.rst
-rst => bsy_reader:inst2.rst
+sw0 => ps2_controller:inst1.rst
+sw0 => inst5.IN1
+clk_50 => break_code_detector:inst.clk
 
 
-|TopLevel|PS2controller:inst1|bsy_reader:inst2
+|TopLevel|PS2controller:inst8|bsy_reader:inst2
 data_out[0] <= data_out[0]~reg0.DB_MAX_OUTPUT_PORT_TYPE
 data_out[1] <= data_out[1]~reg0.DB_MAX_OUTPUT_PORT_TYPE
 data_out[2] <= data_out[2]~reg0.DB_MAX_OUTPUT_PORT_TYPE
@@ -108,7 +110,7 @@ rst => data_out[6]~reg0.ACLR
 rst => data_out[7]~reg0.ACLR
 
 
-|TopLevel|PS2controller:inst1|ps2_controller:inst1
+|TopLevel|PS2controller:inst8|ps2_controller:inst1
 data_out[0] <= data_out[0]~reg0.DB_MAX_OUTPUT_PORT_TYPE
 data_out[1] <= data_out[1]~reg0.DB_MAX_OUTPUT_PORT_TYPE
 data_out[2] <= data_out[2]~reg0.DB_MAX_OUTPUT_PORT_TYPE
@@ -145,5 +147,43 @@ rst => count_reg[0].ACLR
 rst => count_reg[1].ACLR
 rst => count_reg[2].ACLR
 rst => count_reg[3].ACLR
+
+
+|TopLevel|PS2controller:inst8|break_code_detector:inst
+q <= temp.DB_MAX_OUTPUT_PORT_TYPE
+data[0] => Equal0.IN7
+data[1] => Equal0.IN6
+data[2] => Equal0.IN5
+data[3] => Equal0.IN4
+data[4] => Equal0.IN3
+data[5] => Equal0.IN2
+data[6] => Equal0.IN1
+data[7] => Equal0.IN0
+clk => counter[0].CLK
+clk => counter[1].CLK
+clk => counter[2].CLK
+clk => counter[3].CLK
+clk => counter[4].CLK
+clk => counter[5].CLK
+clk => counter[6].CLK
+clk => counter[7].CLK
+clk => counter[8].CLK
+clk => counter[9].CLK
+clk => counter[10].CLK
+clk => counter[11].CLK
+clk => counter[12].CLK
+clk => counter[13].CLK
+clk => counter[14].CLK
+clk => counter[15].CLK
+clk => counter[16].CLK
+clk => counter[17].CLK
+clk => counter[18].CLK
+clk => counter[19].CLK
+clk => counter[20].CLK
+clk => counter[21].CLK
+clk => counter[22].CLK
+clk => counter[23].CLK
+clk => counter[24].CLK
+clk => temp.CLK
 
 

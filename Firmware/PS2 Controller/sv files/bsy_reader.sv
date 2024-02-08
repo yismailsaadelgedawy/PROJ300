@@ -1,5 +1,6 @@
 module bsy_reader (output logic [7:0] data_out, input logic [7:0] data_in, input logic bsy, rst);
 
+
 always_ff @(posedge rst or negedge bsy) begin
  
     if (rst) begin
@@ -10,12 +11,16 @@ always_ff @(posedge rst or negedge bsy) begin
 
     else if(!bsy) begin
 
-        data_out = data_in;
+        data_out <= data_in;
+  
 
     end
     
 
+
 end
+
+
 
 
 endmodule

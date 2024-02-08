@@ -1,5 +1,5 @@
 Timing Analyzer report for ps2_controller
-Thu Feb 08 15:13:52 2024
+Thu Feb 08 23:44:57 2024
 Quartus Prime Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
 
 
@@ -46,15 +46,17 @@ Quartus Prime Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
  38. Signal Integrity Metrics (Fast 1100mv 85c Model)
  39. Setup Transfers
  40. Hold Transfers
- 41. Report TCCS
- 42. Report RSKM
- 43. Unconstrained Paths Summary
- 44. Clock Status Summary
- 45. Unconstrained Input Ports
- 46. Unconstrained Output Ports
+ 41. Recovery Transfers
+ 42. Removal Transfers
+ 43. Report TCCS
+ 44. Report RSKM
+ 45. Unconstrained Paths Summary
+ 46. Clock Status Summary
  47. Unconstrained Input Ports
  48. Unconstrained Output Ports
- 49. Timing Analyzer Messages
+ 49. Unconstrained Input Ports
+ 50. Unconstrained Output Ports
+ 51. Timing Analyzer Messages
 
 
 
@@ -100,14 +102,16 @@ https://fpgasoftware.intel.com/eula.
 ; Number detected on machine ; 16          ;
 ; Maximum allowed            ; 16          ;
 ;                            ;             ;
-; Average used               ; 1.11        ;
+; Average used               ; 1.15        ;
 ; Maximum used               ; 16          ;
 ;                            ;             ;
 ; Usage by Processor         ; % Time Used ;
 ;     Processor 1            ; 100.0%      ;
-;     Processor 2            ;   1.7%      ;
-;     Processor 3            ;   1.7%      ;
-;     Processors 4-16        ;   0.6%      ;
+;     Processor 2            ;   1.9%      ;
+;     Processor 3            ;   1.8%      ;
+;     Processor 4            ;   1.8%      ;
+;     Processor 5            ;   1.8%      ;
+;     Processors 6-16        ;   0.7%      ;
 +----------------------------+-------------+
 
 
@@ -116,8 +120,9 @@ https://fpgasoftware.intel.com/eula.
 +----------------------------------------------+------+--------+------------+-------+-------+------------+-----------+-------------+-------+--------+-----------+------------+----------+--------+--------+--------------------------------------------------+
 ; Clock Name                                   ; Type ; Period ; Frequency  ; Rise  ; Fall  ; Duty Cycle ; Divide by ; Multiply by ; Phase ; Offset ; Edge List ; Edge Shift ; Inverted ; Master ; Source ; Targets                                          ;
 +----------------------------------------------+------+--------+------------+-------+-------+------------+-----------+-------------+-------+--------+-----------+------------+----------+--------+--------+--------------------------------------------------+
+; clk50                                        ; Base ; 1.000  ; 1000.0 MHz ; 0.000 ; 0.500 ;            ;           ;             ;       ;        ;           ;            ;          ;        ;        ; { clk50 }                                        ;
 ; PS2_CLK                                      ; Base ; 1.000  ; 1000.0 MHz ; 0.000 ; 0.500 ;            ;           ;             ;       ;        ;           ;            ;          ;        ;        ; { PS2_CLK }                                      ;
-; PS2controller:inst1|ps2_controller:inst1|bsy ; Base ; 1.000  ; 1000.0 MHz ; 0.000 ; 0.500 ;            ;           ;             ;       ;        ;           ;            ;          ;        ;        ; { PS2controller:inst1|ps2_controller:inst1|bsy } ;
+; PS2controller:inst8|ps2_controller:inst1|bsy ; Base ; 1.000  ; 1000.0 MHz ; 0.000 ; 0.500 ;            ;           ;             ;       ;        ;           ;            ;          ;        ;        ; { PS2controller:inst8|ps2_controller:inst1|bsy } ;
 +----------------------------------------------+------+--------+------------+-------+-------+------------+-----------+-------------+-------+--------+-----------+------------+----------+--------+--------+--------------------------------------------------+
 
 
@@ -126,7 +131,8 @@ https://fpgasoftware.intel.com/eula.
 +------------+-----------------+------------+------+
 ; Fmax       ; Restricted Fmax ; Clock Name ; Note ;
 +------------+-----------------+------------+------+
-; 184.03 MHz ; 184.03 MHz      ; PS2_CLK    ;      ;
+; 200.16 MHz ; 200.16 MHz      ; PS2_CLK    ;      ;
+; 272.78 MHz ; 272.78 MHz      ; clk50      ;      ;
 +------------+-----------------+------------+------+
 This panel reports FMAX for every clock in the design, regardless of the user-specified clock periods.  FMAX is only computed for paths where the source and destination registers or ports are driven by the same clock.  Paths of different clocks, including generated clocks, are ignored.  For paths between a clock and its inversion, FMAX is computed as if the rising and falling edges are scaled along with FMAX, such that the duty cycle (in terms of a percentage) is maintained. Altera recommends that you always use clock constraints and other slack reports for sign-off analysis.
 
@@ -142,31 +148,39 @@ HTML report is unavailable in plain text report export.
 +----------------------------------------------+--------+---------------+
 ; Clock                                        ; Slack  ; End Point TNS ;
 +----------------------------------------------+--------+---------------+
-; PS2controller:inst1|ps2_controller:inst1|bsy ; -8.233 ; -63.150       ;
-; PS2_CLK                                      ; -4.434 ; -32.611       ;
+; PS2controller:inst8|ps2_controller:inst1|bsy ; -8.145 ; -63.019       ;
+; PS2_CLK                                      ; -3.996 ; -38.938       ;
+; clk50                                        ; -2.666 ; -73.301       ;
++----------------------------------------------+--------+---------------+
+
+
++-----------------------------------------------------------------------+
+; Slow 1100mV 85C Model Hold Summary                                    ;
++----------------------------------------------+--------+---------------+
+; Clock                                        ; Slack  ; End Point TNS ;
++----------------------------------------------+--------+---------------+
+; clk50                                        ; -0.478 ; -0.478        ;
+; PS2_CLK                                      ; 0.287  ; 0.000         ;
+; PS2controller:inst8|ps2_controller:inst1|bsy ; 4.805  ; 0.000         ;
++----------------------------------------------+--------+---------------+
+
+
++-----------------------------------------------------------------------+
+; Slow 1100mV 85C Model Recovery Summary                                ;
++----------------------------------------------+--------+---------------+
+; Clock                                        ; Slack  ; End Point TNS ;
++----------------------------------------------+--------+---------------+
+; PS2controller:inst8|ps2_controller:inst1|bsy ; -3.496 ; -27.948       ;
 +----------------------------------------------+--------+---------------+
 
 
 +----------------------------------------------------------------------+
-; Slow 1100mV 85C Model Hold Summary                                   ;
+; Slow 1100mV 85C Model Removal Summary                                ;
 +----------------------------------------------+-------+---------------+
 ; Clock                                        ; Slack ; End Point TNS ;
 +----------------------------------------------+-------+---------------+
-; PS2_CLK                                      ; 0.287 ; 0.000         ;
-; PS2controller:inst1|ps2_controller:inst1|bsy ; 4.926 ; 0.000         ;
+; PS2controller:inst8|ps2_controller:inst1|bsy ; 3.093 ; 0.000         ;
 +----------------------------------------------+-------+---------------+
-
-
-------------------------------------------
-; Slow 1100mV 85C Model Recovery Summary ;
-------------------------------------------
-No paths to report.
-
-
------------------------------------------
-; Slow 1100mV 85C Model Removal Summary ;
------------------------------------------
-No paths to report.
 
 
 +-----------------------------------------------------------------------+
@@ -174,8 +188,9 @@ No paths to report.
 +----------------------------------------------+--------+---------------+
 ; Clock                                        ; Slack  ; End Point TNS ;
 +----------------------------------------------+--------+---------------+
-; PS2_CLK                                      ; -0.538 ; -13.359       ;
-; PS2controller:inst1|ps2_controller:inst1|bsy ; -0.538 ; -6.160        ;
+; clk50                                        ; -0.538 ; -23.054       ;
+; PS2_CLK                                      ; -0.538 ; -14.882       ;
+; PS2controller:inst8|ps2_controller:inst1|bsy ; -0.538 ; -6.176        ;
 +----------------------------------------------+--------+---------------+
 
 
@@ -190,7 +205,8 @@ No synchronizer chains to report.
 +------------+-----------------+------------+------+
 ; Fmax       ; Restricted Fmax ; Clock Name ; Note ;
 +------------+-----------------+------------+------+
-; 186.71 MHz ; 186.71 MHz      ; PS2_CLK    ;      ;
+; 203.0 MHz  ; 203.0 MHz       ; PS2_CLK    ;      ;
+; 274.73 MHz ; 274.73 MHz      ; clk50      ;      ;
 +------------+-----------------+------------+------+
 This panel reports FMAX for every clock in the design, regardless of the user-specified clock periods.  FMAX is only computed for paths where the source and destination registers or ports are driven by the same clock.  Paths of different clocks, including generated clocks, are ignored.  For paths between a clock and its inversion, FMAX is computed as if the rising and falling edges are scaled along with FMAX, such that the duty cycle (in terms of a percentage) is maintained. Altera recommends that you always use clock constraints and other slack reports for sign-off analysis.
 
@@ -200,31 +216,39 @@ This panel reports FMAX for every clock in the design, regardless of the user-sp
 +----------------------------------------------+--------+---------------+
 ; Clock                                        ; Slack  ; End Point TNS ;
 +----------------------------------------------+--------+---------------+
-; PS2controller:inst1|ps2_controller:inst1|bsy ; -8.117 ; -62.417       ;
-; PS2_CLK                                      ; -4.356 ; -30.899       ;
+; PS2controller:inst8|ps2_controller:inst1|bsy ; -8.041 ; -62.093       ;
+; PS2_CLK                                      ; -3.926 ; -36.057       ;
+; clk50                                        ; -2.640 ; -72.710       ;
++----------------------------------------------+--------+---------------+
+
+
++-----------------------------------------------------------------------+
+; Slow 1100mV 0C Model Hold Summary                                     ;
++----------------------------------------------+--------+---------------+
+; Clock                                        ; Slack  ; End Point TNS ;
++----------------------------------------------+--------+---------------+
+; clk50                                        ; -0.619 ; -0.619        ;
+; PS2_CLK                                      ; 0.375  ; 0.000         ;
+; PS2controller:inst8|ps2_controller:inst1|bsy ; 4.793  ; 0.000         ;
++----------------------------------------------+--------+---------------+
+
+
++-----------------------------------------------------------------------+
+; Slow 1100mV 0C Model Recovery Summary                                 ;
++----------------------------------------------+--------+---------------+
+; Clock                                        ; Slack  ; End Point TNS ;
++----------------------------------------------+--------+---------------+
+; PS2controller:inst8|ps2_controller:inst1|bsy ; -3.579 ; -28.608       ;
 +----------------------------------------------+--------+---------------+
 
 
 +----------------------------------------------------------------------+
-; Slow 1100mV 0C Model Hold Summary                                    ;
+; Slow 1100mV 0C Model Removal Summary                                 ;
 +----------------------------------------------+-------+---------------+
 ; Clock                                        ; Slack ; End Point TNS ;
 +----------------------------------------------+-------+---------------+
-; PS2_CLK                                      ; 0.374 ; 0.000         ;
-; PS2controller:inst1|ps2_controller:inst1|bsy ; 4.937 ; 0.000         ;
+; PS2controller:inst8|ps2_controller:inst1|bsy ; 3.181 ; 0.000         ;
 +----------------------------------------------+-------+---------------+
-
-
------------------------------------------
-; Slow 1100mV 0C Model Recovery Summary ;
------------------------------------------
-No paths to report.
-
-
-----------------------------------------
-; Slow 1100mV 0C Model Removal Summary ;
-----------------------------------------
-No paths to report.
 
 
 +-----------------------------------------------------------------------+
@@ -232,8 +256,9 @@ No paths to report.
 +----------------------------------------------+--------+---------------+
 ; Clock                                        ; Slack  ; End Point TNS ;
 +----------------------------------------------+--------+---------------+
-; PS2_CLK                                      ; -0.538 ; -13.389       ;
-; PS2controller:inst1|ps2_controller:inst1|bsy ; -0.538 ; -6.156        ;
+; clk50                                        ; -0.538 ; -23.775       ;
+; PS2_CLK                                      ; -0.538 ; -14.902       ;
+; PS2controller:inst8|ps2_controller:inst1|bsy ; -0.538 ; -6.156        ;
 +----------------------------------------------+--------+---------------+
 
 
@@ -248,31 +273,39 @@ No synchronizer chains to report.
 +----------------------------------------------+--------+---------------+
 ; Clock                                        ; Slack  ; End Point TNS ;
 +----------------------------------------------+--------+---------------+
-; PS2controller:inst1|ps2_controller:inst1|bsy ; -4.356 ; -33.194       ;
-; PS2_CLK                                      ; -1.640 ; -9.017        ;
+; PS2controller:inst8|ps2_controller:inst1|bsy ; -4.290 ; -33.144       ;
+; PS2_CLK                                      ; -1.397 ; -9.649        ;
+; clk50                                        ; -1.080 ; -20.658       ;
++----------------------------------------------+--------+---------------+
+
+
++-----------------------------------------------------------------------+
+; Fast 1100mV 85C Model Hold Summary                                    ;
++----------------------------------------------+--------+---------------+
+; Clock                                        ; Slack  ; End Point TNS ;
++----------------------------------------------+--------+---------------+
+; clk50                                        ; -0.653 ; -0.653        ;
+; PS2_CLK                                      ; 0.157  ; 0.000         ;
+; PS2controller:inst8|ps2_controller:inst1|bsy ; 2.996  ; 0.000         ;
++----------------------------------------------+--------+---------------+
+
+
++-----------------------------------------------------------------------+
+; Fast 1100mV 85C Model Recovery Summary                                ;
++----------------------------------------------+--------+---------------+
+; Clock                                        ; Slack  ; End Point TNS ;
++----------------------------------------------+--------+---------------+
+; PS2controller:inst8|ps2_controller:inst1|bsy ; -1.455 ; -11.632       ;
 +----------------------------------------------+--------+---------------+
 
 
 +----------------------------------------------------------------------+
-; Fast 1100mV 85C Model Hold Summary                                   ;
+; Fast 1100mV 85C Model Removal Summary                                ;
 +----------------------------------------------+-------+---------------+
 ; Clock                                        ; Slack ; End Point TNS ;
 +----------------------------------------------+-------+---------------+
-; PS2_CLK                                      ; 0.157 ; 0.000         ;
-; PS2controller:inst1|ps2_controller:inst1|bsy ; 3.085 ; 0.000         ;
+; PS2controller:inst8|ps2_controller:inst1|bsy ; 1.581 ; 0.000         ;
 +----------------------------------------------+-------+---------------+
-
-
-------------------------------------------
-; Fast 1100mV 85C Model Recovery Summary ;
-------------------------------------------
-No paths to report.
-
-
------------------------------------------
-; Fast 1100mV 85C Model Removal Summary ;
------------------------------------------
-No paths to report.
 
 
 +-----------------------------------------------------------------------+
@@ -280,8 +313,9 @@ No paths to report.
 +----------------------------------------------+--------+---------------+
 ; Clock                                        ; Slack  ; End Point TNS ;
 +----------------------------------------------+--------+---------------+
-; PS2_CLK                                      ; -0.517 ; -3.210        ;
-; PS2controller:inst1|ps2_controller:inst1|bsy ; 0.155  ; 0.000         ;
+; PS2_CLK                                      ; -0.464 ; -3.327        ;
+; clk50                                        ; -0.096 ; -2.804        ;
+; PS2controller:inst8|ps2_controller:inst1|bsy ; 0.159  ; 0.000         ;
 +----------------------------------------------+--------+---------------+
 
 
@@ -296,31 +330,39 @@ No synchronizer chains to report.
 +----------------------------------------------+--------+---------------+
 ; Clock                                        ; Slack  ; End Point TNS ;
 +----------------------------------------------+--------+---------------+
-; PS2controller:inst1|ps2_controller:inst1|bsy ; -4.266 ; -32.669       ;
-; PS2_CLK                                      ; -1.629 ; -7.022        ;
+; PS2controller:inst8|ps2_controller:inst1|bsy ; -4.205 ; -32.606       ;
+; PS2_CLK                                      ; -1.398 ; -7.408        ;
+; clk50                                        ; -0.691 ; -16.195       ;
++----------------------------------------------+--------+---------------+
+
+
++-----------------------------------------------------------------------+
+; Fast 1100mV 0C Model Hold Summary                                     ;
++----------------------------------------------+--------+---------------+
+; Clock                                        ; Slack  ; End Point TNS ;
++----------------------------------------------+--------+---------------+
+; clk50                                        ; -0.746 ; -0.746        ;
+; PS2_CLK                                      ; 0.164  ; 0.000         ;
+; PS2controller:inst8|ps2_controller:inst1|bsy ; 2.968  ; 0.000         ;
++----------------------------------------------+--------+---------------+
+
+
++-----------------------------------------------------------------------+
+; Fast 1100mV 0C Model Recovery Summary                                 ;
++----------------------------------------------+--------+---------------+
+; Clock                                        ; Slack  ; End Point TNS ;
++----------------------------------------------+--------+---------------+
+; PS2controller:inst8|ps2_controller:inst1|bsy ; -1.404 ; -11.224       ;
 +----------------------------------------------+--------+---------------+
 
 
 +----------------------------------------------------------------------+
-; Fast 1100mV 0C Model Hold Summary                                    ;
+; Fast 1100mV 0C Model Removal Summary                                 ;
 +----------------------------------------------+-------+---------------+
 ; Clock                                        ; Slack ; End Point TNS ;
 +----------------------------------------------+-------+---------------+
-; PS2_CLK                                      ; 0.164 ; 0.000         ;
-; PS2controller:inst1|ps2_controller:inst1|bsy ; 3.052 ; 0.000         ;
+; PS2controller:inst8|ps2_controller:inst1|bsy ; 1.537 ; 0.000         ;
 +----------------------------------------------+-------+---------------+
-
-
------------------------------------------
-; Fast 1100mV 0C Model Recovery Summary ;
------------------------------------------
-No paths to report.
-
-
-----------------------------------------
-; Fast 1100mV 0C Model Removal Summary ;
-----------------------------------------
-No paths to report.
 
 
 +-----------------------------------------------------------------------+
@@ -328,8 +370,9 @@ No paths to report.
 +----------------------------------------------+--------+---------------+
 ; Clock                                        ; Slack  ; End Point TNS ;
 +----------------------------------------------+--------+---------------+
-; PS2_CLK                                      ; -0.503 ; -3.288        ;
-; PS2controller:inst1|ps2_controller:inst1|bsy ; 0.156  ; 0.000         ;
+; PS2_CLK                                      ; -0.476 ; -3.464        ;
+; clk50                                        ; -0.096 ; -2.848        ;
+; PS2controller:inst8|ps2_controller:inst1|bsy ; 0.159  ; 0.000         ;
 +----------------------------------------------+--------+---------------+
 
 
@@ -339,18 +382,20 @@ No paths to report.
 No synchronizer chains to report.
 
 
-+------------------------------------------------------------------------------------------------------------+
-; Multicorner Timing Analysis Summary                                                                        ;
-+-----------------------------------------------+---------+-------+----------+---------+---------------------+
-; Clock                                         ; Setup   ; Hold  ; Recovery ; Removal ; Minimum Pulse Width ;
-+-----------------------------------------------+---------+-------+----------+---------+---------------------+
-; Worst-case Slack                              ; -8.233  ; 0.157 ; N/A      ; N/A     ; -0.538              ;
-;  PS2_CLK                                      ; -4.434  ; 0.157 ; N/A      ; N/A     ; -0.538              ;
-;  PS2controller:inst1|ps2_controller:inst1|bsy ; -8.233  ; 3.052 ; N/A      ; N/A     ; -0.538              ;
-; Design-wide TNS                               ; -95.761 ; 0.0   ; 0.0      ; 0.0     ; -19.545             ;
-;  PS2_CLK                                      ; -32.611 ; 0.000 ; N/A      ; N/A     ; -13.389             ;
-;  PS2controller:inst1|ps2_controller:inst1|bsy ; -63.150 ; 0.000 ; N/A      ; N/A     ; -6.160              ;
-+-----------------------------------------------+---------+-------+----------+---------+---------------------+
++--------------------------------------------------------------------------------------------------------------+
+; Multicorner Timing Analysis Summary                                                                          ;
++-----------------------------------------------+----------+--------+----------+---------+---------------------+
+; Clock                                         ; Setup    ; Hold   ; Recovery ; Removal ; Minimum Pulse Width ;
++-----------------------------------------------+----------+--------+----------+---------+---------------------+
+; Worst-case Slack                              ; -8.145   ; -0.746 ; -3.579   ; 1.537   ; -0.538              ;
+;  PS2_CLK                                      ; -3.996   ; 0.157  ; N/A      ; N/A     ; -0.538              ;
+;  PS2controller:inst8|ps2_controller:inst1|bsy ; -8.145   ; 2.968  ; -3.579   ; 1.537   ; -0.538              ;
+;  clk50                                        ; -2.666   ; -0.746 ; N/A      ; N/A     ; -0.538              ;
+; Design-wide TNS                               ; -175.258 ; -0.746 ; -28.608  ; 0.0     ; -44.833             ;
+;  PS2_CLK                                      ; -38.938  ; 0.000  ; N/A      ; N/A     ; -14.902             ;
+;  PS2controller:inst8|ps2_controller:inst1|bsy ; -63.019  ; 0.000  ; -28.608  ; 0.000   ; -6.176              ;
+;  clk50                                        ; -73.301  ; -0.746 ; N/A      ; N/A     ; -23.775             ;
++-----------------------------------------------+----------+--------+----------+---------+---------------------+
 
 
 +-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
@@ -395,6 +440,7 @@ No synchronizer chains to report.
 ; sw0     ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
 ; PS2_DAT ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
 ; PS2_CLK ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
+; clk50   ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
 +---------+--------------+-----------------+-----------------+
 
 
@@ -534,24 +580,48 @@ No synchronizer chains to report.
 +----------+--------------+---------------------+---------------------+------------------------------+------------------------------+---------------------+---------------------+--------------------------------------+--------------------------------------+-----------------------------+-----------------------------+----------------------------+----------------------------+-----------------------------+-----------------------------+--------------------+--------------------+-------------------------------------+-------------------------------------+----------------------------+----------------------------+---------------------------+---------------------------+
 
 
++-----------------------------------------------------------------------------------------------------------------------------------------+
+; Setup Transfers                                                                                                                         ;
++----------------------------------------------+----------------------------------------------+----------+----------+----------+----------+
+; From Clock                                   ; To Clock                                     ; RR Paths ; FR Paths ; RF Paths ; FF Paths ;
++----------------------------------------------+----------------------------------------------+----------+----------+----------+----------+
+; clk50                                        ; clk50                                        ; 1145     ; 0        ; 0        ; 0        ;
+; PS2controller:inst8|ps2_controller:inst1|bsy ; clk50                                        ; 8        ; 0        ; 0        ; 0        ;
+; PS2_CLK                                      ; PS2_CLK                                      ; 0        ; 0        ; 0        ; 126      ;
+; PS2_CLK                                      ; PS2controller:inst8|ps2_controller:inst1|bsy ; 0        ; 8        ; 0        ; 0        ;
++----------------------------------------------+----------------------------------------------+----------+----------+----------+----------+
+Entries labeled "false path" only account for clock-to-clock false paths and not path-based false paths. As a result, actual path counts may be lower than reported.
+
+
++-----------------------------------------------------------------------------------------------------------------------------------------+
+; Hold Transfers                                                                                                                          ;
++----------------------------------------------+----------------------------------------------+----------+----------+----------+----------+
+; From Clock                                   ; To Clock                                     ; RR Paths ; FR Paths ; RF Paths ; FF Paths ;
++----------------------------------------------+----------------------------------------------+----------+----------+----------+----------+
+; clk50                                        ; clk50                                        ; 1145     ; 0        ; 0        ; 0        ;
+; PS2controller:inst8|ps2_controller:inst1|bsy ; clk50                                        ; 8        ; 0        ; 0        ; 0        ;
+; PS2_CLK                                      ; PS2_CLK                                      ; 0        ; 0        ; 0        ; 126      ;
+; PS2_CLK                                      ; PS2controller:inst8|ps2_controller:inst1|bsy ; 0        ; 8        ; 0        ; 0        ;
++----------------------------------------------+----------------------------------------------+----------+----------+----------+----------+
+Entries labeled "false path" only account for clock-to-clock false paths and not path-based false paths. As a result, actual path counts may be lower than reported.
+
+
 +-------------------------------------------------------------------------------------------------------+
-; Setup Transfers                                                                                       ;
+; Recovery Transfers                                                                                    ;
 +------------+----------------------------------------------+----------+----------+----------+----------+
 ; From Clock ; To Clock                                     ; RR Paths ; FR Paths ; RF Paths ; FF Paths ;
 +------------+----------------------------------------------+----------+----------+----------+----------+
-; PS2_CLK    ; PS2_CLK                                      ; 0        ; 0        ; 0        ; 103      ;
-; PS2_CLK    ; PS2controller:inst1|ps2_controller:inst1|bsy ; 0        ; 8        ; 0        ; 0        ;
+; clk50      ; PS2controller:inst8|ps2_controller:inst1|bsy ; 8        ; 0        ; 0        ; 0        ;
 +------------+----------------------------------------------+----------+----------+----------+----------+
 Entries labeled "false path" only account for clock-to-clock false paths and not path-based false paths. As a result, actual path counts may be lower than reported.
 
 
 +-------------------------------------------------------------------------------------------------------+
-; Hold Transfers                                                                                        ;
+; Removal Transfers                                                                                     ;
 +------------+----------------------------------------------+----------+----------+----------+----------+
 ; From Clock ; To Clock                                     ; RR Paths ; FR Paths ; RF Paths ; FF Paths ;
 +------------+----------------------------------------------+----------+----------+----------+----------+
-; PS2_CLK    ; PS2_CLK                                      ; 0        ; 0        ; 0        ; 103      ;
-; PS2_CLK    ; PS2controller:inst1|ps2_controller:inst1|bsy ; 0        ; 8        ; 0        ; 0        ;
+; clk50      ; PS2controller:inst8|ps2_controller:inst1|bsy ; 8        ; 0        ; 0        ; 0        ;
 +------------+----------------------------------------------+----------+----------+----------+----------+
 Entries labeled "false path" only account for clock-to-clock false paths and not path-based false paths. As a result, actual path counts may be lower than reported.
 
@@ -576,7 +646,7 @@ No non-DPA dedicated SERDES Receiver circuitry present in device or used in desi
 ; Illegal Clocks                  ; 0     ; 0    ;
 ; Unconstrained Clocks            ; 0     ; 0    ;
 ; Unconstrained Input Ports       ; 3     ; 3    ;
-; Unconstrained Input Port Paths  ; 29    ; 29   ;
+; Unconstrained Input Port Paths  ; 31    ; 31   ;
 ; Unconstrained Output Ports      ; 25    ; 25   ;
 ; Unconstrained Output Port Paths ; 67    ; 67   ;
 +---------------------------------+-------+------+
@@ -588,7 +658,8 @@ No non-DPA dedicated SERDES Receiver circuitry present in device or used in desi
 ; Target                                       ; Clock                                        ; Type ; Status      ;
 +----------------------------------------------+----------------------------------------------+------+-------------+
 ; PS2_CLK                                      ; PS2_CLK                                      ; Base ; Constrained ;
-; PS2controller:inst1|ps2_controller:inst1|bsy ; PS2controller:inst1|ps2_controller:inst1|bsy ; Base ; Constrained ;
+; PS2controller:inst8|ps2_controller:inst1|bsy ; PS2controller:inst8|ps2_controller:inst1|bsy ; Base ; Constrained ;
+; clk50                                        ; clk50                                        ; Base ; Constrained ;
 +----------------------------------------------+----------------------------------------------+------+-------------+
 
 
@@ -686,7 +757,7 @@ No non-DPA dedicated SERDES Receiver circuitry present in device or used in desi
 Info: *******************************************************************
 Info: Running Quartus Prime Timing Analyzer
     Info: Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
-    Info: Processing started: Thu Feb 08 15:13:48 2024
+    Info: Processing started: Thu Feb 08 23:44:54 2024
 Info: Command: quartus_sta ps2_controller -c ps2_controller
 Info: qsta_default_script.tcl version: #1
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
@@ -697,103 +768,140 @@ Critical Warning (332012): Synopsys Design Constraints File file not found: 'ps2
 Info (332142): No user constrained base clocks found in the design. Calling "derive_clocks -period 1.0"
 Info (332105): Deriving Clocks
     Info (332105): create_clock -period 1.000 -name PS2_CLK PS2_CLK
-    Info (332105): create_clock -period 1.000 -name PS2controller:inst1|ps2_controller:inst1|bsy PS2controller:inst1|ps2_controller:inst1|bsy
+    Info (332105): create_clock -period 1.000 -name clk50 clk50
+    Info (332105): create_clock -period 1.000 -name PS2controller:inst8|ps2_controller:inst1|bsy PS2controller:inst8|ps2_controller:inst1|bsy
 Info (332143): No user constrained clock uncertainty found in the design. Calling "derive_clock_uncertainty"
 Info (332123): Deriving Clock Uncertainty. Please refer to report_sdc in the Timing Analyzer to see clock uncertainties.
 Info: Found TIMING_ANALYZER_REPORT_SCRIPT_INCLUDE_DEFAULT_ANALYSIS = ON
 Info: Analyzing Slow 1100mV 85C Model
 Critical Warning (332148): Timing requirements not met
     Info (11105): For recommendations on closing timing, run Report Timing Closure Recommendations in the Timing Analyzer.
-Info (332146): Worst-case setup slack is -8.233
+Info (332146): Worst-case setup slack is -8.145
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):    -8.233             -63.150 PS2controller:inst1|ps2_controller:inst1|bsy 
-    Info (332119):    -4.434             -32.611 PS2_CLK 
-Info (332146): Worst-case hold slack is 0.287
+    Info (332119):    -8.145             -63.019 PS2controller:inst8|ps2_controller:inst1|bsy 
+    Info (332119):    -3.996             -38.938 PS2_CLK 
+    Info (332119):    -2.666             -73.301 clk50 
+Info (332146): Worst-case hold slack is -0.478
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
+    Info (332119):    -0.478              -0.478 clk50 
     Info (332119):     0.287               0.000 PS2_CLK 
-    Info (332119):     4.926               0.000 PS2controller:inst1|ps2_controller:inst1|bsy 
-Info (332140): No Recovery paths to report
-Info (332140): No Removal paths to report
+    Info (332119):     4.805               0.000 PS2controller:inst8|ps2_controller:inst1|bsy 
+Info (332146): Worst-case recovery slack is -3.496
+    Info (332119):     Slack       End Point TNS Clock 
+    Info (332119): ========= =================== =====================
+    Info (332119):    -3.496             -27.948 PS2controller:inst8|ps2_controller:inst1|bsy 
+Info (332146): Worst-case removal slack is 3.093
+    Info (332119):     Slack       End Point TNS Clock 
+    Info (332119): ========= =================== =====================
+    Info (332119):     3.093               0.000 PS2controller:inst8|ps2_controller:inst1|bsy 
 Info (332146): Worst-case minimum pulse width slack is -0.538
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):    -0.538             -13.359 PS2_CLK 
-    Info (332119):    -0.538              -6.160 PS2controller:inst1|ps2_controller:inst1|bsy 
+    Info (332119):    -0.538             -23.054 clk50 
+    Info (332119):    -0.538             -14.882 PS2_CLK 
+    Info (332119):    -0.538              -6.176 PS2controller:inst8|ps2_controller:inst1|bsy 
 Info: Analyzing Slow 1100mV 0C Model
 Info (334003): Started post-fitting delay annotation
 Info (334004): Delay annotation completed successfully
 Info (332123): Deriving Clock Uncertainty. Please refer to report_sdc in the Timing Analyzer to see clock uncertainties.
 Critical Warning (332148): Timing requirements not met
     Info (11105): For recommendations on closing timing, run Report Timing Closure Recommendations in the Timing Analyzer.
-Info (332146): Worst-case setup slack is -8.117
+Info (332146): Worst-case setup slack is -8.041
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):    -8.117             -62.417 PS2controller:inst1|ps2_controller:inst1|bsy 
-    Info (332119):    -4.356             -30.899 PS2_CLK 
-Info (332146): Worst-case hold slack is 0.374
+    Info (332119):    -8.041             -62.093 PS2controller:inst8|ps2_controller:inst1|bsy 
+    Info (332119):    -3.926             -36.057 PS2_CLK 
+    Info (332119):    -2.640             -72.710 clk50 
+Info (332146): Worst-case hold slack is -0.619
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):     0.374               0.000 PS2_CLK 
-    Info (332119):     4.937               0.000 PS2controller:inst1|ps2_controller:inst1|bsy 
-Info (332140): No Recovery paths to report
-Info (332140): No Removal paths to report
+    Info (332119):    -0.619              -0.619 clk50 
+    Info (332119):     0.375               0.000 PS2_CLK 
+    Info (332119):     4.793               0.000 PS2controller:inst8|ps2_controller:inst1|bsy 
+Info (332146): Worst-case recovery slack is -3.579
+    Info (332119):     Slack       End Point TNS Clock 
+    Info (332119): ========= =================== =====================
+    Info (332119):    -3.579             -28.608 PS2controller:inst8|ps2_controller:inst1|bsy 
+Info (332146): Worst-case removal slack is 3.181
+    Info (332119):     Slack       End Point TNS Clock 
+    Info (332119): ========= =================== =====================
+    Info (332119):     3.181               0.000 PS2controller:inst8|ps2_controller:inst1|bsy 
 Info (332146): Worst-case minimum pulse width slack is -0.538
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):    -0.538             -13.389 PS2_CLK 
-    Info (332119):    -0.538              -6.156 PS2controller:inst1|ps2_controller:inst1|bsy 
+    Info (332119):    -0.538             -23.775 clk50 
+    Info (332119):    -0.538             -14.902 PS2_CLK 
+    Info (332119):    -0.538              -6.156 PS2controller:inst8|ps2_controller:inst1|bsy 
 Info: Analyzing Fast 1100mV 85C Model
 Info (334003): Started post-fitting delay annotation
 Info (334004): Delay annotation completed successfully
 Info (332123): Deriving Clock Uncertainty. Please refer to report_sdc in the Timing Analyzer to see clock uncertainties.
 Critical Warning (332148): Timing requirements not met
     Info (11105): For recommendations on closing timing, run Report Timing Closure Recommendations in the Timing Analyzer.
-Info (332146): Worst-case setup slack is -4.356
+Info (332146): Worst-case setup slack is -4.290
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):    -4.356             -33.194 PS2controller:inst1|ps2_controller:inst1|bsy 
-    Info (332119):    -1.640              -9.017 PS2_CLK 
-Info (332146): Worst-case hold slack is 0.157
+    Info (332119):    -4.290             -33.144 PS2controller:inst8|ps2_controller:inst1|bsy 
+    Info (332119):    -1.397              -9.649 PS2_CLK 
+    Info (332119):    -1.080             -20.658 clk50 
+Info (332146): Worst-case hold slack is -0.653
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
+    Info (332119):    -0.653              -0.653 clk50 
     Info (332119):     0.157               0.000 PS2_CLK 
-    Info (332119):     3.085               0.000 PS2controller:inst1|ps2_controller:inst1|bsy 
-Info (332140): No Recovery paths to report
-Info (332140): No Removal paths to report
-Info (332146): Worst-case minimum pulse width slack is -0.517
+    Info (332119):     2.996               0.000 PS2controller:inst8|ps2_controller:inst1|bsy 
+Info (332146): Worst-case recovery slack is -1.455
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):    -0.517              -3.210 PS2_CLK 
-    Info (332119):     0.155               0.000 PS2controller:inst1|ps2_controller:inst1|bsy 
+    Info (332119):    -1.455             -11.632 PS2controller:inst8|ps2_controller:inst1|bsy 
+Info (332146): Worst-case removal slack is 1.581
+    Info (332119):     Slack       End Point TNS Clock 
+    Info (332119): ========= =================== =====================
+    Info (332119):     1.581               0.000 PS2controller:inst8|ps2_controller:inst1|bsy 
+Info (332146): Worst-case minimum pulse width slack is -0.464
+    Info (332119):     Slack       End Point TNS Clock 
+    Info (332119): ========= =================== =====================
+    Info (332119):    -0.464              -3.327 PS2_CLK 
+    Info (332119):    -0.096              -2.804 clk50 
+    Info (332119):     0.159               0.000 PS2controller:inst8|ps2_controller:inst1|bsy 
 Info: Analyzing Fast 1100mV 0C Model
 Info (332123): Deriving Clock Uncertainty. Please refer to report_sdc in the Timing Analyzer to see clock uncertainties.
 Critical Warning (332148): Timing requirements not met
     Info (11105): For recommendations on closing timing, run Report Timing Closure Recommendations in the Timing Analyzer.
-Info (332146): Worst-case setup slack is -4.266
+Info (332146): Worst-case setup slack is -4.205
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):    -4.266             -32.669 PS2controller:inst1|ps2_controller:inst1|bsy 
-    Info (332119):    -1.629              -7.022 PS2_CLK 
-Info (332146): Worst-case hold slack is 0.164
+    Info (332119):    -4.205             -32.606 PS2controller:inst8|ps2_controller:inst1|bsy 
+    Info (332119):    -1.398              -7.408 PS2_CLK 
+    Info (332119):    -0.691             -16.195 clk50 
+Info (332146): Worst-case hold slack is -0.746
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
+    Info (332119):    -0.746              -0.746 clk50 
     Info (332119):     0.164               0.000 PS2_CLK 
-    Info (332119):     3.052               0.000 PS2controller:inst1|ps2_controller:inst1|bsy 
-Info (332140): No Recovery paths to report
-Info (332140): No Removal paths to report
-Info (332146): Worst-case minimum pulse width slack is -0.503
+    Info (332119):     2.968               0.000 PS2controller:inst8|ps2_controller:inst1|bsy 
+Info (332146): Worst-case recovery slack is -1.404
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):    -0.503              -3.288 PS2_CLK 
-    Info (332119):     0.156               0.000 PS2controller:inst1|ps2_controller:inst1|bsy 
+    Info (332119):    -1.404             -11.224 PS2controller:inst8|ps2_controller:inst1|bsy 
+Info (332146): Worst-case removal slack is 1.537
+    Info (332119):     Slack       End Point TNS Clock 
+    Info (332119): ========= =================== =====================
+    Info (332119):     1.537               0.000 PS2controller:inst8|ps2_controller:inst1|bsy 
+Info (332146): Worst-case minimum pulse width slack is -0.476
+    Info (332119):     Slack       End Point TNS Clock 
+    Info (332119): ========= =================== =====================
+    Info (332119):    -0.476              -3.464 PS2_CLK 
+    Info (332119):    -0.096              -2.848 clk50 
+    Info (332119):     0.159               0.000 PS2controller:inst8|ps2_controller:inst1|bsy 
 Info (332102): Design is not fully constrained for setup requirements
 Info (332102): Design is not fully constrained for hold requirements
 Info: Quartus Prime Timing Analyzer was successful. 0 errors, 6 warnings
-    Info: Peak virtual memory: 5218 megabytes
-    Info: Processing ended: Thu Feb 08 15:13:52 2024
-    Info: Elapsed time: 00:00:04
+    Info: Peak virtual memory: 5219 megabytes
+    Info: Processing ended: Thu Feb 08 23:44:57 2024
+    Info: Elapsed time: 00:00:03
     Info: Total CPU time (on all processors): 00:00:03
 
 

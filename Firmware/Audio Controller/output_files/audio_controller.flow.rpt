@@ -1,5 +1,5 @@
 Flow report for audio_controller
-Thu Feb 08 15:16:06 2024
+Thu Feb 08 19:37:49 2024
 Quartus Prime Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
 
 
@@ -41,7 +41,7 @@ https://fpgasoftware.intel.com/eula.
 +---------------------------------------------------------------------------+
 ; Flow Summary                                                              ;
 +-----------------------------+---------------------------------------------+
-; Flow Status                 ; Flow Failed - Thu Feb 08 15:16:06 2024      ;
+; Flow Status                 ; Flow Failed - Thu Feb 08 19:37:49 2024      ;
 ; Quartus Prime Version       ; 20.1.1 Build 720 11/11/2020 SJ Lite Edition ;
 ; Revision Name               ; audio_controller                            ;
 ; Top-level Entity Name       ; AudioController                             ;
@@ -63,7 +63,7 @@ https://fpgasoftware.intel.com/eula.
 +-------------------+---------------------+
 ; Option            ; Setting             ;
 +-------------------+---------------------+
-; Start date & time ; 02/08/2024 15:16:01 ;
+; Start date & time ; 02/08/2024 19:37:45 ;
 ; Main task         ; Compilation         ;
 ; Revision Name     ; audio_controller    ;
 +-------------------+---------------------+
@@ -74,7 +74,7 @@ https://fpgasoftware.intel.com/eula.
 +-------------------------------------+----------------------------------------+------------------+-----------------+------------+
 ; Assignment Name                     ; Value                                  ; Default Value    ; Entity Name     ; Section Id ;
 +-------------------------------------+----------------------------------------+------------------+-----------------+------------+
-; COMPILER_SIGNATURE_ID               ; 127913727136950.170740536106840        ; --               ; --              ; --         ;
+; COMPILER_SIGNATURE_ID               ; 127913727136950.170742106413024        ; --               ; --              ; --         ;
 ; MAX_CORE_JUNCTION_TEMP              ; 85                                     ; --               ; --              ; --         ;
 ; MIN_CORE_JUNCTION_TEMP              ; 0                                      ; --               ; --              ; --         ;
 ; PARTITION_COLOR                     ; -- (Not supported for targeted family) ; --               ; AudioController ; Top        ;
@@ -92,7 +92,7 @@ https://fpgasoftware.intel.com/eula.
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
 ; Module Name          ; Elapsed Time ; Average Processors Used ; Peak Virtual Memory ; Total CPU Time (on all processors) ;
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
-; Analysis & Synthesis ; 00:00:05     ; 1.0                     ; 4772 MB             ; 00:00:06                           ;
+; Analysis & Synthesis ; 00:00:05     ; 1.0                     ; 4771 MB             ; 00:00:06                           ;
 ; Total                ; 00:00:05     ; --                      ; --                  ; 00:00:06                           ;
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
 

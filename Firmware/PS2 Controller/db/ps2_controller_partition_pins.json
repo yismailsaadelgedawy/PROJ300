@@ -114,6 +114,10 @@
 				{
 					"name" : "PS2_CLK",
 					"strict" : false
+				},
+				{
+					"name" : "clk50",
+					"strict" : false
 				}
 			]
 		}

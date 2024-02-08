@@ -11,6 +11,7 @@ logic [7:0] data_in;
 // out
 logic [7:0] data_out;
 
+
 // wiring
 bsy_reader dut(
 
@@ -21,6 +22,7 @@ bsy_reader dut(
 
     // out
     .data_out(data_out)
+
 );
 
 
@@ -40,8 +42,9 @@ bsy_reader dut(
 // testing
 initial begin
 
+    $display("////// pressing 'Q' //////");
     rst = 1;
-    data_in = 7'haa; // garbage data, do not read yet
+    data_in = 8'h00; // garbage data, do not read yet
     bsy = 1;
    
     #66us;
@@ -49,35 +52,53 @@ initial begin
     #0.66us;
 
     rst = 0;
-    data_in = 7'h15; // the letter Q
+    data_in = 8'h15; // the letter Q
     bsy = 0; // falling edge
     
     #66us;
-    assert (data_out == data_in) $display("passed not busy; may read"); else $error("failed not busy; may read");
+    assert (data_out == data_in) $display("passed make code 0x15"); else $error("failed make code 0x15");
     #0.66us;
 
     bsy = 1;
-    data_in = 7'haa; // garbage data, do not read yet
+    data_in = 8'h00; // garbage data, do not read yet
 
     #66us;
-    assert (data_out == 7'h15) $display("passed latch"); else $error("failed latch");
+    assert (data_out == 8'h15) $display("passed latch"); else $error("failed latch");
+    #0.66us;
+
+
+
+
+    $display("////// releasing 'Q' //////");
+    bsy = 0;
+    data_in = 8'hF0; // break code
+
+    #66us;
+    assert (data_out == data_in) $display("passed break code 0xF0"); else $error("failed break code 0xF0");
+    #0.66us;
+
+
+    bsy = 1;
+    data_in = 8'h00; // garbage data, do not read yet
+
+    #66us;
+    assert (data_out == 8'hF0) $display("passed latch"); else $error("failed latch");
     #0.66us;
 
 
     bsy = 0;
-    data_in = 7'h33; // the letter H
+    data_in = 8'h15; // the Q
 
     #66us;
-    assert (data_out == data_in) $display("passed latch"); else $error("failed latch");
+    assert (data_out == data_in) $display("passed break code 0x15"); else $error("failed break code 0x15");
     #0.66us;
 
 
+    // no more data
     bsy = 1;
-    rst = 1;
+    data_in = 8'h00;
 
-    #66us;
-    assert (data_out == 'd0) $display("passed reset"); else $error("failed reset");
-    #0.66us;
+    #100us;
 
 
     $stop;

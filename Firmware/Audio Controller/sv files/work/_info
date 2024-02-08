@@ -87,6 +87,56 @@ R6
 R7
 R8
 nfine_clk_div@n_tb
+vkey_detector
+R1
+!s110 1707420766
+!i10b 1
+!s100 <2iRE0CGJU75j=mEBF1hC1
+R3
+I0edGnFEXfFTROIfC>9lE43
+R4
+S1
+R0
+w1707420760
+8C:/Users/minec/Desktop/Work/GitHub Repos/PROJ300/Firmware/Audio Controller/sv files/key_detector.sv
+FC:/Users/minec/Desktop/Work/GitHub Repos/PROJ300/Firmware/Audio Controller/sv files/key_detector.sv
+!i122 37
+L0 1 173
+R5
+r1
+!s85 0
+31
+!s108 1707420766.000000
+!s107 C:/Users/minec/Desktop/Work/GitHub Repos/PROJ300/Firmware/Audio Controller/sv files/key_detector.sv|
+!s90 -reportprogress|300|-work|work|C:/Users/minec/Desktop/Work/GitHub Repos/PROJ300/Firmware/Audio Controller/sv files/key_detector.sv|
+!i113 1
+R7
+R8
+vkey_detector_tb
+R1
+!s110 1707420994
+!i10b 1
+!s100 IYcjLVXQloM7MJng:;3P00
+R3
+IlWdLJjm147D[oT<Vd0cOC2
+R4
+S1
+R0
+w1707420991
+8C:/Users/minec/Desktop/Work/GitHub Repos/PROJ300/Firmware/Audio Controller/sv files/key_detector_tb.sv
+FC:/Users/minec/Desktop/Work/GitHub Repos/PROJ300/Firmware/Audio Controller/sv files/key_detector_tb.sv
+!i122 40
+L0 1 151
+R5
+r1
+!s85 0
+31
+!s108 1707420994.000000
+!s107 C:/Users/minec/Desktop/Work/GitHub Repos/PROJ300/Firmware/Audio Controller/sv files/key_detector_tb.sv|
+!s90 -reportprogress|300|-work|work|C:/Users/minec/Desktop/Work/GitHub Repos/PROJ300/Firmware/Audio Controller/sv files/key_detector_tb.sv|
+!i113 1
+R7
+R8
 vmuxN
 R1
 Z9 !s110 1707398068

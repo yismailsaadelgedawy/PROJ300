@@ -3,6 +3,7 @@ module key_detector_tb;
 // internal wires
 
 // in
+logic clk;
 logic [7:0] keyboard_data;
 
 // out
@@ -13,6 +14,7 @@ logic [3:0] q;
 key_detector dut(
 
     // in
+    .clk(clk),
     .keyboard_data(keyboard_data),
 
     // out
@@ -20,6 +22,17 @@ key_detector dut(
 
 );
 
+
+// 50MHz clock
+// time period is 20ns
+always begin
+
+    clk = 1;
+    #10ns;
+    clk = 0;
+    #10ns;
+
+end
 
 // testing
 initial begin
@@ -29,98 +42,105 @@ initial begin
 
     // nothing pressed
     keyboard_data = 7'h00;
-    #10ns;
+    #15ns;
     assert(q == 'd0) $display("passed 1"); else $error("failed 1");
+    #5ns;
 
 
     // B
     keyboard_data = 7'h32;
-    #10ns;
+    #15ns;
     assert(q == 'd1) $display("passed B"); else $error("failed B");
+    #5ns;
 
 
     // A
     keyboard_data = 7'h1C;
-    #10ns;
+    #15ns;
     assert(q == 'd3) $display("passed A"); else $error("failed A");
+    #5ns;
 
     // G
     keyboard_data = 7'h34;
-    #10ns;
+    #15ns;
     assert(q == 'd5) $display("passed G"); else $error("failed G");
-
+    #5ns;
 
     // F
     keyboard_data = 7'h2B;
-    #10ns;
+    #15ns;
     assert(q == 'd7) $display("passed F"); else $error("failed F");
-
+    #5ns;
 
     // E
     keyboard_data = 7'h24;
-    #10ns;
+    #15ns;
     assert(q == 'd8) $display("passed E"); else $error("failed E");
-
+    #5ns;
 
     // D
     keyboard_data = 7'h23;
-    #10ns;
+    #15ns;
     assert(q == 'd10) $display("passed D"); else $error("failed D");
-
+    #5ns;
 
     // C
     keyboard_data = 7'h21;
-    #10ns;
+    #15ns;
     assert(q == 'd12) $display("passed C"); else $error("failed C");
-
+    #5ns;
 
 
     $display(" ");
     $display("/////////// testing sharp notes ///////////");
 
     // pressing the shift key
-    keyboard_data = 7'h13;
-    #5ns; // simulating a delay between shift and pressing the next key
+    keyboard_data = 7'h12;
+    #20ns; // simulating a delay between shift and pressing the next key
     keyboard_data = 7'h1C; // A#
-    #10ns;
+    #15ns;
     assert(q == 'd2) $display("passed A#"); else $error("failed A#");
-    keyboard_data = 7'h00; // nothing is pressed
+    #5ns;
 
     // pressing the shift key
-    keyboard_data = 7'h13;
-    #5ns; // simulating a delay between shift and pressing the next key
+    keyboard_data = 7'h12;
+    #20ns; // simulating a delay between shift and pressing the next key
     keyboard_data = 7'h34; // G#
-    #10ns;
+    #15ns;
     assert(q == 'd4) $display("passed G#"); else $error("failed G#");
-    keyboard_data = 7'h00; // nothing is pressed
+    #5ns;
+    
 
     // pressing the shift key
-    keyboard_data = 7'h13;
-    #5ns; // simulating a delay between shift and pressing the next key
-    keyboard_data = 7'h34; // F#
-    #10ns;
-    assert(q == 'd6) $display("passed G#"); else $error("failed G#");
-    keyboard_data = 7'h00; // nothing is pressed
+    keyboard_data = 7'h12;
+    #20ns; // simulating a delay between shift and pressing the next key
+    keyboard_data = 7'h2B; // F#
+    #15ns;
+    assert(q == 'd6) $display("passed F#"); else $error("failed G#");
+    #5ns;
+    
 
     // pressing the shift key
-    keyboard_data = 7'h13;
-    #5ns; // simulating a delay between shift and pressing the next key
-    keyboard_data = 7'h34; // D#
-    #10ns;
-    assert(q == 'd9) $display("passed G#"); else $error("failed G#");
-    keyboard_data = 7'h00; // nothing is pressed
+    keyboard_data = 7'h12;
+    #20ns; // simulating a delay between shift and pressing the next key
+    keyboard_data = 7'h23; // D#
+    #15ns;
+    assert(q == 'd9) $display("passed D#"); else $error("failed G#");
+    #5ns;
+    
 
     // pressing the shift key
-    keyboard_data = 7'h13;
-    #5ns; // simulating a delay between shift and pressing the next key
-    keyboard_data = 7'h34; // C#
-    #10ns;
-    assert(q == 'd11) $display("passed G#"); else $error("failed G#");
-    keyboard_data = 7'h00; // nothing is pressed
+    keyboard_data = 7'h12;
+    #20ns; // simulating a delay between shift and pressing the next key
+    keyboard_data = 7'h21; // C#
+    #15ns;
+    assert(q == 'd11) $display("passed C#"); else $error("failed G#");
+    #5ns;
+    
 
 
     
-
+    $stop;
 
 
 end

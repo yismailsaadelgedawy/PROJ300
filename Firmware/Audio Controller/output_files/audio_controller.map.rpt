@@ -1,5 +1,5 @@
 Analysis & Synthesis report for audio_controller
-Thu Feb 08 15:16:06 2024
+Thu Feb 08 19:37:49 2024
 Quartus Prime Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
 
 
@@ -11,10 +11,19 @@ Quartus Prime Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
   3. Analysis & Synthesis Settings
   4. Parallel Compilation
   5. Parameter Settings for User Entity Instance: muxN:inst4
-  6. Parameter Settings for User Entity Instance: fine_clk_divN:inst
-  7. Parameter Settings for User Entity Instance: fine_clk_divN:inst1
-  8. Parameter Settings for User Entity Instance: fine_clk_divN:inst2
-  9. Analysis & Synthesis Messages
+  6. Parameter Settings for User Entity Instance: music_frequencies:inst|fine_clk_divN:inst
+  7. Parameter Settings for User Entity Instance: music_frequencies:inst|fine_clk_divN:inst1
+  8. Parameter Settings for User Entity Instance: music_frequencies:inst|fine_clk_divN:inst2
+  9. Parameter Settings for User Entity Instance: music_frequencies:inst|fine_clk_divN:inst3
+ 10. Parameter Settings for User Entity Instance: music_frequencies:inst|fine_clk_divN:inst15
+ 11. Parameter Settings for User Entity Instance: music_frequencies:inst|fine_clk_divN:inst4
+ 12. Parameter Settings for User Entity Instance: music_frequencies:inst|fine_clk_divN:inst5
+ 13. Parameter Settings for User Entity Instance: music_frequencies:inst|fine_clk_divN:inst7
+ 14. Parameter Settings for User Entity Instance: music_frequencies:inst|fine_clk_divN:inst16
+ 15. Parameter Settings for User Entity Instance: music_frequencies:inst|fine_clk_divN:inst8
+ 16. Parameter Settings for User Entity Instance: music_frequencies:inst|fine_clk_divN:inst9
+ 17. Parameter Settings for User Entity Instance: music_frequencies:inst|fine_clk_divN:inst10
+ 18. Analysis & Synthesis Messages
 
 
 
@@ -41,7 +50,7 @@ https://fpgasoftware.intel.com/eula.
 +---------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                              ;
 +-----------------------------+---------------------------------------------+
-; Analysis & Synthesis Status ; Failed - Thu Feb 08 15:16:06 2024           ;
+; Analysis & Synthesis Status ; Failed - Thu Feb 08 19:37:49 2024           ;
 ; Quartus Prime Version       ; 20.1.1 Build 720 11/11/2020 SJ Lite Edition ;
 ; Revision Name               ; audio_controller                            ;
 ; Top-level Entity Name       ; AudioController                             ;
@@ -164,39 +173,129 @@ https://fpgasoftware.intel.com/eula.
 +----------------+-------+--------------------------------+
 ; Parameter Name ; Value ; Type                           ;
 +----------------+-------+--------------------------------+
-; N              ; 4     ; Signed Integer                 ;
-; M              ; 2     ; Signed Integer                 ;
+; N              ; 16    ; Signed Integer                 ;
+; M              ; 4     ; Signed Integer                 ;
 +----------------+-------+--------------------------------+
 Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
 
 
-+-----------------------------------------------------------------+
-; Parameter Settings for User Entity Instance: fine_clk_divN:inst ;
-+----------------+--------+---------------------------------------+
-; Parameter Name ; Value  ; Type                                  ;
-+----------------+--------+---------------------------------------+
-; f              ; 493.88 ; Signed Float                          ;
-+----------------+--------+---------------------------------------+
++----------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: music_frequencies:inst|fine_clk_divN:inst ;
++----------------+--------+--------------------------------------------------------------+
+; Parameter Name ; Value  ; Type                                                         ;
++----------------+--------+--------------------------------------------------------------+
+; f              ; 493.88 ; Signed Float                                                 ;
++----------------+--------+--------------------------------------------------------------+
 Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
 
 
-+------------------------------------------------------------------+
-; Parameter Settings for User Entity Instance: fine_clk_divN:inst1 ;
-+----------------+--------+----------------------------------------+
-; Parameter Name ; Value  ; Type                                   ;
-+----------------+--------+----------------------------------------+
-; f              ; 440.00 ; Signed Float                           ;
-+----------------+--------+----------------------------------------+
++-----------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: music_frequencies:inst|fine_clk_divN:inst1 ;
++----------------+--------+---------------------------------------------------------------+
+; Parameter Name ; Value  ; Type                                                          ;
++----------------+--------+---------------------------------------------------------------+
+; f              ; 493.88 ; Signed Float                                                  ;
++----------------+--------+---------------------------------------------------------------+
 Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
 
 
-+------------------------------------------------------------------+
-; Parameter Settings for User Entity Instance: fine_clk_divN:inst2 ;
-+----------------+--------+----------------------------------------+
-; Parameter Name ; Value  ; Type                                   ;
-+----------------+--------+----------------------------------------+
-; f              ; 392.00 ; Signed Float                           ;
-+----------------+--------+----------------------------------------+
++-----------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: music_frequencies:inst|fine_clk_divN:inst2 ;
++----------------+--------+---------------------------------------------------------------+
+; Parameter Name ; Value  ; Type                                                          ;
++----------------+--------+---------------------------------------------------------------+
+; f              ; 493.88 ; Signed Float                                                  ;
++----------------+--------+---------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-----------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: music_frequencies:inst|fine_clk_divN:inst3 ;
++----------------+--------+---------------------------------------------------------------+
+; Parameter Name ; Value  ; Type                                                          ;
++----------------+--------+---------------------------------------------------------------+
+; f              ; 493.88 ; Signed Float                                                  ;
++----------------+--------+---------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: music_frequencies:inst|fine_clk_divN:inst15 ;
++----------------+--------+----------------------------------------------------------------+
+; Parameter Name ; Value  ; Type                                                           ;
++----------------+--------+----------------------------------------------------------------+
+; f              ; 493.88 ; Signed Float                                                   ;
++----------------+--------+----------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-----------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: music_frequencies:inst|fine_clk_divN:inst4 ;
++----------------+--------+---------------------------------------------------------------+
+; Parameter Name ; Value  ; Type                                                          ;
++----------------+--------+---------------------------------------------------------------+
+; f              ; 493.88 ; Signed Float                                                  ;
++----------------+--------+---------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-----------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: music_frequencies:inst|fine_clk_divN:inst5 ;
++----------------+--------+---------------------------------------------------------------+
+; Parameter Name ; Value  ; Type                                                          ;
++----------------+--------+---------------------------------------------------------------+
+; f              ; 493.88 ; Signed Float                                                  ;
++----------------+--------+---------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-----------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: music_frequencies:inst|fine_clk_divN:inst7 ;
++----------------+--------+---------------------------------------------------------------+
+; Parameter Name ; Value  ; Type                                                          ;
++----------------+--------+---------------------------------------------------------------+
+; f              ; 493.88 ; Signed Float                                                  ;
++----------------+--------+---------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: music_frequencies:inst|fine_clk_divN:inst16 ;
++----------------+--------+----------------------------------------------------------------+
+; Parameter Name ; Value  ; Type                                                           ;
++----------------+--------+----------------------------------------------------------------+
+; f              ; 493.88 ; Signed Float                                                   ;
++----------------+--------+----------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-----------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: music_frequencies:inst|fine_clk_divN:inst8 ;
++----------------+--------+---------------------------------------------------------------+
+; Parameter Name ; Value  ; Type                                                          ;
++----------------+--------+---------------------------------------------------------------+
+; f              ; 493.88 ; Signed Float                                                  ;
++----------------+--------+---------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-----------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: music_frequencies:inst|fine_clk_divN:inst9 ;
++----------------+--------+---------------------------------------------------------------+
+; Parameter Name ; Value  ; Type                                                          ;
++----------------+--------+---------------------------------------------------------------+
+; f              ; 493.88 ; Signed Float                                                  ;
++----------------+--------+---------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: music_frequencies:inst|fine_clk_divN:inst10 ;
++----------------+--------+----------------------------------------------------------------+
+; Parameter Name ; Value  ; Type                                                           ;
++----------------+--------+----------------------------------------------------------------+
+; f              ; 493.88 ; Signed Float                                                   ;
++----------------+--------+----------------------------------------------------------------+
 Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
 
 
@@ -206,10 +305,12 @@ Note: In order to hide this table in the UI and the text report file, please set
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
-    Info: Processing started: Thu Feb 08 15:16:01 2024
+    Info: Processing started: Thu Feb 08 19:37:44 2024
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off audio_controller -c audio_controller
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20030): Parallel compilation is enabled and will use 16 of the 16 processors detected
+Info (12021): Found 1 design units, including 1 entities, in source file sv files/key_detector.sv
+    Info (12023): Found entity 1: key_detector File: C:/Users/minec/Desktop/Work/GitHub Repos/PROJ300/Firmware/Audio Controller/sv files/key_detector.sv Line: 1
 Warning (12019): Can't analyze file -- file sv files/encoder.sv is missing
 Info (12021): Found 1 design units, including 1 entities, in source file sv files/muxn.sv
     Info (12023): Found entity 1: muxN File: C:/Users/minec/Desktop/Work/GitHub Repos/PROJ300/Firmware/Audio Controller/sv files/muxN.sv Line: 1
@@ -219,20 +320,22 @@ Info (12021): Found 1 design units, including 1 entities, in source file sv file
     Info (12023): Found entity 1: fine_clk_divN File: C:/Users/minec/Desktop/Work/GitHub Repos/PROJ300/Firmware/Audio Controller/sv files/fine_clk_divN.sv Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file audiocontroller.bdf
     Info (12023): Found entity 1: AudioController
+Info (12021): Found 1 design units, including 1 entities, in source file music_frequencies.bdf
+    Info (12023): Found entity 1: music_frequencies
 Warning (10222): Verilog HDL Parameter Declaration warning at fine_clk_divN.sv(18): Parameter Declaration in module "fine_clk_divN" behaves as a Local Parameter Declaration because the module has a Module Parameter Port List File: C:/Users/minec/Desktop/Work/GitHub Repos/PROJ300/Firmware/Audio Controller/sv files/fine_clk_divN.sv Line: 18
 Info (12127): Elaborating entity "AudioController" for the top level hierarchy
 Info (12128): Elaborating entity "muxN" for hierarchy "muxN:inst4"
-Info (12128): Elaborating entity "fine_clk_divN" for hierarchy "fine_clk_divN:inst"
+Info (12128): Elaborating entity "music_frequencies" for hierarchy "music_frequencies:inst"
+Info (12128): Elaborating entity "fine_clk_divN" for hierarchy "music_frequencies:inst|fine_clk_divN:inst"
 Warning (10230): Verilog HDL assignment warning at fine_clk_divN.sv(38): truncated value with size 32 to match size of target (25) File: C:/Users/minec/Desktop/Work/GitHub Repos/PROJ300/Firmware/Audio Controller/sv files/fine_clk_divN.sv Line: 38
-Info (12128): Elaborating entity "fine_clk_divN" for hierarchy "fine_clk_divN:inst1"
-Warning (10230): Verilog HDL assignment warning at fine_clk_divN.sv(38): truncated value with size 32 to match size of target (25) File: C:/Users/minec/Desktop/Work/GitHub Repos/PROJ300/Firmware/Audio Controller/sv files/fine_clk_divN.sv Line: 38
-Info (12128): Elaborating entity "fine_clk_divN" for hierarchy "fine_clk_divN:inst2"
-Warning (10230): Verilog HDL assignment warning at fine_clk_divN.sv(38): truncated value with size 32 to match size of target (25) File: C:/Users/minec/Desktop/Work/GitHub Repos/PROJ300/Firmware/Audio Controller/sv files/fine_clk_divN.sv Line: 38
+Info (12128): Elaborating entity "key_detector" for hierarchy "key_detector:inst1"
+Error (12009): Node "sel[3]" is missing source
+Error (12009): Node "sel[2]" is missing source
 Error (12009): Node "sel[1]" is missing source
 Error (12009): Node "sel[0]" is missing source
-Error: Quartus Prime Analysis & Synthesis was unsuccessful. 2 errors, 6 warnings
-    Error: Peak virtual memory: 4772 megabytes
-    Error: Processing ended: Thu Feb 08 15:16:06 2024
+Error: Quartus Prime Analysis & Synthesis was unsuccessful. 4 errors, 4 warnings
+    Error: Peak virtual memory: 4771 megabytes
+    Error: Processing ended: Thu Feb 08 19:37:49 2024
     Error: Elapsed time: 00:00:05
     Error: Total CPU time (on all processors): 00:00:06
 

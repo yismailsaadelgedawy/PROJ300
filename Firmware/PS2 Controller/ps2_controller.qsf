@@ -69,10 +69,6 @@ set_location_assignment PIN_T17 -to ps2clk
 set_location_assignment PIN_T15 -to ps2data
 set_location_assignment PIN_M9 -to clk50
 set_location_assignment PIN_T18 -to clk50_o
-set_global_assignment -name SYSTEMVERILOG_FILE "sv files/seven_seg_controller.sv"
-set_global_assignment -name SYSTEMVERILOG_FILE "sv files/bsy_reader.sv"
-set_global_assignment -name BDF_FILE TopLevel.bdf
-set_global_assignment -name SYSTEMVERILOG_FILE "sv files/ps2_controller.sv"
 set_location_assignment PIN_U21 -to disp0[0]
 set_location_assignment PIN_V21 -to disp0[1]
 set_location_assignment PIN_W22 -to disp0[2]
@@ -87,5 +83,25 @@ set_location_assignment PIN_AA18 -to disp1[3]
 set_location_assignment PIN_AB18 -to disp1[4]
 set_location_assignment PIN_AA17 -to disp1[5]
 set_location_assignment PIN_U22 -to disp1[6]
+set_location_assignment PIN_V19 -to disp3[6]
+set_location_assignment PIN_V18 -to disp3[5]
+set_location_assignment PIN_U17 -to disp3[4]
+set_location_assignment PIN_V16 -to disp3[3]
+set_location_assignment PIN_Y17 -to disp3[2]
+set_location_assignment PIN_W16 -to disp3[1]
+set_location_assignment PIN_Y16 -to disp3[0]
+set_location_assignment PIN_AB21 -to disp2[6]
+set_location_assignment PIN_AB22 -to disp2[5]
+set_location_assignment PIN_V14 -to disp2[4]
+set_location_assignment PIN_Y14 -to disp2[3]
+set_location_assignment PIN_AA10 -to disp2[2]
+set_location_assignment PIN_AB17 -to disp2[1]
+set_location_assignment PIN_Y19 -to disp2[0]
+set_global_assignment -name SYSTEMVERILOG_FILE "sv files/fine_clk_divN.sv"
+set_global_assignment -name SYSTEMVERILOG_FILE "sv files/break_code_detector.sv"
+set_global_assignment -name SYSTEMVERILOG_FILE "sv files/seven_seg_controller.sv"
+set_global_assignment -name SYSTEMVERILOG_FILE "sv files/bsy_reader.sv"
+set_global_assignment -name BDF_FILE TopLevel.bdf
+set_global_assignment -name SYSTEMVERILOG_FILE "sv files/ps2_controller.sv"
 set_global_assignment -name BDF_FILE PS2controller.bdf
 set_instance_assignment -name PARTITION_HIERARCHY root_partition -to | -section_id Top
