@@ -1,0 +1,124 @@
+|AudioController
+buzzer_out <= muxN:inst4.q
+clk => fine_clk_divN:inst.clk_in
+clk => fine_clk_divN:inst1.clk_in
+clk => fine_clk_divN:inst2.clk_in
+rst => fine_clk_divN:inst.rst
+rst => fine_clk_divN:inst1.rst
+rst => fine_clk_divN:inst2.rst
+key[0] => inst10[0].IN0
+key[1] => inst10[1].IN0
+key[2] => inst10[2].IN0
+
+
+|AudioController|muxN:inst4
+q <= Mux0.DB_MAX_OUTPUT_PORT_TYPE
+data[0] => Mux0.IN3
+data[1] => Mux0.IN2
+data[2] => Mux0.IN1
+data[3] => Mux0.IN0
+sel[0] => Mux0.IN5
+sel[1] => Mux0.IN4
+
+
+|AudioController|fine_clk_divN:inst
+clk_out <= clk_out~reg0.DB_MAX_OUTPUT_PORT_TYPE
+clk_in => clk_out~reg0.CLK
+clk_in => counter_reg[0].CLK
+clk_in => counter_reg[1].CLK
+clk_in => counter_reg[2].CLK
+clk_in => counter_reg[3].CLK
+clk_in => counter_reg[4].CLK
+clk_in => counter_reg[5].CLK
+clk_in => counter_reg[6].CLK
+clk_in => counter_reg[7].CLK
+clk_in => counter_reg[8].CLK
+clk_in => counter_reg[9].CLK
+clk_in => counter_reg[10].CLK
+clk_in => counter_reg[11].CLK
+clk_in => counter_reg[12].CLK
+clk_in => counter_reg[13].CLK
+clk_in => counter_reg[14].CLK
+clk_in => counter_reg[15].CLK
+clk_in => counter_reg[16].CLK
+clk_in => counter_reg[17].CLK
+clk_in => counter_reg[18].CLK
+clk_in => counter_reg[19].CLK
+clk_in => counter_reg[20].CLK
+clk_in => counter_reg[21].CLK
+clk_in => counter_reg[22].CLK
+clk_in => counter_reg[23].CLK
+clk_in => counter_reg[24].CLK
+rst => Decoder0.IN0
+
+
+|AudioController|fine_clk_divN:inst1
+clk_out <= clk_out~reg0.DB_MAX_OUTPUT_PORT_TYPE
+clk_in => clk_out~reg0.CLK
+clk_in => counter_reg[0].CLK
+clk_in => counter_reg[1].CLK
+clk_in => counter_reg[2].CLK
+clk_in => counter_reg[3].CLK
+clk_in => counter_reg[4].CLK
+clk_in => counter_reg[5].CLK
+clk_in => counter_reg[6].CLK
+clk_in => counter_reg[7].CLK
+clk_in => counter_reg[8].CLK
+clk_in => counter_reg[9].CLK
+clk_in => counter_reg[10].CLK
+clk_in => counter_reg[11].CLK
+clk_in => counter_reg[12].CLK
+clk_in => counter_reg[13].CLK
+clk_in => counter_reg[14].CLK
+clk_in => counter_reg[15].CLK
+clk_in => counter_reg[16].CLK
+clk_in => counter_reg[17].CLK
+clk_in => counter_reg[18].CLK
+clk_in => counter_reg[19].CLK
+clk_in => counter_reg[20].CLK
+clk_in => counter_reg[21].CLK
+clk_in => counter_reg[22].CLK
+clk_in => counter_reg[23].CLK
+clk_in => counter_reg[24].CLK
+rst => Decoder0.IN0
+
+
+|AudioController|fine_clk_divN:inst2
+clk_out <= clk_out~reg0.DB_MAX_OUTPUT_PORT_TYPE
+clk_in => clk_out~reg0.CLK
+clk_in => counter_reg[0].CLK
+clk_in => counter_reg[1].CLK
+clk_in => counter_reg[2].CLK
+clk_in => counter_reg[3].CLK
+clk_in => counter_reg[4].CLK
+clk_in => counter_reg[5].CLK
+clk_in => counter_reg[6].CLK
+clk_in => counter_reg[7].CLK
+clk_in => counter_reg[8].CLK
+clk_in => counter_reg[9].CLK
+clk_in => counter_reg[10].CLK
+clk_in => counter_reg[11].CLK
+clk_in => counter_reg[12].CLK
+clk_in => counter_reg[13].CLK
+clk_in => counter_reg[14].CLK
+clk_in => counter_reg[15].CLK
+clk_in => counter_reg[16].CLK
+clk_in => counter_reg[17].CLK
+clk_in => counter_reg[18].CLK
+clk_in => counter_reg[19].CLK
+clk_in => counter_reg[20].CLK
+clk_in => counter_reg[21].CLK
+clk_in => counter_reg[22].CLK
+clk_in => counter_reg[23].CLK
+clk_in => counter_reg[24].CLK
+rst => Decoder0.IN0
+
+
+|AudioController|encoder:inst8
+q[0] <= q.DB_MAX_OUTPUT_PORT_TYPE
+q[1] <= q.DB_MAX_OUTPUT_PORT_TYPE
+data[0] => Decoder0.IN2
+data[1] => Decoder0.IN1
+data[2] => Decoder0.IN0
+
+

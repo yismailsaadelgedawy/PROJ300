@@ -1,0 +1,215 @@
+m255
+K4
+z2
+!s11f vlog 2020.1 2020.02, Feb 28 2020
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z0 dC:/Users/minec/Desktop/Work/GitHub Repos/PROJ300/Firmware/Audio Controller/sv files
+vAudioController
+!s110 1707398139
+!i10b 1
+!s100 RWdK3egZe;=@QXA>Yi=Hl1
+Z1 !s11b Dg1SIo80bB@j0V0VzS_@n1
+IjjVd4Q8G50696;=c_PVFF0
+Z2 VDg1SIo80bB@j0V0VzS_@n1
+R0
+w1707398120
+8C:/Users/minec/Desktop/Work/GitHub Repos/PROJ300/Firmware/Audio Controller/sv files/AudioController.v
+FC:/Users/minec/Desktop/Work/GitHub Repos/PROJ300/Firmware/Audio Controller/sv files/AudioController.v
+!i122 14
+L0 20 61
+Z3 OV;L;2020.1;71
+r1
+!s85 0
+31
+!s108 1707398139.000000
+!s107 C:/Users/minec/Desktop/Work/GitHub Repos/PROJ300/Firmware/Audio Controller/sv files/AudioController.v|
+!s90 -reportprogress|300|-work|work|C:/Users/minec/Desktop/Work/GitHub Repos/PROJ300/Firmware/Audio Controller/sv files/AudioController.v|
+!i113 1
+Z4 o-work work
+Z5 tCvgOpt 0
+n@audio@controller
+vd_ffN
+Z6 DXx6 sv_std 3 std 0 22 VYECXdT12H8WgbUP_5Y6:3
+Z7 !s110 1707398067
+!i10b 1
+!s100 i_i[YEjJ=8?Kk35_TD2Ze1
+R1
+IYU@hOXfhG@FBHEHT6[QVN0
+R2
+S1
+R0
+w1707038310
+8C:/Users/minec/Desktop/Work/GitHub Repos/PROJ300/Firmware/Audio Controller/sv files/d_ffN.sv
+FC:/Users/minec/Desktop/Work/GitHub Repos/PROJ300/Firmware/Audio Controller/sv files/d_ffN.sv
+!i122 6
+L0 1 35
+R3
+r1
+!s85 0
+31
+Z8 !s108 1707398067.000000
+!s107 C:/Users/minec/Desktop/Work/GitHub Repos/PROJ300/Firmware/Audio Controller/sv files/d_ffN.sv|
+!s90 -reportprogress|300|-work|work|C:/Users/minec/Desktop/Work/GitHub Repos/PROJ300/Firmware/Audio Controller/sv files/d_ffN.sv|
+!i113 1
+R4
+R5
+nd_ff@n
+vencoder
+R6
+R7
+!i10b 1
+!s100 @f_]hQGWAD_K=425X>mYI0
+R1
+II4AlA5UiZZ@ZG:GnDYWX;3
+R2
+S1
+R0
+w1707396293
+8C:/Users/minec/Desktop/Work/GitHub Repos/PROJ300/Firmware/Audio Controller/sv files/encoder.sv
+FC:/Users/minec/Desktop/Work/GitHub Repos/PROJ300/Firmware/Audio Controller/sv files/encoder.sv
+!i122 7
+L0 1 50
+R3
+r1
+!s85 0
+31
+R8
+!s107 C:/Users/minec/Desktop/Work/GitHub Repos/PROJ300/Firmware/Audio Controller/sv files/encoder.sv|
+!s90 -reportprogress|300|-work|work|C:/Users/minec/Desktop/Work/GitHub Repos/PROJ300/Firmware/Audio Controller/sv files/encoder.sv|
+!i113 1
+R4
+R5
+vencoder_tb
+R6
+R7
+!i10b 1
+!s100 [JAR4`PkA75H@NCeF@?WJ0
+R1
+Io:_b>JdV?X6P>o<1^khK`0
+R2
+S1
+R0
+w1707396310
+8C:/Users/minec/Desktop/Work/GitHub Repos/PROJ300/Firmware/Audio Controller/sv files/encoder_tb.sv
+FC:/Users/minec/Desktop/Work/GitHub Repos/PROJ300/Firmware/Audio Controller/sv files/encoder_tb.sv
+!i122 8
+L0 1 48
+R3
+r1
+!s85 0
+31
+R8
+!s107 C:/Users/minec/Desktop/Work/GitHub Repos/PROJ300/Firmware/Audio Controller/sv files/encoder_tb.sv|
+!s90 -reportprogress|300|-work|work|C:/Users/minec/Desktop/Work/GitHub Repos/PROJ300/Firmware/Audio Controller/sv files/encoder_tb.sv|
+!i113 1
+R4
+R5
+vfine_clk_divN
+R6
+R7
+!i10b 1
+!s100 TR9XT<Q7ia=34B2ai8zS61
+R1
+I7KS^f[<^N7d?K9PYHlZ2f1
+R2
+S1
+R0
+w1707044753
+8C:/Users/minec/Desktop/Work/GitHub Repos/PROJ300/Firmware/Audio Controller/sv files/fine_clk_divN.sv
+FC:/Users/minec/Desktop/Work/GitHub Repos/PROJ300/Firmware/Audio Controller/sv files/fine_clk_divN.sv
+!i122 9
+L0 1 59
+R3
+r1
+!s85 0
+31
+R8
+!s107 C:/Users/minec/Desktop/Work/GitHub Repos/PROJ300/Firmware/Audio Controller/sv files/fine_clk_divN.sv|
+!s90 -reportprogress|300|-work|work|C:/Users/minec/Desktop/Work/GitHub Repos/PROJ300/Firmware/Audio Controller/sv files/fine_clk_divN.sv|
+!i113 1
+R4
+R5
+nfine_clk_div@n
+vfine_clk_divN_tb
+R6
+R7
+!i10b 1
+!s100 QAeOf7G4I]AKzXDM]lOO>0
+R1
+I5;kP]fEfdo`8NhC[Fnbjb0
+R2
+S1
+R0
+w1707043722
+8C:/Users/minec/Desktop/Work/GitHub Repos/PROJ300/Firmware/Audio Controller/sv files/fine_clk_divN_tb.sv
+FC:/Users/minec/Desktop/Work/GitHub Repos/PROJ300/Firmware/Audio Controller/sv files/fine_clk_divN_tb.sv
+!i122 10
+L0 1 61
+R3
+r1
+!s85 0
+31
+R8
+!s107 C:/Users/minec/Desktop/Work/GitHub Repos/PROJ300/Firmware/Audio Controller/sv files/fine_clk_divN_tb.sv|
+!s90 -reportprogress|300|-work|work|C:/Users/minec/Desktop/Work/GitHub Repos/PROJ300/Firmware/Audio Controller/sv files/fine_clk_divN_tb.sv|
+!i113 1
+R4
+R5
+nfine_clk_div@n_tb
+vmuxN
+R6
+Z9 !s110 1707398068
+!i10b 1
+!s100 ?UU=?CbUSBSJ2Gg>G307K2
+R1
+I7[4bW2Of5<eNXRABT=gbg1
+R2
+S1
+R0
+w1707395225
+8C:/Users/minec/Desktop/Work/GitHub Repos/PROJ300/Firmware/Audio Controller/sv files/muxN.sv
+FC:/Users/minec/Desktop/Work/GitHub Repos/PROJ300/Firmware/Audio Controller/sv files/muxN.sv
+!i122 11
+L0 1 11
+R3
+r1
+!s85 0
+31
+R8
+!s107 C:/Users/minec/Desktop/Work/GitHub Repos/PROJ300/Firmware/Audio Controller/sv files/muxN.sv|
+!s90 -reportprogress|300|-work|work|C:/Users/minec/Desktop/Work/GitHub Repos/PROJ300/Firmware/Audio Controller/sv files/muxN.sv|
+!i113 1
+R4
+R5
+nmux@n
+vmuxN_tb
+R6
+R9
+!i10b 1
+!s100 bT^kG2ELGCgbb8JRES;Ka0
+R1
+I2a5RiBbmcBmaYmnPd`KVH2
+R2
+S1
+R0
+w1707393921
+8C:/Users/minec/Desktop/Work/GitHub Repos/PROJ300/Firmware/Audio Controller/sv files/muxN_tb.sv
+FC:/Users/minec/Desktop/Work/GitHub Repos/PROJ300/Firmware/Audio Controller/sv files/muxN_tb.sv
+!i122 12
+L0 1 54
+R3
+r1
+!s85 0
+31
+!s108 1707398068.000000
+!s107 C:/Users/minec/Desktop/Work/GitHub Repos/PROJ300/Firmware/Audio Controller/sv files/muxN_tb.sv|
+!s90 -reportprogress|300|-work|work|C:/Users/minec/Desktop/Work/GitHub Repos/PROJ300/Firmware/Audio Controller/sv files/muxN_tb.sv|
+!i113 1
+R4
+R5
+nmux@n_tb
