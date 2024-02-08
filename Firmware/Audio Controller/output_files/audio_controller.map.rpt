@@ -1,5 +1,5 @@
 Analysis & Synthesis report for audio_controller
-Thu Feb 08 13:24:33 2024
+Thu Feb 08 15:16:06 2024
 Quartus Prime Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
 
 
@@ -10,18 +10,11 @@ Quartus Prime Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
   2. Analysis & Synthesis Summary
   3. Analysis & Synthesis Settings
   4. Parallel Compilation
-  5. Analysis & Synthesis Source Files Read
-  6. Analysis & Synthesis Resource Usage Summary
-  7. Analysis & Synthesis Resource Utilization by Entity
-  8. General Register Statistics
-  9. Multiplexer Restructuring Statistics (Restructuring Performed)
- 10. Parameter Settings for User Entity Instance: muxN:inst4
- 11. Parameter Settings for User Entity Instance: fine_clk_divN:inst
- 12. Parameter Settings for User Entity Instance: fine_clk_divN:inst1
- 13. Parameter Settings for User Entity Instance: fine_clk_divN:inst2
- 14. Post-Synthesis Netlist Statistics for Top Partition
- 15. Elapsed Time Per Partition
- 16. Analysis & Synthesis Messages
+  5. Parameter Settings for User Entity Instance: muxN:inst4
+  6. Parameter Settings for User Entity Instance: fine_clk_divN:inst
+  7. Parameter Settings for User Entity Instance: fine_clk_divN:inst1
+  8. Parameter Settings for User Entity Instance: fine_clk_divN:inst2
+  9. Analysis & Synthesis Messages
 
 
 
@@ -45,27 +38,22 @@ https://fpgasoftware.intel.com/eula.
 
 
 
-+-------------------------------------------------------------------------------+
-; Analysis & Synthesis Summary                                                  ;
-+---------------------------------+---------------------------------------------+
-; Analysis & Synthesis Status     ; Successful - Thu Feb 08 13:24:33 2024       ;
-; Quartus Prime Version           ; 20.1.1 Build 720 11/11/2020 SJ Lite Edition ;
-; Revision Name                   ; audio_controller                            ;
-; Top-level Entity Name           ; AudioController                             ;
-; Family                          ; Cyclone V                                   ;
-; Logic utilization (in ALMs)     ; N/A                                         ;
-; Total registers                 ; 78                                          ;
-; Total pins                      ; 6                                           ;
-; Total virtual pins              ; 0                                           ;
-; Total block memory bits         ; 0                                           ;
-; Total DSP Blocks                ; 0                                           ;
-; Total HSSI RX PCSs              ; 0                                           ;
-; Total HSSI PMA RX Deserializers ; 0                                           ;
-; Total HSSI TX PCSs              ; 0                                           ;
-; Total HSSI PMA TX Serializers   ; 0                                           ;
-; Total PLLs                      ; 0                                           ;
-; Total DLLs                      ; 0                                           ;
-+---------------------------------+---------------------------------------------+
++---------------------------------------------------------------------------+
+; Analysis & Synthesis Summary                                              ;
++-----------------------------+---------------------------------------------+
+; Analysis & Synthesis Status ; Failed - Thu Feb 08 15:16:06 2024           ;
+; Quartus Prime Version       ; 20.1.1 Build 720 11/11/2020 SJ Lite Edition ;
+; Revision Name               ; audio_controller                            ;
+; Top-level Entity Name       ; AudioController                             ;
+; Family                      ; Cyclone V                                   ;
+; Logic utilization (in ALMs) ; N/A until Partition Merge                   ;
+; Total registers             ; N/A until Partition Merge                   ;
+; Total pins                  ; N/A until Partition Merge                   ;
+; Total virtual pins          ; N/A until Partition Merge                   ;
+; Total block memory bits     ; N/A until Partition Merge                   ;
+; Total PLLs                  ; N/A until Partition Merge                   ;
+; Total DLLs                  ; N/A until Partition Merge                   ;
++-----------------------------+---------------------------------------------+
 
 
 +---------------------------------------------------------------------------------------------------------------------------+
@@ -164,91 +152,11 @@ https://fpgasoftware.intel.com/eula.
 ; Maximum allowed            ; 16          ;
 ;                            ;             ;
 ; Average used               ; 1.00        ;
-; Maximum used               ; 16          ;
+; Maximum used               ; 1           ;
 ;                            ;             ;
 ; Usage by Processor         ; % Time Used ;
 ;     Processor 1            ; 100.0%      ;
-;     Processors 2-16        ;   0.0%      ;
 +----------------------------+-------------+
-
-
-+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Source Files Read                                                                                                                                                                   ;
-+----------------------------------+-----------------+------------------------------------+------------------------------------------------------------------------------------------------------+---------+
-; File Name with User-Entered Path ; Used in Netlist ; File Type                          ; File Name with Absolute Path                                                                         ; Library ;
-+----------------------------------+-----------------+------------------------------------+------------------------------------------------------------------------------------------------------+---------+
-; sv files/encoder.sv              ; yes             ; User SystemVerilog HDL File        ; C:/Users/minec/Desktop/Work/GitHub Repos/PROJ300/Firmware/Audio Controller/sv files/encoder.sv       ;         ;
-; sv files/muxN.sv                 ; yes             ; User SystemVerilog HDL File        ; C:/Users/minec/Desktop/Work/GitHub Repos/PROJ300/Firmware/Audio Controller/sv files/muxN.sv          ;         ;
-; sv files/fine_clk_divN.sv        ; yes             ; User SystemVerilog HDL File        ; C:/Users/minec/Desktop/Work/GitHub Repos/PROJ300/Firmware/Audio Controller/sv files/fine_clk_divN.sv ;         ;
-; AudioController.bdf              ; yes             ; User Block Diagram/Schematic File  ; C:/Users/minec/Desktop/Work/GitHub Repos/PROJ300/Firmware/Audio Controller/AudioController.bdf       ;         ;
-+----------------------------------+-----------------+------------------------------------+------------------------------------------------------------------------------------------------------+---------+
-
-
-+---------------------------------------------------------+
-; Analysis & Synthesis Resource Usage Summary             ;
-+---------------------------------------------+-----------+
-; Resource                                    ; Usage     ;
-+---------------------------------------------+-----------+
-; Estimate of Logic utilization (ALMs needed) ; 57        ;
-;                                             ;           ;
-; Combinational ALUT usage for logic          ; 97        ;
-;     -- 7 input functions                    ; 0         ;
-;     -- 6 input functions                    ; 16        ;
-;     -- 5 input functions                    ; 0         ;
-;     -- 4 input functions                    ; 6         ;
-;     -- <=3 input functions                  ; 75        ;
-;                                             ;           ;
-; Dedicated logic registers                   ; 78        ;
-;                                             ;           ;
-; I/O pins                                    ; 6         ;
-;                                             ;           ;
-; Total DSP Blocks                            ; 0         ;
-;                                             ;           ;
-; Maximum fan-out node                        ; clk~input ;
-; Maximum fan-out                             ; 78        ;
-; Total fan-out                               ; 505       ;
-; Average fan-out                             ; 2.70      ;
-+---------------------------------------------+-----------+
-
-
-+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                                         ;
-+----------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+--------------------------------------+-----------------+--------------+
-; Compilation Hierarchy Node ; Combinational ALUTs ; Dedicated Logic Registers ; Block Memory Bits ; DSP Blocks ; Pins ; Virtual Pins ; Full Hierarchy Name                  ; Entity Name     ; Library Name ;
-+----------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+--------------------------------------+-----------------+--------------+
-; |AudioController           ; 97 (0)              ; 78 (0)                    ; 0                 ; 0          ; 6    ; 0            ; |AudioController                     ; AudioController ; work         ;
-;    |fine_clk_divN:inst1|   ; 32 (32)             ; 26 (26)                   ; 0                 ; 0          ; 0    ; 0            ; |AudioController|fine_clk_divN:inst1 ; fine_clk_divN   ; work         ;
-;    |fine_clk_divN:inst2|   ; 32 (32)             ; 26 (26)                   ; 0                 ; 0          ; 0    ; 0            ; |AudioController|fine_clk_divN:inst2 ; fine_clk_divN   ; work         ;
-;    |fine_clk_divN:inst|    ; 32 (32)             ; 26 (26)                   ; 0                 ; 0          ; 0    ; 0            ; |AudioController|fine_clk_divN:inst  ; fine_clk_divN   ; work         ;
-;    |muxN:inst4|            ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |AudioController|muxN:inst4          ; muxN            ; work         ;
-+----------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+--------------------------------------+-----------------+--------------+
-Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
-
-
-+------------------------------------------------------+
-; General Register Statistics                          ;
-+----------------------------------------------+-------+
-; Statistic                                    ; Value ;
-+----------------------------------------------+-------+
-; Total registers                              ; 78    ;
-; Number of registers using Synchronous Clear  ; 75    ;
-; Number of registers using Synchronous Load   ; 0     ;
-; Number of registers using Asynchronous Clear ; 0     ;
-; Number of registers using Asynchronous Load  ; 0     ;
-; Number of registers using Clock Enable       ; 0     ;
-; Number of registers using Preset             ; 0     ;
-+----------------------------------------------+-------+
-
-
-+--------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Multiplexer Restructuring Statistics (Restructuring Performed)                                                                                                     ;
-+--------------------+-----------+---------------+----------------------+------------------------+------------+------------------------------------------------------+
-; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output                           ;
-+--------------------+-----------+---------------+----------------------+------------------------+------------+------------------------------------------------------+
-; 3:1                ; 25 bits   ; 50 LEs        ; 0 LEs                ; 50 LEs                 ; Yes        ; |AudioController|fine_clk_divN:inst2|counter_reg[11] ;
-; 3:1                ; 25 bits   ; 50 LEs        ; 0 LEs                ; 50 LEs                 ; Yes        ; |AudioController|fine_clk_divN:inst1|counter_reg[22] ;
-; 3:1                ; 25 bits   ; 50 LEs        ; 0 LEs                ; 50 LEs                 ; Yes        ; |AudioController|fine_clk_divN:inst|counter_reg[17]  ;
-+--------------------+-----------+---------------+----------------------+------------------------+------------+------------------------------------------------------+
 
 
 +---------------------------------------------------------+
@@ -292,48 +200,17 @@ Note: In order to hide this table in the UI and the text report file, please set
 Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
 
 
-+-----------------------------------------------------+
-; Post-Synthesis Netlist Statistics for Top Partition ;
-+-----------------------+-----------------------------+
-; Type                  ; Count                       ;
-+-----------------------+-----------------------------+
-; arriav_ff             ; 78                          ;
-;     SCLR              ; 75                          ;
-;     plain             ; 3                           ;
-; arriav_lcell_comb     ; 97                          ;
-;     arith             ; 75                          ;
-;         1 data inputs ; 75                          ;
-;     normal            ; 22                          ;
-;         4 data inputs ; 6                           ;
-;         6 data inputs ; 16                          ;
-; boundary_port         ; 6                           ;
-;                       ;                             ;
-; Max LUT depth         ; 3.40                        ;
-; Average LUT depth     ; 2.78                        ;
-+-----------------------+-----------------------------+
-
-
-+-------------------------------+
-; Elapsed Time Per Partition    ;
-+----------------+--------------+
-; Partition Name ; Elapsed Time ;
-+----------------+--------------+
-; Top            ; 00:00:00     ;
-+----------------+--------------+
-
-
 +-------------------------------+
 ; Analysis & Synthesis Messages ;
 +-------------------------------+
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
-    Info: Processing started: Thu Feb 08 13:24:28 2024
+    Info: Processing started: Thu Feb 08 15:16:01 2024
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off audio_controller -c audio_controller
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20030): Parallel compilation is enabled and will use 16 of the 16 processors detected
-Info (12021): Found 1 design units, including 1 entities, in source file sv files/encoder.sv
-    Info (12023): Found entity 1: encoder File: C:/Users/minec/Desktop/Work/GitHub Repos/PROJ300/Firmware/Audio Controller/sv files/encoder.sv Line: 1
+Warning (12019): Can't analyze file -- file sv files/encoder.sv is missing
 Info (12021): Found 1 design units, including 1 entities, in source file sv files/muxn.sv
     Info (12023): Found entity 1: muxN File: C:/Users/minec/Desktop/Work/GitHub Repos/PROJ300/Firmware/Audio Controller/sv files/muxN.sv Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file sv files/d_ffn.sv
@@ -351,18 +228,12 @@ Info (12128): Elaborating entity "fine_clk_divN" for hierarchy "fine_clk_divN:in
 Warning (10230): Verilog HDL assignment warning at fine_clk_divN.sv(38): truncated value with size 32 to match size of target (25) File: C:/Users/minec/Desktop/Work/GitHub Repos/PROJ300/Firmware/Audio Controller/sv files/fine_clk_divN.sv Line: 38
 Info (12128): Elaborating entity "fine_clk_divN" for hierarchy "fine_clk_divN:inst2"
 Warning (10230): Verilog HDL assignment warning at fine_clk_divN.sv(38): truncated value with size 32 to match size of target (25) File: C:/Users/minec/Desktop/Work/GitHub Repos/PROJ300/Firmware/Audio Controller/sv files/fine_clk_divN.sv Line: 38
-Info (12128): Elaborating entity "encoder" for hierarchy "encoder:inst8"
-Info (286030): Timing-Driven Synthesis is running
-Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
-    Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
-Info (21057): Implemented 103 device resources after synthesis - the final resource count might be different
-    Info (21058): Implemented 5 input pins
-    Info (21059): Implemented 1 output pins
-    Info (21061): Implemented 97 logic cells
-Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 5 warnings
-    Info: Peak virtual memory: 4882 megabytes
-    Info: Processing ended: Thu Feb 08 13:24:33 2024
-    Info: Elapsed time: 00:00:05
-    Info: Total CPU time (on all processors): 00:00:07
+Error (12009): Node "sel[1]" is missing source
+Error (12009): Node "sel[0]" is missing source
+Error: Quartus Prime Analysis & Synthesis was unsuccessful. 2 errors, 6 warnings
+    Error: Peak virtual memory: 4772 megabytes
+    Error: Processing ended: Thu Feb 08 15:16:06 2024
+    Error: Elapsed time: 00:00:05
+    Error: Total CPU time (on all processors): 00:00:06
 
 

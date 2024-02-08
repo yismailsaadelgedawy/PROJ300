@@ -6,9 +6,6 @@ clk => fine_clk_divN:inst2.clk_in
 rst => fine_clk_divN:inst.rst
 rst => fine_clk_divN:inst1.rst
 rst => fine_clk_divN:inst2.rst
-key[0] => inst10[0].IN0
-key[1] => inst10[1].IN0
-key[2] => inst10[2].IN0
 
 
 |AudioController|muxN:inst4
@@ -112,13 +109,5 @@ clk_in => counter_reg[22].CLK
 clk_in => counter_reg[23].CLK
 clk_in => counter_reg[24].CLK
 rst => Decoder0.IN0
-
-
-|AudioController|encoder:inst8
-q[0] <= q.DB_MAX_OUTPUT_PORT_TYPE
-q[1] <= q.DB_MAX_OUTPUT_PORT_TYPE
-data[0] => Decoder0.IN2
-data[1] => Decoder0.IN1
-data[2] => Decoder0.IN0
 
 

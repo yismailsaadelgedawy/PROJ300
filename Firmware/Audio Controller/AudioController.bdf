@@ -39,26 +39,9 @@ https://fpgasoftware.intel.com/eula.
 )
 (pin
 	(input)
-	(rect 680 144 848 160)
-	(text "INPUT" (rect 125 0 153 10)(font "Arial" (font_size 6)))
-	(text "key[2..0]" (rect 5 0 50 12)(font "Arial" ))
-	(pt 168 8)
-	(drawing
-		(line (pt 84 12)(pt 109 12))
-		(line (pt 84 4)(pt 109 4))
-		(line (pt 113 8)(pt 168 8))
-		(line (pt 84 12)(pt 84 4))
-		(line (pt 109 4)(pt 113 8))
-		(line (pt 109 12)(pt 113 8))
-	)
-	(text "VCC" (rect 128 7 148 17)(font "Arial" (font_size 6)))
-	(annotation_block (location)(rect 624 144 680 168))
-)
-(pin
-	(input)
 	(rect 272 136 440 152)
 	(text "INPUT" (rect 125 0 153 10)(font "Arial" (font_size 6)))
-	(text "clk" (rect 5 0 20 12)(font "Arial" ))
+	(text "clk" (rect 5 0 19 12)(font "Arial" ))
 	(pt 168 8)
 	(drawing
 		(line (pt 84 12)(pt 109 12))
@@ -129,7 +112,7 @@ https://fpgasoftware.intel.com/eula.
 	(annotation_block (parameter)(rect 704 280 873 337))
 )
 (symbol
-	(rect 416 240 448 272)
+	(rect 400 328 432 360)
 	(text "GND" (rect 8 16 29 26)(font "Arial" (font_size 6)))
 	(text "inst6" (rect 3 21 25 38)(font "Intel Clear" )(invisible))
 	(port
@@ -146,29 +129,7 @@ https://fpgasoftware.intel.com/eula.
 	)
 )
 (symbol
-	(rect 1048 120 1208 200)
-	(text "encoder" (rect 5 0 43 12)(font "Arial" ))
-	(text "inst8" (rect 8 64 30 81)(font "Intel Clear" ))
-	(port
-		(pt 0 32)
-		(input)
-		(text "data[2..0]" (rect 0 0 47 12)(font "Arial" ))
-		(text "data[2..0]" (rect 21 27 68 39)(font "Arial" ))
-		(line (pt 0 32)(pt 16 32)(line_width 3))
-	)
-	(port
-		(pt 160 32)
-		(output)
-		(text "q[1..0]" (rect 0 0 31 12)(font "Arial" ))
-		(text "q[1..0]" (rect 113 27 144 39)(font "Arial" ))
-		(line (pt 160 32)(pt 144 32)(line_width 3))
-	)
-	(drawing
-		(rectangle (rect 16 16 144 64))
-	)
-)
-(symbol
-	(rect 376 336 528 416)
+	(rect 360 424 512 504)
 	(text "fine_clk_divN" (rect 5 0 73 12)(font "Arial" ))
 	(text "inst" (rect 8 64 25 76)(font "Arial" ))
 	(port
@@ -200,10 +161,10 @@ https://fpgasoftware.intel.com/eula.
 	(drawing
 		(rectangle (rect 16 16 136 64))
 	)
-	(annotation_block (parameter)(rect 376 296 505 334))
+	(annotation_block (parameter)(rect 360 384 489 422))
 )
 (symbol
-	(rect 376 464 528 544)
+	(rect 360 552 512 632)
 	(text "fine_clk_divN" (rect 5 0 73 12)(font "Arial" ))
 	(text "inst1" (rect 8 64 30 81)(font "Intel Clear" ))
 	(port
@@ -235,10 +196,10 @@ https://fpgasoftware.intel.com/eula.
 	(drawing
 		(rectangle (rect 16 16 136 64))
 	)
-	(annotation_block (parameter)(rect 376 424 505 462))
+	(annotation_block (parameter)(rect 360 512 489 550))
 )
 (symbol
-	(rect 376 592 528 672)
+	(rect 360 680 512 760)
 	(text "fine_clk_divN" (rect 5 0 73 12)(font "Arial" ))
 	(text "inst2" (rect 8 64 30 81)(font "Intel Clear" ))
 	(port
@@ -270,56 +231,7 @@ https://fpgasoftware.intel.com/eula.
 	(drawing
 		(rectangle (rect 16 16 136 64))
 	)
-	(annotation_block (parameter)(rect 376 552 505 590))
-)
-(symbol
-	(rect 936 136 984 168)
-	(text "NOT" (rect 1 0 21 10)(font "Arial" (font_size 6)))
-	(text "inst10" (rect 3 21 31 38)(font "Intel Clear" ))
-	(port
-		(pt 0 16)
-		(input)
-		(text "IN" (rect 2 7 13 19)(font "Courier New" (bold))(invisible))
-		(text "IN" (rect 2 7 13 19)(font "Courier New" (bold))(invisible))
-		(line (pt 0 16)(pt 13 16))
-	)
-	(port
-		(pt 48 16)
-		(output)
-		(text "OUT" (rect 32 7 49 19)(font "Courier New" (bold))(invisible))
-		(text "OUT" (rect 32 7 49 19)(font "Courier New" (bold))(invisible))
-		(line (pt 39 16)(pt 48 16))
-	)
-	(drawing
-		(line (pt 13 25)(pt 13 7))
-		(line (pt 13 7)(pt 31 16))
-		(line (pt 13 25)(pt 31 16))
-		(circle (rect 31 12 39 20))
-	)
-)
-(connector
-	(pt 432 240)
-	(pt 432 224)
-)
-(connector
-	(text "data[0]" (rect 442 208 476 225)(font "Intel Clear" ))
-	(pt 432 224)
-	(pt 488 224)
-)
-(connector
-	(text "data[1]" (rect 538 352 572 369)(font "Intel Clear" ))
-	(pt 528 368)
-	(pt 560 368)
-)
-(connector
-	(text "data[2]" (rect 538 480 572 497)(font "Intel Clear" ))
-	(pt 528 496)
-	(pt 560 496)
-)
-(connector
-	(text "data[3]" (rect 538 608 572 625)(font "Intel Clear" ))
-	(pt 528 624)
-	(pt 560 624)
+	(annotation_block (parameter)(rect 360 640 489 678))
 )
 (connector
 	(text "clk_50" (rect 450 128 481 145)(font "Intel Clear" ))
@@ -330,36 +242,6 @@ https://fpgasoftware.intel.com/eula.
 	(text "sw_rst" (rect 450 144 480 161)(font "Intel Clear" ))
 	(pt 440 160)
 	(pt 496 160)
-)
-(connector
-	(text "sw_rst" (rect 338 624 368 641)(font "Intel Clear" ))
-	(pt 376 640)
-	(pt 328 640)
-)
-(connector
-	(text "sw_rst" (rect 338 496 368 513)(font "Intel Clear" ))
-	(pt 376 512)
-	(pt 328 512)
-)
-(connector
-	(text "sw_rst" (rect 338 368 368 385)(font "Intel Clear" ))
-	(pt 376 384)
-	(pt 328 384)
-)
-(connector
-	(text "clk_50" (rect 338 352 369 369)(font "Intel Clear" ))
-	(pt 376 368)
-	(pt 328 368)
-)
-(connector
-	(text "clk_50" (rect 338 480 369 497)(font "Intel Clear" ))
-	(pt 376 496)
-	(pt 328 496)
-)
-(connector
-	(text "clk_50" (rect 338 608 369 625)(font "Intel Clear" ))
-	(pt 376 624)
-	(pt 328 624)
 )
 (connector
 	(text "data[3..0]" (rect 650 352 694 369)(font "Intel Clear" ))
@@ -378,22 +260,63 @@ https://fpgasoftware.intel.com/eula.
 	(pt 936 368)
 )
 (connector
-	(text "sel[1..0]" (rect 1218 136 1255 153)(font "Intel Clear" ))
-	(pt 1208 152)
-	(pt 1272 152)
-	(bus)
+	(pt 416 328)
+	(pt 416 312)
 )
 (connector
-	(pt 984 152)
-	(pt 1048 152)
-	(bus)
+	(text "data[0]" (rect 426 296 460 313)(font "Intel Clear" ))
+	(pt 416 312)
+	(pt 472 312)
 )
 (connector
-	(pt 848 152)
-	(pt 936 152)
-	(bus)
+	(text "data[1]" (rect 522 440 556 457)(font "Intel Clear" ))
+	(pt 512 456)
+	(pt 544 456)
 )
-(text "Audio Controller Module" (rect 528 96 786 122)(font "Intel Clear" (font_size 14)(bold)))
-(text "B" (rect 256 344 264 363)(font "Intel Clear" (font_size 8)))
-(text "A" (rect 256 496 264 515)(font "Intel Clear" (font_size 8)))
-(text "G" (rect 256 624 265 643)(font "Intel Clear" (font_size 8)))
+(connector
+	(text "data[2]" (rect 522 568 556 585)(font "Intel Clear" ))
+	(pt 512 584)
+	(pt 544 584)
+)
+(connector
+	(text "data[3]" (rect 522 696 556 713)(font "Intel Clear" ))
+	(pt 512 712)
+	(pt 544 712)
+)
+(connector
+	(text "sw_rst" (rect 322 712 352 729)(font "Intel Clear" ))
+	(pt 360 728)
+	(pt 312 728)
+)
+(connector
+	(text "sw_rst" (rect 322 584 352 601)(font "Intel Clear" ))
+	(pt 360 600)
+	(pt 312 600)
+)
+(connector
+	(text "sw_rst" (rect 322 456 352 473)(font "Intel Clear" ))
+	(pt 360 472)
+	(pt 312 472)
+)
+(connector
+	(text "clk_50" (rect 322 440 353 457)(font "Intel Clear" ))
+	(pt 360 456)
+	(pt 312 456)
+)
+(connector
+	(text "clk_50" (rect 322 568 353 585)(font "Intel Clear" ))
+	(pt 360 584)
+	(pt 312 584)
+)
+(connector
+	(text "clk_50" (rect 322 696 353 713)(font "Intel Clear" ))
+	(pt 360 712)
+	(pt 312 712)
+)
+(text "Audio Controller Module" (rect 536 40 794 66)(font "Intel Clear" (font_size 14)(bold)))
+(text "B" (rect 240 432 248 451)(font "Intel Clear" (font_size 8)))
+(text "A" (rect 240 584 248 603)(font "Intel Clear" (font_size 8)))
+(text "G" (rect 240 712 249 731)(font "Intel Clear" (font_size 8)))
+(text "Frequencies (lowest -> highest)" (rect 272 232 463 251)(font "Intel Clear" (font_size 8)(bold_italic)))
+(text "OFF" (rect 240 328 263 347)(font "Intel Clear" (font_size 8)))
+(text "octave IV" (rect 272 248 313 265)(font "Intel Clear" (font_size 6)(bold_italic)))
