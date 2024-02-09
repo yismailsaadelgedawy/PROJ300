@@ -1,5 +1,5 @@
 Analysis & Synthesis report for audio_controller
-Thu Feb 08 19:37:49 2024
+Fri Feb 09 00:01:30 2024
 Quartus Prime Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
 
 
@@ -10,20 +10,30 @@ Quartus Prime Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
   2. Analysis & Synthesis Summary
   3. Analysis & Synthesis Settings
   4. Parallel Compilation
-  5. Parameter Settings for User Entity Instance: muxN:inst4
-  6. Parameter Settings for User Entity Instance: music_frequencies:inst|fine_clk_divN:inst
-  7. Parameter Settings for User Entity Instance: music_frequencies:inst|fine_clk_divN:inst1
-  8. Parameter Settings for User Entity Instance: music_frequencies:inst|fine_clk_divN:inst2
-  9. Parameter Settings for User Entity Instance: music_frequencies:inst|fine_clk_divN:inst3
- 10. Parameter Settings for User Entity Instance: music_frequencies:inst|fine_clk_divN:inst15
- 11. Parameter Settings for User Entity Instance: music_frequencies:inst|fine_clk_divN:inst4
- 12. Parameter Settings for User Entity Instance: music_frequencies:inst|fine_clk_divN:inst5
- 13. Parameter Settings for User Entity Instance: music_frequencies:inst|fine_clk_divN:inst7
- 14. Parameter Settings for User Entity Instance: music_frequencies:inst|fine_clk_divN:inst16
- 15. Parameter Settings for User Entity Instance: music_frequencies:inst|fine_clk_divN:inst8
- 16. Parameter Settings for User Entity Instance: music_frequencies:inst|fine_clk_divN:inst9
- 17. Parameter Settings for User Entity Instance: music_frequencies:inst|fine_clk_divN:inst10
- 18. Analysis & Synthesis Messages
+  5. Analysis & Synthesis Source Files Read
+  6. Analysis & Synthesis Resource Usage Summary
+  7. Analysis & Synthesis Resource Utilization by Entity
+  8. Registers Removed During Synthesis
+  9. Removed Registers Triggering Further Register Optimizations
+ 10. General Register Statistics
+ 11. Inverted Register Statistics
+ 12. Multiplexer Restructuring Statistics (Restructuring Performed)
+ 13. Parameter Settings for User Entity Instance: muxN:inst4
+ 14. Parameter Settings for User Entity Instance: music_frequencies:inst|fine_clk_divN:inst
+ 15. Parameter Settings for User Entity Instance: music_frequencies:inst|fine_clk_divN:inst1
+ 16. Parameter Settings for User Entity Instance: music_frequencies:inst|fine_clk_divN:inst2
+ 17. Parameter Settings for User Entity Instance: music_frequencies:inst|fine_clk_divN:inst3
+ 18. Parameter Settings for User Entity Instance: music_frequencies:inst|fine_clk_divN:inst15
+ 19. Parameter Settings for User Entity Instance: music_frequencies:inst|fine_clk_divN:inst4
+ 20. Parameter Settings for User Entity Instance: music_frequencies:inst|fine_clk_divN:inst5
+ 21. Parameter Settings for User Entity Instance: music_frequencies:inst|fine_clk_divN:inst7
+ 22. Parameter Settings for User Entity Instance: music_frequencies:inst|fine_clk_divN:inst16
+ 23. Parameter Settings for User Entity Instance: music_frequencies:inst|fine_clk_divN:inst8
+ 24. Parameter Settings for User Entity Instance: music_frequencies:inst|fine_clk_divN:inst9
+ 25. Parameter Settings for User Entity Instance: music_frequencies:inst|fine_clk_divN:inst10
+ 26. Post-Synthesis Netlist Statistics for Top Partition
+ 27. Elapsed Time Per Partition
+ 28. Analysis & Synthesis Messages
 
 
 
@@ -47,22 +57,27 @@ https://fpgasoftware.intel.com/eula.
 
 
 
-+---------------------------------------------------------------------------+
-; Analysis & Synthesis Summary                                              ;
-+-----------------------------+---------------------------------------------+
-; Analysis & Synthesis Status ; Failed - Thu Feb 08 19:37:49 2024           ;
-; Quartus Prime Version       ; 20.1.1 Build 720 11/11/2020 SJ Lite Edition ;
-; Revision Name               ; audio_controller                            ;
-; Top-level Entity Name       ; AudioController                             ;
-; Family                      ; Cyclone V                                   ;
-; Logic utilization (in ALMs) ; N/A until Partition Merge                   ;
-; Total registers             ; N/A until Partition Merge                   ;
-; Total pins                  ; N/A until Partition Merge                   ;
-; Total virtual pins          ; N/A until Partition Merge                   ;
-; Total block memory bits     ; N/A until Partition Merge                   ;
-; Total PLLs                  ; N/A until Partition Merge                   ;
-; Total DLLs                  ; N/A until Partition Merge                   ;
-+-----------------------------+---------------------------------------------+
++-------------------------------------------------------------------------------+
+; Analysis & Synthesis Summary                                                  ;
++---------------------------------+---------------------------------------------+
+; Analysis & Synthesis Status     ; Successful - Fri Feb 09 00:01:30 2024       ;
+; Quartus Prime Version           ; 20.1.1 Build 720 11/11/2020 SJ Lite Edition ;
+; Revision Name                   ; audio_controller                            ;
+; Top-level Entity Name           ; AudioController                             ;
+; Family                          ; Cyclone V                                   ;
+; Logic utilization (in ALMs)     ; N/A                                         ;
+; Total registers                 ; 47                                          ;
+; Total pins                      ; 19                                          ;
+; Total virtual pins              ; 0                                           ;
+; Total block memory bits         ; 0                                           ;
+; Total DSP Blocks                ; 0                                           ;
+; Total HSSI RX PCSs              ; 0                                           ;
+; Total HSSI PMA RX Deserializers ; 0                                           ;
+; Total HSSI TX PCSs              ; 0                                           ;
+; Total HSSI PMA TX Serializers   ; 0                                           ;
+; Total PLLs                      ; 0                                           ;
+; Total DLLs                      ; 0                                           ;
++---------------------------------+---------------------------------------------+
 
 
 +---------------------------------------------------------------------------------------------------------------------------+
@@ -161,11 +176,227 @@ https://fpgasoftware.intel.com/eula.
 ; Maximum allowed            ; 16          ;
 ;                            ;             ;
 ; Average used               ; 1.00        ;
-; Maximum used               ; 1           ;
+; Maximum used               ; 16          ;
 ;                            ;             ;
 ; Usage by Processor         ; % Time Used ;
 ;     Processor 1            ; 100.0%      ;
+;     Processors 2-16        ;   0.0%      ;
 +----------------------------+-------------+
+
+
++-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Source Files Read                                                                                                                                                                                              ;
++--------------------------------------------+-----------------+------------------------------------+-----------------------------------------------------------------------------------------------------------------------+---------+
+; File Name with User-Entered Path           ; Used in Netlist ; File Type                          ; File Name with Absolute Path                                                                                          ; Library ;
++--------------------------------------------+-----------------+------------------------------------+-----------------------------------------------------------------------------------------------------------------------+---------+
+; ps2 files/sv files/seven_seg_controller.sv ; yes             ; User SystemVerilog HDL File        ; C:/Users/minec/Desktop/Work/GitHub Repos/PROJ300/Firmware/Audio Controller/ps2 files/sv files/seven_seg_controller.sv ;         ;
+; ps2 files/sv files/ps2_controller.sv       ; yes             ; User SystemVerilog HDL File        ; C:/Users/minec/Desktop/Work/GitHub Repos/PROJ300/Firmware/Audio Controller/ps2 files/sv files/ps2_controller.sv       ;         ;
+; ps2 files/sv files/bsy_reader.sv           ; yes             ; User SystemVerilog HDL File        ; C:/Users/minec/Desktop/Work/GitHub Repos/PROJ300/Firmware/Audio Controller/ps2 files/sv files/bsy_reader.sv           ;         ;
+; ps2 files/sv files/break_code_detector.sv  ; yes             ; User SystemVerilog HDL File        ; C:/Users/minec/Desktop/Work/GitHub Repos/PROJ300/Firmware/Audio Controller/ps2 files/sv files/break_code_detector.sv  ;         ;
+; ps2 files/PS2controller.bdf                ; yes             ; User Block Diagram/Schematic File  ; C:/Users/minec/Desktop/Work/GitHub Repos/PROJ300/Firmware/Audio Controller/ps2 files/PS2controller.bdf                ;         ;
+; sv files/key_detector.sv                   ; yes             ; User SystemVerilog HDL File        ; C:/Users/minec/Desktop/Work/GitHub Repos/PROJ300/Firmware/Audio Controller/sv files/key_detector.sv                   ;         ;
+; sv files/muxN.sv                           ; yes             ; User SystemVerilog HDL File        ; C:/Users/minec/Desktop/Work/GitHub Repos/PROJ300/Firmware/Audio Controller/sv files/muxN.sv                           ;         ;
+; sv files/fine_clk_divN.sv                  ; yes             ; User SystemVerilog HDL File        ; C:/Users/minec/Desktop/Work/GitHub Repos/PROJ300/Firmware/Audio Controller/sv files/fine_clk_divN.sv                  ;         ;
+; AudioController.bdf                        ; yes             ; User Block Diagram/Schematic File  ; C:/Users/minec/Desktop/Work/GitHub Repos/PROJ300/Firmware/Audio Controller/AudioController.bdf                        ;         ;
+; music_frequencies.bdf                      ; yes             ; User Block Diagram/Schematic File  ; C:/Users/minec/Desktop/Work/GitHub Repos/PROJ300/Firmware/Audio Controller/music_frequencies.bdf                      ;         ;
++--------------------------------------------+-----------------+------------------------------------+-----------------------------------------------------------------------------------------------------------------------+---------+
+
+
++-----------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Resource Usage Summary                                                         ;
++---------------------------------------------+-------------------------------------------------------+
+; Resource                                    ; Usage                                                 ;
++---------------------------------------------+-------------------------------------------------------+
+; Estimate of Logic utilization (ALMs needed) ; 32                                                    ;
+;                                             ;                                                       ;
+; Combinational ALUT usage for logic          ; 54                                                    ;
+;     -- 7 input functions                    ; 0                                                     ;
+;     -- 6 input functions                    ; 5                                                     ;
+;     -- 5 input functions                    ; 2                                                     ;
+;     -- 4 input functions                    ; 20                                                    ;
+;     -- <=3 input functions                  ; 27                                                    ;
+;                                             ;                                                       ;
+; Dedicated logic registers                   ; 47                                                    ;
+;                                             ;                                                       ;
+; I/O pins                                    ; 19                                                    ;
+;                                             ;                                                       ;
+; Total DSP Blocks                            ; 0                                                     ;
+;                                             ;                                                       ;
+; Maximum fan-out node                        ; PS2controller:inst2|break_code_detector:inst|Equal1~4 ;
+; Maximum fan-out                             ; 26                                                    ;
+; Total fan-out                               ; 363                                                   ;
+; Average fan-out                             ; 2.61                                                  ;
++---------------------------------------------+-------------------------------------------------------+
+
+
++-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                                                                             ;
++----------------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+---------------------------------------------------------------+----------------------+--------------+
+; Compilation Hierarchy Node       ; Combinational ALUTs ; Dedicated Logic Registers ; Block Memory Bits ; DSP Blocks ; Pins ; Virtual Pins ; Full Hierarchy Name                                           ; Entity Name          ; Library Name ;
++----------------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+---------------------------------------------------------------+----------------------+--------------+
+; |AudioController                 ; 54 (0)              ; 47 (0)                    ; 0                 ; 0          ; 19   ; 0            ; |AudioController                                              ; AudioController      ; work         ;
+;    |PS2controller:inst2|         ; 40 (1)              ; 47 (0)                    ; 0                 ; 0          ; 0    ; 0            ; |AudioController|PS2controller:inst2                          ; PS2controller        ; work         ;
+;       |break_code_detector:inst| ; 32 (32)             ; 26 (26)                   ; 0                 ; 0          ; 0    ; 0            ; |AudioController|PS2controller:inst2|break_code_detector:inst ; break_code_detector  ; work         ;
+;       |bsy_reader:inst2|         ; 0 (0)               ; 8 (8)                     ; 0                 ; 0          ; 0    ; 0            ; |AudioController|PS2controller:inst2|bsy_reader:inst2         ; bsy_reader           ; work         ;
+;       |ps2_controller:inst1|     ; 7 (7)               ; 13 (13)                   ; 0                 ; 0          ; 0    ; 0            ; |AudioController|PS2controller:inst2|ps2_controller:inst1     ; ps2_controller       ; work         ;
+;    |seven_seg_controller:inst3|  ; 14 (14)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |AudioController|seven_seg_controller:inst3                   ; seven_seg_controller ; work         ;
++----------------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+---------------------------------------------------------------+----------------------+--------------+
+Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
+
+
++--------------------------------------------------------------------------------------------------------+
+; Registers Removed During Synthesis                                                                     ;
++-----------------------------------------------------------------+--------------------------------------+
+; Register name                                                   ; Reason for Removal                   ;
++-----------------------------------------------------------------+--------------------------------------+
+; key_detector:inst1|shift_pressed                                ; Stuck at GND due to stuck port clock ;
+; key_detector:inst1|q[0..3]                                      ; Stuck at GND due to stuck port clock ;
+; music_frequencies:inst|fine_clk_divN:inst10|counter_reg[0..17]  ; Lost fanout                          ;
+; music_frequencies:inst|fine_clk_divN:inst10|clk_out             ; Lost fanout                          ;
+; music_frequencies:inst|fine_clk_divN:inst10|counter_reg[18..24] ; Lost fanout                          ;
+; music_frequencies:inst|fine_clk_divN:inst9|counter_reg[0..17]   ; Lost fanout                          ;
+; music_frequencies:inst|fine_clk_divN:inst9|clk_out              ; Lost fanout                          ;
+; music_frequencies:inst|fine_clk_divN:inst9|counter_reg[18..24]  ; Lost fanout                          ;
+; music_frequencies:inst|fine_clk_divN:inst8|counter_reg[0..17]   ; Lost fanout                          ;
+; music_frequencies:inst|fine_clk_divN:inst8|clk_out              ; Lost fanout                          ;
+; music_frequencies:inst|fine_clk_divN:inst8|counter_reg[18..24]  ; Lost fanout                          ;
+; music_frequencies:inst|fine_clk_divN:inst16|counter_reg[0..17]  ; Lost fanout                          ;
+; music_frequencies:inst|fine_clk_divN:inst16|clk_out             ; Lost fanout                          ;
+; music_frequencies:inst|fine_clk_divN:inst16|counter_reg[18..24] ; Lost fanout                          ;
+; music_frequencies:inst|fine_clk_divN:inst7|counter_reg[0..17]   ; Lost fanout                          ;
+; music_frequencies:inst|fine_clk_divN:inst7|clk_out              ; Lost fanout                          ;
+; music_frequencies:inst|fine_clk_divN:inst7|counter_reg[18..24]  ; Lost fanout                          ;
+; music_frequencies:inst|fine_clk_divN:inst5|counter_reg[0..17]   ; Lost fanout                          ;
+; music_frequencies:inst|fine_clk_divN:inst5|clk_out              ; Lost fanout                          ;
+; music_frequencies:inst|fine_clk_divN:inst5|counter_reg[18..24]  ; Lost fanout                          ;
+; music_frequencies:inst|fine_clk_divN:inst4|counter_reg[0..17]   ; Lost fanout                          ;
+; music_frequencies:inst|fine_clk_divN:inst4|clk_out              ; Lost fanout                          ;
+; music_frequencies:inst|fine_clk_divN:inst4|counter_reg[18..24]  ; Lost fanout                          ;
+; music_frequencies:inst|fine_clk_divN:inst15|counter_reg[0..17]  ; Lost fanout                          ;
+; music_frequencies:inst|fine_clk_divN:inst15|clk_out             ; Lost fanout                          ;
+; music_frequencies:inst|fine_clk_divN:inst15|counter_reg[18..24] ; Lost fanout                          ;
+; music_frequencies:inst|fine_clk_divN:inst3|counter_reg[0..17]   ; Lost fanout                          ;
+; music_frequencies:inst|fine_clk_divN:inst3|clk_out              ; Lost fanout                          ;
+; music_frequencies:inst|fine_clk_divN:inst3|counter_reg[18..24]  ; Lost fanout                          ;
+; music_frequencies:inst|fine_clk_divN:inst2|counter_reg[0..17]   ; Lost fanout                          ;
+; music_frequencies:inst|fine_clk_divN:inst2|clk_out              ; Lost fanout                          ;
+; music_frequencies:inst|fine_clk_divN:inst2|counter_reg[18..24]  ; Lost fanout                          ;
+; music_frequencies:inst|fine_clk_divN:inst1|counter_reg[0..17]   ; Lost fanout                          ;
+; music_frequencies:inst|fine_clk_divN:inst1|clk_out              ; Lost fanout                          ;
+; music_frequencies:inst|fine_clk_divN:inst1|counter_reg[18..24]  ; Lost fanout                          ;
+; music_frequencies:inst|fine_clk_divN:inst|counter_reg[0..17]    ; Lost fanout                          ;
+; music_frequencies:inst|fine_clk_divN:inst|clk_out               ; Lost fanout                          ;
+; music_frequencies:inst|fine_clk_divN:inst|counter_reg[18..24]   ; Lost fanout                          ;
+; Total Number of Removed Registers = 317                         ;                                      ;
++-----------------------------------------------------------------+--------------------------------------+
+
+
++------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Removed Registers Triggering Further Register Optimizations                                                                                          ;
++-------------------------------------------------------------+-------------------------+--------------------------------------------------------------+
+; Register name                                               ; Reason for Removal      ; Registers Removed due to This Register                       ;
++-------------------------------------------------------------+-------------------------+--------------------------------------------------------------+
+; key_detector:inst1|q[3]                                     ; Stuck at GND            ; music_frequencies:inst|fine_clk_divN:inst10|clk_out,         ;
+;                                                             ; due to stuck port clock ; music_frequencies:inst|fine_clk_divN:inst9|clk_out,          ;
+;                                                             ;                         ; music_frequencies:inst|fine_clk_divN:inst8|clk_out,          ;
+;                                                             ;                         ; music_frequencies:inst|fine_clk_divN:inst16|clk_out,         ;
+;                                                             ;                         ; music_frequencies:inst|fine_clk_divN:inst7|clk_out,          ;
+;                                                             ;                         ; music_frequencies:inst|fine_clk_divN:inst5|clk_out           ;
+; music_frequencies:inst|fine_clk_divN:inst10|counter_reg[17] ; Lost Fanouts            ; music_frequencies:inst|fine_clk_divN:inst10|counter_reg[20], ;
+;                                                             ;                         ; music_frequencies:inst|fine_clk_divN:inst10|counter_reg[21], ;
+;                                                             ;                         ; music_frequencies:inst|fine_clk_divN:inst10|counter_reg[22], ;
+;                                                             ;                         ; music_frequencies:inst|fine_clk_divN:inst10|counter_reg[23], ;
+;                                                             ;                         ; music_frequencies:inst|fine_clk_divN:inst10|counter_reg[24]  ;
+; music_frequencies:inst|fine_clk_divN:inst9|counter_reg[17]  ; Lost Fanouts            ; music_frequencies:inst|fine_clk_divN:inst9|counter_reg[20],  ;
+;                                                             ;                         ; music_frequencies:inst|fine_clk_divN:inst9|counter_reg[21],  ;
+;                                                             ;                         ; music_frequencies:inst|fine_clk_divN:inst9|counter_reg[22],  ;
+;                                                             ;                         ; music_frequencies:inst|fine_clk_divN:inst9|counter_reg[23],  ;
+;                                                             ;                         ; music_frequencies:inst|fine_clk_divN:inst9|counter_reg[24]   ;
+; music_frequencies:inst|fine_clk_divN:inst8|counter_reg[17]  ; Lost Fanouts            ; music_frequencies:inst|fine_clk_divN:inst8|counter_reg[20],  ;
+;                                                             ;                         ; music_frequencies:inst|fine_clk_divN:inst8|counter_reg[21],  ;
+;                                                             ;                         ; music_frequencies:inst|fine_clk_divN:inst8|counter_reg[22],  ;
+;                                                             ;                         ; music_frequencies:inst|fine_clk_divN:inst8|counter_reg[23],  ;
+;                                                             ;                         ; music_frequencies:inst|fine_clk_divN:inst8|counter_reg[24]   ;
+; music_frequencies:inst|fine_clk_divN:inst16|counter_reg[17] ; Lost Fanouts            ; music_frequencies:inst|fine_clk_divN:inst16|counter_reg[20], ;
+;                                                             ;                         ; music_frequencies:inst|fine_clk_divN:inst16|counter_reg[21], ;
+;                                                             ;                         ; music_frequencies:inst|fine_clk_divN:inst16|counter_reg[22], ;
+;                                                             ;                         ; music_frequencies:inst|fine_clk_divN:inst16|counter_reg[23], ;
+;                                                             ;                         ; music_frequencies:inst|fine_clk_divN:inst16|counter_reg[24]  ;
+; music_frequencies:inst|fine_clk_divN:inst7|counter_reg[17]  ; Lost Fanouts            ; music_frequencies:inst|fine_clk_divN:inst7|counter_reg[20],  ;
+;                                                             ;                         ; music_frequencies:inst|fine_clk_divN:inst7|counter_reg[21],  ;
+;                                                             ;                         ; music_frequencies:inst|fine_clk_divN:inst7|counter_reg[22],  ;
+;                                                             ;                         ; music_frequencies:inst|fine_clk_divN:inst7|counter_reg[23],  ;
+;                                                             ;                         ; music_frequencies:inst|fine_clk_divN:inst7|counter_reg[24]   ;
+; music_frequencies:inst|fine_clk_divN:inst5|counter_reg[17]  ; Lost Fanouts            ; music_frequencies:inst|fine_clk_divN:inst5|counter_reg[20],  ;
+;                                                             ;                         ; music_frequencies:inst|fine_clk_divN:inst5|counter_reg[21],  ;
+;                                                             ;                         ; music_frequencies:inst|fine_clk_divN:inst5|counter_reg[22],  ;
+;                                                             ;                         ; music_frequencies:inst|fine_clk_divN:inst5|counter_reg[23],  ;
+;                                                             ;                         ; music_frequencies:inst|fine_clk_divN:inst5|counter_reg[24]   ;
+; music_frequencies:inst|fine_clk_divN:inst4|counter_reg[17]  ; Lost Fanouts            ; music_frequencies:inst|fine_clk_divN:inst4|counter_reg[20],  ;
+;                                                             ;                         ; music_frequencies:inst|fine_clk_divN:inst4|counter_reg[21],  ;
+;                                                             ;                         ; music_frequencies:inst|fine_clk_divN:inst4|counter_reg[22],  ;
+;                                                             ;                         ; music_frequencies:inst|fine_clk_divN:inst4|counter_reg[23],  ;
+;                                                             ;                         ; music_frequencies:inst|fine_clk_divN:inst4|counter_reg[24]   ;
+; music_frequencies:inst|fine_clk_divN:inst15|counter_reg[17] ; Lost Fanouts            ; music_frequencies:inst|fine_clk_divN:inst15|counter_reg[20], ;
+;                                                             ;                         ; music_frequencies:inst|fine_clk_divN:inst15|counter_reg[21], ;
+;                                                             ;                         ; music_frequencies:inst|fine_clk_divN:inst15|counter_reg[22], ;
+;                                                             ;                         ; music_frequencies:inst|fine_clk_divN:inst15|counter_reg[23], ;
+;                                                             ;                         ; music_frequencies:inst|fine_clk_divN:inst15|counter_reg[24]  ;
+; music_frequencies:inst|fine_clk_divN:inst3|counter_reg[17]  ; Lost Fanouts            ; music_frequencies:inst|fine_clk_divN:inst3|counter_reg[20],  ;
+;                                                             ;                         ; music_frequencies:inst|fine_clk_divN:inst3|counter_reg[21],  ;
+;                                                             ;                         ; music_frequencies:inst|fine_clk_divN:inst3|counter_reg[22],  ;
+;                                                             ;                         ; music_frequencies:inst|fine_clk_divN:inst3|counter_reg[23],  ;
+;                                                             ;                         ; music_frequencies:inst|fine_clk_divN:inst3|counter_reg[24]   ;
+; music_frequencies:inst|fine_clk_divN:inst2|counter_reg[17]  ; Lost Fanouts            ; music_frequencies:inst|fine_clk_divN:inst2|counter_reg[20],  ;
+;                                                             ;                         ; music_frequencies:inst|fine_clk_divN:inst2|counter_reg[21],  ;
+;                                                             ;                         ; music_frequencies:inst|fine_clk_divN:inst2|counter_reg[22],  ;
+;                                                             ;                         ; music_frequencies:inst|fine_clk_divN:inst2|counter_reg[23],  ;
+;                                                             ;                         ; music_frequencies:inst|fine_clk_divN:inst2|counter_reg[24]   ;
+; music_frequencies:inst|fine_clk_divN:inst1|counter_reg[17]  ; Lost Fanouts            ; music_frequencies:inst|fine_clk_divN:inst1|counter_reg[20],  ;
+;                                                             ;                         ; music_frequencies:inst|fine_clk_divN:inst1|counter_reg[21],  ;
+;                                                             ;                         ; music_frequencies:inst|fine_clk_divN:inst1|counter_reg[22],  ;
+;                                                             ;                         ; music_frequencies:inst|fine_clk_divN:inst1|counter_reg[23],  ;
+;                                                             ;                         ; music_frequencies:inst|fine_clk_divN:inst1|counter_reg[24]   ;
+; music_frequencies:inst|fine_clk_divN:inst|counter_reg[17]   ; Lost Fanouts            ; music_frequencies:inst|fine_clk_divN:inst|counter_reg[20],   ;
+;                                                             ;                         ; music_frequencies:inst|fine_clk_divN:inst|counter_reg[21],   ;
+;                                                             ;                         ; music_frequencies:inst|fine_clk_divN:inst|counter_reg[22],   ;
+;                                                             ;                         ; music_frequencies:inst|fine_clk_divN:inst|counter_reg[23],   ;
+;                                                             ;                         ; music_frequencies:inst|fine_clk_divN:inst|counter_reg[24]    ;
++-------------------------------------------------------------+-------------------------+--------------------------------------------------------------+
+
+
++------------------------------------------------------+
+; General Register Statistics                          ;
++----------------------------------------------+-------+
+; Statistic                                    ; Value ;
++----------------------------------------------+-------+
+; Total registers                              ; 47    ;
+; Number of registers using Synchronous Clear  ; 33    ;
+; Number of registers using Synchronous Load   ; 0     ;
+; Number of registers using Asynchronous Clear ; 21    ;
+; Number of registers using Asynchronous Load  ; 0     ;
+; Number of registers using Clock Enable       ; 8     ;
+; Number of registers using Preset             ; 0     ;
++----------------------------------------------+-------+
+
+
++--------------------------------------------------------+
+; Inverted Register Statistics                           ;
++----------------------------------------------+---------+
+; Inverted Register                            ; Fan out ;
++----------------------------------------------+---------+
+; PS2controller:inst2|ps2_controller:inst1|bsy ; 8       ;
+; Total number of inverted registers = 1       ;         ;
++----------------------------------------------+---------+
+
+
++-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Multiplexer Restructuring Statistics (Restructuring Performed)                                                                                                                      ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+-----------------------------------------------------------------------+
+; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output                                            ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+-----------------------------------------------------------------------+
+; 3:1                ; 8 bits    ; 16 LEs        ; 0 LEs                ; 16 LEs                 ; Yes        ; |AudioController|PS2controller:inst2|ps2_controller:inst1|data_out[3] ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+-----------------------------------------------------------------------+
 
 
 +---------------------------------------------------------+
@@ -299,16 +530,71 @@ Note: In order to hide this table in the UI and the text report file, please set
 Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
 
 
++-----------------------------------------------------+
+; Post-Synthesis Netlist Statistics for Top Partition ;
++-----------------------+-----------------------------+
+; Type                  ; Count                       ;
++-----------------------+-----------------------------+
+; arriav_ff             ; 47                          ;
+;     CLR               ; 13                          ;
+;     ENA CLR SCLR      ; 8                           ;
+;     SCLR              ; 25                          ;
+;     plain             ; 1                           ;
+; arriav_lcell_comb     ; 57                          ;
+;     arith             ; 25                          ;
+;         1 data inputs ; 24                          ;
+;         2 data inputs ; 1                           ;
+;     normal            ; 32                          ;
+;         0 data inputs ; 1                           ;
+;         1 data inputs ; 2                           ;
+;         2 data inputs ; 2                           ;
+;         4 data inputs ; 20                          ;
+;         5 data inputs ; 2                           ;
+;         6 data inputs ; 5                           ;
+; boundary_port         ; 19                          ;
+;                       ;                             ;
+; Max LUT depth         ; 3.40                        ;
+; Average LUT depth     ; 2.15                        ;
++-----------------------+-----------------------------+
+
+
++-------------------------------+
+; Elapsed Time Per Partition    ;
++----------------+--------------+
+; Partition Name ; Elapsed Time ;
++----------------+--------------+
+; Top            ; 00:00:00     ;
++----------------+--------------+
+
+
 +-------------------------------+
 ; Analysis & Synthesis Messages ;
 +-------------------------------+
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
-    Info: Processing started: Thu Feb 08 19:37:44 2024
+    Info: Processing started: Fri Feb 09 00:01:25 2024
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off audio_controller -c audio_controller
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20030): Parallel compilation is enabled and will use 16 of the 16 processors detected
+Info (12021): Found 1 design units, including 1 entities, in source file ps2 files/sv files/seven_seg_controller_tb.sv
+    Info (12023): Found entity 1: seven_seg_controller_tb File: C:/Users/minec/Desktop/Work/GitHub Repos/PROJ300/Firmware/Audio Controller/ps2 files/sv files/seven_seg_controller_tb.sv Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file ps2 files/sv files/seven_seg_controller.sv
+    Info (12023): Found entity 1: seven_seg_controller File: C:/Users/minec/Desktop/Work/GitHub Repos/PROJ300/Firmware/Audio Controller/ps2 files/sv files/seven_seg_controller.sv Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file ps2 files/sv files/ps2controller_tb.sv
+    Info (12023): Found entity 1: PS2controller_tb File: C:/Users/minec/Desktop/Work/GitHub Repos/PROJ300/Firmware/Audio Controller/ps2 files/sv files/PS2controller_tb.sv Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file ps2 files/sv files/ps2_controller_tb.sv
+    Info (12023): Found entity 1: ps2_controller_tb File: C:/Users/minec/Desktop/Work/GitHub Repos/PROJ300/Firmware/Audio Controller/ps2 files/sv files/ps2_controller_tb.sv Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file ps2 files/sv files/ps2_controller.sv
+    Info (12023): Found entity 1: ps2_controller File: C:/Users/minec/Desktop/Work/GitHub Repos/PROJ300/Firmware/Audio Controller/ps2 files/sv files/ps2_controller.sv Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file ps2 files/sv files/bsy_reader_tb.sv
+    Info (12023): Found entity 1: bsy_reader_tb File: C:/Users/minec/Desktop/Work/GitHub Repos/PROJ300/Firmware/Audio Controller/ps2 files/sv files/bsy_reader_tb.sv Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file ps2 files/sv files/bsy_reader.sv
+    Info (12023): Found entity 1: bsy_reader File: C:/Users/minec/Desktop/Work/GitHub Repos/PROJ300/Firmware/Audio Controller/ps2 files/sv files/bsy_reader.sv Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file ps2 files/sv files/break_code_detector.sv
+    Info (12023): Found entity 1: break_code_detector File: C:/Users/minec/Desktop/Work/GitHub Repos/PROJ300/Firmware/Audio Controller/ps2 files/sv files/break_code_detector.sv Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file ps2 files/ps2controller.bdf
+    Info (12023): Found entity 1: PS2controller
 Info (12021): Found 1 design units, including 1 entities, in source file sv files/key_detector.sv
     Info (12023): Found entity 1: key_detector File: C:/Users/minec/Desktop/Work/GitHub Repos/PROJ300/Firmware/Audio Controller/sv files/key_detector.sv Line: 1
 Warning (12019): Can't analyze file -- file sv files/encoder.sv is missing
@@ -329,14 +615,27 @@ Info (12128): Elaborating entity "music_frequencies" for hierarchy "music_freque
 Info (12128): Elaborating entity "fine_clk_divN" for hierarchy "music_frequencies:inst|fine_clk_divN:inst"
 Warning (10230): Verilog HDL assignment warning at fine_clk_divN.sv(38): truncated value with size 32 to match size of target (25) File: C:/Users/minec/Desktop/Work/GitHub Repos/PROJ300/Firmware/Audio Controller/sv files/fine_clk_divN.sv Line: 38
 Info (12128): Elaborating entity "key_detector" for hierarchy "key_detector:inst1"
-Error (12009): Node "sel[3]" is missing source
-Error (12009): Node "sel[2]" is missing source
-Error (12009): Node "sel[1]" is missing source
-Error (12009): Node "sel[0]" is missing source
-Error: Quartus Prime Analysis & Synthesis was unsuccessful. 4 errors, 4 warnings
-    Error: Peak virtual memory: 4771 megabytes
-    Error: Processing ended: Thu Feb 08 19:37:49 2024
-    Error: Elapsed time: 00:00:05
-    Error: Total CPU time (on all processors): 00:00:06
+Info (12128): Elaborating entity "PS2controller" for hierarchy "PS2controller:inst2"
+Info (12128): Elaborating entity "bsy_reader" for hierarchy "PS2controller:inst2|bsy_reader:inst2"
+Info (12128): Elaborating entity "ps2_controller" for hierarchy "PS2controller:inst2|ps2_controller:inst1"
+Warning (10230): Verilog HDL assignment warning at ps2_controller.sv(21): truncated value with size 32 to match size of target (4) File: C:/Users/minec/Desktop/Work/GitHub Repos/PROJ300/Firmware/Audio Controller/ps2 files/sv files/ps2_controller.sv Line: 21
+Info (12128): Elaborating entity "break_code_detector" for hierarchy "PS2controller:inst2|break_code_detector:inst"
+Warning (10230): Verilog HDL assignment warning at break_code_detector.sv(27): truncated value with size 32 to match size of target (25) File: C:/Users/minec/Desktop/Work/GitHub Repos/PROJ300/Firmware/Audio Controller/ps2 files/sv files/break_code_detector.sv Line: 27
+Info (12128): Elaborating entity "seven_seg_controller" for hierarchy "seven_seg_controller:inst3"
+Warning (13024): Output pins are stuck at VCC or GND
+    Warning (13410): Pin "buzzer_out" is stuck at GND
+Info (286030): Timing-Driven Synthesis is running
+Info (17049): 312 registers lost all their fanouts during netlist optimizations.
+Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
+    Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
+Info (21057): Implemented 89 device resources after synthesis - the final resource count might be different
+    Info (21058): Implemented 4 input pins
+    Info (21059): Implemented 15 output pins
+    Info (21061): Implemented 70 logic cells
+Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 8 warnings
+    Info: Peak virtual memory: 4897 megabytes
+    Info: Processing ended: Fri Feb 09 00:01:30 2024
+    Info: Elapsed time: 00:00:05
+    Info: Total CPU time (on all processors): 00:00:06
 
 

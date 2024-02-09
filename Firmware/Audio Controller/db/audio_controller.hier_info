@@ -1,7 +1,25 @@
 |AudioController
 buzzer_out <= muxN:inst4.q
 clk => music_frequencies:inst.clk
+clk => PS2controller:inst2.clk_50
 rst => music_frequencies:inst.rst
+rst => PS2controller:inst2.sw0
+ps2_data => PS2controller:inst2.PS2_DAT
+ps2_clk => PS2controller:inst2.PS2_CLK
+disp0[6] <= inst5[0].DB_MAX_OUTPUT_PORT_TYPE
+disp0[5] <= inst5[1].DB_MAX_OUTPUT_PORT_TYPE
+disp0[4] <= inst5[2].DB_MAX_OUTPUT_PORT_TYPE
+disp0[3] <= inst5[3].DB_MAX_OUTPUT_PORT_TYPE
+disp0[2] <= inst5[4].DB_MAX_OUTPUT_PORT_TYPE
+disp0[1] <= inst5[5].DB_MAX_OUTPUT_PORT_TYPE
+disp0[0] <= inst5[6].DB_MAX_OUTPUT_PORT_TYPE
+disp1[6] <= inst6[0].DB_MAX_OUTPUT_PORT_TYPE
+disp1[5] <= inst6[1].DB_MAX_OUTPUT_PORT_TYPE
+disp1[4] <= inst6[2].DB_MAX_OUTPUT_PORT_TYPE
+disp1[3] <= inst6[3].DB_MAX_OUTPUT_PORT_TYPE
+disp1[2] <= inst6[4].DB_MAX_OUTPUT_PORT_TYPE
+disp1[1] <= inst6[5].DB_MAX_OUTPUT_PORT_TYPE
+disp1[0] <= inst6[6].DB_MAX_OUTPUT_PORT_TYPE
 
 
 |AudioController|muxN:inst4
@@ -466,5 +484,158 @@ clk => q[1]~reg0.CLK
 clk => q[2]~reg0.CLK
 clk => q[3]~reg0.CLK
 clk => shift_pressed.CLK
+
+
+|AudioController|PS2controller:inst2
+data_out[0] <= bsy_reader:inst2.data_out[0]
+data_out[1] <= bsy_reader:inst2.data_out[1]
+data_out[2] <= bsy_reader:inst2.data_out[2]
+data_out[3] <= bsy_reader:inst2.data_out[3]
+data_out[4] <= bsy_reader:inst2.data_out[4]
+data_out[5] <= bsy_reader:inst2.data_out[5]
+data_out[6] <= bsy_reader:inst2.data_out[6]
+data_out[7] <= bsy_reader:inst2.data_out[7]
+PS2_DAT => ps2_controller:inst1.data_in
+PS2_CLK => ps2_controller:inst1.clk
+sw0 => ps2_controller:inst1.rst
+sw0 => inst5.IN1
+clk_50 => break_code_detector:inst.clk
+
+
+|AudioController|PS2controller:inst2|bsy_reader:inst2
+data_out[0] <= data_out[0]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+data_out[1] <= data_out[1]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+data_out[2] <= data_out[2]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+data_out[3] <= data_out[3]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+data_out[4] <= data_out[4]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+data_out[5] <= data_out[5]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+data_out[6] <= data_out[6]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+data_out[7] <= data_out[7]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+data_in[0] => data_out[0]~reg0.DATAIN
+data_in[1] => data_out[1]~reg0.DATAIN
+data_in[2] => data_out[2]~reg0.DATAIN
+data_in[3] => data_out[3]~reg0.DATAIN
+data_in[4] => data_out[4]~reg0.DATAIN
+data_in[5] => data_out[5]~reg0.DATAIN
+data_in[6] => data_out[6]~reg0.DATAIN
+data_in[7] => data_out[7]~reg0.DATAIN
+bsy => data_out[0]~reg0.CLK
+bsy => data_out[1]~reg0.CLK
+bsy => data_out[2]~reg0.CLK
+bsy => data_out[3]~reg0.CLK
+bsy => data_out[4]~reg0.CLK
+bsy => data_out[5]~reg0.CLK
+bsy => data_out[6]~reg0.CLK
+bsy => data_out[7]~reg0.CLK
+rst => data_out[0]~reg0.ACLR
+rst => data_out[1]~reg0.ACLR
+rst => data_out[2]~reg0.ACLR
+rst => data_out[3]~reg0.ACLR
+rst => data_out[4]~reg0.ACLR
+rst => data_out[5]~reg0.ACLR
+rst => data_out[6]~reg0.ACLR
+rst => data_out[7]~reg0.ACLR
+
+
+|AudioController|PS2controller:inst2|ps2_controller:inst1
+data_out[0] <= data_out[0]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+data_out[1] <= data_out[1]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+data_out[2] <= data_out[2]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+data_out[3] <= data_out[3]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+data_out[4] <= data_out[4]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+data_out[5] <= data_out[5]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+data_out[6] <= data_out[6]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+data_out[7] <= data_out[7]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+bsy <= bsy~reg0.DB_MAX_OUTPUT_PORT_TYPE
+data_in => data_out.DATAB
+clk => bsy~reg0.CLK
+clk => data_out[0]~reg0.CLK
+clk => data_out[1]~reg0.CLK
+clk => data_out[2]~reg0.CLK
+clk => data_out[3]~reg0.CLK
+clk => data_out[4]~reg0.CLK
+clk => data_out[5]~reg0.CLK
+clk => data_out[6]~reg0.CLK
+clk => data_out[7]~reg0.CLK
+clk => count_reg[0].CLK
+clk => count_reg[1].CLK
+clk => count_reg[2].CLK
+clk => count_reg[3].CLK
+rst => bsy~reg0.PRESET
+rst => data_out[0]~reg0.ACLR
+rst => data_out[1]~reg0.ACLR
+rst => data_out[2]~reg0.ACLR
+rst => data_out[3]~reg0.ACLR
+rst => data_out[4]~reg0.ACLR
+rst => data_out[5]~reg0.ACLR
+rst => data_out[6]~reg0.ACLR
+rst => data_out[7]~reg0.ACLR
+rst => count_reg[0].ACLR
+rst => count_reg[1].ACLR
+rst => count_reg[2].ACLR
+rst => count_reg[3].ACLR
+
+
+|AudioController|PS2controller:inst2|break_code_detector:inst
+q <= temp.DB_MAX_OUTPUT_PORT_TYPE
+data[0] => Equal0.IN7
+data[1] => Equal0.IN6
+data[2] => Equal0.IN5
+data[3] => Equal0.IN4
+data[4] => Equal0.IN3
+data[5] => Equal0.IN2
+data[6] => Equal0.IN1
+data[7] => Equal0.IN0
+clk => counter[0].CLK
+clk => counter[1].CLK
+clk => counter[2].CLK
+clk => counter[3].CLK
+clk => counter[4].CLK
+clk => counter[5].CLK
+clk => counter[6].CLK
+clk => counter[7].CLK
+clk => counter[8].CLK
+clk => counter[9].CLK
+clk => counter[10].CLK
+clk => counter[11].CLK
+clk => counter[12].CLK
+clk => counter[13].CLK
+clk => counter[14].CLK
+clk => counter[15].CLK
+clk => counter[16].CLK
+clk => counter[17].CLK
+clk => counter[18].CLK
+clk => counter[19].CLK
+clk => counter[20].CLK
+clk => counter[21].CLK
+clk => counter[22].CLK
+clk => counter[23].CLK
+clk => counter[24].CLK
+clk => temp.CLK
+
+
+|AudioController|seven_seg_controller:inst3
+disp0[6] <= WideOr6.DB_MAX_OUTPUT_PORT_TYPE
+disp0[5] <= WideOr5.DB_MAX_OUTPUT_PORT_TYPE
+disp0[4] <= WideOr4.DB_MAX_OUTPUT_PORT_TYPE
+disp0[3] <= WideOr3.DB_MAX_OUTPUT_PORT_TYPE
+disp0[2] <= WideOr2.DB_MAX_OUTPUT_PORT_TYPE
+disp0[1] <= WideOr1.DB_MAX_OUTPUT_PORT_TYPE
+disp0[0] <= WideOr0.DB_MAX_OUTPUT_PORT_TYPE
+disp1[6] <= WideOr13.DB_MAX_OUTPUT_PORT_TYPE
+disp1[5] <= WideOr12.DB_MAX_OUTPUT_PORT_TYPE
+disp1[4] <= WideOr11.DB_MAX_OUTPUT_PORT_TYPE
+disp1[3] <= WideOr10.DB_MAX_OUTPUT_PORT_TYPE
+disp1[2] <= WideOr9.DB_MAX_OUTPUT_PORT_TYPE
+disp1[1] <= WideOr8.DB_MAX_OUTPUT_PORT_TYPE
+disp1[0] <= WideOr7.DB_MAX_OUTPUT_PORT_TYPE
+data[0] => Decoder0.IN3
+data[1] => Decoder0.IN2
+data[2] => Decoder0.IN1
+data[3] => Decoder0.IN0
+data[4] => Decoder1.IN3
+data[5] => Decoder1.IN2
+data[6] => Decoder1.IN1
+data[7] => Decoder1.IN0
 
 

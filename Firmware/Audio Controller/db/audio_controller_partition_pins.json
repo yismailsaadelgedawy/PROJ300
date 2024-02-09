@@ -4,19 +4,59 @@
 			"name" : "Top",
 			"pins" : [
 				{
-					"name" : "buzzer_out",
+					"name" : "disp0[0]",
 					"strict" : false
 				},
 				{
-					"name" : "key[2]",
+					"name" : "disp0[1]",
 					"strict" : false
 				},
 				{
-					"name" : "key[1]",
+					"name" : "disp0[2]",
 					"strict" : false
 				},
 				{
-					"name" : "key[0]",
+					"name" : "disp0[3]",
+					"strict" : false
+				},
+				{
+					"name" : "disp0[4]",
+					"strict" : false
+				},
+				{
+					"name" : "disp0[5]",
+					"strict" : false
+				},
+				{
+					"name" : "disp0[6]",
+					"strict" : false
+				},
+				{
+					"name" : "disp1[0]",
+					"strict" : false
+				},
+				{
+					"name" : "disp1[1]",
+					"strict" : false
+				},
+				{
+					"name" : "disp1[2]",
+					"strict" : false
+				},
+				{
+					"name" : "disp1[3]",
+					"strict" : false
+				},
+				{
+					"name" : "disp1[4]",
+					"strict" : false
+				},
+				{
+					"name" : "disp1[5]",
+					"strict" : false
+				},
+				{
+					"name" : "disp1[6]",
 					"strict" : false
 				},
 				{
@@ -24,7 +64,15 @@
 					"strict" : false
 				},
 				{
+					"name" : "ps2_clk",
+					"strict" : false
+				},
+				{
 					"name" : "clk",
+					"strict" : false
+				},
+				{
+					"name" : "ps2_data",
 					"strict" : false
 				}
 			]
