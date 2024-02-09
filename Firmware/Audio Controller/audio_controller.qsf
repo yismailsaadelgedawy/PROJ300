@@ -55,22 +55,6 @@ set_global_assignment -name PARTITION_COLOR 16764057 -section_id Top
 set_location_assignment PIN_U13 -to rst
 set_location_assignment PIN_T18 -to buzzer_out
 set_location_assignment PIN_M9 -to clk
-set_global_assignment -name SYSTEMVERILOG_FILE "ps2 files/sv files/seven_seg_controller_tb.sv"
-set_global_assignment -name SYSTEMVERILOG_FILE "ps2 files/sv files/seven_seg_controller.sv"
-set_global_assignment -name SYSTEMVERILOG_FILE "ps2 files/sv files/PS2controller_tb.sv"
-set_global_assignment -name SYSTEMVERILOG_FILE "ps2 files/sv files/ps2_controller_tb.sv"
-set_global_assignment -name SYSTEMVERILOG_FILE "ps2 files/sv files/ps2_controller.sv"
-set_global_assignment -name SYSTEMVERILOG_FILE "ps2 files/sv files/bsy_reader_tb.sv"
-set_global_assignment -name SYSTEMVERILOG_FILE "ps2 files/sv files/bsy_reader.sv"
-set_global_assignment -name SYSTEMVERILOG_FILE "ps2 files/sv files/break_code_detector.sv"
-set_global_assignment -name BDF_FILE "ps2 files/PS2controller.bdf"
-set_global_assignment -name SYSTEMVERILOG_FILE "sv files/key_detector.sv"
-set_global_assignment -name SYSTEMVERILOG_FILE "sv files/encoder.sv"
-set_global_assignment -name SYSTEMVERILOG_FILE "sv files/muxN.sv"
-set_global_assignment -name SYSTEMVERILOG_FILE "sv files/d_ffN.sv"
-set_global_assignment -name SYSTEMVERILOG_FILE "sv files/fine_clk_divN.sv"
-set_global_assignment -name BDF_FILE AudioController.bdf
-set_global_assignment -name BDF_FILE music_frequencies.bdf
 set_location_assignment PIN_U22 -to disp1[6]
 set_location_assignment PIN_AA17 -to disp1[5]
 set_location_assignment PIN_AB18 -to disp1[4]
@@ -87,4 +71,22 @@ set_location_assignment PIN_V21 -to disp0[1]
 set_location_assignment PIN_U21 -to disp0[0]
 set_location_assignment PIN_G2 -to ps2_data
 set_location_assignment PIN_D3 -to ps2_clk
+set_global_assignment -name SYSTEMVERILOG_FILE "sv files/shift_detector.sv"
+set_global_assignment -name SYSTEMVERILOG_FILE "ps2 files/sv files/seven_seg_controller_tb.sv"
+set_global_assignment -name SYSTEMVERILOG_FILE "ps2 files/sv files/seven_seg_controller.sv"
+set_global_assignment -name SYSTEMVERILOG_FILE "ps2 files/sv files/PS2controller_tb.sv"
+set_global_assignment -name SYSTEMVERILOG_FILE "ps2 files/sv files/ps2_controller_tb.sv"
+set_global_assignment -name SYSTEMVERILOG_FILE "ps2 files/sv files/ps2_controller.sv"
+set_global_assignment -name SYSTEMVERILOG_FILE "ps2 files/sv files/bsy_reader_tb.sv"
+set_global_assignment -name SYSTEMVERILOG_FILE "ps2 files/sv files/bsy_reader.sv"
+set_global_assignment -name SYSTEMVERILOG_FILE "ps2 files/sv files/break_code_detector.sv"
+set_global_assignment -name BDF_FILE "ps2 files/PS2controller.bdf"
+set_global_assignment -name SYSTEMVERILOG_FILE "sv files/key_detector.sv"
+set_global_assignment -name SYSTEMVERILOG_FILE "sv files/encoder.sv"
+set_global_assignment -name SYSTEMVERILOG_FILE "sv files/muxN.sv"
+set_global_assignment -name SYSTEMVERILOG_FILE "sv files/d_ffN.sv"
+set_global_assignment -name SYSTEMVERILOG_FILE "sv files/fine_clk_divN.sv"
+set_global_assignment -name BDF_FILE AudioController.bdf
+set_global_assignment -name BDF_FILE music_frequencies.bdf
+set_location_assignment PIN_AA2 -to led0
 set_instance_assignment -name PARTITION_HIERARCHY root_partition -to | -section_id Top

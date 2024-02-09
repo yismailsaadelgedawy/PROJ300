@@ -1,5 +1,5 @@
 Timing Analyzer report for audio_controller
-Fri Feb 09 00:35:35 2024
+Fri Feb 09 01:38:30 2024
 Quartus Prime Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
 
 
@@ -102,16 +102,26 @@ https://fpgasoftware.intel.com/eula.
 ; Number detected on machine ; 16          ;
 ; Maximum allowed            ; 16          ;
 ;                            ;             ;
-; Average used               ; 1.16        ;
+; Average used               ; 1.60        ;
 ; Maximum used               ; 16          ;
 ;                            ;             ;
 ; Usage by Processor         ; % Time Used ;
 ;     Processor 1            ; 100.0%      ;
-;     Processor 2            ;   2.2%      ;
-;     Processor 3            ;   2.1%      ;
-;     Processor 4            ;   2.1%      ;
-;     Processor 5            ;   2.1%      ;
-;     Processors 6-16        ;   0.7%      ;
+;     Processor 2            ;   4.6%      ;
+;     Processor 3            ;   4.5%      ;
+;     Processor 4            ;   4.5%      ;
+;     Processor 5            ;   3.9%      ;
+;     Processor 6            ;   3.9%      ;
+;     Processor 7            ;   3.9%      ;
+;     Processor 8            ;   3.9%      ;
+;     Processor 9            ;   3.9%      ;
+;     Processor 10           ;   3.8%      ;
+;     Processor 11           ;   3.8%      ;
+;     Processor 12           ;   3.8%      ;
+;     Processor 13           ;   3.8%      ;
+;     Processor 14           ;   3.8%      ;
+;     Processor 15           ;   3.8%      ;
+;     Processor 16           ;   3.8%      ;
 +----------------------------+-------------+
 
 
@@ -131,8 +141,8 @@ https://fpgasoftware.intel.com/eula.
 +------------+-----------------+------------+------+
 ; Fmax       ; Restricted Fmax ; Clock Name ; Note ;
 +------------+-----------------+------------+------+
-; 190.48 MHz ; 190.48 MHz      ; ps2_clk    ;      ;
-; 260.42 MHz ; 260.42 MHz      ; clk        ;      ;
+; 191.09 MHz ; 191.09 MHz      ; ps2_clk    ;      ;
+; 240.96 MHz ; 240.96 MHz      ; clk        ;      ;
 +------------+-----------------+------------+------+
 This panel reports FMAX for every clock in the design, regardless of the user-specified clock periods.  FMAX is only computed for paths where the source and destination registers or ports are driven by the same clock.  Paths of different clocks, including generated clocks, are ignored.  For paths between a clock and its inversion, FMAX is computed as if the rising and falling edges are scaled along with FMAX, such that the duty cycle (in terms of a percentage) is maintained. Altera recommends that you always use clock constraints and other slack reports for sign-off analysis.
 
@@ -148,9 +158,9 @@ HTML report is unavailable in plain text report export.
 +----------------------------------------------+--------+---------------+
 ; Clock                                        ; Slack  ; End Point TNS ;
 +----------------------------------------------+--------+---------------+
-; PS2controller:inst2|ps2_controller:inst1|bsy ; -8.641 ; -67.447       ;
-; ps2_clk                                      ; -4.250 ; -45.452       ;
-; clk                                          ; -2.840 ; -92.694       ;
+; clk                                          ; -9.066 ; -933.947      ;
+; PS2controller:inst2|ps2_controller:inst1|bsy ; -8.026 ; -63.376       ;
+; ps2_clk                                      ; -7.293 ; -44.007       ;
 +----------------------------------------------+--------+---------------+
 
 
@@ -159,9 +169,9 @@ HTML report is unavailable in plain text report export.
 +----------------------------------------------+--------+---------------+
 ; Clock                                        ; Slack  ; End Point TNS ;
 +----------------------------------------------+--------+---------------+
-; clk                                          ; -2.482 ; -2.482        ;
-; ps2_clk                                      ; 0.238  ; 0.000         ;
-; PS2controller:inst2|ps2_controller:inst1|bsy ; 5.367  ; 0.000         ;
+; ps2_clk                                      ; -5.719 ; -5.719        ;
+; clk                                          ; -2.313 ; -10.100       ;
+; PS2controller:inst2|ps2_controller:inst1|bsy ; 4.851  ; 0.000         ;
 +----------------------------------------------+--------+---------------+
 
 
@@ -170,7 +180,7 @@ HTML report is unavailable in plain text report export.
 +----------------------------------------------+--------+---------------+
 ; Clock                                        ; Slack  ; End Point TNS ;
 +----------------------------------------------+--------+---------------+
-; PS2controller:inst2|ps2_controller:inst1|bsy ; -3.568 ; -28.528       ;
+; PS2controller:inst2|ps2_controller:inst1|bsy ; -3.695 ; -29.542       ;
 +----------------------------------------------+--------+---------------+
 
 
@@ -179,7 +189,7 @@ HTML report is unavailable in plain text report export.
 +----------------------------------------------+-------+---------------+
 ; Clock                                        ; Slack ; End Point TNS ;
 +----------------------------------------------+-------+---------------+
-; PS2controller:inst2|ps2_controller:inst1|bsy ; 3.153 ; 0.000         ;
+; PS2controller:inst2|ps2_controller:inst1|bsy ; 3.234 ; 0.000         ;
 +----------------------------------------------+-------+---------------+
 
 
@@ -188,9 +198,9 @@ HTML report is unavailable in plain text report export.
 +----------------------------------------------+--------+---------------+
 ; Clock                                        ; Slack  ; End Point TNS ;
 +----------------------------------------------+--------+---------------+
-; clk                                          ; -0.538 ; -27.680       ;
-; ps2_clk                                      ; -0.538 ; -18.609       ;
-; PS2controller:inst2|ps2_controller:inst1|bsy ; -0.538 ; -6.156        ;
+; clk                                          ; -0.538 ; -265.336      ;
+; ps2_clk                                      ; -0.538 ; -16.516       ;
+; PS2controller:inst2|ps2_controller:inst1|bsy ; -0.538 ; -6.168        ;
 +----------------------------------------------+--------+---------------+
 
 
@@ -205,8 +215,8 @@ No synchronizer chains to report.
 +------------+-----------------+------------+------+
 ; Fmax       ; Restricted Fmax ; Clock Name ; Note ;
 +------------+-----------------+------------+------+
-; 193.65 MHz ; 193.65 MHz      ; ps2_clk    ;      ;
-; 259.81 MHz ; 259.81 MHz      ; clk        ;      ;
+; 192.34 MHz ; 192.34 MHz      ; ps2_clk    ;      ;
+; 240.85 MHz ; 240.85 MHz      ; clk        ;      ;
 +------------+-----------------+------------+------+
 This panel reports FMAX for every clock in the design, regardless of the user-specified clock periods.  FMAX is only computed for paths where the source and destination registers or ports are driven by the same clock.  Paths of different clocks, including generated clocks, are ignored.  For paths between a clock and its inversion, FMAX is computed as if the rising and falling edges are scaled along with FMAX, such that the duty cycle (in terms of a percentage) is maintained. Altera recommends that you always use clock constraints and other slack reports for sign-off analysis.
 
@@ -216,9 +226,9 @@ This panel reports FMAX for every clock in the design, regardless of the user-sp
 +----------------------------------------------+--------+---------------+
 ; Clock                                        ; Slack  ; End Point TNS ;
 +----------------------------------------------+--------+---------------+
-; PS2controller:inst2|ps2_controller:inst1|bsy ; -8.503 ; -66.398       ;
-; ps2_clk                                      ; -4.164 ; -42.209       ;
-; clk                                          ; -2.849 ; -93.431       ;
+; clk                                          ; -8.448 ; -929.986      ;
+; PS2controller:inst2|ps2_controller:inst1|bsy ; -7.911 ; -62.460       ;
+; ps2_clk                                      ; -6.840 ; -40.991       ;
 +----------------------------------------------+--------+---------------+
 
 
@@ -227,9 +237,9 @@ This panel reports FMAX for every clock in the design, regardless of the user-sp
 +----------------------------------------------+--------+---------------+
 ; Clock                                        ; Slack  ; End Point TNS ;
 +----------------------------------------------+--------+---------------+
-; clk                                          ; -2.628 ; -2.628        ;
-; ps2_clk                                      ; 0.333  ; 0.000         ;
-; PS2controller:inst2|ps2_controller:inst1|bsy ; 5.343  ; 0.000         ;
+; ps2_clk                                      ; -5.615 ; -5.615        ;
+; clk                                          ; -2.472 ; -10.993       ;
+; PS2controller:inst2|ps2_controller:inst1|bsy ; 4.821  ; 0.000         ;
 +----------------------------------------------+--------+---------------+
 
 
@@ -238,7 +248,7 @@ This panel reports FMAX for every clock in the design, regardless of the user-sp
 +----------------------------------------------+--------+---------------+
 ; Clock                                        ; Slack  ; End Point TNS ;
 +----------------------------------------------+--------+---------------+
-; PS2controller:inst2|ps2_controller:inst1|bsy ; -3.607 ; -28.836       ;
+; PS2controller:inst2|ps2_controller:inst1|bsy ; -3.723 ; -29.763       ;
 +----------------------------------------------+--------+---------------+
 
 
@@ -247,7 +257,7 @@ This panel reports FMAX for every clock in the design, regardless of the user-sp
 +----------------------------------------------+-------+---------------+
 ; Clock                                        ; Slack ; End Point TNS ;
 +----------------------------------------------+-------+---------------+
-; PS2controller:inst2|ps2_controller:inst1|bsy ; 3.250 ; 0.000         ;
+; PS2controller:inst2|ps2_controller:inst1|bsy ; 3.324 ; 0.000         ;
 +----------------------------------------------+-------+---------------+
 
 
@@ -256,9 +266,9 @@ This panel reports FMAX for every clock in the design, regardless of the user-sp
 +----------------------------------------------+--------+---------------+
 ; Clock                                        ; Slack  ; End Point TNS ;
 +----------------------------------------------+--------+---------------+
-; clk                                          ; -0.538 ; -28.341       ;
-; ps2_clk                                      ; -0.538 ; -17.353       ;
-; PS2controller:inst2|ps2_controller:inst1|bsy ; -0.538 ; -6.160        ;
+; clk                                          ; -0.538 ; -271.944      ;
+; ps2_clk                                      ; -0.538 ; -16.574       ;
+; PS2controller:inst2|ps2_controller:inst1|bsy ; -0.538 ; -6.208        ;
 +----------------------------------------------+--------+---------------+
 
 
@@ -273,9 +283,9 @@ No synchronizer chains to report.
 +----------------------------------------------+--------+---------------+
 ; Clock                                        ; Slack  ; End Point TNS ;
 +----------------------------------------------+--------+---------------+
-; PS2controller:inst2|ps2_controller:inst1|bsy ; -4.641 ; -35.987       ;
-; ps2_clk                                      ; -1.701 ; -11.859       ;
-; clk                                          ; -1.303 ; -28.452       ;
+; clk                                          ; -5.528 ; -290.578      ;
+; ps2_clk                                      ; -4.560 ; -12.222       ;
+; PS2controller:inst2|ps2_controller:inst1|bsy ; -4.196 ; -33.282       ;
 +----------------------------------------------+--------+---------------+
 
 
@@ -284,9 +294,9 @@ No synchronizer chains to report.
 +----------------------------------------------+--------+---------------+
 ; Clock                                        ; Slack  ; End Point TNS ;
 +----------------------------------------------+--------+---------------+
-; clk                                          ; -1.600 ; -1.600        ;
-; ps2_clk                                      ; 0.152  ; 0.000         ;
-; PS2controller:inst2|ps2_controller:inst1|bsy ; 3.366  ; 0.000         ;
+; ps2_clk                                      ; -3.197 ; -3.197        ;
+; clk                                          ; -1.494 ; -6.722        ;
+; PS2controller:inst2|ps2_controller:inst1|bsy ; 3.020  ; 0.000         ;
 +----------------------------------------------+--------+---------------+
 
 
@@ -295,7 +305,7 @@ No synchronizer chains to report.
 +----------------------------------------------+--------+---------------+
 ; Clock                                        ; Slack  ; End Point TNS ;
 +----------------------------------------------+--------+---------------+
-; PS2controller:inst2|ps2_controller:inst1|bsy ; -1.490 ; -11.916       ;
+; PS2controller:inst2|ps2_controller:inst1|bsy ; -1.539 ; -12.306       ;
 +----------------------------------------------+--------+---------------+
 
 
@@ -304,7 +314,7 @@ No synchronizer chains to report.
 +----------------------------------------------+-------+---------------+
 ; Clock                                        ; Slack ; End Point TNS ;
 +----------------------------------------------+-------+---------------+
-; PS2controller:inst2|ps2_controller:inst1|bsy ; 1.619 ; 0.000         ;
+; PS2controller:inst2|ps2_controller:inst1|bsy ; 1.647 ; 0.000         ;
 +----------------------------------------------+-------+---------------+
 
 
@@ -313,9 +323,9 @@ No synchronizer chains to report.
 +----------------------------------------------+--------+---------------+
 ; Clock                                        ; Slack  ; End Point TNS ;
 +----------------------------------------------+--------+---------------+
-; ps2_clk                                      ; -0.548 ; -6.563        ;
-; clk                                          ; -0.096 ; -3.394        ;
-; PS2controller:inst2|ps2_controller:inst1|bsy ; 0.157  ; 0.000         ;
+; ps2_clk                                      ; -0.469 ; -3.646        ;
+; clk                                          ; -0.096 ; -31.927       ;
+; PS2controller:inst2|ps2_controller:inst1|bsy ; 0.127  ; 0.000         ;
 +----------------------------------------------+--------+---------------+
 
 
@@ -330,9 +340,9 @@ No synchronizer chains to report.
 +----------------------------------------------+--------+---------------+
 ; Clock                                        ; Slack  ; End Point TNS ;
 +----------------------------------------------+--------+---------------+
-; PS2controller:inst2|ps2_controller:inst1|bsy ; -4.504 ; -35.074       ;
-; ps2_clk                                      ; -1.640 ; -9.078        ;
-; clk                                          ; -0.885 ; -22.710       ;
+; clk                                          ; -4.524 ; -236.087      ;
+; PS2controller:inst2|ps2_controller:inst1|bsy ; -4.133 ; -32.776       ;
+; ps2_clk                                      ; -3.600 ; -9.577        ;
 +----------------------------------------------+--------+---------------+
 
 
@@ -341,9 +351,9 @@ No synchronizer chains to report.
 +----------------------------------------------+--------+---------------+
 ; Clock                                        ; Slack  ; End Point TNS ;
 +----------------------------------------------+--------+---------------+
-; clk                                          ; -1.605 ; -1.605        ;
-; ps2_clk                                      ; 0.158  ; 0.000         ;
-; PS2controller:inst2|ps2_controller:inst1|bsy ; 3.295  ; 0.000         ;
+; ps2_clk                                      ; -3.192 ; -3.192        ;
+; clk                                          ; -1.528 ; -6.975        ;
+; PS2controller:inst2|ps2_controller:inst1|bsy ; 2.990  ; 0.000         ;
 +----------------------------------------------+--------+---------------+
 
 
@@ -352,7 +362,7 @@ No synchronizer chains to report.
 +----------------------------------------------+--------+---------------+
 ; Clock                                        ; Slack  ; End Point TNS ;
 +----------------------------------------------+--------+---------------+
-; PS2controller:inst2|ps2_controller:inst1|bsy ; -1.425 ; -11.396       ;
+; PS2controller:inst2|ps2_controller:inst1|bsy ; -1.467 ; -11.733       ;
 +----------------------------------------------+--------+---------------+
 
 
@@ -361,7 +371,7 @@ No synchronizer chains to report.
 +----------------------------------------------+-------+---------------+
 ; Clock                                        ; Slack ; End Point TNS ;
 +----------------------------------------------+-------+---------------+
-; PS2controller:inst2|ps2_controller:inst1|bsy ; 1.573 ; 0.000         ;
+; PS2controller:inst2|ps2_controller:inst1|bsy ; 1.600 ; 0.000         ;
 +----------------------------------------------+-------+---------------+
 
 
@@ -370,9 +380,9 @@ No synchronizer chains to report.
 +----------------------------------------------+--------+---------------+
 ; Clock                                        ; Slack  ; End Point TNS ;
 +----------------------------------------------+--------+---------------+
-; ps2_clk                                      ; -0.550 ; -6.083        ;
-; clk                                          ; -0.097 ; -3.434        ;
-; PS2controller:inst2|ps2_controller:inst1|bsy ; 0.156  ; 0.000         ;
+; ps2_clk                                      ; -0.496 ; -3.851        ;
+; clk                                          ; -0.097 ; -32.524       ;
+; PS2controller:inst2|ps2_controller:inst1|bsy ; 0.125  ; 0.000         ;
 +----------------------------------------------+--------+---------------+
 
 
@@ -382,20 +392,20 @@ No synchronizer chains to report.
 No synchronizer chains to report.
 
 
-+--------------------------------------------------------------------------------------------------------------+
-; Multicorner Timing Analysis Summary                                                                          ;
-+-----------------------------------------------+----------+--------+----------+---------+---------------------+
-; Clock                                         ; Setup    ; Hold   ; Recovery ; Removal ; Minimum Pulse Width ;
-+-----------------------------------------------+----------+--------+----------+---------+---------------------+
-; Worst-case Slack                              ; -8.641   ; -2.628 ; -3.607   ; 1.573   ; -0.550              ;
-;  PS2controller:inst2|ps2_controller:inst1|bsy ; -8.641   ; 3.295  ; -3.607   ; 1.573   ; -0.538              ;
-;  clk                                          ; -2.849   ; -2.628 ; N/A      ; N/A     ; -0.538              ;
-;  ps2_clk                                      ; -4.250   ; 0.152  ; N/A      ; N/A     ; -0.550              ;
-; Design-wide TNS                               ; -205.593 ; -2.628 ; -28.836  ; 0.0     ; -52.445             ;
-;  PS2controller:inst2|ps2_controller:inst1|bsy ; -67.447  ; 0.000  ; -28.836  ; 0.000   ; -6.160              ;
-;  clk                                          ; -93.431  ; -2.628 ; N/A      ; N/A     ; -28.341             ;
-;  ps2_clk                                      ; -45.452  ; 0.000  ; N/A      ; N/A     ; -18.609             ;
-+-----------------------------------------------+----------+--------+----------+---------+---------------------+
++---------------------------------------------------------------------------------------------------------------+
+; Multicorner Timing Analysis Summary                                                                           ;
++-----------------------------------------------+----------+---------+----------+---------+---------------------+
+; Clock                                         ; Setup    ; Hold    ; Recovery ; Removal ; Minimum Pulse Width ;
++-----------------------------------------------+----------+---------+----------+---------+---------------------+
+; Worst-case Slack                              ; -9.066   ; -5.719  ; -3.723   ; 1.600   ; -0.538              ;
+;  PS2controller:inst2|ps2_controller:inst1|bsy ; -8.026   ; 2.990   ; -3.723   ; 1.600   ; -0.538              ;
+;  clk                                          ; -9.066   ; -2.472  ; N/A      ; N/A     ; -0.538              ;
+;  ps2_clk                                      ; -7.293   ; -5.719  ; N/A      ; N/A     ; -0.538              ;
+; Design-wide TNS                               ; -1041.33 ; -16.608 ; -29.763  ; 0.0     ; -294.726            ;
+;  PS2controller:inst2|ps2_controller:inst1|bsy ; -63.376  ; 0.000   ; -29.763  ; 0.000   ; -6.208              ;
+;  clk                                          ; -933.947 ; -10.993 ; N/A      ; N/A     ; -271.944            ;
+;  ps2_clk                                      ; -44.007  ; -5.719  ; N/A      ; N/A     ; -16.574             ;
++-----------------------------------------------+----------+---------+----------+---------+---------------------+
 
 
 +---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
@@ -404,6 +414,7 @@ No synchronizer chains to report.
 ; Pin        ; I/O Standard ; Near Tline Length ; Near Tline L per Length ; Near Tline C per Length ; Near Series R ; Near Differential R ; Near Pull-up R ; Near Pull-down R ; Near C ; Far Tline Length ; Far Tline L per Length ; Far Tline C per Length ; Far Series R ; Far Pull-up R ; Far Pull-down R ; Far C ; Termination Voltage ; Far Differential R ; EBD File Name ; EBD Signal Name ; EBD Far-end ;
 +------------+--------------+-------------------+-------------------------+-------------------------+---------------+---------------------+----------------+------------------+--------+------------------+------------------------+------------------------+--------------+---------------+-----------------+-------+---------------------+--------------------+---------------+-----------------+-------------+
 ; buzzer_out ; 2.5 V        ; 0 in              ; 0 H/in                  ; 0 F/in                  ; short         ; -                   ; open           ; open             ; open   ; 0 in             ; 0 H/in                 ; 0 F/in                 ; short        ; open          ; open            ; open  ; 0 V                 ; -                  ; n/a           ; n/a             ; n/a         ;
+; led0       ; 2.5 V        ; 0 in              ; 0 H/in                  ; 0 F/in                  ; short         ; -                   ; open           ; open             ; open   ; 0 in             ; 0 H/in                 ; 0 F/in                 ; short        ; open          ; open            ; open  ; 0 V                 ; -                  ; n/a           ; n/a             ; n/a         ;
 ; disp0[0]   ; 2.5 V        ; 0 in              ; 0 H/in                  ; 0 F/in                  ; short         ; -                   ; open           ; open             ; open   ; 0 in             ; 0 H/in                 ; 0 F/in                 ; short        ; open          ; open            ; open  ; 0 V                 ; -                  ; n/a           ; n/a             ; n/a         ;
 ; disp0[1]   ; 2.5 V        ; 0 in              ; 0 H/in                  ; 0 F/in                  ; short         ; -                   ; open           ; open             ; open   ; 0 in             ; 0 H/in                 ; 0 F/in                 ; short        ; open          ; open            ; open  ; 0 V                 ; -                  ; n/a           ; n/a             ; n/a         ;
 ; disp0[2]   ; 2.5 V        ; 0 in              ; 0 H/in                  ; 0 F/in                  ; short         ; -                   ; open           ; open             ; open   ; 0 in             ; 0 H/in                 ; 0 F/in                 ; short        ; open          ; open            ; open  ; 0 V                 ; -                  ; n/a           ; n/a             ; n/a         ;
@@ -426,9 +437,9 @@ No synchronizer chains to report.
 +----------+--------------+-----------------+-----------------+
 ; Pin      ; I/O Standard ; 10-90 Rise Time ; 90-10 Fall Time ;
 +----------+--------------+-----------------+-----------------+
+; clk      ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
 ; rst      ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
 ; ps2_clk  ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
-; clk      ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
 ; ps2_data ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
 +----------+--------------+-----------------+-----------------+
 
@@ -439,6 +450,7 @@ No synchronizer chains to report.
 ; Pin        ; I/O Standard ; Board Delay on Rise ; Board Delay on Fall ; Steady State Voh at FPGA Pin ; Steady State Vol at FPGA Pin ; Voh Max at FPGA Pin ; Vol Min at FPGA Pin ; Ringback Voltage on Rise at FPGA Pin ; Ringback Voltage on Fall at FPGA Pin ; 10-90 Rise Time at FPGA Pin ; 90-10 Fall Time at FPGA Pin ; Monotonic Rise at FPGA Pin ; Monotonic Fall at FPGA Pin ; Steady State Voh at Far-end ; Steady State Vol at Far-end ; Voh Max at Far-end ; Vol Min at Far-end ; Ringback Voltage on Rise at Far-end ; Ringback Voltage on Fall at Far-end ; 10-90 Rise Time at Far-end ; 90-10 Fall Time at Far-end ; Monotonic Rise at Far-end ; Monotonic Fall at Far-end ;
 +------------+--------------+---------------------+---------------------+------------------------------+------------------------------+---------------------+---------------------+--------------------------------------+--------------------------------------+-----------------------------+-----------------------------+----------------------------+----------------------------+-----------------------------+-----------------------------+--------------------+--------------------+-------------------------------------+-------------------------------------+----------------------------+----------------------------+---------------------------+---------------------------+
 ; buzzer_out ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 2.19e-07 V                   ; 2.4 V               ; -0.039 V            ; 0.21 V                               ; 0.145 V                              ; 4.67e-10 s                  ; 4.63e-10 s                  ; No                         ; Yes                        ; 2.32 V                      ; 2.19e-07 V                  ; 2.4 V              ; -0.039 V           ; 0.21 V                              ; 0.145 V                             ; 4.67e-10 s                 ; 4.63e-10 s                 ; No                        ; Yes                       ;
+; led0       ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 2.15e-07 V                   ; 2.41 V              ; -0.0492 V           ; 0.181 V                              ; 0.116 V                              ; 4.54e-10 s                  ; 4.44e-10 s                  ; No                         ; Yes                        ; 2.32 V                      ; 2.15e-07 V                  ; 2.41 V             ; -0.0492 V          ; 0.181 V                             ; 0.116 V                             ; 4.54e-10 s                 ; 4.44e-10 s                 ; No                        ; Yes                       ;
 ; disp0[0]   ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 2.15e-07 V                   ; 2.41 V              ; -0.0495 V           ; 0.18 V                               ; 0.115 V                              ; 4.54e-10 s                  ; 4.44e-10 s                  ; No                         ; Yes                        ; 2.32 V                      ; 2.15e-07 V                  ; 2.41 V             ; -0.0495 V          ; 0.18 V                              ; 0.115 V                             ; 4.54e-10 s                 ; 4.44e-10 s                 ; No                        ; Yes                       ;
 ; disp0[1]   ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 2.15e-07 V                   ; 2.41 V              ; -0.0492 V           ; 0.181 V                              ; 0.116 V                              ; 4.54e-10 s                  ; 4.44e-10 s                  ; No                         ; Yes                        ; 2.32 V                      ; 2.15e-07 V                  ; 2.41 V             ; -0.0492 V          ; 0.181 V                             ; 0.116 V                             ; 4.54e-10 s                 ; 4.44e-10 s                 ; No                        ; Yes                       ;
 ; disp0[2]   ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 2.15e-07 V                   ; 2.41 V              ; -0.0492 V           ; 0.181 V                              ; 0.116 V                              ; 4.54e-10 s                  ; 4.44e-10 s                  ; No                         ; Yes                        ; 2.32 V                      ; 2.15e-07 V                  ; 2.41 V             ; -0.0492 V          ; 0.181 V                             ; 0.116 V                             ; 4.54e-10 s                 ; 4.44e-10 s                 ; No                        ; Yes                       ;
@@ -462,6 +474,7 @@ No synchronizer chains to report.
 ; Pin        ; I/O Standard ; Board Delay on Rise ; Board Delay on Fall ; Steady State Voh at FPGA Pin ; Steady State Vol at FPGA Pin ; Voh Max at FPGA Pin ; Vol Min at FPGA Pin ; Ringback Voltage on Rise at FPGA Pin ; Ringback Voltage on Fall at FPGA Pin ; 10-90 Rise Time at FPGA Pin ; 90-10 Fall Time at FPGA Pin ; Monotonic Rise at FPGA Pin ; Monotonic Fall at FPGA Pin ; Steady State Voh at Far-end ; Steady State Vol at Far-end ; Voh Max at Far-end ; Vol Min at Far-end ; Ringback Voltage on Rise at Far-end ; Ringback Voltage on Fall at Far-end ; 10-90 Rise Time at Far-end ; 90-10 Fall Time at Far-end ; Monotonic Rise at Far-end ; Monotonic Fall at Far-end ;
 +------------+--------------+---------------------+---------------------+------------------------------+------------------------------+---------------------+---------------------+--------------------------------------+--------------------------------------+-----------------------------+-----------------------------+----------------------------+----------------------------+-----------------------------+-----------------------------+--------------------+--------------------+-------------------------------------+-------------------------------------+----------------------------+----------------------------+---------------------------+---------------------------+
 ; buzzer_out ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 2.56e-05 V                   ; 2.38 V              ; -0.026 V            ; 0.249 V                              ; 0.089 V                              ; 4.95e-10 s                  ; 6.01e-10 s                  ; No                         ; Yes                        ; 2.32 V                      ; 2.56e-05 V                  ; 2.38 V             ; -0.026 V           ; 0.249 V                             ; 0.089 V                             ; 4.95e-10 s                 ; 6.01e-10 s                 ; No                        ; Yes                       ;
+; led0       ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 2.52e-05 V                   ; 2.38 V              ; -0.032 V            ; 0.204 V                              ; 0.181 V                              ; 4.74e-10 s                  ; 4.85e-10 s                  ; No                         ; Yes                        ; 2.32 V                      ; 2.52e-05 V                  ; 2.38 V             ; -0.032 V           ; 0.204 V                             ; 0.181 V                             ; 4.74e-10 s                 ; 4.85e-10 s                 ; No                        ; Yes                       ;
 ; disp0[0]   ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 2.52e-05 V                   ; 2.38 V              ; -0.0315 V           ; 0.205 V                              ; 0.182 V                              ; 4.74e-10 s                  ; 4.85e-10 s                  ; No                         ; Yes                        ; 2.32 V                      ; 2.52e-05 V                  ; 2.38 V             ; -0.0315 V          ; 0.205 V                             ; 0.182 V                             ; 4.74e-10 s                 ; 4.85e-10 s                 ; No                        ; Yes                       ;
 ; disp0[1]   ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 2.52e-05 V                   ; 2.38 V              ; -0.032 V            ; 0.204 V                              ; 0.181 V                              ; 4.74e-10 s                  ; 4.85e-10 s                  ; No                         ; Yes                        ; 2.32 V                      ; 2.52e-05 V                  ; 2.38 V             ; -0.032 V           ; 0.204 V                             ; 0.181 V                             ; 4.74e-10 s                 ; 4.85e-10 s                 ; No                        ; Yes                       ;
 ; disp0[2]   ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 2.52e-05 V                   ; 2.38 V              ; -0.032 V            ; 0.204 V                              ; 0.181 V                              ; 4.74e-10 s                  ; 4.85e-10 s                  ; No                         ; Yes                        ; 2.32 V                      ; 2.52e-05 V                  ; 2.38 V             ; -0.032 V           ; 0.204 V                             ; 0.181 V                             ; 4.74e-10 s                 ; 4.85e-10 s                 ; No                        ; Yes                       ;
@@ -485,6 +498,7 @@ No synchronizer chains to report.
 ; Pin        ; I/O Standard ; Board Delay on Rise ; Board Delay on Fall ; Steady State Voh at FPGA Pin ; Steady State Vol at FPGA Pin ; Voh Max at FPGA Pin ; Vol Min at FPGA Pin ; Ringback Voltage on Rise at FPGA Pin ; Ringback Voltage on Fall at FPGA Pin ; 10-90 Rise Time at FPGA Pin ; 90-10 Fall Time at FPGA Pin ; Monotonic Rise at FPGA Pin ; Monotonic Fall at FPGA Pin ; Steady State Voh at Far-end ; Steady State Vol at Far-end ; Voh Max at Far-end ; Vol Min at Far-end ; Ringback Voltage on Rise at Far-end ; Ringback Voltage on Fall at Far-end ; 10-90 Rise Time at Far-end ; 90-10 Fall Time at Far-end ; Monotonic Rise at Far-end ; Monotonic Fall at Far-end ;
 +------------+--------------+---------------------+---------------------+------------------------------+------------------------------+---------------------+---------------------+--------------------------------------+--------------------------------------+-----------------------------+-----------------------------+----------------------------+----------------------------+-----------------------------+-----------------------------+--------------------+--------------------+-------------------------------------+-------------------------------------+----------------------------+----------------------------+---------------------------+---------------------------+
 ; buzzer_out ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.75 V                       ; 4.25e-06 V                   ; 2.9 V               ; -0.107 V            ; 0.378 V                              ; 0.16 V                               ; 2.87e-10 s                  ; 4.28e-10 s                  ; No                         ; No                         ; 2.75 V                      ; 4.25e-06 V                  ; 2.9 V              ; -0.107 V           ; 0.378 V                             ; 0.16 V                              ; 2.87e-10 s                 ; 4.28e-10 s                 ; No                        ; No                        ;
+; led0       ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.75 V                       ; 4.14e-06 V                   ; 2.91 V              ; -0.119 V            ; 0.326 V                              ; 0.298 V                              ; 2.74e-10 s                  ; 2.8e-10 s                   ; No                         ; No                         ; 2.75 V                      ; 4.14e-06 V                  ; 2.91 V             ; -0.119 V           ; 0.326 V                             ; 0.298 V                             ; 2.74e-10 s                 ; 2.8e-10 s                  ; No                        ; No                        ;
 ; disp0[0]   ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.75 V                       ; 4.14e-06 V                   ; 2.91 V              ; -0.121 V            ; 0.326 V                              ; 0.297 V                              ; 2.74e-10 s                  ; 2.8e-10 s                   ; No                         ; No                         ; 2.75 V                      ; 4.14e-06 V                  ; 2.91 V             ; -0.121 V           ; 0.326 V                             ; 0.297 V                             ; 2.74e-10 s                 ; 2.8e-10 s                  ; No                        ; No                        ;
 ; disp0[1]   ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.75 V                       ; 4.14e-06 V                   ; 2.91 V              ; -0.119 V            ; 0.326 V                              ; 0.298 V                              ; 2.74e-10 s                  ; 2.8e-10 s                   ; No                         ; No                         ; 2.75 V                      ; 4.14e-06 V                  ; 2.91 V             ; -0.119 V           ; 0.326 V                             ; 0.298 V                             ; 2.74e-10 s                 ; 2.8e-10 s                  ; No                        ; No                        ;
 ; disp0[2]   ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.75 V                       ; 4.14e-06 V                   ; 2.91 V              ; -0.119 V            ; 0.326 V                              ; 0.298 V                              ; 2.74e-10 s                  ; 2.8e-10 s                   ; No                         ; No                         ; 2.75 V                      ; 4.14e-06 V                  ; 2.91 V             ; -0.119 V           ; 0.326 V                             ; 0.298 V                             ; 2.74e-10 s                 ; 2.8e-10 s                  ; No                        ; No                        ;
@@ -508,6 +522,7 @@ No synchronizer chains to report.
 ; Pin        ; I/O Standard ; Board Delay on Rise ; Board Delay on Fall ; Steady State Voh at FPGA Pin ; Steady State Vol at FPGA Pin ; Voh Max at FPGA Pin ; Vol Min at FPGA Pin ; Ringback Voltage on Rise at FPGA Pin ; Ringback Voltage on Fall at FPGA Pin ; 10-90 Rise Time at FPGA Pin ; 90-10 Fall Time at FPGA Pin ; Monotonic Rise at FPGA Pin ; Monotonic Fall at FPGA Pin ; Steady State Voh at Far-end ; Steady State Vol at Far-end ; Voh Max at Far-end ; Vol Min at Far-end ; Ringback Voltage on Rise at Far-end ; Ringback Voltage on Fall at Far-end ; 10-90 Rise Time at Far-end ; 90-10 Fall Time at Far-end ; Monotonic Rise at Far-end ; Monotonic Fall at Far-end ;
 +------------+--------------+---------------------+---------------------+------------------------------+------------------------------+---------------------+---------------------+--------------------------------------+--------------------------------------+-----------------------------+-----------------------------+----------------------------+----------------------------+-----------------------------+-----------------------------+--------------------+--------------------+-------------------------------------+-------------------------------------+----------------------------+----------------------------+---------------------------+---------------------------+
 ; buzzer_out ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.75 V                       ; 0.000247 V                   ; 2.85 V              ; -0.0711 V           ; 0.204 V                              ; 0.181 V                              ; 4.55e-10 s                  ; 4.49e-10 s                  ; No                         ; No                         ; 2.75 V                      ; 0.000247 V                  ; 2.85 V             ; -0.0711 V          ; 0.204 V                             ; 0.181 V                             ; 4.55e-10 s                 ; 4.49e-10 s                 ; No                        ; No                        ;
+; led0       ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.75 V                       ; 0.000242 V                   ; 2.86 V              ; -0.0805 V           ; 0.358 V                              ; 0.156 V                              ; 3.01e-10 s                  ; 4.34e-10 s                  ; No                         ; No                         ; 2.75 V                      ; 0.000242 V                  ; 2.86 V             ; -0.0805 V          ; 0.358 V                             ; 0.156 V                             ; 3.01e-10 s                 ; 4.34e-10 s                 ; No                        ; No                        ;
 ; disp0[0]   ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.75 V                       ; 0.000242 V                   ; 2.86 V              ; -0.0814 V           ; 0.36 V                               ; 0.156 V                              ; 3e-10 s                     ; 4.34e-10 s                  ; No                         ; No                         ; 2.75 V                      ; 0.000242 V                  ; 2.86 V             ; -0.0814 V          ; 0.36 V                              ; 0.156 V                             ; 3e-10 s                    ; 4.34e-10 s                 ; No                        ; No                        ;
 ; disp0[1]   ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.75 V                       ; 0.000242 V                   ; 2.86 V              ; -0.0805 V           ; 0.358 V                              ; 0.156 V                              ; 3.01e-10 s                  ; 4.34e-10 s                  ; No                         ; No                         ; 2.75 V                      ; 0.000242 V                  ; 2.86 V             ; -0.0805 V          ; 0.358 V                             ; 0.156 V                             ; 3.01e-10 s                 ; 4.34e-10 s                 ; No                        ; No                        ;
 ; disp0[2]   ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.75 V                       ; 0.000242 V                   ; 2.86 V              ; -0.0805 V           ; 0.358 V                              ; 0.156 V                              ; 3.01e-10 s                  ; 4.34e-10 s                  ; No                         ; No                         ; 2.75 V                      ; 0.000242 V                  ; 2.86 V             ; -0.0805 V          ; 0.358 V                             ; 0.156 V                             ; 3.01e-10 s                 ; 4.34e-10 s                 ; No                        ; No                        ;
@@ -530,9 +545,11 @@ No synchronizer chains to report.
 +----------------------------------------------+----------------------------------------------+----------+----------+----------+----------+
 ; From Clock                                   ; To Clock                                     ; RR Paths ; FR Paths ; RF Paths ; FF Paths ;
 +----------------------------------------------+----------------------------------------------+----------+----------+----------+----------+
-; clk                                          ; clk                                          ; 1328     ; 0        ; 0        ; 0        ;
-; PS2controller:inst2|ps2_controller:inst1|bsy ; clk                                          ; 8        ; 0        ; 0        ; 0        ;
-; ps2_clk                                      ; ps2_clk                                      ; 0        ; 0        ; 0        ; 148      ;
+; clk                                          ; clk                                          ; 12837    ; 0        ; 0        ; 0        ;
+; ps2_clk                                      ; clk                                          ; 0        ; 6        ; 0        ; 0        ;
+; PS2controller:inst2|ps2_controller:inst1|bsy ; clk                                          ; 71       ; 0        ; 0        ; 0        ;
+; ps2_clk                                      ; ps2_clk                                      ; 0        ; 0        ; 0        ; 136      ;
+; PS2controller:inst2|ps2_controller:inst1|bsy ; ps2_clk                                      ; 0        ; 0        ; 8        ; 0        ;
 ; ps2_clk                                      ; PS2controller:inst2|ps2_controller:inst1|bsy ; 0        ; 8        ; 0        ; 0        ;
 +----------------------------------------------+----------------------------------------------+----------+----------+----------+----------+
 Entries labeled "false path" only account for clock-to-clock false paths and not path-based false paths. As a result, actual path counts may be lower than reported.
@@ -543,9 +560,11 @@ Entries labeled "false path" only account for clock-to-clock false paths and not
 +----------------------------------------------+----------------------------------------------+----------+----------+----------+----------+
 ; From Clock                                   ; To Clock                                     ; RR Paths ; FR Paths ; RF Paths ; FF Paths ;
 +----------------------------------------------+----------------------------------------------+----------+----------+----------+----------+
-; clk                                          ; clk                                          ; 1328     ; 0        ; 0        ; 0        ;
-; PS2controller:inst2|ps2_controller:inst1|bsy ; clk                                          ; 8        ; 0        ; 0        ; 0        ;
-; ps2_clk                                      ; ps2_clk                                      ; 0        ; 0        ; 0        ; 148      ;
+; clk                                          ; clk                                          ; 12837    ; 0        ; 0        ; 0        ;
+; ps2_clk                                      ; clk                                          ; 0        ; 6        ; 0        ; 0        ;
+; PS2controller:inst2|ps2_controller:inst1|bsy ; clk                                          ; 71       ; 0        ; 0        ; 0        ;
+; ps2_clk                                      ; ps2_clk                                      ; 0        ; 0        ; 0        ; 136      ;
+; PS2controller:inst2|ps2_controller:inst1|bsy ; ps2_clk                                      ; 0        ; 0        ; 8        ; 0        ;
 ; ps2_clk                                      ; PS2controller:inst2|ps2_controller:inst1|bsy ; 0        ; 8        ; 0        ; 0        ;
 +----------------------------------------------+----------------------------------------------+----------+----------+----------+----------+
 Entries labeled "false path" only account for clock-to-clock false paths and not path-based false paths. As a result, actual path counts may be lower than reported.
@@ -591,9 +610,9 @@ No non-DPA dedicated SERDES Receiver circuitry present in device or used in desi
 ; Illegal Clocks                  ; 0     ; 0    ;
 ; Unconstrained Clocks            ; 0     ; 0    ;
 ; Unconstrained Input Ports       ; 2     ; 2    ;
-; Unconstrained Input Port Paths  ; 31    ; 31   ;
-; Unconstrained Output Ports      ; 14    ; 14   ;
-; Unconstrained Output Port Paths ; 56    ; 56   ;
+; Unconstrained Input Port Paths  ; 345   ; 345  ;
+; Unconstrained Output Ports      ; 16    ; 16   ;
+; Unconstrained Output Port Paths ; 73    ; 73   ;
 +---------------------------------+-------+------+
 
 
@@ -623,6 +642,7 @@ No non-DPA dedicated SERDES Receiver circuitry present in device or used in desi
 +-------------+---------------------------------------------------------------------------------------+
 ; Output Port ; Comment                                                                               ;
 +-------------+---------------------------------------------------------------------------------------+
+; buzzer_out  ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
 ; disp0[0]    ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
 ; disp0[1]    ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
 ; disp0[2]    ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
@@ -637,6 +657,7 @@ No non-DPA dedicated SERDES Receiver circuitry present in device or used in desi
 ; disp1[4]    ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
 ; disp1[5]    ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
 ; disp1[6]    ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; led0        ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
 +-------------+---------------------------------------------------------------------------------------+
 
 
@@ -655,6 +676,7 @@ No non-DPA dedicated SERDES Receiver circuitry present in device or used in desi
 +-------------+---------------------------------------------------------------------------------------+
 ; Output Port ; Comment                                                                               ;
 +-------------+---------------------------------------------------------------------------------------+
+; buzzer_out  ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
 ; disp0[0]    ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
 ; disp0[1]    ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
 ; disp0[2]    ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
@@ -669,6 +691,7 @@ No non-DPA dedicated SERDES Receiver circuitry present in device or used in desi
 ; disp1[4]    ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
 ; disp1[5]    ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
 ; disp1[6]    ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; led0        ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
 +-------------+---------------------------------------------------------------------------------------+
 
 
@@ -678,7 +701,7 @@ No non-DPA dedicated SERDES Receiver circuitry present in device or used in desi
 Info: *******************************************************************
 Info: Running Quartus Prime Timing Analyzer
     Info: Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
-    Info: Processing started: Fri Feb 09 00:35:32 2024
+    Info: Processing started: Fri Feb 09 01:38:27 2024
 Info: Command: quartus_sta audio_controller -c audio_controller
 Info: qsta_default_script.tcl version: #1
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
@@ -688,8 +711,8 @@ Info (21077): High junction temperature is 85 degrees C
 Critical Warning (332012): Synopsys Design Constraints File file not found: 'audio_controller.sdc'. A Synopsys Design Constraints File is required by the Timing Analyzer to get proper timing constraints. Without it, the Compiler will not properly optimize the design.
 Info (332142): No user constrained base clocks found in the design. Calling "derive_clocks -period 1.0"
 Info (332105): Deriving Clocks
-    Info (332105): create_clock -period 1.000 -name ps2_clk ps2_clk
     Info (332105): create_clock -period 1.000 -name clk clk
+    Info (332105): create_clock -period 1.000 -name ps2_clk ps2_clk
     Info (332105): create_clock -period 1.000 -name PS2controller:inst2|ps2_controller:inst1|bsy PS2controller:inst2|ps2_controller:inst1|bsy
 Info (332143): No user constrained clock uncertainty found in the design. Calling "derive_clock_uncertainty"
 Info (332123): Deriving Clock Uncertainty. Please refer to report_sdc in the Timing Analyzer to see clock uncertainties.
@@ -697,132 +720,132 @@ Info: Found TIMING_ANALYZER_REPORT_SCRIPT_INCLUDE_DEFAULT_ANALYSIS = ON
 Info: Analyzing Slow 1100mV 85C Model
 Critical Warning (332148): Timing requirements not met
     Info (11105): For recommendations on closing timing, run Report Timing Closure Recommendations in the Timing Analyzer.
-Info (332146): Worst-case setup slack is -8.641
+Info (332146): Worst-case setup slack is -9.066
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):    -8.641             -67.447 PS2controller:inst2|ps2_controller:inst1|bsy 
-    Info (332119):    -4.250             -45.452 ps2_clk 
-    Info (332119):    -2.840             -92.694 clk 
-Info (332146): Worst-case hold slack is -2.482
+    Info (332119):    -9.066            -933.947 clk 
+    Info (332119):    -8.026             -63.376 PS2controller:inst2|ps2_controller:inst1|bsy 
+    Info (332119):    -7.293             -44.007 ps2_clk 
+Info (332146): Worst-case hold slack is -5.719
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):    -2.482              -2.482 clk 
-    Info (332119):     0.238               0.000 ps2_clk 
-    Info (332119):     5.367               0.000 PS2controller:inst2|ps2_controller:inst1|bsy 
-Info (332146): Worst-case recovery slack is -3.568
+    Info (332119):    -5.719              -5.719 ps2_clk 
+    Info (332119):    -2.313             -10.100 clk 
+    Info (332119):     4.851               0.000 PS2controller:inst2|ps2_controller:inst1|bsy 
+Info (332146): Worst-case recovery slack is -3.695
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):    -3.568             -28.528 PS2controller:inst2|ps2_controller:inst1|bsy 
-Info (332146): Worst-case removal slack is 3.153
+    Info (332119):    -3.695             -29.542 PS2controller:inst2|ps2_controller:inst1|bsy 
+Info (332146): Worst-case removal slack is 3.234
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):     3.153               0.000 PS2controller:inst2|ps2_controller:inst1|bsy 
+    Info (332119):     3.234               0.000 PS2controller:inst2|ps2_controller:inst1|bsy 
 Info (332146): Worst-case minimum pulse width slack is -0.538
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):    -0.538             -27.680 clk 
-    Info (332119):    -0.538             -18.609 ps2_clk 
-    Info (332119):    -0.538              -6.156 PS2controller:inst2|ps2_controller:inst1|bsy 
+    Info (332119):    -0.538            -265.336 clk 
+    Info (332119):    -0.538             -16.516 ps2_clk 
+    Info (332119):    -0.538              -6.168 PS2controller:inst2|ps2_controller:inst1|bsy 
 Info: Analyzing Slow 1100mV 0C Model
 Info (334003): Started post-fitting delay annotation
 Info (334004): Delay annotation completed successfully
 Info (332123): Deriving Clock Uncertainty. Please refer to report_sdc in the Timing Analyzer to see clock uncertainties.
 Critical Warning (332148): Timing requirements not met
     Info (11105): For recommendations on closing timing, run Report Timing Closure Recommendations in the Timing Analyzer.
-Info (332146): Worst-case setup slack is -8.503
+Info (332146): Worst-case setup slack is -8.448
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):    -8.503             -66.398 PS2controller:inst2|ps2_controller:inst1|bsy 
-    Info (332119):    -4.164             -42.209 ps2_clk 
-    Info (332119):    -2.849             -93.431 clk 
-Info (332146): Worst-case hold slack is -2.628
+    Info (332119):    -8.448            -929.986 clk 
+    Info (332119):    -7.911             -62.460 PS2controller:inst2|ps2_controller:inst1|bsy 
+    Info (332119):    -6.840             -40.991 ps2_clk 
+Info (332146): Worst-case hold slack is -5.615
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):    -2.628              -2.628 clk 
-    Info (332119):     0.333               0.000 ps2_clk 
-    Info (332119):     5.343               0.000 PS2controller:inst2|ps2_controller:inst1|bsy 
-Info (332146): Worst-case recovery slack is -3.607
+    Info (332119):    -5.615              -5.615 ps2_clk 
+    Info (332119):    -2.472             -10.993 clk 
+    Info (332119):     4.821               0.000 PS2controller:inst2|ps2_controller:inst1|bsy 
+Info (332146): Worst-case recovery slack is -3.723
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):    -3.607             -28.836 PS2controller:inst2|ps2_controller:inst1|bsy 
-Info (332146): Worst-case removal slack is 3.250
+    Info (332119):    -3.723             -29.763 PS2controller:inst2|ps2_controller:inst1|bsy 
+Info (332146): Worst-case removal slack is 3.324
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):     3.250               0.000 PS2controller:inst2|ps2_controller:inst1|bsy 
+    Info (332119):     3.324               0.000 PS2controller:inst2|ps2_controller:inst1|bsy 
 Info (332146): Worst-case minimum pulse width slack is -0.538
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):    -0.538             -28.341 clk 
-    Info (332119):    -0.538             -17.353 ps2_clk 
-    Info (332119):    -0.538              -6.160 PS2controller:inst2|ps2_controller:inst1|bsy 
+    Info (332119):    -0.538            -271.944 clk 
+    Info (332119):    -0.538             -16.574 ps2_clk 
+    Info (332119):    -0.538              -6.208 PS2controller:inst2|ps2_controller:inst1|bsy 
 Info: Analyzing Fast 1100mV 85C Model
 Info (334003): Started post-fitting delay annotation
 Info (334004): Delay annotation completed successfully
 Info (332123): Deriving Clock Uncertainty. Please refer to report_sdc in the Timing Analyzer to see clock uncertainties.
 Critical Warning (332148): Timing requirements not met
     Info (11105): For recommendations on closing timing, run Report Timing Closure Recommendations in the Timing Analyzer.
-Info (332146): Worst-case setup slack is -4.641
+Info (332146): Worst-case setup slack is -5.528
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):    -4.641             -35.987 PS2controller:inst2|ps2_controller:inst1|bsy 
-    Info (332119):    -1.701             -11.859 ps2_clk 
-    Info (332119):    -1.303             -28.452 clk 
-Info (332146): Worst-case hold slack is -1.600
+    Info (332119):    -5.528            -290.578 clk 
+    Info (332119):    -4.560             -12.222 ps2_clk 
+    Info (332119):    -4.196             -33.282 PS2controller:inst2|ps2_controller:inst1|bsy 
+Info (332146): Worst-case hold slack is -3.197
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):    -1.600              -1.600 clk 
-    Info (332119):     0.152               0.000 ps2_clk 
-    Info (332119):     3.366               0.000 PS2controller:inst2|ps2_controller:inst1|bsy 
-Info (332146): Worst-case recovery slack is -1.490
+    Info (332119):    -3.197              -3.197 ps2_clk 
+    Info (332119):    -1.494              -6.722 clk 
+    Info (332119):     3.020               0.000 PS2controller:inst2|ps2_controller:inst1|bsy 
+Info (332146): Worst-case recovery slack is -1.539
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):    -1.490             -11.916 PS2controller:inst2|ps2_controller:inst1|bsy 
-Info (332146): Worst-case removal slack is 1.619
+    Info (332119):    -1.539             -12.306 PS2controller:inst2|ps2_controller:inst1|bsy 
+Info (332146): Worst-case removal slack is 1.647
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):     1.619               0.000 PS2controller:inst2|ps2_controller:inst1|bsy 
-Info (332146): Worst-case minimum pulse width slack is -0.548
+    Info (332119):     1.647               0.000 PS2controller:inst2|ps2_controller:inst1|bsy 
+Info (332146): Worst-case minimum pulse width slack is -0.469
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):    -0.548              -6.563 ps2_clk 
-    Info (332119):    -0.096              -3.394 clk 
-    Info (332119):     0.157               0.000 PS2controller:inst2|ps2_controller:inst1|bsy 
+    Info (332119):    -0.469              -3.646 ps2_clk 
+    Info (332119):    -0.096             -31.927 clk 
+    Info (332119):     0.127               0.000 PS2controller:inst2|ps2_controller:inst1|bsy 
 Info: Analyzing Fast 1100mV 0C Model
 Info (332123): Deriving Clock Uncertainty. Please refer to report_sdc in the Timing Analyzer to see clock uncertainties.
 Critical Warning (332148): Timing requirements not met
     Info (11105): For recommendations on closing timing, run Report Timing Closure Recommendations in the Timing Analyzer.
-Info (332146): Worst-case setup slack is -4.504
+Info (332146): Worst-case setup slack is -4.524
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):    -4.504             -35.074 PS2controller:inst2|ps2_controller:inst1|bsy 
-    Info (332119):    -1.640              -9.078 ps2_clk 
-    Info (332119):    -0.885             -22.710 clk 
-Info (332146): Worst-case hold slack is -1.605
+    Info (332119):    -4.524            -236.087 clk 
+    Info (332119):    -4.133             -32.776 PS2controller:inst2|ps2_controller:inst1|bsy 
+    Info (332119):    -3.600              -9.577 ps2_clk 
+Info (332146): Worst-case hold slack is -3.192
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):    -1.605              -1.605 clk 
-    Info (332119):     0.158               0.000 ps2_clk 
-    Info (332119):     3.295               0.000 PS2controller:inst2|ps2_controller:inst1|bsy 
-Info (332146): Worst-case recovery slack is -1.425
+    Info (332119):    -3.192              -3.192 ps2_clk 
+    Info (332119):    -1.528              -6.975 clk 
+    Info (332119):     2.990               0.000 PS2controller:inst2|ps2_controller:inst1|bsy 
+Info (332146): Worst-case recovery slack is -1.467
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):    -1.425             -11.396 PS2controller:inst2|ps2_controller:inst1|bsy 
-Info (332146): Worst-case removal slack is 1.573
+    Info (332119):    -1.467             -11.733 PS2controller:inst2|ps2_controller:inst1|bsy 
+Info (332146): Worst-case removal slack is 1.600
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):     1.573               0.000 PS2controller:inst2|ps2_controller:inst1|bsy 
-Info (332146): Worst-case minimum pulse width slack is -0.550
+    Info (332119):     1.600               0.000 PS2controller:inst2|ps2_controller:inst1|bsy 
+Info (332146): Worst-case minimum pulse width slack is -0.496
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):    -0.550              -6.083 ps2_clk 
-    Info (332119):    -0.097              -3.434 clk 
-    Info (332119):     0.156               0.000 PS2controller:inst2|ps2_controller:inst1|bsy 
+    Info (332119):    -0.496              -3.851 ps2_clk 
+    Info (332119):    -0.097             -32.524 clk 
+    Info (332119):     0.125               0.000 PS2controller:inst2|ps2_controller:inst1|bsy 
 Info (332102): Design is not fully constrained for setup requirements
 Info (332102): Design is not fully constrained for hold requirements
 Info: Quartus Prime Timing Analyzer was successful. 0 errors, 6 warnings
-    Info: Peak virtual memory: 5197 megabytes
-    Info: Processing ended: Fri Feb 09 00:35:35 2024
+    Info: Peak virtual memory: 5230 megabytes
+    Info: Processing ended: Fri Feb 09 01:38:30 2024
     Info: Elapsed time: 00:00:03
-    Info: Total CPU time (on all processors): 00:00:03
+    Info: Total CPU time (on all processors): 00:00:04
 
 

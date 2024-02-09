@@ -1,11 +1,15 @@
 |AudioController
 buzzer_out <= muxN:inst4.q
 clk => music_frequencies:inst.clk
+clk => key_detector:inst1.clk
 clk => PS2controller:inst2.clk_50
 rst => music_frequencies:inst.rst
+rst => key_detector:inst1.rst
 rst => PS2controller:inst2.sw0
-ps2_data => PS2controller:inst2.PS2_DAT
+ps2_clk => shift_detector:inst7.clk
 ps2_clk => PS2controller:inst2.PS2_CLK
+ps2_data => PS2controller:inst2.PS2_DAT
+led0 <= shift.DB_MAX_OUTPUT_PORT_TYPE
 disp0[6] <= inst5[0].DB_MAX_OUTPUT_PORT_TYPE
 disp0[5] <= inst5[1].DB_MAX_OUTPUT_PORT_TYPE
 disp0[4] <= inst5[2].DB_MAX_OUTPUT_PORT_TYPE
@@ -461,26 +465,35 @@ q[1] <= q[1]~reg0.DB_MAX_OUTPUT_PORT_TYPE
 q[2] <= q[2]~reg0.DB_MAX_OUTPUT_PORT_TYPE
 q[3] <= q[3]~reg0.DB_MAX_OUTPUT_PORT_TYPE
 keyboard_data[0] => Decoder0.IN7
-keyboard_data[0] => Equal0.IN7
 keyboard_data[1] => Decoder0.IN6
-keyboard_data[1] => Equal0.IN1
 keyboard_data[2] => Decoder0.IN5
-keyboard_data[2] => Equal0.IN6
 keyboard_data[3] => Decoder0.IN4
-keyboard_data[3] => Equal0.IN5
 keyboard_data[4] => Decoder0.IN3
-keyboard_data[4] => Equal0.IN0
 keyboard_data[5] => Decoder0.IN2
-keyboard_data[5] => Equal0.IN4
 keyboard_data[6] => Decoder0.IN1
-keyboard_data[6] => Equal0.IN3
 keyboard_data[7] => Decoder0.IN0
-keyboard_data[7] => Equal0.IN2
 clk => q[0]~reg0.CLK
 clk => q[1]~reg0.CLK
 clk => q[2]~reg0.CLK
 clk => q[3]~reg0.CLK
-clk => shift_pressed.CLK
+rst => q[0]~reg0.ACLR
+rst => q[1]~reg0.ACLR
+rst => q[2]~reg0.ACLR
+rst => q[3]~reg0.ACLR
+shift_pressed => Decoder1.IN0
+
+
+|AudioController|shift_detector:inst7
+q <= temp.DB_MAX_OUTPUT_PORT_TYPE
+data[0] => Equal0.IN7
+data[1] => Equal0.IN1
+data[2] => Equal0.IN6
+data[3] => Equal0.IN5
+data[4] => Equal0.IN0
+data[5] => Equal0.IN4
+data[6] => Equal0.IN3
+data[7] => Equal0.IN2
+clk => temp.CLK
 
 
 |AudioController|PS2controller:inst2

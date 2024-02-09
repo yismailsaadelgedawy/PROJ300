@@ -15,7 +15,7 @@
 
 // PROGRAM		"Quartus Prime"
 // VERSION		"Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition"
-// CREATED		"Fri Feb 09 00:37:39 2024"
+// CREATED		"Fri Feb 09 01:08:43 2024"
 
 module AudioController(
 	rst,
@@ -34,9 +34,9 @@ output wire	buzzer_out;
 
 wire	clk_50;
 wire	[12:0] data_to_mux;
-wire	[7:0] keyboard_data;
 wire	[3:0] sel;
 wire	sw_rst;
+wire	[7:0] SYNTHESIZED_WIRE_0;
 
 
 
@@ -49,7 +49,9 @@ music_frequencies	b2v_inst(
 
 
 key_detector	b2v_inst1(
-	.keyboard_data(keyboard_data),
+	.clk(clk_50),
+	.rst(sw_rst),
+	.keyboard_data(SYNTHESIZED_WIRE_0),
 	.q(sel));
 
 
@@ -58,7 +60,7 @@ PS2controller	b2v_inst2(
 	.PS2_DAT(ps2_data),
 	.PS2_CLK(ps2_clk),
 	.sw0(sw_rst),
-	.data_out(keyboard_data));
+	.data_out(SYNTHESIZED_WIRE_0));
 
 
 muxN	b2v_inst4(
