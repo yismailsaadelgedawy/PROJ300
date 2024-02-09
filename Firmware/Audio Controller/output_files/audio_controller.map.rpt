@@ -1,5 +1,5 @@
 Analysis & Synthesis report for audio_controller
-Fri Feb 09 00:01:30 2024
+Fri Feb 09 00:35:11 2024
 Quartus Prime Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
 
 
@@ -60,7 +60,7 @@ https://fpgasoftware.intel.com/eula.
 +-------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                  ;
 +---------------------------------+---------------------------------------------+
-; Analysis & Synthesis Status     ; Successful - Fri Feb 09 00:01:30 2024       ;
+; Analysis & Synthesis Status     ; Successful - Fri Feb 09 00:35:11 2024       ;
 ; Quartus Prime Version           ; 20.1.1 Build 720 11/11/2020 SJ Lite Edition ;
 ; Revision Name                   ; audio_controller                            ;
 ; Top-level Entity Name           ; AudioController                             ;
@@ -404,7 +404,7 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +----------------+-------+--------------------------------+
 ; Parameter Name ; Value ; Type                           ;
 +----------------+-------+--------------------------------+
-; N              ; 16    ; Signed Integer                 ;
+; N              ; 13    ; Signed Integer                 ;
 ; M              ; 4     ; Signed Integer                 ;
 +----------------+-------+--------------------------------+
 Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
@@ -425,7 +425,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 +----------------+--------+---------------------------------------------------------------+
 ; Parameter Name ; Value  ; Type                                                          ;
 +----------------+--------+---------------------------------------------------------------+
-; f              ; 493.88 ; Signed Float                                                  ;
+; f              ; 466.16 ; Signed Float                                                  ;
 +----------------+--------+---------------------------------------------------------------+
 Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
 
@@ -435,7 +435,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 +----------------+--------+---------------------------------------------------------------+
 ; Parameter Name ; Value  ; Type                                                          ;
 +----------------+--------+---------------------------------------------------------------+
-; f              ; 493.88 ; Signed Float                                                  ;
+; f              ; 440.00 ; Signed Float                                                  ;
 +----------------+--------+---------------------------------------------------------------+
 Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
 
@@ -445,7 +445,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 +----------------+--------+---------------------------------------------------------------+
 ; Parameter Name ; Value  ; Type                                                          ;
 +----------------+--------+---------------------------------------------------------------+
-; f              ; 493.88 ; Signed Float                                                  ;
+; f              ; 415.30 ; Signed Float                                                  ;
 +----------------+--------+---------------------------------------------------------------+
 Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
 
@@ -455,7 +455,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 +----------------+--------+----------------------------------------------------------------+
 ; Parameter Name ; Value  ; Type                                                           ;
 +----------------+--------+----------------------------------------------------------------+
-; f              ; 493.88 ; Signed Float                                                   ;
+; f              ; 392.00 ; Signed Float                                                   ;
 +----------------+--------+----------------------------------------------------------------+
 Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
 
@@ -465,7 +465,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 +----------------+--------+---------------------------------------------------------------+
 ; Parameter Name ; Value  ; Type                                                          ;
 +----------------+--------+---------------------------------------------------------------+
-; f              ; 493.88 ; Signed Float                                                  ;
+; f              ; 369.99 ; Signed Float                                                  ;
 +----------------+--------+---------------------------------------------------------------+
 Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
 
@@ -475,7 +475,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 +----------------+--------+---------------------------------------------------------------+
 ; Parameter Name ; Value  ; Type                                                          ;
 +----------------+--------+---------------------------------------------------------------+
-; f              ; 493.88 ; Signed Float                                                  ;
+; f              ; 349.23 ; Signed Float                                                  ;
 +----------------+--------+---------------------------------------------------------------+
 Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
 
@@ -485,7 +485,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 +----------------+--------+---------------------------------------------------------------+
 ; Parameter Name ; Value  ; Type                                                          ;
 +----------------+--------+---------------------------------------------------------------+
-; f              ; 493.88 ; Signed Float                                                  ;
+; f              ; 329.63 ; Signed Float                                                  ;
 +----------------+--------+---------------------------------------------------------------+
 Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
 
@@ -495,7 +495,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 +----------------+--------+----------------------------------------------------------------+
 ; Parameter Name ; Value  ; Type                                                           ;
 +----------------+--------+----------------------------------------------------------------+
-; f              ; 493.88 ; Signed Float                                                   ;
+; f              ; 311.13 ; Signed Float                                                   ;
 +----------------+--------+----------------------------------------------------------------+
 Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
 
@@ -505,7 +505,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 +----------------+--------+---------------------------------------------------------------+
 ; Parameter Name ; Value  ; Type                                                          ;
 +----------------+--------+---------------------------------------------------------------+
-; f              ; 493.88 ; Signed Float                                                  ;
+; f              ; 293.66 ; Signed Float                                                  ;
 +----------------+--------+---------------------------------------------------------------+
 Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
 
@@ -515,7 +515,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 +----------------+--------+---------------------------------------------------------------+
 ; Parameter Name ; Value  ; Type                                                          ;
 +----------------+--------+---------------------------------------------------------------+
-; f              ; 493.88 ; Signed Float                                                  ;
+; f              ; 277.18 ; Signed Float                                                  ;
 +----------------+--------+---------------------------------------------------------------+
 Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
 
@@ -525,7 +525,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 +----------------+--------+----------------------------------------------------------------+
 ; Parameter Name ; Value  ; Type                                                           ;
 +----------------+--------+----------------------------------------------------------------+
-; f              ; 493.88 ; Signed Float                                                   ;
+; f              ; 261.63 ; Signed Float                                                   ;
 +----------------+--------+----------------------------------------------------------------+
 Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
 
@@ -573,7 +573,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
-    Info: Processing started: Fri Feb 09 00:01:25 2024
+    Info: Processing started: Fri Feb 09 00:35:06 2024
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off audio_controller -c audio_controller
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20030): Parallel compilation is enabled and will use 16 of the 16 processors detected
@@ -614,6 +614,28 @@ Info (12128): Elaborating entity "muxN" for hierarchy "muxN:inst4"
 Info (12128): Elaborating entity "music_frequencies" for hierarchy "music_frequencies:inst"
 Info (12128): Elaborating entity "fine_clk_divN" for hierarchy "music_frequencies:inst|fine_clk_divN:inst"
 Warning (10230): Verilog HDL assignment warning at fine_clk_divN.sv(38): truncated value with size 32 to match size of target (25) File: C:/Users/minec/Desktop/Work/GitHub Repos/PROJ300/Firmware/Audio Controller/sv files/fine_clk_divN.sv Line: 38
+Info (12128): Elaborating entity "fine_clk_divN" for hierarchy "music_frequencies:inst|fine_clk_divN:inst1"
+Warning (10230): Verilog HDL assignment warning at fine_clk_divN.sv(38): truncated value with size 32 to match size of target (25) File: C:/Users/minec/Desktop/Work/GitHub Repos/PROJ300/Firmware/Audio Controller/sv files/fine_clk_divN.sv Line: 38
+Info (12128): Elaborating entity "fine_clk_divN" for hierarchy "music_frequencies:inst|fine_clk_divN:inst2"
+Warning (10230): Verilog HDL assignment warning at fine_clk_divN.sv(38): truncated value with size 32 to match size of target (25) File: C:/Users/minec/Desktop/Work/GitHub Repos/PROJ300/Firmware/Audio Controller/sv files/fine_clk_divN.sv Line: 38
+Info (12128): Elaborating entity "fine_clk_divN" for hierarchy "music_frequencies:inst|fine_clk_divN:inst3"
+Warning (10230): Verilog HDL assignment warning at fine_clk_divN.sv(38): truncated value with size 32 to match size of target (25) File: C:/Users/minec/Desktop/Work/GitHub Repos/PROJ300/Firmware/Audio Controller/sv files/fine_clk_divN.sv Line: 38
+Info (12128): Elaborating entity "fine_clk_divN" for hierarchy "music_frequencies:inst|fine_clk_divN:inst15"
+Warning (10230): Verilog HDL assignment warning at fine_clk_divN.sv(38): truncated value with size 32 to match size of target (25) File: C:/Users/minec/Desktop/Work/GitHub Repos/PROJ300/Firmware/Audio Controller/sv files/fine_clk_divN.sv Line: 38
+Info (12128): Elaborating entity "fine_clk_divN" for hierarchy "music_frequencies:inst|fine_clk_divN:inst4"
+Warning (10230): Verilog HDL assignment warning at fine_clk_divN.sv(38): truncated value with size 32 to match size of target (25) File: C:/Users/minec/Desktop/Work/GitHub Repos/PROJ300/Firmware/Audio Controller/sv files/fine_clk_divN.sv Line: 38
+Info (12128): Elaborating entity "fine_clk_divN" for hierarchy "music_frequencies:inst|fine_clk_divN:inst5"
+Warning (10230): Verilog HDL assignment warning at fine_clk_divN.sv(38): truncated value with size 32 to match size of target (25) File: C:/Users/minec/Desktop/Work/GitHub Repos/PROJ300/Firmware/Audio Controller/sv files/fine_clk_divN.sv Line: 38
+Info (12128): Elaborating entity "fine_clk_divN" for hierarchy "music_frequencies:inst|fine_clk_divN:inst7"
+Warning (10230): Verilog HDL assignment warning at fine_clk_divN.sv(38): truncated value with size 32 to match size of target (25) File: C:/Users/minec/Desktop/Work/GitHub Repos/PROJ300/Firmware/Audio Controller/sv files/fine_clk_divN.sv Line: 38
+Info (12128): Elaborating entity "fine_clk_divN" for hierarchy "music_frequencies:inst|fine_clk_divN:inst16"
+Warning (10230): Verilog HDL assignment warning at fine_clk_divN.sv(38): truncated value with size 32 to match size of target (25) File: C:/Users/minec/Desktop/Work/GitHub Repos/PROJ300/Firmware/Audio Controller/sv files/fine_clk_divN.sv Line: 38
+Info (12128): Elaborating entity "fine_clk_divN" for hierarchy "music_frequencies:inst|fine_clk_divN:inst8"
+Warning (10230): Verilog HDL assignment warning at fine_clk_divN.sv(38): truncated value with size 32 to match size of target (25) File: C:/Users/minec/Desktop/Work/GitHub Repos/PROJ300/Firmware/Audio Controller/sv files/fine_clk_divN.sv Line: 38
+Info (12128): Elaborating entity "fine_clk_divN" for hierarchy "music_frequencies:inst|fine_clk_divN:inst9"
+Warning (10230): Verilog HDL assignment warning at fine_clk_divN.sv(38): truncated value with size 32 to match size of target (25) File: C:/Users/minec/Desktop/Work/GitHub Repos/PROJ300/Firmware/Audio Controller/sv files/fine_clk_divN.sv Line: 38
+Info (12128): Elaborating entity "fine_clk_divN" for hierarchy "music_frequencies:inst|fine_clk_divN:inst10"
+Warning (10230): Verilog HDL assignment warning at fine_clk_divN.sv(38): truncated value with size 32 to match size of target (25) File: C:/Users/minec/Desktop/Work/GitHub Repos/PROJ300/Firmware/Audio Controller/sv files/fine_clk_divN.sv Line: 38
 Info (12128): Elaborating entity "key_detector" for hierarchy "key_detector:inst1"
 Info (12128): Elaborating entity "PS2controller" for hierarchy "PS2controller:inst2"
 Info (12128): Elaborating entity "bsy_reader" for hierarchy "PS2controller:inst2|bsy_reader:inst2"
@@ -632,9 +654,9 @@ Info (21057): Implemented 89 device resources after synthesis - the final resour
     Info (21058): Implemented 4 input pins
     Info (21059): Implemented 15 output pins
     Info (21061): Implemented 70 logic cells
-Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 8 warnings
-    Info: Peak virtual memory: 4897 megabytes
-    Info: Processing ended: Fri Feb 09 00:01:30 2024
+Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 19 warnings
+    Info: Peak virtual memory: 4899 megabytes
+    Info: Processing ended: Fri Feb 09 00:35:11 2024
     Info: Elapsed time: 00:00:05
     Info: Total CPU time (on all processors): 00:00:06
 

@@ -149,7 +149,7 @@ https://fpgasoftware.intel.com/eula.
 	)
 	(parameter
 		"f"
-		"493.88"
+		"466.16"
 		""
 		(type "PARAMETER_SIGNED_FLOAT")	)
 	(drawing
@@ -184,7 +184,7 @@ https://fpgasoftware.intel.com/eula.
 	)
 	(parameter
 		"f"
-		"493.88"
+		"440.00"
 		""
 		(type "PARAMETER_SIGNED_FLOAT")	)
 	(drawing
@@ -219,7 +219,7 @@ https://fpgasoftware.intel.com/eula.
 	)
 	(parameter
 		"f"
-		"493.88"
+		"415.30"
 		""
 		(type "PARAMETER_SIGNED_FLOAT")	)
 	(drawing
@@ -254,7 +254,7 @@ https://fpgasoftware.intel.com/eula.
 	)
 	(parameter
 		"f"
-		"493.88"
+		"392.00"
 		""
 		(type "PARAMETER_SIGNED_FLOAT")	)
 	(drawing
@@ -289,7 +289,7 @@ https://fpgasoftware.intel.com/eula.
 	)
 	(parameter
 		"f"
-		"493.88"
+		"369.99"
 		""
 		(type "PARAMETER_SIGNED_FLOAT")	)
 	(drawing
@@ -324,7 +324,7 @@ https://fpgasoftware.intel.com/eula.
 	)
 	(parameter
 		"f"
-		"493.88"
+		"349.23"
 		""
 		(type "PARAMETER_SIGNED_FLOAT")	)
 	(drawing
@@ -359,7 +359,7 @@ https://fpgasoftware.intel.com/eula.
 	)
 	(parameter
 		"f"
-		"493.88"
+		"329.63"
 		""
 		(type "PARAMETER_SIGNED_FLOAT")	)
 	(drawing
@@ -394,7 +394,7 @@ https://fpgasoftware.intel.com/eula.
 	)
 	(parameter
 		"f"
-		"493.88"
+		"311.13"
 		""
 		(type "PARAMETER_SIGNED_FLOAT")	)
 	(drawing
@@ -429,7 +429,7 @@ https://fpgasoftware.intel.com/eula.
 	)
 	(parameter
 		"f"
-		"493.88"
+		"293.66"
 		""
 		(type "PARAMETER_SIGNED_FLOAT")	)
 	(drawing
@@ -464,7 +464,7 @@ https://fpgasoftware.intel.com/eula.
 	)
 	(parameter
 		"f"
-		"493.88"
+		"277.18"
 		""
 		(type "PARAMETER_SIGNED_FLOAT")	)
 	(drawing
@@ -499,7 +499,7 @@ https://fpgasoftware.intel.com/eula.
 	)
 	(parameter
 		"f"
-		"493.88"
+		"261.63"
 		""
 		(type "PARAMETER_SIGNED_FLOAT")	)
 	(drawing
