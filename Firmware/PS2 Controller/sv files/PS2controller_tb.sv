@@ -1,5 +1,7 @@
 module PS2controller_tb;
 
+// outdated - but I know it works //
+// may update later //
 
 // internal wires
 

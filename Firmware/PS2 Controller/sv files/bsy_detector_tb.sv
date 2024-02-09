@@ -1,4 +1,4 @@
-module bsy_reader_tb;
+module bsy_detector_tb;
 
 // internal wires
 
@@ -13,7 +13,7 @@ logic [7:0] data_out;
 
 
 // wiring
-bsy_reader dut(
+bsy_detector dut(
 
     // in
     .rst(rst),

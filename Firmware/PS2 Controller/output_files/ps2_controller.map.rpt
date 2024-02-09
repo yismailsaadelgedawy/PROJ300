@@ -1,5 +1,5 @@
 Analysis & Synthesis report for ps2_controller
-Thu Feb 08 23:44:34 2024
+Fri Feb 09 21:42:14 2024
 Quartus Prime Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
 
 
@@ -45,7 +45,7 @@ https://fpgasoftware.intel.com/eula.
 +-------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                  ;
 +---------------------------------+---------------------------------------------+
-; Analysis & Synthesis Status     ; Successful - Thu Feb 08 23:44:34 2024       ;
+; Analysis & Synthesis Status     ; Successful - Fri Feb 09 21:42:14 2024       ;
 ; Quartus Prime Version           ; 20.1.1 Build 720 11/11/2020 SJ Lite Edition ;
 ; Revision Name                   ; ps2_controller                              ;
 ; Top-level Entity Name           ; TopLevel                                    ;
@@ -174,9 +174,9 @@ https://fpgasoftware.intel.com/eula.
 +----------------------------------+-----------------+------------------------------------+-----------------------------------------------------------------------------------------------------------+---------+
 ; File Name with User-Entered Path ; Used in Netlist ; File Type                          ; File Name with Absolute Path                                                                              ; Library ;
 +----------------------------------+-----------------+------------------------------------+-----------------------------------------------------------------------------------------------------------+---------+
+; sv files/bsy_detector.sv         ; yes             ; User SystemVerilog HDL File        ; C:/Users/minec/Desktop/Work/GitHub Repos/PROJ300/Firmware/PS2 Controller/sv files/bsy_detector.sv         ;         ;
 ; sv files/break_code_detector.sv  ; yes             ; User SystemVerilog HDL File        ; C:/Users/minec/Desktop/Work/GitHub Repos/PROJ300/Firmware/PS2 Controller/sv files/break_code_detector.sv  ;         ;
 ; sv files/seven_seg_controller.sv ; yes             ; User SystemVerilog HDL File        ; C:/Users/minec/Desktop/Work/GitHub Repos/PROJ300/Firmware/PS2 Controller/sv files/seven_seg_controller.sv ;         ;
-; sv files/bsy_reader.sv           ; yes             ; User SystemVerilog HDL File        ; C:/Users/minec/Desktop/Work/GitHub Repos/PROJ300/Firmware/PS2 Controller/sv files/bsy_reader.sv           ;         ;
 ; TopLevel.bdf                     ; yes             ; User Block Diagram/Schematic File  ; C:/Users/minec/Desktop/Work/GitHub Repos/PROJ300/Firmware/PS2 Controller/TopLevel.bdf                     ;         ;
 ; sv files/ps2_controller.sv       ; yes             ; User SystemVerilog HDL File        ; C:/Users/minec/Desktop/Work/GitHub Repos/PROJ300/Firmware/PS2 Controller/sv files/ps2_controller.sv       ;         ;
 ; PS2controller.bdf                ; yes             ; User Block Diagram/Schematic File  ; C:/Users/minec/Desktop/Work/GitHub Repos/PROJ300/Firmware/PS2 Controller/PS2controller.bdf                ;         ;
@@ -218,7 +218,7 @@ https://fpgasoftware.intel.com/eula.
 ; |TopLevel                        ; 54 (0)              ; 47 (0)                    ; 0                 ; 0          ; 30   ; 0            ; |TopLevel                                              ; TopLevel             ; work         ;
 ;    |PS2controller:inst8|         ; 40 (1)              ; 47 (0)                    ; 0                 ; 0          ; 0    ; 0            ; |TopLevel|PS2controller:inst8                          ; PS2controller        ; work         ;
 ;       |break_code_detector:inst| ; 32 (32)             ; 26 (26)                   ; 0                 ; 0          ; 0    ; 0            ; |TopLevel|PS2controller:inst8|break_code_detector:inst ; break_code_detector  ; work         ;
-;       |bsy_reader:inst2|         ; 0 (0)               ; 8 (8)                     ; 0                 ; 0          ; 0    ; 0            ; |TopLevel|PS2controller:inst8|bsy_reader:inst2         ; bsy_reader           ; work         ;
+;       |bsy_detector:inst2|       ; 0 (0)               ; 8 (8)                     ; 0                 ; 0          ; 0    ; 0            ; |TopLevel|PS2controller:inst8|bsy_detector:inst2       ; bsy_detector         ; work         ;
 ;       |ps2_controller:inst1|     ; 7 (7)               ; 13 (13)                   ; 0                 ; 0          ; 0    ; 0            ; |TopLevel|PS2controller:inst8|ps2_controller:inst1     ; ps2_controller       ; work         ;
 ;    |seven_seg_controller:inst|   ; 14 (14)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |TopLevel|seven_seg_controller:inst                    ; seven_seg_controller ; work         ;
 +----------------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+--------------------------------------------------------+----------------------+--------------+
@@ -302,34 +302,32 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
-    Info: Processing started: Thu Feb 08 23:44:28 2024
+    Info: Processing started: Fri Feb 09 21:42:09 2024
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off ps2_controller -c ps2_controller
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20030): Parallel compilation is enabled and will use 16 of the 16 processors detected
-Info (12021): Found 1 design units, including 1 entities, in source file sv files/fine_clk_divn.sv
-    Info (12023): Found entity 1: fine_clk_divN File: C:/Users/minec/Desktop/Work/GitHub Repos/PROJ300/Firmware/PS2 Controller/sv files/fine_clk_divN.sv Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file sv files/bsy_detector.sv
+    Info (12023): Found entity 1: bsy_detector File: C:/Users/minec/Desktop/Work/GitHub Repos/PROJ300/Firmware/PS2 Controller/sv files/bsy_detector.sv Line: 1
+Warning (12019): Can't analyze file -- file sv files/fine_clk_divN.sv is missing
 Info (12021): Found 1 design units, including 1 entities, in source file sv files/break_code_detector.sv
     Info (12023): Found entity 1: break_code_detector File: C:/Users/minec/Desktop/Work/GitHub Repos/PROJ300/Firmware/PS2 Controller/sv files/break_code_detector.sv Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file sv files/seven_seg_controller.sv
     Info (12023): Found entity 1: seven_seg_controller File: C:/Users/minec/Desktop/Work/GitHub Repos/PROJ300/Firmware/PS2 Controller/sv files/seven_seg_controller.sv Line: 1
-Info (12021): Found 1 design units, including 1 entities, in source file sv files/bsy_reader.sv
-    Info (12023): Found entity 1: bsy_reader File: C:/Users/minec/Desktop/Work/GitHub Repos/PROJ300/Firmware/PS2 Controller/sv files/bsy_reader.sv Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file toplevel.bdf
     Info (12023): Found entity 1: TopLevel
 Info (12021): Found 1 design units, including 1 entities, in source file sv files/ps2_controller.sv
     Info (12023): Found entity 1: ps2_controller File: C:/Users/minec/Desktop/Work/GitHub Repos/PROJ300/Firmware/PS2 Controller/sv files/ps2_controller.sv Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file ps2controller.bdf
     Info (12023): Found entity 1: PS2controller
-Warning (10222): Verilog HDL Parameter Declaration warning at fine_clk_divN.sv(18): Parameter Declaration in module "fine_clk_divN" behaves as a Local Parameter Declaration because the module has a Module Parameter Port List File: C:/Users/minec/Desktop/Work/GitHub Repos/PROJ300/Firmware/PS2 Controller/sv files/fine_clk_divN.sv Line: 18
 Info (12127): Elaborating entity "TopLevel" for the top level hierarchy
 Warning (275043): Pin "led1" is missing source
 Info (12128): Elaborating entity "seven_seg_controller" for hierarchy "seven_seg_controller:inst"
 Info (12128): Elaborating entity "PS2controller" for hierarchy "PS2controller:inst8"
-Info (12128): Elaborating entity "bsy_reader" for hierarchy "PS2controller:inst8|bsy_reader:inst2"
+Info (12128): Elaborating entity "bsy_detector" for hierarchy "PS2controller:inst8|bsy_detector:inst2"
 Info (12128): Elaborating entity "ps2_controller" for hierarchy "PS2controller:inst8|ps2_controller:inst1"
-Warning (10230): Verilog HDL assignment warning at ps2_controller.sv(21): truncated value with size 32 to match size of target (4) File: C:/Users/minec/Desktop/Work/GitHub Repos/PROJ300/Firmware/PS2 Controller/sv files/ps2_controller.sv Line: 21
+Warning (10230): Verilog HDL assignment warning at ps2_controller.sv(30): truncated value with size 32 to match size of target (4) File: C:/Users/minec/Desktop/Work/GitHub Repos/PROJ300/Firmware/PS2 Controller/sv files/ps2_controller.sv Line: 30
 Info (12128): Elaborating entity "break_code_detector" for hierarchy "PS2controller:inst8|break_code_detector:inst"
-Warning (10230): Verilog HDL assignment warning at break_code_detector.sv(27): truncated value with size 32 to match size of target (25) File: C:/Users/minec/Desktop/Work/GitHub Repos/PROJ300/Firmware/PS2 Controller/sv files/break_code_detector.sv Line: 27
+Warning (10230): Verilog HDL assignment warning at break_code_detector.sv(32): truncated value with size 32 to match size of target (25) File: C:/Users/minec/Desktop/Work/GitHub Repos/PROJ300/Firmware/PS2 Controller/sv files/break_code_detector.sv Line: 32
 Warning (13024): Output pins are stuck at VCC or GND
     Warning (13410): Pin "led1" is stuck at GND
 Info (286030): Timing-Driven Synthesis is running
@@ -340,9 +338,9 @@ Info (21057): Implemented 100 device resources after synthesis - the final resou
     Info (21059): Implemented 26 output pins
     Info (21061): Implemented 70 logic cells
 Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 7 warnings
-    Info: Peak virtual memory: 4898 megabytes
-    Info: Processing ended: Thu Feb 08 23:44:34 2024
-    Info: Elapsed time: 00:00:06
-    Info: Total CPU time (on all processors): 00:00:07
+    Info: Peak virtual memory: 4883 megabytes
+    Info: Processing ended: Fri Feb 09 21:42:14 2024
+    Info: Elapsed time: 00:00:05
+    Info: Total CPU time (on all processors): 00:00:06
 
 

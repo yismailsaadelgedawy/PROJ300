@@ -48,8 +48,8 @@ https://fpgasoftware.intel.com/eula.
 	(port
 		(pt 0 80)
 		(input)
-		(text "shift_pressed" (rect 0 0 54 12)(font "Arial" ))
-		(text "shift_pressed" (rect 21 75 75 87)(font "Arial" ))
+		(text "enter_pressed" (rect 0 0 57 12)(font "Arial" ))
+		(text "enter_pressed" (rect 21 75 78 87)(font "Arial" ))
 		(line (pt 0 80)(pt 16 80)(line_width 1))
 	)
 	(port

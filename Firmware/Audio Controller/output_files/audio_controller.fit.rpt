@@ -1,5 +1,5 @@
 Fitter report for audio_controller
-Fri Feb 09 12:42:17 2024
+Fri Feb 09 21:57:15 2024
 Quartus Prime Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
 
 
@@ -63,15 +63,15 @@ https://fpgasoftware.intel.com/eula.
 +-------------------------------------------------------------------------------+
 ; Fitter Summary                                                                ;
 +---------------------------------+---------------------------------------------+
-; Fitter Status                   ; Successful - Fri Feb 09 12:42:17 2024       ;
+; Fitter Status                   ; Successful - Fri Feb 09 21:57:15 2024       ;
 ; Quartus Prime Version           ; 20.1.1 Build 720 11/11/2020 SJ Lite Edition ;
 ; Revision Name                   ; audio_controller                            ;
-; Top-level Entity Name           ; AudioController                             ;
+; Top-level Entity Name           ; TopLevel                                    ;
 ; Family                          ; Cyclone V                                   ;
 ; Device                          ; 5CEBA4F23C7                                 ;
 ; Timing Models                   ; Final                                       ;
 ; Logic utilization (in ALMs)     ; 505 / 18,480 ( 3 % )                        ;
-; Total registers                 ; 691                                         ;
+; Total registers                 ; 693                                         ;
 ; Total pins                      ; 21 / 224 ( 9 % )                            ;
 ; Total virtual pins              ; 0                                           ;
 ; Total block memory bits         ; 0 / 3,153,920 ( 0 % )                       ;
@@ -153,26 +153,26 @@ https://fpgasoftware.intel.com/eula.
 ; Number detected on machine ; 16          ;
 ; Maximum allowed            ; 16          ;
 ;                            ;             ;
-; Average used               ; 1.10        ;
+; Average used               ; 1.08        ;
 ; Maximum used               ; 16          ;
 ;                            ;             ;
 ; Usage by Processor         ; % Time Used ;
 ;     Processor 1            ; 100.0%      ;
-;     Processor 2            ;   0.8%      ;
-;     Processor 3            ;   0.8%      ;
-;     Processor 4            ;   0.7%      ;
-;     Processor 5            ;   0.7%      ;
-;     Processor 6            ;   0.7%      ;
-;     Processor 7            ;   0.7%      ;
-;     Processor 8            ;   0.7%      ;
-;     Processor 9            ;   0.7%      ;
-;     Processor 10           ;   0.7%      ;
-;     Processor 11           ;   0.7%      ;
-;     Processor 12           ;   0.7%      ;
-;     Processor 13           ;   0.7%      ;
-;     Processor 14           ;   0.7%      ;
-;     Processor 15           ;   0.6%      ;
-;     Processor 16           ;   0.6%      ;
+;     Processor 2            ;   0.6%      ;
+;     Processor 3            ;   0.6%      ;
+;     Processor 4            ;   0.5%      ;
+;     Processor 5            ;   0.5%      ;
+;     Processor 6            ;   0.5%      ;
+;     Processor 7            ;   0.5%      ;
+;     Processor 8            ;   0.5%      ;
+;     Processor 9            ;   0.5%      ;
+;     Processor 10           ;   0.5%      ;
+;     Processor 11           ;   0.5%      ;
+;     Processor 12           ;   0.5%      ;
+;     Processor 13           ;   0.5%      ;
+;     Processor 14           ;   0.5%      ;
+;     Processor 15           ;   0.5%      ;
+;     Processor 16           ;   0.5%      ;
 +----------------------------+-------------+
 
 
@@ -183,14 +183,16 @@ https://fpgasoftware.intel.com/eula.
 +----------------------------------------------------------+------------+---------------------------------------------------+----------------------------+-----------+----------------+--------------------------------------------------------------------+------------------+-----------------------+
 ; clk~inputCLKENA0                                         ; Created    ; Placement                                         ; Fitter Periphery Placement ;           ;                ;                                                                    ;                  ;                       ;
 ; ps2_clk~inputCLKENA0                                     ; Created    ; Placement                                         ; Fitter Periphery Placement ;           ;                ;                                                                    ;                  ;                       ;
+; PS2controller:inst2|break_code_detector:inst|counter[7]  ; Duplicated ; Router Logic Cell Insertion and Logic Duplication ; Routability optimization   ;           ;                ; PS2controller:inst2|break_code_detector:inst|counter[7]~DUPLICATE  ;                  ;                       ;
 ; PS2controller:inst2|break_code_detector:inst|counter[9]  ; Duplicated ; Router Logic Cell Insertion and Logic Duplication ; Routability optimization   ;           ;                ; PS2controller:inst2|break_code_detector:inst|counter[9]~DUPLICATE  ;                  ;                       ;
 ; PS2controller:inst2|break_code_detector:inst|counter[10] ; Duplicated ; Router Logic Cell Insertion and Logic Duplication ; Routability optimization   ;           ;                ; PS2controller:inst2|break_code_detector:inst|counter[10]~DUPLICATE ;                  ;                       ;
-; PS2controller:inst2|break_code_detector:inst|counter[14] ; Duplicated ; Router Logic Cell Insertion and Logic Duplication ; Routability optimization   ;           ;                ; PS2controller:inst2|break_code_detector:inst|counter[14]~DUPLICATE ;                  ;                       ;
-; PS2controller:inst2|break_code_detector:inst|counter[22] ; Duplicated ; Router Logic Cell Insertion and Logic Duplication ; Routability optimization   ;           ;                ; PS2controller:inst2|break_code_detector:inst|counter[22]~DUPLICATE ;                  ;                       ;
-; PS2controller:inst2|break_code_detector:inst|counter[23] ; Duplicated ; Router Logic Cell Insertion and Logic Duplication ; Routability optimization   ;           ;                ; PS2controller:inst2|break_code_detector:inst|counter[23]~DUPLICATE ;                  ;                       ;
+; PS2controller:inst2|break_code_detector:inst|counter[11] ; Duplicated ; Router Logic Cell Insertion and Logic Duplication ; Routability optimization   ;           ;                ; PS2controller:inst2|break_code_detector:inst|counter[11]~DUPLICATE ;                  ;                       ;
+; PS2controller:inst2|break_code_detector:inst|counter[13] ; Duplicated ; Router Logic Cell Insertion and Logic Duplication ; Routability optimization   ;           ;                ; PS2controller:inst2|break_code_detector:inst|counter[13]~DUPLICATE ;                  ;                       ;
+; PS2controller:inst2|break_code_detector:inst|counter[21] ; Duplicated ; Router Logic Cell Insertion and Logic Duplication ; Routability optimization   ;           ;                ; PS2controller:inst2|break_code_detector:inst|counter[21]~DUPLICATE ;                  ;                       ;
 ; PS2controller:inst2|ps2_controller:inst1|count_reg[0]    ; Duplicated ; Router Logic Cell Insertion and Logic Duplication ; Routability optimization   ;           ;                ; PS2controller:inst2|ps2_controller:inst1|count_reg[0]~DUPLICATE    ;                  ;                       ;
 ; PS2controller:inst2|ps2_controller:inst1|count_reg[1]    ; Duplicated ; Router Logic Cell Insertion and Logic Duplication ; Routability optimization   ;           ;                ; PS2controller:inst2|ps2_controller:inst1|count_reg[1]~DUPLICATE    ;                  ;                       ;
 ; PS2controller:inst2|ps2_controller:inst1|count_reg[2]    ; Duplicated ; Router Logic Cell Insertion and Logic Duplication ; Routability optimization   ;           ;                ; PS2controller:inst2|ps2_controller:inst1|count_reg[2]~DUPLICATE    ;                  ;                       ;
+; PS2controller:inst2|ps2_controller:inst1|count_reg[3]    ; Duplicated ; Router Logic Cell Insertion and Logic Duplication ; Routability optimization   ;           ;                ; PS2controller:inst2|ps2_controller:inst1|count_reg[3]~DUPLICATE    ;                  ;                       ;
 ; PS2controller:inst2|ps2_controller:inst1|data_out[1]     ; Duplicated ; Router Logic Cell Insertion and Logic Duplication ; Routability optimization   ;           ;                ; PS2controller:inst2|ps2_controller:inst1|data_out[1]~DUPLICATE     ;                  ;                       ;
 ; PS2controller:inst2|ps2_controller:inst1|data_out[2]     ; Duplicated ; Router Logic Cell Insertion and Logic Duplication ; Routability optimization   ;           ;                ; PS2controller:inst2|ps2_controller:inst1|data_out[2]~DUPLICATE     ;                  ;                       ;
 ; PS2controller:inst2|ps2_controller:inst1|data_out[3]     ; Duplicated ; Router Logic Cell Insertion and Logic Duplication ; Routability optimization   ;           ;                ; PS2controller:inst2|ps2_controller:inst1|data_out[3]~DUPLICATE     ;                  ;                       ;
@@ -248,12 +250,12 @@ The pin-out file can be found in C:/Users/minec/Desktop/Work/GitHub Repos/PROJ30
 +-------------------------------------------------------------+--------------------+-------+
 ; Logic utilization (ALMs needed / total ALMs on device)      ; 505 / 18,480       ; 3 %   ;
 ; ALMs needed [=A-B+C]                                        ; 505                ;       ;
-;     [A] ALMs used in final placement [=a+b+c+d]             ; 506 / 18,480       ; 3 %   ;
-;         [a] ALMs used for LUT logic and registers           ; 330                ;       ;
-;         [b] ALMs used for LUT logic                         ; 167                ;       ;
-;         [c] ALMs used for registers                         ; 9                  ;       ;
+;     [A] ALMs used in final placement [=a+b+c+d]             ; 505 / 18,480       ; 3 %   ;
+;         [a] ALMs used for LUT logic and registers           ; 329                ;       ;
+;         [b] ALMs used for LUT logic                         ; 166                ;       ;
+;         [c] ALMs used for registers                         ; 10                 ;       ;
 ;         [d] ALMs used for memory (up to half of total ALMs) ; 0                  ;       ;
-;     [B] Estimate of ALMs recoverable by dense packing       ; 10 / 18,480        ; < 1 % ;
+;     [B] Estimate of ALMs recoverable by dense packing       ; 9 / 18,480         ; < 1 % ;
 ;     [C] Estimate of ALMs unavailable [=a+b+c+d]             ; 9 / 18,480         ; < 1 % ;
 ;         [a] Due to location constrained logic               ; 0                  ;       ;
 ;         [b] Due to LAB-wide signal conflicts                ; 0                  ;       ;
@@ -267,20 +269,20 @@ The pin-out file can be found in C:/Users/minec/Desktop/Work/GitHub Repos/PROJ30
 ;     -- Memory LABs (up to half of total LABs)               ; 0                  ;       ;
 ;                                                             ;                    ;       ;
 ; Combinational ALUT usage for logic                          ; 834                ;       ;
-;     -- 7 input functions                                    ; 2                  ;       ;
-;     -- 6 input functions                                    ; 155                ;       ;
+;     -- 7 input functions                                    ; 1                  ;       ;
+;     -- 6 input functions                                    ; 157                ;       ;
 ;     -- 5 input functions                                    ; 5                  ;       ;
-;     -- 4 input functions                                    ; 32                 ;       ;
-;     -- <=3 input functions                                  ; 640                ;       ;
-; Combinational ALUT usage for route-throughs                 ; 10                 ;       ;
+;     -- 4 input functions                                    ; 29                 ;       ;
+;     -- <=3 input functions                                  ; 642                ;       ;
+; Combinational ALUT usage for route-throughs                 ; 13                 ;       ;
 ;                                                             ;                    ;       ;
-; Dedicated logic registers                                   ; 691                ;       ;
+; Dedicated logic registers                                   ; 693                ;       ;
 ;     -- By type:                                             ;                    ;       ;
 ;         -- Primary logic registers                          ; 677 / 36,960       ; 2 %   ;
-;         -- Secondary logic registers                        ; 14 / 36,960        ; < 1 % ;
+;         -- Secondary logic registers                        ; 16 / 36,960        ; < 1 % ;
 ;     -- By function:                                         ;                    ;       ;
 ;         -- Design implementation registers                  ; 677                ;       ;
-;         -- Routing optimization registers                   ; 14                 ;       ;
+;         -- Routing optimization registers                   ; 16                 ;       ;
 ;                                                             ;                    ;       ;
 ; Virtual pins                                                ; 0                  ;       ;
 ; I/O pins                                                    ; 21 / 224           ; 9 %   ;
@@ -306,12 +308,12 @@ The pin-out file can be found in C:/Users/minec/Desktop/Work/GitHub Repos/PROJ30
 ; Remote update blocks                                        ; 0 / 1              ; 0 %   ;
 ; Oscillator blocks                                           ; 0 / 1              ; 0 %   ;
 ; Impedance control blocks                                    ; 0 / 3              ; 0 %   ;
-; Average interconnect usage (total/H/V)                      ; 0.6% / 0.6% / 0.5% ;       ;
-; Peak interconnect usage (total/H/V)                         ; 6.5% / 6.6% / 6.3% ;       ;
-; Maximum fan-out                                             ; 659                ;       ;
-; Highest non-global fan-out                                  ; 75                 ;       ;
-; Total fan-out                                               ; 4510               ;       ;
-; Average fan-out                                             ; 2.86               ;       ;
+; Average interconnect usage (total/H/V)                      ; 0.4% / 0.4% / 0.4% ;       ;
+; Peak interconnect usage (total/H/V)                         ; 3.8% / 4.1% / 3.8% ;       ;
+; Maximum fan-out                                             ; 660                ;       ;
+; Highest non-global fan-out                                  ; 76                 ;       ;
+; Total fan-out                                               ; 4518               ;       ;
+; Average fan-out                                             ; 2.85               ;       ;
 +-------------------------------------------------------------+--------------------+-------+
 
 
@@ -322,12 +324,12 @@ The pin-out file can be found in C:/Users/minec/Desktop/Work/GitHub Repos/PROJ30
 +-------------------------------------------------------------+----------------------+--------------------------------+
 ; Logic utilization (ALMs needed / total ALMs on device)      ; 505 / 18480 ( 3 % )  ; 0 / 18480 ( 0 % )              ;
 ; ALMs needed [=A-B+C]                                        ; 505                  ; 0                              ;
-;     [A] ALMs used in final placement [=a+b+c+d]             ; 506 / 18480 ( 3 % )  ; 0 / 18480 ( 0 % )              ;
-;         [a] ALMs used for LUT logic and registers           ; 330                  ; 0                              ;
-;         [b] ALMs used for LUT logic                         ; 167                  ; 0                              ;
-;         [c] ALMs used for registers                         ; 9                    ; 0                              ;
+;     [A] ALMs used in final placement [=a+b+c+d]             ; 505 / 18480 ( 3 % )  ; 0 / 18480 ( 0 % )              ;
+;         [a] ALMs used for LUT logic and registers           ; 329                  ; 0                              ;
+;         [b] ALMs used for LUT logic                         ; 166                  ; 0                              ;
+;         [c] ALMs used for registers                         ; 10                   ; 0                              ;
 ;         [d] ALMs used for memory (up to half of total ALMs) ; 0                    ; 0                              ;
-;     [B] Estimate of ALMs recoverable by dense packing       ; 10 / 18480 ( < 1 % ) ; 0 / 18480 ( 0 % )              ;
+;     [B] Estimate of ALMs recoverable by dense packing       ; 9 / 18480 ( < 1 % )  ; 0 / 18480 ( 0 % )              ;
 ;     [C] Estimate of ALMs unavailable [=a+b+c+d]             ; 9 / 18480 ( < 1 % )  ; 0 / 18480 ( 0 % )              ;
 ;         [a] Due to location constrained logic               ; 0                    ; 0                              ;
 ;         [b] Due to LAB-wide signal conflicts                ; 0                    ; 0                              ;
@@ -341,12 +343,12 @@ The pin-out file can be found in C:/Users/minec/Desktop/Work/GitHub Repos/PROJ30
 ;     -- Memory LABs (up to half of total LABs)               ; 0                    ; 0                              ;
 ;                                                             ;                      ;                                ;
 ; Combinational ALUT usage for logic                          ; 834                  ; 0                              ;
-;     -- 7 input functions                                    ; 2                    ; 0                              ;
-;     -- 6 input functions                                    ; 155                  ; 0                              ;
+;     -- 7 input functions                                    ; 1                    ; 0                              ;
+;     -- 6 input functions                                    ; 157                  ; 0                              ;
 ;     -- 5 input functions                                    ; 5                    ; 0                              ;
-;     -- 4 input functions                                    ; 32                   ; 0                              ;
-;     -- <=3 input functions                                  ; 640                  ; 0                              ;
-; Combinational ALUT usage for route-throughs                 ; 10                   ; 0                              ;
+;     -- 4 input functions                                    ; 29                   ; 0                              ;
+;     -- <=3 input functions                                  ; 642                  ; 0                              ;
+; Combinational ALUT usage for route-throughs                 ; 13                   ; 0                              ;
 ; Memory ALUT usage                                           ; 0                    ; 0                              ;
 ;     -- 64-address deep                                      ; 0                    ; 0                              ;
 ;     -- 32-address deep                                      ; 0                    ; 0                              ;
@@ -354,10 +356,10 @@ The pin-out file can be found in C:/Users/minec/Desktop/Work/GitHub Repos/PROJ30
 ; Dedicated logic registers                                   ; 0                    ; 0                              ;
 ;     -- By type:                                             ;                      ;                                ;
 ;         -- Primary logic registers                          ; 677 / 36960 ( 2 % )  ; 0 / 36960 ( 0 % )              ;
-;         -- Secondary logic registers                        ; 14 / 36960 ( < 1 % ) ; 0 / 36960 ( 0 % )              ;
+;         -- Secondary logic registers                        ; 16 / 36960 ( < 1 % ) ; 0 / 36960 ( 0 % )              ;
 ;     -- By function:                                         ;                      ;                                ;
 ;         -- Design implementation registers                  ; 677                  ; 0                              ;
-;         -- Routing optimization registers                   ; 14                   ; 0                              ;
+;         -- Routing optimization registers                   ; 16                   ; 0                              ;
 ;                                                             ;                      ;                                ;
 ;                                                             ;                      ;                                ;
 ; Virtual pins                                                ; 0                    ; 0                              ;
@@ -374,8 +376,8 @@ The pin-out file can be found in C:/Users/minec/Desktop/Work/GitHub Repos/PROJ30
 ;     -- Registered Output Connections                        ; 0                    ; 0                              ;
 ;                                                             ;                      ;                                ;
 ; Internal Connections                                        ;                      ;                                ;
-;     -- Total Connections                                    ; 4510                 ; 0                              ;
-;     -- Registered Connections                               ; 1531                 ; 0                              ;
+;     -- Total Connections                                    ; 4518                 ; 0                              ;
+;     -- Registered Connections                               ; 1527                 ; 0                              ;
 ;                                                             ;                      ;                                ;
 ; External Connections                                        ;                      ;                                ;
 ;     -- Top                                                  ; 0                    ; 0                              ;
@@ -407,10 +409,10 @@ The pin-out file can be found in C:/Users/minec/Desktop/Work/GitHub Repos/PROJ30
 +----------+-------+----------+--------------+--------------+--------------+-----------------------+--------------------+--------+----------------+-----------------+----------+--------------+--------------+-------------+---------------------------+----------------------+-----------+
 ; Name     ; Pin # ; I/O Bank ; X coordinate ; Y coordinate ; Z coordinate ; Combinational Fan-Out ; Registered Fan-Out ; Global ; Input Register ; PCI I/O Enabled ; Bus Hold ; Weak Pull Up ; I/O Standard ; Termination ; Termination Control Block ; Location assigned by ; Slew Rate ;
 +----------+-------+----------+--------------+--------------+--------------+-----------------------+--------------------+--------+----------------+-----------------+----------+--------------+--------------+-------------+---------------------------+----------------------+-----------+
-; clk      ; M9    ; 3B       ; 22           ; 0            ; 0            ; 659                   ; 0                  ; yes    ; no             ; no              ; no       ; Off          ; 2.5 V        ; Off         ; --                        ; User                 ; no        ;
-; ps2_clk  ; D3    ; 2A       ; 0            ; 20           ; 3            ; 24                    ; 0                  ; yes    ; no             ; no              ; no       ; Off          ; 2.5 V        ; Off         ; --                        ; User                 ; no        ;
+; clk      ; M9    ; 3B       ; 22           ; 0            ; 0            ; 660                   ; 0                  ; yes    ; no             ; no              ; no       ; Off          ; 2.5 V        ; Off         ; --                        ; User                 ; no        ;
+; ps2_clk  ; D3    ; 2A       ; 0            ; 20           ; 3            ; 25                    ; 0                  ; yes    ; no             ; no              ; no       ; Off          ; 2.5 V        ; Off         ; --                        ; User                 ; no        ;
 ; ps2_data ; G2    ; 2A       ; 0            ; 21           ; 3            ; 1                     ; 0                  ; no     ; no             ; no              ; no       ; Off          ; 2.5 V        ; Off         ; --                        ; User                 ; no        ;
-; rst      ; U13   ; 4A       ; 33           ; 0            ; 40           ; 75                    ; 0                  ; no     ; no             ; no              ; no       ; Off          ; 2.5 V        ; Off         ; --                        ; User                 ; no        ;
+; rst      ; U13   ; 4A       ; 33           ; 0            ; 40           ; 76                    ; 0                  ; no     ; no             ; no              ; no       ; Off          ; 2.5 V        ; Off         ; --                        ; User                 ; no        ;
 +----------+-------+----------+--------------+--------------+--------------+-----------------------+--------------------+--------+----------------+-----------------+----------+--------------+--------------+-------------+---------------------------+----------------------+-----------+
 
 
@@ -434,8 +436,8 @@ The pin-out file can be found in C:/Users/minec/Desktop/Work/GitHub Repos/PROJ30
 ; disp1[4]   ; AB18  ; 4A       ; 38           ; 0            ; 34           ; no              ; no                     ; 1         ; no              ; no         ; no            ; no       ; Off          ; 2.5 V        ; Default          ; Series 50 Ohm without Calibration ; --                        ; no                         ; no                          ; 0                   ; Off                         ; User                 ; -                    ; -                   ;
 ; disp1[5]   ; AA17  ; 4A       ; 43           ; 0            ; 51           ; no              ; no                     ; 1         ; no              ; no         ; no            ; no       ; Off          ; 2.5 V        ; Default          ; Series 50 Ohm without Calibration ; --                        ; no                         ; no                          ; 0                   ; Off                         ; User                 ; -                    ; -                   ;
 ; disp1[6]   ; U22   ; 4A       ; 51           ; 0            ; 51           ; no              ; no                     ; 1         ; no              ; no         ; no            ; no       ; Off          ; 2.5 V        ; Default          ; Series 50 Ohm without Calibration ; --                        ; no                         ; no                          ; 0                   ; Off                         ; User                 ; -                    ; -                   ;
-; led0       ; AA2   ; 2A       ; 0            ; 18           ; 77           ; no              ; no                     ; 1         ; no              ; no         ; no            ; no       ; Off          ; 2.5 V        ; Default          ; Series 50 Ohm without Calibration ; --                        ; no                         ; no                          ; 0                   ; Off                         ; User                 ; -                    ; -                   ;
-; led1       ; AA1   ; 2A       ; 0            ; 18           ; 94           ; no              ; no                     ; 1         ; no              ; no         ; no            ; no       ; Off          ; 2.5 V        ; Default          ; Series 50 Ohm without Calibration ; --                        ; no                         ; no                          ; 0                   ; Off                         ; User                 ; -                    ; -                   ;
+; octave_led ; AA1   ; 2A       ; 0            ; 18           ; 94           ; no              ; no                     ; 1         ; no              ; no         ; no            ; no       ; Off          ; 2.5 V        ; Default          ; Series 50 Ohm without Calibration ; --                        ; no                         ; no                          ; 0                   ; Off                         ; User                 ; -                    ; -                   ;
+; sharp_led  ; AA2   ; 2A       ; 0            ; 18           ; 77           ; no              ; no                     ; 1         ; no              ; no         ; no            ; no       ; Off          ; 2.5 V        ; Default          ; Series 50 Ohm without Calibration ; --                        ; no                         ; no                          ; 0                   ; Off                         ; User                 ; -                    ; -                   ;
 +------------+-------+----------+--------------+--------------+--------------+-----------------+------------------------+-----------+-----------------+------------+---------------+----------+--------------+--------------+------------------+-----------------------------------+---------------------------+----------------------------+-----------------------------+---------------------+-----------------------------+----------------------+----------------------+---------------------+
 
 
@@ -482,8 +484,8 @@ The pin-out file can be found in C:/Users/minec/Desktop/Work/GitHub Repos/PROJ30
 ; A20      ;            ;          ; NC                              ;        ;              ;                     ; --           ;                 ; --       ; --           ;
 ; A21      ;            ;          ; GND                             ; gnd    ;              ;                     ; --           ;                 ; --       ; --           ;
 ; A22      ;            ;          ; NC                              ;        ;              ;                     ; --           ;                 ; --       ; --           ;
-; AA1      ; 29         ; 2A       ; led1                            ; output ; 2.5 V        ;                     ; Row I/O      ; Y               ; no       ; Off          ;
-; AA2      ; 31         ; 2A       ; led0                            ; output ; 2.5 V        ;                     ; Row I/O      ; Y               ; no       ; Off          ;
+; AA1      ; 29         ; 2A       ; octave_led                      ; output ; 2.5 V        ;                     ; Row I/O      ; Y               ; no       ; Off          ;
+; AA2      ; 31         ; 2A       ; sharp_led                       ; output ; 2.5 V        ;                     ; Row I/O      ; Y               ; no       ; Off          ;
 ; AA3      ;            ;          ; GND                             ; gnd    ;              ;                     ; --           ;                 ; --       ; --           ;
 ; AA4      ;            ;          ; GND                             ; gnd    ;              ;                     ; --           ;                 ; --       ; --           ;
 ; AA5      ; 53         ; 3A       ; ^AS_DATA2, DATA2                ;        ;              ;                     ; Weak Pull Up ;                 ; --       ; On           ;
@@ -953,9 +955,9 @@ Note: Pin directions (input, output or bidir) are based on device operating in u
 +------------+-------------------------------+
 ; Pin Name   ; Reason                        ;
 +------------+-------------------------------+
+; sharp_led  ; Incomplete set of assignments ;
+; octave_led ; Incomplete set of assignments ;
 ; buzzer_out ; Incomplete set of assignments ;
-; led0       ; Incomplete set of assignments ;
-; led1       ; Incomplete set of assignments ;
 ; disp0[0]   ; Incomplete set of assignments ;
 ; disp0[1]   ; Incomplete set of assignments ;
 ; disp0[2]   ; Incomplete set of assignments ;
@@ -970,54 +972,55 @@ Note: Pin directions (input, output or bidir) are based on device operating in u
 ; disp1[4]   ; Incomplete set of assignments ;
 ; disp1[5]   ; Incomplete set of assignments ;
 ; disp1[6]   ; Incomplete set of assignments ;
+; ps2_clk    ; Incomplete set of assignments ;
 ; clk        ; Incomplete set of assignments ;
 ; rst        ; Incomplete set of assignments ;
-; ps2_clk    ; Incomplete set of assignments ;
 ; ps2_data   ; Incomplete set of assignments ;
 +------------+-------------------------------+
 
 
-+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Fitter Resource Utilization by Entity                                                                                                                                                                                                                                                                                                                                                                                                           ;
-+----------------------------------+----------------------+----------------------------------+---------------------------------------------------+----------------------------------+----------------------+---------------------+---------------------------+---------------+-------------------+-------+------------+------+--------------+---------------------------------------------------------------+----------------------+--------------+
-; Compilation Hierarchy Node       ; ALMs needed [=A-B+C] ; [A] ALMs used in final placement ; [B] Estimate of ALMs recoverable by dense packing ; [C] Estimate of ALMs unavailable ; ALMs used for memory ; Combinational ALUTs ; Dedicated Logic Registers ; I/O Registers ; Block Memory Bits ; M10Ks ; DSP Blocks ; Pins ; Virtual Pins ; Full Hierarchy Name                                           ; Entity Name          ; Library Name ;
-+----------------------------------+----------------------+----------------------------------+---------------------------------------------------+----------------------------------+----------------------+---------------------+---------------------------+---------------+-------------------+-------+------------+------+--------------+---------------------------------------------------------------+----------------------+--------------+
-; |AudioController                 ; 505.0 (0.5)          ; 505.0 (0.5)                      ; 9.0 (0.0)                                         ; 9.0 (0.0)                        ; 0.0 (0.0)            ; 834 (1)             ; 691 (0)                   ; 0 (0)         ; 0                 ; 0     ; 0          ; 21   ; 0            ; |AudioController                                              ; AudioController      ; work         ;
-;    |PS2controller:inst2|         ; 24.7 (0.3)           ; 29.7 (0.5)                       ; 5.0 (0.2)                                         ; 0.0 (0.0)                        ; 0.0 (0.0)            ; 40 (1)              ; 61 (0)                    ; 0 (0)         ; 0                 ; 0     ; 0          ; 0    ; 0            ; |AudioController|PS2controller:inst2                          ; PS2controller        ; work         ;
-;       |break_code_detector:inst| ; 18.0 (18.0)          ; 18.0 (18.0)                      ; 0.0 (0.0)                                         ; 0.0 (0.0)                        ; 0.0 (0.0)            ; 32 (32)             ; 31 (31)                   ; 0 (0)         ; 0                 ; 0     ; 0          ; 0    ; 0            ; |AudioController|PS2controller:inst2|break_code_detector:inst ; break_code_detector  ; work         ;
-;       |bsy_reader:inst2|         ; 2.3 (2.3)            ; 3.7 (3.7)                        ; 1.3 (1.3)                                         ; 0.0 (0.0)                        ; 0.0 (0.0)            ; 0 (0)               ; 8 (8)                     ; 0 (0)         ; 0                 ; 0     ; 0          ; 0    ; 0            ; |AudioController|PS2controller:inst2|bsy_reader:inst2         ; bsy_reader           ; work         ;
-;       |ps2_controller:inst1|     ; 3.5 (3.5)            ; 7.5 (7.5)                        ; 4.0 (4.0)                                         ; 0.0 (0.0)                        ; 0.0 (0.0)            ; 7 (7)               ; 22 (22)                   ; 0 (0)         ; 0                 ; 0     ; 0          ; 0    ; 0            ; |AudioController|PS2controller:inst2|ps2_controller:inst1     ; ps2_controller       ; work         ;
-;    |key_detector:inst1|          ; 9.8 (9.8)            ; 11.2 (11.2)                      ; 1.3 (1.3)                                         ; 0.0 (0.0)                        ; 0.0 (0.0)            ; 17 (17)             ; 4 (4)                     ; 0 (0)         ; 0                 ; 0     ; 0          ; 0    ; 0            ; |AudioController|key_detector:inst1                           ; key_detector         ; work         ;
-;    |music_frequencies:inst|      ; 457.0 (0.0)          ; 448.5 (0.0)                      ; 0.5 (0.0)                                         ; 9.0 (0.0)                        ; 0.0 (0.0)            ; 752 (0)             ; 624 (0)                   ; 0 (0)         ; 0                 ; 0     ; 0          ; 0    ; 0            ; |AudioController|music_frequencies:inst                       ; music_frequencies    ; work         ;
-;       |fine_clk_divN:inst|       ; 18.9 (18.9)          ; 18.5 (18.5)                      ; 0.0 (0.0)                                         ; 0.4 (0.4)                        ; 0.0 (0.0)            ; 31 (31)             ; 26 (26)                   ; 0 (0)         ; 0                 ; 0     ; 0          ; 0    ; 0            ; |AudioController|music_frequencies:inst|fine_clk_divN:inst    ; fine_clk_divN        ; work         ;
-;       |fine_clk_divN:inst1|      ; 18.9 (18.9)          ; 18.5 (18.5)                      ; 0.0 (0.0)                                         ; 0.4 (0.4)                        ; 0.0 (0.0)            ; 31 (31)             ; 26 (26)                   ; 0 (0)         ; 0                 ; 0     ; 0          ; 0    ; 0            ; |AudioController|music_frequencies:inst|fine_clk_divN:inst1   ; fine_clk_divN        ; work         ;
-;       |fine_clk_divN:inst10|     ; 18.9 (18.9)          ; 18.5 (18.5)                      ; 0.0 (0.0)                                         ; 0.4 (0.4)                        ; 0.0 (0.0)            ; 31 (31)             ; 26 (26)                   ; 0 (0)         ; 0                 ; 0     ; 0          ; 0    ; 0            ; |AudioController|music_frequencies:inst|fine_clk_divN:inst10  ; fine_clk_divN        ; work         ;
-;       |fine_clk_divN:inst12|     ; 18.9 (18.9)          ; 18.5 (18.5)                      ; 0.0 (0.0)                                         ; 0.4 (0.4)                        ; 0.0 (0.0)            ; 31 (31)             ; 26 (26)                   ; 0 (0)         ; 0                 ; 0     ; 0          ; 0    ; 0            ; |AudioController|music_frequencies:inst|fine_clk_divN:inst12  ; fine_clk_divN        ; work         ;
-;       |fine_clk_divN:inst13|     ; 18.9 (18.9)          ; 18.5 (18.5)                      ; 0.0 (0.0)                                         ; 0.4 (0.4)                        ; 0.0 (0.0)            ; 31 (31)             ; 26 (26)                   ; 0 (0)         ; 0                 ; 0     ; 0          ; 0    ; 0            ; |AudioController|music_frequencies:inst|fine_clk_divN:inst13  ; fine_clk_divN        ; work         ;
-;       |fine_clk_divN:inst14|     ; 18.9 (18.9)          ; 19.0 (19.0)                      ; 0.5 (0.5)                                         ; 0.4 (0.4)                        ; 0.0 (0.0)            ; 31 (31)             ; 26 (26)                   ; 0 (0)         ; 0                 ; 0     ; 0          ; 0    ; 0            ; |AudioController|music_frequencies:inst|fine_clk_divN:inst14  ; fine_clk_divN        ; work         ;
-;       |fine_clk_divN:inst15|     ; 18.9 (18.9)          ; 18.5 (18.5)                      ; 0.0 (0.0)                                         ; 0.4 (0.4)                        ; 0.0 (0.0)            ; 31 (31)             ; 26 (26)                   ; 0 (0)         ; 0                 ; 0     ; 0          ; 0    ; 0            ; |AudioController|music_frequencies:inst|fine_clk_divN:inst15  ; fine_clk_divN        ; work         ;
-;       |fine_clk_divN:inst16|     ; 18.9 (18.9)          ; 18.5 (18.5)                      ; 0.0 (0.0)                                         ; 0.4 (0.4)                        ; 0.0 (0.0)            ; 31 (31)             ; 26 (26)                   ; 0 (0)         ; 0                 ; 0     ; 0          ; 0    ; 0            ; |AudioController|music_frequencies:inst|fine_clk_divN:inst16  ; fine_clk_divN        ; work         ;
-;       |fine_clk_divN:inst17|     ; 18.9 (18.9)          ; 18.5 (18.5)                      ; 0.0 (0.0)                                         ; 0.4 (0.4)                        ; 0.0 (0.0)            ; 31 (31)             ; 26 (26)                   ; 0 (0)         ; 0                 ; 0     ; 0          ; 0    ; 0            ; |AudioController|music_frequencies:inst|fine_clk_divN:inst17  ; fine_clk_divN        ; work         ;
-;       |fine_clk_divN:inst18|     ; 18.5 (18.5)          ; 18.5 (18.5)                      ; 0.0 (0.0)                                         ; 0.0 (0.0)                        ; 0.0 (0.0)            ; 31 (31)             ; 26 (26)                   ; 0 (0)         ; 0                 ; 0     ; 0          ; 0    ; 0            ; |AudioController|music_frequencies:inst|fine_clk_divN:inst18  ; fine_clk_divN        ; work         ;
-;       |fine_clk_divN:inst19|     ; 18.9 (18.9)          ; 18.5 (18.5)                      ; 0.0 (0.0)                                         ; 0.4 (0.4)                        ; 0.0 (0.0)            ; 31 (31)             ; 26 (26)                   ; 0 (0)         ; 0                 ; 0     ; 0          ; 0    ; 0            ; |AudioController|music_frequencies:inst|fine_clk_divN:inst19  ; fine_clk_divN        ; work         ;
-;       |fine_clk_divN:inst2|      ; 18.9 (18.9)          ; 18.5 (18.5)                      ; 0.0 (0.0)                                         ; 0.4 (0.4)                        ; 0.0 (0.0)            ; 31 (31)             ; 26 (26)                   ; 0 (0)         ; 0                 ; 0     ; 0          ; 0    ; 0            ; |AudioController|music_frequencies:inst|fine_clk_divN:inst2   ; fine_clk_divN        ; work         ;
-;       |fine_clk_divN:inst20|     ; 18.9 (18.9)          ; 18.5 (18.5)                      ; 0.0 (0.0)                                         ; 0.4 (0.4)                        ; 0.0 (0.0)            ; 31 (31)             ; 26 (26)                   ; 0 (0)         ; 0                 ; 0     ; 0          ; 0    ; 0            ; |AudioController|music_frequencies:inst|fine_clk_divN:inst20  ; fine_clk_divN        ; work         ;
-;       |fine_clk_divN:inst21|     ; 18.9 (18.9)          ; 18.5 (18.5)                      ; 0.0 (0.0)                                         ; 0.4 (0.4)                        ; 0.0 (0.0)            ; 31 (31)             ; 26 (26)                   ; 0 (0)         ; 0                 ; 0     ; 0          ; 0    ; 0            ; |AudioController|music_frequencies:inst|fine_clk_divN:inst21  ; fine_clk_divN        ; work         ;
-;       |fine_clk_divN:inst22|     ; 18.5 (18.5)          ; 18.5 (18.5)                      ; 0.0 (0.0)                                         ; 0.0 (0.0)                        ; 0.0 (0.0)            ; 31 (31)             ; 26 (26)                   ; 0 (0)         ; 0                 ; 0     ; 0          ; 0    ; 0            ; |AudioController|music_frequencies:inst|fine_clk_divN:inst22  ; fine_clk_divN        ; work         ;
-;       |fine_clk_divN:inst23|     ; 18.9 (18.9)          ; 18.5 (18.5)                      ; 0.0 (0.0)                                         ; 0.4 (0.4)                        ; 0.0 (0.0)            ; 31 (31)             ; 26 (26)                   ; 0 (0)         ; 0                 ; 0     ; 0          ; 0    ; 0            ; |AudioController|music_frequencies:inst|fine_clk_divN:inst23  ; fine_clk_divN        ; work         ;
-;       |fine_clk_divN:inst24|     ; 18.9 (18.9)          ; 18.5 (18.5)                      ; 0.0 (0.0)                                         ; 0.4 (0.4)                        ; 0.0 (0.0)            ; 31 (31)             ; 26 (26)                   ; 0 (0)         ; 0                 ; 0     ; 0          ; 0    ; 0            ; |AudioController|music_frequencies:inst|fine_clk_divN:inst24  ; fine_clk_divN        ; work         ;
-;       |fine_clk_divN:inst25|     ; 18.9 (18.9)          ; 18.5 (18.5)                      ; 0.0 (0.0)                                         ; 0.4 (0.4)                        ; 0.0 (0.0)            ; 31 (31)             ; 26 (26)                   ; 0 (0)         ; 0                 ; 0     ; 0          ; 0    ; 0            ; |AudioController|music_frequencies:inst|fine_clk_divN:inst25  ; fine_clk_divN        ; work         ;
-;       |fine_clk_divN:inst3|      ; 18.9 (18.9)          ; 18.5 (18.5)                      ; 0.0 (0.0)                                         ; 0.4 (0.4)                        ; 0.0 (0.0)            ; 31 (31)             ; 26 (26)                   ; 0 (0)         ; 0                 ; 0     ; 0          ; 0    ; 0            ; |AudioController|music_frequencies:inst|fine_clk_divN:inst3   ; fine_clk_divN        ; work         ;
-;       |fine_clk_divN:inst4|      ; 18.5 (18.5)          ; 18.5 (18.5)                      ; 0.0 (0.0)                                         ; 0.0 (0.0)                        ; 0.0 (0.0)            ; 31 (31)             ; 26 (26)                   ; 0 (0)         ; 0                 ; 0     ; 0          ; 0    ; 0            ; |AudioController|music_frequencies:inst|fine_clk_divN:inst4   ; fine_clk_divN        ; work         ;
-;       |fine_clk_divN:inst5|      ; 18.9 (18.9)          ; 18.5 (18.5)                      ; 0.0 (0.0)                                         ; 0.4 (0.4)                        ; 0.0 (0.0)            ; 31 (31)             ; 26 (26)                   ; 0 (0)         ; 0                 ; 0     ; 0          ; 0    ; 0            ; |AudioController|music_frequencies:inst|fine_clk_divN:inst5   ; fine_clk_divN        ; work         ;
-;       |fine_clk_divN:inst7|      ; 18.9 (18.9)          ; 18.5 (18.5)                      ; 0.0 (0.0)                                         ; 0.4 (0.4)                        ; 0.0 (0.0)            ; 31 (31)             ; 26 (26)                   ; 0 (0)         ; 0                 ; 0     ; 0          ; 0    ; 0            ; |AudioController|music_frequencies:inst|fine_clk_divN:inst7   ; fine_clk_divN        ; work         ;
-;       |fine_clk_divN:inst8|      ; 18.9 (18.9)          ; 18.5 (18.5)                      ; 0.0 (0.0)                                         ; 0.4 (0.4)                        ; 0.0 (0.0)            ; 31 (31)             ; 26 (26)                   ; 0 (0)         ; 0                 ; 0     ; 0          ; 0    ; 0            ; |AudioController|music_frequencies:inst|fine_clk_divN:inst8   ; fine_clk_divN        ; work         ;
-;       |fine_clk_divN:inst9|      ; 18.9 (18.9)          ; 18.5 (18.5)                      ; 0.0 (0.0)                                         ; 0.4 (0.4)                        ; 0.0 (0.0)            ; 31 (31)             ; 26 (26)                   ; 0 (0)         ; 0                 ; 0     ; 0          ; 0    ; 0            ; |AudioController|music_frequencies:inst|fine_clk_divN:inst9   ; fine_clk_divN        ; work         ;
-;       |octave_mux:inst26|        ; 4.0 (4.0)            ; 4.0 (4.0)                        ; 0.0 (0.0)                                         ; 0.0 (0.0)                        ; 0.0 (0.0)            ; 8 (8)               ; 0 (0)                     ; 0 (0)         ; 0                 ; 0     ; 0          ; 0    ; 0            ; |AudioController|music_frequencies:inst|octave_mux:inst26     ; octave_mux           ; work         ;
-;    |muxN:inst4|                  ; 5.5 (5.5)            ; 6.0 (6.0)                        ; 0.5 (0.5)                                         ; 0.0 (0.0)                        ; 0.0 (0.0)            ; 7 (7)               ; 0 (0)                     ; 0 (0)         ; 0                 ; 0     ; 0          ; 0    ; 0            ; |AudioController|muxN:inst4                                   ; muxN                 ; work         ;
-;    |seven_seg_controller:inst3|  ; 5.2 (5.2)            ; 7.0 (7.0)                        ; 1.8 (1.8)                                         ; 0.0 (0.0)                        ; 0.0 (0.0)            ; 14 (14)             ; 0 (0)                     ; 0 (0)         ; 0                 ; 0     ; 0          ; 0    ; 0            ; |AudioController|seven_seg_controller:inst3                   ; seven_seg_controller ; work         ;
-;    |shift_detector:inst7|        ; 2.2 (2.2)            ; 2.2 (2.2)                        ; 0.0 (0.0)                                         ; 0.0 (0.0)                        ; 0.0 (0.0)            ; 3 (3)               ; 2 (2)                     ; 0 (0)         ; 0                 ; 0     ; 0          ; 0    ; 0            ; |AudioController|shift_detector:inst7                         ; shift_detector       ; work         ;
-+----------------------------------+----------------------+----------------------------------+---------------------------------------------------+----------------------------------+----------------------+---------------------+---------------------------+---------------+-------------------+-------+------------+------+--------------+---------------------------------------------------------------+----------------------+--------------+
++----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Fitter Resource Utilization by Entity                                                                                                                                                                                                                                                                                                                                                                                                                          ;
++------------------------------------+----------------------+----------------------------------+---------------------------------------------------+----------------------------------+----------------------+---------------------+---------------------------+---------------+-------------------+-------+------------+------+--------------+----------------------------------------------------------------------------+----------------------+--------------+
+; Compilation Hierarchy Node         ; ALMs needed [=A-B+C] ; [A] ALMs used in final placement ; [B] Estimate of ALMs recoverable by dense packing ; [C] Estimate of ALMs unavailable ; ALMs used for memory ; Combinational ALUTs ; Dedicated Logic Registers ; I/O Registers ; Block Memory Bits ; M10Ks ; DSP Blocks ; Pins ; Virtual Pins ; Full Hierarchy Name                                                        ; Entity Name          ; Library Name ;
++------------------------------------+----------------------+----------------------------------+---------------------------------------------------+----------------------------------+----------------------+---------------------+---------------------------+---------------+-------------------+-------+------------+------+--------------+----------------------------------------------------------------------------+----------------------+--------------+
+; |TopLevel                          ; 505.0 (0.5)          ; 504.0 (0.5)                      ; 8.0 (0.0)                                         ; 9.0 (0.0)                        ; 0.0 (0.0)            ; 834 (1)             ; 693 (0)                   ; 0 (0)         ; 0                 ; 0     ; 0          ; 21   ; 0            ; |TopLevel                                                                  ; TopLevel             ; work         ;
+;    |AudioController:inst|          ; 474.7 (0.0)          ; 468.3 (0.0)                      ; 2.7 (0.0)                                         ; 9.0 (0.0)                        ; 0.0 (0.0)            ; 779 (0)             ; 630 (0)                   ; 0 (0)         ; 0                 ; 0     ; 0          ; 0    ; 0            ; |TopLevel|AudioController:inst                                             ; AudioController      ; work         ;
+;       |key_detector:inst1|         ; 9.7 (9.7)            ; 9.7 (9.7)                        ; 0.0 (0.0)                                         ; 0.0 (0.0)                        ; 0.0 (0.0)            ; 17 (17)             ; 4 (4)                     ; 0 (0)         ; 0                 ; 0     ; 0          ; 0    ; 0            ; |TopLevel|AudioController:inst|key_detector:inst1                          ; key_detector         ; work         ;
+;       |music_frequencies:inst|     ; 457.0 (0.0)          ; 451.0 (0.0)                      ; 3.0 (0.0)                                         ; 9.0 (0.0)                        ; 0.0 (0.0)            ; 752 (0)             ; 624 (0)                   ; 0 (0)         ; 0                 ; 0     ; 0          ; 0    ; 0            ; |TopLevel|AudioController:inst|music_frequencies:inst                      ; music_frequencies    ; work         ;
+;          |fine_clk_divN:inst|      ; 18.9 (18.9)          ; 18.5 (18.5)                      ; 0.0 (0.0)                                         ; 0.4 (0.4)                        ; 0.0 (0.0)            ; 31 (31)             ; 26 (26)                   ; 0 (0)         ; 0                 ; 0     ; 0          ; 0    ; 0            ; |TopLevel|AudioController:inst|music_frequencies:inst|fine_clk_divN:inst   ; fine_clk_divN        ; work         ;
+;          |fine_clk_divN:inst1|     ; 18.9 (18.9)          ; 18.5 (18.5)                      ; 0.0 (0.0)                                         ; 0.4 (0.4)                        ; 0.0 (0.0)            ; 31 (31)             ; 26 (26)                   ; 0 (0)         ; 0                 ; 0     ; 0          ; 0    ; 0            ; |TopLevel|AudioController:inst|music_frequencies:inst|fine_clk_divN:inst1  ; fine_clk_divN        ; work         ;
+;          |fine_clk_divN:inst10|    ; 18.9 (18.9)          ; 18.5 (18.5)                      ; 0.0 (0.0)                                         ; 0.4 (0.4)                        ; 0.0 (0.0)            ; 31 (31)             ; 26 (26)                   ; 0 (0)         ; 0                 ; 0     ; 0          ; 0    ; 0            ; |TopLevel|AudioController:inst|music_frequencies:inst|fine_clk_divN:inst10 ; fine_clk_divN        ; work         ;
+;          |fine_clk_divN:inst12|    ; 18.9 (18.9)          ; 18.5 (18.5)                      ; 0.0 (0.0)                                         ; 0.4 (0.4)                        ; 0.0 (0.0)            ; 31 (31)             ; 26 (26)                   ; 0 (0)         ; 0                 ; 0     ; 0          ; 0    ; 0            ; |TopLevel|AudioController:inst|music_frequencies:inst|fine_clk_divN:inst12 ; fine_clk_divN        ; work         ;
+;          |fine_clk_divN:inst13|    ; 18.5 (18.5)          ; 18.5 (18.5)                      ; 0.0 (0.0)                                         ; 0.0 (0.0)                        ; 0.0 (0.0)            ; 31 (31)             ; 26 (26)                   ; 0 (0)         ; 0                 ; 0     ; 0          ; 0    ; 0            ; |TopLevel|AudioController:inst|music_frequencies:inst|fine_clk_divN:inst13 ; fine_clk_divN        ; work         ;
+;          |fine_clk_divN:inst14|    ; 18.5 (18.5)          ; 19.0 (19.0)                      ; 0.5 (0.5)                                         ; 0.0 (0.0)                        ; 0.0 (0.0)            ; 31 (31)             ; 26 (26)                   ; 0 (0)         ; 0                 ; 0     ; 0          ; 0    ; 0            ; |TopLevel|AudioController:inst|music_frequencies:inst|fine_clk_divN:inst14 ; fine_clk_divN        ; work         ;
+;          |fine_clk_divN:inst15|    ; 18.9 (18.9)          ; 18.5 (18.5)                      ; 0.0 (0.0)                                         ; 0.4 (0.4)                        ; 0.0 (0.0)            ; 31 (31)             ; 26 (26)                   ; 0 (0)         ; 0                 ; 0     ; 0          ; 0    ; 0            ; |TopLevel|AudioController:inst|music_frequencies:inst|fine_clk_divN:inst15 ; fine_clk_divN        ; work         ;
+;          |fine_clk_divN:inst16|    ; 18.9 (18.9)          ; 18.5 (18.5)                      ; 0.0 (0.0)                                         ; 0.4 (0.4)                        ; 0.0 (0.0)            ; 31 (31)             ; 26 (26)                   ; 0 (0)         ; 0                 ; 0     ; 0          ; 0    ; 0            ; |TopLevel|AudioController:inst|music_frequencies:inst|fine_clk_divN:inst16 ; fine_clk_divN        ; work         ;
+;          |fine_clk_divN:inst17|    ; 18.9 (18.9)          ; 19.0 (19.0)                      ; 0.5 (0.5)                                         ; 0.4 (0.4)                        ; 0.0 (0.0)            ; 31 (31)             ; 26 (26)                   ; 0 (0)         ; 0                 ; 0     ; 0          ; 0    ; 0            ; |TopLevel|AudioController:inst|music_frequencies:inst|fine_clk_divN:inst17 ; fine_clk_divN        ; work         ;
+;          |fine_clk_divN:inst18|    ; 18.9 (18.9)          ; 18.5 (18.5)                      ; 0.0 (0.0)                                         ; 0.4 (0.4)                        ; 0.0 (0.0)            ; 31 (31)             ; 26 (26)                   ; 0 (0)         ; 0                 ; 0     ; 0          ; 0    ; 0            ; |TopLevel|AudioController:inst|music_frequencies:inst|fine_clk_divN:inst18 ; fine_clk_divN        ; work         ;
+;          |fine_clk_divN:inst19|    ; 18.9 (18.9)          ; 18.5 (18.5)                      ; 0.0 (0.0)                                         ; 0.4 (0.4)                        ; 0.0 (0.0)            ; 31 (31)             ; 26 (26)                   ; 0 (0)         ; 0                 ; 0     ; 0          ; 0    ; 0            ; |TopLevel|AudioController:inst|music_frequencies:inst|fine_clk_divN:inst19 ; fine_clk_divN        ; work         ;
+;          |fine_clk_divN:inst2|     ; 18.5 (18.5)          ; 19.0 (19.0)                      ; 0.5 (0.5)                                         ; 0.0 (0.0)                        ; 0.0 (0.0)            ; 31 (31)             ; 26 (26)                   ; 0 (0)         ; 0                 ; 0     ; 0          ; 0    ; 0            ; |TopLevel|AudioController:inst|music_frequencies:inst|fine_clk_divN:inst2  ; fine_clk_divN        ; work         ;
+;          |fine_clk_divN:inst20|    ; 18.9 (18.9)          ; 18.5 (18.5)                      ; 0.0 (0.0)                                         ; 0.4 (0.4)                        ; 0.0 (0.0)            ; 31 (31)             ; 26 (26)                   ; 0 (0)         ; 0                 ; 0     ; 0          ; 0    ; 0            ; |TopLevel|AudioController:inst|music_frequencies:inst|fine_clk_divN:inst20 ; fine_clk_divN        ; work         ;
+;          |fine_clk_divN:inst21|    ; 18.9 (18.9)          ; 18.5 (18.5)                      ; 0.0 (0.0)                                         ; 0.4 (0.4)                        ; 0.0 (0.0)            ; 31 (31)             ; 26 (26)                   ; 0 (0)         ; 0                 ; 0     ; 0          ; 0    ; 0            ; |TopLevel|AudioController:inst|music_frequencies:inst|fine_clk_divN:inst21 ; fine_clk_divN        ; work         ;
+;          |fine_clk_divN:inst22|    ; 18.9 (18.9)          ; 19.0 (19.0)                      ; 0.5 (0.5)                                         ; 0.4 (0.4)                        ; 0.0 (0.0)            ; 31 (31)             ; 26 (26)                   ; 0 (0)         ; 0                 ; 0     ; 0          ; 0    ; 0            ; |TopLevel|AudioController:inst|music_frequencies:inst|fine_clk_divN:inst22 ; fine_clk_divN        ; work         ;
+;          |fine_clk_divN:inst23|    ; 18.9 (18.9)          ; 18.5 (18.5)                      ; 0.0 (0.0)                                         ; 0.4 (0.4)                        ; 0.0 (0.0)            ; 31 (31)             ; 26 (26)                   ; 0 (0)         ; 0                 ; 0     ; 0          ; 0    ; 0            ; |TopLevel|AudioController:inst|music_frequencies:inst|fine_clk_divN:inst23 ; fine_clk_divN        ; work         ;
+;          |fine_clk_divN:inst24|    ; 18.9 (18.9)          ; 19.0 (19.0)                      ; 0.5 (0.5)                                         ; 0.4 (0.4)                        ; 0.0 (0.0)            ; 31 (31)             ; 26 (26)                   ; 0 (0)         ; 0                 ; 0     ; 0          ; 0    ; 0            ; |TopLevel|AudioController:inst|music_frequencies:inst|fine_clk_divN:inst24 ; fine_clk_divN        ; work         ;
+;          |fine_clk_divN:inst25|    ; 18.9 (18.9)          ; 18.5 (18.5)                      ; 0.0 (0.0)                                         ; 0.4 (0.4)                        ; 0.0 (0.0)            ; 31 (31)             ; 26 (26)                   ; 0 (0)         ; 0                 ; 0     ; 0          ; 0    ; 0            ; |TopLevel|AudioController:inst|music_frequencies:inst|fine_clk_divN:inst25 ; fine_clk_divN        ; work         ;
+;          |fine_clk_divN:inst3|     ; 18.9 (18.9)          ; 18.5 (18.5)                      ; 0.0 (0.0)                                         ; 0.4 (0.4)                        ; 0.0 (0.0)            ; 31 (31)             ; 26 (26)                   ; 0 (0)         ; 0                 ; 0     ; 0          ; 0    ; 0            ; |TopLevel|AudioController:inst|music_frequencies:inst|fine_clk_divN:inst3  ; fine_clk_divN        ; work         ;
+;          |fine_clk_divN:inst4|     ; 18.9 (18.9)          ; 19.0 (19.0)                      ; 0.5 (0.5)                                         ; 0.4 (0.4)                        ; 0.0 (0.0)            ; 31 (31)             ; 26 (26)                   ; 0 (0)         ; 0                 ; 0     ; 0          ; 0    ; 0            ; |TopLevel|AudioController:inst|music_frequencies:inst|fine_clk_divN:inst4  ; fine_clk_divN        ; work         ;
+;          |fine_clk_divN:inst5|     ; 18.9 (18.9)          ; 18.5 (18.5)                      ; 0.0 (0.0)                                         ; 0.4 (0.4)                        ; 0.0 (0.0)            ; 31 (31)             ; 26 (26)                   ; 0 (0)         ; 0                 ; 0     ; 0          ; 0    ; 0            ; |TopLevel|AudioController:inst|music_frequencies:inst|fine_clk_divN:inst5  ; fine_clk_divN        ; work         ;
+;          |fine_clk_divN:inst7|     ; 18.9 (18.9)          ; 18.5 (18.5)                      ; 0.0 (0.0)                                         ; 0.4 (0.4)                        ; 0.0 (0.0)            ; 31 (31)             ; 26 (26)                   ; 0 (0)         ; 0                 ; 0     ; 0          ; 0    ; 0            ; |TopLevel|AudioController:inst|music_frequencies:inst|fine_clk_divN:inst7  ; fine_clk_divN        ; work         ;
+;          |fine_clk_divN:inst8|     ; 18.9 (18.9)          ; 18.5 (18.5)                      ; 0.0 (0.0)                                         ; 0.4 (0.4)                        ; 0.0 (0.0)            ; 31 (31)             ; 26 (26)                   ; 0 (0)         ; 0                 ; 0     ; 0          ; 0    ; 0            ; |TopLevel|AudioController:inst|music_frequencies:inst|fine_clk_divN:inst8  ; fine_clk_divN        ; work         ;
+;          |fine_clk_divN:inst9|     ; 18.9 (18.9)          ; 18.5 (18.5)                      ; 0.0 (0.0)                                         ; 0.4 (0.4)                        ; 0.0 (0.0)            ; 31 (31)             ; 26 (26)                   ; 0 (0)         ; 0                 ; 0     ; 0          ; 0    ; 0            ; |TopLevel|AudioController:inst|music_frequencies:inst|fine_clk_divN:inst9  ; fine_clk_divN        ; work         ;
+;          |octave_mux:inst26|       ; 4.0 (4.0)            ; 4.0 (4.0)                        ; 0.0 (0.0)                                         ; 0.0 (0.0)                        ; 0.0 (0.0)            ; 8 (8)               ; 0 (0)                     ; 0 (0)         ; 0                 ; 0     ; 0          ; 0    ; 0            ; |TopLevel|AudioController:inst|music_frequencies:inst|octave_mux:inst26    ; octave_mux           ; work         ;
+;       |muxN:inst4|                 ; 5.5 (5.5)            ; 5.5 (5.5)                        ; 0.0 (0.0)                                         ; 0.0 (0.0)                        ; 0.0 (0.0)            ; 7 (7)               ; 0 (0)                     ; 0 (0)         ; 0                 ; 0     ; 0          ; 0    ; 0            ; |TopLevel|AudioController:inst|muxN:inst4                                  ; muxN                 ; work         ;
+;       |special_key_detector:inst7| ; 2.2 (2.2)            ; 2.2 (2.2)                        ; 0.0 (0.0)                                         ; 0.0 (0.0)                        ; 0.0 (0.0)            ; 3 (3)               ; 2 (2)                     ; 0 (0)         ; 0                 ; 0     ; 0          ; 0    ; 0            ; |TopLevel|AudioController:inst|special_key_detector:inst7                  ; special_key_detector ; work         ;
+;    |PS2controller:inst2|           ; 24.7 (0.3)           ; 28.2 (0.3)                       ; 3.5 (0.0)                                         ; 0.0 (0.0)                        ; 0.0 (0.0)            ; 40 (1)              ; 63 (0)                    ; 0 (0)         ; 0                 ; 0     ; 0          ; 0    ; 0            ; |TopLevel|PS2controller:inst2                                              ; PS2controller        ; work         ;
+;       |break_code_detector:inst|   ; 18.3 (18.3)          ; 18.3 (18.3)                      ; 0.0 (0.0)                                         ; 0.0 (0.0)                        ; 0.0 (0.0)            ; 32 (32)             ; 32 (32)                   ; 0 (0)         ; 0                 ; 0     ; 0          ; 0    ; 0            ; |TopLevel|PS2controller:inst2|break_code_detector:inst                     ; break_code_detector  ; work         ;
+;       |bsy_detector:inst2|         ; 2.2 (2.2)            ; 2.2 (2.2)                        ; 0.0 (0.0)                                         ; 0.0 (0.0)                        ; 0.0 (0.0)            ; 0 (0)               ; 8 (8)                     ; 0 (0)         ; 0                 ; 0     ; 0          ; 0    ; 0            ; |TopLevel|PS2controller:inst2|bsy_detector:inst2                           ; bsy_detector         ; work         ;
+;       |ps2_controller:inst1|       ; 3.3 (3.3)            ; 7.5 (7.5)                        ; 4.2 (4.2)                                         ; 0.0 (0.0)                        ; 0.0 (0.0)            ; 7 (7)               ; 23 (23)                   ; 0 (0)         ; 0                 ; 0     ; 0          ; 0    ; 0            ; |TopLevel|PS2controller:inst2|ps2_controller:inst1                         ; ps2_controller       ; work         ;
+;    |seven_seg_controller:inst3|    ; 5.2 (5.2)            ; 7.0 (7.0)                        ; 1.8 (1.8)                                         ; 0.0 (0.0)                        ; 0.0 (0.0)            ; 14 (14)             ; 0 (0)                     ; 0 (0)         ; 0                 ; 0     ; 0          ; 0    ; 0            ; |TopLevel|seven_seg_controller:inst3                                       ; seven_seg_controller ; work         ;
++------------------------------------+----------------------+----------------------------------+---------------------------------------------------+----------------------------------+----------------------+---------------------+---------------------------+---------------+-------------------+-------+------------+------+--------------+----------------------------------------------------------------------------+----------------------+--------------+
 Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
 
 
@@ -1026,9 +1029,9 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +------------+----------+----+------+------+----+------+-------+--------+------------------------+--------------------------+
 ; Name       ; Pin Type ; D1 ; D3_0 ; D3_1 ; D4 ; D5   ; D5 OE ; D5 OCT ; T11 (Postamble Gating) ; T11 (Postamble Ungating) ;
 +------------+----------+----+------+------+----+------+-------+--------+------------------------+--------------------------+
+; sharp_led  ; Output   ; -- ; --   ; --   ; -- ; (0)  ; (31)  ; --     ; --                     ; --                       ;
+; octave_led ; Output   ; -- ; --   ; --   ; -- ; (0)  ; (31)  ; --     ; --                     ; --                       ;
 ; buzzer_out ; Output   ; -- ; --   ; --   ; -- ; (0)  ; (31)  ; --     ; --                     ; --                       ;
-; led0       ; Output   ; -- ; --   ; --   ; -- ; (0)  ; (31)  ; --     ; --                     ; --                       ;
-; led1       ; Output   ; -- ; --   ; --   ; -- ; (0)  ; (31)  ; --     ; --                     ; --                       ;
 ; disp0[0]   ; Output   ; -- ; --   ; --   ; -- ; (0)  ; (31)  ; --     ; --                     ; --                       ;
 ; disp0[1]   ; Output   ; -- ; --   ; --   ; -- ; (0)  ; (31)  ; --     ; --                     ; --                       ;
 ; disp0[2]   ; Output   ; -- ; --   ; --   ; -- ; (0)  ; (31)  ; --     ; --                     ; --                       ;
@@ -1043,142 +1046,143 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; disp1[4]   ; Output   ; -- ; --   ; --   ; -- ; (0)  ; (31)  ; --     ; --                     ; --                       ;
 ; disp1[5]   ; Output   ; -- ; --   ; --   ; -- ; (0)  ; (31)  ; --     ; --                     ; --                       ;
 ; disp1[6]   ; Output   ; -- ; --   ; --   ; -- ; (0)  ; (31)  ; --     ; --                     ; --                       ;
+; ps2_clk    ; Input    ; -- ; (0)  ; --   ; -- ; --   ; --    ; --     ; --                     ; --                       ;
 ; clk        ; Input    ; -- ; (0)  ; --   ; -- ; --   ; --    ; --     ; --                     ; --                       ;
 ; rst        ; Input    ; -- ; (0)  ; --   ; -- ; --   ; --    ; --     ; --                     ; --                       ;
-; ps2_clk    ; Input    ; -- ; (0)  ; --   ; -- ; --   ; --    ; --     ; --                     ; --                       ;
 ; ps2_data   ; Input    ; -- ; --   ; (0)  ; -- ; --   ; --    ; --     ; --                     ; --                       ;
 +------------+----------+----+------+------+----+------+-------+--------+------------------------+--------------------------+
 
 
-+------------------------------------------------------------------------------------------------------+
-; Pad To Core Delay Chain Fanout                                                                       ;
-+------------------------------------------------------------------------+-------------------+---------+
-; Source Pin / Fanout                                                    ; Pad To Core Index ; Setting ;
-+------------------------------------------------------------------------+-------------------+---------+
-; clk                                                                    ;                   ;         ;
-; rst                                                                    ;                   ;         ;
-;      - PS2controller:inst2|ps2_controller:inst1|data_out[4]            ; 0                 ; 0       ;
-;      - PS2controller:inst2|ps2_controller:inst1|data_out[5]            ; 0                 ; 0       ;
-;      - PS2controller:inst2|ps2_controller:inst1|data_out[6]            ; 0                 ; 0       ;
-;      - PS2controller:inst2|ps2_controller:inst1|data_out[7]            ; 0                 ; 0       ;
-;      - PS2controller:inst2|ps2_controller:inst1|data_out[2]            ; 0                 ; 0       ;
-;      - PS2controller:inst2|ps2_controller:inst1|data_out[3]            ; 0                 ; 0       ;
-;      - PS2controller:inst2|ps2_controller:inst1|data_out[0]            ; 0                 ; 0       ;
-;      - PS2controller:inst2|ps2_controller:inst1|data_out[1]            ; 0                 ; 0       ;
-;      - music_frequencies:inst|fine_clk_divN:inst10|clk_out             ; 0                 ; 0       ;
-;      - music_frequencies:inst|fine_clk_divN:inst25|clk_out             ; 0                 ; 0       ;
-;      - music_frequencies:inst|fine_clk_divN:inst9|clk_out              ; 0                 ; 0       ;
-;      - music_frequencies:inst|fine_clk_divN:inst24|clk_out             ; 0                 ; 0       ;
-;      - music_frequencies:inst|fine_clk_divN:inst8|clk_out              ; 0                 ; 0       ;
-;      - music_frequencies:inst|fine_clk_divN:inst23|clk_out             ; 0                 ; 0       ;
-;      - music_frequencies:inst|fine_clk_divN:inst16|clk_out             ; 0                 ; 0       ;
-;      - music_frequencies:inst|fine_clk_divN:inst22|clk_out             ; 0                 ; 0       ;
-;      - music_frequencies:inst|fine_clk_divN:inst7|clk_out              ; 0                 ; 0       ;
-;      - music_frequencies:inst|fine_clk_divN:inst21|clk_out             ; 0                 ; 0       ;
-;      - music_frequencies:inst|fine_clk_divN:inst5|clk_out              ; 0                 ; 0       ;
-;      - music_frequencies:inst|fine_clk_divN:inst20|clk_out             ; 0                 ; 0       ;
-;      - music_frequencies:inst|fine_clk_divN:inst4|clk_out              ; 0                 ; 0       ;
-;      - music_frequencies:inst|fine_clk_divN:inst19|clk_out             ; 0                 ; 0       ;
-;      - music_frequencies:inst|fine_clk_divN:inst15|clk_out             ; 0                 ; 0       ;
-;      - music_frequencies:inst|fine_clk_divN:inst18|clk_out             ; 0                 ; 0       ;
-;      - music_frequencies:inst|fine_clk_divN:inst3|clk_out              ; 0                 ; 0       ;
-;      - music_frequencies:inst|fine_clk_divN:inst17|clk_out             ; 0                 ; 0       ;
-;      - music_frequencies:inst|fine_clk_divN:inst2|clk_out              ; 0                 ; 0       ;
-;      - music_frequencies:inst|fine_clk_divN:inst13|clk_out             ; 0                 ; 0       ;
-;      - music_frequencies:inst|fine_clk_divN:inst1|clk_out              ; 0                 ; 0       ;
-;      - music_frequencies:inst|fine_clk_divN:inst12|clk_out             ; 0                 ; 0       ;
-;      - music_frequencies:inst|fine_clk_divN:inst|clk_out               ; 0                 ; 0       ;
-;      - music_frequencies:inst|fine_clk_divN:inst14|clk_out             ; 0                 ; 0       ;
-;      - key_detector:inst1|q[0]                                         ; 0                 ; 0       ;
-;      - key_detector:inst1|q[1]                                         ; 0                 ; 0       ;
-;      - key_detector:inst1|q[2]                                         ; 0                 ; 0       ;
-;      - key_detector:inst1|q[3]                                         ; 0                 ; 0       ;
-;      - PS2controller:inst2|ps2_controller:inst1|bsy                    ; 0                 ; 0       ;
-;      - PS2controller:inst2|inst5                                       ; 0                 ; 0       ;
-;      - music_frequencies:inst|fine_clk_divN:inst14|counter_reg[5]~0    ; 0                 ; 0       ;
-;      - music_frequencies:inst|fine_clk_divN:inst|counter_reg[6]~0      ; 0                 ; 0       ;
-;      - music_frequencies:inst|fine_clk_divN:inst12|counter_reg[4]~0    ; 0                 ; 0       ;
-;      - music_frequencies:inst|fine_clk_divN:inst1|counter_reg[24]~0    ; 0                 ; 0       ;
-;      - music_frequencies:inst|fine_clk_divN:inst13|counter_reg[24]~0   ; 0                 ; 0       ;
-;      - music_frequencies:inst|fine_clk_divN:inst2|counter_reg[16]~0    ; 0                 ; 0       ;
-;      - music_frequencies:inst|fine_clk_divN:inst17|counter_reg[8]~0    ; 0                 ; 0       ;
-;      - music_frequencies:inst|fine_clk_divN:inst3|counter_reg[21]~0    ; 0                 ; 0       ;
-;      - music_frequencies:inst|fine_clk_divN:inst18|counter_reg[17]~0   ; 0                 ; 0       ;
-;      - music_frequencies:inst|fine_clk_divN:inst15|counter_reg[17]~0   ; 0                 ; 0       ;
-;      - music_frequencies:inst|fine_clk_divN:inst19|counter_reg[0]~0    ; 0                 ; 0       ;
-;      - music_frequencies:inst|fine_clk_divN:inst4|counter_reg[0]~0     ; 0                 ; 0       ;
-;      - music_frequencies:inst|fine_clk_divN:inst20|counter_reg[17]~0   ; 0                 ; 0       ;
-;      - music_frequencies:inst|fine_clk_divN:inst5|counter_reg[3]~0     ; 0                 ; 0       ;
-;      - music_frequencies:inst|fine_clk_divN:inst21|counter_reg[3]~0    ; 0                 ; 0       ;
-;      - music_frequencies:inst|fine_clk_divN:inst7|counter_reg[4]~0     ; 0                 ; 0       ;
-;      - music_frequencies:inst|fine_clk_divN:inst22|counter_reg[17]~0   ; 0                 ; 0       ;
-;      - music_frequencies:inst|fine_clk_divN:inst16|counter_reg[7]~0    ; 0                 ; 0       ;
-;      - music_frequencies:inst|fine_clk_divN:inst23|counter_reg[8]~0    ; 0                 ; 0       ;
-;      - music_frequencies:inst|fine_clk_divN:inst8|counter_reg[8]~0     ; 0                 ; 0       ;
-;      - music_frequencies:inst|fine_clk_divN:inst24|counter_reg[10]~0   ; 0                 ; 0       ;
-;      - music_frequencies:inst|fine_clk_divN:inst9|counter_reg[9]~0     ; 0                 ; 0       ;
-;      - music_frequencies:inst|fine_clk_divN:inst25|counter_reg[12]~0   ; 0                 ; 0       ;
-;      - music_frequencies:inst|fine_clk_divN:inst10|counter_reg[12]~0   ; 0                 ; 0       ;
-;      - PS2controller:inst2|ps2_controller:inst1|count_reg[0]           ; 0                 ; 0       ;
-;      - PS2controller:inst2|ps2_controller:inst1|count_reg[3]           ; 0                 ; 0       ;
-;      - PS2controller:inst2|ps2_controller:inst1|count_reg[2]           ; 0                 ; 0       ;
-;      - PS2controller:inst2|ps2_controller:inst1|count_reg[1]           ; 0                 ; 0       ;
-;      - PS2controller:inst2|ps2_controller:inst1|data_out[1]~DUPLICATE  ; 0                 ; 0       ;
-;      - PS2controller:inst2|ps2_controller:inst1|data_out[2]~DUPLICATE  ; 0                 ; 0       ;
-;      - PS2controller:inst2|ps2_controller:inst1|data_out[3]~DUPLICATE  ; 0                 ; 0       ;
-;      - PS2controller:inst2|ps2_controller:inst1|data_out[4]~DUPLICATE  ; 0                 ; 0       ;
-;      - PS2controller:inst2|ps2_controller:inst1|data_out[5]~DUPLICATE  ; 0                 ; 0       ;
-;      - PS2controller:inst2|ps2_controller:inst1|data_out[6]~DUPLICATE  ; 0                 ; 0       ;
-;      - PS2controller:inst2|ps2_controller:inst1|count_reg[0]~DUPLICATE ; 0                 ; 0       ;
-;      - PS2controller:inst2|ps2_controller:inst1|count_reg[2]~DUPLICATE ; 0                 ; 0       ;
-;      - PS2controller:inst2|ps2_controller:inst1|count_reg[1]~DUPLICATE ; 0                 ; 0       ;
-; ps2_clk                                                                ;                   ;         ;
-;      - PS2controller:inst2|ps2_controller:inst1|bsy                    ; 0                 ; 0       ;
-;      - ps2_clk~inputCLKENA0                                            ; 0                 ; 0       ;
-; ps2_data                                                               ;                   ;         ;
-;      - PS2controller:inst2|ps2_controller:inst1|data_out[7]            ; 1                 ; 0       ;
-+------------------------------------------------------------------------+-------------------+---------+
++-------------------------------------------------------------------------------------------------------------------------+
+; Pad To Core Delay Chain Fanout                                                                                          ;
++-------------------------------------------------------------------------------------------+-------------------+---------+
+; Source Pin / Fanout                                                                       ; Pad To Core Index ; Setting ;
++-------------------------------------------------------------------------------------------+-------------------+---------+
+; ps2_clk                                                                                   ;                   ;         ;
+;      - PS2controller:inst2|ps2_controller:inst1|bsy                                       ; 0                 ; 0       ;
+;      - ps2_clk~inputCLKENA0                                                               ; 0                 ; 0       ;
+; clk                                                                                       ;                   ;         ;
+; rst                                                                                       ;                   ;         ;
+;      - PS2controller:inst2|ps2_controller:inst1|data_out[4]                               ; 0                 ; 0       ;
+;      - PS2controller:inst2|ps2_controller:inst1|data_out[5]                               ; 0                 ; 0       ;
+;      - PS2controller:inst2|ps2_controller:inst1|data_out[6]                               ; 0                 ; 0       ;
+;      - PS2controller:inst2|ps2_controller:inst1|data_out[7]                               ; 0                 ; 0       ;
+;      - PS2controller:inst2|ps2_controller:inst1|data_out[2]                               ; 0                 ; 0       ;
+;      - PS2controller:inst2|ps2_controller:inst1|data_out[3]                               ; 0                 ; 0       ;
+;      - PS2controller:inst2|ps2_controller:inst1|data_out[0]                               ; 0                 ; 0       ;
+;      - PS2controller:inst2|ps2_controller:inst1|data_out[1]                               ; 0                 ; 0       ;
+;      - AudioController:inst|music_frequencies:inst|fine_clk_divN:inst10|clk_out           ; 0                 ; 0       ;
+;      - AudioController:inst|music_frequencies:inst|fine_clk_divN:inst25|clk_out           ; 0                 ; 0       ;
+;      - AudioController:inst|music_frequencies:inst|fine_clk_divN:inst9|clk_out            ; 0                 ; 0       ;
+;      - AudioController:inst|music_frequencies:inst|fine_clk_divN:inst24|clk_out           ; 0                 ; 0       ;
+;      - AudioController:inst|music_frequencies:inst|fine_clk_divN:inst8|clk_out            ; 0                 ; 0       ;
+;      - AudioController:inst|music_frequencies:inst|fine_clk_divN:inst23|clk_out           ; 0                 ; 0       ;
+;      - AudioController:inst|music_frequencies:inst|fine_clk_divN:inst16|clk_out           ; 0                 ; 0       ;
+;      - AudioController:inst|music_frequencies:inst|fine_clk_divN:inst22|clk_out           ; 0                 ; 0       ;
+;      - AudioController:inst|music_frequencies:inst|fine_clk_divN:inst7|clk_out            ; 0                 ; 0       ;
+;      - AudioController:inst|music_frequencies:inst|fine_clk_divN:inst21|clk_out           ; 0                 ; 0       ;
+;      - AudioController:inst|music_frequencies:inst|fine_clk_divN:inst5|clk_out            ; 0                 ; 0       ;
+;      - AudioController:inst|music_frequencies:inst|fine_clk_divN:inst20|clk_out           ; 0                 ; 0       ;
+;      - AudioController:inst|music_frequencies:inst|fine_clk_divN:inst4|clk_out            ; 0                 ; 0       ;
+;      - AudioController:inst|music_frequencies:inst|fine_clk_divN:inst19|clk_out           ; 0                 ; 0       ;
+;      - AudioController:inst|music_frequencies:inst|fine_clk_divN:inst15|clk_out           ; 0                 ; 0       ;
+;      - AudioController:inst|music_frequencies:inst|fine_clk_divN:inst18|clk_out           ; 0                 ; 0       ;
+;      - AudioController:inst|music_frequencies:inst|fine_clk_divN:inst3|clk_out            ; 0                 ; 0       ;
+;      - AudioController:inst|music_frequencies:inst|fine_clk_divN:inst17|clk_out           ; 0                 ; 0       ;
+;      - AudioController:inst|music_frequencies:inst|fine_clk_divN:inst2|clk_out            ; 0                 ; 0       ;
+;      - AudioController:inst|music_frequencies:inst|fine_clk_divN:inst13|clk_out           ; 0                 ; 0       ;
+;      - AudioController:inst|music_frequencies:inst|fine_clk_divN:inst1|clk_out            ; 0                 ; 0       ;
+;      - AudioController:inst|music_frequencies:inst|fine_clk_divN:inst12|clk_out           ; 0                 ; 0       ;
+;      - AudioController:inst|music_frequencies:inst|fine_clk_divN:inst|clk_out             ; 0                 ; 0       ;
+;      - AudioController:inst|music_frequencies:inst|fine_clk_divN:inst14|clk_out           ; 0                 ; 0       ;
+;      - AudioController:inst|key_detector:inst1|q[0]                                       ; 0                 ; 0       ;
+;      - AudioController:inst|key_detector:inst1|q[1]                                       ; 0                 ; 0       ;
+;      - AudioController:inst|key_detector:inst1|q[2]                                       ; 0                 ; 0       ;
+;      - AudioController:inst|key_detector:inst1|q[3]                                       ; 0                 ; 0       ;
+;      - PS2controller:inst2|ps2_controller:inst1|bsy                                       ; 0                 ; 0       ;
+;      - PS2controller:inst2|inst5                                                          ; 0                 ; 0       ;
+;      - AudioController:inst|music_frequencies:inst|fine_clk_divN:inst14|counter_reg[5]~0  ; 0                 ; 0       ;
+;      - AudioController:inst|music_frequencies:inst|fine_clk_divN:inst13|counter_reg[24]~0 ; 0                 ; 0       ;
+;      - AudioController:inst|music_frequencies:inst|fine_clk_divN:inst|counter_reg[6]~0    ; 0                 ; 0       ;
+;      - AudioController:inst|music_frequencies:inst|fine_clk_divN:inst2|counter_reg[16]~0  ; 0                 ; 0       ;
+;      - AudioController:inst|music_frequencies:inst|fine_clk_divN:inst12|counter_reg[4]~0  ; 0                 ; 0       ;
+;      - AudioController:inst|music_frequencies:inst|fine_clk_divN:inst1|counter_reg[24]~0  ; 0                 ; 0       ;
+;      - AudioController:inst|music_frequencies:inst|fine_clk_divN:inst17|counter_reg[8]~0  ; 0                 ; 0       ;
+;      - AudioController:inst|music_frequencies:inst|fine_clk_divN:inst3|counter_reg[21]~0  ; 0                 ; 0       ;
+;      - AudioController:inst|music_frequencies:inst|fine_clk_divN:inst18|counter_reg[17]~0 ; 0                 ; 0       ;
+;      - AudioController:inst|music_frequencies:inst|fine_clk_divN:inst15|counter_reg[17]~0 ; 0                 ; 0       ;
+;      - AudioController:inst|music_frequencies:inst|fine_clk_divN:inst19|counter_reg[0]~0  ; 0                 ; 0       ;
+;      - AudioController:inst|music_frequencies:inst|fine_clk_divN:inst4|counter_reg[0]~0   ; 0                 ; 0       ;
+;      - AudioController:inst|music_frequencies:inst|fine_clk_divN:inst20|counter_reg[17]~0 ; 0                 ; 0       ;
+;      - AudioController:inst|music_frequencies:inst|fine_clk_divN:inst5|counter_reg[3]~0   ; 0                 ; 0       ;
+;      - AudioController:inst|music_frequencies:inst|fine_clk_divN:inst21|counter_reg[3]~0  ; 0                 ; 0       ;
+;      - AudioController:inst|music_frequencies:inst|fine_clk_divN:inst7|counter_reg[4]~0   ; 0                 ; 0       ;
+;      - AudioController:inst|music_frequencies:inst|fine_clk_divN:inst22|counter_reg[17]~0 ; 0                 ; 0       ;
+;      - AudioController:inst|music_frequencies:inst|fine_clk_divN:inst16|counter_reg[7]~0  ; 0                 ; 0       ;
+;      - AudioController:inst|music_frequencies:inst|fine_clk_divN:inst23|counter_reg[8]~0  ; 0                 ; 0       ;
+;      - AudioController:inst|music_frequencies:inst|fine_clk_divN:inst8|counter_reg[8]~0   ; 0                 ; 0       ;
+;      - AudioController:inst|music_frequencies:inst|fine_clk_divN:inst24|counter_reg[10]~0 ; 0                 ; 0       ;
+;      - AudioController:inst|music_frequencies:inst|fine_clk_divN:inst9|counter_reg[9]~0   ; 0                 ; 0       ;
+;      - AudioController:inst|music_frequencies:inst|fine_clk_divN:inst25|counter_reg[12]~0 ; 0                 ; 0       ;
+;      - AudioController:inst|music_frequencies:inst|fine_clk_divN:inst10|counter_reg[12]~0 ; 0                 ; 0       ;
+;      - PS2controller:inst2|ps2_controller:inst1|count_reg[0]                              ; 0                 ; 0       ;
+;      - PS2controller:inst2|ps2_controller:inst1|count_reg[3]                              ; 0                 ; 0       ;
+;      - PS2controller:inst2|ps2_controller:inst1|count_reg[2]                              ; 0                 ; 0       ;
+;      - PS2controller:inst2|ps2_controller:inst1|count_reg[1]                              ; 0                 ; 0       ;
+;      - PS2controller:inst2|ps2_controller:inst1|data_out[1]~DUPLICATE                     ; 0                 ; 0       ;
+;      - PS2controller:inst2|ps2_controller:inst1|data_out[2]~DUPLICATE                     ; 0                 ; 0       ;
+;      - PS2controller:inst2|ps2_controller:inst1|data_out[3]~DUPLICATE                     ; 0                 ; 0       ;
+;      - PS2controller:inst2|ps2_controller:inst1|data_out[4]~DUPLICATE                     ; 0                 ; 0       ;
+;      - PS2controller:inst2|ps2_controller:inst1|data_out[5]~DUPLICATE                     ; 0                 ; 0       ;
+;      - PS2controller:inst2|ps2_controller:inst1|data_out[6]~DUPLICATE                     ; 0                 ; 0       ;
+;      - PS2controller:inst2|ps2_controller:inst1|count_reg[0]~DUPLICATE                    ; 0                 ; 0       ;
+;      - PS2controller:inst2|ps2_controller:inst1|count_reg[3]~DUPLICATE                    ; 0                 ; 0       ;
+;      - PS2controller:inst2|ps2_controller:inst1|count_reg[2]~DUPLICATE                    ; 0                 ; 0       ;
+;      - PS2controller:inst2|ps2_controller:inst1|count_reg[1]~DUPLICATE                    ; 0                 ; 0       ;
+; ps2_data                                                                                  ;                   ;         ;
+;      - PS2controller:inst2|ps2_controller:inst1|data_out[7]                               ; 1                 ; 0       ;
++-------------------------------------------------------------------------------------------+-------------------+---------+
 
 
-+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Control Signals                                                                                                                                                                                          ;
-+---------------------------------------------------------------+---------------------+---------+---------------------------+--------+----------------------+------------------+---------------------------+
-; Name                                                          ; Location            ; Fan-Out ; Usage                     ; Global ; Global Resource Used ; Global Line Name ; Enable Signal Source Name ;
-+---------------------------------------------------------------+---------------------+---------+---------------------------+--------+----------------------+------------------+---------------------------+
-; PS2controller:inst2|break_code_detector:inst|Equal1~4         ; MLABCELL_X45_Y4_N30 ; 31      ; Sync. clear               ; no     ; --                   ; --               ; --                        ;
-; PS2controller:inst2|inst5                                     ; MLABCELL_X45_Y4_N51 ; 8       ; Async. clear              ; no     ; --                   ; --               ; --                        ;
-; PS2controller:inst2|ps2_controller:inst1|Equal1~0             ; MLABCELL_X45_Y5_N15 ; 14      ; Sync. clear               ; no     ; --                   ; --               ; --                        ;
-; PS2controller:inst2|ps2_controller:inst1|bsy                  ; FF_X45_Y5_N53       ; 8       ; Clock                     ; no     ; --                   ; --               ; --                        ;
-; PS2controller:inst2|ps2_controller:inst1|data_out[4]~0        ; MLABCELL_X45_Y5_N48 ; 14      ; Clock enable              ; no     ; --                   ; --               ; --                        ;
-; clk                                                           ; PIN_M9              ; 659     ; Clock                     ; yes    ; Global Clock         ; GCLK6            ; --                        ;
-; music_frequencies:inst|fine_clk_divN:inst10|counter_reg[12]~0 ; MLABCELL_X42_Y3_N54 ; 25      ; Sync. clear               ; no     ; --                   ; --               ; --                        ;
-; music_frequencies:inst|fine_clk_divN:inst12|counter_reg[4]~0  ; LABCELL_X41_Y6_N6   ; 25      ; Sync. clear               ; no     ; --                   ; --               ; --                        ;
-; music_frequencies:inst|fine_clk_divN:inst13|counter_reg[24]~0 ; LABCELL_X43_Y4_N6   ; 25      ; Sync. clear               ; no     ; --                   ; --               ; --                        ;
-; music_frequencies:inst|fine_clk_divN:inst14|counter_reg[5]~0  ; LABCELL_X41_Y2_N6   ; 25      ; Sync. clear               ; no     ; --                   ; --               ; --                        ;
-; music_frequencies:inst|fine_clk_divN:inst15|counter_reg[17]~0 ; MLABCELL_X37_Y5_N48 ; 25      ; Sync. clear               ; no     ; --                   ; --               ; --                        ;
-; music_frequencies:inst|fine_clk_divN:inst16|counter_reg[7]~0  ; LABCELL_X31_Y4_N24  ; 25      ; Sync. clear               ; no     ; --                   ; --               ; --                        ;
-; music_frequencies:inst|fine_clk_divN:inst17|counter_reg[8]~0  ; LABCELL_X36_Y1_N54  ; 25      ; Sync. clear               ; no     ; --                   ; --               ; --                        ;
-; music_frequencies:inst|fine_clk_divN:inst18|counter_reg[17]~0 ; LABCELL_X47_Y4_N24  ; 25      ; Sync. clear               ; no     ; --                   ; --               ; --                        ;
-; music_frequencies:inst|fine_clk_divN:inst19|counter_reg[0]~0  ; LABCELL_X43_Y8_N12  ; 25      ; Sync. clear               ; no     ; --                   ; --               ; --                        ;
-; music_frequencies:inst|fine_clk_divN:inst1|counter_reg[24]~0  ; LABCELL_X36_Y6_N6   ; 25      ; Sync. clear               ; no     ; --                   ; --               ; --                        ;
-; music_frequencies:inst|fine_clk_divN:inst20|counter_reg[17]~0 ; LABCELL_X43_Y6_N18  ; 25      ; Sync. clear               ; no     ; --                   ; --               ; --                        ;
-; music_frequencies:inst|fine_clk_divN:inst21|counter_reg[3]~0  ; LABCELL_X32_Y6_N24  ; 25      ; Sync. clear               ; no     ; --                   ; --               ; --                        ;
-; music_frequencies:inst|fine_clk_divN:inst22|counter_reg[17]~0 ; LABCELL_X43_Y2_N12  ; 25      ; Sync. clear               ; no     ; --                   ; --               ; --                        ;
-; music_frequencies:inst|fine_clk_divN:inst23|counter_reg[8]~0  ; LABCELL_X35_Y4_N6   ; 25      ; Sync. clear               ; no     ; --                   ; --               ; --                        ;
-; music_frequencies:inst|fine_clk_divN:inst24|counter_reg[10]~0 ; MLABCELL_X42_Y8_N42 ; 25      ; Sync. clear               ; no     ; --                   ; --               ; --                        ;
-; music_frequencies:inst|fine_clk_divN:inst25|counter_reg[12]~0 ; LABCELL_X41_Y3_N54  ; 25      ; Sync. clear               ; no     ; --                   ; --               ; --                        ;
-; music_frequencies:inst|fine_clk_divN:inst2|counter_reg[16]~0  ; LABCELL_X47_Y6_N6   ; 25      ; Sync. clear               ; no     ; --                   ; --               ; --                        ;
-; music_frequencies:inst|fine_clk_divN:inst3|counter_reg[21]~0  ; LABCELL_X36_Y8_N18  ; 25      ; Sync. clear               ; no     ; --                   ; --               ; --                        ;
-; music_frequencies:inst|fine_clk_divN:inst4|counter_reg[0]~0   ; LABCELL_X36_Y10_N6  ; 25      ; Sync. clear               ; no     ; --                   ; --               ; --                        ;
-; music_frequencies:inst|fine_clk_divN:inst5|counter_reg[3]~0   ; MLABCELL_X42_Y6_N18 ; 25      ; Sync. clear               ; no     ; --                   ; --               ; --                        ;
-; music_frequencies:inst|fine_clk_divN:inst7|counter_reg[4]~0   ; LABCELL_X40_Y5_N6   ; 25      ; Sync. clear               ; no     ; --                   ; --               ; --                        ;
-; music_frequencies:inst|fine_clk_divN:inst8|counter_reg[8]~0   ; LABCELL_X36_Y3_N51  ; 25      ; Sync. clear               ; no     ; --                   ; --               ; --                        ;
-; music_frequencies:inst|fine_clk_divN:inst9|counter_reg[9]~0   ; LABCELL_X41_Y8_N24  ; 25      ; Sync. clear               ; no     ; --                   ; --               ; --                        ;
-; music_frequencies:inst|fine_clk_divN:inst|counter_reg[6]~0    ; LABCELL_X40_Y2_N12  ; 25      ; Sync. clear               ; no     ; --                   ; --               ; --                        ;
-; ps2_clk                                                       ; PIN_D3              ; 2       ; Clock                     ; no     ; --                   ; --               ; --                        ;
-; ps2_clk                                                       ; PIN_D3              ; 23      ; Clock                     ; yes    ; Global Clock         ; GCLK2            ; --                        ;
-; rst                                                           ; PIN_U13             ; 75      ; Async. clear, Sync. clear ; no     ; --                   ; --               ; --                        ;
-+---------------------------------------------------------------+---------------------+---------+---------------------------+--------+----------------------+------------------+---------------------------+
++-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Control Signals                                                                                                                                                                                                               ;
++------------------------------------------------------------------------------------+---------------------+---------+---------------------------+--------+----------------------+------------------+---------------------------+
+; Name                                                                               ; Location            ; Fan-Out ; Usage                     ; Global ; Global Resource Used ; Global Line Name ; Enable Signal Source Name ;
++------------------------------------------------------------------------------------+---------------------+---------+---------------------------+--------+----------------------+------------------+---------------------------+
+; AudioController:inst|music_frequencies:inst|fine_clk_divN:inst10|counter_reg[12]~0 ; LABCELL_X40_Y4_N24  ; 25      ; Sync. clear               ; no     ; --                   ; --               ; --                        ;
+; AudioController:inst|music_frequencies:inst|fine_clk_divN:inst12|counter_reg[4]~0  ; LABCELL_X47_Y4_N21  ; 25      ; Sync. clear               ; no     ; --                   ; --               ; --                        ;
+; AudioController:inst|music_frequencies:inst|fine_clk_divN:inst13|counter_reg[24]~0 ; LABCELL_X41_Y3_N6   ; 25      ; Sync. clear               ; no     ; --                   ; --               ; --                        ;
+; AudioController:inst|music_frequencies:inst|fine_clk_divN:inst14|counter_reg[5]~0  ; LABCELL_X25_Y5_N18  ; 25      ; Sync. clear               ; no     ; --                   ; --               ; --                        ;
+; AudioController:inst|music_frequencies:inst|fine_clk_divN:inst15|counter_reg[17]~0 ; LABCELL_X41_Y6_N18  ; 25      ; Sync. clear               ; no     ; --                   ; --               ; --                        ;
+; AudioController:inst|music_frequencies:inst|fine_clk_divN:inst16|counter_reg[7]~0  ; LABCELL_X31_Y9_N12  ; 25      ; Sync. clear               ; no     ; --                   ; --               ; --                        ;
+; AudioController:inst|music_frequencies:inst|fine_clk_divN:inst17|counter_reg[8]~0  ; LABCELL_X26_Y2_N24  ; 25      ; Sync. clear               ; no     ; --                   ; --               ; --                        ;
+; AudioController:inst|music_frequencies:inst|fine_clk_divN:inst18|counter_reg[17]~0 ; LABCELL_X47_Y4_N12  ; 25      ; Sync. clear               ; no     ; --                   ; --               ; --                        ;
+; AudioController:inst|music_frequencies:inst|fine_clk_divN:inst19|counter_reg[0]~0  ; LABCELL_X31_Y7_N6   ; 25      ; Sync. clear               ; no     ; --                   ; --               ; --                        ;
+; AudioController:inst|music_frequencies:inst|fine_clk_divN:inst1|counter_reg[24]~0  ; LABCELL_X26_Y4_N6   ; 25      ; Sync. clear               ; no     ; --                   ; --               ; --                        ;
+; AudioController:inst|music_frequencies:inst|fine_clk_divN:inst20|counter_reg[17]~0 ; LABCELL_X31_Y3_N18  ; 25      ; Sync. clear               ; no     ; --                   ; --               ; --                        ;
+; AudioController:inst|music_frequencies:inst|fine_clk_divN:inst21|counter_reg[3]~0  ; LABCELL_X25_Y2_N12  ; 25      ; Sync. clear               ; no     ; --                   ; --               ; --                        ;
+; AudioController:inst|music_frequencies:inst|fine_clk_divN:inst22|counter_reg[17]~0 ; LABCELL_X32_Y6_N6   ; 25      ; Sync. clear               ; no     ; --                   ; --               ; --                        ;
+; AudioController:inst|music_frequencies:inst|fine_clk_divN:inst23|counter_reg[8]~0  ; LABCELL_X47_Y6_N6   ; 25      ; Sync. clear               ; no     ; --                   ; --               ; --                        ;
+; AudioController:inst|music_frequencies:inst|fine_clk_divN:inst24|counter_reg[10]~0 ; LABCELL_X24_Y4_N18  ; 25      ; Sync. clear               ; no     ; --                   ; --               ; --                        ;
+; AudioController:inst|music_frequencies:inst|fine_clk_divN:inst25|counter_reg[12]~0 ; MLABCELL_X42_Y3_N48 ; 25      ; Sync. clear               ; no     ; --                   ; --               ; --                        ;
+; AudioController:inst|music_frequencies:inst|fine_clk_divN:inst2|counter_reg[16]~0  ; LABCELL_X36_Y3_N12  ; 25      ; Sync. clear               ; no     ; --                   ; --               ; --                        ;
+; AudioController:inst|music_frequencies:inst|fine_clk_divN:inst3|counter_reg[21]~0  ; LABCELL_X29_Y5_N6   ; 25      ; Sync. clear               ; no     ; --                   ; --               ; --                        ;
+; AudioController:inst|music_frequencies:inst|fine_clk_divN:inst4|counter_reg[0]~0   ; LABCELL_X29_Y3_N24  ; 25      ; Sync. clear               ; no     ; --                   ; --               ; --                        ;
+; AudioController:inst|music_frequencies:inst|fine_clk_divN:inst5|counter_reg[3]~0   ; LABCELL_X26_Y7_N18  ; 25      ; Sync. clear               ; no     ; --                   ; --               ; --                        ;
+; AudioController:inst|music_frequencies:inst|fine_clk_divN:inst7|counter_reg[4]~0   ; LABCELL_X24_Y2_N6   ; 25      ; Sync. clear               ; no     ; --                   ; --               ; --                        ;
+; AudioController:inst|music_frequencies:inst|fine_clk_divN:inst8|counter_reg[8]~0   ; LABCELL_X48_Y2_N6   ; 25      ; Sync. clear               ; no     ; --                   ; --               ; --                        ;
+; AudioController:inst|music_frequencies:inst|fine_clk_divN:inst9|counter_reg[9]~0   ; LABCELL_X31_Y5_N12  ; 25      ; Sync. clear               ; no     ; --                   ; --               ; --                        ;
+; AudioController:inst|music_frequencies:inst|fine_clk_divN:inst|counter_reg[6]~0    ; LABCELL_X24_Y7_N15  ; 25      ; Sync. clear               ; no     ; --                   ; --               ; --                        ;
+; PS2controller:inst2|break_code_detector:inst|Equal1~4                              ; LABCELL_X44_Y3_N54  ; 32      ; Sync. clear               ; no     ; --                   ; --               ; --                        ;
+; PS2controller:inst2|inst5                                                          ; LABCELL_X43_Y4_N21  ; 8       ; Async. clear              ; no     ; --                   ; --               ; --                        ;
+; PS2controller:inst2|ps2_controller:inst1|Equal1~0                                  ; LABCELL_X44_Y4_N57  ; 14      ; Sync. clear               ; no     ; --                   ; --               ; --                        ;
+; PS2controller:inst2|ps2_controller:inst1|bsy                                       ; FF_X44_Y4_N26       ; 8       ; Clock                     ; no     ; --                   ; --               ; --                        ;
+; PS2controller:inst2|ps2_controller:inst1|data_out[4]~0                             ; LABCELL_X44_Y4_N27  ; 14      ; Clock enable              ; no     ; --                   ; --               ; --                        ;
+; clk                                                                                ; PIN_M9              ; 660     ; Clock                     ; yes    ; Global Clock         ; GCLK6            ; --                        ;
+; ps2_clk                                                                            ; PIN_D3              ; 2       ; Clock                     ; no     ; --                   ; --               ; --                        ;
+; ps2_clk                                                                            ; PIN_D3              ; 24      ; Clock                     ; yes    ; Global Clock         ; GCLK3            ; --                        ;
+; rst                                                                                ; PIN_U13             ; 76      ; Async. clear, Sync. clear ; no     ; --                   ; --               ; --                        ;
++------------------------------------------------------------------------------------+---------------------+---------+---------------------------+--------+----------------------+------------------+---------------------------+
 
 
 +----------------------------------------------------------------------------------------------------+
@@ -1186,8 +1190,8 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +---------+----------+---------+----------------------+------------------+---------------------------+
 ; Name    ; Location ; Fan-Out ; Global Resource Used ; Global Line Name ; Enable Signal Source Name ;
 +---------+----------+---------+----------------------+------------------+---------------------------+
-; clk     ; PIN_M9   ; 659     ; Global Clock         ; GCLK6            ; --                        ;
-; ps2_clk ; PIN_D3   ; 23      ; Global Clock         ; GCLK2            ; --                        ;
+; clk     ; PIN_M9   ; 660     ; Global Clock         ; GCLK6            ; --                        ;
+; ps2_clk ; PIN_D3   ; 24      ; Global Clock         ; GCLK3            ; --                        ;
 +---------+----------+---------+----------------------+------------------+---------------------------+
 
 
@@ -1196,22 +1200,22 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +------------------------------+-------------------------+
 ; Routing Resource Type        ; Usage                   ;
 +------------------------------+-------------------------+
-; Block interconnects          ; 694 / 140,056 ( < 1 % ) ;
-; C12 interconnects            ; 23 / 6,048 ( < 1 % )    ;
-; C2 interconnects             ; 289 / 54,648 ( < 1 % )  ;
-; C4 interconnects             ; 151 / 25,920 ( < 1 % )  ;
+; Block interconnects          ; 661 / 140,056 ( < 1 % ) ;
+; C12 interconnects            ; 10 / 6,048 ( < 1 % )    ;
+; C2 interconnects             ; 277 / 54,648 ( < 1 % )  ;
+; C4 interconnects             ; 118 / 25,920 ( < 1 % )  ;
 ; DQS bus muxes                ; 0 / 17 ( 0 % )          ;
 ; DQS-18 I/O buses             ; 0 / 17 ( 0 % )          ;
 ; DQS-9 I/O buses              ; 0 / 17 ( 0 % )          ;
-; Direct links                 ; 60 / 140,056 ( < 1 % )  ;
+; Direct links                 ; 69 / 140,056 ( < 1 % )  ;
 ; Global clocks                ; 2 / 16 ( 13 % )         ;
-; Local interconnects          ; 725 / 36,960 ( 2 % )    ;
+; Local interconnects          ; 719 / 36,960 ( 2 % )    ;
 ; Quadrant clocks              ; 0 / 88 ( 0 % )          ;
-; R14 interconnects            ; 107 / 5,984 ( 2 % )     ;
-; R14/C12 interconnect drivers ; 120 / 9,504 ( 1 % )     ;
-; R3 interconnects             ; 409 / 60,192 ( < 1 % )  ;
-; R6 interconnects             ; 380 / 127,072 ( < 1 % ) ;
-; Spine clocks                 ; 2 / 120 ( 2 % )         ;
+; R14 interconnects            ; 67 / 5,984 ( 1 % )      ;
+; R14/C12 interconnect drivers ; 75 / 9,504 ( < 1 % )    ;
+; R3 interconnects             ; 345 / 60,192 ( < 1 % )  ;
+; R6 interconnects             ; 326 / 127,072 ( < 1 % ) ;
+; Spine clocks                 ; 3 / 120 ( 3 % )         ;
 ; Wire stub REs                ; 0 / 7,344 ( 0 % )       ;
 +------------------------------+-------------------------+
 
@@ -1275,9 +1279,9 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; Total Unchecked    ; 0         ; 0            ; 0         ; 0            ; 0            ; 0         ; 0         ; 0            ; 0         ; 0         ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ;
 ; Total Inapplicable ; 0         ; 21           ; 0         ; 21           ; 21           ; 0         ; 0         ; 21           ; 0         ; 0         ; 21           ; 4            ; 21           ; 21           ; 21           ; 21           ; 4            ; 21           ; 21           ; 21           ; 21           ; 4            ; 21           ; 21           ; 21           ; 21           ; 21           ; 21           ;
 ; Total Fail         ; 0         ; 0            ; 0         ; 0            ; 0            ; 0         ; 0         ; 0            ; 0         ; 0         ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ;
+; sharp_led          ; Pass      ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ;
+; octave_led         ; Pass      ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ;
 ; buzzer_out         ; Pass      ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ;
-; led0               ; Pass      ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ;
-; led1               ; Pass      ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ;
 ; disp0[0]           ; Pass      ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ;
 ; disp0[1]           ; Pass      ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ;
 ; disp0[2]           ; Pass      ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ;
@@ -1292,9 +1296,9 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; disp1[4]           ; Pass      ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ;
 ; disp1[5]           ; Pass      ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ;
 ; disp1[6]           ; Pass      ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ;
+; ps2_clk            ; Pass      ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ;
 ; clk                ; Pass      ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ;
 ; rst                ; Pass      ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ;
-; ps2_clk            ; Pass      ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ;
 ; ps2_data           ; Pass      ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ;
 +--------------------+-----------+--------------+-----------+--------------+--------------+-----------+-----------+--------------+-----------+-----------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+
 
@@ -1347,122 +1351,122 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +------------------------------------------------------+----------------------+-------------------+
 ; Source Clock(s)                                      ; Destination Clock(s) ; Delay Added in ns ;
 +------------------------------------------------------+----------------------+-------------------+
-; PS2controller:inst2|ps2_controller:inst1|bsy         ; clk                  ; 132.9             ;
-; PS2controller:inst2|ps2_controller:inst1|bsy         ; ps2_clk              ; 74.2              ;
-; ps2_clk                                              ; ps2_clk              ; 19.2              ;
-; clk                                                  ; clk                  ; 5.7               ;
-; ps2_clk,PS2controller:inst2|ps2_controller:inst1|bsy ; clk                  ; 5.6               ;
+; PS2controller:inst2|ps2_controller:inst1|bsy         ; clk                  ; 141.6             ;
+; PS2controller:inst2|ps2_controller:inst1|bsy         ; ps2_clk              ; 76.0              ;
+; ps2_clk                                              ; ps2_clk              ; 18.0              ;
+; clk                                                  ; clk                  ; 6.7               ;
+; ps2_clk,PS2controller:inst2|ps2_controller:inst1|bsy ; clk                  ; 6.0               ;
 +------------------------------------------------------+----------------------+-------------------+
 Note: For more information on problematic transfers, consider running the Fitter again with the Optimize hold timing option (Settings Menu) turned off.
 This will disable optimization of problematic paths and expose them for further analysis using the Timing Analyzer.
 
 
-+--------------------------------------------------------------------------------------------------------------------------------------------+
-; Estimated Delay Added for Hold Timing Details                                                                                              ;
-+-------------------------------------------------------------+----------------------------------------------------------+-------------------+
-; Source Register                                             ; Destination Register                                     ; Delay Added in ns ;
-+-------------------------------------------------------------+----------------------------------------------------------+-------------------+
-; PS2controller:inst2|bsy_reader:inst2|data_out[0]            ; shift_detector:inst7|temp                                ; 9.658             ;
-; PS2controller:inst2|bsy_reader:inst2|data_out[1]            ; shift_detector:inst7|temp                                ; 9.646             ;
-; PS2controller:inst2|bsy_reader:inst2|data_out[4]            ; shift_detector:inst7|temp                                ; 9.630             ;
-; PS2controller:inst2|bsy_reader:inst2|data_out[3]            ; shift_detector:inst7|temp                                ; 9.593             ;
-; PS2controller:inst2|bsy_reader:inst2|data_out[2]            ; shift_detector:inst7|temp                                ; 9.579             ;
-; PS2controller:inst2|bsy_reader:inst2|data_out[6]            ; shift_detector:inst7|temp                                ; 9.502             ;
-; PS2controller:inst2|bsy_reader:inst2|data_out[5]            ; shift_detector:inst7|temp                                ; 8.598             ;
-; PS2controller:inst2|bsy_reader:inst2|data_out[7]            ; shift_detector:inst7|temp                                ; 8.418             ;
-; PS2controller:inst2|ps2_controller:inst1|count_reg[1]       ; PS2controller:inst2|ps2_controller:inst1|bsy             ; 1.471             ;
-; PS2controller:inst2|ps2_controller:inst1|count_reg[2]       ; PS2controller:inst2|ps2_controller:inst1|bsy             ; 1.469             ;
-; shift_detector:inst7|temp                                   ; key_detector:inst1|q[2]                                  ; 1.468             ;
-; PS2controller:inst2|ps2_controller:inst1|count_reg[0]       ; PS2controller:inst2|ps2_controller:inst1|bsy             ; 1.447             ;
-; PS2controller:inst2|ps2_controller:inst1|count_reg[3]       ; PS2controller:inst2|ps2_controller:inst1|bsy             ; 1.407             ;
-; PS2controller:inst2|ps2_controller:inst1|data_out[7]        ; PS2controller:inst2|ps2_controller:inst1|data_out[6]     ; 0.716             ;
-; PS2controller:inst2|ps2_controller:inst1|data_out[3]        ; PS2controller:inst2|ps2_controller:inst1|data_out[2]     ; 0.716             ;
-; PS2controller:inst2|ps2_controller:inst1|data_out[5]        ; PS2controller:inst2|ps2_controller:inst1|data_out[4]     ; 0.709             ;
-; PS2controller:inst2|ps2_controller:inst1|data_out[1]        ; PS2controller:inst2|ps2_controller:inst1|data_out[0]     ; 0.709             ;
-; PS2controller:inst2|ps2_controller:inst1|data_out[6]        ; PS2controller:inst2|ps2_controller:inst1|data_out[5]     ; 0.695             ;
-; PS2controller:inst2|ps2_controller:inst1|data_out[4]        ; PS2controller:inst2|ps2_controller:inst1|data_out[3]     ; 0.695             ;
-; PS2controller:inst2|ps2_controller:inst1|data_out[2]        ; PS2controller:inst2|ps2_controller:inst1|data_out[1]     ; 0.511             ;
-; PS2controller:inst2|break_code_detector:inst|temp           ; PS2controller:inst2|break_code_detector:inst|counter[23] ; 0.465             ;
-; music_frequencies:inst|fine_clk_divN:inst4|counter_reg[7]   ; music_frequencies:inst|fine_clk_divN:inst4|clk_out       ; 0.282             ;
-; music_frequencies:inst|fine_clk_divN:inst4|counter_reg[6]   ; music_frequencies:inst|fine_clk_divN:inst4|clk_out       ; 0.282             ;
-; music_frequencies:inst|fine_clk_divN:inst4|counter_reg[5]   ; music_frequencies:inst|fine_clk_divN:inst4|clk_out       ; 0.282             ;
-; music_frequencies:inst|fine_clk_divN:inst4|counter_reg[4]   ; music_frequencies:inst|fine_clk_divN:inst4|clk_out       ; 0.282             ;
-; music_frequencies:inst|fine_clk_divN:inst4|counter_reg[3]   ; music_frequencies:inst|fine_clk_divN:inst4|clk_out       ; 0.282             ;
-; music_frequencies:inst|fine_clk_divN:inst4|counter_reg[2]   ; music_frequencies:inst|fine_clk_divN:inst4|clk_out       ; 0.282             ;
-; music_frequencies:inst|fine_clk_divN:inst19|counter_reg[17] ; music_frequencies:inst|fine_clk_divN:inst19|clk_out      ; 0.280             ;
-; music_frequencies:inst|fine_clk_divN:inst19|counter_reg[5]  ; music_frequencies:inst|fine_clk_divN:inst19|clk_out      ; 0.280             ;
-; music_frequencies:inst|fine_clk_divN:inst19|counter_reg[4]  ; music_frequencies:inst|fine_clk_divN:inst19|clk_out      ; 0.280             ;
-; music_frequencies:inst|fine_clk_divN:inst19|counter_reg[3]  ; music_frequencies:inst|fine_clk_divN:inst19|clk_out      ; 0.280             ;
-; music_frequencies:inst|fine_clk_divN:inst19|counter_reg[2]  ; music_frequencies:inst|fine_clk_divN:inst19|clk_out      ; 0.280             ;
-; music_frequencies:inst|fine_clk_divN:inst19|counter_reg[1]  ; music_frequencies:inst|fine_clk_divN:inst19|clk_out      ; 0.280             ;
-; music_frequencies:inst|fine_clk_divN:inst1|counter_reg[9]   ; music_frequencies:inst|fine_clk_divN:inst1|clk_out       ; 0.272             ;
-; music_frequencies:inst|fine_clk_divN:inst1|counter_reg[6]   ; music_frequencies:inst|fine_clk_divN:inst1|clk_out       ; 0.272             ;
-; music_frequencies:inst|fine_clk_divN:inst1|counter_reg[5]   ; music_frequencies:inst|fine_clk_divN:inst1|clk_out       ; 0.272             ;
-; music_frequencies:inst|fine_clk_divN:inst1|counter_reg[4]   ; music_frequencies:inst|fine_clk_divN:inst1|clk_out       ; 0.272             ;
-; music_frequencies:inst|fine_clk_divN:inst1|counter_reg[2]   ; music_frequencies:inst|fine_clk_divN:inst1|clk_out       ; 0.272             ;
-; music_frequencies:inst|fine_clk_divN:inst1|counter_reg[1]   ; music_frequencies:inst|fine_clk_divN:inst1|clk_out       ; 0.272             ;
-; music_frequencies:inst|fine_clk_divN:inst21|counter_reg[10] ; music_frequencies:inst|fine_clk_divN:inst21|clk_out      ; 0.260             ;
-; music_frequencies:inst|fine_clk_divN:inst21|counter_reg[9]  ; music_frequencies:inst|fine_clk_divN:inst21|clk_out      ; 0.260             ;
-; music_frequencies:inst|fine_clk_divN:inst21|counter_reg[8]  ; music_frequencies:inst|fine_clk_divN:inst21|clk_out      ; 0.260             ;
-; music_frequencies:inst|fine_clk_divN:inst21|counter_reg[7]  ; music_frequencies:inst|fine_clk_divN:inst21|clk_out      ; 0.260             ;
-; music_frequencies:inst|fine_clk_divN:inst21|counter_reg[6]  ; music_frequencies:inst|fine_clk_divN:inst21|clk_out      ; 0.260             ;
-; music_frequencies:inst|fine_clk_divN:inst21|counter_reg[5]  ; music_frequencies:inst|fine_clk_divN:inst21|clk_out      ; 0.260             ;
-; music_frequencies:inst|fine_clk_divN:inst16|counter_reg[17] ; music_frequencies:inst|fine_clk_divN:inst16|clk_out      ; 0.255             ;
-; music_frequencies:inst|fine_clk_divN:inst16|counter_reg[16] ; music_frequencies:inst|fine_clk_divN:inst16|clk_out      ; 0.255             ;
-; music_frequencies:inst|fine_clk_divN:inst16|counter_reg[15] ; music_frequencies:inst|fine_clk_divN:inst16|clk_out      ; 0.255             ;
-; music_frequencies:inst|fine_clk_divN:inst16|counter_reg[14] ; music_frequencies:inst|fine_clk_divN:inst16|clk_out      ; 0.255             ;
-; music_frequencies:inst|fine_clk_divN:inst16|counter_reg[13] ; music_frequencies:inst|fine_clk_divN:inst16|clk_out      ; 0.255             ;
-; music_frequencies:inst|fine_clk_divN:inst16|counter_reg[8]  ; music_frequencies:inst|fine_clk_divN:inst16|clk_out      ; 0.255             ;
-; PS2controller:inst2|break_code_detector:inst|counter[23]    ; PS2controller:inst2|break_code_detector:inst|temp        ; 0.254             ;
-; PS2controller:inst2|break_code_detector:inst|counter[22]    ; PS2controller:inst2|break_code_detector:inst|temp        ; 0.254             ;
-; PS2controller:inst2|break_code_detector:inst|counter[21]    ; PS2controller:inst2|break_code_detector:inst|temp        ; 0.254             ;
-; PS2controller:inst2|break_code_detector:inst|counter[20]    ; PS2controller:inst2|break_code_detector:inst|temp        ; 0.254             ;
-; PS2controller:inst2|break_code_detector:inst|counter[19]    ; PS2controller:inst2|break_code_detector:inst|temp        ; 0.254             ;
-; PS2controller:inst2|break_code_detector:inst|counter[18]    ; PS2controller:inst2|break_code_detector:inst|temp        ; 0.254             ;
-; PS2controller:inst2|break_code_detector:inst|counter[17]    ; PS2controller:inst2|break_code_detector:inst|temp        ; 0.254             ;
-; PS2controller:inst2|break_code_detector:inst|counter[16]    ; PS2controller:inst2|break_code_detector:inst|temp        ; 0.254             ;
-; PS2controller:inst2|break_code_detector:inst|counter[15]    ; PS2controller:inst2|break_code_detector:inst|temp        ; 0.254             ;
-; PS2controller:inst2|break_code_detector:inst|counter[14]    ; PS2controller:inst2|break_code_detector:inst|temp        ; 0.254             ;
-; PS2controller:inst2|break_code_detector:inst|counter[13]    ; PS2controller:inst2|break_code_detector:inst|temp        ; 0.254             ;
-; PS2controller:inst2|break_code_detector:inst|counter[12]    ; PS2controller:inst2|break_code_detector:inst|temp        ; 0.254             ;
-; PS2controller:inst2|break_code_detector:inst|counter[11]    ; PS2controller:inst2|break_code_detector:inst|temp        ; 0.254             ;
-; PS2controller:inst2|break_code_detector:inst|counter[10]    ; PS2controller:inst2|break_code_detector:inst|temp        ; 0.254             ;
-; PS2controller:inst2|break_code_detector:inst|counter[9]     ; PS2controller:inst2|break_code_detector:inst|temp        ; 0.254             ;
-; PS2controller:inst2|break_code_detector:inst|counter[8]     ; PS2controller:inst2|break_code_detector:inst|temp        ; 0.254             ;
-; PS2controller:inst2|break_code_detector:inst|counter[24]    ; PS2controller:inst2|break_code_detector:inst|temp        ; 0.254             ;
-; PS2controller:inst2|break_code_detector:inst|counter[7]     ; PS2controller:inst2|break_code_detector:inst|temp        ; 0.254             ;
-; PS2controller:inst2|break_code_detector:inst|counter[6]     ; PS2controller:inst2|break_code_detector:inst|temp        ; 0.254             ;
-; PS2controller:inst2|break_code_detector:inst|counter[5]     ; PS2controller:inst2|break_code_detector:inst|temp        ; 0.254             ;
-; PS2controller:inst2|break_code_detector:inst|counter[4]     ; PS2controller:inst2|break_code_detector:inst|temp        ; 0.254             ;
-; PS2controller:inst2|break_code_detector:inst|counter[3]     ; PS2controller:inst2|break_code_detector:inst|temp        ; 0.254             ;
-; PS2controller:inst2|break_code_detector:inst|counter[1]     ; PS2controller:inst2|break_code_detector:inst|temp        ; 0.254             ;
-; PS2controller:inst2|break_code_detector:inst|counter[2]     ; PS2controller:inst2|break_code_detector:inst|temp        ; 0.254             ;
-; PS2controller:inst2|break_code_detector:inst|counter[0]     ; PS2controller:inst2|break_code_detector:inst|temp        ; 0.254             ;
-; music_frequencies:inst|fine_clk_divN:inst19|counter_reg[12] ; music_frequencies:inst|fine_clk_divN:inst19|clk_out      ; 0.250             ;
-; music_frequencies:inst|fine_clk_divN:inst19|counter_reg[11] ; music_frequencies:inst|fine_clk_divN:inst19|clk_out      ; 0.250             ;
-; music_frequencies:inst|fine_clk_divN:inst19|counter_reg[10] ; music_frequencies:inst|fine_clk_divN:inst19|clk_out      ; 0.250             ;
-; music_frequencies:inst|fine_clk_divN:inst19|counter_reg[9]  ; music_frequencies:inst|fine_clk_divN:inst19|clk_out      ; 0.250             ;
-; music_frequencies:inst|fine_clk_divN:inst19|counter_reg[8]  ; music_frequencies:inst|fine_clk_divN:inst19|clk_out      ; 0.250             ;
-; music_frequencies:inst|fine_clk_divN:inst19|counter_reg[6]  ; music_frequencies:inst|fine_clk_divN:inst19|clk_out      ; 0.250             ;
-; music_frequencies:inst|fine_clk_divN:inst8|counter_reg[22]  ; music_frequencies:inst|fine_clk_divN:inst8|clk_out       ; 0.249             ;
-; music_frequencies:inst|fine_clk_divN:inst8|counter_reg[15]  ; music_frequencies:inst|fine_clk_divN:inst8|clk_out       ; 0.249             ;
-; music_frequencies:inst|fine_clk_divN:inst8|counter_reg[13]  ; music_frequencies:inst|fine_clk_divN:inst8|clk_out       ; 0.249             ;
-; music_frequencies:inst|fine_clk_divN:inst8|counter_reg[12]  ; music_frequencies:inst|fine_clk_divN:inst8|clk_out       ; 0.249             ;
-; music_frequencies:inst|fine_clk_divN:inst8|counter_reg[11]  ; music_frequencies:inst|fine_clk_divN:inst8|clk_out       ; 0.249             ;
-; music_frequencies:inst|fine_clk_divN:inst8|counter_reg[10]  ; music_frequencies:inst|fine_clk_divN:inst8|clk_out       ; 0.249             ;
-; music_frequencies:inst|fine_clk_divN:inst25|counter_reg[24] ; music_frequencies:inst|fine_clk_divN:inst25|clk_out      ; 0.239             ;
-; music_frequencies:inst|fine_clk_divN:inst25|counter_reg[17] ; music_frequencies:inst|fine_clk_divN:inst25|clk_out      ; 0.239             ;
-; music_frequencies:inst|fine_clk_divN:inst25|counter_reg[16] ; music_frequencies:inst|fine_clk_divN:inst25|clk_out      ; 0.239             ;
-; music_frequencies:inst|fine_clk_divN:inst25|counter_reg[15] ; music_frequencies:inst|fine_clk_divN:inst25|clk_out      ; 0.239             ;
-; music_frequencies:inst|fine_clk_divN:inst25|counter_reg[14] ; music_frequencies:inst|fine_clk_divN:inst25|clk_out      ; 0.239             ;
-; music_frequencies:inst|fine_clk_divN:inst25|counter_reg[13] ; music_frequencies:inst|fine_clk_divN:inst25|clk_out      ; 0.239             ;
-; music_frequencies:inst|fine_clk_divN:inst3|counter_reg[9]   ; music_frequencies:inst|fine_clk_divN:inst3|clk_out       ; 0.237             ;
-; music_frequencies:inst|fine_clk_divN:inst3|counter_reg[8]   ; music_frequencies:inst|fine_clk_divN:inst3|clk_out       ; 0.237             ;
-; music_frequencies:inst|fine_clk_divN:inst3|counter_reg[7]   ; music_frequencies:inst|fine_clk_divN:inst3|clk_out       ; 0.237             ;
-; music_frequencies:inst|fine_clk_divN:inst3|counter_reg[6]   ; music_frequencies:inst|fine_clk_divN:inst3|clk_out       ; 0.237             ;
-; music_frequencies:inst|fine_clk_divN:inst3|counter_reg[5]   ; music_frequencies:inst|fine_clk_divN:inst3|clk_out       ; 0.237             ;
-; music_frequencies:inst|fine_clk_divN:inst3|counter_reg[3]   ; music_frequencies:inst|fine_clk_divN:inst3|clk_out       ; 0.237             ;
-+-------------------------------------------------------------+----------------------------------------------------------+-------------------+
++---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Estimated Delay Added for Hold Timing Details                                                                                                                                   ;
++----------------------------------------------------------------------------------+--------------------------------------------------------------------------+-------------------+
+; Source Register                                                                  ; Destination Register                                                     ; Delay Added in ns ;
++----------------------------------------------------------------------------------+--------------------------------------------------------------------------+-------------------+
+; PS2controller:inst2|bsy_detector:inst2|data_out[0]                               ; AudioController:inst|special_key_detector:inst7|enter_flag               ; 9.736             ;
+; PS2controller:inst2|bsy_detector:inst2|data_out[1]                               ; AudioController:inst|special_key_detector:inst7|enter_flag               ; 9.728             ;
+; PS2controller:inst2|bsy_detector:inst2|data_out[4]                               ; AudioController:inst|special_key_detector:inst7|rshift_flag              ; 9.573             ;
+; PS2controller:inst2|bsy_detector:inst2|data_out[3]                               ; AudioController:inst|special_key_detector:inst7|rshift_flag              ; 9.571             ;
+; PS2controller:inst2|bsy_detector:inst2|data_out[2]                               ; AudioController:inst|special_key_detector:inst7|rshift_flag              ; 9.475             ;
+; PS2controller:inst2|bsy_detector:inst2|data_out[6]                               ; AudioController:inst|special_key_detector:inst7|rshift_flag              ; 9.464             ;
+; PS2controller:inst2|bsy_detector:inst2|data_out[5]                               ; AudioController:inst|special_key_detector:inst7|rshift_flag              ; 9.398             ;
+; PS2controller:inst2|bsy_detector:inst2|data_out[7]                               ; AudioController:inst|special_key_detector:inst7|rshift_flag              ; 9.217             ;
+; PS2controller:inst2|ps2_controller:inst1|count_reg[1]                            ; PS2controller:inst2|ps2_controller:inst1|bsy                             ; 1.350             ;
+; PS2controller:inst2|ps2_controller:inst1|count_reg[2]                            ; PS2controller:inst2|ps2_controller:inst1|bsy                             ; 1.345             ;
+; AudioController:inst|special_key_detector:inst7|enter_flag                       ; AudioController:inst|key_detector:inst1|q[1]                             ; 1.338             ;
+; PS2controller:inst2|ps2_controller:inst1|count_reg[0]                            ; PS2controller:inst2|ps2_controller:inst1|bsy                             ; 1.321             ;
+; PS2controller:inst2|ps2_controller:inst1|count_reg[3]                            ; PS2controller:inst2|ps2_controller:inst1|bsy                             ; 1.281             ;
+; PS2controller:inst2|ps2_controller:inst1|data_out[7]                             ; PS2controller:inst2|ps2_controller:inst1|data_out[6]                     ; 0.678             ;
+; PS2controller:inst2|ps2_controller:inst1|data_out[4]                             ; PS2controller:inst2|ps2_controller:inst1|data_out[3]                     ; 0.678             ;
+; PS2controller:inst2|ps2_controller:inst1|data_out[2]                             ; PS2controller:inst2|ps2_controller:inst1|data_out[1]                     ; 0.678             ;
+; PS2controller:inst2|ps2_controller:inst1|data_out[5]                             ; PS2controller:inst2|ps2_controller:inst1|data_out[4]                     ; 0.666             ;
+; PS2controller:inst2|ps2_controller:inst1|data_out[3]                             ; PS2controller:inst2|ps2_controller:inst1|data_out[2]                     ; 0.665             ;
+; PS2controller:inst2|ps2_controller:inst1|data_out[1]                             ; PS2controller:inst2|ps2_controller:inst1|data_out[0]                     ; 0.665             ;
+; PS2controller:inst2|ps2_controller:inst1|data_out[6]                             ; PS2controller:inst2|ps2_controller:inst1|data_out[5]                     ; 0.664             ;
+; PS2controller:inst2|break_code_detector:inst|released                            ; PS2controller:inst2|break_code_detector:inst|counter[23]                 ; 0.492             ;
+; AudioController:inst|music_frequencies:inst|fine_clk_divN:inst9|counter_reg[17]  ; AudioController:inst|music_frequencies:inst|fine_clk_divN:inst9|clk_out  ; 0.325             ;
+; AudioController:inst|music_frequencies:inst|fine_clk_divN:inst9|counter_reg[16]  ; AudioController:inst|music_frequencies:inst|fine_clk_divN:inst9|clk_out  ; 0.325             ;
+; AudioController:inst|music_frequencies:inst|fine_clk_divN:inst9|counter_reg[15]  ; AudioController:inst|music_frequencies:inst|fine_clk_divN:inst9|clk_out  ; 0.325             ;
+; AudioController:inst|music_frequencies:inst|fine_clk_divN:inst9|counter_reg[14]  ; AudioController:inst|music_frequencies:inst|fine_clk_divN:inst9|clk_out  ; 0.325             ;
+; AudioController:inst|music_frequencies:inst|fine_clk_divN:inst9|counter_reg[12]  ; AudioController:inst|music_frequencies:inst|fine_clk_divN:inst9|clk_out  ; 0.325             ;
+; AudioController:inst|music_frequencies:inst|fine_clk_divN:inst9|counter_reg[11]  ; AudioController:inst|music_frequencies:inst|fine_clk_divN:inst9|clk_out  ; 0.325             ;
+; AudioController:inst|music_frequencies:inst|fine_clk_divN:inst9|counter_reg[23]  ; AudioController:inst|music_frequencies:inst|fine_clk_divN:inst9|clk_out  ; 0.308             ;
+; AudioController:inst|music_frequencies:inst|fine_clk_divN:inst9|counter_reg[22]  ; AudioController:inst|music_frequencies:inst|fine_clk_divN:inst9|clk_out  ; 0.308             ;
+; AudioController:inst|music_frequencies:inst|fine_clk_divN:inst9|counter_reg[21]  ; AudioController:inst|music_frequencies:inst|fine_clk_divN:inst9|clk_out  ; 0.308             ;
+; AudioController:inst|music_frequencies:inst|fine_clk_divN:inst9|counter_reg[20]  ; AudioController:inst|music_frequencies:inst|fine_clk_divN:inst9|clk_out  ; 0.308             ;
+; AudioController:inst|music_frequencies:inst|fine_clk_divN:inst9|counter_reg[24]  ; AudioController:inst|music_frequencies:inst|fine_clk_divN:inst9|clk_out  ; 0.308             ;
+; AudioController:inst|music_frequencies:inst|fine_clk_divN:inst9|counter_reg[13]  ; AudioController:inst|music_frequencies:inst|fine_clk_divN:inst9|clk_out  ; 0.308             ;
+; AudioController:inst|music_frequencies:inst|fine_clk_divN:inst|counter_reg[18]   ; AudioController:inst|music_frequencies:inst|fine_clk_divN:inst|clk_out   ; 0.303             ;
+; AudioController:inst|music_frequencies:inst|fine_clk_divN:inst|counter_reg[4]    ; AudioController:inst|music_frequencies:inst|fine_clk_divN:inst|clk_out   ; 0.303             ;
+; AudioController:inst|music_frequencies:inst|fine_clk_divN:inst|counter_reg[3]    ; AudioController:inst|music_frequencies:inst|fine_clk_divN:inst|clk_out   ; 0.303             ;
+; AudioController:inst|music_frequencies:inst|fine_clk_divN:inst|counter_reg[2]    ; AudioController:inst|music_frequencies:inst|fine_clk_divN:inst|clk_out   ; 0.303             ;
+; AudioController:inst|music_frequencies:inst|fine_clk_divN:inst|counter_reg[1]    ; AudioController:inst|music_frequencies:inst|fine_clk_divN:inst|clk_out   ; 0.303             ;
+; AudioController:inst|music_frequencies:inst|fine_clk_divN:inst|counter_reg[0]    ; AudioController:inst|music_frequencies:inst|fine_clk_divN:inst|clk_out   ; 0.303             ;
+; AudioController:inst|music_frequencies:inst|fine_clk_divN:inst2|counter_reg[17]  ; AudioController:inst|music_frequencies:inst|fine_clk_divN:inst2|clk_out  ; 0.301             ;
+; AudioController:inst|music_frequencies:inst|fine_clk_divN:inst2|counter_reg[6]   ; AudioController:inst|music_frequencies:inst|fine_clk_divN:inst2|clk_out  ; 0.301             ;
+; AudioController:inst|music_frequencies:inst|fine_clk_divN:inst2|counter_reg[5]   ; AudioController:inst|music_frequencies:inst|fine_clk_divN:inst2|clk_out  ; 0.301             ;
+; AudioController:inst|music_frequencies:inst|fine_clk_divN:inst2|counter_reg[4]   ; AudioController:inst|music_frequencies:inst|fine_clk_divN:inst2|clk_out  ; 0.301             ;
+; AudioController:inst|music_frequencies:inst|fine_clk_divN:inst2|counter_reg[3]   ; AudioController:inst|music_frequencies:inst|fine_clk_divN:inst2|clk_out  ; 0.301             ;
+; AudioController:inst|music_frequencies:inst|fine_clk_divN:inst2|counter_reg[2]   ; AudioController:inst|music_frequencies:inst|fine_clk_divN:inst2|clk_out  ; 0.301             ;
+; AudioController:inst|music_frequencies:inst|fine_clk_divN:inst19|counter_reg[17] ; AudioController:inst|music_frequencies:inst|fine_clk_divN:inst19|clk_out ; 0.294             ;
+; AudioController:inst|music_frequencies:inst|fine_clk_divN:inst19|counter_reg[5]  ; AudioController:inst|music_frequencies:inst|fine_clk_divN:inst19|clk_out ; 0.294             ;
+; AudioController:inst|music_frequencies:inst|fine_clk_divN:inst19|counter_reg[4]  ; AudioController:inst|music_frequencies:inst|fine_clk_divN:inst19|clk_out ; 0.294             ;
+; AudioController:inst|music_frequencies:inst|fine_clk_divN:inst19|counter_reg[3]  ; AudioController:inst|music_frequencies:inst|fine_clk_divN:inst19|clk_out ; 0.294             ;
+; AudioController:inst|music_frequencies:inst|fine_clk_divN:inst19|counter_reg[2]  ; AudioController:inst|music_frequencies:inst|fine_clk_divN:inst19|clk_out ; 0.294             ;
+; AudioController:inst|music_frequencies:inst|fine_clk_divN:inst19|counter_reg[1]  ; AudioController:inst|music_frequencies:inst|fine_clk_divN:inst19|clk_out ; 0.294             ;
+; AudioController:inst|music_frequencies:inst|fine_clk_divN:inst19|counter_reg[12] ; AudioController:inst|music_frequencies:inst|fine_clk_divN:inst19|clk_out ; 0.290             ;
+; AudioController:inst|music_frequencies:inst|fine_clk_divN:inst19|counter_reg[11] ; AudioController:inst|music_frequencies:inst|fine_clk_divN:inst19|clk_out ; 0.290             ;
+; AudioController:inst|music_frequencies:inst|fine_clk_divN:inst19|counter_reg[10] ; AudioController:inst|music_frequencies:inst|fine_clk_divN:inst19|clk_out ; 0.290             ;
+; AudioController:inst|music_frequencies:inst|fine_clk_divN:inst19|counter_reg[9]  ; AudioController:inst|music_frequencies:inst|fine_clk_divN:inst19|clk_out ; 0.290             ;
+; AudioController:inst|music_frequencies:inst|fine_clk_divN:inst19|counter_reg[8]  ; AudioController:inst|music_frequencies:inst|fine_clk_divN:inst19|clk_out ; 0.290             ;
+; AudioController:inst|music_frequencies:inst|fine_clk_divN:inst19|counter_reg[6]  ; AudioController:inst|music_frequencies:inst|fine_clk_divN:inst19|clk_out ; 0.290             ;
+; AudioController:inst|music_frequencies:inst|fine_clk_divN:inst14|counter_reg[11] ; AudioController:inst|music_frequencies:inst|fine_clk_divN:inst14|clk_out ; 0.287             ;
+; AudioController:inst|music_frequencies:inst|fine_clk_divN:inst14|counter_reg[4]  ; AudioController:inst|music_frequencies:inst|fine_clk_divN:inst14|clk_out ; 0.287             ;
+; AudioController:inst|music_frequencies:inst|fine_clk_divN:inst14|counter_reg[3]  ; AudioController:inst|music_frequencies:inst|fine_clk_divN:inst14|clk_out ; 0.287             ;
+; AudioController:inst|music_frequencies:inst|fine_clk_divN:inst14|counter_reg[2]  ; AudioController:inst|music_frequencies:inst|fine_clk_divN:inst14|clk_out ; 0.287             ;
+; AudioController:inst|music_frequencies:inst|fine_clk_divN:inst14|counter_reg[1]  ; AudioController:inst|music_frequencies:inst|fine_clk_divN:inst14|clk_out ; 0.287             ;
+; AudioController:inst|music_frequencies:inst|fine_clk_divN:inst14|counter_reg[0]  ; AudioController:inst|music_frequencies:inst|fine_clk_divN:inst14|clk_out ; 0.287             ;
+; AudioController:inst|music_frequencies:inst|fine_clk_divN:inst16|counter_reg[17] ; AudioController:inst|music_frequencies:inst|fine_clk_divN:inst16|clk_out ; 0.279             ;
+; AudioController:inst|music_frequencies:inst|fine_clk_divN:inst16|counter_reg[16] ; AudioController:inst|music_frequencies:inst|fine_clk_divN:inst16|clk_out ; 0.279             ;
+; AudioController:inst|music_frequencies:inst|fine_clk_divN:inst16|counter_reg[15] ; AudioController:inst|music_frequencies:inst|fine_clk_divN:inst16|clk_out ; 0.279             ;
+; AudioController:inst|music_frequencies:inst|fine_clk_divN:inst16|counter_reg[14] ; AudioController:inst|music_frequencies:inst|fine_clk_divN:inst16|clk_out ; 0.279             ;
+; AudioController:inst|music_frequencies:inst|fine_clk_divN:inst16|counter_reg[13] ; AudioController:inst|music_frequencies:inst|fine_clk_divN:inst16|clk_out ; 0.279             ;
+; AudioController:inst|music_frequencies:inst|fine_clk_divN:inst16|counter_reg[8]  ; AudioController:inst|music_frequencies:inst|fine_clk_divN:inst16|clk_out ; 0.279             ;
+; AudioController:inst|music_frequencies:inst|fine_clk_divN:inst3|counter_reg[9]   ; AudioController:inst|music_frequencies:inst|fine_clk_divN:inst3|clk_out  ; 0.278             ;
+; AudioController:inst|music_frequencies:inst|fine_clk_divN:inst3|counter_reg[8]   ; AudioController:inst|music_frequencies:inst|fine_clk_divN:inst3|clk_out  ; 0.278             ;
+; AudioController:inst|music_frequencies:inst|fine_clk_divN:inst3|counter_reg[7]   ; AudioController:inst|music_frequencies:inst|fine_clk_divN:inst3|clk_out  ; 0.278             ;
+; AudioController:inst|music_frequencies:inst|fine_clk_divN:inst3|counter_reg[6]   ; AudioController:inst|music_frequencies:inst|fine_clk_divN:inst3|clk_out  ; 0.278             ;
+; AudioController:inst|music_frequencies:inst|fine_clk_divN:inst3|counter_reg[5]   ; AudioController:inst|music_frequencies:inst|fine_clk_divN:inst3|clk_out  ; 0.278             ;
+; AudioController:inst|music_frequencies:inst|fine_clk_divN:inst3|counter_reg[3]   ; AudioController:inst|music_frequencies:inst|fine_clk_divN:inst3|clk_out  ; 0.278             ;
+; AudioController:inst|music_frequencies:inst|fine_clk_divN:inst24|counter_reg[17] ; AudioController:inst|music_frequencies:inst|fine_clk_divN:inst24|clk_out ; 0.254             ;
+; AudioController:inst|music_frequencies:inst|fine_clk_divN:inst24|counter_reg[16] ; AudioController:inst|music_frequencies:inst|fine_clk_divN:inst24|clk_out ; 0.254             ;
+; AudioController:inst|music_frequencies:inst|fine_clk_divN:inst24|counter_reg[15] ; AudioController:inst|music_frequencies:inst|fine_clk_divN:inst24|clk_out ; 0.254             ;
+; AudioController:inst|music_frequencies:inst|fine_clk_divN:inst24|counter_reg[14] ; AudioController:inst|music_frequencies:inst|fine_clk_divN:inst24|clk_out ; 0.254             ;
+; AudioController:inst|music_frequencies:inst|fine_clk_divN:inst24|counter_reg[13] ; AudioController:inst|music_frequencies:inst|fine_clk_divN:inst24|clk_out ; 0.254             ;
+; AudioController:inst|music_frequencies:inst|fine_clk_divN:inst24|counter_reg[12] ; AudioController:inst|music_frequencies:inst|fine_clk_divN:inst24|clk_out ; 0.254             ;
+; AudioController:inst|music_frequencies:inst|fine_clk_divN:inst23|counter_reg[8]  ; AudioController:inst|music_frequencies:inst|fine_clk_divN:inst23|clk_out ; 0.254             ;
+; AudioController:inst|music_frequencies:inst|fine_clk_divN:inst23|counter_reg[7]  ; AudioController:inst|music_frequencies:inst|fine_clk_divN:inst23|clk_out ; 0.254             ;
+; AudioController:inst|music_frequencies:inst|fine_clk_divN:inst23|counter_reg[6]  ; AudioController:inst|music_frequencies:inst|fine_clk_divN:inst23|clk_out ; 0.254             ;
+; AudioController:inst|music_frequencies:inst|fine_clk_divN:inst23|counter_reg[4]  ; AudioController:inst|music_frequencies:inst|fine_clk_divN:inst23|clk_out ; 0.254             ;
+; AudioController:inst|music_frequencies:inst|fine_clk_divN:inst23|counter_reg[3]  ; AudioController:inst|music_frequencies:inst|fine_clk_divN:inst23|clk_out ; 0.254             ;
+; AudioController:inst|music_frequencies:inst|fine_clk_divN:inst23|counter_reg[2]  ; AudioController:inst|music_frequencies:inst|fine_clk_divN:inst23|clk_out ; 0.254             ;
+; AudioController:inst|music_frequencies:inst|fine_clk_divN:inst15|counter_reg[21] ; AudioController:inst|music_frequencies:inst|fine_clk_divN:inst15|clk_out ; 0.248             ;
+; AudioController:inst|music_frequencies:inst|fine_clk_divN:inst15|counter_reg[5]  ; AudioController:inst|music_frequencies:inst|fine_clk_divN:inst15|clk_out ; 0.248             ;
+; AudioController:inst|music_frequencies:inst|fine_clk_divN:inst15|counter_reg[4]  ; AudioController:inst|music_frequencies:inst|fine_clk_divN:inst15|clk_out ; 0.248             ;
+; AudioController:inst|music_frequencies:inst|fine_clk_divN:inst15|counter_reg[3]  ; AudioController:inst|music_frequencies:inst|fine_clk_divN:inst15|clk_out ; 0.248             ;
+; AudioController:inst|music_frequencies:inst|fine_clk_divN:inst15|counter_reg[2]  ; AudioController:inst|music_frequencies:inst|fine_clk_divN:inst15|clk_out ; 0.248             ;
+; AudioController:inst|music_frequencies:inst|fine_clk_divN:inst15|counter_reg[1]  ; AudioController:inst|music_frequencies:inst|fine_clk_divN:inst15|clk_out ; 0.248             ;
+; AudioController:inst|music_frequencies:inst|fine_clk_divN:inst5|counter_reg[11]  ; AudioController:inst|music_frequencies:inst|fine_clk_divN:inst5|clk_out  ; 0.246             ;
+; AudioController:inst|music_frequencies:inst|fine_clk_divN:inst5|counter_reg[10]  ; AudioController:inst|music_frequencies:inst|fine_clk_divN:inst5|clk_out  ; 0.246             ;
+; AudioController:inst|music_frequencies:inst|fine_clk_divN:inst5|counter_reg[8]   ; AudioController:inst|music_frequencies:inst|fine_clk_divN:inst5|clk_out  ; 0.246             ;
+; AudioController:inst|music_frequencies:inst|fine_clk_divN:inst5|counter_reg[7]   ; AudioController:inst|music_frequencies:inst|fine_clk_divN:inst5|clk_out  ; 0.246             ;
+; AudioController:inst|music_frequencies:inst|fine_clk_divN:inst5|counter_reg[6]   ; AudioController:inst|music_frequencies:inst|fine_clk_divN:inst5|clk_out  ; 0.246             ;
+; AudioController:inst|music_frequencies:inst|fine_clk_divN:inst5|counter_reg[5]   ; AudioController:inst|music_frequencies:inst|fine_clk_divN:inst5|clk_out  ; 0.246             ;
+; AudioController:inst|music_frequencies:inst|fine_clk_divN:inst2|counter_reg[1]   ; AudioController:inst|music_frequencies:inst|fine_clk_divN:inst2|clk_out  ; 0.239             ;
++----------------------------------------------------------------------------------+--------------------------------------------------------------------------+-------------------+
 Note: This table only shows the top 100 path(s) that have the largest delay added for hold.
 
 
@@ -1494,20 +1498,21 @@ Info (332123): Deriving Clock Uncertainty. Please refer to report_sdc in the Tim
 Info (332130): Timing requirements not specified -- quality metrics such as performance may be sacrificed to reduce compilation time.
 Info (176235): Finished register packing
     Extra Info (176219): No registers were packed into other blocks
-Info (11798): Fitter preparation operations ending: elapsed time is 00:00:02
+Info (11798): Fitter preparation operations ending: elapsed time is 00:00:03
 Info (170189): Fitter placement preparation operations beginning
 Info (14951): The Fitter is using Advanced Physical Optimization.
-Info (170190): Fitter placement preparation operations ending: elapsed time is 00:00:11
+Info (170190): Fitter placement preparation operations ending: elapsed time is 00:00:13
 Info (170191): Fitter placement operations beginning
 Info (170137): Fitter placement was successful
 Info (170192): Fitter placement operations ending: elapsed time is 00:00:01
 Info (170193): Fitter routing operations beginning
 Info (170195): Router estimated average interconnect usage is 0% of the available device resources
-    Info (170196): Router estimated peak interconnect usage is 6% of the available device resources in the region that extends from location X33_Y0 to location X43_Y10
+    Info (170196): Router estimated peak interconnect usage is 4% of the available device resources in the region that extends from location X33_Y0 to location X43_Y10
+Info (188005): Design requires adding a large amount of routing delay for some signals to meet hold time requirements, and there is an excessive demand for the available routing resources. The Fitter is reducing the routing delays of some signals to help the routing algorithm converge, but doing so may cause hold time failures. For more information, refer to the "Estimated Delay Added for Hold Timing" section in the Fitter report.
 Info (170199): The Fitter performed an Auto Fit compilation.  Optimizations were skipped to reduce compilation time.
     Info (170201): Optimizations that may affect the design's routability were skipped
-Info (170194): Fitter routing operations ending: elapsed time is 00:00:05
-Info (11888): Total time spent on timing analysis during the Fitter is 0.93 seconds.
+Info (170194): Fitter routing operations ending: elapsed time is 00:00:07
+Info (11888): Total time spent on timing analysis during the Fitter is 1.02 seconds.
 Info (334003): Started post-fitting delay annotation
 Info (334004): Delay annotation completed successfully
 Info (334003): Started post-fitting delay annotation
@@ -1515,10 +1520,10 @@ Info (334004): Delay annotation completed successfully
 Info (11801): Fitter post-fit operations ending: elapsed time is 00:00:02
 Info (144001): Generated suppressed messages file C:/Users/minec/Desktop/Work/GitHub Repos/PROJ300/Firmware/Audio Controller/output_files/audio_controller.fit.smsg
 Info: Quartus Prime Fitter was successful. 0 errors, 6 warnings
-    Info: Peak virtual memory: 7573 megabytes
-    Info: Processing ended: Fri Feb 09 12:42:18 2024
-    Info: Elapsed time: 00:00:37
-    Info: Total CPU time (on all processors): 00:01:14
+    Info: Peak virtual memory: 7576 megabytes
+    Info: Processing ended: Fri Feb 09 21:57:16 2024
+    Info: Elapsed time: 00:00:51
+    Info: Total CPU time (on all processors): 00:01:22
 
 
 +----------------------------+

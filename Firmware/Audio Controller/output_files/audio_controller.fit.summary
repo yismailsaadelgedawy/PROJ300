@@ -1,12 +1,12 @@
-Fitter Status : Successful - Fri Feb 09 12:42:17 2024
+Fitter Status : Successful - Fri Feb 09 21:57:15 2024
 Quartus Prime Version : 20.1.1 Build 720 11/11/2020 SJ Lite Edition
 Revision Name : audio_controller
-Top-level Entity Name : AudioController
+Top-level Entity Name : TopLevel
 Family : Cyclone V
 Device : 5CEBA4F23C7
 Timing Models : Final
 Logic utilization (in ALMs) : 505 / 18,480 ( 3 % )
-Total registers : 691
+Total registers : 693
 Total pins : 21 / 224 ( 9 % )
 Total virtual pins : 0
 Total block memory bits : 0 / 3,153,920 ( 0 % )

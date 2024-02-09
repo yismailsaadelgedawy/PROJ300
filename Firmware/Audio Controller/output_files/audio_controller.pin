@@ -97,8 +97,8 @@ NC                           : A19       :        :                   :         
 NC                           : A20       :        :                   :         :           :                
 GND                          : A21       : gnd    :                   :         :           :                
 NC                           : A22       :        :                   :         :           :                
-led1                         : AA1       : output : 2.5 V             :         : 2A        : Y              
-led0                         : AA2       : output : 2.5 V             :         : 2A        : Y              
+octave_led                   : AA1       : output : 2.5 V             :         : 2A        : Y              
+sharp_led                    : AA2       : output : 2.5 V             :         : 2A        : Y              
 GND                          : AA3       : gnd    :                   :         :           :                
 GND                          : AA4       : gnd    :                   :         :           :                
 AS_DATA2, DATA2              : AA5       :        :                   :         : 3A        :                

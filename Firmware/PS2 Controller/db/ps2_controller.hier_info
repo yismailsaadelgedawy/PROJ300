@@ -60,14 +60,14 @@ data[7] => Decoder1.IN0
 
 
 |TopLevel|PS2controller:inst8
-data_out[0] <= bsy_reader:inst2.data_out[0]
-data_out[1] <= bsy_reader:inst2.data_out[1]
-data_out[2] <= bsy_reader:inst2.data_out[2]
-data_out[3] <= bsy_reader:inst2.data_out[3]
-data_out[4] <= bsy_reader:inst2.data_out[4]
-data_out[5] <= bsy_reader:inst2.data_out[5]
-data_out[6] <= bsy_reader:inst2.data_out[6]
-data_out[7] <= bsy_reader:inst2.data_out[7]
+data_out[0] <= bsy_detector:inst2.data_out[0]
+data_out[1] <= bsy_detector:inst2.data_out[1]
+data_out[2] <= bsy_detector:inst2.data_out[2]
+data_out[3] <= bsy_detector:inst2.data_out[3]
+data_out[4] <= bsy_detector:inst2.data_out[4]
+data_out[5] <= bsy_detector:inst2.data_out[5]
+data_out[6] <= bsy_detector:inst2.data_out[6]
+data_out[7] <= bsy_detector:inst2.data_out[7]
 PS2_DAT => ps2_controller:inst1.data_in
 PS2_CLK => ps2_controller:inst1.clk
 sw0 => ps2_controller:inst1.rst
@@ -75,7 +75,7 @@ sw0 => inst5.IN1
 clk_50 => break_code_detector:inst.clk
 
 
-|TopLevel|PS2controller:inst8|bsy_reader:inst2
+|TopLevel|PS2controller:inst8|bsy_detector:inst2
 data_out[0] <= data_out[0]~reg0.DB_MAX_OUTPUT_PORT_TYPE
 data_out[1] <= data_out[1]~reg0.DB_MAX_OUTPUT_PORT_TYPE
 data_out[2] <= data_out[2]~reg0.DB_MAX_OUTPUT_PORT_TYPE
@@ -150,7 +150,7 @@ rst => count_reg[3].ACLR
 
 
 |TopLevel|PS2controller:inst8|break_code_detector:inst
-q <= temp.DB_MAX_OUTPUT_PORT_TYPE
+release_flag <= released.DB_MAX_OUTPUT_PORT_TYPE
 data[0] => Equal0.IN7
 data[1] => Equal0.IN6
 data[2] => Equal0.IN5
@@ -184,6 +184,6 @@ clk => counter[21].CLK
 clk => counter[22].CLK
 clk => counter[23].CLK
 clk => counter[24].CLK
-clk => temp.CLK
+clk => released.CLK
 
 

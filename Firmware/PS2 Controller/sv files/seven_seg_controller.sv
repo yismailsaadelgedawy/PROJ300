@@ -2,8 +2,6 @@ module seven_seg_controller (output logic [0:6] disp0, disp1, input logic [7:0] 
 
 // this is just for two displays for now
 
-
-
 logic [3:0] disp0_reg;
 logic [3:0] disp1_reg;
 int i;
@@ -11,8 +9,8 @@ int i;
 
 always_comb begin
 
-    disp0_reg = data[3:0];
-    disp1_reg = data[7:4];
+   disp0_reg = data[3:0];
+   disp1_reg = data[7:4];
 
 
 end
@@ -231,12 +229,6 @@ always_comb begin
    endcase
     
 end
-
-
-
-
-
-
 
 
 

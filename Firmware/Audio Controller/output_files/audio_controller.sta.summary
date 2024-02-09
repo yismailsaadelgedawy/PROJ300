@@ -2,180 +2,180 @@
 Timing Analyzer Summary
 ------------------------------------------------------------
 
-Type  : Slow 1100mV 85C Model Setup 'ps2_clk'
-Slack : -8.423
-TNS   : -68.251
-
 Type  : Slow 1100mV 85C Model Setup 'PS2controller:inst2|ps2_controller:inst1|bsy'
-Slack : -8.005
-TNS   : -61.630
+Slack : -7.962
+TNS   : -62.358
 
 Type  : Slow 1100mV 85C Model Setup 'clk'
-Slack : -7.133
-TNS   : -1832.264
+Slack : -6.490
+TNS   : -1824.305
+
+Type  : Slow 1100mV 85C Model Setup 'ps2_clk'
+Slack : -3.938
+TNS   : -57.359
 
 Type  : Slow 1100mV 85C Model Hold 'ps2_clk'
-Slack : 0.214
-TNS   : 0.000
+Slack : -5.854
+TNS   : -11.623
 
 Type  : Slow 1100mV 85C Model Hold 'clk'
-Slack : 0.437
-TNS   : 0.000
+Slack : -2.333
+TNS   : -11.240
 
 Type  : Slow 1100mV 85C Model Hold 'PS2controller:inst2|ps2_controller:inst1|bsy'
-Slack : 4.581
+Slack : 4.798
 TNS   : 0.000
 
 Type  : Slow 1100mV 85C Model Recovery 'PS2controller:inst2|ps2_controller:inst1|bsy'
-Slack : -3.698
-TNS   : -28.614
+Slack : -3.280
+TNS   : -26.224
 
 Type  : Slow 1100mV 85C Model Removal 'PS2controller:inst2|ps2_controller:inst1|bsy'
-Slack : 2.786
+Slack : 2.847
 TNS   : 0.000
 
 Type  : Slow 1100mV 85C Model Minimum Pulse Width 'clk'
 Slack : -0.538
-TNS   : -506.747
+TNS   : -507.551
 
 Type  : Slow 1100mV 85C Model Minimum Pulse Width 'ps2_clk'
 Slack : -0.538
-TNS   : -18.910
+TNS   : -19.647
 
 Type  : Slow 1100mV 85C Model Minimum Pulse Width 'PS2controller:inst2|ps2_controller:inst1|bsy'
 Slack : -0.538
-TNS   : -6.289
-
-Type  : Slow 1100mV 0C Model Setup 'ps2_clk'
-Slack : -7.991
-TNS   : -64.165
+TNS   : -6.372
 
 Type  : Slow 1100mV 0C Model Setup 'PS2controller:inst2|ps2_controller:inst1|bsy'
-Slack : -7.912
-TNS   : -60.892
+Slack : -7.864
+TNS   : -61.615
 
 Type  : Slow 1100mV 0C Model Setup 'clk'
-Slack : -6.868
-TNS   : -1828.497
+Slack : -6.195
+TNS   : -1821.486
 
-Type  : Slow 1100mV 0C Model Hold 'clk'
-Slack : 0.277
-TNS   : 0.000
+Type  : Slow 1100mV 0C Model Setup 'ps2_clk'
+Slack : -3.878
+TNS   : -53.348
 
 Type  : Slow 1100mV 0C Model Hold 'ps2_clk'
-Slack : 0.304
-TNS   : 0.000
+Slack : -5.784
+TNS   : -11.469
+
+Type  : Slow 1100mV 0C Model Hold 'clk'
+Slack : -2.491
+TNS   : -12.040
 
 Type  : Slow 1100mV 0C Model Hold 'PS2controller:inst2|ps2_controller:inst1|bsy'
-Slack : 4.595
+Slack : 4.812
 TNS   : 0.000
 
 Type  : Slow 1100mV 0C Model Recovery 'PS2controller:inst2|ps2_controller:inst1|bsy'
-Slack : -3.746
-TNS   : -29.094
+Slack : -3.369
+TNS   : -26.932
 
 Type  : Slow 1100mV 0C Model Removal 'PS2controller:inst2|ps2_controller:inst1|bsy'
-Slack : 2.911
+Slack : 2.964
 TNS   : 0.000
 
 Type  : Slow 1100mV 0C Model Minimum Pulse Width 'clk'
 Slack : -0.538
-TNS   : -525.255
+TNS   : -524.283
 
 Type  : Slow 1100mV 0C Model Minimum Pulse Width 'ps2_clk'
 Slack : -0.538
-TNS   : -19.011
+TNS   : -19.676
 
 Type  : Slow 1100mV 0C Model Minimum Pulse Width 'PS2controller:inst2|ps2_controller:inst1|bsy'
 Slack : -0.538
-TNS   : -6.232
-
-Type  : Fast 1100mV 85C Model Setup 'ps2_clk'
-Slack : -5.097
-TNS   : -24.545
+TNS   : -6.336
 
 Type  : Fast 1100mV 85C Model Setup 'PS2controller:inst2|ps2_controller:inst1|bsy'
-Slack : -4.238
-TNS   : -32.539
+Slack : -4.205
+TNS   : -32.796
 
 Type  : Fast 1100mV 85C Model Setup 'clk'
-Slack : -3.658
-TNS   : -563.365
+Slack : -3.318
+TNS   : -558.648
 
-Type  : Fast 1100mV 85C Model Hold 'clk'
-Slack : -0.091
-TNS   : -0.257
+Type  : Fast 1100mV 85C Model Setup 'ps2_clk'
+Slack : -1.777
+TNS   : -17.171
 
 Type  : Fast 1100mV 85C Model Hold 'ps2_clk'
-Slack : 0.140
-TNS   : 0.000
+Slack : -3.241
+TNS   : -6.435
+
+Type  : Fast 1100mV 85C Model Hold 'clk'
+Slack : -1.518
+TNS   : -7.385
 
 Type  : Fast 1100mV 85C Model Hold 'PS2controller:inst2|ps2_controller:inst1|bsy'
-Slack : 2.884
+Slack : 3.016
 TNS   : 0.000
 
 Type  : Fast 1100mV 85C Model Recovery 'PS2controller:inst2|ps2_controller:inst1|bsy'
-Slack : -1.644
-TNS   : -12.489
+Slack : -1.354
+TNS   : -10.828
 
 Type  : Fast 1100mV 85C Model Removal 'PS2controller:inst2|ps2_controller:inst1|bsy'
-Slack : 1.422
+Slack : 1.460
 TNS   : 0.000
 
 Type  : Fast 1100mV 85C Model Minimum Pulse Width 'ps2_clk'
-Slack : -0.503
-TNS   : -4.151
+Slack : -0.505
+TNS   : -4.325
 
 Type  : Fast 1100mV 85C Model Minimum Pulse Width 'clk'
-Slack : -0.096
-TNS   : -58.897
+Slack : -0.097
+TNS   : -60.079
 
 Type  : Fast 1100mV 85C Model Minimum Pulse Width 'PS2controller:inst2|ps2_controller:inst1|bsy'
-Slack : 0.070
+Slack : 0.116
 TNS   : 0.000
 
 Type  : Fast 1100mV 0C Model Setup 'PS2controller:inst2|ps2_controller:inst1|bsy'
-Slack : -4.156
-TNS   : -32.071
-
-Type  : Fast 1100mV 0C Model Setup 'ps2_clk'
-Slack : -4.122
-TNS   : -19.606
+Slack : -4.133
+TNS   : -32.342
 
 Type  : Fast 1100mV 0C Model Setup 'clk'
-Slack : -3.464
-TNS   : -460.318
+Slack : -3.158
+TNS   : -458.838
 
-Type  : Fast 1100mV 0C Model Hold 'clk'
-Slack : -0.257
-TNS   : -1.164
+Type  : Fast 1100mV 0C Model Setup 'ps2_clk'
+Slack : -1.412
+TNS   : -13.046
 
 Type  : Fast 1100mV 0C Model Hold 'ps2_clk'
-Slack : 0.146
-TNS   : 0.000
+Slack : -3.235
+TNS   : -6.437
+
+Type  : Fast 1100mV 0C Model Hold 'clk'
+Slack : -1.550
+TNS   : -7.539
 
 Type  : Fast 1100mV 0C Model Hold 'PS2controller:inst2|ps2_controller:inst1|bsy'
-Slack : 2.870
+Slack : 2.993
 TNS   : 0.000
 
 Type  : Fast 1100mV 0C Model Recovery 'PS2controller:inst2|ps2_controller:inst1|bsy'
-Slack : -1.558
-TNS   : -11.895
+Slack : -1.309
+TNS   : -10.468
 
 Type  : Fast 1100mV 0C Model Removal 'PS2controller:inst2|ps2_controller:inst1|bsy'
-Slack : 1.397
+Slack : 1.430
 TNS   : 0.000
 
 Type  : Fast 1100mV 0C Model Minimum Pulse Width 'ps2_clk'
-Slack : -0.526
-TNS   : -4.372
+Slack : -0.525
+TNS   : -4.521
 
 Type  : Fast 1100mV 0C Model Minimum Pulse Width 'clk'
 Slack : -0.096
-TNS   : -60.726
+TNS   : -61.385
 
 Type  : Fast 1100mV 0C Model Minimum Pulse Width 'PS2controller:inst2|ps2_controller:inst1|bsy'
-Slack : 0.093
+Slack : 0.125
 TNS   : 0.000
 
 ------------------------------------------------------------

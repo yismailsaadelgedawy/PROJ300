@@ -1,5 +1,5 @@
 Flow report for audio_controller
-Fri Feb 09 12:42:26 2024
+Fri Feb 09 21:57:23 2024
 Quartus Prime Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
 
 
@@ -41,15 +41,15 @@ https://fpgasoftware.intel.com/eula.
 +-------------------------------------------------------------------------------+
 ; Flow Summary                                                                  ;
 +---------------------------------+---------------------------------------------+
-; Flow Status                     ; Successful - Fri Feb 09 12:42:21 2024       ;
+; Flow Status                     ; Successful - Fri Feb 09 21:57:19 2024       ;
 ; Quartus Prime Version           ; 20.1.1 Build 720 11/11/2020 SJ Lite Edition ;
 ; Revision Name                   ; audio_controller                            ;
-; Top-level Entity Name           ; AudioController                             ;
+; Top-level Entity Name           ; TopLevel                                    ;
 ; Family                          ; Cyclone V                                   ;
 ; Device                          ; 5CEBA4F23C7                                 ;
 ; Timing Models                   ; Final                                       ;
 ; Logic utilization (in ALMs)     ; 505 / 18,480 ( 3 % )                        ;
-; Total registers                 ; 691                                         ;
+; Total registers                 ; 693                                         ;
 ; Total pins                      ; 21 / 224 ( 9 % )                            ;
 ; Total virtual pins              ; 0                                           ;
 ; Total block memory bits         ; 0 / 3,153,920 ( 0 % )                       ;
@@ -68,28 +68,28 @@ https://fpgasoftware.intel.com/eula.
 +-------------------+---------------------+
 ; Option            ; Setting             ;
 +-------------------+---------------------+
-; Start date & time ; 02/09/2024 12:41:35 ;
+; Start date & time ; 02/09/2024 21:56:19 ;
 ; Main task         ; Compilation         ;
 ; Revision Name     ; audio_controller    ;
 +-------------------+---------------------+
 
 
-+--------------------------------------------------------------------------------------------------------------------------------+
-; Flow Non-Default Global Settings                                                                                               ;
-+-------------------------------------+----------------------------------------+------------------+-----------------+------------+
-; Assignment Name                     ; Value                                  ; Default Value    ; Entity Name     ; Section Id ;
-+-------------------------------------+----------------------------------------+------------------+-----------------+------------+
-; COMPILER_SIGNATURE_ID               ; 127913727136950.170748249509368        ; --               ; --              ; --         ;
-; MAX_CORE_JUNCTION_TEMP              ; 85                                     ; --               ; --              ; --         ;
-; MIN_CORE_JUNCTION_TEMP              ; 0                                      ; --               ; --              ; --         ;
-; PARTITION_COLOR                     ; -- (Not supported for targeted family) ; --               ; AudioController ; Top        ;
-; PARTITION_FITTER_PRESERVATION_LEVEL ; -- (Not supported for targeted family) ; --               ; AudioController ; Top        ;
-; PARTITION_NETLIST_TYPE              ; -- (Not supported for targeted family) ; --               ; AudioController ; Top        ;
-; POWER_BOARD_THERMAL_MODEL           ; None (CONSERVATIVE)                    ; --               ; --              ; --         ;
-; POWER_PRESET_COOLING_SOLUTION       ; 23 MM HEAT SINK WITH 200 LFPM AIRFLOW  ; --               ; --              ; --         ;
-; PROJECT_OUTPUT_DIRECTORY            ; output_files                           ; --               ; --              ; --         ;
-; TOP_LEVEL_ENTITY                    ; AudioController                        ; audio_controller ; --              ; --         ;
-+-------------------------------------+----------------------------------------+------------------+-----------------+------------+
++----------------------------------------------------------------------------------------------------------------------------+
+; Flow Non-Default Global Settings                                                                                           ;
++-------------------------------------+----------------------------------------+------------------+-------------+------------+
+; Assignment Name                     ; Value                                  ; Default Value    ; Entity Name ; Section Id ;
++-------------------------------------+----------------------------------------+------------------+-------------+------------+
+; COMPILER_SIGNATURE_ID               ; 127913727136950.170751577913612        ; --               ; --          ; --         ;
+; MAX_CORE_JUNCTION_TEMP              ; 85                                     ; --               ; --          ; --         ;
+; MIN_CORE_JUNCTION_TEMP              ; 0                                      ; --               ; --          ; --         ;
+; PARTITION_COLOR                     ; -- (Not supported for targeted family) ; --               ; TopLevel    ; Top        ;
+; PARTITION_FITTER_PRESERVATION_LEVEL ; -- (Not supported for targeted family) ; --               ; TopLevel    ; Top        ;
+; PARTITION_NETLIST_TYPE              ; -- (Not supported for targeted family) ; --               ; TopLevel    ; Top        ;
+; POWER_BOARD_THERMAL_MODEL           ; None (CONSERVATIVE)                    ; --               ; --          ; --         ;
+; POWER_PRESET_COOLING_SOLUTION       ; 23 MM HEAT SINK WITH 200 LFPM AIRFLOW  ; --               ; --          ; --         ;
+; PROJECT_OUTPUT_DIRECTORY            ; output_files                           ; --               ; --          ; --         ;
+; TOP_LEVEL_ENTITY                    ; TopLevel                               ; audio_controller ; --          ; --         ;
++-------------------------------------+----------------------------------------+------------------+-------------+------------+
 
 
 +--------------------------------------------------------------------------------------------------------------------------+
@@ -97,11 +97,11 @@ https://fpgasoftware.intel.com/eula.
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
 ; Module Name          ; Elapsed Time ; Average Processors Used ; Peak Virtual Memory ; Total CPU Time (on all processors) ;
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
-; Analysis & Synthesis ; 00:00:06     ; 1.0                     ; 4905 MB             ; 00:00:07                           ;
-; Fitter               ; 00:00:36     ; 1.1                     ; 7573 MB             ; 00:01:14                           ;
-; Assembler            ; 00:00:02     ; 1.0                     ; 4828 MB             ; 00:00:03                           ;
-; Timing Analyzer      ; 00:00:04     ; 1.9                     ; 5236 MB             ; 00:00:05                           ;
-; Total                ; 00:00:48     ; --                      ; --                  ; 00:01:29                           ;
+; Analysis & Synthesis ; 00:00:05     ; 1.0                     ; 4906 MB             ; 00:00:07                           ;
+; Fitter               ; 00:00:50     ; 1.1                     ; 7576 MB             ; 00:01:22                           ;
+; Assembler            ; 00:00:03     ; 1.0                     ; 4829 MB             ; 00:00:03                           ;
+; Timing Analyzer      ; 00:00:03     ; 1.9                     ; 5237 MB             ; 00:00:04                           ;
+; Total                ; 00:01:01     ; --                      ; --                  ; 00:01:36                           ;
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
 
 

@@ -1,5 +1,5 @@
 Analysis & Synthesis report for audio_controller
-Fri Feb 09 12:41:40 2024
+Fri Feb 09 21:56:25 2024
 Quartus Prime Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
 
 
@@ -16,31 +16,31 @@ Quartus Prime Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
   8. General Register Statistics
   9. Inverted Register Statistics
  10. Multiplexer Restructuring Statistics (Restructuring Performed)
- 11. Parameter Settings for User Entity Instance: muxN:inst4
- 12. Parameter Settings for User Entity Instance: music_frequencies:inst|fine_clk_divN:inst
- 13. Parameter Settings for User Entity Instance: music_frequencies:inst|fine_clk_divN:inst1
- 14. Parameter Settings for User Entity Instance: music_frequencies:inst|fine_clk_divN:inst2
- 15. Parameter Settings for User Entity Instance: music_frequencies:inst|fine_clk_divN:inst3
- 16. Parameter Settings for User Entity Instance: music_frequencies:inst|fine_clk_divN:inst15
- 17. Parameter Settings for User Entity Instance: music_frequencies:inst|fine_clk_divN:inst4
- 18. Parameter Settings for User Entity Instance: music_frequencies:inst|fine_clk_divN:inst5
- 19. Parameter Settings for User Entity Instance: music_frequencies:inst|fine_clk_divN:inst7
- 20. Parameter Settings for User Entity Instance: music_frequencies:inst|fine_clk_divN:inst16
- 21. Parameter Settings for User Entity Instance: music_frequencies:inst|fine_clk_divN:inst8
- 22. Parameter Settings for User Entity Instance: music_frequencies:inst|fine_clk_divN:inst9
- 23. Parameter Settings for User Entity Instance: music_frequencies:inst|fine_clk_divN:inst10
- 24. Parameter Settings for User Entity Instance: music_frequencies:inst|fine_clk_divN:inst14
- 25. Parameter Settings for User Entity Instance: music_frequencies:inst|fine_clk_divN:inst12
- 26. Parameter Settings for User Entity Instance: music_frequencies:inst|fine_clk_divN:inst13
- 27. Parameter Settings for User Entity Instance: music_frequencies:inst|fine_clk_divN:inst17
- 28. Parameter Settings for User Entity Instance: music_frequencies:inst|fine_clk_divN:inst18
- 29. Parameter Settings for User Entity Instance: music_frequencies:inst|fine_clk_divN:inst19
- 30. Parameter Settings for User Entity Instance: music_frequencies:inst|fine_clk_divN:inst20
- 31. Parameter Settings for User Entity Instance: music_frequencies:inst|fine_clk_divN:inst21
- 32. Parameter Settings for User Entity Instance: music_frequencies:inst|fine_clk_divN:inst22
- 33. Parameter Settings for User Entity Instance: music_frequencies:inst|fine_clk_divN:inst23
- 34. Parameter Settings for User Entity Instance: music_frequencies:inst|fine_clk_divN:inst24
- 35. Parameter Settings for User Entity Instance: music_frequencies:inst|fine_clk_divN:inst25
+ 11. Parameter Settings for User Entity Instance: AudioController:inst|muxN:inst4
+ 12. Parameter Settings for User Entity Instance: AudioController:inst|music_frequencies:inst|fine_clk_divN:inst
+ 13. Parameter Settings for User Entity Instance: AudioController:inst|music_frequencies:inst|fine_clk_divN:inst1
+ 14. Parameter Settings for User Entity Instance: AudioController:inst|music_frequencies:inst|fine_clk_divN:inst2
+ 15. Parameter Settings for User Entity Instance: AudioController:inst|music_frequencies:inst|fine_clk_divN:inst3
+ 16. Parameter Settings for User Entity Instance: AudioController:inst|music_frequencies:inst|fine_clk_divN:inst15
+ 17. Parameter Settings for User Entity Instance: AudioController:inst|music_frequencies:inst|fine_clk_divN:inst4
+ 18. Parameter Settings for User Entity Instance: AudioController:inst|music_frequencies:inst|fine_clk_divN:inst5
+ 19. Parameter Settings for User Entity Instance: AudioController:inst|music_frequencies:inst|fine_clk_divN:inst7
+ 20. Parameter Settings for User Entity Instance: AudioController:inst|music_frequencies:inst|fine_clk_divN:inst16
+ 21. Parameter Settings for User Entity Instance: AudioController:inst|music_frequencies:inst|fine_clk_divN:inst8
+ 22. Parameter Settings for User Entity Instance: AudioController:inst|music_frequencies:inst|fine_clk_divN:inst9
+ 23. Parameter Settings for User Entity Instance: AudioController:inst|music_frequencies:inst|fine_clk_divN:inst10
+ 24. Parameter Settings for User Entity Instance: AudioController:inst|music_frequencies:inst|fine_clk_divN:inst14
+ 25. Parameter Settings for User Entity Instance: AudioController:inst|music_frequencies:inst|fine_clk_divN:inst12
+ 26. Parameter Settings for User Entity Instance: AudioController:inst|music_frequencies:inst|fine_clk_divN:inst13
+ 27. Parameter Settings for User Entity Instance: AudioController:inst|music_frequencies:inst|fine_clk_divN:inst17
+ 28. Parameter Settings for User Entity Instance: AudioController:inst|music_frequencies:inst|fine_clk_divN:inst18
+ 29. Parameter Settings for User Entity Instance: AudioController:inst|music_frequencies:inst|fine_clk_divN:inst19
+ 30. Parameter Settings for User Entity Instance: AudioController:inst|music_frequencies:inst|fine_clk_divN:inst20
+ 31. Parameter Settings for User Entity Instance: AudioController:inst|music_frequencies:inst|fine_clk_divN:inst21
+ 32. Parameter Settings for User Entity Instance: AudioController:inst|music_frequencies:inst|fine_clk_divN:inst22
+ 33. Parameter Settings for User Entity Instance: AudioController:inst|music_frequencies:inst|fine_clk_divN:inst23
+ 34. Parameter Settings for User Entity Instance: AudioController:inst|music_frequencies:inst|fine_clk_divN:inst24
+ 35. Parameter Settings for User Entity Instance: AudioController:inst|music_frequencies:inst|fine_clk_divN:inst25
  36. Post-Synthesis Netlist Statistics for Top Partition
  37. Elapsed Time Per Partition
  38. Analysis & Synthesis Messages
@@ -70,10 +70,10 @@ https://fpgasoftware.intel.com/eula.
 +-------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                  ;
 +---------------------------------+---------------------------------------------+
-; Analysis & Synthesis Status     ; Successful - Fri Feb 09 12:41:40 2024       ;
+; Analysis & Synthesis Status     ; Successful - Fri Feb 09 21:56:25 2024       ;
 ; Quartus Prime Version           ; 20.1.1 Build 720 11/11/2020 SJ Lite Edition ;
 ; Revision Name                   ; audio_controller                            ;
-; Top-level Entity Name           ; AudioController                             ;
+; Top-level Entity Name           ; TopLevel                                    ;
 ; Family                          ; Cyclone V                                   ;
 ; Logic utilization (in ALMs)     ; N/A                                         ;
 ; Total registers                 ; 677                                         ;
@@ -96,7 +96,7 @@ https://fpgasoftware.intel.com/eula.
 ; Option                                                                          ; Setting            ; Default Value      ;
 +---------------------------------------------------------------------------------+--------------------+--------------------+
 ; Device                                                                          ; 5CEBA4F23C7        ;                    ;
-; Top-level entity name                                                           ; AudioController    ; audio_controller   ;
+; Top-level entity name                                                           ; TopLevel           ; audio_controller   ;
 ; Family name                                                                     ; Cyclone V          ; Cyclone V          ;
 ; Use smart compilation                                                           ; Off                ; Off                ;
 ; Enable parallel Assembler and Timing Analyzer during compilation                ; On                 ; On                 ;
@@ -206,18 +206,19 @@ https://fpgasoftware.intel.com/eula.
 +--------------------------------------------+-----------------+------------------------------------+-----------------------------------------------------------------------------------------------------------------------+---------+
 ; File Name with User-Entered Path           ; Used in Netlist ; File Type                          ; File Name with Absolute Path                                                                                          ; Library ;
 +--------------------------------------------+-----------------+------------------------------------+-----------------------------------------------------------------------------------------------------------------------+---------+
-; sv files/octave_mux.sv                     ; yes             ; User SystemVerilog HDL File        ; C:/Users/minec/Desktop/Work/GitHub Repos/PROJ300/Firmware/Audio Controller/sv files/octave_mux.sv                     ;         ;
-; sv files/shift_detector.sv                 ; yes             ; User SystemVerilog HDL File        ; C:/Users/minec/Desktop/Work/GitHub Repos/PROJ300/Firmware/Audio Controller/sv files/shift_detector.sv                 ;         ;
 ; ps2 files/sv files/seven_seg_controller.sv ; yes             ; User SystemVerilog HDL File        ; C:/Users/minec/Desktop/Work/GitHub Repos/PROJ300/Firmware/Audio Controller/ps2 files/sv files/seven_seg_controller.sv ;         ;
 ; ps2 files/sv files/ps2_controller.sv       ; yes             ; User SystemVerilog HDL File        ; C:/Users/minec/Desktop/Work/GitHub Repos/PROJ300/Firmware/Audio Controller/ps2 files/sv files/ps2_controller.sv       ;         ;
-; ps2 files/sv files/bsy_reader.sv           ; yes             ; User SystemVerilog HDL File        ; C:/Users/minec/Desktop/Work/GitHub Repos/PROJ300/Firmware/Audio Controller/ps2 files/sv files/bsy_reader.sv           ;         ;
+; ps2 files/sv files/bsy_detector.sv         ; yes             ; User SystemVerilog HDL File        ; C:/Users/minec/Desktop/Work/GitHub Repos/PROJ300/Firmware/Audio Controller/ps2 files/sv files/bsy_detector.sv         ;         ;
 ; ps2 files/sv files/break_code_detector.sv  ; yes             ; User SystemVerilog HDL File        ; C:/Users/minec/Desktop/Work/GitHub Repos/PROJ300/Firmware/Audio Controller/ps2 files/sv files/break_code_detector.sv  ;         ;
 ; ps2 files/PS2controller.bdf                ; yes             ; User Block Diagram/Schematic File  ; C:/Users/minec/Desktop/Work/GitHub Repos/PROJ300/Firmware/Audio Controller/ps2 files/PS2controller.bdf                ;         ;
+; sv files/special_key_detector.sv           ; yes             ; User SystemVerilog HDL File        ; C:/Users/minec/Desktop/Work/GitHub Repos/PROJ300/Firmware/Audio Controller/sv files/special_key_detector.sv           ;         ;
+; sv files/octave_mux.sv                     ; yes             ; User SystemVerilog HDL File        ; C:/Users/minec/Desktop/Work/GitHub Repos/PROJ300/Firmware/Audio Controller/sv files/octave_mux.sv                     ;         ;
 ; sv files/key_detector.sv                   ; yes             ; User SystemVerilog HDL File        ; C:/Users/minec/Desktop/Work/GitHub Repos/PROJ300/Firmware/Audio Controller/sv files/key_detector.sv                   ;         ;
 ; sv files/muxN.sv                           ; yes             ; User SystemVerilog HDL File        ; C:/Users/minec/Desktop/Work/GitHub Repos/PROJ300/Firmware/Audio Controller/sv files/muxN.sv                           ;         ;
 ; sv files/fine_clk_divN.sv                  ; yes             ; User SystemVerilog HDL File        ; C:/Users/minec/Desktop/Work/GitHub Repos/PROJ300/Firmware/Audio Controller/sv files/fine_clk_divN.sv                  ;         ;
 ; AudioController.bdf                        ; yes             ; User Block Diagram/Schematic File  ; C:/Users/minec/Desktop/Work/GitHub Repos/PROJ300/Firmware/Audio Controller/AudioController.bdf                        ;         ;
 ; music_frequencies.bdf                      ; yes             ; User Block Diagram/Schematic File  ; C:/Users/minec/Desktop/Work/GitHub Repos/PROJ300/Firmware/Audio Controller/music_frequencies.bdf                      ;         ;
+; TopLevel.bdf                               ; yes             ; User Block Diagram/Schematic File  ; C:/Users/minec/Desktop/Work/GitHub Repos/PROJ300/Firmware/Audio Controller/TopLevel.bdf                               ;         ;
 +--------------------------------------------+-----------------+------------------------------------+-----------------------------------------------------------------------------------------------------------------------+---------+
 
 
@@ -226,14 +227,14 @@ https://fpgasoftware.intel.com/eula.
 +---------------------------------------------+-----------+
 ; Resource                                    ; Usage     ;
 +---------------------------------------------+-----------+
-; Estimate of Logic utilization (ALMs needed) ; 496       ;
+; Estimate of Logic utilization (ALMs needed) ; 497       ;
 ;                                             ;           ;
 ; Combinational ALUT usage for logic          ; 833       ;
-;     -- 7 input functions                    ; 2         ;
-;     -- 6 input functions                    ; 155       ;
+;     -- 7 input functions                    ; 1         ;
+;     -- 6 input functions                    ; 157       ;
 ;     -- 5 input functions                    ; 5         ;
-;     -- 4 input functions                    ; 32        ;
-;     -- <=3 input functions                  ; 639       ;
+;     -- 4 input functions                    ; 29        ;
+;     -- <=3 input functions                  ; 641       ;
 ;                                             ;           ;
 ; Dedicated logic registers                   ; 677       ;
 ;                                             ;           ;
@@ -243,52 +244,53 @@ https://fpgasoftware.intel.com/eula.
 ;                                             ;           ;
 ; Maximum fan-out node                        ; clk~input ;
 ; Maximum fan-out                             ; 654       ;
-; Total fan-out                               ; 4444      ;
+; Total fan-out                               ; 4443      ;
 ; Average fan-out                             ; 2.86      ;
 +---------------------------------------------+-----------+
 
 
-+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                                                                             ;
-+----------------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+---------------------------------------------------------------+----------------------+--------------+
-; Compilation Hierarchy Node       ; Combinational ALUTs ; Dedicated Logic Registers ; Block Memory Bits ; DSP Blocks ; Pins ; Virtual Pins ; Full Hierarchy Name                                           ; Entity Name          ; Library Name ;
-+----------------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+---------------------------------------------------------------+----------------------+--------------+
-; |AudioController                 ; 833 (0)             ; 677 (0)                   ; 0                 ; 0          ; 21   ; 0            ; |AudioController                                              ; AudioController      ; work         ;
-;    |PS2controller:inst2|         ; 40 (1)              ; 47 (0)                    ; 0                 ; 0          ; 0    ; 0            ; |AudioController|PS2controller:inst2                          ; PS2controller        ; work         ;
-;       |break_code_detector:inst| ; 32 (32)             ; 26 (26)                   ; 0                 ; 0          ; 0    ; 0            ; |AudioController|PS2controller:inst2|break_code_detector:inst ; break_code_detector  ; work         ;
-;       |bsy_reader:inst2|         ; 0 (0)               ; 8 (8)                     ; 0                 ; 0          ; 0    ; 0            ; |AudioController|PS2controller:inst2|bsy_reader:inst2         ; bsy_reader           ; work         ;
-;       |ps2_controller:inst1|     ; 7 (7)               ; 13 (13)                   ; 0                 ; 0          ; 0    ; 0            ; |AudioController|PS2controller:inst2|ps2_controller:inst1     ; ps2_controller       ; work         ;
-;    |key_detector:inst1|          ; 17 (17)             ; 4 (4)                     ; 0                 ; 0          ; 0    ; 0            ; |AudioController|key_detector:inst1                           ; key_detector         ; work         ;
-;    |music_frequencies:inst|      ; 752 (0)             ; 624 (0)                   ; 0                 ; 0          ; 0    ; 0            ; |AudioController|music_frequencies:inst                       ; music_frequencies    ; work         ;
-;       |fine_clk_divN:inst10|     ; 31 (31)             ; 26 (26)                   ; 0                 ; 0          ; 0    ; 0            ; |AudioController|music_frequencies:inst|fine_clk_divN:inst10  ; fine_clk_divN        ; work         ;
-;       |fine_clk_divN:inst12|     ; 31 (31)             ; 26 (26)                   ; 0                 ; 0          ; 0    ; 0            ; |AudioController|music_frequencies:inst|fine_clk_divN:inst12  ; fine_clk_divN        ; work         ;
-;       |fine_clk_divN:inst13|     ; 31 (31)             ; 26 (26)                   ; 0                 ; 0          ; 0    ; 0            ; |AudioController|music_frequencies:inst|fine_clk_divN:inst13  ; fine_clk_divN        ; work         ;
-;       |fine_clk_divN:inst14|     ; 31 (31)             ; 26 (26)                   ; 0                 ; 0          ; 0    ; 0            ; |AudioController|music_frequencies:inst|fine_clk_divN:inst14  ; fine_clk_divN        ; work         ;
-;       |fine_clk_divN:inst15|     ; 31 (31)             ; 26 (26)                   ; 0                 ; 0          ; 0    ; 0            ; |AudioController|music_frequencies:inst|fine_clk_divN:inst15  ; fine_clk_divN        ; work         ;
-;       |fine_clk_divN:inst16|     ; 31 (31)             ; 26 (26)                   ; 0                 ; 0          ; 0    ; 0            ; |AudioController|music_frequencies:inst|fine_clk_divN:inst16  ; fine_clk_divN        ; work         ;
-;       |fine_clk_divN:inst17|     ; 31 (31)             ; 26 (26)                   ; 0                 ; 0          ; 0    ; 0            ; |AudioController|music_frequencies:inst|fine_clk_divN:inst17  ; fine_clk_divN        ; work         ;
-;       |fine_clk_divN:inst18|     ; 31 (31)             ; 26 (26)                   ; 0                 ; 0          ; 0    ; 0            ; |AudioController|music_frequencies:inst|fine_clk_divN:inst18  ; fine_clk_divN        ; work         ;
-;       |fine_clk_divN:inst19|     ; 31 (31)             ; 26 (26)                   ; 0                 ; 0          ; 0    ; 0            ; |AudioController|music_frequencies:inst|fine_clk_divN:inst19  ; fine_clk_divN        ; work         ;
-;       |fine_clk_divN:inst1|      ; 31 (31)             ; 26 (26)                   ; 0                 ; 0          ; 0    ; 0            ; |AudioController|music_frequencies:inst|fine_clk_divN:inst1   ; fine_clk_divN        ; work         ;
-;       |fine_clk_divN:inst20|     ; 31 (31)             ; 26 (26)                   ; 0                 ; 0          ; 0    ; 0            ; |AudioController|music_frequencies:inst|fine_clk_divN:inst20  ; fine_clk_divN        ; work         ;
-;       |fine_clk_divN:inst21|     ; 31 (31)             ; 26 (26)                   ; 0                 ; 0          ; 0    ; 0            ; |AudioController|music_frequencies:inst|fine_clk_divN:inst21  ; fine_clk_divN        ; work         ;
-;       |fine_clk_divN:inst22|     ; 31 (31)             ; 26 (26)                   ; 0                 ; 0          ; 0    ; 0            ; |AudioController|music_frequencies:inst|fine_clk_divN:inst22  ; fine_clk_divN        ; work         ;
-;       |fine_clk_divN:inst23|     ; 31 (31)             ; 26 (26)                   ; 0                 ; 0          ; 0    ; 0            ; |AudioController|music_frequencies:inst|fine_clk_divN:inst23  ; fine_clk_divN        ; work         ;
-;       |fine_clk_divN:inst24|     ; 31 (31)             ; 26 (26)                   ; 0                 ; 0          ; 0    ; 0            ; |AudioController|music_frequencies:inst|fine_clk_divN:inst24  ; fine_clk_divN        ; work         ;
-;       |fine_clk_divN:inst25|     ; 31 (31)             ; 26 (26)                   ; 0                 ; 0          ; 0    ; 0            ; |AudioController|music_frequencies:inst|fine_clk_divN:inst25  ; fine_clk_divN        ; work         ;
-;       |fine_clk_divN:inst2|      ; 31 (31)             ; 26 (26)                   ; 0                 ; 0          ; 0    ; 0            ; |AudioController|music_frequencies:inst|fine_clk_divN:inst2   ; fine_clk_divN        ; work         ;
-;       |fine_clk_divN:inst3|      ; 31 (31)             ; 26 (26)                   ; 0                 ; 0          ; 0    ; 0            ; |AudioController|music_frequencies:inst|fine_clk_divN:inst3   ; fine_clk_divN        ; work         ;
-;       |fine_clk_divN:inst4|      ; 31 (31)             ; 26 (26)                   ; 0                 ; 0          ; 0    ; 0            ; |AudioController|music_frequencies:inst|fine_clk_divN:inst4   ; fine_clk_divN        ; work         ;
-;       |fine_clk_divN:inst5|      ; 31 (31)             ; 26 (26)                   ; 0                 ; 0          ; 0    ; 0            ; |AudioController|music_frequencies:inst|fine_clk_divN:inst5   ; fine_clk_divN        ; work         ;
-;       |fine_clk_divN:inst7|      ; 31 (31)             ; 26 (26)                   ; 0                 ; 0          ; 0    ; 0            ; |AudioController|music_frequencies:inst|fine_clk_divN:inst7   ; fine_clk_divN        ; work         ;
-;       |fine_clk_divN:inst8|      ; 31 (31)             ; 26 (26)                   ; 0                 ; 0          ; 0    ; 0            ; |AudioController|music_frequencies:inst|fine_clk_divN:inst8   ; fine_clk_divN        ; work         ;
-;       |fine_clk_divN:inst9|      ; 31 (31)             ; 26 (26)                   ; 0                 ; 0          ; 0    ; 0            ; |AudioController|music_frequencies:inst|fine_clk_divN:inst9   ; fine_clk_divN        ; work         ;
-;       |fine_clk_divN:inst|       ; 31 (31)             ; 26 (26)                   ; 0                 ; 0          ; 0    ; 0            ; |AudioController|music_frequencies:inst|fine_clk_divN:inst    ; fine_clk_divN        ; work         ;
-;       |octave_mux:inst26|        ; 8 (8)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |AudioController|music_frequencies:inst|octave_mux:inst26     ; octave_mux           ; work         ;
-;    |muxN:inst4|                  ; 7 (7)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |AudioController|muxN:inst4                                   ; muxN                 ; work         ;
-;    |seven_seg_controller:inst3|  ; 14 (14)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |AudioController|seven_seg_controller:inst3                   ; seven_seg_controller ; work         ;
-;    |shift_detector:inst7|        ; 3 (3)               ; 2 (2)                     ; 0                 ; 0          ; 0    ; 0            ; |AudioController|shift_detector:inst7                         ; shift_detector       ; work         ;
-+----------------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+---------------------------------------------------------------+----------------------+--------------+
++----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                                                                                            ;
++------------------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+----------------------------------------------------------------------------+----------------------+--------------+
+; Compilation Hierarchy Node         ; Combinational ALUTs ; Dedicated Logic Registers ; Block Memory Bits ; DSP Blocks ; Pins ; Virtual Pins ; Full Hierarchy Name                                                        ; Entity Name          ; Library Name ;
++------------------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+----------------------------------------------------------------------------+----------------------+--------------+
+; |TopLevel                          ; 833 (0)             ; 677 (0)                   ; 0                 ; 0          ; 21   ; 0            ; |TopLevel                                                                  ; TopLevel             ; work         ;
+;    |AudioController:inst|          ; 779 (0)             ; 630 (0)                   ; 0                 ; 0          ; 0    ; 0            ; |TopLevel|AudioController:inst                                             ; AudioController      ; work         ;
+;       |key_detector:inst1|         ; 17 (17)             ; 4 (4)                     ; 0                 ; 0          ; 0    ; 0            ; |TopLevel|AudioController:inst|key_detector:inst1                          ; key_detector         ; work         ;
+;       |music_frequencies:inst|     ; 752 (0)             ; 624 (0)                   ; 0                 ; 0          ; 0    ; 0            ; |TopLevel|AudioController:inst|music_frequencies:inst                      ; music_frequencies    ; work         ;
+;          |fine_clk_divN:inst10|    ; 31 (31)             ; 26 (26)                   ; 0                 ; 0          ; 0    ; 0            ; |TopLevel|AudioController:inst|music_frequencies:inst|fine_clk_divN:inst10 ; fine_clk_divN        ; work         ;
+;          |fine_clk_divN:inst12|    ; 31 (31)             ; 26 (26)                   ; 0                 ; 0          ; 0    ; 0            ; |TopLevel|AudioController:inst|music_frequencies:inst|fine_clk_divN:inst12 ; fine_clk_divN        ; work         ;
+;          |fine_clk_divN:inst13|    ; 31 (31)             ; 26 (26)                   ; 0                 ; 0          ; 0    ; 0            ; |TopLevel|AudioController:inst|music_frequencies:inst|fine_clk_divN:inst13 ; fine_clk_divN        ; work         ;
+;          |fine_clk_divN:inst14|    ; 31 (31)             ; 26 (26)                   ; 0                 ; 0          ; 0    ; 0            ; |TopLevel|AudioController:inst|music_frequencies:inst|fine_clk_divN:inst14 ; fine_clk_divN        ; work         ;
+;          |fine_clk_divN:inst15|    ; 31 (31)             ; 26 (26)                   ; 0                 ; 0          ; 0    ; 0            ; |TopLevel|AudioController:inst|music_frequencies:inst|fine_clk_divN:inst15 ; fine_clk_divN        ; work         ;
+;          |fine_clk_divN:inst16|    ; 31 (31)             ; 26 (26)                   ; 0                 ; 0          ; 0    ; 0            ; |TopLevel|AudioController:inst|music_frequencies:inst|fine_clk_divN:inst16 ; fine_clk_divN        ; work         ;
+;          |fine_clk_divN:inst17|    ; 31 (31)             ; 26 (26)                   ; 0                 ; 0          ; 0    ; 0            ; |TopLevel|AudioController:inst|music_frequencies:inst|fine_clk_divN:inst17 ; fine_clk_divN        ; work         ;
+;          |fine_clk_divN:inst18|    ; 31 (31)             ; 26 (26)                   ; 0                 ; 0          ; 0    ; 0            ; |TopLevel|AudioController:inst|music_frequencies:inst|fine_clk_divN:inst18 ; fine_clk_divN        ; work         ;
+;          |fine_clk_divN:inst19|    ; 31 (31)             ; 26 (26)                   ; 0                 ; 0          ; 0    ; 0            ; |TopLevel|AudioController:inst|music_frequencies:inst|fine_clk_divN:inst19 ; fine_clk_divN        ; work         ;
+;          |fine_clk_divN:inst1|     ; 31 (31)             ; 26 (26)                   ; 0                 ; 0          ; 0    ; 0            ; |TopLevel|AudioController:inst|music_frequencies:inst|fine_clk_divN:inst1  ; fine_clk_divN        ; work         ;
+;          |fine_clk_divN:inst20|    ; 31 (31)             ; 26 (26)                   ; 0                 ; 0          ; 0    ; 0            ; |TopLevel|AudioController:inst|music_frequencies:inst|fine_clk_divN:inst20 ; fine_clk_divN        ; work         ;
+;          |fine_clk_divN:inst21|    ; 31 (31)             ; 26 (26)                   ; 0                 ; 0          ; 0    ; 0            ; |TopLevel|AudioController:inst|music_frequencies:inst|fine_clk_divN:inst21 ; fine_clk_divN        ; work         ;
+;          |fine_clk_divN:inst22|    ; 31 (31)             ; 26 (26)                   ; 0                 ; 0          ; 0    ; 0            ; |TopLevel|AudioController:inst|music_frequencies:inst|fine_clk_divN:inst22 ; fine_clk_divN        ; work         ;
+;          |fine_clk_divN:inst23|    ; 31 (31)             ; 26 (26)                   ; 0                 ; 0          ; 0    ; 0            ; |TopLevel|AudioController:inst|music_frequencies:inst|fine_clk_divN:inst23 ; fine_clk_divN        ; work         ;
+;          |fine_clk_divN:inst24|    ; 31 (31)             ; 26 (26)                   ; 0                 ; 0          ; 0    ; 0            ; |TopLevel|AudioController:inst|music_frequencies:inst|fine_clk_divN:inst24 ; fine_clk_divN        ; work         ;
+;          |fine_clk_divN:inst25|    ; 31 (31)             ; 26 (26)                   ; 0                 ; 0          ; 0    ; 0            ; |TopLevel|AudioController:inst|music_frequencies:inst|fine_clk_divN:inst25 ; fine_clk_divN        ; work         ;
+;          |fine_clk_divN:inst2|     ; 31 (31)             ; 26 (26)                   ; 0                 ; 0          ; 0    ; 0            ; |TopLevel|AudioController:inst|music_frequencies:inst|fine_clk_divN:inst2  ; fine_clk_divN        ; work         ;
+;          |fine_clk_divN:inst3|     ; 31 (31)             ; 26 (26)                   ; 0                 ; 0          ; 0    ; 0            ; |TopLevel|AudioController:inst|music_frequencies:inst|fine_clk_divN:inst3  ; fine_clk_divN        ; work         ;
+;          |fine_clk_divN:inst4|     ; 31 (31)             ; 26 (26)                   ; 0                 ; 0          ; 0    ; 0            ; |TopLevel|AudioController:inst|music_frequencies:inst|fine_clk_divN:inst4  ; fine_clk_divN        ; work         ;
+;          |fine_clk_divN:inst5|     ; 31 (31)             ; 26 (26)                   ; 0                 ; 0          ; 0    ; 0            ; |TopLevel|AudioController:inst|music_frequencies:inst|fine_clk_divN:inst5  ; fine_clk_divN        ; work         ;
+;          |fine_clk_divN:inst7|     ; 31 (31)             ; 26 (26)                   ; 0                 ; 0          ; 0    ; 0            ; |TopLevel|AudioController:inst|music_frequencies:inst|fine_clk_divN:inst7  ; fine_clk_divN        ; work         ;
+;          |fine_clk_divN:inst8|     ; 31 (31)             ; 26 (26)                   ; 0                 ; 0          ; 0    ; 0            ; |TopLevel|AudioController:inst|music_frequencies:inst|fine_clk_divN:inst8  ; fine_clk_divN        ; work         ;
+;          |fine_clk_divN:inst9|     ; 31 (31)             ; 26 (26)                   ; 0                 ; 0          ; 0    ; 0            ; |TopLevel|AudioController:inst|music_frequencies:inst|fine_clk_divN:inst9  ; fine_clk_divN        ; work         ;
+;          |fine_clk_divN:inst|      ; 31 (31)             ; 26 (26)                   ; 0                 ; 0          ; 0    ; 0            ; |TopLevel|AudioController:inst|music_frequencies:inst|fine_clk_divN:inst   ; fine_clk_divN        ; work         ;
+;          |octave_mux:inst26|       ; 8 (8)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |TopLevel|AudioController:inst|music_frequencies:inst|octave_mux:inst26    ; octave_mux           ; work         ;
+;       |muxN:inst4|                 ; 7 (7)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |TopLevel|AudioController:inst|muxN:inst4                                  ; muxN                 ; work         ;
+;       |special_key_detector:inst7| ; 3 (3)               ; 2 (2)                     ; 0                 ; 0          ; 0    ; 0            ; |TopLevel|AudioController:inst|special_key_detector:inst7                  ; special_key_detector ; work         ;
+;    |PS2controller:inst2|           ; 40 (1)              ; 47 (0)                    ; 0                 ; 0          ; 0    ; 0            ; |TopLevel|PS2controller:inst2                                              ; PS2controller        ; work         ;
+;       |break_code_detector:inst|   ; 32 (32)             ; 26 (26)                   ; 0                 ; 0          ; 0    ; 0            ; |TopLevel|PS2controller:inst2|break_code_detector:inst                     ; break_code_detector  ; work         ;
+;       |bsy_detector:inst2|         ; 0 (0)               ; 8 (8)                     ; 0                 ; 0          ; 0    ; 0            ; |TopLevel|PS2controller:inst2|bsy_detector:inst2                           ; bsy_detector         ; work         ;
+;       |ps2_controller:inst1|       ; 7 (7)               ; 13 (13)                   ; 0                 ; 0          ; 0    ; 0            ; |TopLevel|PS2controller:inst2|ps2_controller:inst1                         ; ps2_controller       ; work         ;
+;    |seven_seg_controller:inst3|    ; 14 (14)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |TopLevel|seven_seg_controller:inst3                                       ; seven_seg_controller ; work         ;
++------------------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+----------------------------------------------------------------------------+----------------------+--------------+
 Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
 
 
@@ -317,287 +319,287 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +----------------------------------------------+---------+
 
 
-+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Multiplexer Restructuring Statistics (Restructuring Performed)                                                                                                                             ;
-+--------------------+-----------+---------------+----------------------+------------------------+------------+------------------------------------------------------------------------------+
-; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output                                                   ;
-+--------------------+-----------+---------------+----------------------+------------------------+------------+------------------------------------------------------------------------------+
-; 3:1                ; 25 bits   ; 50 LEs        ; 0 LEs                ; 50 LEs                 ; Yes        ; |AudioController|music_frequencies:inst|fine_clk_divN:inst10|counter_reg[12] ;
-; 3:1                ; 25 bits   ; 50 LEs        ; 0 LEs                ; 50 LEs                 ; Yes        ; |AudioController|music_frequencies:inst|fine_clk_divN:inst25|counter_reg[12] ;
-; 3:1                ; 25 bits   ; 50 LEs        ; 0 LEs                ; 50 LEs                 ; Yes        ; |AudioController|music_frequencies:inst|fine_clk_divN:inst9|counter_reg[9]   ;
-; 3:1                ; 25 bits   ; 50 LEs        ; 0 LEs                ; 50 LEs                 ; Yes        ; |AudioController|music_frequencies:inst|fine_clk_divN:inst24|counter_reg[10] ;
-; 3:1                ; 25 bits   ; 50 LEs        ; 0 LEs                ; 50 LEs                 ; Yes        ; |AudioController|music_frequencies:inst|fine_clk_divN:inst8|counter_reg[8]   ;
-; 3:1                ; 25 bits   ; 50 LEs        ; 0 LEs                ; 50 LEs                 ; Yes        ; |AudioController|music_frequencies:inst|fine_clk_divN:inst23|counter_reg[8]  ;
-; 3:1                ; 25 bits   ; 50 LEs        ; 0 LEs                ; 50 LEs                 ; Yes        ; |AudioController|music_frequencies:inst|fine_clk_divN:inst16|counter_reg[7]  ;
-; 3:1                ; 25 bits   ; 50 LEs        ; 0 LEs                ; 50 LEs                 ; Yes        ; |AudioController|music_frequencies:inst|fine_clk_divN:inst22|counter_reg[17] ;
-; 3:1                ; 25 bits   ; 50 LEs        ; 0 LEs                ; 50 LEs                 ; Yes        ; |AudioController|music_frequencies:inst|fine_clk_divN:inst7|counter_reg[4]   ;
-; 3:1                ; 25 bits   ; 50 LEs        ; 0 LEs                ; 50 LEs                 ; Yes        ; |AudioController|music_frequencies:inst|fine_clk_divN:inst21|counter_reg[3]  ;
-; 3:1                ; 25 bits   ; 50 LEs        ; 0 LEs                ; 50 LEs                 ; Yes        ; |AudioController|music_frequencies:inst|fine_clk_divN:inst5|counter_reg[3]   ;
-; 3:1                ; 25 bits   ; 50 LEs        ; 0 LEs                ; 50 LEs                 ; Yes        ; |AudioController|music_frequencies:inst|fine_clk_divN:inst20|counter_reg[17] ;
-; 3:1                ; 25 bits   ; 50 LEs        ; 0 LEs                ; 50 LEs                 ; Yes        ; |AudioController|music_frequencies:inst|fine_clk_divN:inst4|counter_reg[0]   ;
-; 3:1                ; 25 bits   ; 50 LEs        ; 0 LEs                ; 50 LEs                 ; Yes        ; |AudioController|music_frequencies:inst|fine_clk_divN:inst19|counter_reg[0]  ;
-; 3:1                ; 25 bits   ; 50 LEs        ; 0 LEs                ; 50 LEs                 ; Yes        ; |AudioController|music_frequencies:inst|fine_clk_divN:inst15|counter_reg[17] ;
-; 3:1                ; 25 bits   ; 50 LEs        ; 0 LEs                ; 50 LEs                 ; Yes        ; |AudioController|music_frequencies:inst|fine_clk_divN:inst18|counter_reg[17] ;
-; 3:1                ; 25 bits   ; 50 LEs        ; 0 LEs                ; 50 LEs                 ; Yes        ; |AudioController|music_frequencies:inst|fine_clk_divN:inst3|counter_reg[21]  ;
-; 3:1                ; 25 bits   ; 50 LEs        ; 0 LEs                ; 50 LEs                 ; Yes        ; |AudioController|music_frequencies:inst|fine_clk_divN:inst17|counter_reg[8]  ;
-; 3:1                ; 25 bits   ; 50 LEs        ; 0 LEs                ; 50 LEs                 ; Yes        ; |AudioController|music_frequencies:inst|fine_clk_divN:inst2|counter_reg[16]  ;
-; 3:1                ; 25 bits   ; 50 LEs        ; 0 LEs                ; 50 LEs                 ; Yes        ; |AudioController|music_frequencies:inst|fine_clk_divN:inst13|counter_reg[24] ;
-; 3:1                ; 25 bits   ; 50 LEs        ; 0 LEs                ; 50 LEs                 ; Yes        ; |AudioController|music_frequencies:inst|fine_clk_divN:inst1|counter_reg[24]  ;
-; 3:1                ; 25 bits   ; 50 LEs        ; 0 LEs                ; 50 LEs                 ; Yes        ; |AudioController|music_frequencies:inst|fine_clk_divN:inst12|counter_reg[4]  ;
-; 3:1                ; 25 bits   ; 50 LEs        ; 0 LEs                ; 50 LEs                 ; Yes        ; |AudioController|music_frequencies:inst|fine_clk_divN:inst|counter_reg[6]    ;
-; 3:1                ; 25 bits   ; 50 LEs        ; 0 LEs                ; 50 LEs                 ; Yes        ; |AudioController|music_frequencies:inst|fine_clk_divN:inst14|counter_reg[5]  ;
-; 3:1                ; 8 bits    ; 16 LEs        ; 0 LEs                ; 16 LEs                 ; Yes        ; |AudioController|PS2controller:inst2|ps2_controller:inst1|data_out[4]        ;
-+--------------------+-----------+---------------+----------------------+------------------------+------------+------------------------------------------------------------------------------+
++----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Multiplexer Restructuring Statistics (Restructuring Performed)                                                                                                                                           ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+--------------------------------------------------------------------------------------------+
+; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output                                                                 ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+--------------------------------------------------------------------------------------------+
+; 3:1                ; 25 bits   ; 50 LEs        ; 0 LEs                ; 50 LEs                 ; Yes        ; |TopLevel|AudioController:inst|music_frequencies:inst|fine_clk_divN:inst10|counter_reg[12] ;
+; 3:1                ; 25 bits   ; 50 LEs        ; 0 LEs                ; 50 LEs                 ; Yes        ; |TopLevel|AudioController:inst|music_frequencies:inst|fine_clk_divN:inst25|counter_reg[12] ;
+; 3:1                ; 25 bits   ; 50 LEs        ; 0 LEs                ; 50 LEs                 ; Yes        ; |TopLevel|AudioController:inst|music_frequencies:inst|fine_clk_divN:inst9|counter_reg[9]   ;
+; 3:1                ; 25 bits   ; 50 LEs        ; 0 LEs                ; 50 LEs                 ; Yes        ; |TopLevel|AudioController:inst|music_frequencies:inst|fine_clk_divN:inst24|counter_reg[10] ;
+; 3:1                ; 25 bits   ; 50 LEs        ; 0 LEs                ; 50 LEs                 ; Yes        ; |TopLevel|AudioController:inst|music_frequencies:inst|fine_clk_divN:inst8|counter_reg[8]   ;
+; 3:1                ; 25 bits   ; 50 LEs        ; 0 LEs                ; 50 LEs                 ; Yes        ; |TopLevel|AudioController:inst|music_frequencies:inst|fine_clk_divN:inst23|counter_reg[8]  ;
+; 3:1                ; 25 bits   ; 50 LEs        ; 0 LEs                ; 50 LEs                 ; Yes        ; |TopLevel|AudioController:inst|music_frequencies:inst|fine_clk_divN:inst16|counter_reg[7]  ;
+; 3:1                ; 25 bits   ; 50 LEs        ; 0 LEs                ; 50 LEs                 ; Yes        ; |TopLevel|AudioController:inst|music_frequencies:inst|fine_clk_divN:inst22|counter_reg[17] ;
+; 3:1                ; 25 bits   ; 50 LEs        ; 0 LEs                ; 50 LEs                 ; Yes        ; |TopLevel|AudioController:inst|music_frequencies:inst|fine_clk_divN:inst7|counter_reg[4]   ;
+; 3:1                ; 25 bits   ; 50 LEs        ; 0 LEs                ; 50 LEs                 ; Yes        ; |TopLevel|AudioController:inst|music_frequencies:inst|fine_clk_divN:inst21|counter_reg[3]  ;
+; 3:1                ; 25 bits   ; 50 LEs        ; 0 LEs                ; 50 LEs                 ; Yes        ; |TopLevel|AudioController:inst|music_frequencies:inst|fine_clk_divN:inst5|counter_reg[3]   ;
+; 3:1                ; 25 bits   ; 50 LEs        ; 0 LEs                ; 50 LEs                 ; Yes        ; |TopLevel|AudioController:inst|music_frequencies:inst|fine_clk_divN:inst20|counter_reg[17] ;
+; 3:1                ; 25 bits   ; 50 LEs        ; 0 LEs                ; 50 LEs                 ; Yes        ; |TopLevel|AudioController:inst|music_frequencies:inst|fine_clk_divN:inst4|counter_reg[0]   ;
+; 3:1                ; 25 bits   ; 50 LEs        ; 0 LEs                ; 50 LEs                 ; Yes        ; |TopLevel|AudioController:inst|music_frequencies:inst|fine_clk_divN:inst19|counter_reg[0]  ;
+; 3:1                ; 25 bits   ; 50 LEs        ; 0 LEs                ; 50 LEs                 ; Yes        ; |TopLevel|AudioController:inst|music_frequencies:inst|fine_clk_divN:inst15|counter_reg[17] ;
+; 3:1                ; 25 bits   ; 50 LEs        ; 0 LEs                ; 50 LEs                 ; Yes        ; |TopLevel|AudioController:inst|music_frequencies:inst|fine_clk_divN:inst18|counter_reg[17] ;
+; 3:1                ; 25 bits   ; 50 LEs        ; 0 LEs                ; 50 LEs                 ; Yes        ; |TopLevel|AudioController:inst|music_frequencies:inst|fine_clk_divN:inst3|counter_reg[21]  ;
+; 3:1                ; 25 bits   ; 50 LEs        ; 0 LEs                ; 50 LEs                 ; Yes        ; |TopLevel|AudioController:inst|music_frequencies:inst|fine_clk_divN:inst17|counter_reg[8]  ;
+; 3:1                ; 25 bits   ; 50 LEs        ; 0 LEs                ; 50 LEs                 ; Yes        ; |TopLevel|AudioController:inst|music_frequencies:inst|fine_clk_divN:inst2|counter_reg[16]  ;
+; 3:1                ; 25 bits   ; 50 LEs        ; 0 LEs                ; 50 LEs                 ; Yes        ; |TopLevel|AudioController:inst|music_frequencies:inst|fine_clk_divN:inst13|counter_reg[24] ;
+; 3:1                ; 25 bits   ; 50 LEs        ; 0 LEs                ; 50 LEs                 ; Yes        ; |TopLevel|AudioController:inst|music_frequencies:inst|fine_clk_divN:inst1|counter_reg[24]  ;
+; 3:1                ; 25 bits   ; 50 LEs        ; 0 LEs                ; 50 LEs                 ; Yes        ; |TopLevel|AudioController:inst|music_frequencies:inst|fine_clk_divN:inst12|counter_reg[4]  ;
+; 3:1                ; 25 bits   ; 50 LEs        ; 0 LEs                ; 50 LEs                 ; Yes        ; |TopLevel|AudioController:inst|music_frequencies:inst|fine_clk_divN:inst|counter_reg[6]    ;
+; 3:1                ; 25 bits   ; 50 LEs        ; 0 LEs                ; 50 LEs                 ; Yes        ; |TopLevel|AudioController:inst|music_frequencies:inst|fine_clk_divN:inst14|counter_reg[5]  ;
+; 3:1                ; 8 bits    ; 16 LEs        ; 0 LEs                ; 16 LEs                 ; Yes        ; |TopLevel|PS2controller:inst2|ps2_controller:inst1|data_out[4]                             ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+--------------------------------------------------------------------------------------------+
 
 
-+---------------------------------------------------------+
-; Parameter Settings for User Entity Instance: muxN:inst4 ;
-+----------------+-------+--------------------------------+
-; Parameter Name ; Value ; Type                           ;
-+----------------+-------+--------------------------------+
-; N              ; 13    ; Signed Integer                 ;
-; M              ; 4     ; Signed Integer                 ;
-+----------------+-------+--------------------------------+
++------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: AudioController:inst|muxN:inst4 ;
++----------------+-------+-----------------------------------------------------+
+; Parameter Name ; Value ; Type                                                ;
++----------------+-------+-----------------------------------------------------+
+; N              ; 13    ; Signed Integer                                      ;
+; M              ; 4     ; Signed Integer                                      ;
++----------------+-------+-----------------------------------------------------+
 Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
 
 
-+----------------------------------------------------------------------------------------+
-; Parameter Settings for User Entity Instance: music_frequencies:inst|fine_clk_divN:inst ;
-+----------------+--------+--------------------------------------------------------------+
-; Parameter Name ; Value  ; Type                                                         ;
-+----------------+--------+--------------------------------------------------------------+
-; f              ; 493.88 ; Signed Float                                                 ;
-+----------------+--------+--------------------------------------------------------------+
++-------------------------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: AudioController:inst|music_frequencies:inst|fine_clk_divN:inst ;
++----------------+--------+-----------------------------------------------------------------------------------+
+; Parameter Name ; Value  ; Type                                                                              ;
++----------------+--------+-----------------------------------------------------------------------------------+
+; f              ; 493.88 ; Signed Float                                                                      ;
++----------------+--------+-----------------------------------------------------------------------------------+
 Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
 
 
-+-----------------------------------------------------------------------------------------+
-; Parameter Settings for User Entity Instance: music_frequencies:inst|fine_clk_divN:inst1 ;
-+----------------+--------+---------------------------------------------------------------+
-; Parameter Name ; Value  ; Type                                                          ;
-+----------------+--------+---------------------------------------------------------------+
-; f              ; 466.16 ; Signed Float                                                  ;
-+----------------+--------+---------------------------------------------------------------+
++--------------------------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: AudioController:inst|music_frequencies:inst|fine_clk_divN:inst1 ;
++----------------+--------+------------------------------------------------------------------------------------+
+; Parameter Name ; Value  ; Type                                                                               ;
++----------------+--------+------------------------------------------------------------------------------------+
+; f              ; 466.16 ; Signed Float                                                                       ;
++----------------+--------+------------------------------------------------------------------------------------+
 Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
 
 
-+-----------------------------------------------------------------------------------------+
-; Parameter Settings for User Entity Instance: music_frequencies:inst|fine_clk_divN:inst2 ;
-+----------------+--------+---------------------------------------------------------------+
-; Parameter Name ; Value  ; Type                                                          ;
-+----------------+--------+---------------------------------------------------------------+
-; f              ; 440.00 ; Signed Float                                                  ;
-+----------------+--------+---------------------------------------------------------------+
++--------------------------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: AudioController:inst|music_frequencies:inst|fine_clk_divN:inst2 ;
++----------------+--------+------------------------------------------------------------------------------------+
+; Parameter Name ; Value  ; Type                                                                               ;
++----------------+--------+------------------------------------------------------------------------------------+
+; f              ; 440.00 ; Signed Float                                                                       ;
++----------------+--------+------------------------------------------------------------------------------------+
 Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
 
 
-+-----------------------------------------------------------------------------------------+
-; Parameter Settings for User Entity Instance: music_frequencies:inst|fine_clk_divN:inst3 ;
-+----------------+--------+---------------------------------------------------------------+
-; Parameter Name ; Value  ; Type                                                          ;
-+----------------+--------+---------------------------------------------------------------+
-; f              ; 415.30 ; Signed Float                                                  ;
-+----------------+--------+---------------------------------------------------------------+
++--------------------------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: AudioController:inst|music_frequencies:inst|fine_clk_divN:inst3 ;
++----------------+--------+------------------------------------------------------------------------------------+
+; Parameter Name ; Value  ; Type                                                                               ;
++----------------+--------+------------------------------------------------------------------------------------+
+; f              ; 415.30 ; Signed Float                                                                       ;
++----------------+--------+------------------------------------------------------------------------------------+
 Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
 
 
-+------------------------------------------------------------------------------------------+
-; Parameter Settings for User Entity Instance: music_frequencies:inst|fine_clk_divN:inst15 ;
-+----------------+--------+----------------------------------------------------------------+
-; Parameter Name ; Value  ; Type                                                           ;
-+----------------+--------+----------------------------------------------------------------+
-; f              ; 392.00 ; Signed Float                                                   ;
-+----------------+--------+----------------------------------------------------------------+
++---------------------------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: AudioController:inst|music_frequencies:inst|fine_clk_divN:inst15 ;
++----------------+--------+-------------------------------------------------------------------------------------+
+; Parameter Name ; Value  ; Type                                                                                ;
++----------------+--------+-------------------------------------------------------------------------------------+
+; f              ; 392.00 ; Signed Float                                                                        ;
++----------------+--------+-------------------------------------------------------------------------------------+
 Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
 
 
-+-----------------------------------------------------------------------------------------+
-; Parameter Settings for User Entity Instance: music_frequencies:inst|fine_clk_divN:inst4 ;
-+----------------+--------+---------------------------------------------------------------+
-; Parameter Name ; Value  ; Type                                                          ;
-+----------------+--------+---------------------------------------------------------------+
-; f              ; 369.99 ; Signed Float                                                  ;
-+----------------+--------+---------------------------------------------------------------+
++--------------------------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: AudioController:inst|music_frequencies:inst|fine_clk_divN:inst4 ;
++----------------+--------+------------------------------------------------------------------------------------+
+; Parameter Name ; Value  ; Type                                                                               ;
++----------------+--------+------------------------------------------------------------------------------------+
+; f              ; 369.99 ; Signed Float                                                                       ;
++----------------+--------+------------------------------------------------------------------------------------+
 Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
 
 
-+-----------------------------------------------------------------------------------------+
-; Parameter Settings for User Entity Instance: music_frequencies:inst|fine_clk_divN:inst5 ;
-+----------------+--------+---------------------------------------------------------------+
-; Parameter Name ; Value  ; Type                                                          ;
-+----------------+--------+---------------------------------------------------------------+
-; f              ; 349.23 ; Signed Float                                                  ;
-+----------------+--------+---------------------------------------------------------------+
++--------------------------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: AudioController:inst|music_frequencies:inst|fine_clk_divN:inst5 ;
++----------------+--------+------------------------------------------------------------------------------------+
+; Parameter Name ; Value  ; Type                                                                               ;
++----------------+--------+------------------------------------------------------------------------------------+
+; f              ; 349.23 ; Signed Float                                                                       ;
++----------------+--------+------------------------------------------------------------------------------------+
 Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
 
 
-+-----------------------------------------------------------------------------------------+
-; Parameter Settings for User Entity Instance: music_frequencies:inst|fine_clk_divN:inst7 ;
-+----------------+--------+---------------------------------------------------------------+
-; Parameter Name ; Value  ; Type                                                          ;
-+----------------+--------+---------------------------------------------------------------+
-; f              ; 329.63 ; Signed Float                                                  ;
-+----------------+--------+---------------------------------------------------------------+
++--------------------------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: AudioController:inst|music_frequencies:inst|fine_clk_divN:inst7 ;
++----------------+--------+------------------------------------------------------------------------------------+
+; Parameter Name ; Value  ; Type                                                                               ;
++----------------+--------+------------------------------------------------------------------------------------+
+; f              ; 329.63 ; Signed Float                                                                       ;
++----------------+--------+------------------------------------------------------------------------------------+
 Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
 
 
-+------------------------------------------------------------------------------------------+
-; Parameter Settings for User Entity Instance: music_frequencies:inst|fine_clk_divN:inst16 ;
-+----------------+--------+----------------------------------------------------------------+
-; Parameter Name ; Value  ; Type                                                           ;
-+----------------+--------+----------------------------------------------------------------+
-; f              ; 311.13 ; Signed Float                                                   ;
-+----------------+--------+----------------------------------------------------------------+
++---------------------------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: AudioController:inst|music_frequencies:inst|fine_clk_divN:inst16 ;
++----------------+--------+-------------------------------------------------------------------------------------+
+; Parameter Name ; Value  ; Type                                                                                ;
++----------------+--------+-------------------------------------------------------------------------------------+
+; f              ; 311.13 ; Signed Float                                                                        ;
++----------------+--------+-------------------------------------------------------------------------------------+
 Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
 
 
-+-----------------------------------------------------------------------------------------+
-; Parameter Settings for User Entity Instance: music_frequencies:inst|fine_clk_divN:inst8 ;
-+----------------+--------+---------------------------------------------------------------+
-; Parameter Name ; Value  ; Type                                                          ;
-+----------------+--------+---------------------------------------------------------------+
-; f              ; 293.66 ; Signed Float                                                  ;
-+----------------+--------+---------------------------------------------------------------+
++--------------------------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: AudioController:inst|music_frequencies:inst|fine_clk_divN:inst8 ;
++----------------+--------+------------------------------------------------------------------------------------+
+; Parameter Name ; Value  ; Type                                                                               ;
++----------------+--------+------------------------------------------------------------------------------------+
+; f              ; 293.66 ; Signed Float                                                                       ;
++----------------+--------+------------------------------------------------------------------------------------+
 Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
 
 
-+-----------------------------------------------------------------------------------------+
-; Parameter Settings for User Entity Instance: music_frequencies:inst|fine_clk_divN:inst9 ;
-+----------------+--------+---------------------------------------------------------------+
-; Parameter Name ; Value  ; Type                                                          ;
-+----------------+--------+---------------------------------------------------------------+
-; f              ; 277.18 ; Signed Float                                                  ;
-+----------------+--------+---------------------------------------------------------------+
++--------------------------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: AudioController:inst|music_frequencies:inst|fine_clk_divN:inst9 ;
++----------------+--------+------------------------------------------------------------------------------------+
+; Parameter Name ; Value  ; Type                                                                               ;
++----------------+--------+------------------------------------------------------------------------------------+
+; f              ; 277.18 ; Signed Float                                                                       ;
++----------------+--------+------------------------------------------------------------------------------------+
 Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
 
 
-+------------------------------------------------------------------------------------------+
-; Parameter Settings for User Entity Instance: music_frequencies:inst|fine_clk_divN:inst10 ;
-+----------------+--------+----------------------------------------------------------------+
-; Parameter Name ; Value  ; Type                                                           ;
-+----------------+--------+----------------------------------------------------------------+
-; f              ; 261.63 ; Signed Float                                                   ;
-+----------------+--------+----------------------------------------------------------------+
++---------------------------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: AudioController:inst|music_frequencies:inst|fine_clk_divN:inst10 ;
++----------------+--------+-------------------------------------------------------------------------------------+
+; Parameter Name ; Value  ; Type                                                                                ;
++----------------+--------+-------------------------------------------------------------------------------------+
+; f              ; 261.63 ; Signed Float                                                                        ;
++----------------+--------+-------------------------------------------------------------------------------------+
 Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
 
 
-+------------------------------------------------------------------------------------------+
-; Parameter Settings for User Entity Instance: music_frequencies:inst|fine_clk_divN:inst14 ;
-+----------------+--------+----------------------------------------------------------------+
-; Parameter Name ; Value  ; Type                                                           ;
-+----------------+--------+----------------------------------------------------------------+
-; f              ; 246.94 ; Signed Float                                                   ;
-+----------------+--------+----------------------------------------------------------------+
++---------------------------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: AudioController:inst|music_frequencies:inst|fine_clk_divN:inst14 ;
++----------------+--------+-------------------------------------------------------------------------------------+
+; Parameter Name ; Value  ; Type                                                                                ;
++----------------+--------+-------------------------------------------------------------------------------------+
+; f              ; 246.94 ; Signed Float                                                                        ;
++----------------+--------+-------------------------------------------------------------------------------------+
 Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
 
 
-+------------------------------------------------------------------------------------------+
-; Parameter Settings for User Entity Instance: music_frequencies:inst|fine_clk_divN:inst12 ;
-+----------------+--------+----------------------------------------------------------------+
-; Parameter Name ; Value  ; Type                                                           ;
-+----------------+--------+----------------------------------------------------------------+
-; f              ; 233.08 ; Signed Float                                                   ;
-+----------------+--------+----------------------------------------------------------------+
++---------------------------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: AudioController:inst|music_frequencies:inst|fine_clk_divN:inst12 ;
++----------------+--------+-------------------------------------------------------------------------------------+
+; Parameter Name ; Value  ; Type                                                                                ;
++----------------+--------+-------------------------------------------------------------------------------------+
+; f              ; 233.08 ; Signed Float                                                                        ;
++----------------+--------+-------------------------------------------------------------------------------------+
 Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
 
 
-+------------------------------------------------------------------------------------------+
-; Parameter Settings for User Entity Instance: music_frequencies:inst|fine_clk_divN:inst13 ;
-+----------------+--------+----------------------------------------------------------------+
-; Parameter Name ; Value  ; Type                                                           ;
-+----------------+--------+----------------------------------------------------------------+
-; f              ; 220.00 ; Signed Float                                                   ;
-+----------------+--------+----------------------------------------------------------------+
++---------------------------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: AudioController:inst|music_frequencies:inst|fine_clk_divN:inst13 ;
++----------------+--------+-------------------------------------------------------------------------------------+
+; Parameter Name ; Value  ; Type                                                                                ;
++----------------+--------+-------------------------------------------------------------------------------------+
+; f              ; 220.00 ; Signed Float                                                                        ;
++----------------+--------+-------------------------------------------------------------------------------------+
 Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
 
 
-+------------------------------------------------------------------------------------------+
-; Parameter Settings for User Entity Instance: music_frequencies:inst|fine_clk_divN:inst17 ;
-+----------------+--------+----------------------------------------------------------------+
-; Parameter Name ; Value  ; Type                                                           ;
-+----------------+--------+----------------------------------------------------------------+
-; f              ; 207.65 ; Signed Float                                                   ;
-+----------------+--------+----------------------------------------------------------------+
++---------------------------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: AudioController:inst|music_frequencies:inst|fine_clk_divN:inst17 ;
++----------------+--------+-------------------------------------------------------------------------------------+
+; Parameter Name ; Value  ; Type                                                                                ;
++----------------+--------+-------------------------------------------------------------------------------------+
+; f              ; 207.65 ; Signed Float                                                                        ;
++----------------+--------+-------------------------------------------------------------------------------------+
 Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
 
 
-+------------------------------------------------------------------------------------------+
-; Parameter Settings for User Entity Instance: music_frequencies:inst|fine_clk_divN:inst18 ;
-+----------------+--------+----------------------------------------------------------------+
-; Parameter Name ; Value  ; Type                                                           ;
-+----------------+--------+----------------------------------------------------------------+
-; f              ; 196.00 ; Signed Float                                                   ;
-+----------------+--------+----------------------------------------------------------------+
++---------------------------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: AudioController:inst|music_frequencies:inst|fine_clk_divN:inst18 ;
++----------------+--------+-------------------------------------------------------------------------------------+
+; Parameter Name ; Value  ; Type                                                                                ;
++----------------+--------+-------------------------------------------------------------------------------------+
+; f              ; 196.00 ; Signed Float                                                                        ;
++----------------+--------+-------------------------------------------------------------------------------------+
 Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
 
 
-+------------------------------------------------------------------------------------------+
-; Parameter Settings for User Entity Instance: music_frequencies:inst|fine_clk_divN:inst19 ;
-+----------------+--------+----------------------------------------------------------------+
-; Parameter Name ; Value  ; Type                                                           ;
-+----------------+--------+----------------------------------------------------------------+
-; f              ; 185.00 ; Signed Float                                                   ;
-+----------------+--------+----------------------------------------------------------------+
++---------------------------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: AudioController:inst|music_frequencies:inst|fine_clk_divN:inst19 ;
++----------------+--------+-------------------------------------------------------------------------------------+
+; Parameter Name ; Value  ; Type                                                                                ;
++----------------+--------+-------------------------------------------------------------------------------------+
+; f              ; 185.00 ; Signed Float                                                                        ;
++----------------+--------+-------------------------------------------------------------------------------------+
 Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
 
 
-+------------------------------------------------------------------------------------------+
-; Parameter Settings for User Entity Instance: music_frequencies:inst|fine_clk_divN:inst20 ;
-+----------------+--------+----------------------------------------------------------------+
-; Parameter Name ; Value  ; Type                                                           ;
-+----------------+--------+----------------------------------------------------------------+
-; f              ; 174.61 ; Signed Float                                                   ;
-+----------------+--------+----------------------------------------------------------------+
++---------------------------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: AudioController:inst|music_frequencies:inst|fine_clk_divN:inst20 ;
++----------------+--------+-------------------------------------------------------------------------------------+
+; Parameter Name ; Value  ; Type                                                                                ;
++----------------+--------+-------------------------------------------------------------------------------------+
+; f              ; 174.61 ; Signed Float                                                                        ;
++----------------+--------+-------------------------------------------------------------------------------------+
 Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
 
 
-+------------------------------------------------------------------------------------------+
-; Parameter Settings for User Entity Instance: music_frequencies:inst|fine_clk_divN:inst21 ;
-+----------------+--------+----------------------------------------------------------------+
-; Parameter Name ; Value  ; Type                                                           ;
-+----------------+--------+----------------------------------------------------------------+
-; f              ; 164.81 ; Signed Float                                                   ;
-+----------------+--------+----------------------------------------------------------------+
++---------------------------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: AudioController:inst|music_frequencies:inst|fine_clk_divN:inst21 ;
++----------------+--------+-------------------------------------------------------------------------------------+
+; Parameter Name ; Value  ; Type                                                                                ;
++----------------+--------+-------------------------------------------------------------------------------------+
+; f              ; 164.81 ; Signed Float                                                                        ;
++----------------+--------+-------------------------------------------------------------------------------------+
 Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
 
 
-+------------------------------------------------------------------------------------------+
-; Parameter Settings for User Entity Instance: music_frequencies:inst|fine_clk_divN:inst22 ;
-+----------------+--------+----------------------------------------------------------------+
-; Parameter Name ; Value  ; Type                                                           ;
-+----------------+--------+----------------------------------------------------------------+
-; f              ; 155.56 ; Signed Float                                                   ;
-+----------------+--------+----------------------------------------------------------------+
++---------------------------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: AudioController:inst|music_frequencies:inst|fine_clk_divN:inst22 ;
++----------------+--------+-------------------------------------------------------------------------------------+
+; Parameter Name ; Value  ; Type                                                                                ;
++----------------+--------+-------------------------------------------------------------------------------------+
+; f              ; 155.56 ; Signed Float                                                                        ;
++----------------+--------+-------------------------------------------------------------------------------------+
 Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
 
 
-+------------------------------------------------------------------------------------------+
-; Parameter Settings for User Entity Instance: music_frequencies:inst|fine_clk_divN:inst23 ;
-+----------------+--------+----------------------------------------------------------------+
-; Parameter Name ; Value  ; Type                                                           ;
-+----------------+--------+----------------------------------------------------------------+
-; f              ; 146.83 ; Signed Float                                                   ;
-+----------------+--------+----------------------------------------------------------------+
++---------------------------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: AudioController:inst|music_frequencies:inst|fine_clk_divN:inst23 ;
++----------------+--------+-------------------------------------------------------------------------------------+
+; Parameter Name ; Value  ; Type                                                                                ;
++----------------+--------+-------------------------------------------------------------------------------------+
+; f              ; 146.83 ; Signed Float                                                                        ;
++----------------+--------+-------------------------------------------------------------------------------------+
 Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
 
 
-+------------------------------------------------------------------------------------------+
-; Parameter Settings for User Entity Instance: music_frequencies:inst|fine_clk_divN:inst24 ;
-+----------------+--------+----------------------------------------------------------------+
-; Parameter Name ; Value  ; Type                                                           ;
-+----------------+--------+----------------------------------------------------------------+
-; f              ; 138.59 ; Signed Float                                                   ;
-+----------------+--------+----------------------------------------------------------------+
++---------------------------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: AudioController:inst|music_frequencies:inst|fine_clk_divN:inst24 ;
++----------------+--------+-------------------------------------------------------------------------------------+
+; Parameter Name ; Value  ; Type                                                                                ;
++----------------+--------+-------------------------------------------------------------------------------------+
+; f              ; 138.59 ; Signed Float                                                                        ;
++----------------+--------+-------------------------------------------------------------------------------------+
 Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
 
 
-+------------------------------------------------------------------------------------------+
-; Parameter Settings for User Entity Instance: music_frequencies:inst|fine_clk_divN:inst25 ;
-+----------------+--------+----------------------------------------------------------------+
-; Parameter Name ; Value  ; Type                                                           ;
-+----------------+--------+----------------------------------------------------------------+
-; f              ; 130.81 ; Signed Float                                                   ;
-+----------------+--------+----------------------------------------------------------------+
++---------------------------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: AudioController:inst|music_frequencies:inst|fine_clk_divN:inst25 ;
++----------------+--------+-------------------------------------------------------------------------------------+
+; Parameter Name ; Value  ; Type                                                                                ;
++----------------+--------+-------------------------------------------------------------------------------------+
+; f              ; 130.81 ; Signed Float                                                                        ;
++----------------+--------+-------------------------------------------------------------------------------------+
 Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
 
 
@@ -615,15 +617,15 @@ Note: In order to hide this table in the UI and the text report file, please set
 ;     arith             ; 625                         ;
 ;         1 data inputs ; 624                         ;
 ;         2 data inputs ; 1                           ;
-;     extend            ; 2                           ;
-;         7 data inputs ; 2                           ;
-;     normal            ; 208                         ;
+;     extend            ; 1                           ;
+;         7 data inputs ; 1                           ;
+;     normal            ; 209                         ;
 ;         1 data inputs ; 2                           ;
 ;         2 data inputs ; 3                           ;
-;         3 data inputs ; 11                          ;
-;         4 data inputs ; 32                          ;
+;         3 data inputs ; 13                          ;
+;         4 data inputs ; 29                          ;
 ;         5 data inputs ; 5                           ;
-;         6 data inputs ; 155                         ;
+;         6 data inputs ; 157                         ;
 ; boundary_port         ; 21                          ;
 ;                       ;                             ;
 ; Max LUT depth         ; 3.40                        ;
@@ -646,106 +648,100 @@ Note: In order to hide this table in the UI and the text report file, please set
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
-    Info: Processing started: Fri Feb 09 12:41:34 2024
+    Info: Processing started: Fri Feb 09 21:56:19 2024
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off audio_controller -c audio_controller
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20030): Parallel compilation is enabled and will use 16 of the 16 processors detected
-Info (12021): Found 1 design units, including 1 entities, in source file sv files/octave_mux.sv
-    Info (12023): Found entity 1: octave_mux File: C:/Users/minec/Desktop/Work/GitHub Repos/PROJ300/Firmware/Audio Controller/sv files/octave_mux.sv Line: 1
-Info (12021): Found 1 design units, including 1 entities, in source file sv files/shift_detector.sv
-    Info (12023): Found entity 1: shift_detector File: C:/Users/minec/Desktop/Work/GitHub Repos/PROJ300/Firmware/Audio Controller/sv files/shift_detector.sv Line: 1
-Info (12021): Found 1 design units, including 1 entities, in source file ps2 files/sv files/seven_seg_controller_tb.sv
-    Info (12023): Found entity 1: seven_seg_controller_tb File: C:/Users/minec/Desktop/Work/GitHub Repos/PROJ300/Firmware/Audio Controller/ps2 files/sv files/seven_seg_controller_tb.sv Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file ps2 files/sv files/seven_seg_controller.sv
     Info (12023): Found entity 1: seven_seg_controller File: C:/Users/minec/Desktop/Work/GitHub Repos/PROJ300/Firmware/Audio Controller/ps2 files/sv files/seven_seg_controller.sv Line: 1
-Info (12021): Found 1 design units, including 1 entities, in source file ps2 files/sv files/ps2controller_tb.sv
-    Info (12023): Found entity 1: PS2controller_tb File: C:/Users/minec/Desktop/Work/GitHub Repos/PROJ300/Firmware/Audio Controller/ps2 files/sv files/PS2controller_tb.sv Line: 1
-Info (12021): Found 1 design units, including 1 entities, in source file ps2 files/sv files/ps2_controller_tb.sv
-    Info (12023): Found entity 1: ps2_controller_tb File: C:/Users/minec/Desktop/Work/GitHub Repos/PROJ300/Firmware/Audio Controller/ps2 files/sv files/ps2_controller_tb.sv Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file ps2 files/sv files/ps2_controller.sv
     Info (12023): Found entity 1: ps2_controller File: C:/Users/minec/Desktop/Work/GitHub Repos/PROJ300/Firmware/Audio Controller/ps2 files/sv files/ps2_controller.sv Line: 1
-Info (12021): Found 1 design units, including 1 entities, in source file ps2 files/sv files/bsy_reader_tb.sv
-    Info (12023): Found entity 1: bsy_reader_tb File: C:/Users/minec/Desktop/Work/GitHub Repos/PROJ300/Firmware/Audio Controller/ps2 files/sv files/bsy_reader_tb.sv Line: 1
-Info (12021): Found 1 design units, including 1 entities, in source file ps2 files/sv files/bsy_reader.sv
-    Info (12023): Found entity 1: bsy_reader File: C:/Users/minec/Desktop/Work/GitHub Repos/PROJ300/Firmware/Audio Controller/ps2 files/sv files/bsy_reader.sv Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file ps2 files/sv files/bsy_detector.sv
+    Info (12023): Found entity 1: bsy_detector File: C:/Users/minec/Desktop/Work/GitHub Repos/PROJ300/Firmware/Audio Controller/ps2 files/sv files/bsy_detector.sv Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file ps2 files/sv files/break_code_detector.sv
     Info (12023): Found entity 1: break_code_detector File: C:/Users/minec/Desktop/Work/GitHub Repos/PROJ300/Firmware/Audio Controller/ps2 files/sv files/break_code_detector.sv Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file ps2 files/ps2controller.bdf
     Info (12023): Found entity 1: PS2controller
+Info (12021): Found 1 design units, including 1 entities, in source file sv files/special_key_detector.sv
+    Info (12023): Found entity 1: special_key_detector File: C:/Users/minec/Desktop/Work/GitHub Repos/PROJ300/Firmware/Audio Controller/sv files/special_key_detector.sv Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file sv files/octave_mux.sv
+    Info (12023): Found entity 1: octave_mux File: C:/Users/minec/Desktop/Work/GitHub Repos/PROJ300/Firmware/Audio Controller/sv files/octave_mux.sv Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file sv files/key_detector.sv
     Info (12023): Found entity 1: key_detector File: C:/Users/minec/Desktop/Work/GitHub Repos/PROJ300/Firmware/Audio Controller/sv files/key_detector.sv Line: 1
 Warning (12019): Can't analyze file -- file sv files/encoder.sv is missing
 Info (12021): Found 1 design units, including 1 entities, in source file sv files/muxn.sv
     Info (12023): Found entity 1: muxN File: C:/Users/minec/Desktop/Work/GitHub Repos/PROJ300/Firmware/Audio Controller/sv files/muxN.sv Line: 1
-Info (12021): Found 1 design units, including 1 entities, in source file sv files/d_ffn.sv
-    Info (12023): Found entity 1: d_ffN File: C:/Users/minec/Desktop/Work/GitHub Repos/PROJ300/Firmware/Audio Controller/sv files/d_ffN.sv Line: 1
+Warning (12019): Can't analyze file -- file sv files/d_ffN.sv is missing
 Info (12021): Found 1 design units, including 1 entities, in source file sv files/fine_clk_divn.sv
     Info (12023): Found entity 1: fine_clk_divN File: C:/Users/minec/Desktop/Work/GitHub Repos/PROJ300/Firmware/Audio Controller/sv files/fine_clk_divN.sv Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file audiocontroller.bdf
     Info (12023): Found entity 1: AudioController
 Info (12021): Found 1 design units, including 1 entities, in source file music_frequencies.bdf
     Info (12023): Found entity 1: music_frequencies
+Info (12021): Found 1 design units, including 1 entities, in source file toplevel.bdf
+    Info (12023): Found entity 1: TopLevel
 Warning (10222): Verilog HDL Parameter Declaration warning at fine_clk_divN.sv(18): Parameter Declaration in module "fine_clk_divN" behaves as a Local Parameter Declaration because the module has a Module Parameter Port List File: C:/Users/minec/Desktop/Work/GitHub Repos/PROJ300/Firmware/Audio Controller/sv files/fine_clk_divN.sv Line: 18
-Info (12127): Elaborating entity "AudioController" for the top level hierarchy
-Info (12128): Elaborating entity "muxN" for hierarchy "muxN:inst4"
-Info (12128): Elaborating entity "music_frequencies" for hierarchy "music_frequencies:inst"
-Info (12128): Elaborating entity "octave_mux" for hierarchy "music_frequencies:inst|octave_mux:inst26"
-Info (12128): Elaborating entity "fine_clk_divN" for hierarchy "music_frequencies:inst|fine_clk_divN:inst"
+Info (12127): Elaborating entity "TopLevel" for the top level hierarchy
+Info (12128): Elaborating entity "AudioController" for hierarchy "AudioController:inst"
+Info (12128): Elaborating entity "muxN" for hierarchy "AudioController:inst|muxN:inst4"
+Info (12128): Elaborating entity "music_frequencies" for hierarchy "AudioController:inst|music_frequencies:inst"
+Info (12128): Elaborating entity "octave_mux" for hierarchy "AudioController:inst|music_frequencies:inst|octave_mux:inst26"
+Info (12128): Elaborating entity "fine_clk_divN" for hierarchy "AudioController:inst|music_frequencies:inst|fine_clk_divN:inst"
 Warning (10230): Verilog HDL assignment warning at fine_clk_divN.sv(38): truncated value with size 32 to match size of target (25) File: C:/Users/minec/Desktop/Work/GitHub Repos/PROJ300/Firmware/Audio Controller/sv files/fine_clk_divN.sv Line: 38
-Info (12128): Elaborating entity "fine_clk_divN" for hierarchy "music_frequencies:inst|fine_clk_divN:inst1"
+Info (12128): Elaborating entity "fine_clk_divN" for hierarchy "AudioController:inst|music_frequencies:inst|fine_clk_divN:inst1"
 Warning (10230): Verilog HDL assignment warning at fine_clk_divN.sv(38): truncated value with size 32 to match size of target (25) File: C:/Users/minec/Desktop/Work/GitHub Repos/PROJ300/Firmware/Audio Controller/sv files/fine_clk_divN.sv Line: 38
-Info (12128): Elaborating entity "fine_clk_divN" for hierarchy "music_frequencies:inst|fine_clk_divN:inst2"
+Info (12128): Elaborating entity "fine_clk_divN" for hierarchy "AudioController:inst|music_frequencies:inst|fine_clk_divN:inst2"
 Warning (10230): Verilog HDL assignment warning at fine_clk_divN.sv(38): truncated value with size 32 to match size of target (25) File: C:/Users/minec/Desktop/Work/GitHub Repos/PROJ300/Firmware/Audio Controller/sv files/fine_clk_divN.sv Line: 38
-Info (12128): Elaborating entity "fine_clk_divN" for hierarchy "music_frequencies:inst|fine_clk_divN:inst3"
+Info (12128): Elaborating entity "fine_clk_divN" for hierarchy "AudioController:inst|music_frequencies:inst|fine_clk_divN:inst3"
 Warning (10230): Verilog HDL assignment warning at fine_clk_divN.sv(38): truncated value with size 32 to match size of target (25) File: C:/Users/minec/Desktop/Work/GitHub Repos/PROJ300/Firmware/Audio Controller/sv files/fine_clk_divN.sv Line: 38
-Info (12128): Elaborating entity "fine_clk_divN" for hierarchy "music_frequencies:inst|fine_clk_divN:inst15"
+Info (12128): Elaborating entity "fine_clk_divN" for hierarchy "AudioController:inst|music_frequencies:inst|fine_clk_divN:inst15"
 Warning (10230): Verilog HDL assignment warning at fine_clk_divN.sv(38): truncated value with size 32 to match size of target (25) File: C:/Users/minec/Desktop/Work/GitHub Repos/PROJ300/Firmware/Audio Controller/sv files/fine_clk_divN.sv Line: 38
-Info (12128): Elaborating entity "fine_clk_divN" for hierarchy "music_frequencies:inst|fine_clk_divN:inst4"
+Info (12128): Elaborating entity "fine_clk_divN" for hierarchy "AudioController:inst|music_frequencies:inst|fine_clk_divN:inst4"
 Warning (10230): Verilog HDL assignment warning at fine_clk_divN.sv(38): truncated value with size 32 to match size of target (25) File: C:/Users/minec/Desktop/Work/GitHub Repos/PROJ300/Firmware/Audio Controller/sv files/fine_clk_divN.sv Line: 38
-Info (12128): Elaborating entity "fine_clk_divN" for hierarchy "music_frequencies:inst|fine_clk_divN:inst5"
+Info (12128): Elaborating entity "fine_clk_divN" for hierarchy "AudioController:inst|music_frequencies:inst|fine_clk_divN:inst5"
 Warning (10230): Verilog HDL assignment warning at fine_clk_divN.sv(38): truncated value with size 32 to match size of target (25) File: C:/Users/minec/Desktop/Work/GitHub Repos/PROJ300/Firmware/Audio Controller/sv files/fine_clk_divN.sv Line: 38
-Info (12128): Elaborating entity "fine_clk_divN" for hierarchy "music_frequencies:inst|fine_clk_divN:inst7"
+Info (12128): Elaborating entity "fine_clk_divN" for hierarchy "AudioController:inst|music_frequencies:inst|fine_clk_divN:inst7"
 Warning (10230): Verilog HDL assignment warning at fine_clk_divN.sv(38): truncated value with size 32 to match size of target (25) File: C:/Users/minec/Desktop/Work/GitHub Repos/PROJ300/Firmware/Audio Controller/sv files/fine_clk_divN.sv Line: 38
-Info (12128): Elaborating entity "fine_clk_divN" for hierarchy "music_frequencies:inst|fine_clk_divN:inst16"
+Info (12128): Elaborating entity "fine_clk_divN" for hierarchy "AudioController:inst|music_frequencies:inst|fine_clk_divN:inst16"
 Warning (10230): Verilog HDL assignment warning at fine_clk_divN.sv(38): truncated value with size 32 to match size of target (25) File: C:/Users/minec/Desktop/Work/GitHub Repos/PROJ300/Firmware/Audio Controller/sv files/fine_clk_divN.sv Line: 38
-Info (12128): Elaborating entity "fine_clk_divN" for hierarchy "music_frequencies:inst|fine_clk_divN:inst8"
+Info (12128): Elaborating entity "fine_clk_divN" for hierarchy "AudioController:inst|music_frequencies:inst|fine_clk_divN:inst8"
 Warning (10230): Verilog HDL assignment warning at fine_clk_divN.sv(38): truncated value with size 32 to match size of target (25) File: C:/Users/minec/Desktop/Work/GitHub Repos/PROJ300/Firmware/Audio Controller/sv files/fine_clk_divN.sv Line: 38
-Info (12128): Elaborating entity "fine_clk_divN" for hierarchy "music_frequencies:inst|fine_clk_divN:inst9"
+Info (12128): Elaborating entity "fine_clk_divN" for hierarchy "AudioController:inst|music_frequencies:inst|fine_clk_divN:inst9"
 Warning (10230): Verilog HDL assignment warning at fine_clk_divN.sv(38): truncated value with size 32 to match size of target (25) File: C:/Users/minec/Desktop/Work/GitHub Repos/PROJ300/Firmware/Audio Controller/sv files/fine_clk_divN.sv Line: 38
-Info (12128): Elaborating entity "fine_clk_divN" for hierarchy "music_frequencies:inst|fine_clk_divN:inst10"
+Info (12128): Elaborating entity "fine_clk_divN" for hierarchy "AudioController:inst|music_frequencies:inst|fine_clk_divN:inst10"
 Warning (10230): Verilog HDL assignment warning at fine_clk_divN.sv(38): truncated value with size 32 to match size of target (25) File: C:/Users/minec/Desktop/Work/GitHub Repos/PROJ300/Firmware/Audio Controller/sv files/fine_clk_divN.sv Line: 38
-Info (12128): Elaborating entity "fine_clk_divN" for hierarchy "music_frequencies:inst|fine_clk_divN:inst14"
+Info (12128): Elaborating entity "fine_clk_divN" for hierarchy "AudioController:inst|music_frequencies:inst|fine_clk_divN:inst14"
 Warning (10230): Verilog HDL assignment warning at fine_clk_divN.sv(38): truncated value with size 32 to match size of target (25) File: C:/Users/minec/Desktop/Work/GitHub Repos/PROJ300/Firmware/Audio Controller/sv files/fine_clk_divN.sv Line: 38
-Info (12128): Elaborating entity "fine_clk_divN" for hierarchy "music_frequencies:inst|fine_clk_divN:inst12"
+Info (12128): Elaborating entity "fine_clk_divN" for hierarchy "AudioController:inst|music_frequencies:inst|fine_clk_divN:inst12"
 Warning (10230): Verilog HDL assignment warning at fine_clk_divN.sv(38): truncated value with size 32 to match size of target (25) File: C:/Users/minec/Desktop/Work/GitHub Repos/PROJ300/Firmware/Audio Controller/sv files/fine_clk_divN.sv Line: 38
-Info (12128): Elaborating entity "fine_clk_divN" for hierarchy "music_frequencies:inst|fine_clk_divN:inst13"
+Info (12128): Elaborating entity "fine_clk_divN" for hierarchy "AudioController:inst|music_frequencies:inst|fine_clk_divN:inst13"
 Warning (10230): Verilog HDL assignment warning at fine_clk_divN.sv(38): truncated value with size 32 to match size of target (25) File: C:/Users/minec/Desktop/Work/GitHub Repos/PROJ300/Firmware/Audio Controller/sv files/fine_clk_divN.sv Line: 38
-Info (12128): Elaborating entity "fine_clk_divN" for hierarchy "music_frequencies:inst|fine_clk_divN:inst17"
+Info (12128): Elaborating entity "fine_clk_divN" for hierarchy "AudioController:inst|music_frequencies:inst|fine_clk_divN:inst17"
 Warning (10230): Verilog HDL assignment warning at fine_clk_divN.sv(38): truncated value with size 32 to match size of target (25) File: C:/Users/minec/Desktop/Work/GitHub Repos/PROJ300/Firmware/Audio Controller/sv files/fine_clk_divN.sv Line: 38
-Info (12128): Elaborating entity "fine_clk_divN" for hierarchy "music_frequencies:inst|fine_clk_divN:inst18"
+Info (12128): Elaborating entity "fine_clk_divN" for hierarchy "AudioController:inst|music_frequencies:inst|fine_clk_divN:inst18"
 Warning (10230): Verilog HDL assignment warning at fine_clk_divN.sv(38): truncated value with size 32 to match size of target (25) File: C:/Users/minec/Desktop/Work/GitHub Repos/PROJ300/Firmware/Audio Controller/sv files/fine_clk_divN.sv Line: 38
-Info (12128): Elaborating entity "fine_clk_divN" for hierarchy "music_frequencies:inst|fine_clk_divN:inst19"
+Info (12128): Elaborating entity "fine_clk_divN" for hierarchy "AudioController:inst|music_frequencies:inst|fine_clk_divN:inst19"
 Warning (10230): Verilog HDL assignment warning at fine_clk_divN.sv(38): truncated value with size 32 to match size of target (25) File: C:/Users/minec/Desktop/Work/GitHub Repos/PROJ300/Firmware/Audio Controller/sv files/fine_clk_divN.sv Line: 38
-Info (12128): Elaborating entity "fine_clk_divN" for hierarchy "music_frequencies:inst|fine_clk_divN:inst20"
+Info (12128): Elaborating entity "fine_clk_divN" for hierarchy "AudioController:inst|music_frequencies:inst|fine_clk_divN:inst20"
 Warning (10230): Verilog HDL assignment warning at fine_clk_divN.sv(38): truncated value with size 32 to match size of target (25) File: C:/Users/minec/Desktop/Work/GitHub Repos/PROJ300/Firmware/Audio Controller/sv files/fine_clk_divN.sv Line: 38
-Info (12128): Elaborating entity "fine_clk_divN" for hierarchy "music_frequencies:inst|fine_clk_divN:inst21"
+Info (12128): Elaborating entity "fine_clk_divN" for hierarchy "AudioController:inst|music_frequencies:inst|fine_clk_divN:inst21"
 Warning (10230): Verilog HDL assignment warning at fine_clk_divN.sv(38): truncated value with size 32 to match size of target (25) File: C:/Users/minec/Desktop/Work/GitHub Repos/PROJ300/Firmware/Audio Controller/sv files/fine_clk_divN.sv Line: 38
-Info (12128): Elaborating entity "fine_clk_divN" for hierarchy "music_frequencies:inst|fine_clk_divN:inst22"
+Info (12128): Elaborating entity "fine_clk_divN" for hierarchy "AudioController:inst|music_frequencies:inst|fine_clk_divN:inst22"
 Warning (10230): Verilog HDL assignment warning at fine_clk_divN.sv(38): truncated value with size 32 to match size of target (25) File: C:/Users/minec/Desktop/Work/GitHub Repos/PROJ300/Firmware/Audio Controller/sv files/fine_clk_divN.sv Line: 38
-Info (12128): Elaborating entity "fine_clk_divN" for hierarchy "music_frequencies:inst|fine_clk_divN:inst23"
+Info (12128): Elaborating entity "fine_clk_divN" for hierarchy "AudioController:inst|music_frequencies:inst|fine_clk_divN:inst23"
 Warning (10230): Verilog HDL assignment warning at fine_clk_divN.sv(38): truncated value with size 32 to match size of target (25) File: C:/Users/minec/Desktop/Work/GitHub Repos/PROJ300/Firmware/Audio Controller/sv files/fine_clk_divN.sv Line: 38
-Info (12128): Elaborating entity "fine_clk_divN" for hierarchy "music_frequencies:inst|fine_clk_divN:inst24"
+Info (12128): Elaborating entity "fine_clk_divN" for hierarchy "AudioController:inst|music_frequencies:inst|fine_clk_divN:inst24"
 Warning (10230): Verilog HDL assignment warning at fine_clk_divN.sv(38): truncated value with size 32 to match size of target (25) File: C:/Users/minec/Desktop/Work/GitHub Repos/PROJ300/Firmware/Audio Controller/sv files/fine_clk_divN.sv Line: 38
-Info (12128): Elaborating entity "fine_clk_divN" for hierarchy "music_frequencies:inst|fine_clk_divN:inst25"
+Info (12128): Elaborating entity "fine_clk_divN" for hierarchy "AudioController:inst|music_frequencies:inst|fine_clk_divN:inst25"
 Warning (10230): Verilog HDL assignment warning at fine_clk_divN.sv(38): truncated value with size 32 to match size of target (25) File: C:/Users/minec/Desktop/Work/GitHub Repos/PROJ300/Firmware/Audio Controller/sv files/fine_clk_divN.sv Line: 38
-Info (12128): Elaborating entity "shift_detector" for hierarchy "shift_detector:inst7"
+Info (12128): Elaborating entity "special_key_detector" for hierarchy "AudioController:inst|special_key_detector:inst7"
+Info (12128): Elaborating entity "key_detector" for hierarchy "AudioController:inst|key_detector:inst1"
 Info (12128): Elaborating entity "PS2controller" for hierarchy "PS2controller:inst2"
-Info (12128): Elaborating entity "bsy_reader" for hierarchy "PS2controller:inst2|bsy_reader:inst2"
+Info (12128): Elaborating entity "bsy_detector" for hierarchy "PS2controller:inst2|bsy_detector:inst2"
 Info (12128): Elaborating entity "ps2_controller" for hierarchy "PS2controller:inst2|ps2_controller:inst1"
-Warning (10230): Verilog HDL assignment warning at ps2_controller.sv(21): truncated value with size 32 to match size of target (4) File: C:/Users/minec/Desktop/Work/GitHub Repos/PROJ300/Firmware/Audio Controller/ps2 files/sv files/ps2_controller.sv Line: 21
+Warning (10230): Verilog HDL assignment warning at ps2_controller.sv(30): truncated value with size 32 to match size of target (4) File: C:/Users/minec/Desktop/Work/GitHub Repos/PROJ300/Firmware/Audio Controller/ps2 files/sv files/ps2_controller.sv Line: 30
 Info (12128): Elaborating entity "break_code_detector" for hierarchy "PS2controller:inst2|break_code_detector:inst"
-Warning (10230): Verilog HDL assignment warning at break_code_detector.sv(27): truncated value with size 32 to match size of target (25) File: C:/Users/minec/Desktop/Work/GitHub Repos/PROJ300/Firmware/Audio Controller/ps2 files/sv files/break_code_detector.sv Line: 27
-Info (12128): Elaborating entity "key_detector" for hierarchy "key_detector:inst1"
+Warning (10230): Verilog HDL assignment warning at break_code_detector.sv(32): truncated value with size 32 to match size of target (25) File: C:/Users/minec/Desktop/Work/GitHub Repos/PROJ300/Firmware/Audio Controller/ps2 files/sv files/break_code_detector.sv Line: 32
 Info (12128): Elaborating entity "seven_seg_controller" for hierarchy "seven_seg_controller:inst3"
 Info (286030): Timing-Driven Synthesis is running
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
@@ -754,9 +750,9 @@ Info (21057): Implemented 870 device resources after synthesis - the final resou
     Info (21058): Implemented 4 input pins
     Info (21059): Implemented 17 output pins
     Info (21061): Implemented 849 logic cells
-Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 29 warnings
-    Info: Peak virtual memory: 4905 megabytes
-    Info: Processing ended: Fri Feb 09 12:41:40 2024
+Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 30 warnings
+    Info: Peak virtual memory: 4906 megabytes
+    Info: Processing ended: Fri Feb 09 21:56:25 2024
     Info: Elapsed time: 00:00:06
     Info: Total CPU time (on all processors): 00:00:07
 

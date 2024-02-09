@@ -1,4 +1,10 @@
-module key_detector (output logic [3:0] q, input logic [7:0] keyboard_data, input logic clk, rst, shift_pressed);
+module key_detector (output logic [3:0] q, input logic [7:0] keyboard_data, input logic clk, rst, enter_pressed);
+
+
+// This module is to be connected to the SEL of a 16x4 MUX
+// depending on what key is pressed, a select number is chosen
+// to choose frequencies from the 'music_frequencies' module
+// to pass through the MUX
 
 
 always_ff @(posedge clk or posedge rst) begin
@@ -12,8 +18,13 @@ always_ff @(posedge clk or posedge rst) begin
     else begin
 
 
-        // key# -> Lshift+key
-        // e.g. A# -> Lshift + A
+        // if Enter key is pressed
+
+        case(enter_pressed)
+
+        
+        // key# -> Enter+key
+        // e.g. A# -> Enter + A
 
         // we have:
         // A# (2)
@@ -21,10 +32,6 @@ always_ff @(posedge clk or posedge rst) begin
         // F# (6)
         // D# (9)
         // C# (11)
-
-        case(shift_pressed)
-
-        // if shift key is pressed
         
         'd1 : begin
 
@@ -165,14 +172,7 @@ always_ff @(posedge clk or posedge rst) begin
     end
 
 
-    
-
-
-
 end
-
-
-
 
 
 

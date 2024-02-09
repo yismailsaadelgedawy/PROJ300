@@ -1,5 +1,9 @@
 module key_detector_tb;
 
+
+// outdated, but I know it works //
+// may update later //
+
 // internal wires
 
 // in
