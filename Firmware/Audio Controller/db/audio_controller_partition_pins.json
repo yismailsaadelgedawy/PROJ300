@@ -12,6 +12,10 @@
 					"strict" : false
 				},
 				{
+					"name" : "led1",
+					"strict" : false
+				},
+				{
 					"name" : "disp0[0]",
 					"strict" : false
 				},

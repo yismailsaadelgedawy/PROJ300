@@ -21,7 +21,7 @@ https://fpgasoftware.intel.com/eula.
 */
 (header "symbol" (version "1.1"))
 (symbol
-	(rect 16 16 160 96)
+	(rect 16 16 208 96)
 	(text "shift_detector" (rect 5 0 59 12)(font "Arial" ))
 	(text "inst" (rect 8 64 20 76)(font "Arial" ))
 	(port
@@ -39,13 +39,20 @@ https://fpgasoftware.intel.com/eula.
 		(line (pt 0 48)(pt 16 48)(line_width 1))
 	)
 	(port
-		(pt 144 32)
+		(pt 192 32)
 		(output)
-		(text "q" (rect 0 0 4 12)(font "Arial" ))
-		(text "q" (rect 119 27 123 39)(font "Arial" ))
-		(line (pt 144 32)(pt 128 32)(line_width 1))
+		(text "sharp_toggle" (rect 0 0 50 12)(font "Arial" ))
+		(text "sharp_toggle" (rect 121 27 171 39)(font "Arial" ))
+		(line (pt 192 32)(pt 176 32)(line_width 1))
+	)
+	(port
+		(pt 192 48)
+		(output)
+		(text "octave_toggle" (rect 0 0 55 12)(font "Arial" ))
+		(text "octave_toggle" (rect 116 43 171 55)(font "Arial" ))
+		(line (pt 192 48)(pt 176 48)(line_width 1))
 	)
 	(drawing
-		(rectangle (rect 16 16 128 64)(line_width 1))
+		(rectangle (rect 16 16 176 64)(line_width 1))
 	)
 )

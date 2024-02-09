@@ -21,7 +21,7 @@ https://fpgasoftware.intel.com/eula.
 */
 (header "symbol" (version "1.2"))
 (symbol
-	(rect 16 16 152 112)
+	(rect 16 16 200 112)
 	(text "music_frequencies" (rect 5 0 114 19)(font "Intel Clear" (font_size 8)))
 	(text "inst" (rect 8 75 24 92)(font "Intel Clear" ))
 	(port
@@ -39,13 +39,20 @@ https://fpgasoftware.intel.com/eula.
 		(line (pt 0 48)(pt 16 48))
 	)
 	(port
-		(pt 136 32)
+		(pt 0 64)
+		(input)
+		(text "octave_sel" (rect 0 0 62 19)(font "Intel Clear" (font_size 8)))
+		(text "octave_sel" (rect 21 59 83 78)(font "Intel Clear" (font_size 8)))
+		(line (pt 0 64)(pt 16 64))
+	)
+	(port
+		(pt 184 32)
 		(output)
 		(text "data[12..0]" (rect 0 0 66 19)(font "Intel Clear" (font_size 8)))
-		(text "data[12..0]" (rect 49 27 115 46)(font "Intel Clear" (font_size 8)))
-		(line (pt 136 32)(pt 120 32)(line_width 3))
+		(text "data[12..0]" (rect 97 27 163 46)(font "Intel Clear" (font_size 8)))
+		(line (pt 184 32)(pt 168 32)(line_width 3))
 	)
 	(drawing
-		(rectangle (rect 16 16 120 80))
+		(rectangle (rect 16 16 168 80))
 	)
 )
