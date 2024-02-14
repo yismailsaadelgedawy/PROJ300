@@ -1,5 +1,5 @@
 Fitter report for uartt
-Wed Feb 14 04:00:19 2024
+Wed Feb 14 17:00:33 2024
 Quartus Prime Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
 
 
@@ -63,7 +63,7 @@ https://fpgasoftware.intel.com/eula.
 +-------------------------------------------------------------------------------+
 ; Fitter Summary                                                                ;
 +---------------------------------+---------------------------------------------+
-; Fitter Status                   ; Successful - Wed Feb 14 04:00:19 2024       ;
+; Fitter Status                   ; Successful - Wed Feb 14 17:00:33 2024       ;
 ; Quartus Prime Version           ; 20.1.1 Build 720 11/11/2020 SJ Lite Edition ;
 ; Revision Name                   ; uartt                                       ;
 ; Top-level Entity Name           ; TopLevel                                    ;
@@ -975,10 +975,10 @@ Note: Pin directions (input, output or bidir) are based on device operating in u
 ; Compilation Hierarchy Node      ; ALMs needed [=A-B+C] ; [A] ALMs used in final placement ; [B] Estimate of ALMs recoverable by dense packing ; [C] Estimate of ALMs unavailable ; ALMs used for memory ; Combinational ALUTs ; Dedicated Logic Registers ; I/O Registers ; Block Memory Bits ; M10Ks ; DSP Blocks ; Pins ; Virtual Pins ; Full Hierarchy Name                       ; Entity Name          ; Library Name ;
 +---------------------------------+----------------------+----------------------------------+---------------------------------------------------+----------------------------------+----------------------+---------------------+---------------------------+---------------+-------------------+-------+------------+------+--------------+-------------------------------------------+----------------------+--------------+
 ; |TopLevel                       ; 33.0 (0.5)           ; 39.5 (0.5)                       ; 6.5 (0.0)                                         ; 0.0 (0.0)                        ; 0.0 (0.0)            ; 62 (1)              ; 52 (0)                    ; 0 (0)         ; 0                 ; 0     ; 0          ; 27   ; 0            ; |TopLevel                                 ; TopLevel             ; work         ;
-;    |UART:inst|                  ; 25.5 (0.0)           ; 28.3 (0.0)                       ; 2.8 (0.0)                                         ; 0.0 (0.0)                        ; 0.0 (0.0)            ; 47 (0)              ; 44 (0)                    ; 0 (0)         ; 0                 ; 0     ; 0          ; 0    ; 0            ; |TopLevel|UART:inst                       ; UART                 ; work         ;
+;    |UART:inst|                  ; 27.7 (0.0)           ; 32.3 (0.0)                       ; 4.7 (0.0)                                         ; 0.0 (0.0)                        ; 0.0 (0.0)            ; 47 (0)              ; 52 (0)                    ; 0 (0)         ; 0                 ; 0     ; 0          ; 0    ; 0            ; |TopLevel|UART:inst                       ; UART                 ; work         ;
+;       |bsy_detector:inst2|      ; 2.2 (2.2)            ; 4.0 (4.0)                        ; 1.8 (1.8)                                         ; 0.0 (0.0)                        ; 0.0 (0.0)            ; 0 (0)               ; 8 (8)                     ; 0 (0)         ; 0                 ; 0     ; 0          ; 0    ; 0            ; |TopLevel|UART:inst|bsy_detector:inst2    ; bsy_detector         ; work         ;
 ;       |uart_clk_divN:inst|      ; 21.0 (21.0)          ; 21.0 (21.0)                      ; 0.0 (0.0)                                         ; 0.0 (0.0)                        ; 0.0 (0.0)            ; 40 (40)             ; 28 (28)                   ; 0 (0)         ; 0                 ; 0     ; 0          ; 0    ; 0            ; |TopLevel|UART:inst|uart_clk_divN:inst    ; uart_clk_divN        ; work         ;
 ;       |uart_controller:inst1|   ; 3.5 (3.5)            ; 7.3 (7.3)                        ; 3.8 (3.8)                                         ; 0.0 (0.0)                        ; 0.0 (0.0)            ; 7 (7)               ; 16 (16)                   ; 0 (0)         ; 0                 ; 0     ; 0          ; 0    ; 0            ; |TopLevel|UART:inst|uart_controller:inst1 ; uart_controller      ; work         ;
-;    |bsy_detector:inst2|         ; 2.2 (2.2)            ; 4.0 (4.0)                        ; 1.8 (1.8)                                         ; 0.0 (0.0)                        ; 0.0 (0.0)            ; 0 (0)               ; 8 (8)                     ; 0 (0)         ; 0                 ; 0     ; 0          ; 0    ; 0            ; |TopLevel|bsy_detector:inst2              ; bsy_detector         ; work         ;
 ;    |seven_seg_controller:inst3| ; 4.8 (4.8)            ; 6.7 (6.7)                        ; 1.8 (1.8)                                         ; 0.0 (0.0)                        ; 0.0 (0.0)            ; 14 (14)             ; 0 (0)                     ; 0 (0)         ; 0                 ; 0     ; 0          ; 0    ; 0            ; |TopLevel|seven_seg_controller:inst3      ; seven_seg_controller ; work         ;
 +---------------------------------+----------------------+----------------------------------+---------------------------------------------------+----------------------------------+----------------------+---------------------+---------------------------+---------------+-------------------+-------+------------+------+--------------+-------------------------------------------+----------------------+--------------+
 Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
@@ -1025,14 +1025,14 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; Source Pin / Fanout                                             ; Pad To Core Index ; Setting ;
 +-----------------------------------------------------------------+-------------------+---------+
 ; SW0                                                             ;                   ;         ;
-;      - bsy_detector:inst2|data_out[0]                           ; 0                 ; 0       ;
-;      - bsy_detector:inst2|data_out[1]                           ; 0                 ; 0       ;
-;      - bsy_detector:inst2|data_out[2]                           ; 0                 ; 0       ;
-;      - bsy_detector:inst2|data_out[3]                           ; 0                 ; 0       ;
-;      - bsy_detector:inst2|data_out[4]                           ; 0                 ; 0       ;
-;      - bsy_detector:inst2|data_out[5]                           ; 0                 ; 0       ;
-;      - bsy_detector:inst2|data_out[6]                           ; 0                 ; 0       ;
-;      - bsy_detector:inst2|data_out[7]                           ; 0                 ; 0       ;
+;      - UART:inst|bsy_detector:inst2|data_out[0]                 ; 0                 ; 0       ;
+;      - UART:inst|bsy_detector:inst2|data_out[1]                 ; 0                 ; 0       ;
+;      - UART:inst|bsy_detector:inst2|data_out[2]                 ; 0                 ; 0       ;
+;      - UART:inst|bsy_detector:inst2|data_out[3]                 ; 0                 ; 0       ;
+;      - UART:inst|bsy_detector:inst2|data_out[4]                 ; 0                 ; 0       ;
+;      - UART:inst|bsy_detector:inst2|data_out[5]                 ; 0                 ; 0       ;
+;      - UART:inst|bsy_detector:inst2|data_out[6]                 ; 0                 ; 0       ;
+;      - UART:inst|bsy_detector:inst2|data_out[7]                 ; 0                 ; 0       ;
 ;      - UART:inst|uart_controller:inst1|shift_reg[7]             ; 0                 ; 0       ;
 ;      - UART:inst|uart_controller:inst1|shift_reg[6]             ; 0                 ; 0       ;
 ;      - UART:inst|uart_controller:inst1|shift_reg[5]             ; 0                 ; 0       ;
@@ -1309,7 +1309,7 @@ This will disable optimization of problematic paths and expose them for further 
 ; UART:inst|uart_controller:inst1|counter_reg[3]   ; UART:inst|uart_controller:inst1|counter_reg[0]  ; 0.784             ;
 ; UART:inst|uart_controller:inst1|counter_reg[1]   ; UART:inst|uart_controller:inst1|counter_reg[2]  ; 0.778             ;
 ; UART:inst|uart_clk_divN:inst|bsy_posedge_waiting ; UART:inst|uart_clk_divN:inst|transmission_state ; 0.361             ;
-; UART:inst|uart_controller:inst1|shift_reg[0]     ; bsy_detector:inst2|data_out[0]                  ; 0.107             ;
+; UART:inst|uart_controller:inst1|shift_reg[0]     ; UART:inst|bsy_detector:inst2|data_out[0]        ; 0.107             ;
 +--------------------------------------------------+-------------------------------------------------+-------------------+
 Note: This table only shows the top 41 path(s) that have the largest delay added for hold.
 
@@ -1337,7 +1337,7 @@ Info (332123): Deriving Clock Uncertainty. Please refer to report_sdc in the Tim
 Info (332130): Timing requirements not specified -- quality metrics such as performance may be sacrificed to reduce compilation time.
 Info (176235): Finished register packing
     Extra Info (176219): No registers were packed into other blocks
-Info (11798): Fitter preparation operations ending: elapsed time is 00:00:03
+Info (11798): Fitter preparation operations ending: elapsed time is 00:00:02
 Info (170189): Fitter placement preparation operations beginning
 Info (14951): The Fitter is using Advanced Physical Optimization.
 Info (170190): Fitter placement preparation operations ending: elapsed time is 00:00:02
@@ -1358,8 +1358,8 @@ Info (334004): Delay annotation completed successfully
 Info (11801): Fitter post-fit operations ending: elapsed time is 00:00:02
 Info (144001): Generated suppressed messages file C:/Users/minec/Desktop/Work/GitHub Repos/PROJ300/Firmware/UART/output_files/uartt.fit.smsg
 Info: Quartus Prime Fitter was successful. 0 errors, 4 warnings
-    Info: Peak virtual memory: 7544 megabytes
-    Info: Processing ended: Wed Feb 14 04:00:19 2024
+    Info: Peak virtual memory: 7541 megabytes
+    Info: Processing ended: Wed Feb 14 17:00:33 2024
     Info: Elapsed time: 00:00:14
     Info: Total CPU time (on all processors): 00:00:46
 
