@@ -1,15 +1,15 @@
-module uart_clk_divN #(parameter baud=9600) (output logic clk_out, input logic clk_in, rst, transmission_state);
+module uart_clk_divN #(parameter baud=9600) (output logic clk_out, input logic clk_in, rst, sense, bsy);
 
 // a custom version of fine_clk_divN the module // 
-// sense is the UART TX: detects negedge (exit idle state) //
 // bsy comes from the uart_controller chip //
-
 
 // transmission_state: flag to indicate state of transmission state (from uart_controller)
 // 1: sot (start of transmission)
 // 0: eot (end of transmission)
 
+logic transmission_state = 0;
 
+logic bsy_posedge_waiting = 0;
 
 // 25 bits
 logic [24:0] counter_reg;
@@ -33,6 +33,31 @@ always_ff @(posedge clk_in) begin
     end
 
     0 : begin
+
+        // no longer idle
+        // this takes precedence
+        if (!sense) begin
+
+            transmission_state <= 1;    // sot
+
+        end
+
+        else if (!bsy) begin
+
+            bsy_posedge_waiting <= 1;
+
+
+        end
+
+
+        if (bsy_posedge_waiting == 1 && bsy == 1) begin
+
+            transmission_state <= 0;    // eot
+            bsy_posedge_waiting <= 0;
+            
+
+
+        end
 
 
         if (transmission_state == 1) begin

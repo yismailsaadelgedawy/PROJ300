@@ -5,7 +5,7 @@ module uart_clk_divN_tb;
 // in
 logic clk_in;
 logic rst;
-logic transmission_state;
+logic sense, bsy;
 
 
 // out
@@ -18,7 +18,8 @@ uart_clk_divN dut (
     // in
     .clk_in(clk_in),
     .rst(rst),
-    .transmission_state(transmission_state),
+    .sense(sense),
+    .bsy(bsy),
 
     // out
     .clk_out(clk_out)
@@ -43,7 +44,9 @@ initial begin
     
     // reset state
     rst = 1;
-    transmission_state = 0;
+    sense = 1;
+    bsy = 1;
+    
 
     #15ns;
     assert (clk_out == 0) $display("passed reset"); else $error("failed reset");
@@ -51,20 +54,79 @@ initial begin
 
     // idle state
     rst = 0;
-    transmission_state = 0;
-
+    
     #2ms;
 
     // transmission state
-    transmission_state = 1;
+    sense = 0; // start bit
+    #0.5ms;
 
-    #1ms; // run for 10 bits = 10*1/9600 = 1ms
+    sense = 1; // data frame
+    #0.5ms;
+    sense = 0;
+    #0.5ms;
+    sense = 0;
+    #0.5ms;
+    sense = 1;
+    #0.5ms;
+    sense = 0;
+    #0.5ms;
+    sense = 0;
+    #0.5ms;
+    sense = 1;
+    #0.5ms;
+    sense = 0;
+    #0.5ms;
+
+    sense = 1; // stop bit
+    bsy = 0;
+    #0.5ms;
+
+    
+    bsy = 1;
     
 
     // back to idle state
-    transmission_state = 0;
+    
 
-    #2ms;   
+    #2ms;
+
+
+
+
+    // transmission state #2
+    sense = 0; // start bit
+    #0.5ms;
+
+    sense = 1; // data frame
+    #0.5ms;
+    sense = 0;
+    #0.5ms;
+    sense = 0;
+    #0.5ms;
+    sense = 1;
+    #0.5ms;
+    sense = 0;
+    #0.5ms;
+    sense = 0;
+    #0.5ms;
+    sense = 1;
+    #0.5ms;
+    sense = 0;
+    #0.5ms;
+
+    sense = 1; // stop bit
+    bsy = 0;
+    #0.5ms;
+
+    
+    bsy = 1;
+    
+
+    // back to idle state
+    
+
+    #2ms;      
 
     $stop;
 

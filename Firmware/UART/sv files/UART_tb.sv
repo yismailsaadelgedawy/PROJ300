@@ -122,6 +122,78 @@ initial begin
     #200us;
 
 
+
+
+
+
+    ////////// begin transmission #2 //////////
+
+
+    // start bit (0)
+    UART2_RX = 0;
+    #104.167us;
+    
+    
+    // start of data frame - sending 'J' = 0x4A = 01001010 (LSB first) //
+
+    // bit 0
+    UART2_RX = 0;
+    #104.167us;
+    
+    // bit 1
+    UART2_RX = 1;
+    #104.167us;
+    
+    
+    // bit 2
+    UART2_RX = 0;
+    #104.167us;
+       
+
+    // bit 3
+    UART2_RX = 1;
+    #104.167us;
+    
+
+    // bit 4
+    UART2_RX = 0;
+    #104.167us;
+    
+    
+    // bit 5
+    UART2_RX = 0;
+    #104.167us;
+       
+
+    // bit 6
+    UART2_RX = 1;
+    #104.167us;
+    
+    
+    // bit 7
+    UART2_RX = 0;
+    #104.167us;
+    
+    // end of data frame  //
+
+
+    // stop bit (1)
+    UART2_RX = 1;
+    #104.167us;
+    
+    
+
+
+    ////////// end transmission //////////
+
+
+
+    // back to idle
+
+    // run for a bit
+    #200us;
+
+
     
 
 

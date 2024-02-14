@@ -1,5 +1,5 @@
 Analysis & Synthesis report for uartt
-Wed Feb 14 00:18:13 2024
+Wed Feb 14 04:00:04 2024
 Quartus Prime Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
 
 
@@ -14,11 +14,12 @@ Quartus Prime Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
   6. Analysis & Synthesis Resource Usage Summary
   7. Analysis & Synthesis Resource Utilization by Entity
   8. General Register Statistics
-  9. Multiplexer Restructuring Statistics (Restructuring Performed)
- 10. Parameter Settings for User Entity Instance: uart_clk_divN:inst
- 11. Post-Synthesis Netlist Statistics for Top Partition
- 12. Elapsed Time Per Partition
- 13. Analysis & Synthesis Messages
+  9. Inverted Register Statistics
+ 10. Multiplexer Restructuring Statistics (Restructuring Performed)
+ 11. Parameter Settings for User Entity Instance: UART:inst|uart_clk_divN:inst
+ 12. Post-Synthesis Netlist Statistics for Top Partition
+ 13. Elapsed Time Per Partition
+ 14. Analysis & Synthesis Messages
 
 
 
@@ -45,14 +46,14 @@ https://fpgasoftware.intel.com/eula.
 +-------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                  ;
 +---------------------------------+---------------------------------------------+
-; Analysis & Synthesis Status     ; Successful - Wed Feb 14 00:18:13 2024       ;
+; Analysis & Synthesis Status     ; Successful - Wed Feb 14 04:00:04 2024       ;
 ; Quartus Prime Version           ; 20.1.1 Build 720 11/11/2020 SJ Lite Edition ;
 ; Revision Name                   ; uartt                                       ;
-; Top-level Entity Name           ; UART                                        ;
+; Top-level Entity Name           ; TopLevel                                    ;
 ; Family                          ; Cyclone V                                   ;
 ; Logic utilization (in ALMs)     ; N/A                                         ;
-; Total registers                 ; 39                                          ;
-; Total pins                      ; 11                                          ;
+; Total registers                 ; 49                                          ;
+; Total pins                      ; 27                                          ;
 ; Total virtual pins              ; 0                                           ;
 ; Total block memory bits         ; 0                                           ;
 ; Total DSP Blocks                ; 0                                           ;
@@ -71,7 +72,7 @@ https://fpgasoftware.intel.com/eula.
 ; Option                                                                          ; Setting            ; Default Value      ;
 +---------------------------------------------------------------------------------+--------------------+--------------------+
 ; Device                                                                          ; 5CEBA4F23C7        ;                    ;
-; Top-level entity name                                                           ; UART               ; uartt              ;
+; Top-level entity name                                                           ; TopLevel           ; uartt              ;
 ; Family name                                                                     ; Cyclone V          ; Cyclone V          ;
 ; Use smart compilation                                                           ; Off                ; Off                ;
 ; Enable parallel Assembler and Timing Analyzer during compilation                ; On                 ; On                 ;
@@ -169,53 +170,59 @@ https://fpgasoftware.intel.com/eula.
 +----------------------------+-------------+
 
 
-+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Source Files Read                                                                                                                                                         ;
-+----------------------------------+-----------------+------------------------------------+--------------------------------------------------------------------------------------------+---------+
-; File Name with User-Entered Path ; Used in Netlist ; File Type                          ; File Name with Absolute Path                                                               ; Library ;
-+----------------------------------+-----------------+------------------------------------+--------------------------------------------------------------------------------------------+---------+
-; sv files/uart_controller.sv      ; yes             ; User SystemVerilog HDL File        ; C:/Users/minec/Desktop/Work/GitHub Repos/PROJ300/Firmware/UART/sv files/uart_controller.sv ;         ;
-; sv files/uart_clk_divN.sv        ; yes             ; User SystemVerilog HDL File        ; C:/Users/minec/Desktop/Work/GitHub Repos/PROJ300/Firmware/UART/sv files/uart_clk_divN.sv   ;         ;
-; UART.bdf                         ; yes             ; User Block Diagram/Schematic File  ; C:/Users/minec/Desktop/Work/GitHub Repos/PROJ300/Firmware/UART/UART.bdf                    ;         ;
-+----------------------------------+-----------------+------------------------------------+--------------------------------------------------------------------------------------------+---------+
++-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Source Files Read                                                                                                                                                              ;
++----------------------------------+-----------------+------------------------------------+-------------------------------------------------------------------------------------------------+---------+
+; File Name with User-Entered Path ; Used in Netlist ; File Type                          ; File Name with Absolute Path                                                                    ; Library ;
++----------------------------------+-----------------+------------------------------------+-------------------------------------------------------------------------------------------------+---------+
+; sv files/seven_seg_controller.sv ; yes             ; User SystemVerilog HDL File        ; C:/Users/minec/Desktop/Work/GitHub Repos/PROJ300/Firmware/UART/sv files/seven_seg_controller.sv ;         ;
+; sv files/bsy_detector.sv         ; yes             ; User SystemVerilog HDL File        ; C:/Users/minec/Desktop/Work/GitHub Repos/PROJ300/Firmware/UART/sv files/bsy_detector.sv         ;         ;
+; sv files/uart_controller.sv      ; yes             ; User SystemVerilog HDL File        ; C:/Users/minec/Desktop/Work/GitHub Repos/PROJ300/Firmware/UART/sv files/uart_controller.sv      ;         ;
+; sv files/uart_clk_divN.sv        ; yes             ; User SystemVerilog HDL File        ; C:/Users/minec/Desktop/Work/GitHub Repos/PROJ300/Firmware/UART/sv files/uart_clk_divN.sv        ;         ;
+; UART.bdf                         ; yes             ; User Block Diagram/Schematic File  ; C:/Users/minec/Desktop/Work/GitHub Repos/PROJ300/Firmware/UART/UART.bdf                         ;         ;
+; output_files/TopLevel.bdf        ; yes             ; User Block Diagram/Schematic File  ; C:/Users/minec/Desktop/Work/GitHub Repos/PROJ300/Firmware/UART/output_files/TopLevel.bdf        ;         ;
++----------------------------------+-----------------+------------------------------------+-------------------------------------------------------------------------------------------------+---------+
 
 
-+---------------------------------------------------------------+
-; Analysis & Synthesis Resource Usage Summary                   ;
-+---------------------------------------------+-----------------+
-; Resource                                    ; Usage           ;
-+---------------------------------------------+-----------------+
-; Estimate of Logic utilization (ALMs needed) ; 26              ;
-;                                             ;                 ;
-; Combinational ALUT usage for logic          ; 45              ;
-;     -- 7 input functions                    ; 0               ;
-;     -- 6 input functions                    ; 4               ;
-;     -- 5 input functions                    ; 1               ;
-;     -- 4 input functions                    ; 11              ;
-;     -- <=3 input functions                  ; 29              ;
-;                                             ;                 ;
-; Dedicated logic registers                   ; 39              ;
-;                                             ;                 ;
-; I/O pins                                    ; 11              ;
-;                                             ;                 ;
-; Total DSP Blocks                            ; 0               ;
-;                                             ;                 ;
-; Maximum fan-out node                        ; clk_50MHz~input ;
-; Maximum fan-out                             ; 26              ;
-; Total fan-out                               ; 278             ;
-; Average fan-out                             ; 2.62            ;
-+---------------------------------------------+-----------------+
++---------------------------------------------------------+
+; Analysis & Synthesis Resource Usage Summary             ;
++---------------------------------------------+-----------+
+; Resource                                    ; Usage     ;
++---------------------------------------------+-----------+
+; Estimate of Logic utilization (ALMs needed) ; 35        ;
+;                                             ;           ;
+; Combinational ALUT usage for logic          ; 61        ;
+;     -- 7 input functions                    ; 0         ;
+;     -- 6 input functions                    ; 4         ;
+;     -- 5 input functions                    ; 1         ;
+;     -- 4 input functions                    ; 27        ;
+;     -- <=3 input functions                  ; 29        ;
+;                                             ;           ;
+; Dedicated logic registers                   ; 49        ;
+;                                             ;           ;
+; I/O pins                                    ; 27        ;
+;                                             ;           ;
+; Total DSP Blocks                            ; 0         ;
+;                                             ;           ;
+; Maximum fan-out node                        ; SW0~input ;
+; Maximum fan-out                             ; 31        ;
+; Total fan-out                               ; 404       ;
+; Average fan-out                             ; 2.46      ;
++---------------------------------------------+-----------+
 
 
-+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                                ;
-+----------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+-----------------------------+-----------------+--------------+
-; Compilation Hierarchy Node ; Combinational ALUTs ; Dedicated Logic Registers ; Block Memory Bits ; DSP Blocks ; Pins ; Virtual Pins ; Full Hierarchy Name         ; Entity Name     ; Library Name ;
-+----------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+-----------------------------+-----------------+--------------+
-; |UART                      ; 45 (0)              ; 39 (0)                    ; 0                 ; 0          ; 11   ; 0            ; |UART                       ; UART            ; work         ;
-;    |uart_clk_divN:inst|    ; 38 (38)             ; 26 (26)                   ; 0                 ; 0          ; 0    ; 0            ; |UART|uart_clk_divN:inst    ; uart_clk_divN   ; work         ;
-;    |uart_controller:inst1| ; 7 (7)               ; 13 (13)                   ; 0                 ; 0          ; 0    ; 0            ; |UART|uart_controller:inst1 ; uart_controller ; work         ;
-+----------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+-----------------------------+-----------------+--------------+
++----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                                                        ;
++---------------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+-------------------------------------------+----------------------+--------------+
+; Compilation Hierarchy Node      ; Combinational ALUTs ; Dedicated Logic Registers ; Block Memory Bits ; DSP Blocks ; Pins ; Virtual Pins ; Full Hierarchy Name                       ; Entity Name          ; Library Name ;
++---------------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+-------------------------------------------+----------------------+--------------+
+; |TopLevel                       ; 61 (0)              ; 49 (0)                    ; 0                 ; 0          ; 27   ; 0            ; |TopLevel                                 ; TopLevel             ; work         ;
+;    |UART:inst|                  ; 47 (0)              ; 41 (0)                    ; 0                 ; 0          ; 0    ; 0            ; |TopLevel|UART:inst                       ; UART                 ; work         ;
+;       |uart_clk_divN:inst|      ; 40 (40)             ; 28 (28)                   ; 0                 ; 0          ; 0    ; 0            ; |TopLevel|UART:inst|uart_clk_divN:inst    ; uart_clk_divN        ; work         ;
+;       |uart_controller:inst1|   ; 7 (7)               ; 13 (13)                   ; 0                 ; 0          ; 0    ; 0            ; |TopLevel|UART:inst|uart_controller:inst1 ; uart_controller      ; work         ;
+;    |bsy_detector:inst2|         ; 0 (0)               ; 8 (8)                     ; 0                 ; 0          ; 0    ; 0            ; |TopLevel|bsy_detector:inst2              ; bsy_detector         ; work         ;
+;    |seven_seg_controller:inst3| ; 14 (14)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |TopLevel|seven_seg_controller:inst3      ; seven_seg_controller ; work         ;
++---------------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+-------------------------------------------+----------------------+--------------+
 Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
 
 
@@ -224,34 +231,44 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +----------------------------------------------+-------+
 ; Statistic                                    ; Value ;
 +----------------------------------------------+-------+
-; Total registers                              ; 39    ;
+; Total registers                              ; 49    ;
 ; Number of registers using Synchronous Clear  ; 28    ;
 ; Number of registers using Synchronous Load   ; 0     ;
-; Number of registers using Asynchronous Clear ; 13    ;
+; Number of registers using Asynchronous Clear ; 21    ;
 ; Number of registers using Asynchronous Load  ; 0     ;
-; Number of registers using Clock Enable       ; 8     ;
+; Number of registers using Clock Enable       ; 10    ;
 ; Number of registers using Preset             ; 0     ;
 +----------------------------------------------+-------+
 
 
-+--------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Multiplexer Restructuring Statistics (Restructuring Performed)                                                                                         ;
-+--------------------+-----------+---------------+----------------------+------------------------+------------+------------------------------------------+
-; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output               ;
-+--------------------+-----------+---------------+----------------------+------------------------+------------+------------------------------------------+
-; 3:1                ; 8 bits    ; 16 LEs        ; 0 LEs                ; 16 LEs                 ; Yes        ; |UART|uart_controller:inst1|shift_reg[7] ;
-; 4:1                ; 6 bits    ; 12 LEs        ; 12 LEs               ; 0 LEs                  ; Yes        ; |UART|uart_clk_divN:inst|counter_reg[11] ;
-; 4:1                ; 19 bits   ; 38 LEs        ; 0 LEs                ; 38 LEs                 ; Yes        ; |UART|uart_clk_divN:inst|counter_reg[19] ;
-+--------------------+-----------+---------------+----------------------+------------------------+------------+------------------------------------------+
++--------------------------------------------------+
+; Inverted Register Statistics                     ;
++----------------------------------------+---------+
+; Inverted Register                      ; Fan out ;
++----------------------------------------+---------+
+; UART:inst|uart_controller:inst1|bsy    ; 10      ;
+; Total number of inverted registers = 1 ;         ;
++----------------------------------------+---------+
 
 
-+-----------------------------------------------------------------+
-; Parameter Settings for User Entity Instance: uart_clk_divN:inst ;
-+----------------+-------+----------------------------------------+
-; Parameter Name ; Value ; Type                                   ;
-+----------------+-------+----------------------------------------+
-; baud           ; 9600  ; Signed Integer                         ;
-+----------------+-------+----------------------------------------+
++----------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Multiplexer Restructuring Statistics (Restructuring Performed)                                                                                                       ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+--------------------------------------------------------+
+; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output                             ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+--------------------------------------------------------+
+; 3:1                ; 8 bits    ; 16 LEs        ; 0 LEs                ; 16 LEs                 ; Yes        ; |TopLevel|UART:inst|uart_controller:inst1|shift_reg[7] ;
+; 4:1                ; 6 bits    ; 12 LEs        ; 12 LEs               ; 0 LEs                  ; Yes        ; |TopLevel|UART:inst|uart_clk_divN:inst|counter_reg[3]  ;
+; 4:1                ; 19 bits   ; 38 LEs        ; 0 LEs                ; 38 LEs                 ; Yes        ; |TopLevel|UART:inst|uart_clk_divN:inst|counter_reg[4]  ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+--------------------------------------------------------+
+
+
++---------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: UART:inst|uart_clk_divN:inst ;
++----------------+-------+--------------------------------------------------+
+; Parameter Name ; Value ; Type                                             ;
++----------------+-------+--------------------------------------------------+
+; baud           ; 9600  ; Signed Integer                                   ;
++----------------+-------+--------------------------------------------------+
 Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
 
 
@@ -260,24 +277,26 @@ Note: In order to hide this table in the UI and the text report file, please set
 +-----------------------+-----------------------------+
 ; Type                  ; Count                       ;
 +-----------------------+-----------------------------+
-; arriav_ff             ; 39                          ;
-;     CLR               ; 5                           ;
+; arriav_ff             ; 49                          ;
+;     CLR               ; 13                          ;
+;     ENA               ; 2                           ;
 ;     ENA CLR SCLR      ; 8                           ;
 ;     SCLR              ; 20                          ;
 ;     plain             ; 6                           ;
-; arriav_lcell_comb     ; 45                          ;
+; arriav_lcell_comb     ; 64                          ;
 ;     arith             ; 25                          ;
 ;         1 data inputs ; 25                          ;
-;     normal            ; 20                          ;
-;         1 data inputs ; 1                           ;
-;         3 data inputs ; 3                           ;
-;         4 data inputs ; 11                          ;
+;     normal            ; 39                          ;
+;         0 data inputs ; 1                           ;
+;         1 data inputs ; 2                           ;
+;         3 data inputs ; 4                           ;
+;         4 data inputs ; 27                          ;
 ;         5 data inputs ; 1                           ;
 ;         6 data inputs ; 4                           ;
-; boundary_port         ; 11                          ;
+; boundary_port         ; 27                          ;
 ;                       ;                             ;
 ; Max LUT depth         ; 3.40                        ;
-; Average LUT depth     ; 2.48                        ;
+; Average LUT depth     ; 2.23                        ;
 +-----------------------+-----------------------------+
 
 
@@ -296,35 +315,57 @@ Note: In order to hide this table in the UI and the text report file, please set
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
-    Info: Processing started: Wed Feb 14 00:18:08 2024
+    Info: Processing started: Wed Feb 14 03:59:59 2024
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off uartt -c uartt
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20030): Parallel compilation is enabled and will use 16 of the 16 processors detected
+Info (12021): Found 1 design units, including 1 entities, in source file sv files/seven_seg_controller.sv
+    Info (12023): Found entity 1: seven_seg_controller File: C:/Users/minec/Desktop/Work/GitHub Repos/PROJ300/Firmware/UART/sv files/seven_seg_controller.sv Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file sv files/bsy_detector.sv
+    Info (12023): Found entity 1: bsy_detector File: C:/Users/minec/Desktop/Work/GitHub Repos/PROJ300/Firmware/UART/sv files/bsy_detector.sv Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file sv files/uart_controller.sv
     Info (12023): Found entity 1: uart_controller File: C:/Users/minec/Desktop/Work/GitHub Repos/PROJ300/Firmware/UART/sv files/uart_controller.sv Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file sv files/uart_clk_divn.sv
     Info (12023): Found entity 1: uart_clk_divN File: C:/Users/minec/Desktop/Work/GitHub Repos/PROJ300/Firmware/UART/sv files/uart_clk_divN.sv Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file uart.bdf
     Info (12023): Found entity 1: UART
+Info (12021): Found 1 design units, including 1 entities, in source file output_files/toplevel.bdf
+    Info (12023): Found entity 1: TopLevel
 Warning (10222): Verilog HDL Parameter Declaration warning at uart_clk_divN.sv(18): Parameter Declaration in module "uart_clk_divN" behaves as a Local Parameter Declaration because the module has a Module Parameter Port List File: C:/Users/minec/Desktop/Work/GitHub Repos/PROJ300/Firmware/UART/sv files/uart_clk_divN.sv Line: 18
-Info (12127): Elaborating entity "UART" for the top level hierarchy
-Info (12128): Elaborating entity "uart_controller" for hierarchy "uart_controller:inst1"
-Warning (10230): Verilog HDL assignment warning at uart_controller.sv(38): truncated value with size 32 to match size of target (4) File: C:/Users/minec/Desktop/Work/GitHub Repos/PROJ300/Firmware/UART/sv files/uart_controller.sv Line: 38
-Info (12128): Elaborating entity "uart_clk_divN" for hierarchy "uart_clk_divN:inst"
+Info (12127): Elaborating entity "TopLevel" for the top level hierarchy
+Warning (275085): Found inconsistent dimensions for element "data"
+Warning (275085): Found inconsistent dimensions for element "data"
+Warning (275080): Converted elements in bus name "data" using legacy naming rules. Make any assignments on the new names, not on the original names.
+    Warning (275081): Converted element name(s) from "data[7..0]" to "data7..0"
+    Warning (275081): Converted element name(s) from "data[7..0]" to "data7..0"
+Info (12128): Elaborating entity "bsy_detector" for hierarchy "bsy_detector:inst2"
+Info (12128): Elaborating entity "UART" for hierarchy "UART:inst"
+Warning (275085): Found inconsistent dimensions for element "data"
+Warning (275085): Found inconsistent dimensions for element "data"
+Warning (275085): Found inconsistent dimensions for element "data"
+Warning (275080): Converted elements in bus name "data" using legacy naming rules. Make any assignments on the new names, not on the original names.
+    Warning (275081): Converted element name(s) from "data[7..0]" to "data7..0"
+Info (12128): Elaborating entity "uart_controller" for hierarchy "UART:inst|uart_controller:inst1"
+Warning (10230): Verilog HDL assignment warning at uart_controller.sv(35): truncated value with size 32 to match size of target (4) File: C:/Users/minec/Desktop/Work/GitHub Repos/PROJ300/Firmware/UART/sv files/uart_controller.sv Line: 35
+Info (12128): Elaborating entity "uart_clk_divN" for hierarchy "UART:inst|uart_clk_divN:inst"
 Warning (10230): Verilog HDL assignment warning at uart_clk_divN.sv(19): truncated value with size 32 to match size of target (25) File: C:/Users/minec/Desktop/Work/GitHub Repos/PROJ300/Firmware/UART/sv files/uart_clk_divN.sv Line: 19
 Warning (10230): Verilog HDL assignment warning at uart_clk_divN.sv(29): truncated value with size 32 to match size of target (25) File: C:/Users/minec/Desktop/Work/GitHub Repos/PROJ300/Firmware/UART/sv files/uart_clk_divN.sv Line: 29
-Warning (10230): Verilog HDL assignment warning at uart_clk_divN.sv(43): truncated value with size 32 to match size of target (25) File: C:/Users/minec/Desktop/Work/GitHub Repos/PROJ300/Firmware/UART/sv files/uart_clk_divN.sv Line: 43
-Warning (10230): Verilog HDL assignment warning at uart_clk_divN.sv(61): truncated value with size 32 to match size of target (25) File: C:/Users/minec/Desktop/Work/GitHub Repos/PROJ300/Firmware/UART/sv files/uart_clk_divN.sv Line: 61
+Warning (10230): Verilog HDL assignment warning at uart_clk_divN.sv(68): truncated value with size 32 to match size of target (25) File: C:/Users/minec/Desktop/Work/GitHub Repos/PROJ300/Firmware/UART/sv files/uart_clk_divN.sv Line: 68
+Warning (10230): Verilog HDL assignment warning at uart_clk_divN.sv(86): truncated value with size 32 to match size of target (25) File: C:/Users/minec/Desktop/Work/GitHub Repos/PROJ300/Firmware/UART/sv files/uart_clk_divN.sv Line: 86
+Info (12128): Elaborating entity "seven_seg_controller" for hierarchy "seven_seg_controller:inst3"
+Warning (13024): Output pins are stuck at VCC or GND
+    Warning (13410): Pin "led8" is stuck at GND
+    Warning (13410): Pin "led9" is stuck at GND
 Info (286030): Timing-Driven Synthesis is running
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
-Info (21057): Implemented 64 device resources after synthesis - the final resource count might be different
+Info (21057): Implemented 104 device resources after synthesis - the final resource count might be different
     Info (21058): Implemented 3 input pins
-    Info (21059): Implemented 8 output pins
-    Info (21061): Implemented 53 logic cells
-Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 7 warnings
-    Info: Peak virtual memory: 4902 megabytes
-    Info: Processing ended: Wed Feb 14 00:18:13 2024
+    Info (21059): Implemented 24 output pins
+    Info (21061): Implemented 77 logic cells
+Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 20 warnings
+    Info: Peak virtual memory: 4896 megabytes
+    Info: Processing ended: Wed Feb 14 04:00:04 2024
     Info: Elapsed time: 00:00:05
     Info: Total CPU time (on all processors): 00:00:06
 

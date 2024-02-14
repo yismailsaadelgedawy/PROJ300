@@ -1,8 +1,5 @@
-module uart_controller (output logic [7:0] data_out, output logic bsy, transmission_state, input logic clk, rst, data_in);
+module uart_controller (output logic [7:0] data_out, output logic bsy, input logic clk, rst, data_in);
 
-// transmission_state: flag to indicate state of transmission state (from uart_controller)
-// 1: sot (start of transmission)
-// 0: eot (end of transmission)
 
 
 logic [7:0] shift_reg;
@@ -27,14 +24,14 @@ always_ff @(negedge clk or posedge rst) begin
 
         shift_reg <= 'd0;
         counter_reg <= 'd0;
-        bsy <= 0;
-        transmission_state <= 0;
+        bsy <= 1;
+
 
     end
 
     else begin
 
-        transmission_state <= 1;    // sot                          DEADLOCK!!!!!!
+
         counter_reg <= counter_reg + 1;
         bsy <= 1;   // bsy is high by default
 
@@ -72,7 +69,7 @@ always_ff @(negedge clk or posedge rst) begin
         // bit 11
         if (counter_reg == 'd10) begin
 
-            transmission_state <= 0;    // eot
+
             counter_reg <= 'd0;
             shift_reg <= 'd0;   // not needed, but looks nice
 

@@ -1,19 +1,87 @@
-|UART
-data_out[0] <= uart_controller:inst1.data_out[0]
-data_out[1] <= uart_controller:inst1.data_out[1]
-data_out[2] <= uart_controller:inst1.data_out[2]
-data_out[3] <= uart_controller:inst1.data_out[3]
-data_out[4] <= uart_controller:inst1.data_out[4]
-data_out[5] <= uart_controller:inst1.data_out[5]
-data_out[6] <= uart_controller:inst1.data_out[6]
-data_out[7] <= uart_controller:inst1.data_out[7]
+|TopLevel
+led8 <= <GND>
+led9 <= <GND>
+data_out[0] <= bsy_detector:inst2.data_out[0]
+data_out[1] <= bsy_detector:inst2.data_out[1]
+data_out[2] <= bsy_detector:inst2.data_out[2]
+data_out[3] <= bsy_detector:inst2.data_out[3]
+data_out[4] <= bsy_detector:inst2.data_out[4]
+data_out[5] <= bsy_detector:inst2.data_out[5]
+data_out[6] <= bsy_detector:inst2.data_out[6]
+data_out[7] <= bsy_detector:inst2.data_out[7]
+clk_50MHz => UART:inst.clk_50MHz
+SW0 => UART:inst.SW0
+SW0 => bsy_detector:inst2.rst
+UART2_RX => UART:inst.UART2_RX
+disp0[6] <= inst4[0].DB_MAX_OUTPUT_PORT_TYPE
+disp0[5] <= inst4[1].DB_MAX_OUTPUT_PORT_TYPE
+disp0[4] <= inst4[2].DB_MAX_OUTPUT_PORT_TYPE
+disp0[3] <= inst4[3].DB_MAX_OUTPUT_PORT_TYPE
+disp0[2] <= inst4[4].DB_MAX_OUTPUT_PORT_TYPE
+disp0[1] <= inst4[5].DB_MAX_OUTPUT_PORT_TYPE
+disp0[0] <= inst4[6].DB_MAX_OUTPUT_PORT_TYPE
+disp1[6] <= inst5[0].DB_MAX_OUTPUT_PORT_TYPE
+disp1[5] <= inst5[1].DB_MAX_OUTPUT_PORT_TYPE
+disp1[4] <= inst5[2].DB_MAX_OUTPUT_PORT_TYPE
+disp1[3] <= inst5[3].DB_MAX_OUTPUT_PORT_TYPE
+disp1[2] <= inst5[4].DB_MAX_OUTPUT_PORT_TYPE
+disp1[1] <= inst5[5].DB_MAX_OUTPUT_PORT_TYPE
+disp1[0] <= inst5[6].DB_MAX_OUTPUT_PORT_TYPE
+
+
+|TopLevel|bsy_detector:inst2
+data_out[0] <= data_out[0]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+data_out[1] <= data_out[1]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+data_out[2] <= data_out[2]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+data_out[3] <= data_out[3]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+data_out[4] <= data_out[4]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+data_out[5] <= data_out[5]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+data_out[6] <= data_out[6]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+data_out[7] <= data_out[7]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+data_in[0] => data_out[0]~reg0.DATAIN
+data_in[1] => data_out[1]~reg0.DATAIN
+data_in[2] => data_out[2]~reg0.DATAIN
+data_in[3] => data_out[3]~reg0.DATAIN
+data_in[4] => data_out[4]~reg0.DATAIN
+data_in[5] => data_out[5]~reg0.DATAIN
+data_in[6] => data_out[6]~reg0.DATAIN
+data_in[7] => data_out[7]~reg0.DATAIN
+bsy => data_out[0]~reg0.CLK
+bsy => data_out[1]~reg0.CLK
+bsy => data_out[2]~reg0.CLK
+bsy => data_out[3]~reg0.CLK
+bsy => data_out[4]~reg0.CLK
+bsy => data_out[5]~reg0.CLK
+bsy => data_out[6]~reg0.CLK
+bsy => data_out[7]~reg0.CLK
+rst => data_out[0]~reg0.ACLR
+rst => data_out[1]~reg0.ACLR
+rst => data_out[2]~reg0.ACLR
+rst => data_out[3]~reg0.ACLR
+rst => data_out[4]~reg0.ACLR
+rst => data_out[5]~reg0.ACLR
+rst => data_out[6]~reg0.ACLR
+rst => data_out[7]~reg0.ACLR
+
+
+|TopLevel|UART:inst
+busy <= bsy.DB_MAX_OUTPUT_PORT_TYPE
 clk_50MHz => uart_clk_divN:inst.clk_in
 SW0 => uart_clk_divN:inst.rst
 SW0 => uart_controller:inst1.rst
+UART2_RX => uart_clk_divN:inst.sense
 UART2_RX => uart_controller:inst1.data_in
+data_out[0] <= data0.DB_MAX_OUTPUT_PORT_TYPE
+data_out[1] <= data1.DB_MAX_OUTPUT_PORT_TYPE
+data_out[2] <= data2.DB_MAX_OUTPUT_PORT_TYPE
+data_out[3] <= data3.DB_MAX_OUTPUT_PORT_TYPE
+data_out[4] <= data4.DB_MAX_OUTPUT_PORT_TYPE
+data_out[5] <= data5.DB_MAX_OUTPUT_PORT_TYPE
+data_out[6] <= data6.DB_MAX_OUTPUT_PORT_TYPE
+data_out[7] <= data7.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|UART|uart_controller:inst1
+|TopLevel|UART:inst|uart_controller:inst1
 data_out[0] <= shift_reg[0].DB_MAX_OUTPUT_PORT_TYPE
 data_out[1] <= shift_reg[1].DB_MAX_OUTPUT_PORT_TYPE
 data_out[2] <= shift_reg[2].DB_MAX_OUTPUT_PORT_TYPE
@@ -23,8 +91,6 @@ data_out[5] <= shift_reg[5].DB_MAX_OUTPUT_PORT_TYPE
 data_out[6] <= shift_reg[6].DB_MAX_OUTPUT_PORT_TYPE
 data_out[7] <= shift_reg[7].DB_MAX_OUTPUT_PORT_TYPE
 bsy <= bsy~reg0.DB_MAX_OUTPUT_PORT_TYPE
-transmission_state <= transmission_state~reg0.DB_MAX_OUTPUT_PORT_TYPE
-clk => transmission_state~reg0.CLK
 clk => bsy~reg0.CLK
 clk => counter_reg[0].CLK
 clk => counter_reg[1].CLK
@@ -38,8 +104,7 @@ clk => shift_reg[4].CLK
 clk => shift_reg[5].CLK
 clk => shift_reg[6].CLK
 clk => shift_reg[7].CLK
-rst => transmission_state~reg0.ACLR
-rst => bsy~reg0.ACLR
+rst => bsy~reg0.PRESET
 rst => counter_reg[0].ACLR
 rst => counter_reg[1].ACLR
 rst => counter_reg[2].ACLR
@@ -55,8 +120,10 @@ rst => shift_reg[7].ACLR
 data_in => shift_reg.DATAB
 
 
-|UART|uart_clk_divN:inst
+|TopLevel|UART:inst|uart_clk_divN:inst
 clk_out <= clk_out~reg0.DB_MAX_OUTPUT_PORT_TYPE
+clk_in => bsy_posedge_waiting.CLK
+clk_in => transmission_state.CLK
 clk_in => clk_out~reg0.CLK
 clk_in => counter_reg[0].CLK
 clk_in => counter_reg[1].CLK
@@ -84,31 +151,34 @@ clk_in => counter_reg[22].CLK
 clk_in => counter_reg[23].CLK
 clk_in => counter_reg[24].CLK
 rst => Decoder0.IN0
-transmission_state => counter_reg.OUTPUTSELECT
-transmission_state => counter_reg.OUTPUTSELECT
-transmission_state => counter_reg.OUTPUTSELECT
-transmission_state => counter_reg.OUTPUTSELECT
-transmission_state => counter_reg.OUTPUTSELECT
-transmission_state => counter_reg.OUTPUTSELECT
-transmission_state => counter_reg.OUTPUTSELECT
-transmission_state => counter_reg.OUTPUTSELECT
-transmission_state => counter_reg.OUTPUTSELECT
-transmission_state => counter_reg.OUTPUTSELECT
-transmission_state => counter_reg.OUTPUTSELECT
-transmission_state => counter_reg.OUTPUTSELECT
-transmission_state => counter_reg.OUTPUTSELECT
-transmission_state => counter_reg.OUTPUTSELECT
-transmission_state => counter_reg.OUTPUTSELECT
-transmission_state => counter_reg.OUTPUTSELECT
-transmission_state => counter_reg.OUTPUTSELECT
-transmission_state => counter_reg.OUTPUTSELECT
-transmission_state => counter_reg.OUTPUTSELECT
-transmission_state => counter_reg.OUTPUTSELECT
-transmission_state => counter_reg.OUTPUTSELECT
-transmission_state => counter_reg.OUTPUTSELECT
-transmission_state => counter_reg.OUTPUTSELECT
-transmission_state => counter_reg.OUTPUTSELECT
-transmission_state => counter_reg.OUTPUTSELECT
-transmission_state => clk_out.OUTPUTSELECT
+sense => transmission_state.OUTPUTSELECT
+sense => bsy_posedge_waiting.OUTPUTSELECT
+bsy => always0.IN1
+bsy => bsy_posedge_waiting.OUTPUTSELECT
+
+
+|TopLevel|seven_seg_controller:inst3
+disp0[6] <= WideOr6.DB_MAX_OUTPUT_PORT_TYPE
+disp0[5] <= WideOr5.DB_MAX_OUTPUT_PORT_TYPE
+disp0[4] <= WideOr4.DB_MAX_OUTPUT_PORT_TYPE
+disp0[3] <= WideOr3.DB_MAX_OUTPUT_PORT_TYPE
+disp0[2] <= WideOr2.DB_MAX_OUTPUT_PORT_TYPE
+disp0[1] <= WideOr1.DB_MAX_OUTPUT_PORT_TYPE
+disp0[0] <= WideOr0.DB_MAX_OUTPUT_PORT_TYPE
+disp1[6] <= WideOr13.DB_MAX_OUTPUT_PORT_TYPE
+disp1[5] <= WideOr12.DB_MAX_OUTPUT_PORT_TYPE
+disp1[4] <= WideOr11.DB_MAX_OUTPUT_PORT_TYPE
+disp1[3] <= WideOr10.DB_MAX_OUTPUT_PORT_TYPE
+disp1[2] <= WideOr9.DB_MAX_OUTPUT_PORT_TYPE
+disp1[1] <= WideOr8.DB_MAX_OUTPUT_PORT_TYPE
+disp1[0] <= WideOr7.DB_MAX_OUTPUT_PORT_TYPE
+data[0] => Decoder0.IN3
+data[1] => Decoder0.IN2
+data[2] => Decoder0.IN1
+data[3] => Decoder0.IN0
+data[4] => Decoder1.IN3
+data[5] => Decoder1.IN2
+data[6] => Decoder1.IN1
+data[7] => Decoder1.IN0
 
 

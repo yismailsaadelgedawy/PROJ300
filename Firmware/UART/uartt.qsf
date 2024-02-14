@@ -39,7 +39,7 @@
 
 set_global_assignment -name FAMILY "Cyclone V"
 set_global_assignment -name DEVICE 5CEBA4F23C7
-set_global_assignment -name TOP_LEVEL_ENTITY UART
+set_global_assignment -name TOP_LEVEL_ENTITY TopLevel
 set_global_assignment -name ORIGINAL_QUARTUS_VERSION 20.1.1
 set_global_assignment -name PROJECT_CREATION_TIME_DATE "21:08:12  FEBRUARY 13, 2024"
 set_global_assignment -name LAST_QUARTUS_VERSION "20.1.1 Lite Edition"
@@ -47,11 +47,41 @@ set_global_assignment -name PROJECT_OUTPUT_DIRECTORY output_files
 set_global_assignment -name MIN_CORE_JUNCTION_TEMP 0
 set_global_assignment -name MAX_CORE_JUNCTION_TEMP 85
 set_global_assignment -name ERROR_CHECK_FREQUENCY_DIVISOR 256
+set_global_assignment -name POWER_PRESET_COOLING_SOLUTION "23 MM HEAT SINK WITH 200 LFPM AIRFLOW"
+set_global_assignment -name POWER_BOARD_THERMAL_MODEL "NONE (CONSERVATIVE)"
+set_location_assignment PIN_M9 -to clk_50MHz
+set_location_assignment PIN_U13 -to SW0
+set_location_assignment PIN_AA2 -to data_out[0]
+set_location_assignment PIN_AA1 -to data_out[1]
+set_location_assignment PIN_W2 -to data_out[2]
+set_location_assignment PIN_Y3 -to data_out[3]
+set_location_assignment PIN_N2 -to data_out[4]
+set_location_assignment PIN_N1 -to data_out[5]
+set_location_assignment PIN_U2 -to data_out[6]
+set_location_assignment PIN_U1 -to data_out[7]
+set_location_assignment PIN_K16 -to UART2_RX
+set_global_assignment -name SYSTEMVERILOG_FILE "sv files/seven_seg_controller.sv"
+set_global_assignment -name SYSTEMVERILOG_FILE "sv files/bsy_detector.sv"
 set_global_assignment -name SYSTEMVERILOG_FILE "sv files/uart_controller.sv"
 set_global_assignment -name SYSTEMVERILOG_FILE "sv files/uart_clk_divN.sv"
 set_global_assignment -name BDF_FILE UART.bdf
-set_global_assignment -name POWER_PRESET_COOLING_SOLUTION "23 MM HEAT SINK WITH 200 LFPM AIRFLOW"
-set_global_assignment -name POWER_BOARD_THERMAL_MODEL "NONE (CONSERVATIVE)"
+set_location_assignment PIN_U22 -to disp1[6]
+set_location_assignment PIN_AA17 -to disp1[5]
+set_location_assignment PIN_AB18 -to disp1[4]
+set_location_assignment PIN_AA18 -to disp1[3]
+set_location_assignment PIN_AA19 -to disp1[2]
+set_location_assignment PIN_AB20 -to disp1[1]
+set_location_assignment PIN_AA20 -to disp1[0]
+set_location_assignment PIN_AA22 -to disp0[6]
+set_location_assignment PIN_Y21 -to disp0[5]
+set_location_assignment PIN_Y22 -to disp0[4]
+set_location_assignment PIN_W21 -to disp0[3]
+set_location_assignment PIN_W22 -to disp0[2]
+set_location_assignment PIN_V21 -to disp0[1]
+set_location_assignment PIN_U21 -to disp0[0]
+set_location_assignment PIN_L2 -to led8
+set_location_assignment PIN_L1 -to led9
+set_global_assignment -name BDF_FILE output_files/TopLevel.bdf
 set_global_assignment -name PARTITION_NETLIST_TYPE SOURCE -section_id Top
 set_global_assignment -name PARTITION_FITTER_PRESERVATION_LEVEL PLACEMENT_AND_ROUTING -section_id Top
 set_global_assignment -name PARTITION_COLOR 16764057 -section_id Top

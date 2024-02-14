@@ -3,99 +3,147 @@ Timing Analyzer Summary
 ------------------------------------------------------------
 
 Type  : Slow 1100mV 85C Model Setup 'clk_50MHz'
-Slack : -5.304
-TNS   : -110.063
+Slack : -6.414
+TNS   : -104.342
 
-Type  : Slow 1100mV 85C Model Setup 'uart_clk_divN:inst|clk_out'
-Slack : -2.210
-TNS   : -32.904
+Type  : Slow 1100mV 85C Model Setup 'UART:inst|uart_clk_divN:inst|clk_out'
+Slack : -2.219
+TNS   : -32.235
 
-Type  : Slow 1100mV 85C Model Hold 'clk_50MHz'
-Slack : 0.442
+Type  : Slow 1100mV 85C Model Setup 'UART:inst|uart_controller:inst1|bsy'
+Slack : -1.462
+TNS   : -10.386
+
+Type  : Slow 1100mV 85C Model Hold 'UART:inst|uart_clk_divN:inst|clk_out'
+Slack : 0.163
 TNS   : 0.000
 
-Type  : Slow 1100mV 85C Model Hold 'uart_clk_divN:inst|clk_out'
-Slack : 0.873
+Type  : Slow 1100mV 85C Model Hold 'clk_50MHz'
+Slack : 0.292
+TNS   : 0.000
+
+Type  : Slow 1100mV 85C Model Hold 'UART:inst|uart_controller:inst1|bsy'
+Slack : 0.318
 TNS   : 0.000
 
 Type  : Slow 1100mV 85C Model Minimum Pulse Width 'clk_50MHz'
 Slack : -0.538
-TNS   : -20.065
+TNS   : -21.693
 
-Type  : Slow 1100mV 85C Model Minimum Pulse Width 'uart_clk_divN:inst|clk_out'
+Type  : Slow 1100mV 85C Model Minimum Pulse Width 'UART:inst|uart_clk_divN:inst|clk_out'
 Slack : -0.538
-TNS   : -12.972
+TNS   : -12.982
+
+Type  : Slow 1100mV 85C Model Minimum Pulse Width 'UART:inst|uart_controller:inst1|bsy'
+Slack : -0.538
+TNS   : -6.312
 
 Type  : Slow 1100mV 0C Model Setup 'clk_50MHz'
-Slack : -5.424
-TNS   : -109.384
+Slack : -6.439
+TNS   : -100.995
 
-Type  : Slow 1100mV 0C Model Setup 'uart_clk_divN:inst|clk_out'
-Slack : -2.130
-TNS   : -32.484
+Type  : Slow 1100mV 0C Model Setup 'UART:inst|uart_clk_divN:inst|clk_out'
+Slack : -2.100
+TNS   : -31.181
+
+Type  : Slow 1100mV 0C Model Setup 'UART:inst|uart_controller:inst1|bsy'
+Slack : -1.486
+TNS   : -10.420
 
 Type  : Slow 1100mV 0C Model Hold 'clk_50MHz'
-Slack : 0.204
+Slack : -0.053
+TNS   : -0.053
+
+Type  : Slow 1100mV 0C Model Hold 'UART:inst|uart_clk_divN:inst|clk_out'
+Slack : 0.240
 TNS   : 0.000
 
-Type  : Slow 1100mV 0C Model Hold 'uart_clk_divN:inst|clk_out'
-Slack : 0.855
+Type  : Slow 1100mV 0C Model Hold 'UART:inst|uart_controller:inst1|bsy'
+Slack : 0.395
 TNS   : 0.000
 
 Type  : Slow 1100mV 0C Model Minimum Pulse Width 'clk_50MHz'
 Slack : -0.538
-TNS   : -20.450
+TNS   : -22.218
 
-Type  : Slow 1100mV 0C Model Minimum Pulse Width 'uart_clk_divN:inst|clk_out'
+Type  : Slow 1100mV 0C Model Minimum Pulse Width 'UART:inst|uart_clk_divN:inst|clk_out'
 Slack : -0.538
-TNS   : -12.579
+TNS   : -12.355
+
+Type  : Slow 1100mV 0C Model Minimum Pulse Width 'UART:inst|uart_controller:inst1|bsy'
+Slack : -0.538
+TNS   : -6.224
 
 Type  : Fast 1100mV 85C Model Setup 'clk_50MHz'
-Slack : -2.674
-TNS   : -45.063
+Slack : -3.543
+TNS   : -45.000
 
-Type  : Fast 1100mV 85C Model Setup 'uart_clk_divN:inst|clk_out'
-Slack : -0.743
-TNS   : -9.862
+Type  : Fast 1100mV 85C Model Setup 'UART:inst|uart_clk_divN:inst|clk_out'
+Slack : -0.954
+TNS   : -10.521
 
-Type  : Fast 1100mV 85C Model Hold 'clk_50MHz'
-Slack : 0.201
+Type  : Fast 1100mV 85C Model Setup 'UART:inst|uart_controller:inst1|bsy'
+Slack : -0.740
+TNS   : -5.466
+
+Type  : Fast 1100mV 85C Model Hold 'UART:inst|uart_clk_divN:inst|clk_out'
+Slack : 0.119
 TNS   : 0.000
 
-Type  : Fast 1100mV 85C Model Hold 'uart_clk_divN:inst|clk_out'
-Slack : 0.384
+Type  : Fast 1100mV 85C Model Hold 'clk_50MHz'
+Slack : 0.197
+TNS   : 0.000
+
+Type  : Fast 1100mV 85C Model Hold 'UART:inst|uart_controller:inst1|bsy'
+Slack : 0.256
 TNS   : 0.000
 
 Type  : Fast 1100mV 85C Model Minimum Pulse Width 'clk_50MHz'
-Slack : -0.262
-TNS   : -2.477
+Slack : -0.370
+TNS   : -2.884
 
-Type  : Fast 1100mV 85C Model Minimum Pulse Width 'uart_clk_divN:inst|clk_out'
-Slack : 0.113
+Type  : Fast 1100mV 85C Model Minimum Pulse Width 'UART:inst|uart_clk_divN:inst|clk_out'
+Slack : 0.116
+TNS   : 0.000
+
+Type  : Fast 1100mV 85C Model Minimum Pulse Width 'UART:inst|uart_controller:inst1|bsy'
+Slack : 0.140
 TNS   : 0.000
 
 Type  : Fast 1100mV 0C Model Setup 'clk_50MHz'
-Slack : -2.424
-TNS   : -39.257
+Slack : -3.157
+TNS   : -38.045
 
-Type  : Fast 1100mV 0C Model Setup 'uart_clk_divN:inst|clk_out'
-Slack : -0.599
-TNS   : -8.220
+Type  : Fast 1100mV 0C Model Setup 'UART:inst|uart_clk_divN:inst|clk_out'
+Slack : -0.791
+TNS   : -8.745
+
+Type  : Fast 1100mV 0C Model Setup 'UART:inst|uart_controller:inst1|bsy'
+Slack : -0.686
+TNS   : -5.034
 
 Type  : Fast 1100mV 0C Model Hold 'clk_50MHz'
-Slack : 0.049
+Slack : 0.017
 TNS   : 0.000
 
-Type  : Fast 1100mV 0C Model Hold 'uart_clk_divN:inst|clk_out'
-Slack : 0.373
+Type  : Fast 1100mV 0C Model Hold 'UART:inst|uart_clk_divN:inst|clk_out'
+Slack : 0.117
+TNS   : 0.000
+
+Type  : Fast 1100mV 0C Model Hold 'UART:inst|uart_controller:inst1|bsy'
+Slack : 0.250
 TNS   : 0.000
 
 Type  : Fast 1100mV 0C Model Minimum Pulse Width 'clk_50MHz'
-Slack : -0.277
-TNS   : -2.557
+Slack : -0.361
+TNS   : -2.948
 
-Type  : Fast 1100mV 0C Model Minimum Pulse Width 'uart_clk_divN:inst|clk_out'
-Slack : 0.096
+Type  : Fast 1100mV 0C Model Minimum Pulse Width 'UART:inst|uart_clk_divN:inst|clk_out'
+Slack : 0.130
+TNS   : 0.000
+
+Type  : Fast 1100mV 0C Model Minimum Pulse Width 'UART:inst|uart_controller:inst1|bsy'
+Slack : 0.149
 TNS   : 0.000
 
 ------------------------------------------------------------

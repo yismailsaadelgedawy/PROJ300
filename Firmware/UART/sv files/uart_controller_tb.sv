@@ -9,7 +9,7 @@ logic rst, clk, data_in;
 
 // out
 logic [7:0] data_out;
-logic bsy, transmission_state;
+logic bsy;
 
 // wiring
 uart_controller dut(
@@ -21,8 +21,7 @@ uart_controller dut(
 
     // out
     .data_out(data_out),
-    .bsy(bsy),
-    .transmission_state(transmission_state)
+    .bsy(bsy)
 
 );
 

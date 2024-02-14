@@ -15,7 +15,7 @@
 
 // PROGRAM		"Quartus Prime"
 // VERSION		"Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition"
-// CREATED		"Wed Feb 14 00:19:44 2024"
+// CREATED		"Wed Feb 14 02:44:59 2024"
 
 module UART(
 	clk_50MHz,
@@ -35,7 +35,6 @@ wire	clk_50;
 wire	clk_uart;
 wire	data;
 wire	sw_rst;
-wire	trans_state;
 
 
 
@@ -44,7 +43,8 @@ wire	trans_state;
 uart_clk_divN	b2v_inst(
 	.clk_in(clk_50),
 	.rst(sw_rst),
-	.transmission_state(trans_state),
+	.sense(data),
+	.bsy(bsy),
 	.clk_out(clk_uart));
 	defparam	b2v_inst.baud = 9600;
 
@@ -53,8 +53,7 @@ uart_controller	b2v_inst1(
 	.clk(clk_uart),
 	.rst(sw_rst),
 	.data_in(data),
-	
-	.transmission_state(trans_state),
+	.bsy(bsy),
 	.data_out(data_out));
 
 assign	clk_50 = clk_50MHz;

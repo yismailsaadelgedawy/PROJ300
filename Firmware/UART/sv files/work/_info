@@ -10,23 +10,23 @@ z2
 cModel Technology
 Z0 dC:/Users/minec/Desktop/Work/GitHub Repos/PROJ300/Firmware/UART/sv files
 vUART
-!s110 1707870832
+!s110 1707878734
 !i10b 1
-!s100 LDER4cFh:K^2U3oF[RkFa3
+!s100 :QFQW^n=29>BIaMoN6Nk:0
 Z1 !s11b Dg1SIo80bB@j0V0VzS_@n1
-IbXZAXaKZ8_fb`IeE3jZF71
+I`HCcI^AKN;18k52?2Geo50
 Z2 VDg1SIo80bB@j0V0VzS_@n1
 R0
-w1707869984
+w1707878699
 8C:/Users/minec/Desktop/Work/GitHub Repos/PROJ300/Firmware/UART/sv files/UART.v
 FC:/Users/minec/Desktop/Work/GitHub Repos/PROJ300/Firmware/UART/sv files/UART.v
-!i122 23
-L0 20 45
+!i122 32
+L0 20 44
 Z3 OV;L;2020.1;71
 r1
 !s85 0
 31
-!s108 1707870832.000000
+!s108 1707878734.000000
 !s107 C:/Users/minec/Desktop/Work/GitHub Repos/PROJ300/Firmware/UART/sv files/UART.v|
 !s90 -reportprogress|300|-work|work|C:/Users/minec/Desktop/Work/GitHub Repos/PROJ300/Firmware/UART/sv files/UART.v|
 !i113 1
@@ -35,24 +35,24 @@ Z5 tCvgOpt 0
 n@u@a@r@t
 vuart_clk_divN
 Z6 DXx6 sv_std 3 std 0 22 VYECXdT12H8WgbUP_5Y6:3
-!s110 1707870849
+!s110 1707879801
 !i10b 1
-!s100 z>jC:?0gnHAgj_c8Hd3Pg2
+!s100 ?7Bzn3Z0o5l<QoYAc@_mG2
 R1
-I]A?mFWS8fX2MzTY7zAl5S3
+I_MW6DJfjlF@X@4mo_DKMC3
 R2
 S1
 R0
-w1707868472
+w1707879795
 8C:/Users/minec/Desktop/Work/GitHub Repos/PROJ300/Firmware/UART/sv files/uart_clk_divN.sv
 FC:/Users/minec/Desktop/Work/GitHub Repos/PROJ300/Firmware/UART/sv files/uart_clk_divN.sv
-!i122 25
-L0 1 77
+!i122 43
+L0 1 102
 R3
 r1
 !s85 0
 31
-!s108 1707870849.000000
+!s108 1707879801.000000
 !s107 C:/Users/minec/Desktop/Work/GitHub Repos/PROJ300/Firmware/UART/sv files/uart_clk_divN.sv|
 !s90 -reportprogress|300|-work|work|C:/Users/minec/Desktop/Work/GitHub Repos/PROJ300/Firmware/UART/sv files/uart_clk_divN.sv|
 !i113 1
@@ -61,24 +61,24 @@ R5
 nuart_clk_div@n
 vuart_clk_divN_tb
 R6
-!s110 1707868116
+!s110 1707878436
 !i10b 1
-!s100 LW:@CQG7]5jj8CSPbebnK0
+!s100 3>fOiG6ca:CRW0HgFXSQ@3
 R1
-I8`WSQf2:45EH?A;NQ7=F^2
+Ii`jGJ@LH4_:?zM:=^[;Od2
 R2
 S1
 R0
-w1707868082
+w1707878433
 8C:/Users/minec/Desktop/Work/GitHub Repos/PROJ300/Firmware/UART/sv files/uart_clk_divN_tb.sv
 FC:/Users/minec/Desktop/Work/GitHub Repos/PROJ300/Firmware/UART/sv files/uart_clk_divN_tb.sv
-!i122 18
-L0 1 72
+!i122 29
+L0 1 139
 R3
 r1
 !s85 0
 31
-!s108 1707868116.000000
+!s108 1707878436.000000
 !s107 C:/Users/minec/Desktop/Work/GitHub Repos/PROJ300/Firmware/UART/sv files/uart_clk_divN_tb.sv|
 !s90 -reportprogress|300|-work|work|C:/Users/minec/Desktop/Work/GitHub Repos/PROJ300/Firmware/UART/sv files/uart_clk_divN_tb.sv|
 !i113 1
@@ -87,24 +87,24 @@ R5
 nuart_clk_div@n_tb
 vuart_controller
 R6
-!s110 1707868664
+!s110 1707878641
 !i10b 1
-!s100 ]CEnCA<ikD4F5onXhc]Jm1
+!s100 :EVgT6QOUehleF2Rkh4zK1
 R1
-Ia7BI?NJkC?>?_<@Ih9]U?3
+ITol0@M0Ke9DcoLkgiz5P<1
 R2
 S1
 R0
-w1707868656
+w1707878551
 8C:/Users/minec/Desktop/Work/GitHub Repos/PROJ300/Firmware/UART/sv files/uart_controller.sv
 FC:/Users/minec/Desktop/Work/GitHub Repos/PROJ300/Firmware/UART/sv files/uart_controller.sv
-!i122 21
-L0 1 98
+!i122 30
+L0 1 95
 R3
 r1
 !s85 0
 31
-!s108 1707868664.000000
+!s108 1707878641.000000
 !s107 C:/Users/minec/Desktop/Work/GitHub Repos/PROJ300/Firmware/UART/sv files/uart_controller.sv|
 !s90 -reportprogress|300|-work|work|C:/Users/minec/Desktop/Work/GitHub Repos/PROJ300/Firmware/UART/sv files/uart_controller.sv|
 !i113 1
@@ -112,24 +112,24 @@ R4
 R5
 vuart_controller_tb
 R6
-!s110 1707868768
+!s110 1707878642
 !i10b 1
-!s100 XXX?oi4GUR1@HNOf30kN33
+!s100 aJe4OD1lInK[=BKiPQZZN0
 R1
-Il3n300VSdX97e^42dIKcU2
+IYV8a7OdoXn=@V>:S5o>642
 R2
 S1
 R0
-w1707868766
+w1707878631
 8C:/Users/minec/Desktop/Work/GitHub Repos/PROJ300/Firmware/UART/sv files/uart_controller_tb.sv
 FC:/Users/minec/Desktop/Work/GitHub Repos/PROJ300/Firmware/UART/sv files/uart_controller_tb.sv
-!i122 22
-L0 1 257
+!i122 31
+L0 1 256
 R3
 r1
 !s85 0
 31
-!s108 1707868768.000000
+!s108 1707878642.000000
 !s107 C:/Users/minec/Desktop/Work/GitHub Repos/PROJ300/Firmware/UART/sv files/uart_controller_tb.sv|
 !s90 -reportprogress|300|-work|work|C:/Users/minec/Desktop/Work/GitHub Repos/PROJ300/Firmware/UART/sv files/uart_controller_tb.sv|
 !i113 1
@@ -137,24 +137,24 @@ R4
 R5
 vUART_tb
 R6
-!s110 1707870852
+!s110 1707879939
 !i10b 1
-!s100 FX`znI1`lC_IK<]kdI7n00
+!s100 l7ej8aO09TF;h5VGT6Q560
 R1
-IgD>JLIQD`hJa1oNCCIPm<0
+IUKUQi>lz3nKcFNB[HR>XQ2
 R2
 S1
 R0
-w1707870806
+w1707879935
 8C:/Users/minec/Desktop/Work/GitHub Repos/PROJ300/Firmware/UART/sv files/UART_tb.sv
 FC:/Users/minec/Desktop/Work/GitHub Repos/PROJ300/Firmware/UART/sv files/UART_tb.sv
-!i122 26
-L0 1 137
+!i122 44
+L0 1 209
 R3
 r1
 !s85 0
 31
-!s108 1707870852.000000
+!s108 1707879938.000000
 !s107 C:/Users/minec/Desktop/Work/GitHub Repos/PROJ300/Firmware/UART/sv files/UART_tb.sv|
 !s90 -reportprogress|300|-work|work|C:/Users/minec/Desktop/Work/GitHub Repos/PROJ300/Firmware/UART/sv files/UART_tb.sv|
 !i113 1
