@@ -34,7 +34,7 @@ always_ff @(negedge clk or posedge rst) begin
 
     else begin
 
-        transmission_state <= 1;    // sot
+        transmission_state <= 1;    // sot                          DEADLOCK!!!!!!
         counter_reg <= counter_reg + 1;
         bsy <= 1;   // bsy is high by default
 
