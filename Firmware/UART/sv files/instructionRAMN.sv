@@ -139,6 +139,19 @@ always_ff @(posedge clk) begin
 
         end
 
+        // CPU RANDOM ACCESS INSTRUCTION FETCH
+        // uses address input
+        2'd3 : begin
+
+            // clear other address registers upon switching modes
+            addressREAD_reg <= 'd0;
+            addressWRITE_reg <= 'd0;
+            addressDEBUG_reg = 'd0;
+
+            
+
+        end
+
         // default case is WRITE
         // default : begin
 
