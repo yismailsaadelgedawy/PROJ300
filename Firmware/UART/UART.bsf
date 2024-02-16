@@ -52,13 +52,6 @@ https://fpgasoftware.intel.com/eula.
 		(text "data_out[7..0]" (rect 96 27 179 46)(font "Intel Clear" (font_size 8)))
 		(line (pt 200 32)(pt 184 32)(line_width 3))
 	)
-	(port
-		(pt 200 48)
-		(output)
-		(text "busy" (rect 0 0 28 19)(font "Intel Clear" (font_size 8)))
-		(text "busy" (rect 151 43 179 62)(font "Intel Clear" (font_size 8)))
-		(line (pt 200 48)(pt 184 48))
-	)
 	(drawing
 		(rectangle (rect 16 16 184 80))
 	)

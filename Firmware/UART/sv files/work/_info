@@ -9,20 +9,220 @@ z2
 !i10f 100
 cModel Technology
 Z0 dC:/Users/minec/Desktop/Work/GitHub Repos/PROJ300/Firmware/UART/sv files
+vaddress_counterN
+Z1 DXx6 sv_std 3 std 0 22 VYECXdT12H8WgbUP_5Y6:3
+!s110 1708043886
+!i10b 1
+!s100 ;1;0Ml5Y0>m7lB?z^m]Hk0
+Z2 !s11b Dg1SIo80bB@j0V0VzS_@n1
+IBhog0OkXdDgWBQ[@:bUOa2
+Z3 VDg1SIo80bB@j0V0VzS_@n1
+S1
+R0
+w1708043880
+8C:/Users/minec/Desktop/Work/GitHub Repos/PROJ300/Firmware/UART/sv files/address_counterN.sv
+FC:/Users/minec/Desktop/Work/GitHub Repos/PROJ300/Firmware/UART/sv files/address_counterN.sv
+!i122 115
+L0 1 68
+Z4 OV;L;2020.1;71
+r1
+!s85 0
+31
+!s108 1708043886.000000
+!s107 C:/Users/minec/Desktop/Work/GitHub Repos/PROJ300/Firmware/UART/sv files/address_counterN.sv|
+!s90 -reportprogress|300|-work|work|C:/Users/minec/Desktop/Work/GitHub Repos/PROJ300/Firmware/UART/sv files/address_counterN.sv|
+!i113 1
+Z5 o-work work
+Z6 tCvgOpt 0
+naddress_counter@n
+vaddress_counterN_tb
+R1
+!s110 1708043941
+!i10b 1
+!s100 Go:D72HRXUzAbJWPm<YBl2
+R2
+IFc=V2@[lW==hhUijYL29O0
+R3
+S1
+R0
+w1708043936
+8C:/Users/minec/Desktop/Work/GitHub Repos/PROJ300/Firmware/UART/sv files/address_counterN_tb.sv
+FC:/Users/minec/Desktop/Work/GitHub Repos/PROJ300/Firmware/UART/sv files/address_counterN_tb.sv
+!i122 116
+L0 1 140
+R4
+r1
+!s85 0
+31
+!s108 1708043941.000000
+!s107 C:/Users/minec/Desktop/Work/GitHub Repos/PROJ300/Firmware/UART/sv files/address_counterN_tb.sv|
+!s90 -reportprogress|300|-work|work|C:/Users/minec/Desktop/Work/GitHub Repos/PROJ300/Firmware/UART/sv files/address_counterN_tb.sv|
+!i113 1
+R5
+R6
+naddress_counter@n_tb
+vdebouncer
+R1
+!s110 1708040767
+!i10b 1
+!s100 C2zliWnPR^@1JCY0]?ISi1
+R2
+IHUh:lNkz3fWbQF537=S^j0
+R3
+S1
+R0
+w1708040563
+8C:/Users/minec/Desktop/Work/GitHub Repos/PROJ300/Firmware/UART/sv files/debouncer.sv
+FC:/Users/minec/Desktop/Work/GitHub Repos/PROJ300/Firmware/UART/sv files/debouncer.sv
+!i122 103
+L0 1 112
+R4
+r1
+!s85 0
+31
+!s108 1708040767.000000
+!s107 C:/Users/minec/Desktop/Work/GitHub Repos/PROJ300/Firmware/UART/sv files/debouncer.sv|
+!s90 -reportprogress|300|-work|work|C:/Users/minec/Desktop/Work/GitHub Repos/PROJ300/Firmware/UART/sv files/debouncer.sv|
+!i113 1
+R5
+R6
+vdebouncer_tb
+R1
+!s110 1708033243
+!i10b 1
+!s100 2NK]kN4WYJackZhX1e4Rj3
+R2
+IT?5iPlIJ=T^2LcY^@>7;<1
+R3
+S1
+R0
+w1708033240
+8C:/Users/minec/Desktop/Work/GitHub Repos/PROJ300/Firmware/UART/sv files/debouncer_tb.sv
+FC:/Users/minec/Desktop/Work/GitHub Repos/PROJ300/Firmware/UART/sv files/debouncer_tb.sv
+!i122 53
+Z7 L0 1 101
+R4
+r1
+!s85 0
+31
+!s108 1708033243.000000
+!s107 C:/Users/minec/Desktop/Work/GitHub Repos/PROJ300/Firmware/UART/sv files/debouncer_tb.sv|
+!s90 -reportprogress|300|-work|work|C:/Users/minec/Desktop/Work/GitHub Repos/PROJ300/Firmware/UART/sv files/debouncer_tb.sv|
+!i113 1
+R5
+R6
+vdebug
+!s110 1708042475
+!i10b 1
+!s100 o[`A8@FcjFAW445oBg1FJ1
+R2
+I?aMe22Vz8McJ0Iok4VVKP3
+R3
+R0
+w1708042259
+8C:/Users/minec/Desktop/Work/GitHub Repos/PROJ300/Firmware/UART/sv files/debug.v
+FC:/Users/minec/Desktop/Work/GitHub Repos/PROJ300/Firmware/UART/sv files/debug.v
+!i122 113
+L0 20 40
+R4
+r1
+!s85 0
+31
+!s108 1708042475.000000
+!s107 C:/Users/minec/Desktop/Work/GitHub Repos/PROJ300/Firmware/UART/sv files/debug.v|
+!s90 -reportprogress|300|-work|work|C:/Users/minec/Desktop/Work/GitHub Repos/PROJ300/Firmware/UART/sv files/debug.v|
+!i113 1
+R5
+R6
+vdebug_tb
+R1
+!s110 1708042477
+!i10b 1
+!s100 WVz;;Rm<AKH87YdggLc4f1
+R2
+I6SlWeLAXHm_g@jZa@zlcI3
+R3
+S1
+R0
+w1708042466
+8C:/Users/minec/Desktop/Work/GitHub Repos/PROJ300/Firmware/UART/sv files/debug_tb.sv
+FC:/Users/minec/Desktop/Work/GitHub Repos/PROJ300/Firmware/UART/sv files/debug_tb.sv
+!i122 114
+R7
+R4
+r1
+!s85 0
+31
+!s108 1708042477.000000
+!s107 C:/Users/minec/Desktop/Work/GitHub Repos/PROJ300/Firmware/UART/sv files/debug_tb.sv|
+!s90 -reportprogress|300|-work|work|C:/Users/minec/Desktop/Work/GitHub Repos/PROJ300/Firmware/UART/sv files/debug_tb.sv|
+!i113 1
+R5
+R6
+vpulse_gen
+R1
+!s110 1708041109
+!i10b 1
+!s100 e6QnO?[2;]G3IHk:LT2IX2
+R2
+IJ9ln:hlQ]@NEbPB_e6;0X1
+R3
+S1
+R0
+w1708041104
+8C:/Users/minec/Desktop/Work/GitHub Repos/PROJ300/Firmware/UART/sv files/pulse_gen.sv
+FC:/Users/minec/Desktop/Work/GitHub Repos/PROJ300/Firmware/UART/sv files/pulse_gen.sv
+!i122 106
+L0 1 57
+R4
+r1
+!s85 0
+31
+!s108 1708041109.000000
+!s107 C:/Users/minec/Desktop/Work/GitHub Repos/PROJ300/Firmware/UART/sv files/pulse_gen.sv|
+!s90 -reportprogress|300|-work|work|C:/Users/minec/Desktop/Work/GitHub Repos/PROJ300/Firmware/UART/sv files/pulse_gen.sv|
+!i113 1
+R5
+R6
+vpulse_gen_tb
+R1
+!s110 1708041110
+!i10b 1
+!s100 kRl3f4;e>Y3T]YY<8`G8l1
+R2
+Ih?RDXE]8C32<i3Kmg6nW43
+R3
+S1
+R0
+w1708041082
+8C:/Users/minec/Desktop/Work/GitHub Repos/PROJ300/Firmware/UART/sv files/pulse_gen_tb.sv
+FC:/Users/minec/Desktop/Work/GitHub Repos/PROJ300/Firmware/UART/sv files/pulse_gen_tb.sv
+!i122 107
+L0 1 94
+R4
+r1
+!s85 0
+31
+!s108 1708041110.000000
+!s107 C:/Users/minec/Desktop/Work/GitHub Repos/PROJ300/Firmware/UART/sv files/pulse_gen_tb.sv|
+!s90 -reportprogress|300|-work|work|C:/Users/minec/Desktop/Work/GitHub Repos/PROJ300/Firmware/UART/sv files/pulse_gen_tb.sv|
+!i113 1
+R5
+R6
 vUART
 !s110 1707878734
 !i10b 1
 !s100 :QFQW^n=29>BIaMoN6Nk:0
-Z1 !s11b Dg1SIo80bB@j0V0VzS_@n1
+R2
 I`HCcI^AKN;18k52?2Geo50
-Z2 VDg1SIo80bB@j0V0VzS_@n1
+R3
 R0
 w1707878699
 8C:/Users/minec/Desktop/Work/GitHub Repos/PROJ300/Firmware/UART/sv files/UART.v
 FC:/Users/minec/Desktop/Work/GitHub Repos/PROJ300/Firmware/UART/sv files/UART.v
 !i122 32
 L0 20 44
-Z3 OV;L;2020.1;71
+R4
 r1
 !s85 0
 31
@@ -30,17 +230,17 @@ r1
 !s107 C:/Users/minec/Desktop/Work/GitHub Repos/PROJ300/Firmware/UART/sv files/UART.v|
 !s90 -reportprogress|300|-work|work|C:/Users/minec/Desktop/Work/GitHub Repos/PROJ300/Firmware/UART/sv files/UART.v|
 !i113 1
-Z4 o-work work
-Z5 tCvgOpt 0
+R5
+R6
 n@u@a@r@t
 vuart_clk_divN
-Z6 DXx6 sv_std 3 std 0 22 VYECXdT12H8WgbUP_5Y6:3
+R1
 !s110 1707879801
 !i10b 1
 !s100 ?7Bzn3Z0o5l<QoYAc@_mG2
-R1
-I_MW6DJfjlF@X@4mo_DKMC3
 R2
+I_MW6DJfjlF@X@4mo_DKMC3
+R3
 S1
 R0
 w1707879795
@@ -48,7 +248,7 @@ w1707879795
 FC:/Users/minec/Desktop/Work/GitHub Repos/PROJ300/Firmware/UART/sv files/uart_clk_divN.sv
 !i122 43
 L0 1 102
-R3
+R4
 r1
 !s85 0
 31
@@ -56,17 +256,17 @@ r1
 !s107 C:/Users/minec/Desktop/Work/GitHub Repos/PROJ300/Firmware/UART/sv files/uart_clk_divN.sv|
 !s90 -reportprogress|300|-work|work|C:/Users/minec/Desktop/Work/GitHub Repos/PROJ300/Firmware/UART/sv files/uart_clk_divN.sv|
 !i113 1
-R4
 R5
+R6
 nuart_clk_div@n
 vuart_clk_divN_tb
-R6
+R1
 !s110 1707878436
 !i10b 1
 !s100 3>fOiG6ca:CRW0HgFXSQ@3
-R1
-Ii`jGJ@LH4_:?zM:=^[;Od2
 R2
+Ii`jGJ@LH4_:?zM:=^[;Od2
+R3
 S1
 R0
 w1707878433
@@ -74,7 +274,7 @@ w1707878433
 FC:/Users/minec/Desktop/Work/GitHub Repos/PROJ300/Firmware/UART/sv files/uart_clk_divN_tb.sv
 !i122 29
 L0 1 139
-R3
+R4
 r1
 !s85 0
 31
@@ -82,17 +282,17 @@ r1
 !s107 C:/Users/minec/Desktop/Work/GitHub Repos/PROJ300/Firmware/UART/sv files/uart_clk_divN_tb.sv|
 !s90 -reportprogress|300|-work|work|C:/Users/minec/Desktop/Work/GitHub Repos/PROJ300/Firmware/UART/sv files/uart_clk_divN_tb.sv|
 !i113 1
-R4
 R5
+R6
 nuart_clk_div@n_tb
 vuart_controller
-R6
+R1
 !s110 1707878641
 !i10b 1
 !s100 :EVgT6QOUehleF2Rkh4zK1
-R1
-ITol0@M0Ke9DcoLkgiz5P<1
 R2
+ITol0@M0Ke9DcoLkgiz5P<1
+R3
 S1
 R0
 w1707878551
@@ -100,7 +300,7 @@ w1707878551
 FC:/Users/minec/Desktop/Work/GitHub Repos/PROJ300/Firmware/UART/sv files/uart_controller.sv
 !i122 30
 L0 1 95
-R3
+R4
 r1
 !s85 0
 31
@@ -108,16 +308,16 @@ r1
 !s107 C:/Users/minec/Desktop/Work/GitHub Repos/PROJ300/Firmware/UART/sv files/uart_controller.sv|
 !s90 -reportprogress|300|-work|work|C:/Users/minec/Desktop/Work/GitHub Repos/PROJ300/Firmware/UART/sv files/uart_controller.sv|
 !i113 1
-R4
 R5
-vuart_controller_tb
 R6
+vuart_controller_tb
+R1
 !s110 1707878642
 !i10b 1
 !s100 aJe4OD1lInK[=BKiPQZZN0
-R1
-IYV8a7OdoXn=@V>:S5o>642
 R2
+IYV8a7OdoXn=@V>:S5o>642
+R3
 S1
 R0
 w1707878631
@@ -125,7 +325,7 @@ w1707878631
 FC:/Users/minec/Desktop/Work/GitHub Repos/PROJ300/Firmware/UART/sv files/uart_controller_tb.sv
 !i122 31
 L0 1 256
-R3
+R4
 r1
 !s85 0
 31
@@ -133,16 +333,16 @@ r1
 !s107 C:/Users/minec/Desktop/Work/GitHub Repos/PROJ300/Firmware/UART/sv files/uart_controller_tb.sv|
 !s90 -reportprogress|300|-work|work|C:/Users/minec/Desktop/Work/GitHub Repos/PROJ300/Firmware/UART/sv files/uart_controller_tb.sv|
 !i113 1
-R4
 R5
-vUART_tb
 R6
+vUART_tb
+R1
 !s110 1707879939
 !i10b 1
 !s100 l7ej8aO09TF;h5VGT6Q560
-R1
-IUKUQi>lz3nKcFNB[HR>XQ2
 R2
+IUKUQi>lz3nKcFNB[HR>XQ2
+R3
 S1
 R0
 w1707879935
@@ -150,7 +350,7 @@ w1707879935
 FC:/Users/minec/Desktop/Work/GitHub Repos/PROJ300/Firmware/UART/sv files/UART_tb.sv
 !i122 44
 L0 1 209
-R3
+R4
 r1
 !s85 0
 31
@@ -158,6 +358,6 @@ r1
 !s107 C:/Users/minec/Desktop/Work/GitHub Repos/PROJ300/Firmware/UART/sv files/UART_tb.sv|
 !s90 -reportprogress|300|-work|work|C:/Users/minec/Desktop/Work/GitHub Repos/PROJ300/Firmware/UART/sv files/UART_tb.sv|
 !i113 1
-R4
 R5
+R6
 n@u@a@r@t_tb
