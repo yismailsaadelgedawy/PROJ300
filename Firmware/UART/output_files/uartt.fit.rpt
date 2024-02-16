@@ -1,5 +1,5 @@
 Fitter report for uartt
-Fri Feb 16 01:29:25 2024
+Fri Feb 16 02:37:52 2024
 Quartus Prime Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
 
 
@@ -63,7 +63,7 @@ https://fpgasoftware.intel.com/eula.
 +-------------------------------------------------------------------------------+
 ; Fitter Summary                                                                ;
 +---------------------------------+---------------------------------------------+
-; Fitter Status                   ; Successful - Fri Feb 16 01:29:25 2024       ;
+; Fitter Status                   ; Successful - Fri Feb 16 02:37:52 2024       ;
 ; Quartus Prime Version           ; 20.1.1 Build 720 11/11/2020 SJ Lite Edition ;
 ; Revision Name                   ; uartt                                       ;
 ; Top-level Entity Name           ; TopLevel                                    ;
@@ -1001,21 +1001,21 @@ Note: Pin directions (input, output or bidir) are based on device operating in u
 +-------------+-------------------------------+
 
 
-+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Fitter Resource Utilization by Entity                                                                                                                                                                                                                                                                                                                                                                                      ;
-+---------------------------------+----------------------+----------------------------------+---------------------------------------------------+----------------------------------+----------------------+---------------------+---------------------------+---------------+-------------------+-------+------------+------+--------------+-------------------------------------------+----------------------+--------------+
-; Compilation Hierarchy Node      ; ALMs needed [=A-B+C] ; [A] ALMs used in final placement ; [B] Estimate of ALMs recoverable by dense packing ; [C] Estimate of ALMs unavailable ; ALMs used for memory ; Combinational ALUTs ; Dedicated Logic Registers ; I/O Registers ; Block Memory Bits ; M10Ks ; DSP Blocks ; Pins ; Virtual Pins ; Full Hierarchy Name                       ; Entity Name          ; Library Name ;
-+---------------------------------+----------------------+----------------------------------+---------------------------------------------------+----------------------------------+----------------------+---------------------+---------------------------+---------------+-------------------+-------+------------+------+--------------+-------------------------------------------+----------------------+--------------+
-; |TopLevel                       ; 67.0 (0.5)           ; 75.5 (0.5)                       ; 8.5 (0.0)                                         ; 0.0 (0.0)                        ; 0.0 (0.0)            ; 125 (1)             ; 90 (0)                    ; 0 (0)         ; 0                 ; 0     ; 0          ; 42   ; 0            ; |TopLevel                                 ; TopLevel             ; work         ;
-;    |UART:inst|                  ; 27.7 (0.0)           ; 33.7 (0.0)                       ; 6.0 (0.0)                                         ; 0.0 (0.0)                        ; 0.0 (0.0)            ; 47 (0)              ; 51 (0)                    ; 0 (0)         ; 0                 ; 0     ; 0          ; 0    ; 0            ; |TopLevel|UART:inst                       ; UART                 ; work         ;
-;       |bsy_detector:inst2|      ; 2.2 (2.2)            ; 4.0 (4.0)                        ; 1.8 (1.8)                                         ; 0.0 (0.0)                        ; 0.0 (0.0)            ; 0 (0)               ; 8 (8)                     ; 0 (0)         ; 0                 ; 0     ; 0          ; 0    ; 0            ; |TopLevel|UART:inst|bsy_detector:inst2    ; bsy_detector         ; work         ;
-;       |uart_clk_divN:inst|      ; 22.0 (22.0)          ; 22.3 (22.3)                      ; 0.3 (0.3)                                         ; 0.0 (0.0)                        ; 0.0 (0.0)            ; 40 (40)             ; 28 (28)                   ; 0 (0)         ; 0                 ; 0     ; 0          ; 0    ; 0            ; |TopLevel|UART:inst|uart_clk_divN:inst    ; uart_clk_divN        ; work         ;
-;       |uart_controller:inst1|   ; 3.5 (3.5)            ; 7.3 (7.3)                        ; 3.8 (3.8)                                         ; 0.0 (0.0)                        ; 0.0 (0.0)            ; 7 (7)               ; 15 (15)                   ; 0 (0)         ; 0                 ; 0     ; 0          ; 0    ; 0            ; |TopLevel|UART:inst|uart_controller:inst1 ; uart_controller      ; work         ;
-;    |address_counterN:inst11|    ; 6.3 (6.3)            ; 6.3 (6.3)                        ; 0.0 (0.0)                                         ; 0.0 (0.0)                        ; 0.0 (0.0)            ; 13 (13)             ; 10 (10)                   ; 0 (0)         ; 0                 ; 0     ; 0          ; 0    ; 0            ; |TopLevel|address_counterN:inst11         ; address_counterN     ; work         ;
-;    |debouncer:inst8|            ; 20.8 (20.8)          ; 21.7 (21.7)                      ; 0.8 (0.8)                                         ; 0.0 (0.0)                        ; 0.0 (0.0)            ; 36 (36)             ; 29 (29)                   ; 0 (0)         ; 0                 ; 0     ; 0          ; 0    ; 0            ; |TopLevel|debouncer:inst8                 ; debouncer            ; work         ;
-;    |seven_seg_controller:inst3| ; 4.8 (4.8)            ; 6.3 (6.3)                        ; 1.5 (1.5)                                         ; 0.0 (0.0)                        ; 0.0 (0.0)            ; 14 (14)             ; 0 (0)                     ; 0 (0)         ; 0                 ; 0     ; 0          ; 0    ; 0            ; |TopLevel|seven_seg_controller:inst3      ; seven_seg_controller ; work         ;
-;    |seven_seg_controller:inst6| ; 6.8 (6.8)            ; 7.0 (7.0)                        ; 0.2 (0.2)                                         ; 0.0 (0.0)                        ; 0.0 (0.0)            ; 14 (14)             ; 0 (0)                     ; 0 (0)         ; 0                 ; 0     ; 0          ; 0    ; 0            ; |TopLevel|seven_seg_controller:inst6      ; seven_seg_controller ; work         ;
-+---------------------------------+----------------------+----------------------------------+---------------------------------------------------+----------------------------------+----------------------+---------------------+---------------------------+---------------+-------------------+-------+------------+------+--------------+-------------------------------------------+----------------------+--------------+
++--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Fitter Resource Utilization by Entity                                                                                                                                                                                                                                                                                                                                                                                          ;
++-----------------------------------+----------------------+----------------------------------+---------------------------------------------------+----------------------------------+----------------------+---------------------+---------------------------+---------------+-------------------+-------+------------+------+--------------+-------------------------------------------+------------------------+--------------+
+; Compilation Hierarchy Node        ; ALMs needed [=A-B+C] ; [A] ALMs used in final placement ; [B] Estimate of ALMs recoverable by dense packing ; [C] Estimate of ALMs unavailable ; ALMs used for memory ; Combinational ALUTs ; Dedicated Logic Registers ; I/O Registers ; Block Memory Bits ; M10Ks ; DSP Blocks ; Pins ; Virtual Pins ; Full Hierarchy Name                       ; Entity Name            ; Library Name ;
++-----------------------------------+----------------------+----------------------------------+---------------------------------------------------+----------------------------------+----------------------+---------------------+---------------------------+---------------+-------------------+-------+------------+------+--------------+-------------------------------------------+------------------------+--------------+
+; |TopLevel                         ; 67.0 (0.5)           ; 75.5 (0.5)                       ; 8.5 (0.0)                                         ; 0.0 (0.0)                        ; 0.0 (0.0)            ; 125 (1)             ; 90 (0)                    ; 0 (0)         ; 0                 ; 0     ; 0          ; 42   ; 0            ; |TopLevel                                 ; TopLevel               ; work         ;
+;    |UART:inst|                    ; 27.7 (0.0)           ; 33.7 (0.0)                       ; 6.0 (0.0)                                         ; 0.0 (0.0)                        ; 0.0 (0.0)            ; 47 (0)              ; 51 (0)                    ; 0 (0)         ; 0                 ; 0     ; 0          ; 0    ; 0            ; |TopLevel|UART:inst                       ; UART                   ; work         ;
+;       |bsy_detector:inst2|        ; 2.2 (2.2)            ; 4.0 (4.0)                        ; 1.8 (1.8)                                         ; 0.0 (0.0)                        ; 0.0 (0.0)            ; 0 (0)               ; 8 (8)                     ; 0 (0)         ; 0                 ; 0     ; 0          ; 0    ; 0            ; |TopLevel|UART:inst|bsy_detector:inst2    ; bsy_detector           ; work         ;
+;       |uart_clk_divN:inst|        ; 22.0 (22.0)          ; 22.3 (22.3)                      ; 0.3 (0.3)                                         ; 0.0 (0.0)                        ; 0.0 (0.0)            ; 40 (40)             ; 28 (28)                   ; 0 (0)         ; 0                 ; 0     ; 0          ; 0    ; 0            ; |TopLevel|UART:inst|uart_clk_divN:inst    ; uart_clk_divN          ; work         ;
+;       |uart_controller:inst1|     ; 3.5 (3.5)            ; 7.3 (7.3)                        ; 3.8 (3.8)                                         ; 0.0 (0.0)                        ; 0.0 (0.0)            ; 7 (7)               ; 15 (15)                   ; 0 (0)         ; 0                 ; 0     ; 0          ; 0    ; 0            ; |TopLevel|UART:inst|uart_controller:inst1 ; uart_controller        ; work         ;
+;    |debouncer:inst8|              ; 20.8 (20.8)          ; 21.7 (21.7)                      ; 0.8 (0.8)                                         ; 0.0 (0.0)                        ; 0.0 (0.0)            ; 36 (36)             ; 29 (29)                   ; 0 (0)         ; 0                 ; 0     ; 0          ; 0    ; 0            ; |TopLevel|debouncer:inst8                 ; debouncer              ; work         ;
+;    |debug_address_counterN:inst1| ; 6.3 (6.3)            ; 6.3 (6.3)                        ; 0.0 (0.0)                                         ; 0.0 (0.0)                        ; 0.0 (0.0)            ; 13 (13)             ; 10 (10)                   ; 0 (0)         ; 0                 ; 0     ; 0          ; 0    ; 0            ; |TopLevel|debug_address_counterN:inst1    ; debug_address_counterN ; work         ;
+;    |seven_seg_controller:inst3|   ; 4.8 (4.8)            ; 6.3 (6.3)                        ; 1.5 (1.5)                                         ; 0.0 (0.0)                        ; 0.0 (0.0)            ; 14 (14)             ; 0 (0)                     ; 0 (0)         ; 0                 ; 0     ; 0          ; 0    ; 0            ; |TopLevel|seven_seg_controller:inst3      ; seven_seg_controller   ; work         ;
+;    |seven_seg_controller:inst6|   ; 6.8 (6.8)            ; 7.0 (7.0)                        ; 0.2 (0.2)                                         ; 0.0 (0.0)                        ; 0.0 (0.0)            ; 14 (14)             ; 0 (0)                     ; 0 (0)         ; 0                 ; 0     ; 0          ; 0    ; 0            ; |TopLevel|seven_seg_controller:inst6      ; seven_seg_controller   ; work         ;
++-----------------------------------+----------------------+----------------------------------+---------------------------------------------------+----------------------------------+----------------------+---------------------+---------------------------+---------------+-------------------+-------+------------+------+--------------+-------------------------------------------+------------------------+--------------+
 Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
 
 
@@ -1123,15 +1123,15 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ;      - debouncer:inst8|state_reg.01                             ; 0                 ; 0       ;
 ;      - debouncer:inst8|state_reg.00                             ; 0                 ; 0       ;
 ;      - UART:inst|uart_controller:inst1|bsy                      ; 0                 ; 0       ;
-;      - address_counterN:inst11|counter_reg[6]~0                 ; 0                 ; 0       ;
-;      - address_counterN:inst11|counter_reg[6]~1                 ; 0                 ; 0       ;
+;      - debug_address_counterN:inst1|counter_reg[6]~0            ; 0                 ; 0       ;
+;      - debug_address_counterN:inst1|counter_reg[6]~1            ; 0                 ; 0       ;
 ;      - debouncer:inst8|state_reg.10                             ; 0                 ; 0       ;
 ;      - UART:inst|uart_controller:inst1|counter_reg[3]           ; 0                 ; 0       ;
 ;      - UART:inst|uart_controller:inst1|counter_reg[1]           ; 0                 ; 0       ;
 ;      - UART:inst|uart_controller:inst1|counter_reg[2]           ; 0                 ; 0       ;
 ;      - UART:inst|uart_controller:inst1|counter_reg[0]           ; 0                 ; 0       ;
-;      - address_counterN:inst11|current_reg~0                    ; 0                 ; 0       ;
-;      - address_counterN:inst11|prev_reg~0                       ; 0                 ; 0       ;
+;      - debug_address_counterN:inst1|current_reg~0               ; 0                 ; 0       ;
+;      - debug_address_counterN:inst1|prev_reg~0                  ; 0                 ; 0       ;
 ;      - UART:inst|uart_clk_divN:inst|transmission_state          ; 0                 ; 0       ;
 ;      - UART:inst|uart_clk_divN:inst|bsy_posedge_waiting         ; 0                 ; 0       ;
 ;      - UART:inst|uart_clk_divN:inst|counter_reg[14]~0           ; 0                 ; 0       ;
@@ -1166,12 +1166,12 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; UART:inst|uart_controller:inst1|Equal1~0       ; LABCELL_X43_Y2_N54 ; 8       ; Sync. clear                             ; no     ; --                   ; --               ; --                        ;
 ; UART:inst|uart_controller:inst1|bsy            ; FF_X43_Y2_N53      ; 10      ; Clock                                   ; no     ; --                   ; --               ; --                        ;
 ; UART:inst|uart_controller:inst1|shift_reg[3]~0 ; LABCELL_X43_Y2_N9  ; 8       ; Clock enable                            ; no     ; --                   ; --               ; --                        ;
-; address_counterN:inst11|counter_reg[6]~0       ; LABCELL_X40_Y2_N57 ; 8       ; Sync. clear                             ; no     ; --                   ; --               ; --                        ;
-; address_counterN:inst11|counter_reg[6]~1       ; LABCELL_X40_Y2_N54 ; 8       ; Clock enable                            ; no     ; --                   ; --               ; --                        ;
 ; clk_50MHz                                      ; PIN_M9             ; 2       ; Clock                                   ; no     ; --                   ; --               ; --                        ;
 ; clk_50MHz                                      ; PIN_M9             ; 66      ; Clock                                   ; yes    ; Global Clock         ; GCLK6            ; --                        ;
 ; debouncer:inst8|Selector28~0                   ; LABCELL_X36_Y4_N12 ; 25      ; Sync. clear                             ; no     ; --                   ; --               ; --                        ;
 ; debouncer:inst8|counter_reg[24]~0              ; LABCELL_X36_Y4_N6  ; 25      ; Clock enable                            ; no     ; --                   ; --               ; --                        ;
+; debug_address_counterN:inst1|counter_reg[6]~0  ; LABCELL_X40_Y2_N57 ; 8       ; Sync. clear                             ; no     ; --                   ; --               ; --                        ;
+; debug_address_counterN:inst1|counter_reg[6]~1  ; LABCELL_X40_Y2_N54 ; 8       ; Clock enable                            ; no     ; --                   ; --               ; --                        ;
 +------------------------------------------------+--------------------+---------+-----------------------------------------+--------+----------------------+------------------+---------------------------+
 
 
@@ -1416,7 +1416,7 @@ This will disable optimization of problematic paths and expose them for further 
 ; UART:inst|uart_controller:inst1|shift_reg[3]     ; UART:inst|uart_controller:inst1|shift_reg[2]    ; 0.984             ;
 ; debouncer:inst8|state_reg.01                     ; debouncer:inst8|state_reg.10                    ; 0.405             ;
 ; debouncer:inst8|state_reg.10                     ; debouncer:inst8|state_reg.00                    ; 0.388             ;
-; debouncer:inst8|q                                ; address_counterN:inst11|current_reg             ; 0.374             ;
+; debouncer:inst8|q                                ; debug_address_counterN:inst1|current_reg        ; 0.374             ;
 ; debouncer:inst8|state_reg.00                     ; debouncer:inst8|state_reg.01                    ; 0.371             ;
 ; UART:inst|uart_clk_divN:inst|bsy_posedge_waiting ; UART:inst|uart_clk_divN:inst|transmission_state ; 0.365             ;
 ; debouncer:inst8|counter_reg[6]                   ; debouncer:inst8|q                               ; 0.287             ;
@@ -1493,10 +1493,10 @@ Info (334004): Delay annotation completed successfully
 Info (11801): Fitter post-fit operations ending: elapsed time is 00:00:02
 Info (144001): Generated suppressed messages file C:/Users/minec/Desktop/Work/GitHub Repos/PROJ300/Firmware/UART/output_files/uartt.fit.smsg
 Info: Quartus Prime Fitter was successful. 0 errors, 4 warnings
-    Info: Peak virtual memory: 7552 megabytes
-    Info: Processing ended: Fri Feb 16 01:29:26 2024
-    Info: Elapsed time: 00:00:17
-    Info: Total CPU time (on all processors): 00:00:51
+    Info: Peak virtual memory: 7554 megabytes
+    Info: Processing ended: Fri Feb 16 02:37:53 2024
+    Info: Elapsed time: 00:00:16
+    Info: Total CPU time (on all processors): 00:00:50
 
 
 +----------------------------+

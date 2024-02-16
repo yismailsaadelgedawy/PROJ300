@@ -9,66 +9,14 @@ z2
 !i10f 100
 cModel Technology
 Z0 dC:/Users/minec/Desktop/Work/GitHub Repos/PROJ300/Firmware/UART/sv files
-vaddress_counterN
-Z1 DXx6 sv_std 3 std 0 22 VYECXdT12H8WgbUP_5Y6:3
-!s110 1708043886
-!i10b 1
-!s100 ;1;0Ml5Y0>m7lB?z^m]Hk0
-Z2 !s11b Dg1SIo80bB@j0V0VzS_@n1
-IBhog0OkXdDgWBQ[@:bUOa2
-Z3 VDg1SIo80bB@j0V0VzS_@n1
-S1
-R0
-w1708043880
-8C:/Users/minec/Desktop/Work/GitHub Repos/PROJ300/Firmware/UART/sv files/address_counterN.sv
-FC:/Users/minec/Desktop/Work/GitHub Repos/PROJ300/Firmware/UART/sv files/address_counterN.sv
-!i122 115
-L0 1 68
-Z4 OV;L;2020.1;71
-r1
-!s85 0
-31
-!s108 1708043886.000000
-!s107 C:/Users/minec/Desktop/Work/GitHub Repos/PROJ300/Firmware/UART/sv files/address_counterN.sv|
-!s90 -reportprogress|300|-work|work|C:/Users/minec/Desktop/Work/GitHub Repos/PROJ300/Firmware/UART/sv files/address_counterN.sv|
-!i113 1
-Z5 o-work work
-Z6 tCvgOpt 0
-naddress_counter@n
-vaddress_counterN_tb
-R1
-!s110 1708043941
-!i10b 1
-!s100 Go:D72HRXUzAbJWPm<YBl2
-R2
-IFc=V2@[lW==hhUijYL29O0
-R3
-S1
-R0
-w1708043936
-8C:/Users/minec/Desktop/Work/GitHub Repos/PROJ300/Firmware/UART/sv files/address_counterN_tb.sv
-FC:/Users/minec/Desktop/Work/GitHub Repos/PROJ300/Firmware/UART/sv files/address_counterN_tb.sv
-!i122 116
-L0 1 140
-R4
-r1
-!s85 0
-31
-!s108 1708043941.000000
-!s107 C:/Users/minec/Desktop/Work/GitHub Repos/PROJ300/Firmware/UART/sv files/address_counterN_tb.sv|
-!s90 -reportprogress|300|-work|work|C:/Users/minec/Desktop/Work/GitHub Repos/PROJ300/Firmware/UART/sv files/address_counterN_tb.sv|
-!i113 1
-R5
-R6
-naddress_counter@n_tb
 vdebouncer
-R1
+Z1 DXx6 sv_std 3 std 0 22 VYECXdT12H8WgbUP_5Y6:3
 !s110 1708040767
 !i10b 1
 !s100 C2zliWnPR^@1JCY0]?ISi1
-R2
+Z2 !s11b Dg1SIo80bB@j0V0VzS_@n1
 IHUh:lNkz3fWbQF537=S^j0
-R3
+Z3 VDg1SIo80bB@j0V0VzS_@n1
 S1
 R0
 w1708040563
@@ -76,7 +24,7 @@ w1708040563
 FC:/Users/minec/Desktop/Work/GitHub Repos/PROJ300/Firmware/UART/sv files/debouncer.sv
 !i122 103
 L0 1 112
-R4
+Z4 OV;L;2020.1;71
 r1
 !s85 0
 31
@@ -84,8 +32,8 @@ r1
 !s107 C:/Users/minec/Desktop/Work/GitHub Repos/PROJ300/Firmware/UART/sv files/debouncer.sv|
 !s90 -reportprogress|300|-work|work|C:/Users/minec/Desktop/Work/GitHub Repos/PROJ300/Firmware/UART/sv files/debouncer.sv|
 !i113 1
-R5
-R6
+Z5 o-work work
+Z6 tCvgOpt 0
 vdebouncer_tb
 R1
 !s110 1708033243
@@ -134,6 +82,58 @@ r1
 !i113 1
 R5
 R6
+vdebug_address_counterN
+R1
+!s110 1708050952
+!i10b 1
+!s100 M55OVWTCKb?l>CFW7ceC;3
+R2
+Il=:G^WSF:Z9@YM5;mj`L:1
+R3
+S1
+R0
+w1708050931
+8C:/Users/minec/Desktop/Work/GitHub Repos/PROJ300/Firmware/UART/sv files/debug_address_counterN.sv
+FC:/Users/minec/Desktop/Work/GitHub Repos/PROJ300/Firmware/UART/sv files/debug_address_counterN.sv
+!i122 115
+L0 1 73
+R4
+r1
+!s85 0
+31
+!s108 1708050952.000000
+!s107 C:/Users/minec/Desktop/Work/GitHub Repos/PROJ300/Firmware/UART/sv files/debug_address_counterN.sv|
+!s90 -reportprogress|300|-work|work|C:/Users/minec/Desktop/Work/GitHub Repos/PROJ300/Firmware/UART/sv files/debug_address_counterN.sv|
+!i113 1
+R5
+R6
+ndebug_address_counter@n
+vdebug_address_counterN_tb
+R1
+!s110 1708050954
+!i10b 1
+!s100 Y7R6AdNDBm0Co:9fJci:_0
+R2
+I_j7a9eA3^NPHOcbf02^5e3
+R3
+S1
+R0
+w1708050803
+8C:/Users/minec/Desktop/Work/GitHub Repos/PROJ300/Firmware/UART/sv files/debug_address_counterN_tb.sv
+FC:/Users/minec/Desktop/Work/GitHub Repos/PROJ300/Firmware/UART/sv files/debug_address_counterN_tb.sv
+!i122 116
+L0 1 140
+R4
+r1
+!s85 0
+31
+!s108 1708050954.000000
+!s107 C:/Users/minec/Desktop/Work/GitHub Repos/PROJ300/Firmware/UART/sv files/debug_address_counterN_tb.sv|
+!s90 -reportprogress|300|-work|work|C:/Users/minec/Desktop/Work/GitHub Repos/PROJ300/Firmware/UART/sv files/debug_address_counterN_tb.sv|
+!i113 1
+R5
+R6
+ndebug_address_counter@n_tb
 vdebug_tb
 R1
 !s110 1708042477

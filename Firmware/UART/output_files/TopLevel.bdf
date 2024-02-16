@@ -348,53 +348,6 @@ https://fpgasoftware.intel.com/eula.
 	)
 )
 (symbol
-	(rect 736 664 912 776)
-	(text "address_counterN" (rect 5 0 94 12)(font "Arial" ))
-	(text "inst11" (rect 8 96 36 113)(font "Intel Clear" ))
-	(port
-		(pt 0 32)
-		(input)
-		(text "d" (rect 0 0 5 12)(font "Arial" ))
-		(text "d" (rect 21 27 26 39)(font "Arial" ))
-		(line (pt 0 32)(pt 16 32))
-	)
-	(port
-		(pt 0 48)
-		(input)
-		(text "clk" (rect 0 0 14 12)(font "Arial" ))
-		(text "clk" (rect 21 43 35 55)(font "Arial" ))
-		(line (pt 0 48)(pt 16 48))
-	)
-	(port
-		(pt 0 64)
-		(input)
-		(text "rst" (rect 0 0 12 12)(font "Arial" ))
-		(text "rst" (rect 21 59 33 71)(font "Arial" ))
-		(line (pt 0 64)(pt 16 64))
-	)
-	(port
-		(pt 176 32)
-		(output)
-		(text "address[N-1..0]" (rect 0 0 76 12)(font "Arial" ))
-		(text "address[N-1..0]" (rect 91 27 167 39)(font "Arial" ))
-		(line (pt 176 32)(pt 160 32)(line_width 3))
-	)
-	(parameter
-		"N"
-		"8"
-		""
-		(type "PARAMETER_SIGNED_DEC")	)
-	(parameter
-		"MAX_ADDRESS"
-		"255"
-		""
-		(type "PARAMETER_SIGNED_DEC")	)
-	(drawing
-		(rectangle (rect 16 16 160 96))
-	)
-	(annotation_block (parameter)(rect 736 608 932 665))
-)
-(symbol
 	(rect 1008 224 1040 256)
 	(text "GND" (rect 8 16 29 26)(font "Arial" (font_size 6)))
 	(text "inst15" (rect 3 21 31 38)(font "Intel Clear" )(invisible))
@@ -542,6 +495,53 @@ https://fpgasoftware.intel.com/eula.
 	(drawing
 		(rectangle (rect 16 16 184 80))
 	)
+)
+(symbol
+	(rect 736 664 912 776)
+	(text "debug_address_counterN" (rect 5 0 130 12)(font "Arial" ))
+	(text "inst1" (rect 8 96 30 113)(font "Intel Clear" ))
+	(port
+		(pt 0 32)
+		(input)
+		(text "d" (rect 0 0 5 12)(font "Arial" ))
+		(text "d" (rect 21 27 26 39)(font "Arial" ))
+		(line (pt 0 32)(pt 16 32))
+	)
+	(port
+		(pt 0 48)
+		(input)
+		(text "clk" (rect 0 0 14 12)(font "Arial" ))
+		(text "clk" (rect 21 43 35 55)(font "Arial" ))
+		(line (pt 0 48)(pt 16 48))
+	)
+	(port
+		(pt 0 64)
+		(input)
+		(text "rst" (rect 0 0 12 12)(font "Arial" ))
+		(text "rst" (rect 21 59 33 71)(font "Arial" ))
+		(line (pt 0 64)(pt 16 64))
+	)
+	(port
+		(pt 176 32)
+		(output)
+		(text "address[N-1..0]" (rect 0 0 76 12)(font "Arial" ))
+		(text "address[N-1..0]" (rect 91 27 167 39)(font "Arial" ))
+		(line (pt 176 32)(pt 160 32)(line_width 3))
+	)
+	(parameter
+		"N"
+		"8"
+		""
+		(type "PARAMETER_SIGNED_DEC")	)
+	(parameter
+		"MAX_ADDRESS"
+		"255"
+		""
+		(type "PARAMETER_SIGNED_DEC")	)
+	(drawing
+		(rectangle (rect 16 16 160 96))
+	)
+	(annotation_block (parameter)(rect 736 608 932 665))
 )
 (connector
 	(text "clk_50" (rect 474 168 505 185)(font "Intel Clear" ))

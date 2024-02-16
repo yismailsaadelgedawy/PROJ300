@@ -3,10 +3,10 @@ led9 <= debouncer:inst8.q
 key0 => inst9.IN0
 clk_50MHz => debouncer:inst8.clk
 clk_50MHz => UART:inst.clk_50MHz
-clk_50MHz => address_counterN:inst11.clk
+clk_50MHz => debug_address_counterN:inst1.clk
 SW0 => debouncer:inst8.rst
 SW0 => UART:inst.SW0
-SW0 => address_counterN:inst11.rst
+SW0 => debug_address_counterN:inst1.rst
 led8 <= <GND>
 data_out[0] <= <GND>
 data_out[1] <= <GND>
@@ -314,7 +314,7 @@ data[6] => Decoder1.IN1
 data[7] => Decoder1.IN0
 
 
-|TopLevel|address_counterN:inst11
+|TopLevel|debug_address_counterN:inst1
 address[0] <= counter_reg[0].DB_MAX_OUTPUT_PORT_TYPE
 address[1] <= counter_reg[1].DB_MAX_OUTPUT_PORT_TYPE
 address[2] <= counter_reg[2].DB_MAX_OUTPUT_PORT_TYPE

@@ -1,6 +1,6 @@
-module address_counterN #(parameter N=2, MAX_ADDRESS=3) (output logic [N-1:0] address, input logic d, clk, rst);
+module debug_address_counterN #(parameter N=2, MAX_ADDRESS=3) (output logic [N-1:0] address, input logic d, clk, rst);
 
-// to be connected to instruction RAM
+// to be connected to key0 for debugging CPU instructions // 
 
 logic [N-1:0] counter_reg;
 
@@ -37,7 +37,10 @@ always_ff @(posedge clk) begin
         current_reg <= d; // clk cycle 1
         prev_reg <= current_reg; // clk cycle 2
 
-        // rising edge detector
+        // rising edge detector -- there isn't a need for an
+        // external pulse gen module really
+        // current_reg && !prev_reg : rising edge pulse gen
+        // current_reg != prev_reg : normal pulse gen
         if (current_reg && !prev_reg) begin
 
             counter_reg <= counter_reg + 1;

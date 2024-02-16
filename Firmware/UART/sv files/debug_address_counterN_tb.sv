@@ -1,4 +1,4 @@
-module address_counterN_tb;
+module debug_address_counterN_tb;
 
 // parameters
 parameter N=2, MAX_ADDRESS=3;
@@ -13,7 +13,7 @@ logic clk, rst, d;
 logic [N-1:0] address;
 
 // wiring
-address_counterN dut(
+debug_address_counterN dut(
 
     // in
     .clk(clk),

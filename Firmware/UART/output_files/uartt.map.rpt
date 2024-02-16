@@ -1,5 +1,5 @@
 Analysis & Synthesis report for uartt
-Fri Feb 16 01:29:08 2024
+Fri Feb 16 02:37:36 2024
 Quartus Prime Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
 
 
@@ -18,7 +18,7 @@ Quartus Prime Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
  10. Inverted Register Statistics
  11. Multiplexer Restructuring Statistics (Restructuring Performed)
  12. Parameter Settings for User Entity Instance: UART:inst|uart_clk_divN:inst
- 13. Parameter Settings for User Entity Instance: address_counterN:inst11
+ 13. Parameter Settings for User Entity Instance: debug_address_counterN:inst1
  14. Post-Synthesis Netlist Statistics for Top Partition
  15. Elapsed Time Per Partition
  16. Analysis & Synthesis Messages
@@ -48,7 +48,7 @@ https://fpgasoftware.intel.com/eula.
 +-------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                  ;
 +---------------------------------+---------------------------------------------+
-; Analysis & Synthesis Status     ; Successful - Fri Feb 16 01:29:08 2024       ;
+; Analysis & Synthesis Status     ; Successful - Fri Feb 16 02:37:36 2024       ;
 ; Quartus Prime Version           ; 20.1.1 Build 720 11/11/2020 SJ Lite Edition ;
 ; Revision Name                   ; uartt                                       ;
 ; Top-level Entity Name           ; TopLevel                                    ;
@@ -172,20 +172,20 @@ https://fpgasoftware.intel.com/eula.
 +----------------------------+-------------+
 
 
-+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Source Files Read                                                                                                                                                              ;
-+----------------------------------+-----------------+------------------------------------+-------------------------------------------------------------------------------------------------+---------+
-; File Name with User-Entered Path ; Used in Netlist ; File Type                          ; File Name with Absolute Path                                                                    ; Library ;
-+----------------------------------+-----------------+------------------------------------+-------------------------------------------------------------------------------------------------+---------+
-; sv files/debouncer.sv            ; yes             ; User SystemVerilog HDL File        ; C:/Users/minec/Desktop/Work/GitHub Repos/PROJ300/Firmware/UART/sv files/debouncer.sv            ;         ;
-; sv files/address_counterN.sv     ; yes             ; User SystemVerilog HDL File        ; C:/Users/minec/Desktop/Work/GitHub Repos/PROJ300/Firmware/UART/sv files/address_counterN.sv     ;         ;
-; sv files/seven_seg_controller.sv ; yes             ; User SystemVerilog HDL File        ; C:/Users/minec/Desktop/Work/GitHub Repos/PROJ300/Firmware/UART/sv files/seven_seg_controller.sv ;         ;
-; sv files/bsy_detector.sv         ; yes             ; User SystemVerilog HDL File        ; C:/Users/minec/Desktop/Work/GitHub Repos/PROJ300/Firmware/UART/sv files/bsy_detector.sv         ;         ;
-; sv files/uart_controller.sv      ; yes             ; User SystemVerilog HDL File        ; C:/Users/minec/Desktop/Work/GitHub Repos/PROJ300/Firmware/UART/sv files/uart_controller.sv      ;         ;
-; sv files/uart_clk_divN.sv        ; yes             ; User SystemVerilog HDL File        ; C:/Users/minec/Desktop/Work/GitHub Repos/PROJ300/Firmware/UART/sv files/uart_clk_divN.sv        ;         ;
-; UART.bdf                         ; yes             ; User Block Diagram/Schematic File  ; C:/Users/minec/Desktop/Work/GitHub Repos/PROJ300/Firmware/UART/UART.bdf                         ;         ;
-; output_files/TopLevel.bdf        ; yes             ; User Block Diagram/Schematic File  ; C:/Users/minec/Desktop/Work/GitHub Repos/PROJ300/Firmware/UART/output_files/TopLevel.bdf        ;         ;
-+----------------------------------+-----------------+------------------------------------+-------------------------------------------------------------------------------------------------+---------+
++---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Source Files Read                                                                                                                                                                  ;
++------------------------------------+-----------------+------------------------------------+---------------------------------------------------------------------------------------------------+---------+
+; File Name with User-Entered Path   ; Used in Netlist ; File Type                          ; File Name with Absolute Path                                                                      ; Library ;
++------------------------------------+-----------------+------------------------------------+---------------------------------------------------------------------------------------------------+---------+
+; sv files/debug_address_counterN.sv ; yes             ; User SystemVerilog HDL File        ; C:/Users/minec/Desktop/Work/GitHub Repos/PROJ300/Firmware/UART/sv files/debug_address_counterN.sv ;         ;
+; sv files/debouncer.sv              ; yes             ; User SystemVerilog HDL File        ; C:/Users/minec/Desktop/Work/GitHub Repos/PROJ300/Firmware/UART/sv files/debouncer.sv              ;         ;
+; sv files/seven_seg_controller.sv   ; yes             ; User SystemVerilog HDL File        ; C:/Users/minec/Desktop/Work/GitHub Repos/PROJ300/Firmware/UART/sv files/seven_seg_controller.sv   ;         ;
+; sv files/bsy_detector.sv           ; yes             ; User SystemVerilog HDL File        ; C:/Users/minec/Desktop/Work/GitHub Repos/PROJ300/Firmware/UART/sv files/bsy_detector.sv           ;         ;
+; sv files/uart_controller.sv        ; yes             ; User SystemVerilog HDL File        ; C:/Users/minec/Desktop/Work/GitHub Repos/PROJ300/Firmware/UART/sv files/uart_controller.sv        ;         ;
+; sv files/uart_clk_divN.sv          ; yes             ; User SystemVerilog HDL File        ; C:/Users/minec/Desktop/Work/GitHub Repos/PROJ300/Firmware/UART/sv files/uart_clk_divN.sv          ;         ;
+; UART.bdf                           ; yes             ; User Block Diagram/Schematic File  ; C:/Users/minec/Desktop/Work/GitHub Repos/PROJ300/Firmware/UART/UART.bdf                           ;         ;
+; output_files/TopLevel.bdf          ; yes             ; User Block Diagram/Schematic File  ; C:/Users/minec/Desktop/Work/GitHub Repos/PROJ300/Firmware/UART/output_files/TopLevel.bdf          ;         ;
++------------------------------------+-----------------+------------------------------------+---------------------------------------------------------------------------------------------------+---------+
 
 
 +---------------------------------------------------------------+
@@ -215,21 +215,21 @@ https://fpgasoftware.intel.com/eula.
 +---------------------------------------------+-----------------+
 
 
-+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                                                        ;
-+---------------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+-------------------------------------------+----------------------+--------------+
-; Compilation Hierarchy Node      ; Combinational ALUTs ; Dedicated Logic Registers ; Block Memory Bits ; DSP Blocks ; Pins ; Virtual Pins ; Full Hierarchy Name                       ; Entity Name          ; Library Name ;
-+---------------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+-------------------------------------------+----------------------+--------------+
-; |TopLevel                       ; 124 (0)             ; 88 (0)                    ; 0                 ; 0          ; 42   ; 0            ; |TopLevel                                 ; TopLevel             ; work         ;
-;    |UART:inst|                  ; 47 (0)              ; 49 (0)                    ; 0                 ; 0          ; 0    ; 0            ; |TopLevel|UART:inst                       ; UART                 ; work         ;
-;       |bsy_detector:inst2|      ; 0 (0)               ; 8 (8)                     ; 0                 ; 0          ; 0    ; 0            ; |TopLevel|UART:inst|bsy_detector:inst2    ; bsy_detector         ; work         ;
-;       |uart_clk_divN:inst|      ; 40 (40)             ; 28 (28)                   ; 0                 ; 0          ; 0    ; 0            ; |TopLevel|UART:inst|uart_clk_divN:inst    ; uart_clk_divN        ; work         ;
-;       |uart_controller:inst1|   ; 7 (7)               ; 13 (13)                   ; 0                 ; 0          ; 0    ; 0            ; |TopLevel|UART:inst|uart_controller:inst1 ; uart_controller      ; work         ;
-;    |address_counterN:inst11|    ; 13 (13)             ; 10 (10)                   ; 0                 ; 0          ; 0    ; 0            ; |TopLevel|address_counterN:inst11         ; address_counterN     ; work         ;
-;    |debouncer:inst8|            ; 36 (36)             ; 29 (29)                   ; 0                 ; 0          ; 0    ; 0            ; |TopLevel|debouncer:inst8                 ; debouncer            ; work         ;
-;    |seven_seg_controller:inst3| ; 14 (14)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |TopLevel|seven_seg_controller:inst3      ; seven_seg_controller ; work         ;
-;    |seven_seg_controller:inst6| ; 14 (14)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |TopLevel|seven_seg_controller:inst6      ; seven_seg_controller ; work         ;
-+---------------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+-------------------------------------------+----------------------+--------------+
++--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                                                            ;
++-----------------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+-------------------------------------------+------------------------+--------------+
+; Compilation Hierarchy Node        ; Combinational ALUTs ; Dedicated Logic Registers ; Block Memory Bits ; DSP Blocks ; Pins ; Virtual Pins ; Full Hierarchy Name                       ; Entity Name            ; Library Name ;
++-----------------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+-------------------------------------------+------------------------+--------------+
+; |TopLevel                         ; 124 (0)             ; 88 (0)                    ; 0                 ; 0          ; 42   ; 0            ; |TopLevel                                 ; TopLevel               ; work         ;
+;    |UART:inst|                    ; 47 (0)              ; 49 (0)                    ; 0                 ; 0          ; 0    ; 0            ; |TopLevel|UART:inst                       ; UART                   ; work         ;
+;       |bsy_detector:inst2|        ; 0 (0)               ; 8 (8)                     ; 0                 ; 0          ; 0    ; 0            ; |TopLevel|UART:inst|bsy_detector:inst2    ; bsy_detector           ; work         ;
+;       |uart_clk_divN:inst|        ; 40 (40)             ; 28 (28)                   ; 0                 ; 0          ; 0    ; 0            ; |TopLevel|UART:inst|uart_clk_divN:inst    ; uart_clk_divN          ; work         ;
+;       |uart_controller:inst1|     ; 7 (7)               ; 13 (13)                   ; 0                 ; 0          ; 0    ; 0            ; |TopLevel|UART:inst|uart_controller:inst1 ; uart_controller        ; work         ;
+;    |debouncer:inst8|              ; 36 (36)             ; 29 (29)                   ; 0                 ; 0          ; 0    ; 0            ; |TopLevel|debouncer:inst8                 ; debouncer              ; work         ;
+;    |debug_address_counterN:inst1| ; 13 (13)             ; 10 (10)                   ; 0                 ; 0          ; 0    ; 0            ; |TopLevel|debug_address_counterN:inst1    ; debug_address_counterN ; work         ;
+;    |seven_seg_controller:inst3|   ; 14 (14)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |TopLevel|seven_seg_controller:inst3      ; seven_seg_controller   ; work         ;
+;    |seven_seg_controller:inst6|   ; 14 (14)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |TopLevel|seven_seg_controller:inst6      ; seven_seg_controller   ; work         ;
++-----------------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+-------------------------------------------+------------------------+--------------+
 Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
 
 
@@ -276,7 +276,7 @@ Encoding Type:  One-Hot
 ; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output                             ;
 +--------------------+-----------+---------------+----------------------+------------------------+------------+--------------------------------------------------------+
 ; 3:1                ; 8 bits    ; 16 LEs        ; 0 LEs                ; 16 LEs                 ; Yes        ; |TopLevel|UART:inst|uart_controller:inst1|shift_reg[3] ;
-; 4:1                ; 8 bits    ; 16 LEs        ; 0 LEs                ; 16 LEs                 ; Yes        ; |TopLevel|address_counterN:inst11|counter_reg[6]       ;
+; 4:1                ; 8 bits    ; 16 LEs        ; 0 LEs                ; 16 LEs                 ; Yes        ; |TopLevel|debug_address_counterN:inst1|counter_reg[6]  ;
 ; 4:1                ; 6 bits    ; 12 LEs        ; 12 LEs               ; 0 LEs                  ; Yes        ; |TopLevel|UART:inst|uart_clk_divN:inst|counter_reg[0]  ;
 ; 4:1                ; 19 bits   ; 38 LEs        ; 0 LEs                ; 38 LEs                 ; Yes        ; |TopLevel|UART:inst|uart_clk_divN:inst|counter_reg[14] ;
 ; 6:1                ; 25 bits   ; 100 LEs       ; 0 LEs                ; 100 LEs                ; Yes        ; |TopLevel|debouncer:inst8|counter_reg[24]              ;
@@ -294,14 +294,14 @@ Encoding Type:  One-Hot
 Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
 
 
-+----------------------------------------------------------------------+
-; Parameter Settings for User Entity Instance: address_counterN:inst11 ;
-+----------------+-------+---------------------------------------------+
-; Parameter Name ; Value ; Type                                        ;
-+----------------+-------+---------------------------------------------+
-; N              ; 8     ; Signed Integer                              ;
-; MAX_ADDRESS    ; 255   ; Signed Integer                              ;
-+----------------+-------+---------------------------------------------+
++---------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: debug_address_counterN:inst1 ;
++----------------+-------+--------------------------------------------------+
+; Parameter Name ; Value ; Type                                             ;
++----------------+-------+--------------------------------------------------+
+; N              ; 8     ; Signed Integer                                   ;
+; MAX_ADDRESS    ; 255   ; Signed Integer                                   ;
++----------------+-------+--------------------------------------------------+
 Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
 
 
@@ -350,18 +350,18 @@ Note: In order to hide this table in the UI and the text report file, please set
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
-    Info: Processing started: Fri Feb 16 01:29:03 2024
+    Info: Processing started: Fri Feb 16 02:37:30 2024
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off uartt -c uartt
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20030): Parallel compilation is enabled and will use 16 of the 16 processors detected
+Info (12021): Found 1 design units, including 1 entities, in source file sv files/debug_address_countern.sv
+    Info (12023): Found entity 1: debug_address_counterN File: C:/Users/minec/Desktop/Work/GitHub Repos/PROJ300/Firmware/UART/sv files/debug_address_counterN.sv Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file sv files/fine_clk_divn.sv
     Info (12023): Found entity 1: fine_clk_divN File: C:/Users/minec/Desktop/Work/GitHub Repos/PROJ300/Firmware/UART/sv files/fine_clk_divN.sv Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file sv files/pulse_gen.sv
     Info (12023): Found entity 1: pulse_gen File: C:/Users/minec/Desktop/Work/GitHub Repos/PROJ300/Firmware/UART/sv files/pulse_gen.sv Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file sv files/debouncer.sv
     Info (12023): Found entity 1: debouncer File: C:/Users/minec/Desktop/Work/GitHub Repos/PROJ300/Firmware/UART/sv files/debouncer.sv Line: 1
-Info (12021): Found 1 design units, including 1 entities, in source file sv files/address_countern.sv
-    Info (12023): Found entity 1: address_counterN File: C:/Users/minec/Desktop/Work/GitHub Repos/PROJ300/Firmware/UART/sv files/address_counterN.sv Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file sv files/seven_seg_controller.sv
     Info (12023): Found entity 1: seven_seg_controller File: C:/Users/minec/Desktop/Work/GitHub Repos/PROJ300/Firmware/UART/sv files/seven_seg_controller.sv Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file sv files/bsy_detector.sv
@@ -374,8 +374,6 @@ Info (12021): Found 1 design units, including 1 entities, in source file uart.bd
     Info (12023): Found entity 1: UART
 Info (12021): Found 1 design units, including 1 entities, in source file output_files/toplevel.bdf
     Info (12023): Found entity 1: TopLevel
-Info (12021): Found 1 design units, including 1 entities, in source file output_files/debug.bdf
-    Info (12023): Found entity 1: debug
 Warning (10222): Verilog HDL Parameter Declaration warning at fine_clk_divN.sv(18): Parameter Declaration in module "fine_clk_divN" behaves as a Local Parameter Declaration because the module has a Module Parameter Port List File: C:/Users/minec/Desktop/Work/GitHub Repos/PROJ300/Firmware/UART/sv files/fine_clk_divN.sv Line: 18
 Warning (10222): Verilog HDL Parameter Declaration warning at uart_clk_divN.sv(18): Parameter Declaration in module "uart_clk_divN" behaves as a Local Parameter Declaration because the module has a Module Parameter Port List File: C:/Users/minec/Desktop/Work/GitHub Repos/PROJ300/Firmware/UART/sv files/uart_clk_divN.sv Line: 18
 Info (12127): Elaborating entity "TopLevel" for the top level hierarchy
@@ -403,8 +401,8 @@ Warning (10230): Verilog HDL assignment warning at uart_clk_divN.sv(19): truncat
 Warning (10230): Verilog HDL assignment warning at uart_clk_divN.sv(29): truncated value with size 32 to match size of target (25) File: C:/Users/minec/Desktop/Work/GitHub Repos/PROJ300/Firmware/UART/sv files/uart_clk_divN.sv Line: 29
 Warning (10230): Verilog HDL assignment warning at uart_clk_divN.sv(68): truncated value with size 32 to match size of target (25) File: C:/Users/minec/Desktop/Work/GitHub Repos/PROJ300/Firmware/UART/sv files/uart_clk_divN.sv Line: 68
 Warning (10230): Verilog HDL assignment warning at uart_clk_divN.sv(86): truncated value with size 32 to match size of target (25) File: C:/Users/minec/Desktop/Work/GitHub Repos/PROJ300/Firmware/UART/sv files/uart_clk_divN.sv Line: 86
-Info (12128): Elaborating entity "address_counterN" for hierarchy "address_counterN:inst11"
-Warning (10230): Verilog HDL assignment warning at address_counterN.sv(43): truncated value with size 32 to match size of target (8) File: C:/Users/minec/Desktop/Work/GitHub Repos/PROJ300/Firmware/UART/sv files/address_counterN.sv Line: 43
+Info (12128): Elaborating entity "debug_address_counterN" for hierarchy "debug_address_counterN:inst1"
+Warning (10230): Verilog HDL assignment warning at debug_address_counterN.sv(46): truncated value with size 32 to match size of target (8) File: C:/Users/minec/Desktop/Work/GitHub Repos/PROJ300/Firmware/UART/sv files/debug_address_counterN.sv Line: 46
 Warning (13024): Output pins are stuck at VCC or GND
     Warning (13410): Pin "led8" is stuck at GND
     Warning (13410): Pin "data_out[7]" is stuck at GND
@@ -423,9 +421,9 @@ Info (21057): Implemented 182 device resources after synthesis - the final resou
     Info (21059): Implemented 38 output pins
     Info (21061): Implemented 140 logic cells
 Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 32 warnings
-    Info: Peak virtual memory: 4895 megabytes
-    Info: Processing ended: Fri Feb 16 01:29:08 2024
-    Info: Elapsed time: 00:00:05
-    Info: Total CPU time (on all processors): 00:00:06
+    Info: Peak virtual memory: 4898 megabytes
+    Info: Processing ended: Fri Feb 16 02:37:36 2024
+    Info: Elapsed time: 00:00:06
+    Info: Total CPU time (on all processors): 00:00:07
 
 
