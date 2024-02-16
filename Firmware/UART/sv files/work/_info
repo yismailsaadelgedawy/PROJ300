@@ -159,6 +159,58 @@ r1
 !i113 1
 R5
 R6
+vinstructionRAMN
+R1
+!s110 1708127442
+!i10b 1
+!s100 G?:C2YC^?RCZ@J0Aed1dA1
+R2
+ICff^IfDK6Lm3eH[eA1lz^2
+R3
+S1
+R0
+w1708127439
+8C:/Users/minec/Desktop/Work/GitHub Repos/PROJ300/Firmware/UART/sv files/instructionRAMN.sv
+FC:/Users/minec/Desktop/Work/GitHub Repos/PROJ300/Firmware/UART/sv files/instructionRAMN.sv
+!i122 129
+L0 1 163
+R4
+r1
+!s85 0
+31
+!s108 1708127442.000000
+!s107 C:/Users/minec/Desktop/Work/GitHub Repos/PROJ300/Firmware/UART/sv files/instructionRAMN.sv|
+!s90 -reportprogress|300|-work|work|C:/Users/minec/Desktop/Work/GitHub Repos/PROJ300/Firmware/UART/sv files/instructionRAMN.sv|
+!i113 1
+R5
+R6
+ninstruction@r@a@m@n
+vinstructionRAMN_tb
+R1
+!s110 1708127443
+!i10b 1
+!s100 ;>ZdTnY^oiBGf1TUeT_no2
+R2
+I]8akoMPjY>I`7eY]@bD5A3
+R3
+S1
+R0
+w1708127438
+8C:/Users/minec/Desktop/Work/GitHub Repos/PROJ300/Firmware/UART/sv files/instructionRAMN_tb.sv
+FC:/Users/minec/Desktop/Work/GitHub Repos/PROJ300/Firmware/UART/sv files/instructionRAMN_tb.sv
+!i122 130
+L0 1 218
+R4
+r1
+!s85 0
+31
+!s108 1708127443.000000
+!s107 C:/Users/minec/Desktop/Work/GitHub Repos/PROJ300/Firmware/UART/sv files/instructionRAMN_tb.sv|
+!s90 -reportprogress|300|-work|work|C:/Users/minec/Desktop/Work/GitHub Repos/PROJ300/Firmware/UART/sv files/instructionRAMN_tb.sv|
+!i113 1
+R5
+R6
+ninstruction@r@a@m@n_tb
 vpulse_gen
 R1
 !s110 1708041109
