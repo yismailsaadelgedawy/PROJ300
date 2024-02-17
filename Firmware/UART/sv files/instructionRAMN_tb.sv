@@ -71,30 +71,36 @@ initial begin
     MODE = 2'd1; // write mode by default
     DEBUG = 0; // ignored
     address = 'd0; // ignored
+
+
+
+    data_in = 'd0; // simulating idle before MCU sends data
+    #80ns;
+
     data_in = 'h4A;
-    #20ns;
+    #60ns;  // data will be held the same value for more than one clock cycle (this is where it breaks!)
 
     // next address byte
     data_in = 'h24;
-    #20ns;
+    #60ns;
 
     data_in = 'h4B;
-    #20ns;
+    #60ns;
 
     data_in = 'h24;
-    #20ns;
+    #60ns;
 
     data_in = 'h4C;
-    #20ns;
+    #60ns;
 
     data_in = 'h24;
-    #20ns;
+    #60ns;
 
     data_in = 'h4D;
-    #20ns;
+    #60ns;
 
     data_in = 'h24;
-    #20ns;
+    #60ns;
 
 
 
