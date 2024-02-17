@@ -67,7 +67,6 @@ always_ff @(posedge clk) begin
         2'd0 : begin
 
             // clear other address registers upon switching modes
-            //addressREAD_reg = 'd0;
             addressWRITE_reg <= 'd0;
             addressDEBUG_reg <= 'd0;
 
@@ -91,7 +90,6 @@ always_ff @(posedge clk) begin
 
             // clear other address registers upon switching modes
             addressREAD_reg <= 'd0;
-            //addressWRITE_reg = 'd0;
             addressDEBUG_reg <= 'd0;
 
             // ASCII '$' byte
@@ -115,7 +113,6 @@ always_ff @(posedge clk) begin
             // clear other address registers upon switching modes
             addressREAD_reg <= 'd0;
             addressWRITE_reg <= 'd0;
-            //addressDEBUG_reg = 'd0;
 
             current_reg <= DEBUG; // clk cycle 1
             prev_reg <= current_reg; // clk cycle 2
