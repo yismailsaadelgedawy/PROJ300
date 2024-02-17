@@ -159,58 +159,110 @@ r1
 !i113 1
 R5
 R6
-vinstructionRAMN
+vfine_clk_divN
 R1
-!s110 1708141035
+!s110 1708145218
 !i10b 1
-!s100 eL;2?K57Lh:mDGA>hOjB10
+!s100 TR9XT<Q7ia=34B2ai8zS61
 R2
-IWdh[IdllfRbjBV`]=WmL10
+I?A3a=@7E3NS;g]N3[Fe:[2
 R3
 S1
 R0
-w1708140861
-8C:/Users/minec/Desktop/Work/GitHub Repos/PROJ300/Firmware/UART/sv files/instructionRAMN.sv
-FC:/Users/minec/Desktop/Work/GitHub Repos/PROJ300/Firmware/UART/sv files/instructionRAMN.sv
+w1707044753
+8C:/Users/minec/Desktop/Work/GitHub Repos/PROJ300/Firmware/UART/sv files/fine_clk_divN.sv
+FC:/Users/minec/Desktop/Work/GitHub Repos/PROJ300/Firmware/UART/sv files/fine_clk_divN.sv
 !i122 134
-L0 1 171
+L0 1 59
 R4
 r1
 !s85 0
 31
-!s108 1708141035.000000
-!s107 C:/Users/minec/Desktop/Work/GitHub Repos/PROJ300/Firmware/UART/sv files/instructionRAMN.sv|
-!s90 -reportprogress|300|-work|work|C:/Users/minec/Desktop/Work/GitHub Repos/PROJ300/Firmware/UART/sv files/instructionRAMN.sv|
+!s108 1708145218.000000
+!s107 C:/Users/minec/Desktop/Work/GitHub Repos/PROJ300/Firmware/UART/sv files/fine_clk_divN.sv|
+!s90 -reportprogress|300|-work|work|C:/Users/minec/Desktop/Work/GitHub Repos/PROJ300/Firmware/UART/sv files/fine_clk_divN.sv|
 !i113 1
 R5
 R6
-ninstruction@r@a@m@n
-vinstructionRAMN_tb
+nfine_clk_div@n
+vfine_clk_divN_tb
 R1
-!s110 1708141036
+!s110 1708145274
 !i10b 1
-!s100 b5]Zo3=d>C@c]jW];JDH11
+!s100 QAeOf7G4I]AKzXDM]lOO>0
 R2
-I=GadOe6UgW@KPYDeYzPZ?2
+IbXiakhGam;N8oRmF3Vfg^3
 R3
 S1
 R0
-w1708141032
-8C:/Users/minec/Desktop/Work/GitHub Repos/PROJ300/Firmware/UART/sv files/instructionRAMN_tb.sv
-FC:/Users/minec/Desktop/Work/GitHub Repos/PROJ300/Firmware/UART/sv files/instructionRAMN_tb.sv
+w1707043722
+8C:/Users/minec/Desktop/Work/GitHub Repos/PROJ300/Firmware/UART/sv files/fine_clk_divN_tb.sv
+FC:/Users/minec/Desktop/Work/GitHub Repos/PROJ300/Firmware/UART/sv files/fine_clk_divN_tb.sv
 !i122 135
+L0 1 61
+R4
+r1
+!s85 0
+31
+!s108 1708145274.000000
+!s107 C:/Users/minec/Desktop/Work/GitHub Repos/PROJ300/Firmware/UART/sv files/fine_clk_divN_tb.sv|
+!s90 -reportprogress|300|-work|work|C:/Users/minec/Desktop/Work/GitHub Repos/PROJ300/Firmware/UART/sv files/fine_clk_divN_tb.sv|
+!i113 1
+R5
+R6
+nfine_clk_div@n_tb
+vinstructionRAM
+R1
+!s110 1708145461
+!i10b 1
+!s100 z^I^OjcJ40h?KDZ7IS`:g3
+R2
+I8A_ENkLkB6z?[58:_3gAS1
+R3
+S1
+R0
+w1708145454
+8C:/Users/minec/Desktop/Work/GitHub Repos/PROJ300/Firmware/UART/sv files/instructionRAM.sv
+FC:/Users/minec/Desktop/Work/GitHub Repos/PROJ300/Firmware/UART/sv files/instructionRAM.sv
+!i122 137
+L0 1 222
+R4
+r1
+!s85 0
+31
+!s108 1708145460.000000
+!s107 C:/Users/minec/Desktop/Work/GitHub Repos/PROJ300/Firmware/UART/sv files/instructionRAM.sv|
+!s90 -reportprogress|300|-work|work|C:/Users/minec/Desktop/Work/GitHub Repos/PROJ300/Firmware/UART/sv files/instructionRAM.sv|
+!i113 1
+R5
+R6
+ninstruction@r@a@m
+vinstructionRAM_tb
+R1
+!s110 1708144867
+!i10b 1
+!s100 ]=4=Y?KK@XTEPS1_YezV40
+R2
+I8R9ZC?d5A_mOjcTZHIh4o2
+R3
+S1
+R0
+w1708144862
+8C:/Users/minec/Desktop/Work/GitHub Repos/PROJ300/Firmware/UART/sv files/instructionRAM_tb.sv
+FC:/Users/minec/Desktop/Work/GitHub Repos/PROJ300/Firmware/UART/sv files/instructionRAM_tb.sv
+!i122 131
 L0 1 224
 R4
 r1
 !s85 0
 31
-!s108 1708141036.000000
-!s107 C:/Users/minec/Desktop/Work/GitHub Repos/PROJ300/Firmware/UART/sv files/instructionRAMN_tb.sv|
-!s90 -reportprogress|300|-work|work|C:/Users/minec/Desktop/Work/GitHub Repos/PROJ300/Firmware/UART/sv files/instructionRAMN_tb.sv|
+!s108 1708144867.000000
+!s107 C:/Users/minec/Desktop/Work/GitHub Repos/PROJ300/Firmware/UART/sv files/instructionRAM_tb.sv|
+!s90 -reportprogress|300|-work|work|C:/Users/minec/Desktop/Work/GitHub Repos/PROJ300/Firmware/UART/sv files/instructionRAM_tb.sv|
 !i113 1
 R5
 R6
-ninstruction@r@a@m@n_tb
+ninstruction@r@a@m_tb
 vpulse_gen
 R1
 !s110 1708041109

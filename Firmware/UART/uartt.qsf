@@ -85,7 +85,15 @@ set_location_assignment PIN_Y14 -to disp2[3]
 set_location_assignment PIN_AA10 -to disp2[2]
 set_location_assignment PIN_AB17 -to disp2[1]
 set_location_assignment PIN_Y19 -to disp2[0]
-set_global_assignment -name SYSTEMVERILOG_FILE "sv files/instructionRAMN.sv"
+set_location_assignment PIN_T13 -to MODE_SW[1]
+set_location_assignment PIN_V13 -to MODE_SW[0]
+set_location_assignment PIN_W2 -to led2
+set_location_assignment PIN_AA1 -to led1
+set_location_assignment PIN_AA2 -to led0
+set_global_assignment -name VERILOG_INPUT_VERSION VERILOG_2001
+set_global_assignment -name VERILOG_SHOW_LMF_MAPPING_MESSAGES OFF
+set_global_assignment -name SYSTEMVERILOG_FILE "sv files/instructionRAM.sv"
+set_global_assignment -name SYSTEMVERILOG_FILE "sv files/d_ffN.sv"
 set_global_assignment -name SYSTEMVERILOG_FILE "sv files/debug_address_counterN.sv"
 set_global_assignment -name SYSTEMVERILOG_FILE "sv files/fine_clk_divN.sv"
 set_global_assignment -name SYSTEMVERILOG_FILE "sv files/pulse_gen.sv"
@@ -96,11 +104,4 @@ set_global_assignment -name SYSTEMVERILOG_FILE "sv files/uart_controller.sv"
 set_global_assignment -name SYSTEMVERILOG_FILE "sv files/uart_clk_divN.sv"
 set_global_assignment -name BDF_FILE UART.bdf
 set_global_assignment -name BDF_FILE output_files/TopLevel.bdf
-set_location_assignment PIN_T13 -to MODE_SW[1]
-set_location_assignment PIN_V13 -to MODE_SW[0]
-set_location_assignment PIN_W2 -to led2
-set_location_assignment PIN_AA1 -to led1
-set_location_assignment PIN_AA2 -to led0
-set_global_assignment -name VERILOG_INPUT_VERSION VERILOG_2001
-set_global_assignment -name VERILOG_SHOW_LMF_MAPPING_MESSAGES OFF
 set_instance_assignment -name PARTITION_HIERARCHY root_partition -to | -section_id Top

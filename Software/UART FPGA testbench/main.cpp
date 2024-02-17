@@ -35,6 +35,9 @@ int main()
     transmit(0x4B);
     transmit(0x4C);
     transmit(0x4D);
+    transmit(0x4E);
+    transmit(0x4F);
+
     red = 0;
 
     sleep();
@@ -53,11 +56,11 @@ void transmit(char ch) {
     // clears the TXE bit automatically
     USART2->DR = ch;
 
-    wait_us(1000000);   // 1 second delay
+    wait_us(100000);   // 100ms delay
 
     while(!(USART2->SR & 0x80)) {}
     USART2->DR = '$'; // signifies to RAM to move on to next address
-    wait_us(1000000);
+    wait_us(100000);
 
 
 }
