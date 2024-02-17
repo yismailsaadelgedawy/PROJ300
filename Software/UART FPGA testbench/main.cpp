@@ -3,7 +3,11 @@
 // GPIO
 UnbufferedSerial uart2(PD_5, PD_6);  // USART2
 DigitalOut red(PB_14); // for debugging purposes
-DigitalOut blue(PB_7); // 
+DigitalOut blue(PB_7); //
+
+// functions
+
+void transmit(char ch);
 
 
 
@@ -24,63 +28,37 @@ int main()
     /////////// UART2 SETUP END ////////////
 
 
-
-
-    const char letters[8] = "ABCDEFG";
-    const char instructions[5] = {0x01,0x02,0x03,0x04,0x05};
-    const unsigned int array_size1 = sizeof(letters) / sizeof(char); // not needed for char, but useful for other data types
-    const unsigned int array_size2 = sizeof(instructions) / sizeof(char); // 
+    // begin transmission of bytes
     
-    while(1) {
+    red = 1;
+    transmit(0x4A);
+    transmit(0x4B);
+    transmit(0x4C);
+    transmit(0x4D);
+    red = 0;
 
+    sleep();
 
-        // this loop sends characters to the FPGA
-        // 'A' is 0x41
-        // array_size - 1 to not print the NULL character
-        // at the end of the string
-        for (int i=0; i<(array_size1-1); i++) { 
-
-            blue = 0;
-
-            // wait until TXE bit is high (transferred data to shift register)
-            // i.e. wait until Tx buffer is empty
-            while(!(USART2->SR & 0x80)) {} 
-                
-            // places byte in DR
-            // clears the TXE bit automatically
-            USART2->DR = letters[i];
-
-            wait_us(1000000);   // 1 second delay
-
-            red = !red; // not ~red (not Verilog lol)
-
-
-        }
-
-        // this loop sends user-defined bytes to the FPGA
-        for (int i=0; i<array_size2; i++) {
-
-            red = 0;
-
-            // wait until TXE bit is high (transferred data to shift register)
-            // i.e. wait until Tx buffer is empty
-            while(!(USART2->SR & 0x80)) {} 
-                
-            // places byte in DR
-            // clears the TXE bit automatically
-            USART2->DR = instructions[i];
-
-            wait_us(1000000);   // 1 second delay
-
-            blue = !blue;
-
-
-        }
+}
 
 
 
-    }
+void transmit(char ch) {
 
-    
+    // wait until TXE bit is high (transferred data to shift register)
+    // i.e. wait until Tx buffer is empty
+    while(!(USART2->SR & 0x80)) {} 
+        
+    // places byte in DR
+    // clears the TXE bit automatically
+    USART2->DR = ch;
+
+    wait_us(1000000);   // 1 second delay
+
+    while(!(USART2->SR & 0x80)) {}
+    USART2->DR = '$'; // signifies to RAM to move on to next address
+    wait_us(1000000);
+
+
 }
 

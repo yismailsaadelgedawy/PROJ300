@@ -43,9 +43,9 @@ always_ff @(posedge clk) begin
 
     if(rst) begin
 
-        addressREAD_reg = 'd0;
-        addressWRITE_reg = 'd0;
-        addressDEBUG_reg = 'd0;
+        addressREAD_reg <= 'd0;
+        addressWRITE_reg <= 'd0;
+        addressDEBUG_reg <= 'd0;
         data_out <= 'd0;
 
         // clearing out all RAM contents
@@ -146,17 +146,11 @@ always_ff @(posedge clk) begin
             // clear other address registers upon switching modes
             addressREAD_reg <= 'd0;
             addressWRITE_reg <= 'd0;
-            addressDEBUG_reg = 'd0;
+            addressDEBUG_reg <= 'd0;
 
             
 
         end
-
-        // default case is WRITE
-        // default : begin
-
-
-        // end
 
 
 
