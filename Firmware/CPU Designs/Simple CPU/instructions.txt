@@ -1,4 +1,15 @@
-CPU execution routines (9 states)
+-- CPU ISA --
+
+Instruction     Instructon Code     Operation
+ADD             00AAAAAA            AC <- AC + M[AAAAAA]    
+AND             01AAAAAA            AC <- AC & M[AAAAAA]
+JMP             10AAAAAA            GOTO AAAAAA
+INC             11XXXXXX            AC <- AC + 1
+
+
+
+
+-- CPU execution routines (9 states) -- 
 
 FETCH1 : AR <- PC
 FETCH2 : DR <- M; PC <- PC + 1
@@ -15,7 +26,7 @@ JMP1   : PC <- DR[5..0]
 INC1   : AC <- AC + 1
 
 
-Control signals via Control Unit
+-- Control signals via Control Unit --
 
 The 5 load lines
 
@@ -42,6 +53,7 @@ Memory contents placed on system bus during FETCH2; ADD1; AND1
 The READ signal
 
 Memory is read during FETCH2; ADD1; AND1
+
 
 ALUSEL is HIGH during AND2 (0 for ADD, 1 for AND)
 
