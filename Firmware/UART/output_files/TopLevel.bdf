@@ -701,13 +701,13 @@ https://fpgasoftware.intel.com/eula.
 		(type "PARAMETER_SIGNED_DEC")	)
 	(parameter
 		"MAX_ADDRESS"
-		"255"
+		"100"
 		""
 		(type "PARAMETER_SIGNED_DEC")	)
 	(drawing
 		(rectangle (rect 16 16 336 128))
 	)
-	(annotation_block (parameter)(rect 736 520 936 584))
+	(annotation_block (parameter)(rect 736 520 932 577))
 )
 (connector
 	(text "clk_50" (rect 474 168 505 185)(font "Intel Clear" ))

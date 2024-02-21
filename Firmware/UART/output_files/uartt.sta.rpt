@@ -1,5 +1,5 @@
 Timing Analyzer report for uartt
-Wed Feb 21 12:53:07 2024
+Wed Feb 21 13:07:24 2024
 Quartus Prime Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
 
 
@@ -100,26 +100,26 @@ https://fpgasoftware.intel.com/eula.
 ; Number detected on machine ; 16          ;
 ; Maximum allowed            ; 16          ;
 ;                            ;             ;
-; Average used               ; 3.91        ;
+; Average used               ; 3.00        ;
 ; Maximum used               ; 16          ;
 ;                            ;             ;
 ; Usage by Processor         ; % Time Used ;
 ;     Processor 1            ; 100.0%      ;
-;     Processor 2            ;  23.1%      ;
-;     Processor 3            ;  23.0%      ;
-;     Processor 4            ;  22.8%      ;
-;     Processor 5            ;  18.5%      ;
-;     Processor 6            ;  18.5%      ;
-;     Processor 7            ;  18.5%      ;
-;     Processor 8            ;  18.5%      ;
-;     Processor 9            ;  18.5%      ;
-;     Processor 10           ;  18.5%      ;
-;     Processor 11           ;  18.5%      ;
-;     Processor 12           ;  18.5%      ;
-;     Processor 13           ;  18.5%      ;
-;     Processor 14           ;  18.5%      ;
-;     Processor 15           ;  18.5%      ;
-;     Processor 16           ;  18.5%      ;
+;     Processor 2            ;  14.9%      ;
+;     Processor 3            ;  14.3%      ;
+;     Processor 4            ;  13.7%      ;
+;     Processor 5            ;  13.1%      ;
+;     Processor 6            ;  13.1%      ;
+;     Processor 7            ;  13.1%      ;
+;     Processor 8            ;  13.1%      ;
+;     Processor 9            ;  13.1%      ;
+;     Processor 10           ;  13.1%      ;
+;     Processor 11           ;  13.1%      ;
+;     Processor 12           ;  13.1%      ;
+;     Processor 13           ;  13.1%      ;
+;     Processor 14           ;  13.1%      ;
+;     Processor 15           ;  13.0%      ;
+;     Processor 16           ;  13.0%      ;
 +----------------------------+-------------+
 
 
@@ -139,8 +139,8 @@ https://fpgasoftware.intel.com/eula.
 +------------+-----------------+--------------------------------------+------+
 ; Fmax       ; Restricted Fmax ; Clock Name                           ; Note ;
 +------------+-----------------+--------------------------------------+------+
-; 124.07 MHz ; 124.07 MHz      ; clk_50MHz                            ;      ;
-; 307.6 MHz  ; 307.6 MHz       ; UART:inst|uart_clk_divN:inst|clk_out ;      ;
+; 123.78 MHz ; 123.78 MHz      ; clk_50MHz                            ;      ;
+; 314.56 MHz ; 314.56 MHz      ; UART:inst|uart_clk_divN:inst|clk_out ;      ;
 +------------+-----------------+--------------------------------------+------+
 This panel reports FMAX for every clock in the design, regardless of the user-specified clock periods.  FMAX is only computed for paths where the source and destination registers or ports are driven by the same clock.  Paths of different clocks, including generated clocks, are ignored.  For paths between a clock and its inversion, FMAX is computed as if the rising and falling edges are scaled along with FMAX, such that the duty cycle (in terms of a percentage) is maintained. Altera recommends that you always use clock constraints and other slack reports for sign-off analysis.
 
@@ -156,9 +156,9 @@ HTML report is unavailable in plain text report export.
 +--------------------------------------+--------+---------------+
 ; Clock                                ; Slack  ; End Point TNS ;
 +--------------------------------------+--------+---------------+
-; clk_50MHz                            ; -7.060 ; -10534.394    ;
-; UART:inst|uart_clk_divN:inst|clk_out ; -2.251 ; -39.244       ;
-; UART:inst|uart_controller:inst1|bsy  ; -1.957 ; -15.248       ;
+; clk_50MHz                            ; -7.079 ; -4265.788     ;
+; UART:inst|uart_clk_divN:inst|clk_out ; -2.179 ; -37.437       ;
+; UART:inst|uart_controller:inst1|bsy  ; -1.592 ; -11.939       ;
 +--------------------------------------+--------+---------------+
 
 
@@ -167,9 +167,9 @@ HTML report is unavailable in plain text report export.
 +--------------------------------------+-------+---------------+
 ; Clock                                ; Slack ; End Point TNS ;
 +--------------------------------------+-------+---------------+
-; clk_50MHz                            ; 0.425 ; 0.000         ;
-; UART:inst|uart_controller:inst1|bsy  ; 0.753 ; 0.000         ;
-; UART:inst|uart_clk_divN:inst|clk_out ; 0.840 ; 0.000         ;
+; UART:inst|uart_controller:inst1|bsy  ; 0.367 ; 0.000         ;
+; clk_50MHz                            ; 0.431 ; 0.000         ;
+; UART:inst|uart_clk_divN:inst|clk_out ; 0.670 ; 0.000         ;
 +--------------------------------------+-------+---------------+
 
 
@@ -190,9 +190,9 @@ No paths to report.
 +--------------------------------------+--------+---------------+
 ; Clock                                ; Slack  ; End Point TNS ;
 +--------------------------------------+--------+---------------+
-; clk_50MHz                            ; -0.550 ; -1688.659     ;
-; UART:inst|uart_clk_divN:inst|clk_out ; -0.538 ; -15.265       ;
-; UART:inst|uart_controller:inst1|bsy  ; -0.538 ; -6.387        ;
+; clk_50MHz                            ; -0.538 ; -720.963      ;
+; UART:inst|uart_clk_divN:inst|clk_out ; -0.538 ; -14.185       ;
+; UART:inst|uart_controller:inst1|bsy  ; -0.538 ; -6.389        ;
 +--------------------------------------+--------+---------------+
 
 
@@ -207,8 +207,8 @@ No synchronizer chains to report.
 +------------+-----------------+--------------------------------------+------+
 ; Fmax       ; Restricted Fmax ; Clock Name                           ; Note ;
 +------------+-----------------+--------------------------------------+------+
-; 126.55 MHz ; 126.55 MHz      ; clk_50MHz                            ;      ;
-; 309.02 MHz ; 309.02 MHz      ; UART:inst|uart_clk_divN:inst|clk_out ;      ;
+; 121.57 MHz ; 121.57 MHz      ; clk_50MHz                            ;      ;
+; 316.06 MHz ; 316.06 MHz      ; UART:inst|uart_clk_divN:inst|clk_out ;      ;
 +------------+-----------------+--------------------------------------+------+
 This panel reports FMAX for every clock in the design, regardless of the user-specified clock periods.  FMAX is only computed for paths where the source and destination registers or ports are driven by the same clock.  Paths of different clocks, including generated clocks, are ignored.  For paths between a clock and its inversion, FMAX is computed as if the rising and falling edges are scaled along with FMAX, such that the duty cycle (in terms of a percentage) is maintained. Altera recommends that you always use clock constraints and other slack reports for sign-off analysis.
 
@@ -218,9 +218,9 @@ This panel reports FMAX for every clock in the design, regardless of the user-sp
 +--------------------------------------+--------+---------------+
 ; Clock                                ; Slack  ; End Point TNS ;
 +--------------------------------------+--------+---------------+
-; clk_50MHz                            ; -6.902 ; -10173.194    ;
-; UART:inst|uart_clk_divN:inst|clk_out ; -2.236 ; -38.482       ;
-; UART:inst|uart_controller:inst1|bsy  ; -2.002 ; -15.530       ;
+; clk_50MHz                            ; -7.226 ; -4129.636     ;
+; UART:inst|uart_clk_divN:inst|clk_out ; -2.164 ; -36.373       ;
+; UART:inst|uart_controller:inst1|bsy  ; -1.579 ; -11.814       ;
 +--------------------------------------+--------+---------------+
 
 
@@ -229,9 +229,9 @@ This panel reports FMAX for every clock in the design, regardless of the user-sp
 +--------------------------------------+-------+---------------+
 ; Clock                                ; Slack ; End Point TNS ;
 +--------------------------------------+-------+---------------+
-; clk_50MHz                            ; 0.189 ; 0.000         ;
-; UART:inst|uart_clk_divN:inst|clk_out ; 0.814 ; 0.000         ;
-; UART:inst|uart_controller:inst1|bsy  ; 0.836 ; 0.000         ;
+; clk_50MHz                            ; 0.071 ; 0.000         ;
+; UART:inst|uart_controller:inst1|bsy  ; 0.396 ; 0.000         ;
+; UART:inst|uart_clk_divN:inst|clk_out ; 0.691 ; 0.000         ;
 +--------------------------------------+-------+---------------+
 
 
@@ -252,9 +252,9 @@ No paths to report.
 +--------------------------------------+--------+---------------+
 ; Clock                                ; Slack  ; End Point TNS ;
 +--------------------------------------+--------+---------------+
-; clk_50MHz                            ; -0.538 ; -1706.863     ;
-; UART:inst|uart_clk_divN:inst|clk_out ; -0.538 ; -15.255       ;
-; UART:inst|uart_controller:inst1|bsy  ; -0.538 ; -6.363        ;
+; clk_50MHz                            ; -0.538 ; -731.453      ;
+; UART:inst|uart_clk_divN:inst|clk_out ; -0.538 ; -14.183       ;
+; UART:inst|uart_controller:inst1|bsy  ; -0.538 ; -6.305        ;
 +--------------------------------------+--------+---------------+
 
 
@@ -269,9 +269,9 @@ No synchronizer chains to report.
 +--------------------------------------+--------+---------------+
 ; Clock                                ; Slack  ; End Point TNS ;
 +--------------------------------------+--------+---------------+
-; clk_50MHz                            ; -3.346 ; -4742.625     ;
-; UART:inst|uart_controller:inst1|bsy  ; -0.962 ; -7.477        ;
-; UART:inst|uart_clk_divN:inst|clk_out ; -0.897 ; -13.498       ;
+; clk_50MHz                            ; -3.388 ; -1801.771     ;
+; UART:inst|uart_controller:inst1|bsy  ; -0.861 ; -6.456        ;
+; UART:inst|uart_clk_divN:inst|clk_out ; -0.742 ; -11.779       ;
 +--------------------------------------+--------+---------------+
 
 
@@ -280,9 +280,9 @@ No synchronizer chains to report.
 +--------------------------------------+-------+---------------+
 ; Clock                                ; Slack ; End Point TNS ;
 +--------------------------------------+-------+---------------+
-; clk_50MHz                            ; 0.017 ; 0.000         ;
-; UART:inst|uart_clk_divN:inst|clk_out ; 0.425 ; 0.000         ;
-; UART:inst|uart_controller:inst1|bsy  ; 0.492 ; 0.000         ;
+; clk_50MHz                            ; 0.064 ; 0.000         ;
+; UART:inst|uart_controller:inst1|bsy  ; 0.328 ; 0.000         ;
+; UART:inst|uart_clk_divN:inst|clk_out ; 0.360 ; 0.000         ;
 +--------------------------------------+-------+---------------+
 
 
@@ -303,9 +303,9 @@ No paths to report.
 +--------------------------------------+--------+---------------+
 ; Clock                                ; Slack  ; End Point TNS ;
 +--------------------------------------+--------+---------------+
-; clk_50MHz                            ; -0.466 ; -209.547      ;
-; UART:inst|uart_clk_divN:inst|clk_out ; 0.088  ; 0.000         ;
-; UART:inst|uart_controller:inst1|bsy  ; 0.097  ; 0.000         ;
+; clk_50MHz                            ; -0.419 ; -85.836       ;
+; UART:inst|uart_controller:inst1|bsy  ; 0.029  ; 0.000         ;
+; UART:inst|uart_clk_divN:inst|clk_out ; 0.112  ; 0.000         ;
 +--------------------------------------+--------+---------------+
 
 
@@ -320,9 +320,9 @@ No synchronizer chains to report.
 +--------------------------------------+--------+---------------+
 ; Clock                                ; Slack  ; End Point TNS ;
 +--------------------------------------+--------+---------------+
-; clk_50MHz                            ; -2.987 ; -4042.705     ;
-; UART:inst|uart_controller:inst1|bsy  ; -0.888 ; -6.896        ;
-; UART:inst|uart_clk_divN:inst|clk_out ; -0.731 ; -11.116       ;
+; clk_50MHz                            ; -3.047 ; -1548.453     ;
+; UART:inst|uart_controller:inst1|bsy  ; -0.778 ; -5.855        ;
+; UART:inst|uart_clk_divN:inst|clk_out ; -0.614 ; -9.764        ;
 +--------------------------------------+--------+---------------+
 
 
@@ -331,9 +331,9 @@ No synchronizer chains to report.
 +--------------------------------------+--------+---------------+
 ; Clock                                ; Slack  ; End Point TNS ;
 +--------------------------------------+--------+---------------+
-; clk_50MHz                            ; -0.231 ; -1.375        ;
-; UART:inst|uart_clk_divN:inst|clk_out ; 0.387  ; 0.000         ;
-; UART:inst|uart_controller:inst1|bsy  ; 0.475  ; 0.000         ;
+; clk_50MHz                            ; -0.212 ; -1.474        ;
+; UART:inst|uart_controller:inst1|bsy  ; 0.309  ; 0.000         ;
+; UART:inst|uart_clk_divN:inst|clk_out ; 0.323  ; 0.000         ;
 +--------------------------------------+--------+---------------+
 
 
@@ -354,9 +354,9 @@ No paths to report.
 +--------------------------------------+--------+---------------+
 ; Clock                                ; Slack  ; End Point TNS ;
 +--------------------------------------+--------+---------------+
-; clk_50MHz                            ; -0.438 ; -207.144      ;
-; UART:inst|uart_clk_divN:inst|clk_out ; 0.085  ; 0.000         ;
-; UART:inst|uart_controller:inst1|bsy  ; 0.113  ; 0.000         ;
+; clk_50MHz                            ; -0.413 ; -86.668       ;
+; UART:inst|uart_controller:inst1|bsy  ; 0.063  ; 0.000         ;
+; UART:inst|uart_clk_divN:inst|clk_out ; 0.109  ; 0.000         ;
 +--------------------------------------+--------+---------------+
 
 
@@ -366,20 +366,20 @@ No paths to report.
 No synchronizer chains to report.
 
 
-+--------------------------------------------------------------------------------------------------------+
-; Multicorner Timing Analysis Summary                                                                    ;
-+---------------------------------------+------------+--------+----------+---------+---------------------+
-; Clock                                 ; Setup      ; Hold   ; Recovery ; Removal ; Minimum Pulse Width ;
-+---------------------------------------+------------+--------+----------+---------+---------------------+
-; Worst-case Slack                      ; -7.060     ; -0.231 ; N/A      ; N/A     ; -0.550              ;
-;  UART:inst|uart_clk_divN:inst|clk_out ; -2.251     ; 0.387  ; N/A      ; N/A     ; -0.538              ;
-;  UART:inst|uart_controller:inst1|bsy  ; -2.002     ; 0.475  ; N/A      ; N/A     ; -0.538              ;
-;  clk_50MHz                            ; -7.060     ; -0.231 ; N/A      ; N/A     ; -0.550              ;
-; Design-wide TNS                       ; -10588.886 ; -1.375 ; 0.0      ; 0.0     ; -1728.481           ;
-;  UART:inst|uart_clk_divN:inst|clk_out ; -39.244    ; 0.000  ; N/A      ; N/A     ; -15.265             ;
-;  UART:inst|uart_controller:inst1|bsy  ; -15.530    ; 0.000  ; N/A      ; N/A     ; -6.387              ;
-;  clk_50MHz                            ; -10534.394 ; -1.375 ; N/A      ; N/A     ; -1706.863           ;
-+---------------------------------------+------------+--------+----------+---------+---------------------+
++-------------------------------------------------------------------------------------------------------+
+; Multicorner Timing Analysis Summary                                                                   ;
++---------------------------------------+-----------+--------+----------+---------+---------------------+
+; Clock                                 ; Setup     ; Hold   ; Recovery ; Removal ; Minimum Pulse Width ;
++---------------------------------------+-----------+--------+----------+---------+---------------------+
+; Worst-case Slack                      ; -7.226    ; -0.212 ; N/A      ; N/A     ; -0.538              ;
+;  UART:inst|uart_clk_divN:inst|clk_out ; -2.179    ; 0.323  ; N/A      ; N/A     ; -0.538              ;
+;  UART:inst|uart_controller:inst1|bsy  ; -1.592    ; 0.309  ; N/A      ; N/A     ; -0.538              ;
+;  clk_50MHz                            ; -7.226    ; -0.212 ; N/A      ; N/A     ; -0.538              ;
+; Design-wide TNS                       ; -4315.164 ; -1.474 ; 0.0      ; 0.0     ; -751.941            ;
+;  UART:inst|uart_clk_divN:inst|clk_out ; -37.437   ; 0.000  ; N/A      ; N/A     ; -14.185             ;
+;  UART:inst|uart_controller:inst1|bsy  ; -11.939   ; 0.000  ; N/A      ; N/A     ; -6.389              ;
+;  clk_50MHz                            ; -4265.788 ; -1.474 ; N/A      ; N/A     ; -731.453            ;
++---------------------------------------+-----------+--------+----------+---------+---------------------+
 
 
 +-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
@@ -601,10 +601,10 @@ No synchronizer chains to report.
 +--------------------------------------+--------------------------------------+----------+----------+----------+----------+
 ; From Clock                           ; To Clock                             ; RR Paths ; FR Paths ; RF Paths ; FF Paths ;
 +--------------------------------------+--------------------------------------+----------+----------+----------+----------+
-; clk_50MHz                            ; clk_50MHz                            ; 101519   ; 0        ; 0        ; 0        ;
+; clk_50MHz                            ; clk_50MHz                            ; 57303    ; 0        ; 0        ; 0        ;
 ; UART:inst|uart_clk_divN:inst|clk_out ; clk_50MHz                            ; 1        ; 1        ; 0        ; 0        ;
 ; UART:inst|uart_controller:inst1|bsy  ; clk_50MHz                            ; 10       ; 2        ; 0        ; 0        ;
-; UART:inst|uart_clk_divN:inst|clk_out ; UART:inst|uart_clk_divN:inst|clk_out ; 0        ; 0        ; 0        ; 133      ;
+; UART:inst|uart_clk_divN:inst|clk_out ; UART:inst|uart_clk_divN:inst|clk_out ; 0        ; 0        ; 0        ; 120      ;
 ; UART:inst|uart_clk_divN:inst|clk_out ; UART:inst|uart_controller:inst1|bsy  ; 0        ; 8        ; 0        ; 0        ;
 +--------------------------------------+--------------------------------------+----------+----------+----------+----------+
 Entries labeled "false path" only account for clock-to-clock false paths and not path-based false paths. As a result, actual path counts may be lower than reported.
@@ -615,10 +615,10 @@ Entries labeled "false path" only account for clock-to-clock false paths and not
 +--------------------------------------+--------------------------------------+----------+----------+----------+----------+
 ; From Clock                           ; To Clock                             ; RR Paths ; FR Paths ; RF Paths ; FF Paths ;
 +--------------------------------------+--------------------------------------+----------+----------+----------+----------+
-; clk_50MHz                            ; clk_50MHz                            ; 101519   ; 0        ; 0        ; 0        ;
+; clk_50MHz                            ; clk_50MHz                            ; 57303    ; 0        ; 0        ; 0        ;
 ; UART:inst|uart_clk_divN:inst|clk_out ; clk_50MHz                            ; 1        ; 1        ; 0        ; 0        ;
 ; UART:inst|uart_controller:inst1|bsy  ; clk_50MHz                            ; 10       ; 2        ; 0        ; 0        ;
-; UART:inst|uart_clk_divN:inst|clk_out ; UART:inst|uart_clk_divN:inst|clk_out ; 0        ; 0        ; 0        ; 133      ;
+; UART:inst|uart_clk_divN:inst|clk_out ; UART:inst|uart_clk_divN:inst|clk_out ; 0        ; 0        ; 0        ; 120      ;
 ; UART:inst|uart_clk_divN:inst|clk_out ; UART:inst|uart_controller:inst1|bsy  ; 0        ; 8        ; 0        ; 0        ;
 +--------------------------------------+--------------------------------------+----------+----------+----------+----------+
 Entries labeled "false path" only account for clock-to-clock false paths and not path-based false paths. As a result, actual path counts may be lower than reported.
@@ -644,7 +644,7 @@ No non-DPA dedicated SERDES Receiver circuitry present in device or used in desi
 ; Illegal Clocks                  ; 0     ; 0    ;
 ; Unconstrained Clocks            ; 0     ; 0    ;
 ; Unconstrained Input Ports       ; 5     ; 5    ;
-; Unconstrained Input Port Paths  ; 6404  ; 6404 ;
+; Unconstrained Input Port Paths  ; 2683  ; 2683 ;
 ; Unconstrained Output Ports      ; 32    ; 32   ;
 ; Unconstrained Output Port Paths ; 116   ; 116  ;
 +---------------------------------+-------+------+
@@ -773,7 +773,7 @@ No non-DPA dedicated SERDES Receiver circuitry present in device or used in desi
 Info: *******************************************************************
 Info: Running Quartus Prime Timing Analyzer
     Info: Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
-    Info: Processing started: Wed Feb 21 12:53:02 2024
+    Info: Processing started: Wed Feb 21 13:07:20 2024
 Info: Command: quartus_sta uartt -c uartt
 Info: qsta_default_script.tcl version: #1
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
@@ -792,108 +792,108 @@ Info: Found TIMING_ANALYZER_REPORT_SCRIPT_INCLUDE_DEFAULT_ANALYSIS = ON
 Info: Analyzing Slow 1100mV 85C Model
 Critical Warning (332148): Timing requirements not met
     Info (11105): For recommendations on closing timing, run Report Timing Closure Recommendations in the Timing Analyzer.
-Info (332146): Worst-case setup slack is -7.060
+Info (332146): Worst-case setup slack is -7.079
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):    -7.060          -10534.394 clk_50MHz 
-    Info (332119):    -2.251             -39.244 UART:inst|uart_clk_divN:inst|clk_out 
-    Info (332119):    -1.957             -15.248 UART:inst|uart_controller:inst1|bsy 
-Info (332146): Worst-case hold slack is 0.425
+    Info (332119):    -7.079           -4265.788 clk_50MHz 
+    Info (332119):    -2.179             -37.437 UART:inst|uart_clk_divN:inst|clk_out 
+    Info (332119):    -1.592             -11.939 UART:inst|uart_controller:inst1|bsy 
+Info (332146): Worst-case hold slack is 0.367
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):     0.425               0.000 clk_50MHz 
-    Info (332119):     0.753               0.000 UART:inst|uart_controller:inst1|bsy 
-    Info (332119):     0.840               0.000 UART:inst|uart_clk_divN:inst|clk_out 
+    Info (332119):     0.367               0.000 UART:inst|uart_controller:inst1|bsy 
+    Info (332119):     0.431               0.000 clk_50MHz 
+    Info (332119):     0.670               0.000 UART:inst|uart_clk_divN:inst|clk_out 
 Info (332140): No Recovery paths to report
 Info (332140): No Removal paths to report
-Info (332146): Worst-case minimum pulse width slack is -0.550
+Info (332146): Worst-case minimum pulse width slack is -0.538
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):    -0.550           -1688.659 clk_50MHz 
-    Info (332119):    -0.538             -15.265 UART:inst|uart_clk_divN:inst|clk_out 
-    Info (332119):    -0.538              -6.387 UART:inst|uart_controller:inst1|bsy 
+    Info (332119):    -0.538            -720.963 clk_50MHz 
+    Info (332119):    -0.538             -14.185 UART:inst|uart_clk_divN:inst|clk_out 
+    Info (332119):    -0.538              -6.389 UART:inst|uart_controller:inst1|bsy 
 Info: Analyzing Slow 1100mV 0C Model
 Info (334003): Started post-fitting delay annotation
 Info (334004): Delay annotation completed successfully
 Info (332123): Deriving Clock Uncertainty. Please refer to report_sdc in the Timing Analyzer to see clock uncertainties.
 Critical Warning (332148): Timing requirements not met
     Info (11105): For recommendations on closing timing, run Report Timing Closure Recommendations in the Timing Analyzer.
-Info (332146): Worst-case setup slack is -6.902
+Info (332146): Worst-case setup slack is -7.226
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):    -6.902          -10173.194 clk_50MHz 
-    Info (332119):    -2.236             -38.482 UART:inst|uart_clk_divN:inst|clk_out 
-    Info (332119):    -2.002             -15.530 UART:inst|uart_controller:inst1|bsy 
-Info (332146): Worst-case hold slack is 0.189
+    Info (332119):    -7.226           -4129.636 clk_50MHz 
+    Info (332119):    -2.164             -36.373 UART:inst|uart_clk_divN:inst|clk_out 
+    Info (332119):    -1.579             -11.814 UART:inst|uart_controller:inst1|bsy 
+Info (332146): Worst-case hold slack is 0.071
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):     0.189               0.000 clk_50MHz 
-    Info (332119):     0.814               0.000 UART:inst|uart_clk_divN:inst|clk_out 
-    Info (332119):     0.836               0.000 UART:inst|uart_controller:inst1|bsy 
+    Info (332119):     0.071               0.000 clk_50MHz 
+    Info (332119):     0.396               0.000 UART:inst|uart_controller:inst1|bsy 
+    Info (332119):     0.691               0.000 UART:inst|uart_clk_divN:inst|clk_out 
 Info (332140): No Recovery paths to report
 Info (332140): No Removal paths to report
 Info (332146): Worst-case minimum pulse width slack is -0.538
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):    -0.538           -1706.863 clk_50MHz 
-    Info (332119):    -0.538             -15.255 UART:inst|uart_clk_divN:inst|clk_out 
-    Info (332119):    -0.538              -6.363 UART:inst|uart_controller:inst1|bsy 
+    Info (332119):    -0.538            -731.453 clk_50MHz 
+    Info (332119):    -0.538             -14.183 UART:inst|uart_clk_divN:inst|clk_out 
+    Info (332119):    -0.538              -6.305 UART:inst|uart_controller:inst1|bsy 
 Info: Analyzing Fast 1100mV 85C Model
 Info (334003): Started post-fitting delay annotation
 Info (334004): Delay annotation completed successfully
 Info (332123): Deriving Clock Uncertainty. Please refer to report_sdc in the Timing Analyzer to see clock uncertainties.
 Critical Warning (332148): Timing requirements not met
     Info (11105): For recommendations on closing timing, run Report Timing Closure Recommendations in the Timing Analyzer.
-Info (332146): Worst-case setup slack is -3.346
+Info (332146): Worst-case setup slack is -3.388
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):    -3.346           -4742.625 clk_50MHz 
-    Info (332119):    -0.962              -7.477 UART:inst|uart_controller:inst1|bsy 
-    Info (332119):    -0.897             -13.498 UART:inst|uart_clk_divN:inst|clk_out 
-Info (332146): Worst-case hold slack is 0.017
+    Info (332119):    -3.388           -1801.771 clk_50MHz 
+    Info (332119):    -0.861              -6.456 UART:inst|uart_controller:inst1|bsy 
+    Info (332119):    -0.742             -11.779 UART:inst|uart_clk_divN:inst|clk_out 
+Info (332146): Worst-case hold slack is 0.064
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):     0.017               0.000 clk_50MHz 
-    Info (332119):     0.425               0.000 UART:inst|uart_clk_divN:inst|clk_out 
-    Info (332119):     0.492               0.000 UART:inst|uart_controller:inst1|bsy 
+    Info (332119):     0.064               0.000 clk_50MHz 
+    Info (332119):     0.328               0.000 UART:inst|uart_controller:inst1|bsy 
+    Info (332119):     0.360               0.000 UART:inst|uart_clk_divN:inst|clk_out 
 Info (332140): No Recovery paths to report
 Info (332140): No Removal paths to report
-Info (332146): Worst-case minimum pulse width slack is -0.466
+Info (332146): Worst-case minimum pulse width slack is -0.419
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):    -0.466            -209.547 clk_50MHz 
-    Info (332119):     0.088               0.000 UART:inst|uart_clk_divN:inst|clk_out 
-    Info (332119):     0.097               0.000 UART:inst|uart_controller:inst1|bsy 
+    Info (332119):    -0.419             -85.836 clk_50MHz 
+    Info (332119):     0.029               0.000 UART:inst|uart_controller:inst1|bsy 
+    Info (332119):     0.112               0.000 UART:inst|uart_clk_divN:inst|clk_out 
 Info: Analyzing Fast 1100mV 0C Model
 Info (332123): Deriving Clock Uncertainty. Please refer to report_sdc in the Timing Analyzer to see clock uncertainties.
 Critical Warning (332148): Timing requirements not met
     Info (11105): For recommendations on closing timing, run Report Timing Closure Recommendations in the Timing Analyzer.
-Info (332146): Worst-case setup slack is -2.987
+Info (332146): Worst-case setup slack is -3.047
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):    -2.987           -4042.705 clk_50MHz 
-    Info (332119):    -0.888              -6.896 UART:inst|uart_controller:inst1|bsy 
-    Info (332119):    -0.731             -11.116 UART:inst|uart_clk_divN:inst|clk_out 
-Info (332146): Worst-case hold slack is -0.231
+    Info (332119):    -3.047           -1548.453 clk_50MHz 
+    Info (332119):    -0.778              -5.855 UART:inst|uart_controller:inst1|bsy 
+    Info (332119):    -0.614              -9.764 UART:inst|uart_clk_divN:inst|clk_out 
+Info (332146): Worst-case hold slack is -0.212
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):    -0.231              -1.375 clk_50MHz 
-    Info (332119):     0.387               0.000 UART:inst|uart_clk_divN:inst|clk_out 
-    Info (332119):     0.475               0.000 UART:inst|uart_controller:inst1|bsy 
+    Info (332119):    -0.212              -1.474 clk_50MHz 
+    Info (332119):     0.309               0.000 UART:inst|uart_controller:inst1|bsy 
+    Info (332119):     0.323               0.000 UART:inst|uart_clk_divN:inst|clk_out 
 Info (332140): No Recovery paths to report
 Info (332140): No Removal paths to report
-Info (332146): Worst-case minimum pulse width slack is -0.438
+Info (332146): Worst-case minimum pulse width slack is -0.413
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):    -0.438            -207.144 clk_50MHz 
-    Info (332119):     0.085               0.000 UART:inst|uart_clk_divN:inst|clk_out 
-    Info (332119):     0.113               0.000 UART:inst|uart_controller:inst1|bsy 
+    Info (332119):    -0.413             -86.668 clk_50MHz 
+    Info (332119):     0.063               0.000 UART:inst|uart_controller:inst1|bsy 
+    Info (332119):     0.109               0.000 UART:inst|uart_clk_divN:inst|clk_out 
 Info (332102): Design is not fully constrained for setup requirements
 Info (332102): Design is not fully constrained for hold requirements
 Info: Quartus Prime Timing Analyzer was successful. 0 errors, 6 warnings
-    Info: Peak virtual memory: 5267 megabytes
-    Info: Processing ended: Wed Feb 21 12:53:07 2024
-    Info: Elapsed time: 00:00:05
-    Info: Total CPU time (on all processors): 00:00:11
+    Info: Peak virtual memory: 5248 megabytes
+    Info: Processing ended: Wed Feb 21 13:07:24 2024
+    Info: Elapsed time: 00:00:04
+    Info: Total CPU time (on all processors): 00:00:08
 
 

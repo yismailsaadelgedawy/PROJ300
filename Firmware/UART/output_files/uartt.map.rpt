@@ -1,5 +1,5 @@
 Analysis & Synthesis report for uartt
-Wed Feb 21 12:50:40 2024
+Wed Feb 21 13:05:19 2024
 Quartus Prime Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
 
 
@@ -50,13 +50,13 @@ https://fpgasoftware.intel.com/eula.
 +-------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                  ;
 +---------------------------------+---------------------------------------------+
-; Analysis & Synthesis Status     ; Successful - Wed Feb 21 12:50:40 2024       ;
+; Analysis & Synthesis Status     ; Successful - Wed Feb 21 13:05:19 2024       ;
 ; Quartus Prime Version           ; 20.1.1 Build 720 11/11/2020 SJ Lite Edition ;
 ; Revision Name                   ; uartt                                       ;
 ; Top-level Entity Name           ; TopLevel                                    ;
 ; Family                          ; Cyclone V                                   ;
 ; Logic utilization (in ALMs)     ; N/A                                         ;
-; Total registers                 ; 2184                                        ;
+; Total registers                 ; 944                                         ;
 ; Total pins                      ; 38                                          ;
 ; Total virtual pins              ; 0                                           ;
 ; Total block memory bits         ; 0                                           ;
@@ -204,25 +204,25 @@ https://fpgasoftware.intel.com/eula.
 +---------------------------------------------+-----------+
 ; Resource                                    ; Usage     ;
 +---------------------------------------------+-----------+
-; Estimate of Logic utilization (ALMs needed) ; 1601      ;
+; Estimate of Logic utilization (ALMs needed) ; 850       ;
 ;                                             ;           ;
-; Combinational ALUT usage for logic          ; 1172      ;
-;     -- 7 input functions                    ; 1         ;
-;     -- 6 input functions                    ; 899       ;
-;     -- 5 input functions                    ; 98        ;
-;     -- 4 input functions                    ; 46        ;
-;     -- <=3 input functions                  ; 128       ;
+; Combinational ALUT usage for logic          ; 851       ;
+;     -- 7 input functions                    ; 2         ;
+;     -- 6 input functions                    ; 621       ;
+;     -- 5 input functions                    ; 51        ;
+;     -- 4 input functions                    ; 48        ;
+;     -- <=3 input functions                  ; 129       ;
 ;                                             ;           ;
-; Dedicated logic registers                   ; 2184      ;
+; Dedicated logic registers                   ; 944       ;
 ;                                             ;           ;
 ; I/O pins                                    ; 38        ;
 ;                                             ;           ;
 ; Total DSP Blocks                            ; 0         ;
 ;                                             ;           ;
 ; Maximum fan-out node                        ; SW0~input ;
-; Maximum fan-out                             ; 2410      ;
-; Total fan-out                               ; 15092     ;
-; Average fan-out                             ; 4.40      ;
+; Maximum fan-out                             ; 1009      ;
+; Total fan-out                               ; 8270      ;
+; Average fan-out                             ; 4.42      ;
 +---------------------------------------------+-----------+
 
 
@@ -231,7 +231,7 @@ https://fpgasoftware.intel.com/eula.
 +---------------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+-------------------------------------------+----------------------+--------------+
 ; Compilation Hierarchy Node      ; Combinational ALUTs ; Dedicated Logic Registers ; Block Memory Bits ; DSP Blocks ; Pins ; Virtual Pins ; Full Hierarchy Name                       ; Entity Name          ; Library Name ;
 +---------------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+-------------------------------------------+----------------------+--------------+
-; |TopLevel                       ; 1172 (0)            ; 2184 (0)                  ; 0                 ; 0          ; 38   ; 0            ; |TopLevel                                 ; TopLevel             ; work         ;
+; |TopLevel                       ; 851 (0)             ; 944 (0)                   ; 0                 ; 0          ; 38   ; 0            ; |TopLevel                                 ; TopLevel             ; work         ;
 ;    |UART:inst|                  ; 48 (0)              ; 49 (0)                    ; 0                 ; 0          ; 0    ; 0            ; |TopLevel|UART:inst                       ; UART                 ; work         ;
 ;       |bsy_detector:inst2|      ; 0 (0)               ; 8 (8)                     ; 0                 ; 0          ; 0    ; 0            ; |TopLevel|UART:inst|bsy_detector:inst2    ; bsy_detector         ; work         ;
 ;       |uart_clk_divN:inst|      ; 41 (41)             ; 28 (28)                   ; 0                 ; 0          ; 0    ; 0            ; |TopLevel|UART:inst|uart_clk_divN:inst    ; uart_clk_divN        ; work         ;
@@ -239,7 +239,7 @@ https://fpgasoftware.intel.com/eula.
 ;    |d_ffN:inst12|               ; 8 (8)               ; 8 (8)                     ; 0                 ; 0          ; 0    ; 0            ; |TopLevel|d_ffN:inst12                    ; d_ffN                ; work         ;
 ;    |d_ffN:inst13|               ; 8 (8)               ; 8 (8)                     ; 0                 ; 0          ; 0    ; 0            ; |TopLevel|d_ffN:inst13                    ; d_ffN                ; work         ;
 ;    |debouncer:inst8|            ; 36 (36)             ; 29 (29)                   ; 0                 ; 0          ; 0    ; 0            ; |TopLevel|debouncer:inst8                 ; debouncer            ; work         ;
-;    |instructionRAM:inst1|       ; 1044 (1044)         ; 2090 (2090)               ; 0                 ; 0          ; 0    ; 0            ; |TopLevel|instructionRAM:inst1            ; instructionRAM       ; work         ;
+;    |instructionRAM:inst1|       ; 723 (723)           ; 850 (850)                 ; 0                 ; 0          ; 0    ; 0            ; |TopLevel|instructionRAM:inst1            ; instructionRAM       ; work         ;
 ;    |seven_seg_controller:inst3| ; 14 (14)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |TopLevel|seven_seg_controller:inst3      ; seven_seg_controller ; work         ;
 ;    |seven_seg_controller:inst6| ; 14 (14)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |TopLevel|seven_seg_controller:inst6      ; seven_seg_controller ; work         ;
 +---------------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+-------------------------------------------+----------------------+--------------+
@@ -263,12 +263,12 @@ Encoding Type:  One-Hot
 +----------------------------------------------+-------+
 ; Statistic                                    ; Value ;
 +----------------------------------------------+-------+
-; Total registers                              ; 2184  ;
-; Number of registers using Synchronous Clear  ; 2141  ;
-; Number of registers using Synchronous Load   ; 0     ;
+; Total registers                              ; 944   ;
+; Number of registers using Synchronous Clear  ; 901   ;
+; Number of registers using Synchronous Load   ; 8     ;
 ; Number of registers using Asynchronous Clear ; 50    ;
 ; Number of registers using Asynchronous Load  ; 0     ;
-; Number of registers using Clock Enable       ; 2125  ;
+; Number of registers using Clock Enable       ; 885   ;
 ; Number of registers using Preset             ; 0     ;
 +----------------------------------------------+-------+
 
@@ -288,275 +288,117 @@ Encoding Type:  One-Hot
 +--------------------+-----------+---------------+----------------------+------------------------+------------+--------------------------------------------------------+
 ; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output                             ;
 +--------------------+-----------+---------------+----------------------+------------------------+------------+--------------------------------------------------------+
-; 3:1                ; 16 bits   ; 32 LEs        ; 0 LEs                ; 32 LEs                 ; Yes        ; |TopLevel|instructionRAM:inst1|prev_data_reg[3]        ;
-; 3:1                ; 8 bits    ; 16 LEs        ; 0 LEs                ; 16 LEs                 ; Yes        ; |TopLevel|instructionRAM:inst1|ram[0][4]               ;
-; 3:1                ; 8 bits    ; 16 LEs        ; 0 LEs                ; 16 LEs                 ; Yes        ; |TopLevel|instructionRAM:inst1|ram[1][0]               ;
-; 3:1                ; 8 bits    ; 16 LEs        ; 0 LEs                ; 16 LEs                 ; Yes        ; |TopLevel|instructionRAM:inst1|ram[2][1]               ;
-; 3:1                ; 8 bits    ; 16 LEs        ; 0 LEs                ; 16 LEs                 ; Yes        ; |TopLevel|instructionRAM:inst1|ram[3][4]               ;
-; 3:1                ; 8 bits    ; 16 LEs        ; 0 LEs                ; 16 LEs                 ; Yes        ; |TopLevel|instructionRAM:inst1|ram[4][1]               ;
-; 3:1                ; 8 bits    ; 16 LEs        ; 0 LEs                ; 16 LEs                 ; Yes        ; |TopLevel|instructionRAM:inst1|ram[5][1]               ;
+; 3:1                ; 16 bits   ; 32 LEs        ; 0 LEs                ; 32 LEs                 ; Yes        ; |TopLevel|instructionRAM:inst1|current_data_reg[5]     ;
+; 3:1                ; 8 bits    ; 16 LEs        ; 0 LEs                ; 16 LEs                 ; Yes        ; |TopLevel|instructionRAM:inst1|ram[0][2]               ;
+; 3:1                ; 8 bits    ; 16 LEs        ; 0 LEs                ; 16 LEs                 ; Yes        ; |TopLevel|instructionRAM:inst1|ram[1][3]               ;
+; 3:1                ; 8 bits    ; 16 LEs        ; 0 LEs                ; 16 LEs                 ; Yes        ; |TopLevel|instructionRAM:inst1|ram[2][5]               ;
+; 3:1                ; 8 bits    ; 16 LEs        ; 0 LEs                ; 16 LEs                 ; Yes        ; |TopLevel|instructionRAM:inst1|ram[3][5]               ;
+; 3:1                ; 8 bits    ; 16 LEs        ; 0 LEs                ; 16 LEs                 ; Yes        ; |TopLevel|instructionRAM:inst1|ram[4][5]               ;
+; 3:1                ; 8 bits    ; 16 LEs        ; 0 LEs                ; 16 LEs                 ; Yes        ; |TopLevel|instructionRAM:inst1|ram[5][0]               ;
 ; 3:1                ; 8 bits    ; 16 LEs        ; 0 LEs                ; 16 LEs                 ; Yes        ; |TopLevel|instructionRAM:inst1|ram[6][5]               ;
-; 3:1                ; 8 bits    ; 16 LEs        ; 0 LEs                ; 16 LEs                 ; Yes        ; |TopLevel|instructionRAM:inst1|ram[7][7]               ;
-; 3:1                ; 8 bits    ; 16 LEs        ; 0 LEs                ; 16 LEs                 ; Yes        ; |TopLevel|instructionRAM:inst1|ram[8][4]               ;
-; 3:1                ; 8 bits    ; 16 LEs        ; 0 LEs                ; 16 LEs                 ; Yes        ; |TopLevel|instructionRAM:inst1|ram[9][0]               ;
-; 3:1                ; 8 bits    ; 16 LEs        ; 0 LEs                ; 16 LEs                 ; Yes        ; |TopLevel|instructionRAM:inst1|ram[10][5]              ;
-; 3:1                ; 8 bits    ; 16 LEs        ; 0 LEs                ; 16 LEs                 ; Yes        ; |TopLevel|instructionRAM:inst1|ram[11][1]              ;
-; 3:1                ; 8 bits    ; 16 LEs        ; 0 LEs                ; 16 LEs                 ; Yes        ; |TopLevel|instructionRAM:inst1|ram[12][3]              ;
-; 3:1                ; 8 bits    ; 16 LEs        ; 0 LEs                ; 16 LEs                 ; Yes        ; |TopLevel|instructionRAM:inst1|ram[13][4]              ;
-; 3:1                ; 8 bits    ; 16 LEs        ; 0 LEs                ; 16 LEs                 ; Yes        ; |TopLevel|instructionRAM:inst1|ram[14][5]              ;
+; 3:1                ; 8 bits    ; 16 LEs        ; 0 LEs                ; 16 LEs                 ; Yes        ; |TopLevel|instructionRAM:inst1|ram[7][0]               ;
+; 3:1                ; 8 bits    ; 16 LEs        ; 0 LEs                ; 16 LEs                 ; Yes        ; |TopLevel|instructionRAM:inst1|ram[8][1]               ;
+; 3:1                ; 8 bits    ; 16 LEs        ; 0 LEs                ; 16 LEs                 ; Yes        ; |TopLevel|instructionRAM:inst1|ram[9][5]               ;
+; 3:1                ; 8 bits    ; 16 LEs        ; 0 LEs                ; 16 LEs                 ; Yes        ; |TopLevel|instructionRAM:inst1|ram[10][0]              ;
+; 3:1                ; 8 bits    ; 16 LEs        ; 0 LEs                ; 16 LEs                 ; Yes        ; |TopLevel|instructionRAM:inst1|ram[11][4]              ;
+; 3:1                ; 8 bits    ; 16 LEs        ; 0 LEs                ; 16 LEs                 ; Yes        ; |TopLevel|instructionRAM:inst1|ram[12][1]              ;
+; 3:1                ; 8 bits    ; 16 LEs        ; 0 LEs                ; 16 LEs                 ; Yes        ; |TopLevel|instructionRAM:inst1|ram[13][6]              ;
+; 3:1                ; 8 bits    ; 16 LEs        ; 0 LEs                ; 16 LEs                 ; Yes        ; |TopLevel|instructionRAM:inst1|ram[14][7]              ;
 ; 3:1                ; 8 bits    ; 16 LEs        ; 0 LEs                ; 16 LEs                 ; Yes        ; |TopLevel|instructionRAM:inst1|ram[15][1]              ;
-; 3:1                ; 8 bits    ; 16 LEs        ; 0 LEs                ; 16 LEs                 ; Yes        ; |TopLevel|instructionRAM:inst1|ram[16][2]              ;
-; 3:1                ; 8 bits    ; 16 LEs        ; 0 LEs                ; 16 LEs                 ; Yes        ; |TopLevel|instructionRAM:inst1|ram[17][3]              ;
-; 3:1                ; 8 bits    ; 16 LEs        ; 0 LEs                ; 16 LEs                 ; Yes        ; |TopLevel|instructionRAM:inst1|ram[18][2]              ;
-; 3:1                ; 8 bits    ; 16 LEs        ; 0 LEs                ; 16 LEs                 ; Yes        ; |TopLevel|instructionRAM:inst1|ram[19][6]              ;
-; 3:1                ; 8 bits    ; 16 LEs        ; 0 LEs                ; 16 LEs                 ; Yes        ; |TopLevel|instructionRAM:inst1|ram[20][0]              ;
-; 3:1                ; 8 bits    ; 16 LEs        ; 0 LEs                ; 16 LEs                 ; Yes        ; |TopLevel|instructionRAM:inst1|ram[21][2]              ;
-; 3:1                ; 8 bits    ; 16 LEs        ; 0 LEs                ; 16 LEs                 ; Yes        ; |TopLevel|instructionRAM:inst1|ram[22][0]              ;
-; 3:1                ; 8 bits    ; 16 LEs        ; 0 LEs                ; 16 LEs                 ; Yes        ; |TopLevel|instructionRAM:inst1|ram[23][4]              ;
+; 3:1                ; 8 bits    ; 16 LEs        ; 0 LEs                ; 16 LEs                 ; Yes        ; |TopLevel|instructionRAM:inst1|ram[16][1]              ;
+; 3:1                ; 8 bits    ; 16 LEs        ; 0 LEs                ; 16 LEs                 ; Yes        ; |TopLevel|instructionRAM:inst1|ram[17][4]              ;
+; 3:1                ; 8 bits    ; 16 LEs        ; 0 LEs                ; 16 LEs                 ; Yes        ; |TopLevel|instructionRAM:inst1|ram[18][6]              ;
+; 3:1                ; 8 bits    ; 16 LEs        ; 0 LEs                ; 16 LEs                 ; Yes        ; |TopLevel|instructionRAM:inst1|ram[19][5]              ;
+; 3:1                ; 8 bits    ; 16 LEs        ; 0 LEs                ; 16 LEs                 ; Yes        ; |TopLevel|instructionRAM:inst1|ram[20][1]              ;
+; 3:1                ; 8 bits    ; 16 LEs        ; 0 LEs                ; 16 LEs                 ; Yes        ; |TopLevel|instructionRAM:inst1|ram[21][4]              ;
+; 3:1                ; 8 bits    ; 16 LEs        ; 0 LEs                ; 16 LEs                 ; Yes        ; |TopLevel|instructionRAM:inst1|ram[22][5]              ;
+; 3:1                ; 8 bits    ; 16 LEs        ; 0 LEs                ; 16 LEs                 ; Yes        ; |TopLevel|instructionRAM:inst1|ram[23][5]              ;
 ; 3:1                ; 8 bits    ; 16 LEs        ; 0 LEs                ; 16 LEs                 ; Yes        ; |TopLevel|instructionRAM:inst1|ram[24][5]              ;
-; 3:1                ; 8 bits    ; 16 LEs        ; 0 LEs                ; 16 LEs                 ; Yes        ; |TopLevel|instructionRAM:inst1|ram[25][0]              ;
-; 3:1                ; 8 bits    ; 16 LEs        ; 0 LEs                ; 16 LEs                 ; Yes        ; |TopLevel|instructionRAM:inst1|ram[26][4]              ;
-; 3:1                ; 8 bits    ; 16 LEs        ; 0 LEs                ; 16 LEs                 ; Yes        ; |TopLevel|instructionRAM:inst1|ram[27][7]              ;
-; 3:1                ; 8 bits    ; 16 LEs        ; 0 LEs                ; 16 LEs                 ; Yes        ; |TopLevel|instructionRAM:inst1|ram[28][2]              ;
-; 3:1                ; 8 bits    ; 16 LEs        ; 0 LEs                ; 16 LEs                 ; Yes        ; |TopLevel|instructionRAM:inst1|ram[29][1]              ;
-; 3:1                ; 8 bits    ; 16 LEs        ; 0 LEs                ; 16 LEs                 ; Yes        ; |TopLevel|instructionRAM:inst1|ram[30][0]              ;
-; 3:1                ; 8 bits    ; 16 LEs        ; 0 LEs                ; 16 LEs                 ; Yes        ; |TopLevel|instructionRAM:inst1|ram[31][1]              ;
-; 3:1                ; 8 bits    ; 16 LEs        ; 0 LEs                ; 16 LEs                 ; Yes        ; |TopLevel|instructionRAM:inst1|ram[32][4]              ;
-; 3:1                ; 8 bits    ; 16 LEs        ; 0 LEs                ; 16 LEs                 ; Yes        ; |TopLevel|instructionRAM:inst1|ram[33][5]              ;
-; 3:1                ; 8 bits    ; 16 LEs        ; 0 LEs                ; 16 LEs                 ; Yes        ; |TopLevel|instructionRAM:inst1|ram[34][6]              ;
-; 3:1                ; 8 bits    ; 16 LEs        ; 0 LEs                ; 16 LEs                 ; Yes        ; |TopLevel|instructionRAM:inst1|ram[35][4]              ;
-; 3:1                ; 8 bits    ; 16 LEs        ; 0 LEs                ; 16 LEs                 ; Yes        ; |TopLevel|instructionRAM:inst1|ram[36][3]              ;
-; 3:1                ; 8 bits    ; 16 LEs        ; 0 LEs                ; 16 LEs                 ; Yes        ; |TopLevel|instructionRAM:inst1|ram[37][2]              ;
-; 3:1                ; 8 bits    ; 16 LEs        ; 0 LEs                ; 16 LEs                 ; Yes        ; |TopLevel|instructionRAM:inst1|ram[38][5]              ;
-; 3:1                ; 8 bits    ; 16 LEs        ; 0 LEs                ; 16 LEs                 ; Yes        ; |TopLevel|instructionRAM:inst1|ram[39][5]              ;
-; 3:1                ; 8 bits    ; 16 LEs        ; 0 LEs                ; 16 LEs                 ; Yes        ; |TopLevel|instructionRAM:inst1|ram[40][2]              ;
-; 3:1                ; 8 bits    ; 16 LEs        ; 0 LEs                ; 16 LEs                 ; Yes        ; |TopLevel|instructionRAM:inst1|ram[41][0]              ;
-; 3:1                ; 8 bits    ; 16 LEs        ; 0 LEs                ; 16 LEs                 ; Yes        ; |TopLevel|instructionRAM:inst1|ram[42][5]              ;
+; 3:1                ; 8 bits    ; 16 LEs        ; 0 LEs                ; 16 LEs                 ; Yes        ; |TopLevel|instructionRAM:inst1|ram[25][4]              ;
+; 3:1                ; 8 bits    ; 16 LEs        ; 0 LEs                ; 16 LEs                 ; Yes        ; |TopLevel|instructionRAM:inst1|ram[26][7]              ;
+; 3:1                ; 8 bits    ; 16 LEs        ; 0 LEs                ; 16 LEs                 ; Yes        ; |TopLevel|instructionRAM:inst1|ram[27][1]              ;
+; 3:1                ; 8 bits    ; 16 LEs        ; 0 LEs                ; 16 LEs                 ; Yes        ; |TopLevel|instructionRAM:inst1|ram[28][4]              ;
+; 3:1                ; 8 bits    ; 16 LEs        ; 0 LEs                ; 16 LEs                 ; Yes        ; |TopLevel|instructionRAM:inst1|ram[29][2]              ;
+; 3:1                ; 8 bits    ; 16 LEs        ; 0 LEs                ; 16 LEs                 ; Yes        ; |TopLevel|instructionRAM:inst1|ram[30][1]              ;
+; 3:1                ; 8 bits    ; 16 LEs        ; 0 LEs                ; 16 LEs                 ; Yes        ; |TopLevel|instructionRAM:inst1|ram[31][2]              ;
+; 3:1                ; 8 bits    ; 16 LEs        ; 0 LEs                ; 16 LEs                 ; Yes        ; |TopLevel|instructionRAM:inst1|ram[32][0]              ;
+; 3:1                ; 8 bits    ; 16 LEs        ; 0 LEs                ; 16 LEs                 ; Yes        ; |TopLevel|instructionRAM:inst1|ram[33][3]              ;
+; 3:1                ; 8 bits    ; 16 LEs        ; 0 LEs                ; 16 LEs                 ; Yes        ; |TopLevel|instructionRAM:inst1|ram[34][4]              ;
+; 3:1                ; 8 bits    ; 16 LEs        ; 0 LEs                ; 16 LEs                 ; Yes        ; |TopLevel|instructionRAM:inst1|ram[35][3]              ;
+; 3:1                ; 8 bits    ; 16 LEs        ; 0 LEs                ; 16 LEs                 ; Yes        ; |TopLevel|instructionRAM:inst1|ram[36][5]              ;
+; 3:1                ; 8 bits    ; 16 LEs        ; 0 LEs                ; 16 LEs                 ; Yes        ; |TopLevel|instructionRAM:inst1|ram[37][3]              ;
+; 3:1                ; 8 bits    ; 16 LEs        ; 0 LEs                ; 16 LEs                 ; Yes        ; |TopLevel|instructionRAM:inst1|ram[38][3]              ;
+; 3:1                ; 8 bits    ; 16 LEs        ; 0 LEs                ; 16 LEs                 ; Yes        ; |TopLevel|instructionRAM:inst1|ram[39][3]              ;
+; 3:1                ; 8 bits    ; 16 LEs        ; 0 LEs                ; 16 LEs                 ; Yes        ; |TopLevel|instructionRAM:inst1|ram[40][4]              ;
+; 3:1                ; 8 bits    ; 16 LEs        ; 0 LEs                ; 16 LEs                 ; Yes        ; |TopLevel|instructionRAM:inst1|ram[41][7]              ;
+; 3:1                ; 8 bits    ; 16 LEs        ; 0 LEs                ; 16 LEs                 ; Yes        ; |TopLevel|instructionRAM:inst1|ram[42][3]              ;
 ; 3:1                ; 8 bits    ; 16 LEs        ; 0 LEs                ; 16 LEs                 ; Yes        ; |TopLevel|instructionRAM:inst1|ram[43][7]              ;
-; 3:1                ; 8 bits    ; 16 LEs        ; 0 LEs                ; 16 LEs                 ; Yes        ; |TopLevel|instructionRAM:inst1|ram[44][3]              ;
-; 3:1                ; 8 bits    ; 16 LEs        ; 0 LEs                ; 16 LEs                 ; Yes        ; |TopLevel|instructionRAM:inst1|ram[45][2]              ;
-; 3:1                ; 8 bits    ; 16 LEs        ; 0 LEs                ; 16 LEs                 ; Yes        ; |TopLevel|instructionRAM:inst1|ram[46][7]              ;
-; 3:1                ; 8 bits    ; 16 LEs        ; 0 LEs                ; 16 LEs                 ; Yes        ; |TopLevel|instructionRAM:inst1|ram[47][5]              ;
+; 3:1                ; 8 bits    ; 16 LEs        ; 0 LEs                ; 16 LEs                 ; Yes        ; |TopLevel|instructionRAM:inst1|ram[44][4]              ;
+; 3:1                ; 8 bits    ; 16 LEs        ; 0 LEs                ; 16 LEs                 ; Yes        ; |TopLevel|instructionRAM:inst1|ram[45][4]              ;
+; 3:1                ; 8 bits    ; 16 LEs        ; 0 LEs                ; 16 LEs                 ; Yes        ; |TopLevel|instructionRAM:inst1|ram[46][4]              ;
+; 3:1                ; 8 bits    ; 16 LEs        ; 0 LEs                ; 16 LEs                 ; Yes        ; |TopLevel|instructionRAM:inst1|ram[47][4]              ;
 ; 3:1                ; 8 bits    ; 16 LEs        ; 0 LEs                ; 16 LEs                 ; Yes        ; |TopLevel|instructionRAM:inst1|ram[48][7]              ;
-; 3:1                ; 8 bits    ; 16 LEs        ; 0 LEs                ; 16 LEs                 ; Yes        ; |TopLevel|instructionRAM:inst1|ram[49][4]              ;
-; 3:1                ; 8 bits    ; 16 LEs        ; 0 LEs                ; 16 LEs                 ; Yes        ; |TopLevel|instructionRAM:inst1|ram[50][7]              ;
-; 3:1                ; 8 bits    ; 16 LEs        ; 0 LEs                ; 16 LEs                 ; Yes        ; |TopLevel|instructionRAM:inst1|ram[51][5]              ;
-; 3:1                ; 8 bits    ; 16 LEs        ; 0 LEs                ; 16 LEs                 ; Yes        ; |TopLevel|instructionRAM:inst1|ram[52][6]              ;
-; 3:1                ; 8 bits    ; 16 LEs        ; 0 LEs                ; 16 LEs                 ; Yes        ; |TopLevel|instructionRAM:inst1|ram[53][2]              ;
-; 3:1                ; 8 bits    ; 16 LEs        ; 0 LEs                ; 16 LEs                 ; Yes        ; |TopLevel|instructionRAM:inst1|ram[54][1]              ;
-; 3:1                ; 8 bits    ; 16 LEs        ; 0 LEs                ; 16 LEs                 ; Yes        ; |TopLevel|instructionRAM:inst1|ram[55][6]              ;
-; 3:1                ; 8 bits    ; 16 LEs        ; 0 LEs                ; 16 LEs                 ; Yes        ; |TopLevel|instructionRAM:inst1|ram[56][6]              ;
-; 3:1                ; 8 bits    ; 16 LEs        ; 0 LEs                ; 16 LEs                 ; Yes        ; |TopLevel|instructionRAM:inst1|ram[57][6]              ;
-; 3:1                ; 8 bits    ; 16 LEs        ; 0 LEs                ; 16 LEs                 ; Yes        ; |TopLevel|instructionRAM:inst1|ram[58][6]              ;
-; 3:1                ; 8 bits    ; 16 LEs        ; 0 LEs                ; 16 LEs                 ; Yes        ; |TopLevel|instructionRAM:inst1|ram[59][6]              ;
-; 3:1                ; 8 bits    ; 16 LEs        ; 0 LEs                ; 16 LEs                 ; Yes        ; |TopLevel|instructionRAM:inst1|ram[60][2]              ;
-; 3:1                ; 8 bits    ; 16 LEs        ; 0 LEs                ; 16 LEs                 ; Yes        ; |TopLevel|instructionRAM:inst1|ram[61][0]              ;
+; 3:1                ; 8 bits    ; 16 LEs        ; 0 LEs                ; 16 LEs                 ; Yes        ; |TopLevel|instructionRAM:inst1|ram[49][0]              ;
+; 3:1                ; 8 bits    ; 16 LEs        ; 0 LEs                ; 16 LEs                 ; Yes        ; |TopLevel|instructionRAM:inst1|ram[50][5]              ;
+; 3:1                ; 8 bits    ; 16 LEs        ; 0 LEs                ; 16 LEs                 ; Yes        ; |TopLevel|instructionRAM:inst1|ram[51][3]              ;
+; 3:1                ; 8 bits    ; 16 LEs        ; 0 LEs                ; 16 LEs                 ; Yes        ; |TopLevel|instructionRAM:inst1|ram[52][0]              ;
+; 3:1                ; 8 bits    ; 16 LEs        ; 0 LEs                ; 16 LEs                 ; Yes        ; |TopLevel|instructionRAM:inst1|ram[53][4]              ;
+; 3:1                ; 8 bits    ; 16 LEs        ; 0 LEs                ; 16 LEs                 ; Yes        ; |TopLevel|instructionRAM:inst1|ram[54][4]              ;
+; 3:1                ; 8 bits    ; 16 LEs        ; 0 LEs                ; 16 LEs                 ; Yes        ; |TopLevel|instructionRAM:inst1|ram[55][1]              ;
+; 3:1                ; 8 bits    ; 16 LEs        ; 0 LEs                ; 16 LEs                 ; Yes        ; |TopLevel|instructionRAM:inst1|ram[56][2]              ;
+; 3:1                ; 8 bits    ; 16 LEs        ; 0 LEs                ; 16 LEs                 ; Yes        ; |TopLevel|instructionRAM:inst1|ram[57][4]              ;
+; 3:1                ; 8 bits    ; 16 LEs        ; 0 LEs                ; 16 LEs                 ; Yes        ; |TopLevel|instructionRAM:inst1|ram[58][4]              ;
+; 3:1                ; 8 bits    ; 16 LEs        ; 0 LEs                ; 16 LEs                 ; Yes        ; |TopLevel|instructionRAM:inst1|ram[59][1]              ;
+; 3:1                ; 8 bits    ; 16 LEs        ; 0 LEs                ; 16 LEs                 ; Yes        ; |TopLevel|instructionRAM:inst1|ram[60][1]              ;
+; 3:1                ; 8 bits    ; 16 LEs        ; 0 LEs                ; 16 LEs                 ; Yes        ; |TopLevel|instructionRAM:inst1|ram[61][7]              ;
 ; 3:1                ; 8 bits    ; 16 LEs        ; 0 LEs                ; 16 LEs                 ; Yes        ; |TopLevel|instructionRAM:inst1|ram[62][6]              ;
-; 3:1                ; 8 bits    ; 16 LEs        ; 0 LEs                ; 16 LEs                 ; Yes        ; |TopLevel|instructionRAM:inst1|ram[63][6]              ;
-; 3:1                ; 8 bits    ; 16 LEs        ; 0 LEs                ; 16 LEs                 ; Yes        ; |TopLevel|instructionRAM:inst1|ram[64][0]              ;
-; 3:1                ; 8 bits    ; 16 LEs        ; 0 LEs                ; 16 LEs                 ; Yes        ; |TopLevel|instructionRAM:inst1|ram[65][3]              ;
-; 3:1                ; 8 bits    ; 16 LEs        ; 0 LEs                ; 16 LEs                 ; Yes        ; |TopLevel|instructionRAM:inst1|ram[66][6]              ;
+; 3:1                ; 8 bits    ; 16 LEs        ; 0 LEs                ; 16 LEs                 ; Yes        ; |TopLevel|instructionRAM:inst1|ram[63][1]              ;
+; 3:1                ; 8 bits    ; 16 LEs        ; 0 LEs                ; 16 LEs                 ; Yes        ; |TopLevel|instructionRAM:inst1|ram[64][7]              ;
+; 3:1                ; 8 bits    ; 16 LEs        ; 0 LEs                ; 16 LEs                 ; Yes        ; |TopLevel|instructionRAM:inst1|ram[65][1]              ;
+; 3:1                ; 8 bits    ; 16 LEs        ; 0 LEs                ; 16 LEs                 ; Yes        ; |TopLevel|instructionRAM:inst1|ram[66][1]              ;
 ; 3:1                ; 8 bits    ; 16 LEs        ; 0 LEs                ; 16 LEs                 ; Yes        ; |TopLevel|instructionRAM:inst1|ram[67][4]              ;
-; 3:1                ; 8 bits    ; 16 LEs        ; 0 LEs                ; 16 LEs                 ; Yes        ; |TopLevel|instructionRAM:inst1|ram[68][7]              ;
-; 3:1                ; 8 bits    ; 16 LEs        ; 0 LEs                ; 16 LEs                 ; Yes        ; |TopLevel|instructionRAM:inst1|ram[69][6]              ;
-; 3:1                ; 8 bits    ; 16 LEs        ; 0 LEs                ; 16 LEs                 ; Yes        ; |TopLevel|instructionRAM:inst1|ram[70][7]              ;
-; 3:1                ; 8 bits    ; 16 LEs        ; 0 LEs                ; 16 LEs                 ; Yes        ; |TopLevel|instructionRAM:inst1|ram[71][0]              ;
-; 3:1                ; 8 bits    ; 16 LEs        ; 0 LEs                ; 16 LEs                 ; Yes        ; |TopLevel|instructionRAM:inst1|ram[72][2]              ;
-; 3:1                ; 8 bits    ; 16 LEs        ; 0 LEs                ; 16 LEs                 ; Yes        ; |TopLevel|instructionRAM:inst1|ram[73][2]              ;
-; 3:1                ; 8 bits    ; 16 LEs        ; 0 LEs                ; 16 LEs                 ; Yes        ; |TopLevel|instructionRAM:inst1|ram[74][0]              ;
-; 3:1                ; 8 bits    ; 16 LEs        ; 0 LEs                ; 16 LEs                 ; Yes        ; |TopLevel|instructionRAM:inst1|ram[75][3]              ;
-; 3:1                ; 8 bits    ; 16 LEs        ; 0 LEs                ; 16 LEs                 ; Yes        ; |TopLevel|instructionRAM:inst1|ram[76][2]              ;
-; 3:1                ; 8 bits    ; 16 LEs        ; 0 LEs                ; 16 LEs                 ; Yes        ; |TopLevel|instructionRAM:inst1|ram[77][1]              ;
-; 3:1                ; 8 bits    ; 16 LEs        ; 0 LEs                ; 16 LEs                 ; Yes        ; |TopLevel|instructionRAM:inst1|ram[78][3]              ;
-; 3:1                ; 8 bits    ; 16 LEs        ; 0 LEs                ; 16 LEs                 ; Yes        ; |TopLevel|instructionRAM:inst1|ram[79][6]              ;
-; 3:1                ; 8 bits    ; 16 LEs        ; 0 LEs                ; 16 LEs                 ; Yes        ; |TopLevel|instructionRAM:inst1|ram[80][7]              ;
-; 3:1                ; 8 bits    ; 16 LEs        ; 0 LEs                ; 16 LEs                 ; Yes        ; |TopLevel|instructionRAM:inst1|ram[81][7]              ;
-; 3:1                ; 8 bits    ; 16 LEs        ; 0 LEs                ; 16 LEs                 ; Yes        ; |TopLevel|instructionRAM:inst1|ram[82][6]              ;
-; 3:1                ; 8 bits    ; 16 LEs        ; 0 LEs                ; 16 LEs                 ; Yes        ; |TopLevel|instructionRAM:inst1|ram[83][0]              ;
-; 3:1                ; 8 bits    ; 16 LEs        ; 0 LEs                ; 16 LEs                 ; Yes        ; |TopLevel|instructionRAM:inst1|ram[84][1]              ;
-; 3:1                ; 8 bits    ; 16 LEs        ; 0 LEs                ; 16 LEs                 ; Yes        ; |TopLevel|instructionRAM:inst1|ram[85][3]              ;
-; 3:1                ; 8 bits    ; 16 LEs        ; 0 LEs                ; 16 LEs                 ; Yes        ; |TopLevel|instructionRAM:inst1|ram[86][2]              ;
-; 3:1                ; 8 bits    ; 16 LEs        ; 0 LEs                ; 16 LEs                 ; Yes        ; |TopLevel|instructionRAM:inst1|ram[87][3]              ;
-; 3:1                ; 8 bits    ; 16 LEs        ; 0 LEs                ; 16 LEs                 ; Yes        ; |TopLevel|instructionRAM:inst1|ram[88][4]              ;
-; 3:1                ; 8 bits    ; 16 LEs        ; 0 LEs                ; 16 LEs                 ; Yes        ; |TopLevel|instructionRAM:inst1|ram[89][6]              ;
-; 3:1                ; 8 bits    ; 16 LEs        ; 0 LEs                ; 16 LEs                 ; Yes        ; |TopLevel|instructionRAM:inst1|ram[90][7]              ;
-; 3:1                ; 8 bits    ; 16 LEs        ; 0 LEs                ; 16 LEs                 ; Yes        ; |TopLevel|instructionRAM:inst1|ram[91][6]              ;
-; 3:1                ; 8 bits    ; 16 LEs        ; 0 LEs                ; 16 LEs                 ; Yes        ; |TopLevel|instructionRAM:inst1|ram[92][6]              ;
-; 3:1                ; 8 bits    ; 16 LEs        ; 0 LEs                ; 16 LEs                 ; Yes        ; |TopLevel|instructionRAM:inst1|ram[93][5]              ;
-; 3:1                ; 8 bits    ; 16 LEs        ; 0 LEs                ; 16 LEs                 ; Yes        ; |TopLevel|instructionRAM:inst1|ram[94][5]              ;
-; 3:1                ; 8 bits    ; 16 LEs        ; 0 LEs                ; 16 LEs                 ; Yes        ; |TopLevel|instructionRAM:inst1|ram[95][3]              ;
-; 3:1                ; 8 bits    ; 16 LEs        ; 0 LEs                ; 16 LEs                 ; Yes        ; |TopLevel|instructionRAM:inst1|ram[96][3]              ;
-; 3:1                ; 8 bits    ; 16 LEs        ; 0 LEs                ; 16 LEs                 ; Yes        ; |TopLevel|instructionRAM:inst1|ram[97][7]              ;
+; 3:1                ; 8 bits    ; 16 LEs        ; 0 LEs                ; 16 LEs                 ; Yes        ; |TopLevel|instructionRAM:inst1|ram[68][4]              ;
+; 3:1                ; 8 bits    ; 16 LEs        ; 0 LEs                ; 16 LEs                 ; Yes        ; |TopLevel|instructionRAM:inst1|ram[69][4]              ;
+; 3:1                ; 8 bits    ; 16 LEs        ; 0 LEs                ; 16 LEs                 ; Yes        ; |TopLevel|instructionRAM:inst1|ram[70][4]              ;
+; 3:1                ; 8 bits    ; 16 LEs        ; 0 LEs                ; 16 LEs                 ; Yes        ; |TopLevel|instructionRAM:inst1|ram[71][4]              ;
+; 3:1                ; 8 bits    ; 16 LEs        ; 0 LEs                ; 16 LEs                 ; Yes        ; |TopLevel|instructionRAM:inst1|ram[72][5]              ;
+; 3:1                ; 8 bits    ; 16 LEs        ; 0 LEs                ; 16 LEs                 ; Yes        ; |TopLevel|instructionRAM:inst1|ram[73][6]              ;
+; 3:1                ; 8 bits    ; 16 LEs        ; 0 LEs                ; 16 LEs                 ; Yes        ; |TopLevel|instructionRAM:inst1|ram[74][6]              ;
+; 3:1                ; 8 bits    ; 16 LEs        ; 0 LEs                ; 16 LEs                 ; Yes        ; |TopLevel|instructionRAM:inst1|ram[75][6]              ;
+; 3:1                ; 8 bits    ; 16 LEs        ; 0 LEs                ; 16 LEs                 ; Yes        ; |TopLevel|instructionRAM:inst1|ram[76][6]              ;
+; 3:1                ; 8 bits    ; 16 LEs        ; 0 LEs                ; 16 LEs                 ; Yes        ; |TopLevel|instructionRAM:inst1|ram[77][6]              ;
+; 3:1                ; 8 bits    ; 16 LEs        ; 0 LEs                ; 16 LEs                 ; Yes        ; |TopLevel|instructionRAM:inst1|ram[78][6]              ;
+; 3:1                ; 8 bits    ; 16 LEs        ; 0 LEs                ; 16 LEs                 ; Yes        ; |TopLevel|instructionRAM:inst1|ram[79][0]              ;
+; 3:1                ; 8 bits    ; 16 LEs        ; 0 LEs                ; 16 LEs                 ; Yes        ; |TopLevel|instructionRAM:inst1|ram[80][6]              ;
+; 3:1                ; 8 bits    ; 16 LEs        ; 0 LEs                ; 16 LEs                 ; Yes        ; |TopLevel|instructionRAM:inst1|ram[81][3]              ;
+; 3:1                ; 8 bits    ; 16 LEs        ; 0 LEs                ; 16 LEs                 ; Yes        ; |TopLevel|instructionRAM:inst1|ram[82][0]              ;
+; 3:1                ; 8 bits    ; 16 LEs        ; 0 LEs                ; 16 LEs                 ; Yes        ; |TopLevel|instructionRAM:inst1|ram[83][7]              ;
+; 3:1                ; 8 bits    ; 16 LEs        ; 0 LEs                ; 16 LEs                 ; Yes        ; |TopLevel|instructionRAM:inst1|ram[84][6]              ;
+; 3:1                ; 8 bits    ; 16 LEs        ; 0 LEs                ; 16 LEs                 ; Yes        ; |TopLevel|instructionRAM:inst1|ram[85][2]              ;
+; 3:1                ; 8 bits    ; 16 LEs        ; 0 LEs                ; 16 LEs                 ; Yes        ; |TopLevel|instructionRAM:inst1|ram[86][4]              ;
+; 3:1                ; 8 bits    ; 16 LEs        ; 0 LEs                ; 16 LEs                 ; Yes        ; |TopLevel|instructionRAM:inst1|ram[87][2]              ;
+; 3:1                ; 8 bits    ; 16 LEs        ; 0 LEs                ; 16 LEs                 ; Yes        ; |TopLevel|instructionRAM:inst1|ram[88][6]              ;
+; 3:1                ; 8 bits    ; 16 LEs        ; 0 LEs                ; 16 LEs                 ; Yes        ; |TopLevel|instructionRAM:inst1|ram[89][4]              ;
+; 3:1                ; 8 bits    ; 16 LEs        ; 0 LEs                ; 16 LEs                 ; Yes        ; |TopLevel|instructionRAM:inst1|ram[90][4]              ;
+; 3:1                ; 8 bits    ; 16 LEs        ; 0 LEs                ; 16 LEs                 ; Yes        ; |TopLevel|instructionRAM:inst1|ram[91][1]              ;
+; 3:1                ; 8 bits    ; 16 LEs        ; 0 LEs                ; 16 LEs                 ; Yes        ; |TopLevel|instructionRAM:inst1|ram[92][0]              ;
+; 3:1                ; 8 bits    ; 16 LEs        ; 0 LEs                ; 16 LEs                 ; Yes        ; |TopLevel|instructionRAM:inst1|ram[93][0]              ;
+; 3:1                ; 8 bits    ; 16 LEs        ; 0 LEs                ; 16 LEs                 ; Yes        ; |TopLevel|instructionRAM:inst1|ram[94][0]              ;
+; 3:1                ; 8 bits    ; 16 LEs        ; 0 LEs                ; 16 LEs                 ; Yes        ; |TopLevel|instructionRAM:inst1|ram[95][5]              ;
+; 3:1                ; 8 bits    ; 16 LEs        ; 0 LEs                ; 16 LEs                 ; Yes        ; |TopLevel|instructionRAM:inst1|ram[96][5]              ;
+; 3:1                ; 8 bits    ; 16 LEs        ; 0 LEs                ; 16 LEs                 ; Yes        ; |TopLevel|instructionRAM:inst1|ram[97][3]              ;
 ; 3:1                ; 8 bits    ; 16 LEs        ; 0 LEs                ; 16 LEs                 ; Yes        ; |TopLevel|instructionRAM:inst1|ram[98][3]              ;
-; 3:1                ; 8 bits    ; 16 LEs        ; 0 LEs                ; 16 LEs                 ; Yes        ; |TopLevel|instructionRAM:inst1|ram[99][4]              ;
-; 3:1                ; 8 bits    ; 16 LEs        ; 0 LEs                ; 16 LEs                 ; Yes        ; |TopLevel|instructionRAM:inst1|ram[100][6]             ;
-; 3:1                ; 8 bits    ; 16 LEs        ; 0 LEs                ; 16 LEs                 ; Yes        ; |TopLevel|instructionRAM:inst1|ram[101][0]             ;
-; 3:1                ; 8 bits    ; 16 LEs        ; 0 LEs                ; 16 LEs                 ; Yes        ; |TopLevel|instructionRAM:inst1|ram[102][5]             ;
-; 3:1                ; 8 bits    ; 16 LEs        ; 0 LEs                ; 16 LEs                 ; Yes        ; |TopLevel|instructionRAM:inst1|ram[103][3]             ;
-; 3:1                ; 8 bits    ; 16 LEs        ; 0 LEs                ; 16 LEs                 ; Yes        ; |TopLevel|instructionRAM:inst1|ram[104][1]             ;
-; 3:1                ; 8 bits    ; 16 LEs        ; 0 LEs                ; 16 LEs                 ; Yes        ; |TopLevel|instructionRAM:inst1|ram[105][0]             ;
-; 3:1                ; 8 bits    ; 16 LEs        ; 0 LEs                ; 16 LEs                 ; Yes        ; |TopLevel|instructionRAM:inst1|ram[106][4]             ;
-; 3:1                ; 8 bits    ; 16 LEs        ; 0 LEs                ; 16 LEs                 ; Yes        ; |TopLevel|instructionRAM:inst1|ram[107][3]             ;
-; 3:1                ; 8 bits    ; 16 LEs        ; 0 LEs                ; 16 LEs                 ; Yes        ; |TopLevel|instructionRAM:inst1|ram[108][5]             ;
-; 3:1                ; 8 bits    ; 16 LEs        ; 0 LEs                ; 16 LEs                 ; Yes        ; |TopLevel|instructionRAM:inst1|ram[109][0]             ;
-; 3:1                ; 8 bits    ; 16 LEs        ; 0 LEs                ; 16 LEs                 ; Yes        ; |TopLevel|instructionRAM:inst1|ram[110][3]             ;
-; 3:1                ; 8 bits    ; 16 LEs        ; 0 LEs                ; 16 LEs                 ; Yes        ; |TopLevel|instructionRAM:inst1|ram[111][1]             ;
-; 3:1                ; 8 bits    ; 16 LEs        ; 0 LEs                ; 16 LEs                 ; Yes        ; |TopLevel|instructionRAM:inst1|ram[112][4]             ;
-; 3:1                ; 8 bits    ; 16 LEs        ; 0 LEs                ; 16 LEs                 ; Yes        ; |TopLevel|instructionRAM:inst1|ram[113][3]             ;
-; 3:1                ; 8 bits    ; 16 LEs        ; 0 LEs                ; 16 LEs                 ; Yes        ; |TopLevel|instructionRAM:inst1|ram[114][4]             ;
-; 3:1                ; 8 bits    ; 16 LEs        ; 0 LEs                ; 16 LEs                 ; Yes        ; |TopLevel|instructionRAM:inst1|ram[115][4]             ;
-; 3:1                ; 8 bits    ; 16 LEs        ; 0 LEs                ; 16 LEs                 ; Yes        ; |TopLevel|instructionRAM:inst1|ram[116][3]             ;
-; 3:1                ; 8 bits    ; 16 LEs        ; 0 LEs                ; 16 LEs                 ; Yes        ; |TopLevel|instructionRAM:inst1|ram[117][6]             ;
-; 3:1                ; 8 bits    ; 16 LEs        ; 0 LEs                ; 16 LEs                 ; Yes        ; |TopLevel|instructionRAM:inst1|ram[118][7]             ;
-; 3:1                ; 8 bits    ; 16 LEs        ; 0 LEs                ; 16 LEs                 ; Yes        ; |TopLevel|instructionRAM:inst1|ram[119][6]             ;
-; 3:1                ; 8 bits    ; 16 LEs        ; 0 LEs                ; 16 LEs                 ; Yes        ; |TopLevel|instructionRAM:inst1|ram[120][4]             ;
-; 3:1                ; 8 bits    ; 16 LEs        ; 0 LEs                ; 16 LEs                 ; Yes        ; |TopLevel|instructionRAM:inst1|ram[121][1]             ;
-; 3:1                ; 8 bits    ; 16 LEs        ; 0 LEs                ; 16 LEs                 ; Yes        ; |TopLevel|instructionRAM:inst1|ram[122][1]             ;
-; 3:1                ; 8 bits    ; 16 LEs        ; 0 LEs                ; 16 LEs                 ; Yes        ; |TopLevel|instructionRAM:inst1|ram[123][4]             ;
-; 3:1                ; 8 bits    ; 16 LEs        ; 0 LEs                ; 16 LEs                 ; Yes        ; |TopLevel|instructionRAM:inst1|ram[124][2]             ;
-; 3:1                ; 8 bits    ; 16 LEs        ; 0 LEs                ; 16 LEs                 ; Yes        ; |TopLevel|instructionRAM:inst1|ram[125][1]             ;
-; 3:1                ; 8 bits    ; 16 LEs        ; 0 LEs                ; 16 LEs                 ; Yes        ; |TopLevel|instructionRAM:inst1|ram[126][1]             ;
-; 3:1                ; 8 bits    ; 16 LEs        ; 0 LEs                ; 16 LEs                 ; Yes        ; |TopLevel|instructionRAM:inst1|ram[127][5]             ;
-; 3:1                ; 8 bits    ; 16 LEs        ; 0 LEs                ; 16 LEs                 ; Yes        ; |TopLevel|instructionRAM:inst1|ram[128][2]             ;
-; 3:1                ; 8 bits    ; 16 LEs        ; 0 LEs                ; 16 LEs                 ; Yes        ; |TopLevel|instructionRAM:inst1|ram[129][0]             ;
-; 3:1                ; 8 bits    ; 16 LEs        ; 0 LEs                ; 16 LEs                 ; Yes        ; |TopLevel|instructionRAM:inst1|ram[130][5]             ;
-; 3:1                ; 8 bits    ; 16 LEs        ; 0 LEs                ; 16 LEs                 ; Yes        ; |TopLevel|instructionRAM:inst1|ram[131][6]             ;
-; 3:1                ; 8 bits    ; 16 LEs        ; 0 LEs                ; 16 LEs                 ; Yes        ; |TopLevel|instructionRAM:inst1|ram[132][7]             ;
-; 3:1                ; 8 bits    ; 16 LEs        ; 0 LEs                ; 16 LEs                 ; Yes        ; |TopLevel|instructionRAM:inst1|ram[133][4]             ;
-; 3:1                ; 8 bits    ; 16 LEs        ; 0 LEs                ; 16 LEs                 ; Yes        ; |TopLevel|instructionRAM:inst1|ram[134][6]             ;
-; 3:1                ; 8 bits    ; 16 LEs        ; 0 LEs                ; 16 LEs                 ; Yes        ; |TopLevel|instructionRAM:inst1|ram[135][2]             ;
-; 3:1                ; 8 bits    ; 16 LEs        ; 0 LEs                ; 16 LEs                 ; Yes        ; |TopLevel|instructionRAM:inst1|ram[136][3]             ;
-; 3:1                ; 8 bits    ; 16 LEs        ; 0 LEs                ; 16 LEs                 ; Yes        ; |TopLevel|instructionRAM:inst1|ram[137][5]             ;
-; 3:1                ; 8 bits    ; 16 LEs        ; 0 LEs                ; 16 LEs                 ; Yes        ; |TopLevel|instructionRAM:inst1|ram[138][2]             ;
-; 3:1                ; 8 bits    ; 16 LEs        ; 0 LEs                ; 16 LEs                 ; Yes        ; |TopLevel|instructionRAM:inst1|ram[139][3]             ;
-; 3:1                ; 8 bits    ; 16 LEs        ; 0 LEs                ; 16 LEs                 ; Yes        ; |TopLevel|instructionRAM:inst1|ram[140][6]             ;
-; 3:1                ; 8 bits    ; 16 LEs        ; 0 LEs                ; 16 LEs                 ; Yes        ; |TopLevel|instructionRAM:inst1|ram[141][5]             ;
-; 3:1                ; 8 bits    ; 16 LEs        ; 0 LEs                ; 16 LEs                 ; Yes        ; |TopLevel|instructionRAM:inst1|ram[142][1]             ;
-; 3:1                ; 8 bits    ; 16 LEs        ; 0 LEs                ; 16 LEs                 ; Yes        ; |TopLevel|instructionRAM:inst1|ram[143][4]             ;
-; 3:1                ; 8 bits    ; 16 LEs        ; 0 LEs                ; 16 LEs                 ; Yes        ; |TopLevel|instructionRAM:inst1|ram[144][2]             ;
-; 3:1                ; 8 bits    ; 16 LEs        ; 0 LEs                ; 16 LEs                 ; Yes        ; |TopLevel|instructionRAM:inst1|ram[145][7]             ;
-; 3:1                ; 8 bits    ; 16 LEs        ; 0 LEs                ; 16 LEs                 ; Yes        ; |TopLevel|instructionRAM:inst1|ram[146][7]             ;
-; 3:1                ; 8 bits    ; 16 LEs        ; 0 LEs                ; 16 LEs                 ; Yes        ; |TopLevel|instructionRAM:inst1|ram[147][2]             ;
-; 3:1                ; 8 bits    ; 16 LEs        ; 0 LEs                ; 16 LEs                 ; Yes        ; |TopLevel|instructionRAM:inst1|ram[148][1]             ;
-; 3:1                ; 8 bits    ; 16 LEs        ; 0 LEs                ; 16 LEs                 ; Yes        ; |TopLevel|instructionRAM:inst1|ram[149][4]             ;
-; 3:1                ; 8 bits    ; 16 LEs        ; 0 LEs                ; 16 LEs                 ; Yes        ; |TopLevel|instructionRAM:inst1|ram[150][3]             ;
-; 3:1                ; 8 bits    ; 16 LEs        ; 0 LEs                ; 16 LEs                 ; Yes        ; |TopLevel|instructionRAM:inst1|ram[151][1]             ;
-; 3:1                ; 8 bits    ; 16 LEs        ; 0 LEs                ; 16 LEs                 ; Yes        ; |TopLevel|instructionRAM:inst1|ram[152][5]             ;
-; 3:1                ; 8 bits    ; 16 LEs        ; 0 LEs                ; 16 LEs                 ; Yes        ; |TopLevel|instructionRAM:inst1|ram[153][5]             ;
-; 3:1                ; 8 bits    ; 16 LEs        ; 0 LEs                ; 16 LEs                 ; Yes        ; |TopLevel|instructionRAM:inst1|ram[154][1]             ;
-; 3:1                ; 8 bits    ; 16 LEs        ; 0 LEs                ; 16 LEs                 ; Yes        ; |TopLevel|instructionRAM:inst1|ram[155][0]             ;
-; 3:1                ; 8 bits    ; 16 LEs        ; 0 LEs                ; 16 LEs                 ; Yes        ; |TopLevel|instructionRAM:inst1|ram[156][7]             ;
-; 3:1                ; 8 bits    ; 16 LEs        ; 0 LEs                ; 16 LEs                 ; Yes        ; |TopLevel|instructionRAM:inst1|ram[157][6]             ;
-; 3:1                ; 8 bits    ; 16 LEs        ; 0 LEs                ; 16 LEs                 ; Yes        ; |TopLevel|instructionRAM:inst1|ram[158][1]             ;
-; 3:1                ; 8 bits    ; 16 LEs        ; 0 LEs                ; 16 LEs                 ; Yes        ; |TopLevel|instructionRAM:inst1|ram[159][4]             ;
-; 3:1                ; 8 bits    ; 16 LEs        ; 0 LEs                ; 16 LEs                 ; Yes        ; |TopLevel|instructionRAM:inst1|ram[160][6]             ;
-; 3:1                ; 8 bits    ; 16 LEs        ; 0 LEs                ; 16 LEs                 ; Yes        ; |TopLevel|instructionRAM:inst1|ram[161][2]             ;
-; 3:1                ; 8 bits    ; 16 LEs        ; 0 LEs                ; 16 LEs                 ; Yes        ; |TopLevel|instructionRAM:inst1|ram[162][4]             ;
-; 3:1                ; 8 bits    ; 16 LEs        ; 0 LEs                ; 16 LEs                 ; Yes        ; |TopLevel|instructionRAM:inst1|ram[163][2]             ;
-; 3:1                ; 8 bits    ; 16 LEs        ; 0 LEs                ; 16 LEs                 ; Yes        ; |TopLevel|instructionRAM:inst1|ram[164][1]             ;
-; 3:1                ; 8 bits    ; 16 LEs        ; 0 LEs                ; 16 LEs                 ; Yes        ; |TopLevel|instructionRAM:inst1|ram[165][3]             ;
-; 3:1                ; 8 bits    ; 16 LEs        ; 0 LEs                ; 16 LEs                 ; Yes        ; |TopLevel|instructionRAM:inst1|ram[166][0]             ;
-; 3:1                ; 8 bits    ; 16 LEs        ; 0 LEs                ; 16 LEs                 ; Yes        ; |TopLevel|instructionRAM:inst1|ram[167][5]             ;
-; 3:1                ; 8 bits    ; 16 LEs        ; 0 LEs                ; 16 LEs                 ; Yes        ; |TopLevel|instructionRAM:inst1|ram[168][3]             ;
-; 3:1                ; 8 bits    ; 16 LEs        ; 0 LEs                ; 16 LEs                 ; Yes        ; |TopLevel|instructionRAM:inst1|ram[169][2]             ;
-; 3:1                ; 8 bits    ; 16 LEs        ; 0 LEs                ; 16 LEs                 ; Yes        ; |TopLevel|instructionRAM:inst1|ram[170][4]             ;
-; 3:1                ; 8 bits    ; 16 LEs        ; 0 LEs                ; 16 LEs                 ; Yes        ; |TopLevel|instructionRAM:inst1|ram[171][0]             ;
-; 3:1                ; 8 bits    ; 16 LEs        ; 0 LEs                ; 16 LEs                 ; Yes        ; |TopLevel|instructionRAM:inst1|ram[172][6]             ;
-; 3:1                ; 8 bits    ; 16 LEs        ; 0 LEs                ; 16 LEs                 ; Yes        ; |TopLevel|instructionRAM:inst1|ram[173][7]             ;
-; 3:1                ; 8 bits    ; 16 LEs        ; 0 LEs                ; 16 LEs                 ; Yes        ; |TopLevel|instructionRAM:inst1|ram[174][3]             ;
-; 3:1                ; 8 bits    ; 16 LEs        ; 0 LEs                ; 16 LEs                 ; Yes        ; |TopLevel|instructionRAM:inst1|ram[175][0]             ;
-; 3:1                ; 8 bits    ; 16 LEs        ; 0 LEs                ; 16 LEs                 ; Yes        ; |TopLevel|instructionRAM:inst1|ram[176][3]             ;
-; 3:1                ; 8 bits    ; 16 LEs        ; 0 LEs                ; 16 LEs                 ; Yes        ; |TopLevel|instructionRAM:inst1|ram[177][4]             ;
-; 3:1                ; 8 bits    ; 16 LEs        ; 0 LEs                ; 16 LEs                 ; Yes        ; |TopLevel|instructionRAM:inst1|ram[178][4]             ;
-; 3:1                ; 8 bits    ; 16 LEs        ; 0 LEs                ; 16 LEs                 ; Yes        ; |TopLevel|instructionRAM:inst1|ram[179][0]             ;
-; 3:1                ; 8 bits    ; 16 LEs        ; 0 LEs                ; 16 LEs                 ; Yes        ; |TopLevel|instructionRAM:inst1|ram[180][4]             ;
-; 3:1                ; 8 bits    ; 16 LEs        ; 0 LEs                ; 16 LEs                 ; Yes        ; |TopLevel|instructionRAM:inst1|ram[181][7]             ;
-; 3:1                ; 8 bits    ; 16 LEs        ; 0 LEs                ; 16 LEs                 ; Yes        ; |TopLevel|instructionRAM:inst1|ram[182][3]             ;
-; 3:1                ; 8 bits    ; 16 LEs        ; 0 LEs                ; 16 LEs                 ; Yes        ; |TopLevel|instructionRAM:inst1|ram[183][6]             ;
-; 3:1                ; 8 bits    ; 16 LEs        ; 0 LEs                ; 16 LEs                 ; Yes        ; |TopLevel|instructionRAM:inst1|ram[184][2]             ;
-; 3:1                ; 8 bits    ; 16 LEs        ; 0 LEs                ; 16 LEs                 ; Yes        ; |TopLevel|instructionRAM:inst1|ram[185][6]             ;
-; 3:1                ; 8 bits    ; 16 LEs        ; 0 LEs                ; 16 LEs                 ; Yes        ; |TopLevel|instructionRAM:inst1|ram[186][7]             ;
-; 3:1                ; 8 bits    ; 16 LEs        ; 0 LEs                ; 16 LEs                 ; Yes        ; |TopLevel|instructionRAM:inst1|ram[187][6]             ;
-; 3:1                ; 8 bits    ; 16 LEs        ; 0 LEs                ; 16 LEs                 ; Yes        ; |TopLevel|instructionRAM:inst1|ram[188][7]             ;
-; 3:1                ; 8 bits    ; 16 LEs        ; 0 LEs                ; 16 LEs                 ; Yes        ; |TopLevel|instructionRAM:inst1|ram[189][7]             ;
-; 3:1                ; 8 bits    ; 16 LEs        ; 0 LEs                ; 16 LEs                 ; Yes        ; |TopLevel|instructionRAM:inst1|ram[190][7]             ;
-; 3:1                ; 8 bits    ; 16 LEs        ; 0 LEs                ; 16 LEs                 ; Yes        ; |TopLevel|instructionRAM:inst1|ram[191][5]             ;
-; 3:1                ; 8 bits    ; 16 LEs        ; 0 LEs                ; 16 LEs                 ; Yes        ; |TopLevel|instructionRAM:inst1|ram[192][1]             ;
-; 3:1                ; 8 bits    ; 16 LEs        ; 0 LEs                ; 16 LEs                 ; Yes        ; |TopLevel|instructionRAM:inst1|ram[193][3]             ;
-; 3:1                ; 8 bits    ; 16 LEs        ; 0 LEs                ; 16 LEs                 ; Yes        ; |TopLevel|instructionRAM:inst1|ram[194][3]             ;
-; 3:1                ; 8 bits    ; 16 LEs        ; 0 LEs                ; 16 LEs                 ; Yes        ; |TopLevel|instructionRAM:inst1|ram[195][2]             ;
-; 3:1                ; 8 bits    ; 16 LEs        ; 0 LEs                ; 16 LEs                 ; Yes        ; |TopLevel|instructionRAM:inst1|ram[196][0]             ;
-; 3:1                ; 8 bits    ; 16 LEs        ; 0 LEs                ; 16 LEs                 ; Yes        ; |TopLevel|instructionRAM:inst1|ram[197][6]             ;
-; 3:1                ; 8 bits    ; 16 LEs        ; 0 LEs                ; 16 LEs                 ; Yes        ; |TopLevel|instructionRAM:inst1|ram[198][3]             ;
-; 3:1                ; 8 bits    ; 16 LEs        ; 0 LEs                ; 16 LEs                 ; Yes        ; |TopLevel|instructionRAM:inst1|ram[199][2]             ;
-; 3:1                ; 8 bits    ; 16 LEs        ; 0 LEs                ; 16 LEs                 ; Yes        ; |TopLevel|instructionRAM:inst1|ram[200][1]             ;
-; 3:1                ; 8 bits    ; 16 LEs        ; 0 LEs                ; 16 LEs                 ; Yes        ; |TopLevel|instructionRAM:inst1|ram[201][3]             ;
-; 3:1                ; 8 bits    ; 16 LEs        ; 0 LEs                ; 16 LEs                 ; Yes        ; |TopLevel|instructionRAM:inst1|ram[202][6]             ;
-; 3:1                ; 8 bits    ; 16 LEs        ; 0 LEs                ; 16 LEs                 ; Yes        ; |TopLevel|instructionRAM:inst1|ram[203][7]             ;
-; 3:1                ; 8 bits    ; 16 LEs        ; 0 LEs                ; 16 LEs                 ; Yes        ; |TopLevel|instructionRAM:inst1|ram[204][5]             ;
-; 3:1                ; 8 bits    ; 16 LEs        ; 0 LEs                ; 16 LEs                 ; Yes        ; |TopLevel|instructionRAM:inst1|ram[205][4]             ;
-; 3:1                ; 8 bits    ; 16 LEs        ; 0 LEs                ; 16 LEs                 ; Yes        ; |TopLevel|instructionRAM:inst1|ram[206][5]             ;
-; 3:1                ; 8 bits    ; 16 LEs        ; 0 LEs                ; 16 LEs                 ; Yes        ; |TopLevel|instructionRAM:inst1|ram[207][1]             ;
-; 3:1                ; 8 bits    ; 16 LEs        ; 0 LEs                ; 16 LEs                 ; Yes        ; |TopLevel|instructionRAM:inst1|ram[208][2]             ;
-; 3:1                ; 8 bits    ; 16 LEs        ; 0 LEs                ; 16 LEs                 ; Yes        ; |TopLevel|instructionRAM:inst1|ram[209][1]             ;
-; 3:1                ; 8 bits    ; 16 LEs        ; 0 LEs                ; 16 LEs                 ; Yes        ; |TopLevel|instructionRAM:inst1|ram[210][4]             ;
-; 3:1                ; 8 bits    ; 16 LEs        ; 0 LEs                ; 16 LEs                 ; Yes        ; |TopLevel|instructionRAM:inst1|ram[211][7]             ;
-; 3:1                ; 8 bits    ; 16 LEs        ; 0 LEs                ; 16 LEs                 ; Yes        ; |TopLevel|instructionRAM:inst1|ram[212][4]             ;
-; 3:1                ; 8 bits    ; 16 LEs        ; 0 LEs                ; 16 LEs                 ; Yes        ; |TopLevel|instructionRAM:inst1|ram[213][4]             ;
-; 3:1                ; 8 bits    ; 16 LEs        ; 0 LEs                ; 16 LEs                 ; Yes        ; |TopLevel|instructionRAM:inst1|ram[214][5]             ;
-; 3:1                ; 8 bits    ; 16 LEs        ; 0 LEs                ; 16 LEs                 ; Yes        ; |TopLevel|instructionRAM:inst1|ram[215][6]             ;
-; 3:1                ; 8 bits    ; 16 LEs        ; 0 LEs                ; 16 LEs                 ; Yes        ; |TopLevel|instructionRAM:inst1|ram[216][1]             ;
-; 3:1                ; 8 bits    ; 16 LEs        ; 0 LEs                ; 16 LEs                 ; Yes        ; |TopLevel|instructionRAM:inst1|ram[217][3]             ;
-; 3:1                ; 8 bits    ; 16 LEs        ; 0 LEs                ; 16 LEs                 ; Yes        ; |TopLevel|instructionRAM:inst1|ram[218][5]             ;
-; 3:1                ; 8 bits    ; 16 LEs        ; 0 LEs                ; 16 LEs                 ; Yes        ; |TopLevel|instructionRAM:inst1|ram[219][0]             ;
-; 3:1                ; 8 bits    ; 16 LEs        ; 0 LEs                ; 16 LEs                 ; Yes        ; |TopLevel|instructionRAM:inst1|ram[220][4]             ;
-; 3:1                ; 8 bits    ; 16 LEs        ; 0 LEs                ; 16 LEs                 ; Yes        ; |TopLevel|instructionRAM:inst1|ram[221][5]             ;
-; 3:1                ; 8 bits    ; 16 LEs        ; 0 LEs                ; 16 LEs                 ; Yes        ; |TopLevel|instructionRAM:inst1|ram[222][3]             ;
-; 3:1                ; 8 bits    ; 16 LEs        ; 0 LEs                ; 16 LEs                 ; Yes        ; |TopLevel|instructionRAM:inst1|ram[223][3]             ;
-; 3:1                ; 8 bits    ; 16 LEs        ; 0 LEs                ; 16 LEs                 ; Yes        ; |TopLevel|instructionRAM:inst1|ram[224][0]             ;
-; 3:1                ; 8 bits    ; 16 LEs        ; 0 LEs                ; 16 LEs                 ; Yes        ; |TopLevel|instructionRAM:inst1|ram[225][6]             ;
-; 3:1                ; 8 bits    ; 16 LEs        ; 0 LEs                ; 16 LEs                 ; Yes        ; |TopLevel|instructionRAM:inst1|ram[226][0]             ;
-; 3:1                ; 8 bits    ; 16 LEs        ; 0 LEs                ; 16 LEs                 ; Yes        ; |TopLevel|instructionRAM:inst1|ram[227][3]             ;
-; 3:1                ; 8 bits    ; 16 LEs        ; 0 LEs                ; 16 LEs                 ; Yes        ; |TopLevel|instructionRAM:inst1|ram[228][6]             ;
-; 3:1                ; 8 bits    ; 16 LEs        ; 0 LEs                ; 16 LEs                 ; Yes        ; |TopLevel|instructionRAM:inst1|ram[229][7]             ;
-; 3:1                ; 8 bits    ; 16 LEs        ; 0 LEs                ; 16 LEs                 ; Yes        ; |TopLevel|instructionRAM:inst1|ram[230][3]             ;
-; 3:1                ; 8 bits    ; 16 LEs        ; 0 LEs                ; 16 LEs                 ; Yes        ; |TopLevel|instructionRAM:inst1|ram[231][0]             ;
-; 3:1                ; 8 bits    ; 16 LEs        ; 0 LEs                ; 16 LEs                 ; Yes        ; |TopLevel|instructionRAM:inst1|ram[232][5]             ;
-; 3:1                ; 8 bits    ; 16 LEs        ; 0 LEs                ; 16 LEs                 ; Yes        ; |TopLevel|instructionRAM:inst1|ram[233][6]             ;
-; 3:1                ; 8 bits    ; 16 LEs        ; 0 LEs                ; 16 LEs                 ; Yes        ; |TopLevel|instructionRAM:inst1|ram[234][5]             ;
-; 3:1                ; 8 bits    ; 16 LEs        ; 0 LEs                ; 16 LEs                 ; Yes        ; |TopLevel|instructionRAM:inst1|ram[235][5]             ;
-; 3:1                ; 8 bits    ; 16 LEs        ; 0 LEs                ; 16 LEs                 ; Yes        ; |TopLevel|instructionRAM:inst1|ram[236][4]             ;
-; 3:1                ; 8 bits    ; 16 LEs        ; 0 LEs                ; 16 LEs                 ; Yes        ; |TopLevel|instructionRAM:inst1|ram[237][3]             ;
-; 3:1                ; 8 bits    ; 16 LEs        ; 0 LEs                ; 16 LEs                 ; Yes        ; |TopLevel|instructionRAM:inst1|ram[238][0]             ;
-; 3:1                ; 8 bits    ; 16 LEs        ; 0 LEs                ; 16 LEs                 ; Yes        ; |TopLevel|instructionRAM:inst1|ram[239][3]             ;
-; 3:1                ; 8 bits    ; 16 LEs        ; 0 LEs                ; 16 LEs                 ; Yes        ; |TopLevel|instructionRAM:inst1|ram[240][2]             ;
-; 3:1                ; 8 bits    ; 16 LEs        ; 0 LEs                ; 16 LEs                 ; Yes        ; |TopLevel|instructionRAM:inst1|ram[241][6]             ;
-; 3:1                ; 8 bits    ; 16 LEs        ; 0 LEs                ; 16 LEs                 ; Yes        ; |TopLevel|instructionRAM:inst1|ram[242][6]             ;
-; 3:1                ; 8 bits    ; 16 LEs        ; 0 LEs                ; 16 LEs                 ; Yes        ; |TopLevel|instructionRAM:inst1|ram[243][4]             ;
-; 3:1                ; 8 bits    ; 16 LEs        ; 0 LEs                ; 16 LEs                 ; Yes        ; |TopLevel|instructionRAM:inst1|ram[244][7]             ;
-; 3:1                ; 8 bits    ; 16 LEs        ; 0 LEs                ; 16 LEs                 ; Yes        ; |TopLevel|instructionRAM:inst1|ram[245][3]             ;
-; 3:1                ; 8 bits    ; 16 LEs        ; 0 LEs                ; 16 LEs                 ; Yes        ; |TopLevel|instructionRAM:inst1|ram[246][6]             ;
-; 3:1                ; 8 bits    ; 16 LEs        ; 0 LEs                ; 16 LEs                 ; Yes        ; |TopLevel|instructionRAM:inst1|ram[247][6]             ;
-; 3:1                ; 8 bits    ; 16 LEs        ; 0 LEs                ; 16 LEs                 ; Yes        ; |TopLevel|instructionRAM:inst1|ram[248][1]             ;
-; 3:1                ; 8 bits    ; 16 LEs        ; 0 LEs                ; 16 LEs                 ; Yes        ; |TopLevel|instructionRAM:inst1|ram[249][1]             ;
-; 3:1                ; 8 bits    ; 16 LEs        ; 0 LEs                ; 16 LEs                 ; Yes        ; |TopLevel|instructionRAM:inst1|ram[250][3]             ;
-; 3:1                ; 8 bits    ; 16 LEs        ; 0 LEs                ; 16 LEs                 ; Yes        ; |TopLevel|instructionRAM:inst1|ram[251][1]             ;
-; 3:1                ; 8 bits    ; 16 LEs        ; 0 LEs                ; 16 LEs                 ; Yes        ; |TopLevel|instructionRAM:inst1|ram[252][6]             ;
-; 3:1                ; 8 bits    ; 16 LEs        ; 0 LEs                ; 16 LEs                 ; Yes        ; |TopLevel|instructionRAM:inst1|ram[253][5]             ;
-; 3:1                ; 8 bits    ; 16 LEs        ; 0 LEs                ; 16 LEs                 ; Yes        ; |TopLevel|instructionRAM:inst1|ram[254][1]             ;
-; 3:1                ; 8 bits    ; 16 LEs        ; 0 LEs                ; 16 LEs                 ; Yes        ; |TopLevel|instructionRAM:inst1|ram[255][0]             ;
-; 3:1                ; 8 bits    ; 16 LEs        ; 0 LEs                ; 16 LEs                 ; Yes        ; |TopLevel|UART:inst|uart_controller:inst1|shift_reg[7] ;
-; 4:1                ; 8 bits    ; 16 LEs        ; 0 LEs                ; 16 LEs                 ; Yes        ; |TopLevel|instructionRAM:inst1|addressDEBUG_reg[3]     ;
-; 4:1                ; 8 bits    ; 16 LEs        ; 0 LEs                ; 16 LEs                 ; Yes        ; |TopLevel|instructionRAM:inst1|addressWRITE_reg[0]     ;
-; 4:1                ; 6 bits    ; 12 LEs        ; 12 LEs               ; 0 LEs                  ; Yes        ; |TopLevel|UART:inst|uart_clk_divN:inst|counter_reg[0]  ;
-; 4:1                ; 19 bits   ; 38 LEs        ; 0 LEs                ; 38 LEs                 ; Yes        ; |TopLevel|UART:inst|uart_clk_divN:inst|counter_reg[4]  ;
+; 3:1                ; 8 bits    ; 16 LEs        ; 0 LEs                ; 16 LEs                 ; Yes        ; |TopLevel|instructionRAM:inst1|ram[99][3]              ;
+; 3:1                ; 8 bits    ; 16 LEs        ; 0 LEs                ; 16 LEs                 ; Yes        ; |TopLevel|instructionRAM:inst1|ram[100][1]             ;
+; 3:1                ; 8 bits    ; 16 LEs        ; 0 LEs                ; 16 LEs                 ; Yes        ; |TopLevel|UART:inst|uart_controller:inst1|shift_reg[0] ;
+; 4:1                ; 8 bits    ; 16 LEs        ; 0 LEs                ; 16 LEs                 ; Yes        ; |TopLevel|instructionRAM:inst1|addressDEBUG_reg[6]     ;
+; 4:1                ; 8 bits    ; 16 LEs        ; 0 LEs                ; 16 LEs                 ; Yes        ; |TopLevel|instructionRAM:inst1|addressWRITE_reg[5]     ;
+; 4:1                ; 6 bits    ; 12 LEs        ; 12 LEs               ; 0 LEs                  ; Yes        ; |TopLevel|UART:inst|uart_clk_divN:inst|counter_reg[3]  ;
+; 4:1                ; 19 bits   ; 38 LEs        ; 0 LEs                ; 38 LEs                 ; Yes        ; |TopLevel|UART:inst|uart_clk_divN:inst|counter_reg[17] ;
 ; 6:1                ; 25 bits   ; 100 LEs       ; 0 LEs                ; 100 LEs                ; Yes        ; |TopLevel|debouncer:inst8|counter_reg[4]               ;
-; 17:1               ; 8 bits    ; 88 LEs        ; 64 LEs               ; 24 LEs                 ; Yes        ; |TopLevel|instructionRAM:inst1|data_out[5]             ;
-; 4:1                ; 24 bits   ; 48 LEs        ; 48 LEs               ; 0 LEs                  ; No         ; |TopLevel|instructionRAM:inst1|Mux1                    ;
+; 132:1              ; 8 bits    ; 704 LEs       ; 528 LEs              ; 176 LEs                ; Yes        ; |TopLevel|instructionRAM:inst1|data_out[7]             ;
 ; 6:1                ; 3 bits    ; 12 LEs        ; 6 LEs                ; 6 LEs                  ; No         ; |TopLevel|debouncer:inst8|Selector1                    ;
-; 13:1               ; 8 bits    ; 64 LEs        ; 64 LEs               ; 0 LEs                  ; No         ; |TopLevel|instructionRAM:inst1|Mux12                   ;
-; 16:1               ; 24 bits   ; 240 LEs       ; 240 LEs              ; 0 LEs                  ; No         ; |TopLevel|instructionRAM:inst1|Mux6                    ;
-; 64:1               ; 24 bits   ; 1008 LEs      ; 1008 LEs             ; 0 LEs                  ; No         ; |TopLevel|instructionRAM:inst1|Mux5                    ;
+; 128:1              ; 8 bits    ; 680 LEs       ; 560 LEs              ; 120 LEs                ; No         ; |TopLevel|instructionRAM:inst1|Mux15                   ;
 +--------------------+-----------+---------------+----------------------+------------------------+------------+--------------------------------------------------------+
 
 
@@ -596,7 +438,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 ; Parameter Name ; Value ; Type                                     ;
 +----------------+-------+------------------------------------------+
 ; ADDR_WIDTH     ; 8     ; Signed Integer                           ;
-; MAX_ADDRESS    ; 255   ; Signed Integer                           ;
+; MAX_ADDRESS    ; 100   ; Signed Integer                           ;
 +----------------+-------+------------------------------------------+
 Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
 
@@ -606,29 +448,30 @@ Note: In order to hide this table in the UI and the text report file, please set
 +-----------------------+-----------------------------+
 ; Type                  ; Count                       ;
 +-----------------------+-----------------------------+
-; arriav_ff             ; 2184                        ;
+; arriav_ff             ; 944                         ;
 ;     CLR               ; 17                          ;
 ;     ENA               ; 4                           ;
 ;     ENA CLR SCLR      ; 33                          ;
-;     ENA SCLR          ; 2088                        ;
+;     ENA SCLR          ; 840                         ;
+;     ENA SCLR SLD      ; 8                           ;
 ;     SCLR              ; 20                          ;
 ;     plain             ; 22                          ;
-; arriav_lcell_comb     ; 1176                        ;
+; arriav_lcell_comb     ; 855                         ;
 ;     arith             ; 66                          ;
 ;         1 data inputs ; 66                          ;
-;     extend            ; 1                           ;
-;         7 data inputs ; 1                           ;
-;     normal            ; 1109                        ;
+;     extend            ; 2                           ;
+;         7 data inputs ; 2                           ;
+;     normal            ; 787                         ;
 ;         1 data inputs ; 4                           ;
-;         2 data inputs ; 51                          ;
-;         3 data inputs ; 11                          ;
-;         4 data inputs ; 46                          ;
-;         5 data inputs ; 98                          ;
-;         6 data inputs ; 899                         ;
+;         2 data inputs ; 44                          ;
+;         3 data inputs ; 19                          ;
+;         4 data inputs ; 48                          ;
+;         5 data inputs ; 51                          ;
+;         6 data inputs ; 621                         ;
 ; boundary_port         ; 38                          ;
 ;                       ;                             ;
-; Max LUT depth         ; 6.00                        ;
-; Average LUT depth     ; 5.32                        ;
+; Max LUT depth         ; 6.50                        ;
+; Average LUT depth     ; 4.32                        ;
 +-----------------------+-----------------------------+
 
 
@@ -637,7 +480,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 +----------------+--------------+
 ; Partition Name ; Elapsed Time ;
 +----------------+--------------+
-; Top            ; 00:00:02     ;
+; Top            ; 00:00:01     ;
 +----------------+--------------+
 
 
@@ -647,7 +490,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
-    Info: Processing started: Wed Feb 21 12:50:32 2024
+    Info: Processing started: Wed Feb 21 13:05:12 2024
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off uartt -c uartt
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20030): Parallel compilation is enabled and will use 16 of the 16 processors detected
@@ -710,14 +553,14 @@ Warning (10230): Verilog HDL assignment warning at instructionRAM.sv(131): trunc
 Info (286030): Timing-Driven Synthesis is running
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
-Info (21057): Implemented 3292 device resources after synthesis - the final resource count might be different
+Info (21057): Implemented 1738 device resources after synthesis - the final resource count might be different
     Info (21058): Implemented 6 input pins
     Info (21059): Implemented 32 output pins
-    Info (21061): Implemented 3254 logic cells
+    Info (21061): Implemented 1700 logic cells
 Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 24 warnings
-    Info: Peak virtual memory: 4929 megabytes
-    Info: Processing ended: Wed Feb 21 12:50:40 2024
-    Info: Elapsed time: 00:00:08
+    Info: Peak virtual memory: 4910 megabytes
+    Info: Processing ended: Wed Feb 21 13:05:19 2024
+    Info: Elapsed time: 00:00:07
     Info: Total CPU time (on all processors): 00:00:08
 
 
