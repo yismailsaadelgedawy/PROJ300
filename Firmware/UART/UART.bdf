@@ -247,11 +247,6 @@ https://fpgasoftware.intel.com/eula.
 	(pt 280 432)
 )
 (connector
-	(text "data" (rect 290 400 311 417)(font "Intel Clear" ))
-	(pt 328 416)
-	(pt 280 416)
-)
-(connector
 	(text "clk_50" (rect 346 176 377 193)(font "Intel Clear" ))
 	(pt 336 192)
 	(pt 376 192)
@@ -260,11 +255,6 @@ https://fpgasoftware.intel.com/eula.
 	(text "sw_rst" (rect 346 192 376 209)(font "Intel Clear" ))
 	(pt 336 208)
 	(pt 376 208)
-)
-(connector
-	(text "data" (rect 346 208 367 225)(font "Intel Clear" ))
-	(pt 336 224)
-	(pt 376 224)
 )
 (connector
 	(text "data[7..0]" (rect 858 368 902 385)(font "Intel Clear" ))
@@ -297,6 +287,16 @@ https://fpgasoftware.intel.com/eula.
 	(text "bsy" (rect 858 384 874 401)(font "Intel Clear" ))
 	(pt 848 400)
 	(pt 912 400)
+)
+(connector
+	(text "data" (rect 346 208 367 225)(font "Intel Clear" ))
+	(pt 336 224)
+	(pt 376 224)
+)
+(connector
+	(text "data" (rect 290 400 311 417)(font "Intel Clear" ))
+	(pt 328 416)
+	(pt 280 416)
 )
 (text "UART module" (rect 512 88 658 114)(font "Intel Clear" (font_size 14)(bold)))
 (text "Inputs" (rect 88 128 126 147)(font "Intel Clear" (font_size 8)(bold)))

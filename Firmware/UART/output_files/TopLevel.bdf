@@ -642,14 +642,14 @@ https://fpgasoftware.intel.com/eula.
 	)
 )
 (symbol
-	(rect 736 584 1080 728)
+	(rect 736 584 1088 728)
 	(text "instructionRAM" (rect 5 0 79 12)(font "Arial" ))
-	(text "inst16" (rect 8 128 37 140)(font "Arial" ))
+	(text "inst1" (rect 8 128 30 145)(font "Intel Clear" ))
 	(port
 		(pt 0 32)
 		(input)
-		(text "data_in[DATA_WIDTH-1..0]" (rect 0 0 135 12)(font "Arial" ))
-		(text "data_in[DATA_WIDTH-1..0]" (rect 21 27 156 39)(font "Arial" ))
+		(text "data_in[ADDR_WIDTH-1..0]" (rect 0 0 139 12)(font "Arial" ))
+		(text "data_in[ADDR_WIDTH-1..0]" (rect 21 27 160 39)(font "Arial" ))
 		(line (pt 0 32)(pt 16 32)(line_width 3))
 	)
 	(port
@@ -662,8 +662,8 @@ https://fpgasoftware.intel.com/eula.
 	(port
 		(pt 0 64)
 		(input)
-		(text "address[DATA_WIDTH-1..0]" (rect 0 0 139 12)(font "Arial" ))
-		(text "address[DATA_WIDTH-1..0]" (rect 21 59 160 71)(font "Arial" ))
+		(text "address[ADDR_WIDTH-1..0]" (rect 0 0 142 12)(font "Arial" ))
+		(text "address[ADDR_WIDTH-1..0]" (rect 21 59 163 71)(font "Arial" ))
 		(line (pt 0 64)(pt 16 64)(line_width 3))
 	)
 	(port
@@ -688,14 +688,14 @@ https://fpgasoftware.intel.com/eula.
 		(line (pt 0 112)(pt 16 112))
 	)
 	(port
-		(pt 344 32)
+		(pt 352 32)
 		(output)
-		(text "data_out[DATA_WIDTH-1..0]" (rect 0 0 142 12)(font "Arial" ))
-		(text "data_out[DATA_WIDTH-1..0]" (rect 203 27 345 39)(font "Arial" ))
-		(line (pt 344 32)(pt 328 32)(line_width 3))
+		(text "data_out[ADDR_WIDTH-1..0]" (rect 0 0 146 12)(font "Arial" ))
+		(text "data_out[ADDR_WIDTH-1..0]" (rect 208 27 354 39)(font "Arial" ))
+		(line (pt 352 32)(pt 336 32)(line_width 3))
 	)
 	(parameter
-		"DATA_WIDTH"
+		"ADDR_WIDTH"
 		"8"
 		""
 		(type "PARAMETER_SIGNED_DEC")	)
@@ -704,15 +704,10 @@ https://fpgasoftware.intel.com/eula.
 		"255"
 		""
 		(type "PARAMETER_SIGNED_DEC")	)
-	(parameter
-		"READ_FREQUENCY"
-		"2"
-		""
-		(type "PARAMETER_SIGNED_DEC")	)
 	(drawing
-		(rectangle (rect 16 16 328 128))
+		(rectangle (rect 16 16 336 128))
 	)
-	(annotation_block (parameter)(rect 736 504 952 580))
+	(annotation_block (parameter)(rect 736 520 936 584))
 )
 (connector
 	(text "clk_50" (rect 474 168 505 185)(font "Intel Clear" ))
@@ -938,7 +933,7 @@ https://fpgasoftware.intel.com/eula.
 )
 (connector
 	(text "data_RAM[7..0]" (rect 1090 600 1164 617)(font "Intel Clear" ))
-	(pt 1080 616)
+	(pt 1088 616)
 	(pt 1152 616)
 	(bus)
 )

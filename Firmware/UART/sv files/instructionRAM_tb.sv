@@ -1,7 +1,7 @@
 module instructionRAM_tb;
 
 // parameters
-parameter DATA_WIDTH=8, MAX_ADDRESS=255;
+parameter ADDR_WIDTH=8, MAX_ADDRESS=255;
 
 
 // internal wires
@@ -9,12 +9,12 @@ parameter DATA_WIDTH=8, MAX_ADDRESS=255;
 // in
 logic clk, rst, DEBUG;
 logic [1:0] MODE;
-logic [DATA_WIDTH-1:0] address;
-logic [DATA_WIDTH-1:0] data_in;
+logic [ADDR_WIDTH-1:0] address;
+logic [ADDR_WIDTH-1:0] data_in;
 
 
 // out
-logic [DATA_WIDTH-1:0] data_out;
+logic [ADDR_WIDTH-1:0] data_out;
 
 
 // wiring
@@ -51,7 +51,7 @@ initial begin
 
     // reset state
     rst = 1;
-    MODE = 2'd1; // write mode by default
+    MODE = 2'd0; // write mode by default
     DEBUG = 0; // debug button not pressed
     address = 'd0;
     data_in = 'd0;
@@ -68,7 +68,7 @@ initial begin
 
     // data_out should stay 0
 
-    MODE = 2'd1; // write mode by default
+    MODE = 2'd0; // write mode
     DEBUG = 0; // ignored
     address = 'd0; // ignored
 
@@ -105,43 +105,11 @@ initial begin
 
 
     $display(" ");
-    $display("////////////// READING FROM RAM //////////////");
-    $display(" ");
-
-    MODE = 2'd0; // read mode
-    DEBUG = 0; // ignored
-    address = 'd0; // ignored
-    data_in = 'd0; // ignored
-
-    // #15ns;
-    // assert (data_out == 'h4A) $display("passed reading 1..."); else $error("failed reading 1...");
-    // #5ns;
-
-    // #15ns;
-    // assert (data_out == 'h4B) $display("passed reading 2..."); else $error("failed reading 2...");
-    // #5ns;
-
-    // #15ns;
-    // assert (data_out == 'h4C) $display("passed reading 3..."); else $error("failed reading 3...");
-    // #5ns;
-
-    // #15ns;
-    // assert (data_out == 'h4D) $display("passed reading 4..."); else $error("failed reading 4...");
-    // #5ns;
-
-
-
-    #500ns;  // run for a bit
-
-
-
-
-    $display(" ");
     $display("////////////// DEBUGGING FROM RAM //////////////");
     $display(" ");
 
     // address and DEBUG should be ignored
-    MODE = 2'd2; // debug mode
+    MODE = 2'd1; // debug mode
     DEBUG = 0;
     address = 'd0; // ignored
     data_in = 'd0; // ignored
@@ -187,7 +155,7 @@ initial begin
     #20ns; // wait a cycle
 
     #15ns;
-    assert (data_out == 'h4D) $display("passed debug: end of instructions"); else $error("failed passed debug: end of instructions");
+    assert (data_out == 'h4D) $display("passed debug: end of instructions"); else $error("failed debug: end of instructions");
     #5ns;
 
     DEBUG = 1; #20ns; // button press, wait a clock cycle
@@ -195,7 +163,7 @@ initial begin
     #20ns; // wait a cycle
 
     #15ns;
-    assert (data_out == 'h4D) $display("passed debug: end of instructions"); else $error("failed passed debug: end of instructions");
+    assert (data_out == 'h4D) $display("passed debug: end of instructions"); else $error("failed debug: end of instructions");
     #5ns;
 
 
@@ -204,7 +172,7 @@ initial begin
     #20ns; // wait a cycle
 
     #15ns;
-    assert (data_out == 'h4D) $display("passed debug: end of instructions"); else $error("failed passed debug: end of instructions");
+    assert (data_out == 'h4D) $display("passed debug: end of instructions"); else $error("failed debug: end of instructions");
     #5ns;
 
     DEBUG = 1; #20ns; // button press, wait a clock cycle
@@ -212,8 +180,43 @@ initial begin
     #20ns; // wait a cycle
 
     #15ns;
-    assert (data_out == 'h4D) $display("passed debug: end of instructions"); else $error("failed passed debug: end of instructions");
+    assert (data_out == 'h4D) $display("passed debug: end of instructions"); else $error("failed debug: end of instructions");
     #5ns;
+
+
+    $display(" ");
+    $display("////////////// RANDOM ACCESS FETCH FROM RAM //////////////");
+    $display(" ");
+
+    // only 'address' is relevant here
+    MODE = 2'd2; // debug mode
+    DEBUG = 0; // ignored
+    address = 'd0; // first byte stored
+    data_in = 'd0; // ignored
+
+    #15ns;
+    assert (data_out == 'h4A) $display("passed fetch 1"); else $error("failed fetch 1");
+    #5ns;
+
+    address = 'd1; // second byte stored
+
+    #15ns;
+    assert (data_out == 'h4B) $display("passed fetch 2"); else $error("failed fetch 2");
+    #5ns;
+
+    address = 'd2; // third byte stored
+
+    #15ns;
+    assert (data_out == 'h4C) $display("passed fetch 3"); else $error("failed fetch 3");
+    #5ns;
+
+    address = 'd3; // fourth byte stored
+
+    #15ns;
+    assert (data_out == 'h4D) $display("passed fetch 3"); else $error("failed fetch 3");
+    #5ns;
+
+    
 
 
 
