@@ -1,0 +1,51 @@
+CPU execution routines (9 states)
+
+FETCH1 : AR <- PC
+FETCH2 : DR <- M; PC <- PC + 1
+FETCH3 : IR <- DR[7..6]; AR <- DR[5..0]
+
+ADD1   : DR <- M
+ADD2   : AC <- AC + DR
+
+AND1   : DR <- M
+AND2   : AC <- AC & DR
+
+JMP1   : PC <- DR[5..0]
+
+INC1   : AC <- AC + 1
+
+
+Control signals via Control Unit
+
+The 5 load lines
+
+AR is loaded during FETCH1; FETCH3
+PC is loaded during JMP1
+DR is loaded during FETCH2; ADD1; AND1
+AC is loaded during ADD2; AND2
+IR is loaded during FETCH3
+
+
+The 2 increment lines
+
+PC is incremented during FETCH2
+AC is incremented during INC1
+
+
+The 3 tri-state buffers
+
+DR placed on system bus during FETCH3; ADD2; AND2; JMP1
+PC placed on system bus during FETCH1
+Memory contents placed on system bus during FETCH2; ADD1; AND1
+
+
+The READ signal
+
+Memory is read during FETCH2; ADD1; AND1
+
+ALUSEL is HIGH during AND2 (0 for ADD, 1 for AND)
+
+
+
+
+
