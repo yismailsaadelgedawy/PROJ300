@@ -17,7 +17,7 @@ always_comb begin
 end
 
 
-always_ff @(posedge clk or posedge load) begin
+always_ff @(posedge clk) begin
 
     case(rst)
 
