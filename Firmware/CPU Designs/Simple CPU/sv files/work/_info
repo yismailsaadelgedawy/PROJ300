@@ -1,0 +1,323 @@
+m255
+K4
+z2
+!s11f vlog 2020.1 2020.02, Feb 28 2020
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z0 dC:/Users/minec/Desktop/Work/GitHub Repos/PROJ300/Firmware/CPU Designs/Simple CPU/sv files
+vALU
+Z1 DXx6 sv_std 3 std 0 22 VYECXdT12H8WgbUP_5Y6:3
+!s110 1708575943
+!i10b 1
+!s100 X4oPzXlGGld`0On78JNdK1
+Z2 !s11b Dg1SIo80bB@j0V0VzS_@n1
+IUCQQoS_eACzRa`IHaoKCN3
+Z3 VDg1SIo80bB@j0V0VzS_@n1
+S1
+R0
+w1708575776
+8C:/Users/minec/Desktop/Work/GitHub Repos/PROJ300/Firmware/CPU Designs/Simple CPU/sv files/ALU.sv
+FC:/Users/minec/Desktop/Work/GitHub Repos/PROJ300/Firmware/CPU Designs/Simple CPU/sv files/ALU.sv
+!i122 7
+L0 1 39
+Z4 OV;L;2020.1;71
+r1
+!s85 0
+31
+!s108 1708575943.000000
+!s107 C:/Users/minec/Desktop/Work/GitHub Repos/PROJ300/Firmware/CPU Designs/Simple CPU/sv files/ALU.sv|
+!s90 -reportprogress|300|-work|work|C:/Users/minec/Desktop/Work/GitHub Repos/PROJ300/Firmware/CPU Designs/Simple CPU/sv files/ALU.sv|
+!i113 1
+Z5 o-work work
+Z6 tCvgOpt 0
+n@a@l@u
+vALU_tb
+R1
+!s110 1708575975
+!i10b 1
+!s100 OzXm:^kUEebNELjcUed7Q3
+R2
+IlA0?]Y8h?Rg4Sb^QURbQf1
+R3
+S1
+R0
+w1708575971
+8C:/Users/minec/Desktop/Work/GitHub Repos/PROJ300/Firmware/CPU Designs/Simple CPU/sv files/ALU_tb.sv
+FC:/Users/minec/Desktop/Work/GitHub Repos/PROJ300/Firmware/CPU Designs/Simple CPU/sv files/ALU_tb.sv
+!i122 10
+L0 1 53
+R4
+r1
+!s85 0
+31
+!s108 1708575975.000000
+!s107 C:/Users/minec/Desktop/Work/GitHub Repos/PROJ300/Firmware/CPU Designs/Simple CPU/sv files/ALU_tb.sv|
+!s90 -reportprogress|300|-work|work|C:/Users/minec/Desktop/Work/GitHub Repos/PROJ300/Firmware/CPU Designs/Simple CPU/sv files/ALU_tb.sv|
+!i113 1
+R5
+R6
+n@a@l@u_tb
+vCPU_regN
+R1
+!s110 1708574473
+!i10b 1
+!s100 QZ4X_gK=P2Ldizmoz[gcz0
+R2
+I7LF5MeZ:VzjICjX[NhY=22
+R3
+S1
+R0
+w1708574164
+8C:/Users/minec/Desktop/Work/GitHub Repos/PROJ300/Firmware/CPU Designs/Simple CPU/sv files/CPU_regN.sv
+FC:/Users/minec/Desktop/Work/GitHub Repos/PROJ300/Firmware/CPU Designs/Simple CPU/sv files/CPU_regN.sv
+!i122 0
+L0 1 66
+R4
+r1
+!s85 0
+31
+!s108 1708574473.000000
+!s107 C:/Users/minec/Desktop/Work/GitHub Repos/PROJ300/Firmware/CPU Designs/Simple CPU/sv files/CPU_regN.sv|
+!s90 -reportprogress|300|-work|work|C:/Users/minec/Desktop/Work/GitHub Repos/PROJ300/Firmware/CPU Designs/Simple CPU/sv files/CPU_regN.sv|
+!i113 1
+R5
+R6
+n@c@p@u_reg@n
+vCPU_regN_tb
+R1
+!s110 1708574522
+!i10b 1
+!s100 7@<DEcZg`CdOjdE^8n^e<2
+R2
+I9kS`daKMD>Ai?dz5fzL[[1
+R3
+S1
+R0
+w1708574516
+8C:/Users/minec/Desktop/Work/GitHub Repos/PROJ300/Firmware/CPU Designs/Simple CPU/sv files/CPU_regN_tb.sv
+FC:/Users/minec/Desktop/Work/GitHub Repos/PROJ300/Firmware/CPU Designs/Simple CPU/sv files/CPU_regN_tb.sv
+!i122 2
+L0 1 98
+R4
+r1
+!s85 0
+31
+!s108 1708574522.000000
+!s107 C:/Users/minec/Desktop/Work/GitHub Repos/PROJ300/Firmware/CPU Designs/Simple CPU/sv files/CPU_regN_tb.sv|
+!s90 -reportprogress|300|-work|work|C:/Users/minec/Desktop/Work/GitHub Repos/PROJ300/Firmware/CPU Designs/Simple CPU/sv files/CPU_regN_tb.sv|
+!i113 1
+R5
+R6
+n@c@p@u_reg@n_tb
+vCU_counter
+R1
+!s110 1708578116
+!i10b 1
+!s100 ?el:Mz:5[N19^@BWoZ_[B3
+R2
+IMG0egPVYoAgS==hRjG]l11
+R3
+S1
+R0
+w1708577825
+8C:/Users/minec/Desktop/Work/GitHub Repos/PROJ300/Firmware/CPU Designs/Simple CPU/sv files/CU_counter.sv
+FC:/Users/minec/Desktop/Work/GitHub Repos/PROJ300/Firmware/CPU Designs/Simple CPU/sv files/CU_counter.sv
+!i122 11
+L0 1 113
+R4
+r1
+!s85 0
+31
+!s108 1708578116.000000
+!s107 C:/Users/minec/Desktop/Work/GitHub Repos/PROJ300/Firmware/CPU Designs/Simple CPU/sv files/CU_counter.sv|
+!s90 -reportprogress|300|-work|work|C:/Users/minec/Desktop/Work/GitHub Repos/PROJ300/Firmware/CPU Designs/Simple CPU/sv files/CU_counter.sv|
+!i113 1
+R5
+R6
+n@c@u_counter
+vCU_counter_tb
+R1
+!s110 1708579843
+!i10b 1
+!s100 1R^6Z0LlK9GH;kgZV3IQ70
+R2
+I17>P4`DnjMGYa2iV<K?NG2
+R3
+S1
+R0
+w1708578139
+8C:/Users/minec/Desktop/Work/GitHub Repos/PROJ300/Firmware/CPU Designs/Simple CPU/sv files/CU_counter_tb.sv
+FC:/Users/minec/Desktop/Work/GitHub Repos/PROJ300/Firmware/CPU Designs/Simple CPU/sv files/CU_counter_tb.sv
+!i122 19
+L0 1 135
+R4
+r1
+!s85 0
+31
+!s108 1708579843.000000
+!s107 C:/Users/minec/Desktop/Work/GitHub Repos/PROJ300/Firmware/CPU Designs/Simple CPU/sv files/CU_counter_tb.sv|
+!s90 -reportprogress|300|-work|work|C:/Users/minec/Desktop/Work/GitHub Repos/PROJ300/Firmware/CPU Designs/Simple CPU/sv files/CU_counter_tb.sv|
+!i113 1
+R5
+R6
+n@c@u_counter_tb
+vCU_decoder
+R1
+!s110 1708579367
+!i10b 1
+!s100 bP=UTjMm3XTIijTjZ:H=M2
+R2
+IRzQdXOo;7HGOZ8W1Gk;AQ3
+R3
+S1
+R0
+w1708579365
+8C:/Users/minec/Desktop/Work/GitHub Repos/PROJ300/Firmware/CPU Designs/Simple CPU/sv files/CU_decoder.sv
+FC:/Users/minec/Desktop/Work/GitHub Repos/PROJ300/Firmware/CPU Designs/Simple CPU/sv files/CU_decoder.sv
+!i122 17
+L0 1 38
+R4
+r1
+!s85 0
+31
+!s108 1708579367.000000
+!s107 C:/Users/minec/Desktop/Work/GitHub Repos/PROJ300/Firmware/CPU Designs/Simple CPU/sv files/CU_decoder.sv|
+!s90 -reportprogress|300|-work|work|C:/Users/minec/Desktop/Work/GitHub Repos/PROJ300/Firmware/CPU Designs/Simple CPU/sv files/CU_decoder.sv|
+!i113 1
+R5
+R6
+n@c@u_decoder
+vCU_decoder_tb
+R1
+!s110 1708579851
+!i10b 1
+!s100 dTS;6Ie<@aCF3JLaLU5^52
+R2
+IM]:g0aeC3O_SYQNWcE@9T3
+R3
+S1
+R0
+w1708579831
+8C:/Users/minec/Desktop/Work/GitHub Repos/PROJ300/Firmware/CPU Designs/Simple CPU/sv files/CU_decoder_tb.sv
+FC:/Users/minec/Desktop/Work/GitHub Repos/PROJ300/Firmware/CPU Designs/Simple CPU/sv files/CU_decoder_tb.sv
+!i122 20
+L0 1 48
+R4
+r1
+!s85 0
+31
+!s108 1708579851.000000
+!s107 C:/Users/minec/Desktop/Work/GitHub Repos/PROJ300/Firmware/CPU Designs/Simple CPU/sv files/CU_decoder_tb.sv|
+!s90 -reportprogress|300|-work|work|C:/Users/minec/Desktop/Work/GitHub Repos/PROJ300/Firmware/CPU Designs/Simple CPU/sv files/CU_decoder_tb.sv|
+!i113 1
+R5
+R6
+n@c@u_decoder_tb
+vCU_logic
+R1
+!s110 1708584997
+!i10b 1
+!s100 oA;DWV`NbAJnHf?h`RfmV0
+R2
+IR7cn>l[bO2J45b85mfhDB3
+R3
+S1
+R0
+w1708584756
+8C:/Users/minec/Desktop/Work/GitHub Repos/PROJ300/Firmware/CPU Designs/Simple CPU/sv files/CU_logic.sv
+FC:/Users/minec/Desktop/Work/GitHub Repos/PROJ300/Firmware/CPU Designs/Simple CPU/sv files/CU_logic.sv
+!i122 27
+L0 1 161
+R4
+r1
+!s85 0
+31
+!s108 1708584997.000000
+!s107 C:/Users/minec/Desktop/Work/GitHub Repos/PROJ300/Firmware/CPU Designs/Simple CPU/sv files/CU_logic.sv|
+!s90 -reportprogress|300|-work|work|C:/Users/minec/Desktop/Work/GitHub Repos/PROJ300/Firmware/CPU Designs/Simple CPU/sv files/CU_logic.sv|
+!i113 1
+R5
+R6
+n@c@u_logic
+vCU_logic_tb
+R1
+!s110 1708584998
+!i10b 1
+!s100 7QDZHN_CgMOd:FYF2<Z6B2
+R2
+I7KCcQlUkhool<lVLzDPnU2
+R3
+S1
+R0
+w1708584988
+8C:/Users/minec/Desktop/Work/GitHub Repos/PROJ300/Firmware/CPU Designs/Simple CPU/sv files/CU_logic_tb.sv
+FC:/Users/minec/Desktop/Work/GitHub Repos/PROJ300/Firmware/CPU Designs/Simple CPU/sv files/CU_logic_tb.sv
+!i122 28
+L0 1 118
+R4
+r1
+!s85 0
+31
+!s108 1708584998.000000
+!s107 C:/Users/minec/Desktop/Work/GitHub Repos/PROJ300/Firmware/CPU Designs/Simple CPU/sv files/CU_logic_tb.sv|
+!s90 -reportprogress|300|-work|work|C:/Users/minec/Desktop/Work/GitHub Repos/PROJ300/Firmware/CPU Designs/Simple CPU/sv files/CU_logic_tb.sv|
+!i113 1
+R5
+R6
+n@c@u_logic_tb
+vsystemBus_muxN
+R1
+!s110 1708575315
+!i10b 1
+!s100 ngC^cD3a2KE;JjogbKKO71
+R2
+IQ9YFFBT2YOnKRa5Mjo2XP1
+R3
+S1
+R0
+w1708575308
+8C:/Users/minec/Desktop/Work/GitHub Repos/PROJ300/Firmware/CPU Designs/Simple CPU/sv files/systemBus_muxN.sv
+FC:/Users/minec/Desktop/Work/GitHub Repos/PROJ300/Firmware/CPU Designs/Simple CPU/sv files/systemBus_muxN.sv
+!i122 5
+L0 1 55
+R4
+r1
+!s85 0
+31
+!s108 1708575315.000000
+!s107 C:/Users/minec/Desktop/Work/GitHub Repos/PROJ300/Firmware/CPU Designs/Simple CPU/sv files/systemBus_muxN.sv|
+!s90 -reportprogress|300|-work|work|C:/Users/minec/Desktop/Work/GitHub Repos/PROJ300/Firmware/CPU Designs/Simple CPU/sv files/systemBus_muxN.sv|
+!i113 1
+R5
+R6
+nsystem@bus_mux@n
+vsystemBus_muxN_tb
+R1
+!s110 1708575364
+!i10b 1
+!s100 ReFn<^kQOi?LzePolI`_O2
+R2
+I@LcDYcAhH<]JVS6?7VmWK2
+R3
+S1
+R0
+w1708575362
+8C:/Users/minec/Desktop/Work/GitHub Repos/PROJ300/Firmware/CPU Designs/Simple CPU/sv files/systemBus_muxN_tb.sv
+FC:/Users/minec/Desktop/Work/GitHub Repos/PROJ300/Firmware/CPU Designs/Simple CPU/sv files/systemBus_muxN_tb.sv
+!i122 6
+L0 1 61
+R4
+r1
+!s85 0
+31
+!s108 1708575364.000000
+!s107 C:/Users/minec/Desktop/Work/GitHub Repos/PROJ300/Firmware/CPU Designs/Simple CPU/sv files/systemBus_muxN_tb.sv|
+!s90 -reportprogress|300|-work|work|C:/Users/minec/Desktop/Work/GitHub Repos/PROJ300/Firmware/CPU Designs/Simple CPU/sv files/systemBus_muxN_tb.sv|
+!i113 1
+R5
+R6
+nsystem@bus_mux@n_tb

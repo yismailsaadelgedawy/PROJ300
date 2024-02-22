@@ -28,6 +28,12 @@ INC1   : AC <- AC + 1
 
 -- Control signals via Control Unit --
 
+The counter lines
+
+LD = FETCH3
+INC = FETCH1; FETCH2; ADD1; AND1
+CLR = ADD2; AND2; JMP1; INC1
+
 The 5 load lines
 
 AR is loaded during FETCH1; FETCH3
@@ -45,17 +51,20 @@ AC is incremented during INC1
 
 The 3 tri-state buffers
 
-DR placed on system bus during FETCH3; ADD2; AND2; JMP1
-PC placed on system bus during FETCH1
-Memory contents placed on system bus during FETCH2; ADD1; AND1
+PC placed on system bus during FETCH1 (SYSTEMBUSSEL 0)
+DR placed on system bus during FETCH3; ADD2; AND2; JMP1 (SYSTEMBUSSEL 1)
+Memory contents placed on system bus during FETCH2; ADD1; AND1 (SYSTEMBUSSEL 2)
 
 
-The READ signal
+ALUSEL is HIGH during AND2 (0 for ADD, 1 for AND)
+
+
+The READ signal (unneeded; equivalent to MEMBUS above)
 
 Memory is read during FETCH2; ADD1; AND1
 
 
-ALUSEL is HIGH during AND2 (0 for ADD, 1 for AND)
+
 
 
 
