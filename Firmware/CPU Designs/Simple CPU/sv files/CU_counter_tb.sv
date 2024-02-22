@@ -6,7 +6,7 @@ parameter opcode_bits=2, N=4;
 // internal wires
 
 // in
-logic clk, clr;
+logic clk, rst, clr;
 logic load, inc;
 logic [opcode_bits-1:0] opcode;
 
@@ -20,6 +20,7 @@ CU_counter dut (
 
     // in
     .clk(clk),
+    .rst(rst),
     .clr(clr),
     .load(load),
     .inc(inc),
@@ -45,8 +46,20 @@ end
 // testing
 initial begin
 
-
     // reset state
+    rst = 1;
+    clr = 0;
+    load = 0;
+    inc = 0;
+    opcode = 'b00; // INC instruction
+
+    #7ns;
+    assert (q == 'd0) $display("passed clear (FETCH1)"); else $error("failed clear (FETCH1)");
+    #3ns;
+
+
+    // clr state
+    rst = 0;
     clr = 1;
     load = 0;
     inc = 0;

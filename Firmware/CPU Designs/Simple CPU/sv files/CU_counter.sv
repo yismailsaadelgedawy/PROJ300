@@ -3,7 +3,7 @@ module CU_counter #(parameter opcode_bits=2, N=4) (
     output logic [N-1:0] q,
 
     input logic [opcode_bits-1:0] opcode,
-    input logic load, inc, clr, clk
+    input logic load, inc, clr, clk, rst
 
 
 );
@@ -42,69 +42,84 @@ end
 
 always_ff @(posedge clk) begin
 
-    case(clr)
-
-    1 : begin
+    if(rst) begin
 
         counter_reg <= 'd0;
         opcode_reg <= 'd0;
 
     end
 
-    // load : loading opcode into reg
-    // inc  : incrementing the counter
-    0 : begin
 
-        case({load, inc})
+    else begin
 
-        2'b10 : begin
+        case(clr)
 
-            opcode_reg <= opcode;
+        1 : begin
 
-            // opcode mapping
-            case(opcode)
+            counter_reg <= 'd0;
+            opcode_reg <= 'd0;
 
-            // ADD1
-            2'b00 : begin
-                counter_reg <= 'd3;
-            end
-            
-            // AND1
-            2'b01 : begin
-                counter_reg <= 'd5;
-            end
+        end
 
-            // JMP1
+        // load : loading opcode into reg
+        // inc  : incrementing the counter
+        0 : begin
+
+            case({load, inc})
+
             2'b10 : begin
-                counter_reg <= 'd7;
+
+                opcode_reg <= opcode;
+
+                // opcode mapping
+                case(opcode)
+
+                // ADD1
+                2'b00 : begin
+                    counter_reg <= 'd3;
+                end
+                
+                // AND1
+                2'b01 : begin
+                    counter_reg <= 'd5;
+                end
+
+                // JMP1
+                2'b10 : begin
+                    counter_reg <= 'd7;
+                end
+
+                // INC1
+                2'b11 : begin
+                    counter_reg <= 'd8;
+                end
+
+
+                endcase
+
             end
 
-            // INC1
-            2'b11 : begin
-                counter_reg <= 'd8;
+            2'b01 : begin
+
+                counter_reg <= counter_reg + 1;
+
             end
+
+            // else, (two) memory conditions -- valid!
 
 
             endcase
 
         end
 
-        2'b01 : begin
-
-            counter_reg <= counter_reg + 1;
-
-        end
-
-        // else, (two) memory conditions -- valid!
-
 
         endcase
 
+
+
     end
 
-
-    endcase
-
+    
 
 end
 

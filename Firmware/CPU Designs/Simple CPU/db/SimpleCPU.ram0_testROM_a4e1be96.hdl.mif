@@ -1,0 +1,16 @@
+-- begin_signature
+-- testROM(DATA_WIDTH
+-- 8
+-- ADDR_WIDTH
+-- 6)
+-- end_signature
+WIDTH=8;
+DEPTH=2;
+
+ADDRESS_RADIX=UNS;
+DATA_RADIX=BIN;
+
+CONTENT BEGIN
+	1 :	10000000;
+	0 :	11000000;
+END;

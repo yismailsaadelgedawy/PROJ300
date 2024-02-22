@@ -31,7 +31,8 @@ logic signed[9+1:0] offset_column_reg;
 // colours
 // red green
 // green red
-logic [11:0] memory [2**M-1:0] = '{
+// NOTE: first memory location is the lowest address
+logic [11:0] memory [0:2**M-1] = '{
 
     12'hF00, 12'h0F0,
     12'h0F0, 12'hF00

@@ -1,0 +1,127 @@
+/*
+WARNING: Do NOT edit the input and output ports in this file in a text
+editor if you plan to continue editing the block that represents it in
+the Block Editor! File corruption is VERY likely to occur.
+*/
+/*
+Copyright (C) 2020  Intel Corporation. All rights reserved.
+Your use of Intel Corporation's design tools, logic functions 
+and other software and tools, and any partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Intel Program License 
+Subscription Agreement, the Intel Quartus Prime License Agreement,
+the Intel FPGA IP License Agreement, or other applicable license
+agreement, including, without limitation, that your use is for
+the sole purpose of programming logic devices manufactured by
+Intel and sold by Intel or its authorized distributors.  Please
+refer to the applicable agreement for further details, at
+https://fpgasoftware.intel.com/eula.
+*/
+(header "symbol" (version "1.1"))
+(symbol
+	(rect 16 16 304 256)
+	(text "CU_logic" (rect 5 0 41 12)(font "Arial" ))
+	(text "inst" (rect 8 224 20 236)(font "Arial" ))
+	(port
+		(pt 0 32)
+		(input)
+		(text "CPU_state[states-1..0]" (rect 0 0 89 12)(font "Arial" ))
+		(text "CPU_state[states-1..0]" (rect 21 27 110 39)(font "Arial" ))
+		(line (pt 0 32)(pt 16 32)(line_width 3))
+	)
+	(port
+		(pt 288 32)
+		(output)
+		(text "ARLOAD" (rect 0 0 44 12)(font "Arial" ))
+		(text "ARLOAD" (rect 223 27 267 39)(font "Arial" ))
+		(line (pt 288 32)(pt 272 32)(line_width 1))
+	)
+	(port
+		(pt 288 48)
+		(output)
+		(text "PCLOAD" (rect 0 0 41 12)(font "Arial" ))
+		(text "PCLOAD" (rect 226 43 267 55)(font "Arial" ))
+		(line (pt 288 48)(pt 272 48)(line_width 1))
+	)
+	(port
+		(pt 288 64)
+		(output)
+		(text "DRLOAD" (rect 0 0 43 12)(font "Arial" ))
+		(text "DRLOAD" (rect 224 59 267 71)(font "Arial" ))
+		(line (pt 288 64)(pt 272 64)(line_width 1))
+	)
+	(port
+		(pt 288 80)
+		(output)
+		(text "ACLOAD" (rect 0 0 43 12)(font "Arial" ))
+		(text "ACLOAD" (rect 224 75 267 87)(font "Arial" ))
+		(line (pt 288 80)(pt 272 80)(line_width 1))
+	)
+	(port
+		(pt 288 96)
+		(output)
+		(text "IRLOAD" (rect 0 0 38 12)(font "Arial" ))
+		(text "IRLOAD" (rect 229 91 267 103)(font "Arial" ))
+		(line (pt 288 96)(pt 272 96)(line_width 1))
+	)
+	(port
+		(pt 288 112)
+		(output)
+		(text "PCINC" (rect 0 0 29 12)(font "Arial" ))
+		(text "PCINC" (rect 238 107 267 119)(font "Arial" ))
+		(line (pt 288 112)(pt 272 112)(line_width 1))
+	)
+	(port
+		(pt 288 128)
+		(output)
+		(text "ACINC" (rect 0 0 31 12)(font "Arial" ))
+		(text "ACINC" (rect 236 123 267 135)(font "Arial" ))
+		(line (pt 288 128)(pt 272 128)(line_width 1))
+	)
+	(port
+		(pt 288 144)
+		(output)
+		(text "ALUSEL" (rect 0 0 40 12)(font "Arial" ))
+		(text "ALUSEL" (rect 227 139 267 151)(font "Arial" ))
+		(line (pt 288 144)(pt 272 144)(line_width 1))
+	)
+	(port
+		(pt 288 160)
+		(output)
+		(text "COUNTER_LD" (rect 0 0 68 12)(font "Arial" ))
+		(text "COUNTER_LD" (rect 199 155 267 167)(font "Arial" ))
+		(line (pt 288 160)(pt 272 160)(line_width 1))
+	)
+	(port
+		(pt 288 176)
+		(output)
+		(text "COUNTER_INC" (rect 0 0 71 12)(font "Arial" ))
+		(text "COUNTER_INC" (rect 196 171 267 183)(font "Arial" ))
+		(line (pt 288 176)(pt 272 176)(line_width 1))
+	)
+	(port
+		(pt 288 192)
+		(output)
+		(text "COUNTER_CLR" (rect 0 0 76 12)(font "Arial" ))
+		(text "COUNTER_CLR" (rect 191 187 267 199)(font "Arial" ))
+		(line (pt 288 192)(pt 272 192)(line_width 1))
+	)
+	(port
+		(pt 288 208)
+		(output)
+		(text "SYSTEMBUSSEL[1..0]" (rect 0 0 96 12)(font "Arial" ))
+		(text "SYSTEMBUSSEL[1..0]" (rect 171 203 267 215)(font "Arial" ))
+		(line (pt 288 208)(pt 272 208)(line_width 3))
+	)
+	(parameter
+		"states"
+		"9"
+		""
+		(type "PARAMETER_SIGNED_DEC")	)
+	(drawing
+		(rectangle (rect 16 16 272 224)(line_width 1))
+	)
+	(annotation_block (parameter)(rect 304 -64 404 16))
+)

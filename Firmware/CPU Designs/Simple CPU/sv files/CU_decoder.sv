@@ -21,13 +21,75 @@ int unsigned i=0;
 
 always_comb begin
 
-    for (i=0; i<states; i++) begin
+    case(counter_value)
 
-        if (counter_value == i[N-1:0]) begin
-            CPU_state = 1 << i;
-        end
-        
+    'd0 : begin
+
+        CPU_state = 1<<0;
+
     end
+
+    'd1 : begin
+
+        CPU_state = 1<<1;
+
+    end
+
+    'd2 : begin
+
+        CPU_state = 1<<2;
+
+    end
+
+    'd3 : begin
+
+        CPU_state = 1<<3;
+
+    end
+
+    'd4 : begin
+
+        CPU_state = 1<<4;
+
+    end
+
+    'd5 : begin
+
+        CPU_state = 1<<5;
+
+    end
+
+    'd6 : begin
+
+        CPU_state = 1<<6;
+
+    end
+
+    'd7 : begin
+
+        CPU_state = 1<<7;
+
+    end
+
+    'd8 : begin
+
+        CPU_state = 1<<8;
+
+    end
+
+
+    // makes it synthesisable using comb logic
+    // needed as we are not using all values up to (2**N) - 1
+    default : begin
+
+        CPU_state = 'd0;
+
+    end
+    
+
+
+    endcase
+
 
 end
 

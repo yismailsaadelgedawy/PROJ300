@@ -23,12 +23,13 @@ CU_decoder dut (
 );
 
 
+
 int unsigned i=0;   // this cannot be in a block
 
 
 // testing
 initial begin
-    
+
     for (i=0; i<states; i++) begin
 
         counter_value = i[N-1:0]; // relevant bit extraction
@@ -36,6 +37,12 @@ initial begin
         assert(CPU_state == (1<<i)) $display("passed CPU state %d", i); else $error("failed CPU state %d", i);
 
     end
+
+    counter_value = 'd9;
+    #10ns;
+    assert(CPU_state == 'd0) $display("passed invalid CPU state"); else $error("failed invalid CPU state");
+
+    $stop;
 
 
 end
