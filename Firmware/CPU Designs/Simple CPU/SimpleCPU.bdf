@@ -41,7 +41,7 @@ https://fpgasoftware.intel.com/eula.
 	(input)
 	(rect 96 64 264 80)
 	(text "INPUT" (rect 125 0 153 10)(font "Arial" (font_size 6)))
-	(text "clk_50" (rect 5 0 37 17)(font "Intel Clear" ))
+	(text "clk_50" (rect 5 0 36 17)(font "Intel Clear" ))
 	(pt 168 8)
 	(drawing
 		(line (pt 84 12)(pt 109 12))
@@ -1375,3 +1375,6 @@ https://fpgasoftware.intel.com/eula.
 (text "DR" (rect 344 584 361 603)(font "Intel Clear" (font_size 8)))
 (text "AC" (rect 328 792 344 811)(font "Intel Clear" (font_size 8)))
 (text "IR" (rect 328 992 339 1011)(font "Intel Clear" (font_size 8)))
+(text "a) asynchronous signal input - NOT RECOMMENDED due to metastability" (rect 752 1048 1180 1067)(font "Intel Clear" (font_size 8)))
+(text "b) slow down the clock of everything else BUT the infected component!" (rect 752 1064 1169 1083)(font "Intel Clear" (font_size 8)))
+(text "Tip: if everything else is synchronised, but one device is one clock cycle too late, you can:" (rect 752 1032 1271 1051)(font "Intel Clear" (font_size 8)))
