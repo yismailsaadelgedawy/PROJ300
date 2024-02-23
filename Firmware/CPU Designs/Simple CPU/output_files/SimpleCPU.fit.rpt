@@ -1,5 +1,5 @@
 Fitter report for SimpleCPU
-Fri Feb 23 00:33:40 2024
+Fri Feb 23 00:45:08 2024
 Quartus Prime Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
 
 
@@ -63,7 +63,7 @@ https://fpgasoftware.intel.com/eula.
 +-------------------------------------------------------------------------------+
 ; Fitter Summary                                                                ;
 +---------------------------------+---------------------------------------------+
-; Fitter Status                   ; Successful - Fri Feb 23 00:33:40 2024       ;
+; Fitter Status                   ; Successful - Fri Feb 23 00:45:08 2024       ;
 ; Quartus Prime Version           ; 20.1.1 Build 720 11/11/2020 SJ Lite Edition ;
 ; Revision Name                   ; SimpleCPU                                   ;
 ; Top-level Entity Name           ; SimpleCPU                                   ;
@@ -165,7 +165,7 @@ https://fpgasoftware.intel.com/eula.
 ;     Processor 6            ;   0.4%      ;
 ;     Processor 7            ;   0.4%      ;
 ;     Processor 8            ;   0.4%      ;
-;     Processor 9            ;   0.4%      ;
+;     Processor 9            ;   0.3%      ;
 ;     Processors 10-16       ;   0.3%      ;
 +----------------------------+-------------+
 
@@ -1323,7 +1323,7 @@ Info (332123): Deriving Clock Uncertainty. Please refer to report_sdc in the Tim
 Info (332130): Timing requirements not specified -- quality metrics such as performance may be sacrificed to reduce compilation time.
 Info (176235): Finished register packing
     Extra Info (176219): No registers were packed into other blocks
-Info (11798): Fitter preparation operations ending: elapsed time is 00:00:02
+Info (11798): Fitter preparation operations ending: elapsed time is 00:00:03
 Info (170189): Fitter placement preparation operations beginning
 Info (14951): The Fitter is using Advanced Physical Optimization.
 Info (170190): Fitter placement preparation operations ending: elapsed time is 00:00:02
@@ -1335,7 +1335,7 @@ Info (170195): Router estimated average interconnect usage is 0% of the availabl
     Info (170196): Router estimated peak interconnect usage is 1% of the available device resources in the region that extends from location X33_Y0 to location X43_Y10
 Info (170199): The Fitter performed an Auto Fit compilation.  Optimizations were skipped to reduce compilation time.
     Info (170201): Optimizations that may affect the design's routability were skipped
-Info (170194): Fitter routing operations ending: elapsed time is 00:00:02
+Info (170194): Fitter routing operations ending: elapsed time is 00:00:01
 Info (11888): Total time spent on timing analysis during the Fitter is 0.32 seconds.
 Info (334003): Started post-fitting delay annotation
 Info (334004): Delay annotation completed successfully
@@ -1344,8 +1344,8 @@ Info (334004): Delay annotation completed successfully
 Info (11801): Fitter post-fit operations ending: elapsed time is 00:00:02
 Info (144001): Generated suppressed messages file C:/Users/minec/Desktop/Work/GitHub Repos/PROJ300/Firmware/CPU Designs/Simple CPU/output_files/SimpleCPU.fit.smsg
 Info: Quartus Prime Fitter was successful. 0 errors, 4 warnings
-    Info: Peak virtual memory: 7552 megabytes
-    Info: Processing ended: Fri Feb 23 00:33:41 2024
+    Info: Peak virtual memory: 7550 megabytes
+    Info: Processing ended: Fri Feb 23 00:45:08 2024
     Info: Elapsed time: 00:00:16
     Info: Total CPU time (on all processors): 00:00:51
 

@@ -18,8 +18,8 @@ module testROM #(parameter DATA_WIDTH=8, ADDR_WIDTH=6) (
 // care of significance (first mem location is the lowest address)
 logic [DATA_WIDTH-1:0] rom [0:1] = '{
 
-    8'b00000011,        // 0 : ADD3 (operand bits = 3)
-    8'b10000000        // 1 : JMP0
+    {2'b00,6'd3},        // 0 : ADD3
+    {2'b10,6'd0}         // 1 : JMP0
 
 };
 

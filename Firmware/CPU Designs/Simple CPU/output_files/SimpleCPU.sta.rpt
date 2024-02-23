@@ -1,5 +1,5 @@
 Timing Analyzer report for SimpleCPU
-Fri Feb 23 00:33:48 2024
+Fri Feb 23 00:45:15 2024
 Quartus Prime Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
 
 
@@ -107,13 +107,13 @@ https://fpgasoftware.intel.com/eula.
 ;     Processor 1            ; 100.0%      ;
 ;     Processor 2            ;   2.6%      ;
 ;     Processor 3            ;   2.5%      ;
-;     Processor 4            ;   2.4%      ;
+;     Processor 4            ;   2.5%      ;
 ;     Processor 5            ;   2.2%      ;
 ;     Processor 6            ;   2.2%      ;
 ;     Processor 7            ;   2.2%      ;
 ;     Processor 8            ;   2.2%      ;
 ;     Processor 9            ;   2.2%      ;
-;     Processors 10-16       ;   1.1%      ;
+;     Processors 10-16       ;   1.2%      ;
 +----------------------------+-------------+
 
 
@@ -625,7 +625,7 @@ No non-DPA dedicated SERDES Receiver circuitry present in device or used in desi
 Info: *******************************************************************
 Info: Running Quartus Prime Timing Analyzer
     Info: Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
-    Info: Processing started: Fri Feb 23 00:33:45 2024
+    Info: Processing started: Fri Feb 23 00:45:12 2024
 Info: Command: quartus_sta SimpleCPU -c SimpleCPU
 Info: qsta_default_script.tcl version: #1
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
@@ -730,8 +730,8 @@ Info (332146): Worst-case minimum pulse width slack is -0.305
 Info (332102): Design is not fully constrained for setup requirements
 Info (332102): Design is not fully constrained for hold requirements
 Info: Quartus Prime Timing Analyzer was successful. 0 errors, 6 warnings
-    Info: Peak virtual memory: 5220 megabytes
-    Info: Processing ended: Fri Feb 23 00:33:48 2024
+    Info: Peak virtual memory: 5222 megabytes
+    Info: Processing ended: Fri Feb 23 00:45:15 2024
     Info: Elapsed time: 00:00:03
     Info: Total CPU time (on all processors): 00:00:03
 
