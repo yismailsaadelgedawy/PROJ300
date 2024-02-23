@@ -1,29 +1,29 @@
 |SimpleCPU
 led0 <= RST.DB_MAX_OUTPUT_PORT_TYPE
 RST => led0.DATAIN
-RST => fine_clk_divN:inst16.rst
 RST => CU_counter:inst12.rst
 RST => CPU_regN:inst4.rst
 RST => CPU_regN:inst1.rst
 RST => CPU_regN:inst2.rst
 RST => CPU_regN:inst.rst
 RST => CPU_regN:inst3.rst
-led9 <= clk_btn.DB_MAX_OUTPUT_PORT_TYPE
-CLK => fine_clk_divN:inst16.clk_in
-disp0[6] <= inst18[0].DB_MAX_OUTPUT_PORT_TYPE
-disp0[5] <= inst18[1].DB_MAX_OUTPUT_PORT_TYPE
-disp0[4] <= inst18[2].DB_MAX_OUTPUT_PORT_TYPE
-disp0[3] <= inst18[3].DB_MAX_OUTPUT_PORT_TYPE
-disp0[2] <= inst18[4].DB_MAX_OUTPUT_PORT_TYPE
-disp0[1] <= inst18[5].DB_MAX_OUTPUT_PORT_TYPE
-disp0[0] <= inst18[6].DB_MAX_OUTPUT_PORT_TYPE
-disp1[6] <= inst19[0].DB_MAX_OUTPUT_PORT_TYPE
-disp1[5] <= inst19[1].DB_MAX_OUTPUT_PORT_TYPE
-disp1[4] <= inst19[2].DB_MAX_OUTPUT_PORT_TYPE
-disp1[3] <= inst19[3].DB_MAX_OUTPUT_PORT_TYPE
-disp1[2] <= inst19[4].DB_MAX_OUTPUT_PORT_TYPE
-disp1[1] <= inst19[5].DB_MAX_OUTPUT_PORT_TYPE
-disp1[0] <= inst19[6].DB_MAX_OUTPUT_PORT_TYPE
+led9 <= clk_CPU.DB_MAX_OUTPUT_PORT_TYPE
+clk_50 => fine_clk_divN:inst16.clk_in
+clk_50 => CPU_regN:inst4.clk
+disp0[6] <= inst20[0].DB_MAX_OUTPUT_PORT_TYPE
+disp0[5] <= inst20[1].DB_MAX_OUTPUT_PORT_TYPE
+disp0[4] <= inst20[2].DB_MAX_OUTPUT_PORT_TYPE
+disp0[3] <= inst20[3].DB_MAX_OUTPUT_PORT_TYPE
+disp0[2] <= inst20[4].DB_MAX_OUTPUT_PORT_TYPE
+disp0[1] <= inst20[5].DB_MAX_OUTPUT_PORT_TYPE
+disp0[0] <= inst20[6].DB_MAX_OUTPUT_PORT_TYPE
+disp1[6] <= inst21[0].DB_MAX_OUTPUT_PORT_TYPE
+disp1[5] <= inst21[1].DB_MAX_OUTPUT_PORT_TYPE
+disp1[4] <= inst21[2].DB_MAX_OUTPUT_PORT_TYPE
+disp1[3] <= inst21[3].DB_MAX_OUTPUT_PORT_TYPE
+disp1[2] <= inst21[4].DB_MAX_OUTPUT_PORT_TYPE
+disp1[1] <= inst21[5].DB_MAX_OUTPUT_PORT_TYPE
+disp1[0] <= inst21[6].DB_MAX_OUTPUT_PORT_TYPE
 
 
 |SimpleCPU|fine_clk_divN:inst16
@@ -57,7 +57,7 @@ clk_in => counter_reg[24].CLK
 rst => Decoder0.IN0
 
 
-|SimpleCPU|seven_seg_controller:inst17
+|SimpleCPU|seven_seg_controller:inst19
 disp0[6] <= WideOr6.DB_MAX_OUTPUT_PORT_TYPE
 disp0[5] <= WideOr5.DB_MAX_OUTPUT_PORT_TYPE
 disp0[4] <= WideOr4.DB_MAX_OUTPUT_PORT_TYPE
@@ -91,20 +91,27 @@ q[4] <= internal_reg[4].DB_MAX_OUTPUT_PORT_TYPE
 q[5] <= internal_reg[5].DB_MAX_OUTPUT_PORT_TYPE
 q[6] <= internal_reg[6].DB_MAX_OUTPUT_PORT_TYPE
 q[7] <= internal_reg[7].DB_MAX_OUTPUT_PORT_TYPE
-d[0] => Selector0.IN3
-d[1] => Selector7.IN3
-d[2] => Selector6.IN3
-d[3] => Selector5.IN3
-d[4] => Selector4.IN3
-d[5] => Selector3.IN3
-d[6] => Selector2.IN3
-d[7] => Selector1.IN3
+d[0] => Selector7.IN4
+d[1] => Selector6.IN4
+d[2] => Selector5.IN4
+d[3] => Selector4.IN4
+d[4] => Selector3.IN4
+d[5] => Selector2.IN4
+d[6] => Selector1.IN4
+d[7] => Selector0.IN4
 inc => Equal0.IN2
 inc => Equal1.IN2
 load => Equal0.IN3
 load => Equal1.IN3
 rst => Decoder0.IN0
-clk => ~NO_FANOUT~
+clk => internal_reg[0].CLK
+clk => internal_reg[1].CLK
+clk => internal_reg[2].CLK
+clk => internal_reg[3].CLK
+clk => internal_reg[4].CLK
+clk => internal_reg[5].CLK
+clk => internal_reg[6].CLK
+clk => internal_reg[7].CLK
 
 
 |SimpleCPU|CU_logic:inst13
@@ -174,14 +181,15 @@ rst => counter_reg.OUTPUTSELECT
 |SimpleCPU|CPU_regN:inst4
 q[0] <= internal_reg[0].DB_MAX_OUTPUT_PORT_TYPE
 q[1] <= internal_reg[1].DB_MAX_OUTPUT_PORT_TYPE
-d[0] => Selector0.IN3
-d[1] => Selector1.IN3
+d[0] => Selector1.IN4
+d[1] => Selector0.IN4
 inc => Equal0.IN2
 inc => Equal1.IN2
 load => Equal0.IN3
 load => Equal1.IN3
 rst => Decoder0.IN0
-clk => ~NO_FANOUT~
+clk => internal_reg[0].CLK
+clk => internal_reg[1].CLK
 
 
 |SimpleCPU|systemBus_muxN:inst8
@@ -250,18 +258,23 @@ q[2] <= internal_reg[2].DB_MAX_OUTPUT_PORT_TYPE
 q[3] <= internal_reg[3].DB_MAX_OUTPUT_PORT_TYPE
 q[4] <= internal_reg[4].DB_MAX_OUTPUT_PORT_TYPE
 q[5] <= internal_reg[5].DB_MAX_OUTPUT_PORT_TYPE
-d[0] => Selector0.IN3
-d[1] => Selector5.IN3
-d[2] => Selector4.IN3
-d[3] => Selector3.IN3
-d[4] => Selector2.IN3
-d[5] => Selector1.IN3
+d[0] => Selector5.IN4
+d[1] => Selector4.IN4
+d[2] => Selector3.IN4
+d[3] => Selector2.IN4
+d[4] => Selector1.IN4
+d[5] => Selector0.IN4
 inc => Equal0.IN2
 inc => Equal1.IN2
 load => Equal0.IN3
 load => Equal1.IN3
 rst => Decoder0.IN0
-clk => ~NO_FANOUT~
+clk => internal_reg[0].CLK
+clk => internal_reg[1].CLK
+clk => internal_reg[2].CLK
+clk => internal_reg[3].CLK
+clk => internal_reg[4].CLK
+clk => internal_reg[5].CLK
 
 
 |SimpleCPU|CPU_regN:inst2
@@ -273,20 +286,27 @@ q[4] <= internal_reg[4].DB_MAX_OUTPUT_PORT_TYPE
 q[5] <= internal_reg[5].DB_MAX_OUTPUT_PORT_TYPE
 q[6] <= internal_reg[6].DB_MAX_OUTPUT_PORT_TYPE
 q[7] <= internal_reg[7].DB_MAX_OUTPUT_PORT_TYPE
-d[0] => Selector0.IN3
-d[1] => Selector7.IN3
-d[2] => Selector6.IN3
-d[3] => Selector5.IN3
-d[4] => Selector4.IN3
-d[5] => Selector3.IN3
-d[6] => Selector2.IN3
-d[7] => Selector1.IN3
+d[0] => Selector7.IN4
+d[1] => Selector6.IN4
+d[2] => Selector5.IN4
+d[3] => Selector4.IN4
+d[4] => Selector3.IN4
+d[5] => Selector2.IN4
+d[6] => Selector1.IN4
+d[7] => Selector0.IN4
 inc => Equal0.IN2
 inc => Equal1.IN2
 load => Equal0.IN3
 load => Equal1.IN3
 rst => Decoder0.IN0
-clk => ~NO_FANOUT~
+clk => internal_reg[0].CLK
+clk => internal_reg[1].CLK
+clk => internal_reg[2].CLK
+clk => internal_reg[3].CLK
+clk => internal_reg[4].CLK
+clk => internal_reg[5].CLK
+clk => internal_reg[6].CLK
+clk => internal_reg[7].CLK
 
 
 |SimpleCPU|testROM:inst9
@@ -313,18 +333,23 @@ q[2] <= internal_reg[2].DB_MAX_OUTPUT_PORT_TYPE
 q[3] <= internal_reg[3].DB_MAX_OUTPUT_PORT_TYPE
 q[4] <= internal_reg[4].DB_MAX_OUTPUT_PORT_TYPE
 q[5] <= internal_reg[5].DB_MAX_OUTPUT_PORT_TYPE
-d[0] => Selector0.IN3
-d[1] => Selector5.IN3
-d[2] => Selector4.IN3
-d[3] => Selector3.IN3
-d[4] => Selector2.IN3
-d[5] => Selector1.IN3
+d[0] => Selector5.IN4
+d[1] => Selector4.IN4
+d[2] => Selector3.IN4
+d[3] => Selector2.IN4
+d[4] => Selector1.IN4
+d[5] => Selector0.IN4
 inc => Equal0.IN2
 inc => Equal1.IN2
 load => Equal0.IN3
 load => Equal1.IN3
 rst => Decoder0.IN0
-clk => ~NO_FANOUT~
+clk => internal_reg[0].CLK
+clk => internal_reg[1].CLK
+clk => internal_reg[2].CLK
+clk => internal_reg[3].CLK
+clk => internal_reg[4].CLK
+clk => internal_reg[5].CLK
 
 
 |SimpleCPU|ALU:inst10

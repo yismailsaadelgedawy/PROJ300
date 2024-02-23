@@ -72,7 +72,7 @@
 					"strict" : false
 				},
 				{
-					"name" : "CLK",
+					"name" : "clk_50",
 					"strict" : false
 				}
 			]

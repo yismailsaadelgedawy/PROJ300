@@ -1,12 +1,13 @@
 module SimpleCPU_tb;
 
 // internal wires
-logic CLK, RST;
+logic CLK, CLK_HALF, RST;
 
 // wiring
 SimpleCPU dut (
 
     .CLK(CLK),
+    .CLK_HALF(CLK_HALF),
     .RST(RST)
 
 );
@@ -21,11 +22,21 @@ always begin
 
 end
 
+// clock half
+always begin
+
+    CLK_HALF = 1;
+    #10ns;
+    CLK_HALF = 0;
+    #10ns;
+
+end
+
 // testing
 initial begin
 
     RST = 1;
-    #10ns;
+    #20ns;
 
     // run for a bit
     RST = 0;

@@ -1,5 +1,5 @@
 Analysis & Synthesis report for SimpleCPU
-Thu Feb 22 21:39:14 2024
+Fri Feb 23 00:33:24 2024
 Quartus Prime Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
 
 
@@ -13,7 +13,7 @@ Quartus Prime Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
   5. Analysis & Synthesis Source Files Read
   6. Analysis & Synthesis Resource Usage Summary
   7. Analysis & Synthesis Resource Utilization by Entity
-  8. User-Specified and Inferred Latches
+  8. Registers Removed During Synthesis
   9. General Register Statistics
  10. Multiplexer Restructuring Statistics (Restructuring Performed)
  11. Parameter Settings for User Entity Instance: fine_clk_divN:inst16
@@ -57,13 +57,13 @@ https://fpgasoftware.intel.com/eula.
 +-------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                  ;
 +---------------------------------+---------------------------------------------+
-; Analysis & Synthesis Status     ; Successful - Thu Feb 22 21:39:14 2024       ;
+; Analysis & Synthesis Status     ; Successful - Fri Feb 23 00:33:24 2024       ;
 ; Quartus Prime Version           ; 20.1.1 Build 720 11/11/2020 SJ Lite Edition ;
 ; Revision Name                   ; SimpleCPU                                   ;
 ; Top-level Entity Name           ; SimpleCPU                                   ;
 ; Family                          ; Cyclone V                                   ;
 ; Logic utilization (in ALMs)     ; N/A                                         ;
-; Total registers                 ; 30                                          ;
+; Total registers                 ; 58                                          ;
 ; Total pins                      ; 18                                          ;
 ; Total virtual pins              ; 0                                           ;
 ; Total block memory bits         ; 0                                           ;
@@ -199,31 +199,31 @@ https://fpgasoftware.intel.com/eula.
 +----------------------------------+-----------------+------------------------------------+-------------------------------------------------------------------------------------------------------------------+---------+
 
 
-+---------------------------------------------------------+
-; Analysis & Synthesis Resource Usage Summary             ;
-+---------------------------------------------+-----------+
-; Resource                                    ; Usage     ;
-+---------------------------------------------+-----------+
-; Estimate of Logic utilization (ALMs needed) ; 83        ;
-;                                             ;           ;
-; Combinational ALUT usage for logic          ; 141       ;
-;     -- 7 input functions                    ; 0         ;
-;     -- 6 input functions                    ; 24        ;
-;     -- 5 input functions                    ; 2         ;
-;     -- 4 input functions                    ; 62        ;
-;     -- <=3 input functions                  ; 53        ;
-;                                             ;           ;
-; Dedicated logic registers                   ; 30        ;
-;                                             ;           ;
-; I/O pins                                    ; 18        ;
-;                                             ;           ;
-; Total DSP Blocks                            ; 0         ;
-;                                             ;           ;
-; Maximum fan-out node                        ; RST~input ;
-; Maximum fan-out                             ; 37        ;
-; Total fan-out                               ; 635       ;
-; Average fan-out                             ; 3.07      ;
-+---------------------------------------------+-----------+
++----------------------------------------------------------------------------+
+; Analysis & Synthesis Resource Usage Summary                                ;
++---------------------------------------------+------------------------------+
+; Resource                                    ; Usage                        ;
++---------------------------------------------+------------------------------+
+; Estimate of Logic utilization (ALMs needed) ; 63                           ;
+;                                             ;                              ;
+; Combinational ALUT usage for logic          ; 104                          ;
+;     -- 7 input functions                    ; 7                            ;
+;     -- 6 input functions                    ; 13                           ;
+;     -- 5 input functions                    ; 14                           ;
+;     -- 4 input functions                    ; 26                           ;
+;     -- <=3 input functions                  ; 44                           ;
+;                                             ;                              ;
+; Dedicated logic registers                   ; 58                           ;
+;                                             ;                              ;
+; I/O pins                                    ; 18                           ;
+;                                             ;                              ;
+; Total DSP Blocks                            ; 0                            ;
+;                                             ;                              ;
+; Maximum fan-out node                        ; fine_clk_divN:inst16|clk_out ;
+; Maximum fan-out                             ; 33                           ;
+; Total fan-out                               ; 603                          ;
+; Average fan-out                             ; 3.05                         ;
++---------------------------------------------+------------------------------+
 
 
 +--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
@@ -231,60 +231,30 @@ https://fpgasoftware.intel.com/eula.
 +----------------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+----------------------------------------+----------------------+--------------+
 ; Compilation Hierarchy Node       ; Combinational ALUTs ; Dedicated Logic Registers ; Block Memory Bits ; DSP Blocks ; Pins ; Virtual Pins ; Full Hierarchy Name                    ; Entity Name          ; Library Name ;
 +----------------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+----------------------------------------+----------------------+--------------+
-; |SimpleCPU                       ; 141 (0)             ; 30 (0)                    ; 0                 ; 0          ; 18   ; 0            ; |SimpleCPU                             ; SimpleCPU            ; work         ;
+; |SimpleCPU                       ; 104 (0)             ; 58 (0)                    ; 0                 ; 0          ; 18   ; 0            ; |SimpleCPU                             ; SimpleCPU            ; work         ;
 ;    |ALU:inst10|                  ; 8 (8)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |SimpleCPU|ALU:inst10                  ; ALU                  ; work         ;
-;    |CPU_regN:inst1|              ; 17 (17)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |SimpleCPU|CPU_regN:inst1              ; CPU_regN             ; work         ;
-;    |CPU_regN:inst2|              ; 8 (8)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |SimpleCPU|CPU_regN:inst2              ; CPU_regN             ; work         ;
-;    |CPU_regN:inst3|              ; 25 (25)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |SimpleCPU|CPU_regN:inst3              ; CPU_regN             ; work         ;
-;    |CPU_regN:inst4|              ; 2 (2)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |SimpleCPU|CPU_regN:inst4              ; CPU_regN             ; work         ;
-;    |CPU_regN:inst|               ; 6 (6)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |SimpleCPU|CPU_regN:inst               ; CPU_regN             ; work         ;
-;    |CU_counter:inst12|           ; 6 (6)               ; 4 (4)                     ; 0                 ; 0          ; 0    ; 0            ; |SimpleCPU|CU_counter:inst12           ; CU_counter           ; work         ;
-;    |CU_logic:inst13|             ; 9 (9)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |SimpleCPU|CU_logic:inst13             ; CU_logic             ; work         ;
+;    |CPU_regN:inst1|              ; 11 (11)             ; 6 (6)                     ; 0                 ; 0          ; 0    ; 0            ; |SimpleCPU|CPU_regN:inst1              ; CPU_regN             ; work         ;
+;    |CPU_regN:inst2|              ; 2 (2)               ; 7 (7)                     ; 0                 ; 0          ; 0    ; 0            ; |SimpleCPU|CPU_regN:inst2              ; CPU_regN             ; work         ;
+;    |CPU_regN:inst3|              ; 18 (18)             ; 8 (8)                     ; 0                 ; 0          ; 0    ; 0            ; |SimpleCPU|CPU_regN:inst3              ; CPU_regN             ; work         ;
+;    |CPU_regN:inst4|              ; 1 (1)               ; 1 (1)                     ; 0                 ; 0          ; 0    ; 0            ; |SimpleCPU|CPU_regN:inst4              ; CPU_regN             ; work         ;
+;    |CPU_regN:inst|               ; 7 (7)               ; 6 (6)                     ; 0                 ; 0          ; 0    ; 0            ; |SimpleCPU|CPU_regN:inst               ; CPU_regN             ; work         ;
+;    |CU_counter:inst12|           ; 4 (4)               ; 4 (4)                     ; 0                 ; 0          ; 0    ; 0            ; |SimpleCPU|CU_counter:inst12           ; CU_counter           ; work         ;
+;    |CU_logic:inst13|             ; 8 (8)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |SimpleCPU|CU_logic:inst13             ; CU_logic             ; work         ;
 ;    |fine_clk_divN:inst16|        ; 31 (31)             ; 26 (26)                   ; 0                 ; 0          ; 0    ; 0            ; |SimpleCPU|fine_clk_divN:inst16        ; fine_clk_divN        ; work         ;
-;    |seven_seg_controller:inst17| ; 14 (14)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |SimpleCPU|seven_seg_controller:inst17 ; seven_seg_controller ; work         ;
-;    |systemBus_muxN:inst8|        ; 15 (15)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |SimpleCPU|systemBus_muxN:inst8        ; systemBus_muxN       ; work         ;
+;    |seven_seg_controller:inst19| ; 14 (14)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |SimpleCPU|seven_seg_controller:inst19 ; seven_seg_controller ; work         ;
 +----------------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+----------------------------------------+----------------------+--------------+
 Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
 
 
-+---------------------------------------------------------------------------------------------------------+
-; User-Specified and Inferred Latches                                                                     ;
-+-----------------------------------------------------+--------------------------+------------------------+
-; Latch Name                                          ; Latch Enable Signal      ; Free of Timing Hazards ;
-+-----------------------------------------------------+--------------------------+------------------------+
-; CPU_regN:inst3|internal_reg[0]                      ; CPU_regN:inst3|WideNor0  ; yes                    ;
-; CPU_regN:inst3|internal_reg[1]                      ; CPU_regN:inst3|WideNor0  ; yes                    ;
-; CPU_regN:inst3|internal_reg[2]                      ; CPU_regN:inst3|WideNor0  ; yes                    ;
-; CPU_regN:inst3|internal_reg[3]                      ; CPU_regN:inst3|WideNor0  ; yes                    ;
-; CPU_regN:inst3|internal_reg[4]                      ; CPU_regN:inst3|WideNor0  ; yes                    ;
-; CPU_regN:inst3|internal_reg[5]                      ; CPU_regN:inst3|WideNor0  ; yes                    ;
-; CPU_regN:inst3|internal_reg[6]                      ; CPU_regN:inst3|WideNor0  ; yes                    ;
-; CPU_regN:inst3|internal_reg[7]                      ; CPU_regN:inst3|WideNor0  ; yes                    ;
-; CPU_regN:inst|internal_reg[0]                       ; CU_logic:inst13|ARLOAD   ; yes                    ;
-; CPU_regN:inst|internal_reg[1]                       ; CU_logic:inst13|ARLOAD   ; yes                    ;
-; CPU_regN:inst|internal_reg[2]                       ; CU_logic:inst13|ARLOAD   ; yes                    ;
-; CPU_regN:inst|internal_reg[3]                       ; CU_logic:inst13|ARLOAD   ; yes                    ;
-; CPU_regN:inst|internal_reg[4]                       ; CU_logic:inst13|ARLOAD   ; yes                    ;
-; CPU_regN:inst|internal_reg[5]                       ; CU_logic:inst13|ARLOAD   ; yes                    ;
-; CPU_regN:inst1|internal_reg[0]                      ; CPU_regN:inst1|WideNor0  ; yes                    ;
-; CPU_regN:inst2|internal_reg[0]                      ; CU_logic:inst13|WideOr0  ; yes                    ;
-; CPU_regN:inst4|internal_reg[0]                      ; CU_logic:inst13|Decoder0 ; yes                    ;
-; CPU_regN:inst4|internal_reg[1]                      ; CU_logic:inst13|Decoder0 ; yes                    ;
-; CPU_regN:inst1|internal_reg[1]                      ; CPU_regN:inst1|WideNor0  ; yes                    ;
-; CPU_regN:inst2|internal_reg[1]                      ; CU_logic:inst13|WideOr0  ; yes                    ;
-; CPU_regN:inst1|internal_reg[2]                      ; CPU_regN:inst1|WideNor0  ; yes                    ;
-; CPU_regN:inst2|internal_reg[2]                      ; CU_logic:inst13|WideOr0  ; yes                    ;
-; CPU_regN:inst1|internal_reg[3]                      ; CPU_regN:inst1|WideNor0  ; yes                    ;
-; CPU_regN:inst2|internal_reg[3]                      ; CU_logic:inst13|WideOr0  ; yes                    ;
-; CPU_regN:inst1|internal_reg[4]                      ; CPU_regN:inst1|WideNor0  ; yes                    ;
-; CPU_regN:inst2|internal_reg[4]                      ; CU_logic:inst13|WideOr0  ; yes                    ;
-; CPU_regN:inst1|internal_reg[5]                      ; CPU_regN:inst1|WideNor0  ; yes                    ;
-; CPU_regN:inst2|internal_reg[5]                      ; CU_logic:inst13|WideOr0  ; yes                    ;
-; CPU_regN:inst2|internal_reg[6]                      ; CU_logic:inst13|WideOr0  ; yes                    ;
-; CPU_regN:inst2|internal_reg[7]                      ; CU_logic:inst13|WideOr0  ; yes                    ;
-; Number of user-specified and inferred latches = 30  ;                          ;                        ;
-+-----------------------------------------------------+--------------------------+------------------------+
-Note: All latches listed above may not be present at the end of synthesis due to various synthesis optimizations.
++--------------------------------------------------------------------------------+
+; Registers Removed During Synthesis                                             ;
++---------------------------------------+----------------------------------------+
+; Register name                         ; Reason for Removal                     ;
++---------------------------------------+----------------------------------------+
+; CPU_regN:inst2|internal_reg[6]        ; Stuck at GND due to stuck port data_in ;
+; CPU_regN:inst4|internal_reg[0]        ; Stuck at GND due to stuck port data_in ;
+; Total Number of Removed Registers = 2 ;                                        ;
++---------------------------------------+----------------------------------------+
 
 
 +------------------------------------------------------+
@@ -292,27 +262,30 @@ Note: All latches listed above may not be present at the end of synthesis due to
 +----------------------------------------------+-------+
 ; Statistic                                    ; Value ;
 +----------------------------------------------+-------+
-; Total registers                              ; 30    ;
-; Number of registers using Synchronous Clear  ; 27    ;
+; Total registers                              ; 58    ;
+; Number of registers using Synchronous Clear  ; 33    ;
 ; Number of registers using Synchronous Load   ; 0     ;
 ; Number of registers using Asynchronous Clear ; 0     ;
 ; Number of registers using Asynchronous Load  ; 0     ;
-; Number of registers using Clock Enable       ; 0     ;
+; Number of registers using Clock Enable       ; 27    ;
 ; Number of registers using Preset             ; 0     ;
 +----------------------------------------------+-------+
 
 
-+---------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Multiplexer Restructuring Statistics (Restructuring Performed)                                                                                                ;
-+--------------------+-----------+---------------+----------------------+------------------------+------------+-------------------------------------------------+
-; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output                      ;
-+--------------------+-----------+---------------+----------------------+------------------------+------------+-------------------------------------------------+
-; 3:1                ; 25 bits   ; 50 LEs        ; 0 LEs                ; 50 LEs                 ; Yes        ; |SimpleCPU|fine_clk_divN:inst16|counter_reg[15] ;
-; 5:1                ; 3 bits    ; 9 LEs         ; 6 LEs                ; 3 LEs                  ; Yes        ; |SimpleCPU|CU_counter:inst12|counter_reg[3]     ;
-; 4:1                ; 6 bits    ; 12 LEs        ; 12 LEs               ; 0 LEs                  ; No         ; |SimpleCPU|systemBus_muxN:inst8|Mux2            ;
-; 3:1                ; 2 bits    ; 4 LEs         ; 4 LEs                ; 0 LEs                  ; No         ; |SimpleCPU|CPU_regN:inst3|Selector1             ;
-; 3:1                ; 6 bits    ; 12 LEs        ; 12 LEs               ; 0 LEs                  ; No         ; |SimpleCPU|CPU_regN:inst3|Selector0             ;
-+--------------------+-----------+---------------+----------------------+------------------------+------------+-------------------------------------------------+
++-----------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Multiplexer Restructuring Statistics (Restructuring Performed)                                                                                            ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+---------------------------------------------+
+; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output                  ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+---------------------------------------------+
+; 3:1                ; 7 bits    ; 14 LEs        ; 7 LEs                ; 7 LEs                  ; Yes        ; |SimpleCPU|CPU_regN:inst2|internal_reg[7]   ;
+; 3:1                ; 6 bits    ; 12 LEs        ; 6 LEs                ; 6 LEs                  ; Yes        ; |SimpleCPU|CPU_regN:inst|internal_reg[2]    ;
+; 4:1                ; 6 bits    ; 12 LEs        ; 12 LEs               ; 0 LEs                  ; Yes        ; |SimpleCPU|CPU_regN:inst1|internal_reg[0]   ;
+; 5:1                ; 2 bits    ; 6 LEs         ; 4 LEs                ; 2 LEs                  ; Yes        ; |SimpleCPU|CPU_regN:inst3|internal_reg[7]   ;
+; 5:1                ; 6 bits    ; 18 LEs        ; 12 LEs               ; 6 LEs                  ; Yes        ; |SimpleCPU|CPU_regN:inst3|internal_reg[0]   ;
+; 5:1                ; 3 bits    ; 9 LEs         ; 6 LEs                ; 3 LEs                  ; Yes        ; |SimpleCPU|CU_counter:inst12|counter_reg[0] ;
+; 4:1                ; 4 bits    ; 8 LEs         ; 8 LEs                ; 0 LEs                  ; No         ; |SimpleCPU|systemBus_muxN:inst8|Mux2        ;
+; 4:1                ; 2 bits    ; 4 LEs         ; 4 LEs                ; 0 LEs                  ; No         ; |SimpleCPU|systemBus_muxN:inst8|Mux7        ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+---------------------------------------------+
 
 
 +-------------------------------------------------------------------+
@@ -320,7 +293,7 @@ Note: All latches listed above may not be present at the end of synthesis due to
 +----------------+-------+------------------------------------------+
 ; Parameter Name ; Value ; Type                                     ;
 +----------------+-------+------------------------------------------+
-; f              ; 3     ; Signed Float                             ;
+; f              ; 10    ; Signed Integer                           ;
 +----------------+-------+------------------------------------------+
 Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
 
@@ -443,24 +416,28 @@ Note: In order to hide this table in the UI and the text report file, please set
 +-----------------------+-----------------------------+
 ; Type                  ; Count                       ;
 +-----------------------+-----------------------------+
-; arriav_ff             ; 30                          ;
+; arriav_ff             ; 58                          ;
+;     ENA               ; 21                          ;
+;     ENA SCLR          ; 6                           ;
 ;     SCLR              ; 27                          ;
-;     plain             ; 3                           ;
-; arriav_lcell_comb     ; 143                         ;
+;     plain             ; 4                           ;
+; arriav_lcell_comb     ; 106                         ;
 ;     arith             ; 41                          ;
 ;         1 data inputs ; 35                          ;
 ;         2 data inputs ; 6                           ;
-;     normal            ; 102                         ;
+;     extend            ; 7                           ;
+;         7 data inputs ; 7                           ;
+;     normal            ; 58                          ;
 ;         1 data inputs ; 2                           ;
-;         2 data inputs ; 9                           ;
-;         3 data inputs ; 3                           ;
-;         4 data inputs ; 62                          ;
-;         5 data inputs ; 2                           ;
-;         6 data inputs ; 24                          ;
+;         2 data inputs ; 2                           ;
+;         3 data inputs ; 1                           ;
+;         4 data inputs ; 26                          ;
+;         5 data inputs ; 14                          ;
+;         6 data inputs ; 13                          ;
 ; boundary_port         ; 18                          ;
 ;                       ;                             ;
-; Max LUT depth         ; 3.70                        ;
-; Average LUT depth     ; 2.73                        ;
+; Max LUT depth         ; 3.40                        ;
+; Average LUT depth     ; 2.20                        ;
 +-----------------------+-----------------------------+
 
 
@@ -479,7 +456,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
-    Info: Processing started: Thu Feb 22 21:39:09 2024
+    Info: Processing started: Fri Feb 23 00:33:19 2024
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off SimpleCPU -c SimpleCPU
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20030): Parallel compilation is enabled and will use 16 of the 16 processors detected
@@ -506,21 +483,12 @@ Info (12021): Found 1 design units, including 1 entities, in source file simplec
 Warning (10222): Verilog HDL Parameter Declaration warning at fine_clk_divN.sv(18): Parameter Declaration in module "fine_clk_divN" behaves as a Local Parameter Declaration because the module has a Module Parameter Port List File: C:/Users/minec/Desktop/Work/GitHub Repos/PROJ300/Firmware/CPU Designs/Simple CPU/sv files/fine_clk_divN.sv Line: 18
 Info (12127): Elaborating entity "SimpleCPU" for the top level hierarchy
 Info (12128): Elaborating entity "fine_clk_divN" for hierarchy "fine_clk_divN:inst16"
+Warning (10230): Verilog HDL assignment warning at fine_clk_divN.sv(19): truncated value with size 32 to match size of target (25) File: C:/Users/minec/Desktop/Work/GitHub Repos/PROJ300/Firmware/CPU Designs/Simple CPU/sv files/fine_clk_divN.sv Line: 19
 Warning (10230): Verilog HDL assignment warning at fine_clk_divN.sv(38): truncated value with size 32 to match size of target (25) File: C:/Users/minec/Desktop/Work/GitHub Repos/PROJ300/Firmware/CPU Designs/Simple CPU/sv files/fine_clk_divN.sv Line: 38
-Info (12128): Elaborating entity "seven_seg_controller" for hierarchy "seven_seg_controller:inst17"
+Info (12128): Elaborating entity "seven_seg_controller" for hierarchy "seven_seg_controller:inst19"
 Info (12128): Elaborating entity "CPU_regN" for hierarchy "CPU_regN:inst3"
 Warning (10230): Verilog HDL assignment warning at CPU_regN.sv(45): truncated value with size 32 to match size of target (8) File: C:/Users/minec/Desktop/Work/GitHub Repos/PROJ300/Firmware/CPU Designs/Simple CPU/sv files/CPU_regN.sv Line: 45
-Warning (10270): Verilog HDL Case Statement warning at CPU_regN.sv(35): incomplete case statement has no default case item File: C:/Users/minec/Desktop/Work/GitHub Repos/PROJ300/Firmware/CPU Designs/Simple CPU/sv files/CPU_regN.sv Line: 35
 Info (10264): Verilog HDL Case Statement information at CPU_regN.sv(35): all case item expressions in this case statement are onehot File: C:/Users/minec/Desktop/Work/GitHub Repos/PROJ300/Firmware/CPU Designs/Simple CPU/sv files/CPU_regN.sv Line: 35
-Warning (10240): Verilog HDL Always Construct warning at CPU_regN.sv(20): inferring latch(es) for variable "internal_reg", which holds its previous value in one or more paths through the always construct File: C:/Users/minec/Desktop/Work/GitHub Repos/PROJ300/Firmware/CPU Designs/Simple CPU/sv files/CPU_regN.sv Line: 20
-Info (10041): Inferred latch for "internal_reg[0]" at CPU_regN.sv(20) File: C:/Users/minec/Desktop/Work/GitHub Repos/PROJ300/Firmware/CPU Designs/Simple CPU/sv files/CPU_regN.sv Line: 20
-Info (10041): Inferred latch for "internal_reg[1]" at CPU_regN.sv(20) File: C:/Users/minec/Desktop/Work/GitHub Repos/PROJ300/Firmware/CPU Designs/Simple CPU/sv files/CPU_regN.sv Line: 20
-Info (10041): Inferred latch for "internal_reg[2]" at CPU_regN.sv(20) File: C:/Users/minec/Desktop/Work/GitHub Repos/PROJ300/Firmware/CPU Designs/Simple CPU/sv files/CPU_regN.sv Line: 20
-Info (10041): Inferred latch for "internal_reg[3]" at CPU_regN.sv(20) File: C:/Users/minec/Desktop/Work/GitHub Repos/PROJ300/Firmware/CPU Designs/Simple CPU/sv files/CPU_regN.sv Line: 20
-Info (10041): Inferred latch for "internal_reg[4]" at CPU_regN.sv(20) File: C:/Users/minec/Desktop/Work/GitHub Repos/PROJ300/Firmware/CPU Designs/Simple CPU/sv files/CPU_regN.sv Line: 20
-Info (10041): Inferred latch for "internal_reg[5]" at CPU_regN.sv(20) File: C:/Users/minec/Desktop/Work/GitHub Repos/PROJ300/Firmware/CPU Designs/Simple CPU/sv files/CPU_regN.sv Line: 20
-Info (10041): Inferred latch for "internal_reg[6]" at CPU_regN.sv(20) File: C:/Users/minec/Desktop/Work/GitHub Repos/PROJ300/Firmware/CPU Designs/Simple CPU/sv files/CPU_regN.sv Line: 20
-Info (10041): Inferred latch for "internal_reg[7]" at CPU_regN.sv(20) File: C:/Users/minec/Desktop/Work/GitHub Repos/PROJ300/Firmware/CPU Designs/Simple CPU/sv files/CPU_regN.sv Line: 20
 Info (12128): Elaborating entity "CU_logic" for hierarchy "CU_logic:inst13"
 Info (10264): Verilog HDL Case Statement information at CU_logic.sv(35): all case item expressions in this case statement are onehot File: C:/Users/minec/Desktop/Work/GitHub Repos/PROJ300/Firmware/CPU Designs/Simple CPU/sv files/CU_logic.sv Line: 35
 Info (12128): Elaborating entity "CU_decoder" for hierarchy "CU_decoder:inst11"
@@ -540,23 +508,11 @@ Warning (10230): Verilog HDL assignment warning at CU_counter.sv(104): truncated
 Info (10264): Verilog HDL Case Statement information at CU_counter.sv(68): all case item expressions in this case statement are onehot File: C:/Users/minec/Desktop/Work/GitHub Repos/PROJ300/Firmware/CPU Designs/Simple CPU/sv files/CU_counter.sv Line: 68
 Info (12128): Elaborating entity "CPU_regN" for hierarchy "CPU_regN:inst4"
 Warning (10230): Verilog HDL assignment warning at CPU_regN.sv(45): truncated value with size 32 to match size of target (2) File: C:/Users/minec/Desktop/Work/GitHub Repos/PROJ300/Firmware/CPU Designs/Simple CPU/sv files/CPU_regN.sv Line: 45
-Warning (10270): Verilog HDL Case Statement warning at CPU_regN.sv(35): incomplete case statement has no default case item File: C:/Users/minec/Desktop/Work/GitHub Repos/PROJ300/Firmware/CPU Designs/Simple CPU/sv files/CPU_regN.sv Line: 35
 Info (10264): Verilog HDL Case Statement information at CPU_regN.sv(35): all case item expressions in this case statement are onehot File: C:/Users/minec/Desktop/Work/GitHub Repos/PROJ300/Firmware/CPU Designs/Simple CPU/sv files/CPU_regN.sv Line: 35
-Warning (10240): Verilog HDL Always Construct warning at CPU_regN.sv(20): inferring latch(es) for variable "internal_reg", which holds its previous value in one or more paths through the always construct File: C:/Users/minec/Desktop/Work/GitHub Repos/PROJ300/Firmware/CPU Designs/Simple CPU/sv files/CPU_regN.sv Line: 20
-Info (10041): Inferred latch for "internal_reg[0]" at CPU_regN.sv(20) File: C:/Users/minec/Desktop/Work/GitHub Repos/PROJ300/Firmware/CPU Designs/Simple CPU/sv files/CPU_regN.sv Line: 20
-Info (10041): Inferred latch for "internal_reg[1]" at CPU_regN.sv(20) File: C:/Users/minec/Desktop/Work/GitHub Repos/PROJ300/Firmware/CPU Designs/Simple CPU/sv files/CPU_regN.sv Line: 20
 Info (12128): Elaborating entity "systemBus_muxN" for hierarchy "systemBus_muxN:inst8"
 Info (12128): Elaborating entity "CPU_regN" for hierarchy "CPU_regN:inst1"
 Warning (10230): Verilog HDL assignment warning at CPU_regN.sv(45): truncated value with size 32 to match size of target (6) File: C:/Users/minec/Desktop/Work/GitHub Repos/PROJ300/Firmware/CPU Designs/Simple CPU/sv files/CPU_regN.sv Line: 45
-Warning (10270): Verilog HDL Case Statement warning at CPU_regN.sv(35): incomplete case statement has no default case item File: C:/Users/minec/Desktop/Work/GitHub Repos/PROJ300/Firmware/CPU Designs/Simple CPU/sv files/CPU_regN.sv Line: 35
 Info (10264): Verilog HDL Case Statement information at CPU_regN.sv(35): all case item expressions in this case statement are onehot File: C:/Users/minec/Desktop/Work/GitHub Repos/PROJ300/Firmware/CPU Designs/Simple CPU/sv files/CPU_regN.sv Line: 35
-Warning (10240): Verilog HDL Always Construct warning at CPU_regN.sv(20): inferring latch(es) for variable "internal_reg", which holds its previous value in one or more paths through the always construct File: C:/Users/minec/Desktop/Work/GitHub Repos/PROJ300/Firmware/CPU Designs/Simple CPU/sv files/CPU_regN.sv Line: 20
-Info (10041): Inferred latch for "internal_reg[0]" at CPU_regN.sv(20) File: C:/Users/minec/Desktop/Work/GitHub Repos/PROJ300/Firmware/CPU Designs/Simple CPU/sv files/CPU_regN.sv Line: 20
-Info (10041): Inferred latch for "internal_reg[1]" at CPU_regN.sv(20) File: C:/Users/minec/Desktop/Work/GitHub Repos/PROJ300/Firmware/CPU Designs/Simple CPU/sv files/CPU_regN.sv Line: 20
-Info (10041): Inferred latch for "internal_reg[2]" at CPU_regN.sv(20) File: C:/Users/minec/Desktop/Work/GitHub Repos/PROJ300/Firmware/CPU Designs/Simple CPU/sv files/CPU_regN.sv Line: 20
-Info (10041): Inferred latch for "internal_reg[3]" at CPU_regN.sv(20) File: C:/Users/minec/Desktop/Work/GitHub Repos/PROJ300/Firmware/CPU Designs/Simple CPU/sv files/CPU_regN.sv Line: 20
-Info (10041): Inferred latch for "internal_reg[4]" at CPU_regN.sv(20) File: C:/Users/minec/Desktop/Work/GitHub Repos/PROJ300/Firmware/CPU Designs/Simple CPU/sv files/CPU_regN.sv Line: 20
-Info (10041): Inferred latch for "internal_reg[5]" at CPU_regN.sv(20) File: C:/Users/minec/Desktop/Work/GitHub Repos/PROJ300/Firmware/CPU Designs/Simple CPU/sv files/CPU_regN.sv Line: 20
 Info (12128): Elaborating entity "testROM" for hierarchy "testROM:inst9"
 Warning (10030): Net "rom.data_a" at testROM.sv(24) has no driver or initial value, using a default initial value '0' File: C:/Users/minec/Desktop/Work/GitHub Repos/PROJ300/Firmware/CPU Designs/Simple CPU/sv files/testROM.sv Line: 24
 Warning (10030): Net "rom.waddr_a[0]" at testROM.sv(24) has no driver or initial value, using a default initial value '0' File: C:/Users/minec/Desktop/Work/GitHub Repos/PROJ300/Firmware/CPU Designs/Simple CPU/sv files/testROM.sv Line: 24
@@ -564,76 +520,16 @@ Warning (10030): Net "rom.we_a" at testROM.sv(24) has no driver or initial value
 Info (12128): Elaborating entity "ALU" for hierarchy "ALU:inst10"
 Info (276014): Found 1 instances of uninferred RAM logic
     Info (276004): RAM logic "testROM:inst9|rom" is uninferred due to inappropriate RAM size File: C:/Users/minec/Desktop/Work/GitHub Repos/PROJ300/Firmware/CPU Designs/Simple CPU/sv files/testROM.sv Line: 24
-Warning (13012): Latch CPU_regN:inst3|internal_reg[0] has unsafe behavior File: C:/Users/minec/Desktop/Work/GitHub Repos/PROJ300/Firmware/CPU Designs/Simple CPU/sv files/CPU_regN.sv Line: 20
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal CU_counter:inst12|counter_reg[1] File: C:/Users/minec/Desktop/Work/GitHub Repos/PROJ300/Firmware/CPU Designs/Simple CPU/sv files/CU_counter.sv Line: 43
-Warning (13012): Latch CPU_regN:inst3|internal_reg[1] has unsafe behavior File: C:/Users/minec/Desktop/Work/GitHub Repos/PROJ300/Firmware/CPU Designs/Simple CPU/sv files/CPU_regN.sv Line: 20
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal CU_counter:inst12|counter_reg[1] File: C:/Users/minec/Desktop/Work/GitHub Repos/PROJ300/Firmware/CPU Designs/Simple CPU/sv files/CU_counter.sv Line: 43
-Warning (13012): Latch CPU_regN:inst3|internal_reg[2] has unsafe behavior File: C:/Users/minec/Desktop/Work/GitHub Repos/PROJ300/Firmware/CPU Designs/Simple CPU/sv files/CPU_regN.sv Line: 20
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal CU_counter:inst12|counter_reg[1] File: C:/Users/minec/Desktop/Work/GitHub Repos/PROJ300/Firmware/CPU Designs/Simple CPU/sv files/CU_counter.sv Line: 43
-Warning (13012): Latch CPU_regN:inst3|internal_reg[3] has unsafe behavior File: C:/Users/minec/Desktop/Work/GitHub Repos/PROJ300/Firmware/CPU Designs/Simple CPU/sv files/CPU_regN.sv Line: 20
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal CU_counter:inst12|counter_reg[1] File: C:/Users/minec/Desktop/Work/GitHub Repos/PROJ300/Firmware/CPU Designs/Simple CPU/sv files/CU_counter.sv Line: 43
-Warning (13012): Latch CPU_regN:inst3|internal_reg[4] has unsafe behavior File: C:/Users/minec/Desktop/Work/GitHub Repos/PROJ300/Firmware/CPU Designs/Simple CPU/sv files/CPU_regN.sv Line: 20
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal CU_counter:inst12|counter_reg[1] File: C:/Users/minec/Desktop/Work/GitHub Repos/PROJ300/Firmware/CPU Designs/Simple CPU/sv files/CU_counter.sv Line: 43
-Warning (13012): Latch CPU_regN:inst3|internal_reg[5] has unsafe behavior File: C:/Users/minec/Desktop/Work/GitHub Repos/PROJ300/Firmware/CPU Designs/Simple CPU/sv files/CPU_regN.sv Line: 20
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal CU_counter:inst12|counter_reg[1] File: C:/Users/minec/Desktop/Work/GitHub Repos/PROJ300/Firmware/CPU Designs/Simple CPU/sv files/CU_counter.sv Line: 43
-Warning (13012): Latch CPU_regN:inst3|internal_reg[6] has unsafe behavior File: C:/Users/minec/Desktop/Work/GitHub Repos/PROJ300/Firmware/CPU Designs/Simple CPU/sv files/CPU_regN.sv Line: 20
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal CU_counter:inst12|counter_reg[1] File: C:/Users/minec/Desktop/Work/GitHub Repos/PROJ300/Firmware/CPU Designs/Simple CPU/sv files/CU_counter.sv Line: 43
-Warning (13012): Latch CPU_regN:inst3|internal_reg[7] has unsafe behavior File: C:/Users/minec/Desktop/Work/GitHub Repos/PROJ300/Firmware/CPU Designs/Simple CPU/sv files/CPU_regN.sv Line: 20
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal CU_counter:inst12|counter_reg[1] File: C:/Users/minec/Desktop/Work/GitHub Repos/PROJ300/Firmware/CPU Designs/Simple CPU/sv files/CU_counter.sv Line: 43
-Warning (13012): Latch CPU_regN:inst|internal_reg[0] has unsafe behavior File: C:/Users/minec/Desktop/Work/GitHub Repos/PROJ300/Firmware/CPU Designs/Simple CPU/sv files/CPU_regN.sv Line: 20
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal CU_counter:inst12|counter_reg[3] File: C:/Users/minec/Desktop/Work/GitHub Repos/PROJ300/Firmware/CPU Designs/Simple CPU/sv files/CU_counter.sv Line: 43
-Warning (13012): Latch CPU_regN:inst|internal_reg[1] has unsafe behavior File: C:/Users/minec/Desktop/Work/GitHub Repos/PROJ300/Firmware/CPU Designs/Simple CPU/sv files/CPU_regN.sv Line: 20
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal CU_counter:inst12|counter_reg[3] File: C:/Users/minec/Desktop/Work/GitHub Repos/PROJ300/Firmware/CPU Designs/Simple CPU/sv files/CU_counter.sv Line: 43
-Warning (13012): Latch CPU_regN:inst|internal_reg[2] has unsafe behavior File: C:/Users/minec/Desktop/Work/GitHub Repos/PROJ300/Firmware/CPU Designs/Simple CPU/sv files/CPU_regN.sv Line: 20
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal CU_counter:inst12|counter_reg[3] File: C:/Users/minec/Desktop/Work/GitHub Repos/PROJ300/Firmware/CPU Designs/Simple CPU/sv files/CU_counter.sv Line: 43
-Warning (13012): Latch CPU_regN:inst|internal_reg[3] has unsafe behavior File: C:/Users/minec/Desktop/Work/GitHub Repos/PROJ300/Firmware/CPU Designs/Simple CPU/sv files/CPU_regN.sv Line: 20
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal CU_counter:inst12|counter_reg[3] File: C:/Users/minec/Desktop/Work/GitHub Repos/PROJ300/Firmware/CPU Designs/Simple CPU/sv files/CU_counter.sv Line: 43
-Warning (13012): Latch CPU_regN:inst|internal_reg[4] has unsafe behavior File: C:/Users/minec/Desktop/Work/GitHub Repos/PROJ300/Firmware/CPU Designs/Simple CPU/sv files/CPU_regN.sv Line: 20
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal CU_counter:inst12|counter_reg[3] File: C:/Users/minec/Desktop/Work/GitHub Repos/PROJ300/Firmware/CPU Designs/Simple CPU/sv files/CU_counter.sv Line: 43
-Warning (13012): Latch CPU_regN:inst|internal_reg[5] has unsafe behavior File: C:/Users/minec/Desktop/Work/GitHub Repos/PROJ300/Firmware/CPU Designs/Simple CPU/sv files/CPU_regN.sv Line: 20
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal CU_counter:inst12|counter_reg[3] File: C:/Users/minec/Desktop/Work/GitHub Repos/PROJ300/Firmware/CPU Designs/Simple CPU/sv files/CU_counter.sv Line: 43
-Warning (13012): Latch CPU_regN:inst1|internal_reg[0] has unsafe behavior File: C:/Users/minec/Desktop/Work/GitHub Repos/PROJ300/Firmware/CPU Designs/Simple CPU/sv files/CPU_regN.sv Line: 20
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal CU_counter:inst12|counter_reg[1] File: C:/Users/minec/Desktop/Work/GitHub Repos/PROJ300/Firmware/CPU Designs/Simple CPU/sv files/CU_counter.sv Line: 43
-Warning (13012): Latch CPU_regN:inst2|internal_reg[0] has unsafe behavior File: C:/Users/minec/Desktop/Work/GitHub Repos/PROJ300/Firmware/CPU Designs/Simple CPU/sv files/CPU_regN.sv Line: 20
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal CU_counter:inst12|counter_reg[3] File: C:/Users/minec/Desktop/Work/GitHub Repos/PROJ300/Firmware/CPU Designs/Simple CPU/sv files/CU_counter.sv Line: 43
-Warning (13012): Latch CPU_regN:inst4|internal_reg[0] has unsafe behavior File: C:/Users/minec/Desktop/Work/GitHub Repos/PROJ300/Firmware/CPU Designs/Simple CPU/sv files/CPU_regN.sv Line: 20
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal CU_counter:inst12|counter_reg[3] File: C:/Users/minec/Desktop/Work/GitHub Repos/PROJ300/Firmware/CPU Designs/Simple CPU/sv files/CU_counter.sv Line: 43
-Warning (13012): Latch CPU_regN:inst4|internal_reg[1] has unsafe behavior File: C:/Users/minec/Desktop/Work/GitHub Repos/PROJ300/Firmware/CPU Designs/Simple CPU/sv files/CPU_regN.sv Line: 20
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal CU_counter:inst12|counter_reg[3] File: C:/Users/minec/Desktop/Work/GitHub Repos/PROJ300/Firmware/CPU Designs/Simple CPU/sv files/CU_counter.sv Line: 43
-Warning (13012): Latch CPU_regN:inst1|internal_reg[1] has unsafe behavior File: C:/Users/minec/Desktop/Work/GitHub Repos/PROJ300/Firmware/CPU Designs/Simple CPU/sv files/CPU_regN.sv Line: 20
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal CU_counter:inst12|counter_reg[1] File: C:/Users/minec/Desktop/Work/GitHub Repos/PROJ300/Firmware/CPU Designs/Simple CPU/sv files/CU_counter.sv Line: 43
-Warning (13012): Latch CPU_regN:inst2|internal_reg[1] has unsafe behavior File: C:/Users/minec/Desktop/Work/GitHub Repos/PROJ300/Firmware/CPU Designs/Simple CPU/sv files/CPU_regN.sv Line: 20
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal CU_counter:inst12|counter_reg[3] File: C:/Users/minec/Desktop/Work/GitHub Repos/PROJ300/Firmware/CPU Designs/Simple CPU/sv files/CU_counter.sv Line: 43
-Warning (13012): Latch CPU_regN:inst1|internal_reg[2] has unsafe behavior File: C:/Users/minec/Desktop/Work/GitHub Repos/PROJ300/Firmware/CPU Designs/Simple CPU/sv files/CPU_regN.sv Line: 20
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal CU_counter:inst12|counter_reg[1] File: C:/Users/minec/Desktop/Work/GitHub Repos/PROJ300/Firmware/CPU Designs/Simple CPU/sv files/CU_counter.sv Line: 43
-Warning (13012): Latch CPU_regN:inst2|internal_reg[2] has unsafe behavior File: C:/Users/minec/Desktop/Work/GitHub Repos/PROJ300/Firmware/CPU Designs/Simple CPU/sv files/CPU_regN.sv Line: 20
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal CU_counter:inst12|counter_reg[3] File: C:/Users/minec/Desktop/Work/GitHub Repos/PROJ300/Firmware/CPU Designs/Simple CPU/sv files/CU_counter.sv Line: 43
-Warning (13012): Latch CPU_regN:inst1|internal_reg[3] has unsafe behavior File: C:/Users/minec/Desktop/Work/GitHub Repos/PROJ300/Firmware/CPU Designs/Simple CPU/sv files/CPU_regN.sv Line: 20
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal CU_counter:inst12|counter_reg[1] File: C:/Users/minec/Desktop/Work/GitHub Repos/PROJ300/Firmware/CPU Designs/Simple CPU/sv files/CU_counter.sv Line: 43
-Warning (13012): Latch CPU_regN:inst2|internal_reg[3] has unsafe behavior File: C:/Users/minec/Desktop/Work/GitHub Repos/PROJ300/Firmware/CPU Designs/Simple CPU/sv files/CPU_regN.sv Line: 20
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal CU_counter:inst12|counter_reg[3] File: C:/Users/minec/Desktop/Work/GitHub Repos/PROJ300/Firmware/CPU Designs/Simple CPU/sv files/CU_counter.sv Line: 43
-Warning (13012): Latch CPU_regN:inst1|internal_reg[4] has unsafe behavior File: C:/Users/minec/Desktop/Work/GitHub Repos/PROJ300/Firmware/CPU Designs/Simple CPU/sv files/CPU_regN.sv Line: 20
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal CU_counter:inst12|counter_reg[1] File: C:/Users/minec/Desktop/Work/GitHub Repos/PROJ300/Firmware/CPU Designs/Simple CPU/sv files/CU_counter.sv Line: 43
-Warning (13012): Latch CPU_regN:inst2|internal_reg[4] has unsafe behavior File: C:/Users/minec/Desktop/Work/GitHub Repos/PROJ300/Firmware/CPU Designs/Simple CPU/sv files/CPU_regN.sv Line: 20
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal CU_counter:inst12|counter_reg[3] File: C:/Users/minec/Desktop/Work/GitHub Repos/PROJ300/Firmware/CPU Designs/Simple CPU/sv files/CU_counter.sv Line: 43
-Warning (13012): Latch CPU_regN:inst1|internal_reg[5] has unsafe behavior File: C:/Users/minec/Desktop/Work/GitHub Repos/PROJ300/Firmware/CPU Designs/Simple CPU/sv files/CPU_regN.sv Line: 20
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal CU_counter:inst12|counter_reg[1] File: C:/Users/minec/Desktop/Work/GitHub Repos/PROJ300/Firmware/CPU Designs/Simple CPU/sv files/CU_counter.sv Line: 43
-Warning (13012): Latch CPU_regN:inst2|internal_reg[5] has unsafe behavior File: C:/Users/minec/Desktop/Work/GitHub Repos/PROJ300/Firmware/CPU Designs/Simple CPU/sv files/CPU_regN.sv Line: 20
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal CU_counter:inst12|counter_reg[3] File: C:/Users/minec/Desktop/Work/GitHub Repos/PROJ300/Firmware/CPU Designs/Simple CPU/sv files/CU_counter.sv Line: 43
-Warning (13012): Latch CPU_regN:inst2|internal_reg[6] has unsafe behavior File: C:/Users/minec/Desktop/Work/GitHub Repos/PROJ300/Firmware/CPU Designs/Simple CPU/sv files/CPU_regN.sv Line: 20
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal CU_counter:inst12|counter_reg[3] File: C:/Users/minec/Desktop/Work/GitHub Repos/PROJ300/Firmware/CPU Designs/Simple CPU/sv files/CU_counter.sv Line: 43
-Warning (13012): Latch CPU_regN:inst2|internal_reg[7] has unsafe behavior File: C:/Users/minec/Desktop/Work/GitHub Repos/PROJ300/Firmware/CPU Designs/Simple CPU/sv files/CPU_regN.sv Line: 20
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal CU_counter:inst12|counter_reg[3] File: C:/Users/minec/Desktop/Work/GitHub Repos/PROJ300/Firmware/CPU Designs/Simple CPU/sv files/CU_counter.sv Line: 43
 Info (286030): Timing-Driven Synthesis is running
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
-Info (21057): Implemented 159 device resources after synthesis - the final resource count might be different
+Info (21057): Implemented 134 device resources after synthesis - the final resource count might be different
     Info (21058): Implemented 2 input pins
     Info (21059): Implemented 16 output pins
-    Info (21061): Implemented 141 logic cells
-Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 87 warnings
+    Info (21061): Implemented 116 logic cells
+Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 22 warnings
     Info: Peak virtual memory: 4896 megabytes
-    Info: Processing ended: Thu Feb 22 21:39:14 2024
+    Info: Processing ended: Fri Feb 23 00:33:24 2024
     Info: Elapsed time: 00:00:05
     Info: Total CPU time (on all processors): 00:00:06
 

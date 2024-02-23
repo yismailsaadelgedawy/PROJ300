@@ -1,8 +1,8 @@
 -- CPU ISA --
 
 Instruction     Instructon Code     Operation
-ADD             00AAAAAA            AC <- AC + M[AAAAAA]    
-AND             01AAAAAA            AC <- AC & M[AAAAAA]
+ADD             00AAAAAA            AC <- AC + AAAAAA   
+AND             01AAAAAA            AC <- AC & AAAAAA
 JMP             10AAAAAA            GOTO AAAAAA
 INC             11XXXXXX            AC <- AC + 1
 

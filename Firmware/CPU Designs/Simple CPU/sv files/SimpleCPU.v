@@ -15,16 +15,18 @@
 
 // PROGRAM		"Quartus Prime"
 // VERSION		"Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition"
-// CREATED		"Thu Feb 22 21:10:28 2024"
+// CREATED		"Thu Feb 22 23:52:32 2024"
 
 module SimpleCPU(
 	CLK,
-	RST
+	RST,
+	CLK_HALF
 );
 
 
 input wire	CLK;
 input wire	RST;
+input wire	CLK_HALF;
 
 // control signals
 wire	ARLOAD;
@@ -68,12 +70,11 @@ assign	SYNTHESIZED_WIRE_2 = 0;
 
 
 
-
 CPU_regN	b2v_inst(
 	.inc(SYNTHESIZED_WIRE_0),
 	.load(ARLOAD),
 	.rst(sw_rst),
-	.clk(clk_btn),
+	.clk(CLK_HALF),
 	.d(SYSTEM_BUS[5:0]),
 	.q(AR[5:0]));
 	defparam	b2v_inst.N = 6;
@@ -83,7 +84,7 @@ CPU_regN	b2v_inst1(
 	.inc(PCINC),
 	.load(PCLOAD),
 	.rst(sw_rst),
-	.clk(clk_btn),
+	.clk(CLK_HALF),
 	.d(SYSTEM_BUS[5:0]),
 	.q(PCBUS[5:0]));
 	defparam	b2v_inst1.N = 6;
@@ -108,7 +109,7 @@ CU_counter	b2v_inst12(
 	.load(COUNTER_LD),
 	.inc(COUNTER_INC),
 	.clr(COUNTER_CLR),
-	.clk(clk_btn),
+	.clk(CLK_HALF),
 	.rst(sw_rst),
 	.opcode(OPCODE),
 	.q(cu_cnt));
@@ -139,7 +140,7 @@ CPU_regN	b2v_inst2(
 	.inc(SYNTHESIZED_WIRE_1),
 	.load(DRLOAD),
 	.rst(sw_rst),
-	.clk(clk_btn),
+	.clk(CLK_HALF),
 	.d(SYSTEM_BUS),
 	.q(DRBUS));
 	defparam	b2v_inst2.N = 8;
@@ -149,7 +150,7 @@ CPU_regN	b2v_inst3(
 	.inc(ACINC),
 	.load(ACLOAD),
 	.rst(sw_rst),
-	.clk(clk_btn),
+	.clk(CLK_HALF),
 	.d(ALU),
 	.q(AC));
 	defparam	b2v_inst3.N = 8;
@@ -183,8 +184,8 @@ testROM	b2v_inst9(
 	defparam	b2v_inst9.ADDR_WIDTH = 6;
 	defparam	b2v_inst9.DATA_WIDTH = 8;
 
-assign	clk_btn = CLK;
 assign	sw_rst = RST;
+assign	clk_btn = CLK;
 assign	AR[7:6] = 2'b00;
 assign	PCBUS[7:6] = 2'b00;
 

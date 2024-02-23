@@ -1,10 +1,10 @@
-Analysis & Synthesis Status : Successful - Thu Feb 22 21:39:14 2024
+Analysis & Synthesis Status : Successful - Fri Feb 23 00:33:24 2024
 Quartus Prime Version : 20.1.1 Build 720 11/11/2020 SJ Lite Edition
 Revision Name : SimpleCPU
 Top-level Entity Name : SimpleCPU
 Family : Cyclone V
 Logic utilization (in ALMs) : N/A
-Total registers : 30
+Total registers : 58
 Total pins : 18
 Total virtual pins : 0
 Total block memory bits : 0

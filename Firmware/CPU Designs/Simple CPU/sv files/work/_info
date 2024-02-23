@@ -270,23 +270,23 @@ R6
 R7
 n@c@u_logic_tb
 vSimpleCPU
-!s110 1708636422
+!s110 1708646641
 !i10b 1
-!s100 _XV50W1Y[@4Vh:EDddkGC2
+!s100 7Be8UE;_5Knko8e>h:[;60
 R2
-Ihzg<4V>[Wm_4`A4WH_nAj2
+IZ?CVC0Uf1l>;bfAj0`XMJ0
 R3
 R0
-w1708636406
+w1708646623
 8C:/Users/minec/Desktop/Work/GitHub Repos/PROJ300/Firmware/CPU Designs/Simple CPU/sv files/SimpleCPU.v
 FC:/Users/minec/Desktop/Work/GitHub Repos/PROJ300/Firmware/CPU Designs/Simple CPU/sv files/SimpleCPU.v
-!i122 66
-L0 20 172
+!i122 72
+L0 20 173
 R5
 r1
 !s85 0
 31
-!s108 1708636421.000000
+!s108 1708646641.000000
 !s107 C:/Users/minec/Desktop/Work/GitHub Repos/PROJ300/Firmware/CPU Designs/Simple CPU/sv files/SimpleCPU.v|
 !s90 -reportprogress|300|-work|work|C:/Users/minec/Desktop/Work/GitHub Repos/PROJ300/Firmware/CPU Designs/Simple CPU/sv files/SimpleCPU.v|
 !i113 1
@@ -295,24 +295,24 @@ R7
 n@simple@c@p@u
 vSimpleCPU_tb
 R1
-!s110 1708637065
+!s110 1708646121
 !i10b 1
-!s100 ]W43O2j]Dk[`C1lL;Hm?m1
+!s100 2Xf9<XBkW^V]YTzGEEbJF3
 R2
-IAOS7hd?K`?h`nheKF`oHk2
+I8N6=NCjNAVAlEL^Xz^NVf3
 R3
 S1
 R0
-w1708636919
+w1708646091
 8C:/Users/minec/Desktop/Work/GitHub Repos/PROJ300/Firmware/CPU Designs/Simple CPU/sv files/SimpleCPU_tb.sv
 FC:/Users/minec/Desktop/Work/GitHub Repos/PROJ300/Firmware/CPU Designs/Simple CPU/sv files/SimpleCPU_tb.sv
-!i122 67
-L0 1 41
+!i122 71
+L0 1 52
 R5
 r1
 !s85 0
 31
-!s108 1708637065.000000
+!s108 1708646121.000000
 !s107 C:/Users/minec/Desktop/Work/GitHub Repos/PROJ300/Firmware/CPU Designs/Simple CPU/sv files/SimpleCPU_tb.sv|
 !s90 -reportprogress|300|-work|work|C:/Users/minec/Desktop/Work/GitHub Repos/PROJ300/Firmware/CPU Designs/Simple CPU/sv files/SimpleCPU_tb.sv|
 !i113 1

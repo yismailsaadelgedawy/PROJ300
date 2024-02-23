@@ -9,7 +9,7 @@ module fine_clk_divN #(parameter f=500) (output logic clk_out, input logic clk_i
 
 
 // 25 bits
-logic [24:0] counter_reg;
+logic [24:0] counter_reg = 'd0;
 
 // clk_out = 50MHz/2*N -> N = 50MHz/2*f
 // where f = clk_out (desired output frequency)
