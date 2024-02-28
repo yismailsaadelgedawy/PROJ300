@@ -1,17 +1,21 @@
--- ISA ( instructions) -- 
+-- ISA -- 
 
 see spreadsheet
 
+16-bit operands
+32-bit max ALU and AC result (mul requires 2B to store result)
+5-bit opcode
+
 -- Registers -- 
 
-13 general purpose : r0 - r12 (16-bits)
+13 general purpose  : r0 - r12 (32-bits)
 2 operand registers : rop1, rop2 (16-bits)
-Temporary register : TR (16-bits)
-AR (12-bits)
+Temporary register  : TR (16-bits)
+AR (12-bits - 4096 addresses; split between instructions, stack and memory mapped registers)
 PC (12-bits)
-DR (36-bits)
+DR (37-bits)
 AC (32-bits)
-IR (4-bits)
+IR (5-bits)
 
 
 -- Execution Routines --
