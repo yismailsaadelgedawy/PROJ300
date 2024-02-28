@@ -75,4 +75,9 @@ result:
 	
 test:
 	.word 1
-	
+
+
+// resource utilisation // 
+
+// general purpose registers : 7
+// stack memory for variables

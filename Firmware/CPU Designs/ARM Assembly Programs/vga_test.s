@@ -154,6 +154,13 @@ button4:
 default:
 
 	b _start // while(1){} loop
-	
-	
-	
+
+
+
+
+
+
+// resource utilisation // 
+
+// general purpose registers : 10
+// memory mapping
