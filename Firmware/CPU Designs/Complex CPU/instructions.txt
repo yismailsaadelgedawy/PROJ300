@@ -1,0 +1,30 @@
+-- ISA ( instructions) -- 
+
+see spreadsheet
+
+-- Registers -- 
+
+13 general purpose : r0 - r12 (16-bits)
+2 operand registers : rop1, rop2 (16-bits)
+Temporary register : TR (16-bits)
+AR (12-bits)
+PC (12-bits)
+DR (36-bits)
+AC (32-bits)
+IR (4-bits)
+
+
+-- Execution Routines --
+
+fetch1 : AR <- PC
+fetch2 : DR <- M; PC <- PC + 1
+fetch3 : IR <- OPCODE; rop1 <- OP1BITS; rop2 <- OP2BITS
+
+nop1 : (do nothing)
+
+var1 : 
+
+
+
+-- Control Signals --
+
