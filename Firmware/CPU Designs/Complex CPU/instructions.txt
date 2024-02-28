@@ -4,7 +4,7 @@ see spreadsheet
 
 16-bit operands
 32-bit max ALU and AC result (mul requires 2B to store result)
-5-bit opcode
+4-bit opcode
 
 -- Registers -- 
 
