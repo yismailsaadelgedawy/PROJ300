@@ -11,7 +11,7 @@ see spreadsheet
 13 general purpose  : r0 - r12 (32-bits)
 2 operand registers : rop1, rop2 (16-bits)
 1 selector register : rsel (2-bits; used to choose between different versions of an instruction)
-Temporary register  : TR (16-bits)
+Temporary register  : TR1 (32-bits)
 NZCV register (4-bits)
 AR (12-bits - 4096 addresses; split between instructions, stack and memory mapped registers)
 PC (12-bits)
@@ -22,28 +22,31 @@ IR (4-bits)
 
 -- Execution Routines --
 
-N.B. data: rsel bit(s) choose between reg/imm(coming from rop2) or address/value
+N.B. data depends on select chip (see schematic)
 
 fetch1 : AR <- PC
 fetch2 : DR <- M; PC <- PC + 1
-fetch3 : IR <- DR[37..34]; rsel <- [33..32]; rop1 <- DR[31..16]; rop2 <- DR[15..0]
+fetch3 : IR <- DR[37..34]; rsel <- DR[33..32]; rop1 <- DR[31..16]; rop2 <- DR[15..0]
 
 nop1 : (do nothing)
 
-rst1 : assert rst line
-
-mov1 : r <- data 
+mov1 : r <- rop2 OR r <- r (depends on rsel)
 
 ldr1 : AR <- rop2
 ldr2 : r <- AR (stop here if address only needed)
-ldr3 : r <- M (if value needed)
+ldr3 : DR <- M 
+ldr4 : r <- DR (if value needed)
 
 str1 : AR <- rop2
-str2 : M <- data 
+str2 : TR <- r OR TR <- rop1 (depends on rsel)
+str3 : DR <- TR
+str4 : M <- DR
 
-cmp1 : data - r
+(sets NZCV; special form of sub instruction where rsel[1] = 1, and rsel[0] = 0, to choose r and rop2 as operands)
+cmp1 : AC <- rop2 - r 
+cmp2 : r <- AC
 
-b1 : PC <- rop2
+b1   : PC <- rop2
 
 bgt1 : PC <- rop2 (Z clear, N and V are the same)
 
@@ -51,17 +54,30 @@ blt1 : PC <- rop2 (N and V are different)
 
 beq1 : PC <- rop2 (Z set)
 
-(sets NZCV) add1 : r <- data + data
+(sets NZCV)
+add1 : AC <- data + data 
+add2 : r <- AC
 
-(sets NZCV) sub1 : r <- data - data
+(sets NZCV)
+sub1 : AC <- data - data 
+sub2 : r <- AC
 
-(sets NZCV) mul1 : r <- data * data
+(sets NZCV)
+mul1 : AC <- data * data 
+mul2 : r <- AC
 
-and1 : r <- data & data
+(sets NZCV)
+lsr1 : AC <- r >> rop2 
+lsr2 : r <- AC
 
-or1 : r <- data | data
+and1 : AC <- data & data 
+and2 : r <- AC
 
-mvn1 : r <- !data
+or1  : AC <- data | data 
+or2  : r <- AC
+
+mvn1 : AC <- !data 
+mvn2 : r <- AC
 
 
 
