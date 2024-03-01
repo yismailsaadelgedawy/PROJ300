@@ -20,7 +20,7 @@ AC (32-bits)
 IR (4-bits)
 
 
--- Execution Routines --
+-- Execution Routines (35 states) --
 
 N.B. data depends on select chip (see schematic)
 
@@ -30,15 +30,18 @@ fetch3 : IR <- DR[37..34]; rsel <- DR[33..32]; rop1 <- DR[31..16]; rop2 <- DR[15
 
 nop1 : (do nothing)
 
-mov1 : r <- rop2 OR r <- r (depends on rsel)
+*mov1 : r <- rop2 
+OR (depends on rsel)
+*mov1 : TR <- r
+*mov2 : r <- TR
 
 ldr1 : AR <- rop2
 ldr2 : r <- AR (stop here if address only needed)
-ldr3 : DR <- M 
-ldr4 : r <- DR (if value needed)
+*ldr3 : DR <- M 
+*ldr4 : r <- DR (if value needed)
 
 str1 : AR <- rop2
-str2 : TR <- r OR TR <- rop1 (depends on rsel)
+*str2 : TR <- r OR TR <- rop1 (depends on rsel)
 str3 : DR <- TR
 str4 : M <- DR
 
@@ -76,14 +79,64 @@ and2 : r <- AC
 or1  : AC <- data | data 
 or2  : r <- AC
 
-mvn1 : AC <- !data 
+mvn1 : AC <- !data
 mvn2 : r <- AC
 
 
-
+The execution routines labeled with the * mean that they are conditional
+The value of GPRLOAD and which execution routine * to execute is controlled by the CU
+So IR, rsel, rop1 and rop2 will be connected to the CU to figure that out
 
 
 -- Control Signals --
 
+Counter lines
+
+LD
+INC
+CLR
+
+
+Load lines
+
+RSELLOAD = fetch3
+ROP1LOAD = fetch3
+ROP2LOAD = fetch3
+TRLOAD   = mov1* | str2 
+ARLOAD   = fetch1 | ldr1 | str1
+PCLOAD   = b1 | bgt1 | blt1 | beq1
+DRLOAD   = fetch2 | ldr3* | str3
+ACLOAD   = cmp1 | add1 | sub1 | mul1 | lsr1 | and1 | or1 | mvn1
+IRLOAD   = fetch3
+GPRLOAD  = mov1* | mov2* | ldr2 | ldr4* | cmp2 | add2 | sub2 | mul2 | lsr2 | and2 | or2 | mvn2
+
+
+Increment lines
+
+PCINC = fetch2
+
+
+System bus access (number is the SYSTEMBUSSEL value)
+
+PC   = fetch1                                                                  0
+DR   = fetch3 | ldr4* | str4                                                   1
+AR   = ldr2                                                                    2
+AC   = cmp2 | add2 | sub2 | mul2 | lsr2 | and2 | or2 | mvn2                    3
+MEM  = fetch2 | ldr3*                                                          4
+TR   = mov2* | str3                                                            5
+rop1 = str2*                                                                   6
+rop2 = mov1 | ldr1 | str1 | b1 | bgt1 | blt1 | beq1                            7
+GPR1 = mov1* | str2*                                                           8
+
+
+ALU has 7 operations; ALUSEL is 3-bits (number is the ALUSEL value)
+
+0 : add1
+1 : sub1
+2 : mul1
+3 : lsr1
+4 : and1
+5 : or1
+6 : mvn1
 
 
