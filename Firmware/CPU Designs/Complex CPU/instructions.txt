@@ -144,6 +144,11 @@ Increment lines
 PCINC = fetch2
 
 
+Memory load line
+
+MEMLOAD = str4 | ALTstr4
+
+
 System bus access (RHS) (number is the SYSTEMBUSSEL value)
 
 PC   = fetch1                                                                                      0
