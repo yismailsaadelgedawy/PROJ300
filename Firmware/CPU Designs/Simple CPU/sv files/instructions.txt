@@ -61,8 +61,6 @@ ALUSEL is HIGH during AND2 (0 for ADD, 1 for AND)
 
 The READ signal (unneeded; equivalent to MEMBUS above)
 
-Memory is read during FETCH2; ADD1; AND1
-
 
 
 

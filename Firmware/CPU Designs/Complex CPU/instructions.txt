@@ -11,16 +11,16 @@ see spreadsheet
 13 general purpose  : r0 - r12 (32-bits)
 2 operand registers : rop1, rop2 (16-bits)
 1 selector register : rsel (2-bits; used to choose between different versions of an instruction)
-Temporary register  : TR1 (32-bits)
+Temporary register  : TR (32-bits)
 NZCV register (4-bits)
-AR (12-bits - 4096 addresses; split between instructions, stack and memory mapped registers)
-PC (12-bits)
+AR (16-bits - 65536 addresses; split between instructions, stack and memory mapped registers)
+PC (16-bits)
 DR (38-bits)
 AC (32-bits)
 IR (4-bits)
 
 
--- Execution Routines (35 states) --
+-- Execution Routines (40 states) --
 
 N.B. data depends on select chip (see schematic)
 
@@ -28,87 +28,115 @@ fetch1 : AR <- PC
 fetch2 : DR <- M; PC <- PC + 1
 fetch3 : IR <- DR[37..34]; rsel <- DR[33..32]; rop1 <- DR[31..16]; rop2 <- DR[15..0]
 
+
 nop1 : (do nothing)
 
-*mov1 : r <- rop2 
-OR (depends on rsel)
-*mov1 : TR <- r
-*mov2 : r <- TR
 
+rsel[0] == 0
+mov1 : r <- rop2
+
+rsel[0] == 1
+ALTmov1 : TR <- r
+ALTmov2 : r <- TR
+
+
+rsel[0] == 0
 ldr1 : AR <- rop2
-ldr2 : r <- AR (stop here if address only needed)
-*ldr3 : DR <- M 
-*ldr4 : r <- DR (if value needed)
+ldr2 : r <- AR
 
+rsel[0] == 1
+ALTldr1 : AR <- rop2
+ALTldr2 : r <- AR
+ALTldr3 : DR <- M 
+ALTldr4 : r <- DR 
+
+
+rsel[0] == 0
 str1 : AR <- rop2
-*str2 : TR <- r OR TR <- rop1 (depends on rsel)
+str2 : TR <- r
 str3 : DR <- TR
 str4 : M <- DR
 
-(sets NZCV; special form of sub instruction where rsel[1] = 1, and rsel[0] = 0, to choose r and rop2 as operands)
-cmp1 : AC <- rop2 - r 
-cmp2 : r <- AC
+rsel[0] == 1
+ALTstr1 : AR <- rop2
+ALTstr2 : TR <- rop1
+ALTstr3 : DR <- TR
+ALTstr4 : M <- DR
+
+
+(sets NZCV; special form of sub instruction where rsel[0] = 1 to set the second operand as r, and data depends on rsel[0])
+cmp1 : AC <- data - r
+
 
 b1   : PC <- rop2
 
+
 bgt1 : PC <- rop2 (Z clear, N and V are the same)
+
 
 blt1 : PC <- rop2 (N and V are different)
 
+
 beq1 : PC <- rop2 (Z set)
+
 
 (sets NZCV)
 add1 : AC <- data + data 
 add2 : r <- AC
 
+
 (sets NZCV)
 sub1 : AC <- data - data 
 sub2 : r <- AC
 
-(sets NZCV)
+
 mul1 : AC <- data * data 
 mul2 : r <- AC
 
-(sets NZCV)
+
 lsr1 : AC <- r >> rop2 
 lsr2 : r <- AC
+
 
 and1 : AC <- data & data 
 and2 : r <- AC
 
+
 or1  : AC <- data | data 
 or2  : r <- AC
+
 
 mvn1 : AC <- !data
 mvn2 : r <- AC
 
 
-The execution routines labeled with the * mean that they are conditional
-The value of GPRLOAD and which execution routine * to execute is controlled by the CU
+note the conditional/alternative execution routines!
 So IR, rsel, rop1 and rop2 will be connected to the CU to figure that out
+
+
 
 
 -- Control Signals --
 
 Counter lines
 
-LD
-INC
-CLR
+LD  = fetch3
+INC = fetch1 | fetch2 | ALTmov1 | ldr1 | ALTldr1 | ALTldr2 | ALTldr3 | str1 | str2 | str3 | ALTstr1 | ALTstr2 | ALTstr3 | add1 | sub1 | mul1 | lsr1 | and1 | or1 | mvn1
+CLR = mov1 | ALTmov2 | ldr2 | ALTldr4 | str4 | ALTstr4 | b1 | bgt1 | blt1 | beq1 | add2 | sub2 | mul2 | lsr2 | and2 | or2 | mvn2
 
 
-Load lines
+Load lines (LHS)
 
 RSELLOAD = fetch3
 ROP1LOAD = fetch3
 ROP2LOAD = fetch3
-TRLOAD   = mov1* | str2 
-ARLOAD   = fetch1 | ldr1 | str1
+TRLOAD   = ALTmov1 | str2 | ALTstr2
+ARLOAD   = fetch1 | ldr1 | ALTldr1 | str1 | ALTstr1
 PCLOAD   = b1 | bgt1 | blt1 | beq1
-DRLOAD   = fetch2 | ldr3* | str3
+DRLOAD   = fetch2 | ALTldr3 | str3 | ALTstr3
 ACLOAD   = cmp1 | add1 | sub1 | mul1 | lsr1 | and1 | or1 | mvn1
 IRLOAD   = fetch3
-GPRLOAD  = mov1* | mov2* | ldr2 | ldr4* | cmp2 | add2 | sub2 | mul2 | lsr2 | and2 | or2 | mvn2
+GPRLOAD  = mov1 | ALTmov2 | ldr2 | ALTldr2 | ALTldr4 | add2 | sub2 | mul2 | lsr2 | and2 | or2 | mvn2
 
 
 Increment lines
@@ -116,27 +144,27 @@ Increment lines
 PCINC = fetch2
 
 
-System bus access (number is the SYSTEMBUSSEL value)
+System bus access (RHS) (number is the SYSTEMBUSSEL value)
 
-PC   = fetch1                                                                  0
-DR   = fetch3 | ldr4* | str4                                                   1
-AR   = ldr2                                                                    2
-AC   = cmp2 | add2 | sub2 | mul2 | lsr2 | and2 | or2 | mvn2                    3
-MEM  = fetch2 | ldr3*                                                          4
-TR   = mov2* | str3                                                            5
-rop1 = str2*                                                                   6
-rop2 = mov1 | ldr1 | str1 | b1 | bgt1 | blt1 | beq1                            7
-GPR1 = mov1* | str2*                                                           8
+PC   = fetch1                                                                                      0
+DR   = fetch3 | ALTldr4 | str4 | ALTstr4                                                           1
+AR   = ldr2 | ALTldr2                                                                              2
+AC   = add2 | sub2 | mul2 | lsr2 | and2 | or2 | mvn2                                               3
+MEM  = fetch2 | ALTldr3                                                                            4
+TR   = mov2 | str3 | ALTstr3                                                                       5
+rop1 = ALTstr2                                                                                     6
+rop2 = mov1 | ldr1 | ALTldr1 | str1 | ALTstr1 | b1 | bgt1 | blt1 | beq1                            7
+GPR1 = mov1 | str2                                                                                 8
 
 
 ALU has 7 operations; ALUSEL is 3-bits (number is the ALUSEL value)
 
-0 : add1
-1 : sub1
-2 : mul1
-3 : lsr1
-4 : and1
-5 : or1
-6 : mvn1
+0 : add2
+1 : sub2
+2 : mul2
+3 : lsr2
+4 : and2
+5 : or2
+6 : mvn2
 
 
