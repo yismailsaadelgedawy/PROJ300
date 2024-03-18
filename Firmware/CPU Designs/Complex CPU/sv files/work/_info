@@ -1,0 +1,245 @@
+m255
+K4
+z2
+!s11f vlog 2020.1 2020.02, Feb 28 2020
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z0 dC:/Users/minec/Desktop/github/PROJ300/Firmware/CPU Designs/Complex CPU/sv files
+vALU
+Z1 DXx6 sv_std 3 std 0 22 VYECXdT12H8WgbUP_5Y6:3
+!s110 1710733170
+!i10b 1
+!s100 jDdh92a7gW;DSA1zMz^YP0
+Z2 !s11b Dg1SIo80bB@j0V0VzS_@n1
+IY75ff`MnzNj:Sz7YRA?<c3
+Z3 VDg1SIo80bB@j0V0VzS_@n1
+S1
+R0
+w1710732617
+8C:/Users/minec/Desktop/github/PROJ300/Firmware/CPU Designs/Complex CPU/sv files/ALU.sv
+FC:/Users/minec/Desktop/github/PROJ300/Firmware/CPU Designs/Complex CPU/sv files/ALU.sv
+!i122 0
+Z4 L0 1 84
+Z5 OV;L;2020.1;71
+r1
+!s85 0
+31
+!s108 1710733170.000000
+!s107 C:/Users/minec/Desktop/github/PROJ300/Firmware/CPU Designs/Complex CPU/sv files/ALU.sv|
+!s90 -reportprogress|300|-work|work|C:/Users/minec/Desktop/github/PROJ300/Firmware/CPU Designs/Complex CPU/sv files/ALU.sv|
+!i113 1
+Z6 o-work work
+Z7 tCvgOpt 0
+n@a@l@u
+vALU_tb
+R1
+!s110 1710733477
+!i10b 1
+!s100 96H?YgRiAVNfFHjbZIbHP1
+R2
+I@_[:hCjT2_G^R[RdU_=hT3
+R3
+S1
+R0
+w1710733473
+8C:/Users/minec/Desktop/github/PROJ300/Firmware/CPU Designs/Complex CPU/sv files/ALU_tb.sv
+FC:/Users/minec/Desktop/github/PROJ300/Firmware/CPU Designs/Complex CPU/sv files/ALU_tb.sv
+!i122 3
+L0 1 91
+R5
+r1
+!s85 0
+31
+!s108 1710733477.000000
+!s107 C:/Users/minec/Desktop/github/PROJ300/Firmware/CPU Designs/Complex CPU/sv files/ALU_tb.sv|
+!s90 -reportprogress|300|-work|work|C:/Users/minec/Desktop/github/PROJ300/Firmware/CPU Designs/Complex CPU/sv files/ALU_tb.sv|
+!i113 1
+R6
+R7
+n@a@l@u_tb
+vCU_counter
+R1
+!s110 1710738584
+!i10b 1
+!s100 mJmAFWkXQDfkVK[Xgg=IG0
+R2
+I2h_h>jcT[3z]Chfo7APi32
+R3
+S1
+R0
+w1710738581
+8C:/Users/minec/Desktop/github/PROJ300/Firmware/CPU Designs/Complex CPU/sv files/CU_counter.sv
+FC:/Users/minec/Desktop/github/PROJ300/Firmware/CPU Designs/Complex CPU/sv files/CU_counter.sv
+!i122 6
+L0 1 262
+R5
+r1
+!s85 0
+31
+!s108 1710738584.000000
+!s107 C:/Users/minec/Desktop/github/PROJ300/Firmware/CPU Designs/Complex CPU/sv files/CU_counter.sv|
+!s90 -reportprogress|300|-work|work|C:/Users/minec/Desktop/github/PROJ300/Firmware/CPU Designs/Complex CPU/sv files/CU_counter.sv|
+!i113 1
+R6
+R7
+n@c@u_counter
+vCU_counter_tb
+R1
+!s110 1710738748
+!i10b 1
+!s100 0XfR>YM[IROF=Pi0X[^N72
+R2
+INTCe1Nda=0FJaE^Q?Rf8d2
+R3
+S1
+R0
+w1710738736
+8C:/Users/minec/Desktop/github/PROJ300/Firmware/CPU Designs/Complex CPU/sv files/CU_counter_tb.sv
+FC:/Users/minec/Desktop/github/PROJ300/Firmware/CPU Designs/Complex CPU/sv files/CU_counter_tb.sv
+!i122 8
+L0 1 220
+R5
+r1
+!s85 0
+31
+!s108 1710738748.000000
+!s107 C:/Users/minec/Desktop/github/PROJ300/Firmware/CPU Designs/Complex CPU/sv files/CU_counter_tb.sv|
+!s90 -reportprogress|300|-work|work|C:/Users/minec/Desktop/github/PROJ300/Firmware/CPU Designs/Complex CPU/sv files/CU_counter_tb.sv|
+!i113 1
+R6
+R7
+n@c@u_counter_tb
+vCU_decoder
+R1
+!s110 1710739481
+!i10b 1
+!s100 [nbR7]PzjzDOSllQoU47o0
+R2
+IAHG2RISIOY_6cnR0cW@Fd1
+R3
+S1
+R0
+w1710739410
+8C:/Users/minec/Desktop/github/PROJ300/Firmware/CPU Designs/Complex CPU/sv files/CU_decoder.sv
+FC:/Users/minec/Desktop/github/PROJ300/Firmware/CPU Designs/Complex CPU/sv files/CU_decoder.sv
+!i122 9
+L0 1 43
+R5
+r1
+!s85 0
+31
+!s108 1710739481.000000
+!s107 C:/Users/minec/Desktop/github/PROJ300/Firmware/CPU Designs/Complex CPU/sv files/CU_decoder.sv|
+!s90 -reportprogress|300|-work|work|C:/Users/minec/Desktop/github/PROJ300/Firmware/CPU Designs/Complex CPU/sv files/CU_decoder.sv|
+!i113 1
+R6
+R7
+n@c@u_decoder
+vCU_decoder_tb
+R1
+!s110 1710739578
+!i10b 1
+!s100 QnW1=Ymlb6JHoYERU=`6X1
+R2
+In>=;m4=Hi<86c<8DJ?5b41
+R3
+S1
+R0
+w1710739569
+8C:/Users/minec/Desktop/github/PROJ300/Firmware/CPU Designs/Complex CPU/sv files/CU_decoder_tb.sv
+FC:/Users/minec/Desktop/github/PROJ300/Firmware/CPU Designs/Complex CPU/sv files/CU_decoder_tb.sv
+!i122 12
+L0 1 55
+R5
+r1
+!s85 0
+31
+!s108 1710739578.000000
+!s107 C:/Users/minec/Desktop/github/PROJ300/Firmware/CPU Designs/Complex CPU/sv files/CU_decoder_tb.sv|
+!s90 -reportprogress|300|-work|work|C:/Users/minec/Desktop/github/PROJ300/Firmware/CPU Designs/Complex CPU/sv files/CU_decoder_tb.sv|
+!i113 1
+R6
+R7
+n@c@u_decoder_tb
+vCU_logic
+R1
+!s110 1710740948
+!i10b 1
+!s100 Yk6ODgQP57S?7FZA_B14F0
+R2
+I5d;X8_SYM:hc:V`n><Vog1
+R3
+S1
+R0
+w1710740942
+8C:/Users/minec/Desktop/github/PROJ300/Firmware/CPU Designs/Complex CPU/sv files/CU_logic.sv
+FC:/Users/minec/Desktop/github/PROJ300/Firmware/CPU Designs/Complex CPU/sv files/CU_logic.sv
+!i122 15
+L0 1 256
+R5
+r1
+!s85 0
+31
+!s108 1710740947.000000
+!s107 C:/Users/minec/Desktop/github/PROJ300/Firmware/CPU Designs/Complex CPU/sv files/CU_logic.sv|
+!s90 -reportprogress|300|-work|work|C:/Users/minec/Desktop/github/PROJ300/Firmware/CPU Designs/Complex CPU/sv files/CU_logic.sv|
+!i113 1
+R6
+R7
+n@c@u_logic
+vsystemBus_muxN
+R1
+!s110 1710734541
+!i10b 1
+!s100 [I4D86jn`G@jfFA;RFM3R2
+R2
+I`2oZbO4MNW:kHEQj0i5go1
+R3
+S1
+R0
+w1710734150
+8C:/Users/minec/Desktop/github/PROJ300/Firmware/CPU Designs/Complex CPU/sv files/systemBus_muxN.sv
+FC:/Users/minec/Desktop/github/PROJ300/Firmware/CPU Designs/Complex CPU/sv files/systemBus_muxN.sv
+!i122 4
+R4
+R5
+r1
+!s85 0
+31
+!s108 1710734540.000000
+!s107 C:/Users/minec/Desktop/github/PROJ300/Firmware/CPU Designs/Complex CPU/sv files/systemBus_muxN.sv|
+!s90 -reportprogress|300|-work|work|C:/Users/minec/Desktop/github/PROJ300/Firmware/CPU Designs/Complex CPU/sv files/systemBus_muxN.sv|
+!i113 1
+R6
+R7
+nsystem@bus_mux@n
+vsystemBus_muxN_tb
+R1
+!s110 1710734557
+!i10b 1
+!s100 m`NoIenSk16hggXmTnzY@0
+R2
+IMR8[P`LmI;YFi6FzDbH9[0
+R3
+S1
+R0
+w1710734554
+8C:/Users/minec/Desktop/github/PROJ300/Firmware/CPU Designs/Complex CPU/sv files/systemBus_muxN_tb.sv
+FC:/Users/minec/Desktop/github/PROJ300/Firmware/CPU Designs/Complex CPU/sv files/systemBus_muxN_tb.sv
+!i122 5
+L0 1 104
+R5
+r1
+!s85 0
+31
+!s108 1710734557.000000
+!s107 C:/Users/minec/Desktop/github/PROJ300/Firmware/CPU Designs/Complex CPU/sv files/systemBus_muxN_tb.sv|
+!s90 -reportprogress|300|-work|work|C:/Users/minec/Desktop/github/PROJ300/Firmware/CPU Designs/Complex CPU/sv files/systemBus_muxN_tb.sv|
+!i113 1
+R6
+R7
+nsystem@bus_mux@n_tb

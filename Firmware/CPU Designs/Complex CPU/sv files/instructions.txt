@@ -13,8 +13,8 @@ see spreadsheet
 1 selector register : rsel (2-bits; used to choose between different versions of an instruction)
 Temporary register  : TR (32-bits)
 NZCV register (4-bits)
-AR (16-bits - 65536 addresses; split between instructions, stack and memory mapped registers)
-PC (16-bits)
+AR (12-bits - 4096 addresses; split between instructions, stack and memory mapped registers)
+PC (12-bits)
 DR (38-bits)
 AC (32-bits)
 IR (4-bits)
@@ -46,14 +46,14 @@ ldr2 : r <- AR
 
 rsel[0] == 1
 ALTldr1 : AR <- rop2
-ALTldr2 : r <- AR
+ALTldr2 : r <- AR       // not needed
 ALTldr3 : DR <- M 
 ALTldr4 : r <- DR 
 
 
 rsel[0] == 0
 str1 : AR <- rop2
-str2 : TR <- r
+str2 : TR <- r          // could optimise this out
 str3 : DR <- TR
 str4 : M <- DR
 
@@ -64,7 +64,7 @@ ALTstr3 : DR <- TR
 ALTstr4 : M <- DR
 
 
-(sets NZCV; special form of sub instruction where rsel[0] = 1 to set the second operand as r, and data depends on rsel[0])
+(sets NZCV; special form of sub instruction where rsel[1] = 1 to set the first operand as r, and data (second operand) depends on rsel[0])
 cmp1 : AC <- data - r
 
 
@@ -111,7 +111,7 @@ mvn2 : r <- AC
 
 
 note the conditional/alternative execution routines!
-So IR, rsel, rop1 and rop2 will be connected to the CU to figure that out
+So in addition to IR, rsel will also be connected to the CU to handle this!
 
 
 
@@ -156,10 +156,10 @@ DR   = fetch3 | ALTldr4 | str4 | ALTstr4                                        
 AR   = ldr2 | ALTldr2                                                                              2
 AC   = add2 | sub2 | mul2 | lsr2 | and2 | or2 | mvn2                                               3
 MEM  = fetch2 | ALTldr3                                                                            4
-TR   = mov2 | str3 | ALTstr3                                                                       5
+TR   = ALTmov2 | str3 | ALTstr3                                                                    5
 rop1 = ALTstr2                                                                                     6
 rop2 = mov1 | ldr1 | ALTldr1 | str1 | ALTstr1 | b1 | bgt1 | blt1 | beq1                            7
-GPR1 = mov1 | str2                                                                                 8
+GPR1 = ALTmov1 | str2                                                                              8
 
 
 ALU has 7 operations; ALUSEL is 3-bits (number is the ALUSEL value)
