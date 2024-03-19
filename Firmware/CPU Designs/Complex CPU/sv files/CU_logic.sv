@@ -15,6 +15,7 @@ module CU_logic #(parameter states=40) (
 
 );
 
+
 // makes debugging easier when testbenching
 typedef enum logic [5:0] {
 
@@ -320,8 +321,8 @@ always_comb begin
     // cmp1
     40'd2**21 : begin
 
-        ACLOAD = 1;
-        {RSELLOAD,ROP1LOAD,ROP2LOAD,TRLOAD,ARLOAD,PCLOAD,DRLOAD,IRLOAD,GPRLOAD,MEMLOAD,PCINC,COUNTER_LD,COUNTER_INC,COUNTER_CLR} = 'd0;
+        ACLOAD = 1; COUNTER_CLR = 1;
+        {RSELLOAD,ROP1LOAD,ROP2LOAD,TRLOAD,ARLOAD,PCLOAD,DRLOAD,IRLOAD,GPRLOAD,MEMLOAD,PCINC,COUNTER_LD,COUNTER_INC} = 'd0;
         ALUSEL = 'd0;
         SYSTEMBUSSEL = 'd0;
 
