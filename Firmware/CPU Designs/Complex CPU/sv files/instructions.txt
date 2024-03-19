@@ -163,13 +163,14 @@ GPR1 = ALTmov1 | str2                                                           
 
 
 ALU has 7 operations; ALUSEL is 3-bits (number is the ALUSEL value)
+ALUSEL asserted when AC is loaded!
 
-0 : add2
-1 : sub2
-2 : mul2
-3 : lsr2
-4 : and2
-5 : or2
-6 : mvn2
+0 : add1
+1 : sub1
+2 : mul1
+3 : lsr1
+4 : and1
+5 : or1
+6 : mvn1
 
 

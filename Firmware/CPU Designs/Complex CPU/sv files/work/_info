@@ -167,24 +167,24 @@ R7
 n@c@u_decoder_tb
 vCU_logic
 R1
-!s110 1710740948
+!s110 1710816047
 !i10b 1
-!s100 Yk6ODgQP57S?7FZA_B14F0
+!s100 7H<alPEb`gf;[mX?ReU7W1
 R2
-I5d;X8_SYM:hc:V`n><Vog1
+ID>Y]6;Oi8L8]kWgF47dN>0
 R3
 S1
 R0
-w1710740942
+w1710816037
 8C:/Users/minec/Desktop/github/PROJ300/Firmware/CPU Designs/Complex CPU/sv files/CU_logic.sv
 FC:/Users/minec/Desktop/github/PROJ300/Firmware/CPU Designs/Complex CPU/sv files/CU_logic.sv
-!i122 15
-L0 1 256
+!i122 17
+L0 1 578
 R5
 r1
 !s85 0
 31
-!s108 1710740947.000000
+!s108 1710816047.000000
 !s107 C:/Users/minec/Desktop/github/PROJ300/Firmware/CPU Designs/Complex CPU/sv files/CU_logic.sv|
 !s90 -reportprogress|300|-work|work|C:/Users/minec/Desktop/github/PROJ300/Firmware/CPU Designs/Complex CPU/sv files/CU_logic.sv|
 !i113 1
