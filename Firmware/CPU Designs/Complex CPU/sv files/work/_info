@@ -219,59 +219,57 @@ R7
 n@c@u_decoder_tb
 vCU_logic
 R1
-!s110 1710825216
+Z9 !s110 1710934606
 !i10b 1
-!s100 aZ8KhRRf>8`I5X7JR_3<D3
+!s100 ZzfPA<EC6^A<2oEklbYXe2
 R2
-InO<G3<GdDdF5[Lc`j8nc:1
+ITi9jaFh0=lF@P20zL[AV_3
 R3
 S1
 R0
-w1710823413
-8C:/Users/minec/Desktop/github/PROJ300/Firmware/CPU Designs/Complex CPU/sv files/CU_logic.sv
-FC:/Users/minec/Desktop/github/PROJ300/Firmware/CPU Designs/Complex CPU/sv files/CU_logic.sv
-!i122 22
-L0 1 570
+w1710825343
+8CU_logic.sv
+FCU_logic.sv
+!i122 122
+L0 1 571
 R5
 r1
 !s85 0
 31
-!s108 1710825216.000000
-!s107 C:/Users/minec/Desktop/github/PROJ300/Firmware/CPU Designs/Complex CPU/sv files/CU_logic.sv|
-!s90 -reportprogress|300|-work|work|C:/Users/minec/Desktop/github/PROJ300/Firmware/CPU Designs/Complex CPU/sv files/CU_logic.sv|
+Z10 !s108 1710934606.000000
+!s107 CU_logic.sv|
+!s90 -reportprogress|300|CU_logic.sv|
 !i113 1
-R6
 R7
 n@c@u_logic
 vCU_logic_tb
 R1
-!s110 1710826118
+R9
 !i10b 1
 !s100 _e9lQHO@>n35mD:MgoR`A0
 R2
-I>D2eea7C6Tnd@TTG<5cPH0
+Ii2OSTj^E2W]_S:Nbe@h7;2
 R3
 S1
 R0
-w1710826101
-8C:/Users/minec/Desktop/github/PROJ300/Firmware/CPU Designs/Complex CPU/sv files/CU_logic_tb.sv
-FC:/Users/minec/Desktop/github/PROJ300/Firmware/CPU Designs/Complex CPU/sv files/CU_logic_tb.sv
-!i122 24
+w1710826223
+8CU_logic_tb.sv
+FCU_logic_tb.sv
+!i122 123
 L0 1 432
 R5
 r1
 !s85 0
 31
-!s108 1710826118.000000
-!s107 C:/Users/minec/Desktop/github/PROJ300/Firmware/CPU Designs/Complex CPU/sv files/CU_logic_tb.sv|
-!s90 -reportprogress|300|-work|work|C:/Users/minec/Desktop/github/PROJ300/Firmware/CPU Designs/Complex CPU/sv files/CU_logic_tb.sv|
+R10
+!s107 CU_logic_tb.sv|
+!s90 -reportprogress|300|CU_logic_tb.sv|
 !i113 1
-R6
 R7
 n@c@u_logic_tb
 vflags_setter
 R1
-!s110 1710931762
+Z11 !s110 1710934396
 !i10b 1
 !s100 6ldB5KRKQg1cJ@Y2LD<F72
 R2
@@ -282,20 +280,20 @@ R0
 w1710921055
 8flags_setter.sv
 Fflags_setter.sv
-!i122 49
+!i122 118
 L0 1 180
 R5
 r1
 !s85 0
 31
-!s108 1710931761.000000
+Z12 !s108 1710934396.000000
 !s107 flags_setter.sv|
 !s90 -reportprogress|300|flags_setter.sv|
 !i113 1
 R7
 vflags_setter_tb
 R1
-!s110 1710931726
+R11
 !i10b 1
 !s100 @Q@GDQc;O6_nYJcDI183O2
 R2
@@ -303,16 +301,16 @@ IDmkAQkzYSA>`g>5HIXbcg1
 R3
 S1
 R0
-w1710929304
+w1710931775
 8flags_setter_tb.sv
 Fflags_setter_tb.sv
-!i122 48
+!i122 119
 L0 1 93
 R5
 r1
 !s85 0
 31
-!s108 1710931726.000000
+R12
 !s107 flags_setter_tb.sv|
 !s90 -reportprogress|300|flags_setter_tb.sv|
 !i113 1
