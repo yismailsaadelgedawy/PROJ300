@@ -49,7 +49,7 @@ w1710733473
 8C:/Users/minec/Desktop/github/PROJ300/Firmware/CPU Designs/Complex CPU/sv files/ALU_tb.sv
 FC:/Users/minec/Desktop/github/PROJ300/Firmware/CPU Designs/Complex CPU/sv files/ALU_tb.sv
 !i122 3
-Z8 L0 1 91
+L0 1 91
 R5
 r1
 !s85 0
@@ -71,7 +71,7 @@ IHPX?daVd4[ACbD06[i9fU3
 R3
 S1
 R0
-Z9 w1709322684
+Z8 w1709322684
 8C:/Users/minec/Desktop/github/PROJ300/Firmware/CPU Designs/Complex CPU/sv files/CPU_regN.sv
 FC:/Users/minec/Desktop/github/PROJ300/Firmware/CPU Designs/Complex CPU/sv files/CPU_regN.sv
 !i122 25
@@ -97,7 +97,7 @@ I53la1Vfo;;OdC^=ho4lhb3
 R3
 S1
 R0
-R9
+R8
 8C:/Users/minec/Desktop/github/PROJ300/Firmware/CPU Designs/Complex CPU/sv files/CPU_regN_tb.sv
 FC:/Users/minec/Desktop/github/PROJ300/Firmware/CPU Designs/Complex CPU/sv files/CPU_regN_tb.sv
 !i122 26
@@ -271,53 +271,51 @@ R7
 n@c@u_logic_tb
 vflags_setter
 R1
-!s110 1710921114
+!s110 1710931762
 !i10b 1
 !s100 6ldB5KRKQg1cJ@Y2LD<F72
 R2
-IV^7Z^Wm?n@6IZV@Fg1REz1
+ImWN9_i:ejiOc^0eB^aJFL1
 R3
 S1
 R0
 w1710921055
-8C:/Users/minec/Desktop/github/PROJ300/Firmware/CPU Designs/Complex CPU/sv files/flags_setter.sv
-FC:/Users/minec/Desktop/github/PROJ300/Firmware/CPU Designs/Complex CPU/sv files/flags_setter.sv
-!i122 38
+8flags_setter.sv
+Fflags_setter.sv
+!i122 49
 L0 1 180
 R5
 r1
 !s85 0
 31
-!s108 1710921114.000000
-!s107 C:/Users/minec/Desktop/github/PROJ300/Firmware/CPU Designs/Complex CPU/sv files/flags_setter.sv|
-!s90 -reportprogress|300|-work|work|C:/Users/minec/Desktop/github/PROJ300/Firmware/CPU Designs/Complex CPU/sv files/flags_setter.sv|
+!s108 1710931761.000000
+!s107 flags_setter.sv|
+!s90 -reportprogress|300|flags_setter.sv|
 !i113 1
-R6
 R7
 vflags_setter_tb
 R1
-!s110 1710921117
+!s110 1710931726
 !i10b 1
-!s100 7I416:TYj`EQ;WD80RQ>g1
+!s100 @Q@GDQc;O6_nYJcDI183O2
 R2
-I7m?J_O3BzQTdNn^IfFieK2
+IDmkAQkzYSA>`g>5HIXbcg1
 R3
 S1
 R0
-w1710921072
-8C:/Users/minec/Desktop/github/PROJ300/Firmware/CPU Designs/Complex CPU/sv files/flags_setter_tb.sv
-FC:/Users/minec/Desktop/github/PROJ300/Firmware/CPU Designs/Complex CPU/sv files/flags_setter_tb.sv
-!i122 39
-R8
+w1710929304
+8flags_setter_tb.sv
+Fflags_setter_tb.sv
+!i122 48
+L0 1 93
 R5
 r1
 !s85 0
 31
-!s108 1710921117.000000
-!s107 C:/Users/minec/Desktop/github/PROJ300/Firmware/CPU Designs/Complex CPU/sv files/flags_setter_tb.sv|
-!s90 -reportprogress|300|-work|work|C:/Users/minec/Desktop/github/PROJ300/Firmware/CPU Designs/Complex CPU/sv files/flags_setter_tb.sv|
+!s108 1710931726.000000
+!s107 flags_setter_tb.sv|
+!s90 -reportprogress|300|flags_setter_tb.sv|
 !i113 1
-R6
 R7
 vsystemBus_muxN
 R1

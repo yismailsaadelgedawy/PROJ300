@@ -34,6 +34,8 @@ flags_setter dut (
 // testing
 initial begin
 
+    
+
     // reset condition
     rst = 1;
     AC_update = 0;
