@@ -270,51 +270,51 @@ R6
 R7
 n@c@u_logic_tb
 vSimpleCPU
-!s110 1708646641
+!s110 1710988224
 !i10b 1
 !s100 7Be8UE;_5Knko8e>h:[;60
 R2
-IZ?CVC0Uf1l>;bfAj0`XMJ0
+IhM3U?DZ_k`1?OL`1HAV@52
 R3
-R0
-w1708646623
-8C:/Users/minec/Desktop/Work/GitHub Repos/PROJ300/Firmware/CPU Designs/Simple CPU/sv files/SimpleCPU.v
-FC:/Users/minec/Desktop/Work/GitHub Repos/PROJ300/Firmware/CPU Designs/Simple CPU/sv files/SimpleCPU.v
-!i122 72
+Z9 dC:/Users/minec/Desktop/github/PROJ300/Firmware/CPU Designs/Simple CPU/sv files
+Z10 w1709322684
+8C:/Users/minec/Desktop/github/PROJ300/Firmware/CPU Designs/Simple CPU/sv files/SimpleCPU.v
+FC:/Users/minec/Desktop/github/PROJ300/Firmware/CPU Designs/Simple CPU/sv files/SimpleCPU.v
+!i122 70
 L0 20 173
 R5
 r1
 !s85 0
 31
-!s108 1708646641.000000
-!s107 C:/Users/minec/Desktop/Work/GitHub Repos/PROJ300/Firmware/CPU Designs/Simple CPU/sv files/SimpleCPU.v|
-!s90 -reportprogress|300|-work|work|C:/Users/minec/Desktop/Work/GitHub Repos/PROJ300/Firmware/CPU Designs/Simple CPU/sv files/SimpleCPU.v|
+!s108 1710988224.000000
+!s107 C:/Users/minec/Desktop/github/PROJ300/Firmware/CPU Designs/Simple CPU/sv files/SimpleCPU.v|
+!s90 -reportprogress|300|-work|work|C:/Users/minec/Desktop/github/PROJ300/Firmware/CPU Designs/Simple CPU/sv files/SimpleCPU.v|
 !i113 1
 R6
 R7
 n@simple@c@p@u
 vSimpleCPU_tb
 R1
-!s110 1708646121
+!s110 1710988227
 !i10b 1
 !s100 2Xf9<XBkW^V]YTzGEEbJF3
 R2
-I8N6=NCjNAVAlEL^Xz^NVf3
+IbSIhKXgbNW9Yk>HMbdkRV1
 R3
 S1
-R0
-w1708646091
-8C:/Users/minec/Desktop/Work/GitHub Repos/PROJ300/Firmware/CPU Designs/Simple CPU/sv files/SimpleCPU_tb.sv
-FC:/Users/minec/Desktop/Work/GitHub Repos/PROJ300/Firmware/CPU Designs/Simple CPU/sv files/SimpleCPU_tb.sv
+R9
+R10
+8C:/Users/minec/Desktop/github/PROJ300/Firmware/CPU Designs/Simple CPU/sv files/SimpleCPU_tb.sv
+FC:/Users/minec/Desktop/github/PROJ300/Firmware/CPU Designs/Simple CPU/sv files/SimpleCPU_tb.sv
 !i122 71
 L0 1 52
 R5
 r1
 !s85 0
 31
-!s108 1708646121.000000
-!s107 C:/Users/minec/Desktop/Work/GitHub Repos/PROJ300/Firmware/CPU Designs/Simple CPU/sv files/SimpleCPU_tb.sv|
-!s90 -reportprogress|300|-work|work|C:/Users/minec/Desktop/Work/GitHub Repos/PROJ300/Firmware/CPU Designs/Simple CPU/sv files/SimpleCPU_tb.sv|
+!s108 1710988227.000000
+!s107 C:/Users/minec/Desktop/github/PROJ300/Firmware/CPU Designs/Simple CPU/sv files/SimpleCPU_tb.sv|
+!s90 -reportprogress|300|-work|work|C:/Users/minec/Desktop/github/PROJ300/Firmware/CPU Designs/Simple CPU/sv files/SimpleCPU_tb.sv|
 !i113 1
 R6
 R7
