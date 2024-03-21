@@ -15,7 +15,7 @@
 
 // PROGRAM		"Quartus Prime"
 // VERSION		"Version 20.1.0 Build 711 06/05/2020 SJ Lite Edition"
-// CREATED		"Thu Mar 21 08:23:03 2024"
+// CREATED		"Thu Mar 21 09:59:11 2024"
 
 module GPR_selector(
 	rst,
@@ -37,8 +37,32 @@ output wire	[31:0] GPR_out1;
 output wire	[31:0] GPR_out2;
 
 wire	clk;
-wire	data;
-wire	r;
+wire	[32:0] rA;
+wire	[32:0] rB;
+wire	[32:0] rC;
+wire	[32:0] rD;
+wire	[32:0] rE;
+wire	[31:0] regA;
+wire	[31:0] regB;
+wire	[31:0] regC;
+wire	[31:0] regD;
+wire	[31:0] regE;
+wire	[31:0] regF;
+wire	[31:0] regG;
+wire	[31:0] regH;
+wire	[31:0] regI;
+wire	[31:0] regJ;
+wire	[31:0] regK;
+wire	[31:0] regL;
+wire	[31:0] regM;
+wire	[32:0] rF;
+wire	[32:0] rG;
+wire	[32:0] rH;
+wire	[32:0] rI;
+wire	[32:0] rJ;
+wire	[32:0] rK;
+wire	[32:0] rL;
+wire	[32:0] rM;
 wire	sel0;
 wire	sel1;
 wire	sel2;
@@ -76,172 +100,204 @@ assign	SYNTHESIZED_WIRE_10 = 0;
 assign	SYNTHESIZED_WIRE_11 = 0;
 assign	SYNTHESIZED_WIRE_12 = 0;
 wire	[3:0] GDFX_TEMP_SIGNAL_0;
-wire	[3:0] GDFX_TEMP_SIGNAL_1;
-wire	[3:0] GDFX_TEMP_SIGNAL_2;
 
 
-assign	GDFX_TEMP_SIGNAL_0 = {sel23,sel22,sel21,sel20};
-assign	GDFX_TEMP_SIGNAL_1 = {sel3,sel2,sel1,sel0};
-assign	GDFX_TEMP_SIGNAL_2 = {sel3,sel2,sel1,sel0};
+assign	GDFX_TEMP_SIGNAL_0 = {sel3,sel2,sel1,sel0};
 
 
-GPR_MUX	b2v_inst(
-	.r(r),
+GPR_DEMUX	b2v_inst(
+	.data_in(GPR_in),
 	.sel(GDFX_TEMP_SIGNAL_0),
-	.data_out(GPR_out2));
+	.rA(rA),
+	.rB(rB),
+	.rC(rC),
+	.rD(rD),
+	.rE(rE),
+	.rF(rF),
+	.rG(rG),
+	.rH(rH),
+	.rI(rI),
+	.rJ(rJ),
+	.rK(rK),
+	.rL(rL),
+	.rM(rM));
 
 
 
 CPU_regN	b2v_inst11(
 	.inc(SYNTHESIZED_WIRE_0),
-	.load(data[3][0]),
+	.load(rD[0]),
 	.rst(sw_rst),
 	.clk(clk),
-	.d(data[3][32:1]),
-	.q(r[3][31:0]));
+	.d(rD[32:1]),
+	.q(regD));
 	defparam	b2v_inst11.N = 32;
 
 
 
 CPU_regN	b2v_inst13(
 	.inc(SYNTHESIZED_WIRE_1),
-	.load(data[4][0:0]),
+	.load(rE[0]),
 	.rst(sw_rst),
 	.clk(clk),
-	.d(data[4][32:1]),
-	.q(r[4][31:0]));
+	.d(rE[32:1]),
+	.q(regE));
 	defparam	b2v_inst13.N = 32;
 
 
 
 CPU_regN	b2v_inst15(
 	.inc(SYNTHESIZED_WIRE_2),
-	.load(data[5][0:0]),
+	.load(rF[0]),
 	.rst(sw_rst),
 	.clk(clk),
-	.d(data[5][32:1]),
-	.q(r[5][31:0]));
+	.d(rF[32:1]),
+	.q(regF));
 	defparam	b2v_inst15.N = 32;
 
 
 
 CPU_regN	b2v_inst17(
 	.inc(SYNTHESIZED_WIRE_3),
-	.load(data[6][0:0]),
+	.load(rG[0]),
 	.rst(sw_rst),
 	.clk(clk),
-	.d(data[6][32:1]),
-	.q(r[6][31:0]));
+	.d(rG[32:1]),
+	.q(regG));
 	defparam	b2v_inst17.N = 32;
 
 
 
 CPU_regN	b2v_inst19(
 	.inc(SYNTHESIZED_WIRE_4),
-	.load(data[7][0:0]),
+	.load(rH[0]),
 	.rst(sw_rst),
 	.clk(clk),
-	.d(data[7][32:1]),
-	.q(r[7][31:0]));
+	.d(rH[32:1]),
+	.q(regH));
 	defparam	b2v_inst19.N = 32;
+
+
+GPR_MUX	b2v_inst2(
+	.rA(regA),
+	.rB(regB),
+	.rC(regC),
+	.rD(regD),
+	.rE(regE),
+	.rF(regF),
+	.rG(regG),
+	.rH(regH),
+	.rI(regI),
+	.rJ(regJ),
+	.rK(regK),
+	.rL(regL),
+	.rM(regM),
+	.sel(rop1),
+	.data_out(GPR_out1));
 
 
 
 CPU_regN	b2v_inst21(
 	.inc(SYNTHESIZED_WIRE_5),
-	.load(data[8][0:0]),
+	.load(rI[0]),
 	.rst(sw_rst),
 	.clk(clk),
-	.d(data[8][32:1]),
-	.q(r[8][31:0]));
+	.d(rI[32:1]),
+	.q(regI));
 	defparam	b2v_inst21.N = 32;
 
 
 
 CPU_regN	b2v_inst23(
 	.inc(SYNTHESIZED_WIRE_6),
-	.load(data[9][0:0]),
+	.load(rJ[0]),
 	.rst(sw_rst),
 	.clk(clk),
-	.d(data[9][32:1]),
-	.q(r[9][31:0]));
+	.d(rJ[32:1]),
+	.q(regJ));
 	defparam	b2v_inst23.N = 32;
 
 
 
 CPU_regN	b2v_inst25(
 	.inc(SYNTHESIZED_WIRE_7),
-	.load(data[10][0:0]),
+	.load(rK[0]),
 	.rst(sw_rst),
 	.clk(clk),
-	.d(data[10][32:1]),
-	.q(r[10][31:0]));
+	.d(rK[32:1]),
+	.q(regK));
 	defparam	b2v_inst25.N = 32;
 
 
 
 CPU_regN	b2v_inst27(
 	.inc(SYNTHESIZED_WIRE_8),
-	.load(data[11][0:0]),
+	.load(rL[0]),
 	.rst(sw_rst),
 	.clk(clk),
-	.d(data[11][32:1]),
-	.q(r[11][31:0]));
+	.d(rL[32:1]),
+	.q(regL));
 	defparam	b2v_inst27.N = 32;
 
 
 
 CPU_regN	b2v_inst29(
 	.inc(SYNTHESIZED_WIRE_9),
-	.load(data[12][0:0]),
+	.load(rM[0]),
 	.rst(sw_rst),
 	.clk(clk),
-	.d(data[12][32:1]),
-	.q(r[12][31:0]));
+	.d(rM[32:1]),
+	.q(regM));
 	defparam	b2v_inst29.N = 32;
 
 
+GPR_MUX	b2v_inst3(
+	.rA(regA),
+	.rB(regB),
+	.rC(regC),
+	.rD(regD),
+	.rE(regE),
+	.rF(regF),
+	.rG(regG),
+	.rH(regH),
+	.rI(regI),
+	.rJ(regJ),
+	.rK(regK),
+	.rL(regL),
+	.rM(regM),
+	.sel(rop2),
+	.data_out(GPR_out2));
 
-GPR_DEMUX	b2v_inst4(
-	.data_in(GPR_in),
-	.sel(GDFX_TEMP_SIGNAL_1),
-	.r(data));
 
 
 CPU_regN	b2v_inst5(
 	.inc(SYNTHESIZED_WIRE_10),
-	.load(data[0][0:0]),
+	.load(rA[0]),
 	.rst(sw_rst),
 	.clk(clk),
-	.d(data[0][32:1]),
-	.q(r[0][31:0]));
+	.d(rA[32:1]),
+	.q(regA));
 	defparam	b2v_inst5.N = 32;
-
-
-GPR_MUX	b2v_inst6(
-	.r(r),
-	.sel(GDFX_TEMP_SIGNAL_2),
-	.data_out(GPR_out1));
 
 
 CPU_regN	b2v_inst7(
 	.inc(SYNTHESIZED_WIRE_11),
-	.load(data[1][0:0]),
+	.load(rB[0]),
 	.rst(sw_rst),
 	.clk(clk),
-	.d(data[1][32:1]),
-	.q(r[1][31:0]));
+	.d(rB[32:1]),
+	.q(regB));
 	defparam	b2v_inst7.N = 32;
 
 
 
 CPU_regN	b2v_inst9(
 	.inc(SYNTHESIZED_WIRE_12),
-	.load(data[2][0:0]),
+	.load(rC[0]),
 	.rst(sw_rst),
 	.clk(clk),
-	.d(data[2][32:1]),
-	.q(r[2][31:0]));
+	.d(rC[32:1]),
+	.q(regC));
 	defparam	b2v_inst9.N = 32;
 
 
@@ -250,10 +306,6 @@ assign	clk = clk_50;
 assign	sel0 = rop1[0];
 assign	sel1 = rop1[1];
 assign	sel2 = rop1[2];
-assign	sel20 = rop2[0];
-assign	sel21 = rop2[1];
-assign	sel22 = rop2[2];
-assign	sel23 = rop2[3];
 assign	sel3 = rop1[3];
 
 endmodule

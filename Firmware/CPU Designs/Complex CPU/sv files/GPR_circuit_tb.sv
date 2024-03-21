@@ -1,5 +1,7 @@
 module GPR_circuit_tb;
 
+// testing just the GPR circuit (concatenator + selector)
+
 // internal wires
 
 // in
@@ -106,6 +108,17 @@ initial begin
     for(i=0;i<13;i++) begin
 
         rop1 = i; rop2 = i;
+        #10ns;
+       
+    end
+
+    rop1 = 0;
+
+    $display("\n///////// displaying data on GPR_out2 only /////////\n");
+
+    for(i=0;i<13;i++) begin
+
+        rop2 = i;
         #10ns;
        
     end
