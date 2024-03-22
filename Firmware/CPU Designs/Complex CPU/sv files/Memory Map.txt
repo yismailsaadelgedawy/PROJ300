@@ -1,0 +1,6 @@
+CPU Memory Map and Boundary addresses
+
+Instructions                        0x000 - 0x400   (0000 - 1024)   (1024)
+Memory Mapped Registers             0x401 - 0x44B   (1025 - 1099)   (75)
+Stack Memory                        0x44C - 0xFFF   (1100 - 4095)   (2996)
+
