@@ -17,9 +17,10 @@ module CU_logic #(parameter states=40) (
 
 
 // makes debugging easier when testbenching
+// fetch1=6'd0 not fetch1=0, since that is implied as fetch1=32'd0!!
 typedef enum logic [5:0] {
 
-    fetch1=0,fetch2,fetch3,nop1,mov1,ALTmov1,ALTmov2,ldr1,ldr2,ALTldr1,ALTldr2,ALTldr3,ALTldr4,str1,str2,str3,str4,
+    fetch1=6'd0,fetch2,fetch3,nop1,mov1,ALTmov1,ALTmov2,ldr1,ldr2,ALTldr1,ALTldr2,ALTldr3,ALTldr4,str1,str2,str3,str4,
     ALTstr1,ALTstr2,ALTstr3,ALTstr4,cmp1,b1,bgt1,blt1,beq1,add1,add2,sub1,sub2,mul1,mul2,lsr1,lsr2,and1,and2,or1,or2,mvn1,mvn2
 
 } CPUstate_t;

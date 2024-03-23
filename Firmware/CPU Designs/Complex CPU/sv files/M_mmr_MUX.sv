@@ -1,4 +1,4 @@
-module N_mmr_MUX (
+module M_mmr_MUX (
 
     output logic [31:0] data_out,
 

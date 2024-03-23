@@ -1,5 +1,5 @@
-Analysis & Synthesis report for ComplexCPU
-Thu Mar 21 09:55:54 2024
+Analysis & Elaboration report for ComplexCPU
+Sat Mar 23 13:15:53 2024
 Quartus Prime Version 20.1.0 Build 711 06/05/2020 SJ Lite Edition
 
 
@@ -7,30 +7,12 @@ Quartus Prime Version 20.1.0 Build 711 06/05/2020 SJ Lite Edition
 ; Table of Contents ;
 ---------------------
   1. Legal Notice
-  2. Analysis & Synthesis Summary
-  3. Analysis & Synthesis Settings
-  4. Parallel Compilation
-  5. Analysis & Synthesis Source Files Read
-  6. Analysis & Synthesis Resource Usage Summary
-  7. Analysis & Synthesis Resource Utilization by Entity
-  8. General Register Statistics
-  9. Multiplexer Restructuring Statistics (Restructuring Performed)
- 10. Parameter Settings for User Entity Instance: GPR_selector:inst|CPU_regN:inst5
- 11. Parameter Settings for User Entity Instance: GPR_selector:inst|CPU_regN:inst7
- 12. Parameter Settings for User Entity Instance: GPR_selector:inst|CPU_regN:inst9
- 13. Parameter Settings for User Entity Instance: GPR_selector:inst|CPU_regN:inst11
- 14. Parameter Settings for User Entity Instance: GPR_selector:inst|CPU_regN:inst13
- 15. Parameter Settings for User Entity Instance: GPR_selector:inst|CPU_regN:inst15
- 16. Parameter Settings for User Entity Instance: GPR_selector:inst|CPU_regN:inst17
- 17. Parameter Settings for User Entity Instance: GPR_selector:inst|CPU_regN:inst19
- 18. Parameter Settings for User Entity Instance: GPR_selector:inst|CPU_regN:inst21
- 19. Parameter Settings for User Entity Instance: GPR_selector:inst|CPU_regN:inst23
- 20. Parameter Settings for User Entity Instance: GPR_selector:inst|CPU_regN:inst25
- 21. Parameter Settings for User Entity Instance: GPR_selector:inst|CPU_regN:inst27
- 22. Parameter Settings for User Entity Instance: GPR_selector:inst|CPU_regN:inst29
- 23. Post-Synthesis Netlist Statistics for Top Partition
- 24. Elapsed Time Per Partition
- 25. Analysis & Synthesis Messages
+  2. Analysis & Elaboration Summary
+  3. Parallel Compilation
+  4. Parameter Settings for User Entity Instance: testROM:inst3
+  5. Parameter Settings for User Entity Instance: M_RAM:inst4
+  6. Analysis & Elaboration Settings
+  7. Analysis & Elaboration Messages
 
 
 
@@ -54,31 +36,64 @@ https://fpgasoftware.intel.com/eula.
 
 
 
-+-------------------------------------------------------------------------------+
-; Analysis & Synthesis Summary                                                  ;
-+---------------------------------+---------------------------------------------+
-; Analysis & Synthesis Status     ; Successful - Thu Mar 21 09:55:54 2024       ;
-; Quartus Prime Version           ; 20.1.0 Build 711 06/05/2020 SJ Lite Edition ;
-; Revision Name                   ; ComplexCPU                                  ;
-; Top-level Entity Name           ; TopLevel                                    ;
-; Family                          ; Cyclone V                                   ;
-; Logic utilization (in ALMs)     ; N/A                                         ;
-; Total registers                 ; 416                                         ;
-; Total pins                      ; 107                                         ;
-; Total virtual pins              ; 0                                           ;
-; Total block memory bits         ; 0                                           ;
-; Total DSP Blocks                ; 0                                           ;
-; Total HSSI RX PCSs              ; 0                                           ;
-; Total HSSI PMA RX Deserializers ; 0                                           ;
-; Total HSSI TX PCSs              ; 0                                           ;
-; Total HSSI PMA TX Serializers   ; 0                                           ;
-; Total PLLs                      ; 0                                           ;
-; Total DLLs                      ; 0                                           ;
-+---------------------------------+---------------------------------------------+
++-----------------------------------------------------------------------------+
+; Analysis & Elaboration Summary                                              ;
++-------------------------------+---------------------------------------------+
+; Analysis & Elaboration Status ; Successful - Sat Mar 23 13:15:52 2024       ;
+; Quartus Prime Version         ; 20.1.0 Build 711 06/05/2020 SJ Lite Edition ;
+; Revision Name                 ; ComplexCPU                                  ;
+; Top-level Entity Name         ; TopLevel                                    ;
+; Family                        ; Cyclone V                                   ;
+; Logic utilization (in ALMs)   ; N/A until Partition Merge                   ;
+; Total registers               ; N/A until Partition Merge                   ;
+; Total pins                    ; N/A until Partition Merge                   ;
+; Total virtual pins            ; N/A until Partition Merge                   ;
+; Total block memory bits       ; N/A until Partition Merge                   ;
+; Total PLLs                    ; N/A until Partition Merge                   ;
+; Total DLLs                    ; N/A until Partition Merge                   ;
++-------------------------------+---------------------------------------------+
+
+
++------------------------------------------+
+; Parallel Compilation                     ;
++----------------------------+-------------+
+; Processors                 ; Number      ;
++----------------------------+-------------+
+; Number detected on machine ; 8           ;
+; Maximum allowed            ; 4           ;
+;                            ;             ;
+; Average used               ; 1.00        ;
+; Maximum used               ; 1           ;
+;                            ;             ;
+; Usage by Processor         ; % Time Used ;
+;     Processor 1            ; 100.0%      ;
++----------------------------+-------------+
+
+
++------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: testROM:inst3 ;
++----------------+-------+-----------------------------------+
+; Parameter Name ; Value ; Type                              ;
++----------------+-------+-----------------------------------+
+; DATA_WIDTH     ; 38    ; Signed Integer                    ;
+; ADDR_WIDTH     ; 12    ; Signed Integer                    ;
++----------------+-------+-----------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++----------------------------------------------------------+
+; Parameter Settings for User Entity Instance: M_RAM:inst4 ;
++----------------+-------+---------------------------------+
+; Parameter Name ; Value ; Type                            ;
++----------------+-------+---------------------------------+
+; ADDR_WIDTH     ; 12    ; Signed Integer                  ;
+; DATA_WIDTH     ; 32    ; Signed Integer                  ;
++----------------+-------+---------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
 
 
 +---------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Settings                                                                                             ;
+; Analysis & Elaboration Settings                                                                                           ;
 +---------------------------------------------------------------------------------+--------------------+--------------------+
 ; Option                                                                          ; Setting            ; Default Value      ;
 +---------------------------------------------------------------------------------+--------------------+--------------------+
@@ -165,296 +180,34 @@ https://fpgasoftware.intel.com/eula.
 +---------------------------------------------------------------------------------+--------------------+--------------------+
 
 
-+------------------------------------------+
-; Parallel Compilation                     ;
-+----------------------------+-------------+
-; Processors                 ; Number      ;
-+----------------------------+-------------+
-; Number detected on machine ; 8           ;
-; Maximum allowed            ; 4           ;
-;                            ;             ;
-; Average used               ; 1.00        ;
-; Maximum used               ; 1           ;
-;                            ;             ;
-; Usage by Processor         ; % Time Used ;
-;     Processor 1            ; 100.0%      ;
-+----------------------------+-------------+
-
-
-+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Source Files Read                                                                                                                                                           ;
-+----------------------------------+-----------------+------------------------------------+----------------------------------------------------------------------------------------------+---------+
-; File Name with User-Entered Path ; Used in Netlist ; File Type                          ; File Name with Absolute Path                                                                 ; Library ;
-+----------------------------------+-----------------+------------------------------------+----------------------------------------------------------------------------------------------+---------+
-; sv files/GPR_conc.sv             ; yes             ; User SystemVerilog HDL File        ; C:/Users/minec/Desktop/github/PROJ300/Firmware/CPU Designs/Complex CPU/sv files/GPR_conc.sv  ;         ;
-; sv files/GPR_MUX.sv              ; yes             ; User SystemVerilog HDL File        ; C:/Users/minec/Desktop/github/PROJ300/Firmware/CPU Designs/Complex CPU/sv files/GPR_MUX.sv   ;         ;
-; sv files/GPR_DEMUX.sv            ; yes             ; User SystemVerilog HDL File        ; C:/Users/minec/Desktop/github/PROJ300/Firmware/CPU Designs/Complex CPU/sv files/GPR_DEMUX.sv ;         ;
-; sv files/CPU_regN.sv             ; yes             ; User SystemVerilog HDL File        ; C:/Users/minec/Desktop/github/PROJ300/Firmware/CPU Designs/Complex CPU/sv files/CPU_regN.sv  ;         ;
-; TopLevel.bdf                     ; yes             ; User Block Diagram/Schematic File  ; C:/Users/minec/Desktop/github/PROJ300/Firmware/CPU Designs/Complex CPU/TopLevel.bdf          ;         ;
-; GPR_selector.bdf                 ; yes             ; User Block Diagram/Schematic File  ; C:/Users/minec/Desktop/github/PROJ300/Firmware/CPU Designs/Complex CPU/GPR_selector.bdf      ;         ;
-+----------------------------------+-----------------+------------------------------------+----------------------------------------------------------------------------------------------+---------+
-
-
-+------------------------------------------------------------+
-; Analysis & Synthesis Resource Usage Summary                ;
-+---------------------------------------------+--------------+
-; Resource                                    ; Usage        ;
-+---------------------------------------------+--------------+
-; Estimate of Logic utilization (ALMs needed) ; 381          ;
-;                                             ;              ;
-; Combinational ALUT usage for logic          ; 346          ;
-;     -- 7 input functions                    ; 0            ;
-;     -- 6 input functions                    ; 269          ;
-;     -- 5 input functions                    ; 77           ;
-;     -- 4 input functions                    ; 0            ;
-;     -- <=3 input functions                  ; 0            ;
-;                                             ;              ;
-; Dedicated logic registers                   ; 416          ;
-;                                             ;              ;
-; I/O pins                                    ; 107          ;
-;                                             ;              ;
-; Total DSP Blocks                            ; 0            ;
-;                                             ;              ;
-; Maximum fan-out node                        ; clk_50~input ;
-; Maximum fan-out                             ; 416          ;
-; Total fan-out                               ; 3834         ;
-; Average fan-out                             ; 3.93         ;
-+---------------------------------------------+--------------+
-
-
-+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                                             ;
-+----------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+---------------------------------------------+--------------+--------------+
-; Compilation Hierarchy Node ; Combinational ALUTs ; Dedicated Logic Registers ; Block Memory Bits ; DSP Blocks ; Pins ; Virtual Pins ; Full Hierarchy Name                         ; Entity Name  ; Library Name ;
-+----------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+---------------------------------------------+--------------+--------------+
-; |TopLevel                  ; 346 (0)             ; 416 (0)                   ; 0                 ; 0          ; 107  ; 0            ; |TopLevel                                   ; TopLevel     ; work         ;
-;    |GPR_selector:inst|     ; 346 (0)             ; 416 (0)                   ; 0                 ; 0          ; 0    ; 0            ; |TopLevel|GPR_selector:inst                 ; GPR_selector ; work         ;
-;       |CPU_regN:inst11|    ; 2 (2)               ; 32 (32)                   ; 0                 ; 0          ; 0    ; 0            ; |TopLevel|GPR_selector:inst|CPU_regN:inst11 ; CPU_regN     ; work         ;
-;       |CPU_regN:inst13|    ; 2 (2)               ; 32 (32)                   ; 0                 ; 0          ; 0    ; 0            ; |TopLevel|GPR_selector:inst|CPU_regN:inst13 ; CPU_regN     ; work         ;
-;       |CPU_regN:inst15|    ; 2 (2)               ; 32 (32)                   ; 0                 ; 0          ; 0    ; 0            ; |TopLevel|GPR_selector:inst|CPU_regN:inst15 ; CPU_regN     ; work         ;
-;       |CPU_regN:inst17|    ; 2 (2)               ; 32 (32)                   ; 0                 ; 0          ; 0    ; 0            ; |TopLevel|GPR_selector:inst|CPU_regN:inst17 ; CPU_regN     ; work         ;
-;       |CPU_regN:inst19|    ; 2 (2)               ; 32 (32)                   ; 0                 ; 0          ; 0    ; 0            ; |TopLevel|GPR_selector:inst|CPU_regN:inst19 ; CPU_regN     ; work         ;
-;       |CPU_regN:inst21|    ; 2 (2)               ; 32 (32)                   ; 0                 ; 0          ; 0    ; 0            ; |TopLevel|GPR_selector:inst|CPU_regN:inst21 ; CPU_regN     ; work         ;
-;       |CPU_regN:inst23|    ; 2 (2)               ; 32 (32)                   ; 0                 ; 0          ; 0    ; 0            ; |TopLevel|GPR_selector:inst|CPU_regN:inst23 ; CPU_regN     ; work         ;
-;       |CPU_regN:inst25|    ; 2 (2)               ; 32 (32)                   ; 0                 ; 0          ; 0    ; 0            ; |TopLevel|GPR_selector:inst|CPU_regN:inst25 ; CPU_regN     ; work         ;
-;       |CPU_regN:inst27|    ; 2 (2)               ; 32 (32)                   ; 0                 ; 0          ; 0    ; 0            ; |TopLevel|GPR_selector:inst|CPU_regN:inst27 ; CPU_regN     ; work         ;
-;       |CPU_regN:inst29|    ; 2 (2)               ; 32 (32)                   ; 0                 ; 0          ; 0    ; 0            ; |TopLevel|GPR_selector:inst|CPU_regN:inst29 ; CPU_regN     ; work         ;
-;       |CPU_regN:inst5|     ; 2 (2)               ; 32 (32)                   ; 0                 ; 0          ; 0    ; 0            ; |TopLevel|GPR_selector:inst|CPU_regN:inst5  ; CPU_regN     ; work         ;
-;       |CPU_regN:inst7|     ; 2 (2)               ; 32 (32)                   ; 0                 ; 0          ; 0    ; 0            ; |TopLevel|GPR_selector:inst|CPU_regN:inst7  ; CPU_regN     ; work         ;
-;       |CPU_regN:inst9|     ; 2 (2)               ; 32 (32)                   ; 0                 ; 0          ; 0    ; 0            ; |TopLevel|GPR_selector:inst|CPU_regN:inst9  ; CPU_regN     ; work         ;
-;       |GPR_MUX:inst2|      ; 160 (160)           ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |TopLevel|GPR_selector:inst|GPR_MUX:inst2   ; GPR_MUX      ; work         ;
-;       |GPR_MUX:inst3|      ; 160 (160)           ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |TopLevel|GPR_selector:inst|GPR_MUX:inst3   ; GPR_MUX      ; work         ;
-+----------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+---------------------------------------------+--------------+--------------+
-Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
-
-
-+------------------------------------------------------+
-; General Register Statistics                          ;
-+----------------------------------------------+-------+
-; Statistic                                    ; Value ;
-+----------------------------------------------+-------+
-; Total registers                              ; 416   ;
-; Number of registers using Synchronous Clear  ; 416   ;
-; Number of registers using Synchronous Load   ; 0     ;
-; Number of registers using Asynchronous Clear ; 0     ;
-; Number of registers using Asynchronous Load  ; 0     ;
-; Number of registers using Clock Enable       ; 416   ;
-; Number of registers using Preset             ; 0     ;
-+----------------------------------------------+-------+
-
-
-+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Multiplexer Restructuring Statistics (Restructuring Performed)                                                                                                             ;
-+--------------------+-----------+---------------+----------------------+------------------------+------------+--------------------------------------------------------------+
-; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output                                   ;
-+--------------------+-----------+---------------+----------------------+------------------------+------------+--------------------------------------------------------------+
-; 4:1                ; 32 bits   ; 64 LEs        ; 0 LEs                ; 64 LEs                 ; Yes        ; |TopLevel|GPR_selector:inst|CPU_regN:inst5|internal_reg[6]   ;
-; 4:1                ; 32 bits   ; 64 LEs        ; 0 LEs                ; 64 LEs                 ; Yes        ; |TopLevel|GPR_selector:inst|CPU_regN:inst7|internal_reg[26]  ;
-; 4:1                ; 32 bits   ; 64 LEs        ; 0 LEs                ; 64 LEs                 ; Yes        ; |TopLevel|GPR_selector:inst|CPU_regN:inst9|internal_reg[2]   ;
-; 4:1                ; 32 bits   ; 64 LEs        ; 0 LEs                ; 64 LEs                 ; Yes        ; |TopLevel|GPR_selector:inst|CPU_regN:inst11|internal_reg[16] ;
-; 4:1                ; 32 bits   ; 64 LEs        ; 0 LEs                ; 64 LEs                 ; Yes        ; |TopLevel|GPR_selector:inst|CPU_regN:inst13|internal_reg[11] ;
-; 4:1                ; 32 bits   ; 64 LEs        ; 0 LEs                ; 64 LEs                 ; Yes        ; |TopLevel|GPR_selector:inst|CPU_regN:inst15|internal_reg[19] ;
-; 4:1                ; 32 bits   ; 64 LEs        ; 0 LEs                ; 64 LEs                 ; Yes        ; |TopLevel|GPR_selector:inst|CPU_regN:inst17|internal_reg[24] ;
-; 4:1                ; 32 bits   ; 64 LEs        ; 0 LEs                ; 64 LEs                 ; Yes        ; |TopLevel|GPR_selector:inst|CPU_regN:inst19|internal_reg[7]  ;
-; 4:1                ; 32 bits   ; 64 LEs        ; 0 LEs                ; 64 LEs                 ; Yes        ; |TopLevel|GPR_selector:inst|CPU_regN:inst21|internal_reg[1]  ;
-; 4:1                ; 32 bits   ; 64 LEs        ; 0 LEs                ; 64 LEs                 ; Yes        ; |TopLevel|GPR_selector:inst|CPU_regN:inst23|internal_reg[20] ;
-; 4:1                ; 32 bits   ; 64 LEs        ; 0 LEs                ; 64 LEs                 ; Yes        ; |TopLevel|GPR_selector:inst|CPU_regN:inst25|internal_reg[8]  ;
-; 4:1                ; 32 bits   ; 64 LEs        ; 0 LEs                ; 64 LEs                 ; Yes        ; |TopLevel|GPR_selector:inst|CPU_regN:inst27|internal_reg[29] ;
-; 4:1                ; 32 bits   ; 64 LEs        ; 0 LEs                ; 64 LEs                 ; Yes        ; |TopLevel|GPR_selector:inst|CPU_regN:inst29|internal_reg[24] ;
-; 16:1               ; 32 bits   ; 320 LEs       ; 320 LEs              ; 0 LEs                  ; No         ; |TopLevel|GPR_selector:inst|GPR_MUX:inst2|Mux22              ;
-; 16:1               ; 32 bits   ; 320 LEs       ; 320 LEs              ; 0 LEs                  ; No         ; |TopLevel|GPR_selector:inst|GPR_MUX:inst3|Mux9               ;
-+--------------------+-----------+---------------+----------------------+------------------------+------------+--------------------------------------------------------------+
-
-
-+-------------------------------------------------------------------------------+
-; Parameter Settings for User Entity Instance: GPR_selector:inst|CPU_regN:inst5 ;
-+----------------+-------+------------------------------------------------------+
-; Parameter Name ; Value ; Type                                                 ;
-+----------------+-------+------------------------------------------------------+
-; N              ; 32    ; Signed Integer                                       ;
-+----------------+-------+------------------------------------------------------+
-Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
-
-
-+-------------------------------------------------------------------------------+
-; Parameter Settings for User Entity Instance: GPR_selector:inst|CPU_regN:inst7 ;
-+----------------+-------+------------------------------------------------------+
-; Parameter Name ; Value ; Type                                                 ;
-+----------------+-------+------------------------------------------------------+
-; N              ; 32    ; Signed Integer                                       ;
-+----------------+-------+------------------------------------------------------+
-Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
-
-
-+-------------------------------------------------------------------------------+
-; Parameter Settings for User Entity Instance: GPR_selector:inst|CPU_regN:inst9 ;
-+----------------+-------+------------------------------------------------------+
-; Parameter Name ; Value ; Type                                                 ;
-+----------------+-------+------------------------------------------------------+
-; N              ; 32    ; Signed Integer                                       ;
-+----------------+-------+------------------------------------------------------+
-Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
-
-
-+--------------------------------------------------------------------------------+
-; Parameter Settings for User Entity Instance: GPR_selector:inst|CPU_regN:inst11 ;
-+----------------+-------+-------------------------------------------------------+
-; Parameter Name ; Value ; Type                                                  ;
-+----------------+-------+-------------------------------------------------------+
-; N              ; 32    ; Signed Integer                                        ;
-+----------------+-------+-------------------------------------------------------+
-Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
-
-
-+--------------------------------------------------------------------------------+
-; Parameter Settings for User Entity Instance: GPR_selector:inst|CPU_regN:inst13 ;
-+----------------+-------+-------------------------------------------------------+
-; Parameter Name ; Value ; Type                                                  ;
-+----------------+-------+-------------------------------------------------------+
-; N              ; 32    ; Signed Integer                                        ;
-+----------------+-------+-------------------------------------------------------+
-Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
-
-
-+--------------------------------------------------------------------------------+
-; Parameter Settings for User Entity Instance: GPR_selector:inst|CPU_regN:inst15 ;
-+----------------+-------+-------------------------------------------------------+
-; Parameter Name ; Value ; Type                                                  ;
-+----------------+-------+-------------------------------------------------------+
-; N              ; 32    ; Signed Integer                                        ;
-+----------------+-------+-------------------------------------------------------+
-Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
-
-
-+--------------------------------------------------------------------------------+
-; Parameter Settings for User Entity Instance: GPR_selector:inst|CPU_regN:inst17 ;
-+----------------+-------+-------------------------------------------------------+
-; Parameter Name ; Value ; Type                                                  ;
-+----------------+-------+-------------------------------------------------------+
-; N              ; 32    ; Signed Integer                                        ;
-+----------------+-------+-------------------------------------------------------+
-Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
-
-
-+--------------------------------------------------------------------------------+
-; Parameter Settings for User Entity Instance: GPR_selector:inst|CPU_regN:inst19 ;
-+----------------+-------+-------------------------------------------------------+
-; Parameter Name ; Value ; Type                                                  ;
-+----------------+-------+-------------------------------------------------------+
-; N              ; 32    ; Signed Integer                                        ;
-+----------------+-------+-------------------------------------------------------+
-Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
-
-
-+--------------------------------------------------------------------------------+
-; Parameter Settings for User Entity Instance: GPR_selector:inst|CPU_regN:inst21 ;
-+----------------+-------+-------------------------------------------------------+
-; Parameter Name ; Value ; Type                                                  ;
-+----------------+-------+-------------------------------------------------------+
-; N              ; 32    ; Signed Integer                                        ;
-+----------------+-------+-------------------------------------------------------+
-Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
-
-
-+--------------------------------------------------------------------------------+
-; Parameter Settings for User Entity Instance: GPR_selector:inst|CPU_regN:inst23 ;
-+----------------+-------+-------------------------------------------------------+
-; Parameter Name ; Value ; Type                                                  ;
-+----------------+-------+-------------------------------------------------------+
-; N              ; 32    ; Signed Integer                                        ;
-+----------------+-------+-------------------------------------------------------+
-Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
-
-
-+--------------------------------------------------------------------------------+
-; Parameter Settings for User Entity Instance: GPR_selector:inst|CPU_regN:inst25 ;
-+----------------+-------+-------------------------------------------------------+
-; Parameter Name ; Value ; Type                                                  ;
-+----------------+-------+-------------------------------------------------------+
-; N              ; 32    ; Signed Integer                                        ;
-+----------------+-------+-------------------------------------------------------+
-Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
-
-
-+--------------------------------------------------------------------------------+
-; Parameter Settings for User Entity Instance: GPR_selector:inst|CPU_regN:inst27 ;
-+----------------+-------+-------------------------------------------------------+
-; Parameter Name ; Value ; Type                                                  ;
-+----------------+-------+-------------------------------------------------------+
-; N              ; 32    ; Signed Integer                                        ;
-+----------------+-------+-------------------------------------------------------+
-Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
-
-
-+--------------------------------------------------------------------------------+
-; Parameter Settings for User Entity Instance: GPR_selector:inst|CPU_regN:inst29 ;
-+----------------+-------+-------------------------------------------------------+
-; Parameter Name ; Value ; Type                                                  ;
-+----------------+-------+-------------------------------------------------------+
-; N              ; 32    ; Signed Integer                                        ;
-+----------------+-------+-------------------------------------------------------+
-Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
-
-
-+-----------------------------------------------------+
-; Post-Synthesis Netlist Statistics for Top Partition ;
-+-----------------------+-----------------------------+
-; Type                  ; Count                       ;
-+-----------------------+-----------------------------+
-; arriav_ff             ; 416                         ;
-;     ENA SCLR          ; 416                         ;
-; arriav_lcell_comb     ; 346                         ;
-;     normal            ; 346                         ;
-;         5 data inputs ; 77                          ;
-;         6 data inputs ; 269                         ;
-; boundary_port         ; 107                         ;
-;                       ;                             ;
-; Max LUT depth         ; 2.00                        ;
-; Average LUT depth     ; 1.88                        ;
-+-----------------------+-----------------------------+
-
-
-+-------------------------------+
-; Elapsed Time Per Partition    ;
-+----------------+--------------+
-; Partition Name ; Elapsed Time ;
-+----------------+--------------+
-; Top            ; 00:00:00     ;
-+----------------+--------------+
-
-
-+-------------------------------+
-; Analysis & Synthesis Messages ;
-+-------------------------------+
++---------------------------------+
+; Analysis & Elaboration Messages ;
++---------------------------------+
 Info: *******************************************************************
-Info: Running Quartus Prime Analysis & Synthesis
+Info: Running Quartus Prime Analysis & Elaboration
     Info: Version 20.1.0 Build 711 06/05/2020 SJ Lite Edition
-    Info: Processing started: Thu Mar 21 09:55:45 2024
-Info: Command: quartus_map --read_settings_files=on --write_settings_files=off ComplexCPU -c ComplexCPU
+    Info: Processing started: Sat Mar 23 13:15:38 2024
+Info: Command: quartus_map --read_settings_files=on --write_settings_files=off ComplexCPU -c ComplexCPU --analysis_and_elaboration
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20030): Parallel compilation is enabled and will use 4 of the 4 processors detected
-Info (12021): Found 1 design units, including 1 entities, in source file sv files/gpr_conc.sv
-    Info (12023): Found entity 1: GPR_conc File: C:/Users/minec/Desktop/github/PROJ300/Firmware/CPU Designs/Complex CPU/sv files/GPR_conc.sv Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file sv files/testrom.sv
+    Info (12023): Found entity 1: testROM File: C:/Users/minec/Desktop/github/PROJ300/Firmware/CPU Designs/Complex CPU/sv files/testROM.sv Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file sv files/m_ram.sv
+    Info (12023): Found entity 1: M_RAM File: C:/Users/minec/Desktop/github/PROJ300/Firmware/CPU Designs/Complex CPU/sv files/M_RAM.sv Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file sv files/m_mux.sv
+    Info (12023): Found entity 1: M_MUX File: C:/Users/minec/Desktop/github/PROJ300/Firmware/CPU Designs/Complex CPU/sv files/M_MUX.sv Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file sv files/m_mmr_selector.sv
+    Info (12023): Found entity 1: M_mmr_selector File: C:/Users/minec/Desktop/github/PROJ300/Firmware/CPU Designs/Complex CPU/sv files/M_mmr_selector.sv Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file sv files/m_mmr_mux.sv
+    Info (12023): Found entity 1: M_mmr_MUX File: C:/Users/minec/Desktop/github/PROJ300/Firmware/CPU Designs/Complex CPU/sv files/M_mmr_MUX.sv Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file sv files/m_mmr_demux.sv
+    Info (12023): Found entity 1: M_mmr_DEMUX File: C:/Users/minec/Desktop/github/PROJ300/Firmware/CPU Designs/Complex CPU/sv files/M_mmr_DEMUX.sv Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file sv files/m_demux.sv
+    Info (12023): Found entity 1: M_DEMUX File: C:/Users/minec/Desktop/github/PROJ300/Firmware/CPU Designs/Complex CPU/sv files/M_DEMUX.sv Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file sv files/m_addr_checker.sv
+    Info (12023): Found entity 1: M_addr_checker File: C:/Users/minec/Desktop/github/PROJ300/Firmware/CPU Designs/Complex CPU/sv files/M_addr_checker.sv Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file sv files/conc32.sv
+    Info (12023): Found entity 1: conc32 File: C:/Users/minec/Desktop/github/PROJ300/Firmware/CPU Designs/Complex CPU/sv files/conc32.sv Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file sv files/gpr_mux.sv
     Info (12023): Found entity 1: GPR_MUX File: C:/Users/minec/Desktop/github/PROJ300/Firmware/CPU Designs/Complex CPU/sv files/GPR_MUX.sv Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file sv files/gpr_demux.sv
@@ -466,29 +219,26 @@ Info (12021): Found 1 design units, including 1 entities, in source file topleve
 Info (12021): Found 1 design units, including 1 entities, in source file gpr_selector.bdf
     Info (12023): Found entity 1: GPR_selector
 Info (12127): Elaborating entity "TopLevel" for the top level hierarchy
-Info (12128): Elaborating entity "GPR_selector" for hierarchy "GPR_selector:inst"
-Warning (275083): Bus "sel2[3..0]" found using same base name as "sel", which might lead to a name conflict.
-Warning (275080): Converted elements in bus name "sel" using legacy naming rules. Make any assignments on the new names, not on the original names.
-    Warning (275081): Converted element name(s) from "sel[3..0]" to "sel3..0"
-    Warning (275081): Converted element name(s) from "sel[3..0]" to "sel3..0"
-Warning (275080): Converted elements in bus name "sel2" using legacy naming rules. Make any assignments on the new names, not on the original names.
-    Warning (275081): Converted element name(s) from "sel2[3..0]" to "sel23..0"
-Info (12128): Elaborating entity "GPR_MUX" for hierarchy "GPR_selector:inst|GPR_MUX:inst2"
-Info (12128): Elaborating entity "CPU_regN" for hierarchy "GPR_selector:inst|CPU_regN:inst5"
-Info (10264): Verilog HDL Case Statement information at CPU_regN.sv(35): all case item expressions in this case statement are onehot File: C:/Users/minec/Desktop/github/PROJ300/Firmware/CPU Designs/Complex CPU/sv files/CPU_regN.sv Line: 35
-Info (12128): Elaborating entity "GPR_DEMUX" for hierarchy "GPR_selector:inst|GPR_DEMUX:inst"
-Info (12128): Elaborating entity "GPR_conc" for hierarchy "GPR_conc:inst1"
-Info (286030): Timing-Driven Synthesis is running
-Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
-    Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
-Info (21057): Implemented 869 device resources after synthesis - the final resource count might be different
-    Info (21058): Implemented 43 input pins
-    Info (21059): Implemented 64 output pins
-    Info (21061): Implemented 762 logic cells
-Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 7 warnings
-    Info: Peak virtual memory: 4818 megabytes
-    Info: Processing ended: Thu Mar 21 09:55:54 2024
-    Info: Elapsed time: 00:00:09
+Warning (275009): Pin "clk_50" not connected
+Warning (275009): Pin "rst" not connected
+Info (12128): Elaborating entity "M_MUX" for hierarchy "M_MUX:inst5"
+Info (12128): Elaborating entity "testROM" for hierarchy "testROM:inst3"
+Warning (10030): Net "rom.data_a" at testROM.sv(28) has no driver or initial value, using a default initial value '0' File: C:/Users/minec/Desktop/github/PROJ300/Firmware/CPU Designs/Complex CPU/sv files/testROM.sv Line: 28
+Warning (10030): Net "rom.waddr_a[0]" at testROM.sv(28) has no driver or initial value, using a default initial value '0' File: C:/Users/minec/Desktop/github/PROJ300/Firmware/CPU Designs/Complex CPU/sv files/testROM.sv Line: 28
+Warning (10030): Net "rom.we_a" at testROM.sv(28) has no driver or initial value, using a default initial value '0' File: C:/Users/minec/Desktop/github/PROJ300/Firmware/CPU Designs/Complex CPU/sv files/testROM.sv Line: 28
+Info (12128): Elaborating entity "M_DEMUX" for hierarchy "M_DEMUX:inst"
+Info (12128): Elaborating entity "M_addr_checker" for hierarchy "M_addr_checker:inst1"
+Warning (10036): Verilog HDL or VHDL warning at M_addr_checker.sv(15): object "state" assigned a value but never read File: C:/Users/minec/Desktop/github/PROJ300/Firmware/CPU Designs/Complex CPU/sv files/M_addr_checker.sv Line: 15
+Info (12128): Elaborating entity "M_mmr_MUX" for hierarchy "M_mmr_MUX:inst40"
+Info (12128): Elaborating entity "M_mmr_selector" for hierarchy "M_mmr_selector:inst10"
+Warning (10230): Verilog HDL assignment warning at M_mmr_selector.sv(13): truncated value with size 12 to match size of target (7) File: C:/Users/minec/Desktop/github/PROJ300/Firmware/CPU Designs/Complex CPU/sv files/M_mmr_selector.sv Line: 13
+Info (12128): Elaborating entity "M_RAM" for hierarchy "M_RAM:inst4"
+Info (12128): Elaborating entity "M_mmr_DEMUX" for hierarchy "M_mmr_DEMUX:inst38"
+Info (12128): Elaborating entity "conc32" for hierarchy "conc32:inst2"
+Info: Quartus Prime Analysis & Elaboration was successful. 0 errors, 8 warnings
+    Info: Peak virtual memory: 4792 megabytes
+    Info: Processing ended: Sat Mar 23 13:15:53 2024
+    Info: Elapsed time: 00:00:15
     Info: Total CPU time (on all processors): 00:00:10
 
 

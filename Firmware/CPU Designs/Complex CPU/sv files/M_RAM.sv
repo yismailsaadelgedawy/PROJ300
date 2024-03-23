@@ -16,8 +16,12 @@ bit [DATA_WIDTH-1:0] RAM [0:(2**ADDR_WIDTH)-1];
 
 assign data_out = RAM[address];
 
-always_ff @(posedge load) begin
-    RAM[address] <= data_in;
+
+// always_ff causes a weird bug when this is wired with everything else
+// no idea why...
+always_latch begin
+    if(load) RAM[address] <= data_in;
+    
 end
 
 

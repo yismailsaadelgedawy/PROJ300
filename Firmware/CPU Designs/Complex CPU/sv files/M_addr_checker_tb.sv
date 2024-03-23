@@ -38,17 +38,17 @@ initial begin
 
         // Instructions
         if (addr >= 12'h000 && addr <= 12'h400) begin
-            assert(sel == 'd0 || {load_mmr,load_stack} == {1'b0,1'b0}) $display("passed instructions %d",i);
+            assert(sel == 'd0 && {load_mmr,load_stack} == {1'b0,1'b0}) $display("passed instructions %d",i);
         end
 
         // Memory mapped registers
         else if (addr >= 12'h401 && addr <= 12'h44B) begin
-            assert(sel == 'd1 || {load_mmr,load_stack} == {MEMLOAD,1'b0}) $display("passed mmr %d",i);
+            assert(sel == 'd1 && {load_mmr,load_stack} == {MEMLOAD,1'b0}) $display("passed mmr %d",i);
         end
 
         // Stack memory
         else if (addr >= 12'h44C && addr <= 12'hFFF) begin
-            assert(sel == 'd2 || {load_mmr,load_stack} == {1'b0,MEMLOAD}) $display("passed stack %d",i);
+            assert(sel == 'd2 && {load_mmr,load_stack} == {1'b0,MEMLOAD}) $display("passed stack %d",i);
         end
 
 

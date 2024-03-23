@@ -10,7 +10,7 @@ module M_addr_checker (
 
 // to be connected to a demux
 
-typedef enum logic [1:0] {instructions=0,mmr,stack} state_t;
+typedef enum logic [1:0] {instructions=2'd0,mmr,stack} state_t;
 
 state_t state;
 
@@ -37,6 +37,12 @@ always_comb begin
         sel = 'd2;
         {load_mmr,load_stack} = {1'b0,MEMLOAD};
         state = stack;
+    end
+
+    else begin
+        sel = 'd0;
+        {load_mmr,load_stack} = 2'b00;
+        state = instructions;
     end
 
 

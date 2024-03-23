@@ -1,4 +1,4 @@
-module N_mmr_DEMUX (
+module M_mmr_DEMUX (
 
     output logic [32:0] mmrA,mmrB,mmrC,mmrD,mmrE,mmrF,mmrG,mmrH,mmrI,mmrJ,mmrK,mmrL,mmrM,  // packed arrays causes problems when wiring :(
 

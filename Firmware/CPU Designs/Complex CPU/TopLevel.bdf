@@ -20,4 +20,4 @@ refer to the applicable agreement for further details, at
 https://fpgasoftware.intel.com/eula.
 */
 (header "graphic" (version "1.4"))
-(text "Top-Level Schematic" (rect 432 80 653 106)(font "Intel Clear" (font_size 14)(bold)))
+(text "Top Level Schematic" (rect 288 16 506 42)(font "Intel Clear" (font_size 14)(bold)))
