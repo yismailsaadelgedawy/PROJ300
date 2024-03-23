@@ -1,4 +1,4 @@
-module M_circuit_tb;
+module Memory_tb;
 
 // internal wires
 
@@ -15,7 +15,7 @@ logic CU;         // MEMLOAD
 logic [37:0] data_out;
 
 // inst and wiring
-M_circuit dut (
+Memory dut (
 
     // in
     .rst(rst),
@@ -162,6 +162,9 @@ initial begin
 
     end
 
+    // makes life easy when looking at the terminal
+    // good to also only print error messages and not passes
+    // especially when there are thousands of tests!!!
     if(error_flag) $display("\n//////// WARNING: Not all tests passed ////////\n");
     else $display("//////// ALL TESTS PASSED! ////////\n");
 

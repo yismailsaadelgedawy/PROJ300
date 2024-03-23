@@ -17,7 +17,7 @@
 // VERSION		"Version 20.1.0 Build 711 06/05/2020 SJ Lite Edition"
 // CREATED		"Sat Mar 23 09:53:05 2024"
 
-module M_circuit(
+module Memory(
 	CU,
 	clk_50,
 	rst,

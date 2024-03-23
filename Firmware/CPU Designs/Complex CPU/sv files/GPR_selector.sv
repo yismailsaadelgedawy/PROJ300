@@ -15,11 +15,12 @@
 
 // PROGRAM		"Quartus Prime"
 // VERSION		"Version 20.1.0 Build 711 06/05/2020 SJ Lite Edition"
-// CREATED		"Thu Mar 21 09:59:11 2024"
+// CREATED		"Sat Mar 23 13:46:46 2024"
 
 module GPR_selector(
 	rst,
 	clk_50,
+	GPRLOAD,
 	GPR_in,
 	rop1,
 	rop2,
@@ -30,13 +31,15 @@ module GPR_selector(
 
 input wire	rst;
 input wire	clk_50;
-input wire	[32:0] GPR_in;
+input wire	GPRLOAD;
+input wire	[31:0] GPR_in;
 input wire	[3:0] rop1;
 input wire	[3:0] rop2;
 output wire	[31:0] GPR_out1;
 output wire	[31:0] GPR_out2;
 
 wire	clk;
+wire	[32:0] conc_data;
 wire	[32:0] rA;
 wire	[32:0] rB;
 wire	[32:0] rC;
@@ -106,7 +109,7 @@ assign	GDFX_TEMP_SIGNAL_0 = {sel3,sel2,sel1,sel0};
 
 
 GPR_DEMUX	b2v_inst(
-	.data_in(GPR_in),
+	.data_in(conc_data),
 	.sel(GDFX_TEMP_SIGNAL_0),
 	.rA(rA),
 	.rB(rB),
@@ -121,6 +124,12 @@ GPR_DEMUX	b2v_inst(
 	.rK(rK),
 	.rL(rL),
 	.rM(rM));
+
+
+conc32	b2v_inst1(
+	.LOAD(GPRLOAD),
+	.data_in(GPR_in),
+	.data_out(conc_data));
 
 
 

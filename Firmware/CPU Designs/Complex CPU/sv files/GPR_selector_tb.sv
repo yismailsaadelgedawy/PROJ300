@@ -1,6 +1,4 @@
-module GPR_circuit_tb;
-
-// testing just the GPR circuit (concatenator + selector)
+module GPR_selector_tb;
 
 // internal wires
 
@@ -8,7 +6,7 @@ module GPR_circuit_tb;
 logic rst;
 logic clk_50;
 logic GPRLOAD;
-logic [31:0] GPR_data;
+logic [31:0] GPR_in;
 logic [3:0] rop1;
 logic [3:0] rop2;   // this only controls the second output to the ALU
 
@@ -17,14 +15,14 @@ logic [31:0] GPR_out1;
 logic [31:0] GPR_out2;
 
 // inst and wiring
-GPR_circuit dut (
+GPR_selector dut (
 
     // in
 
     .rst(rst),
     .clk_50(clk_50),
     .GPRLOAD(GPRLOAD),
-    .GPR_data(GPR_data),
+    .GPR_in(GPR_in),
     .rop1(rop1),
     .rop2(rop2),
 
@@ -54,7 +52,7 @@ initial begin
     // rst
     rst = 1;
     GPRLOAD = 0;
-    GPR_data = 32'd250;
+    GPR_in = 32'd250;
     rop1 = 'd0;
     rop2 = 'd0;
     
@@ -74,7 +72,7 @@ initial begin
         GPRLOAD = 0;
         #10ns;
 
-        GPR_data++;
+        GPR_in++;
 
     end
 
@@ -84,10 +82,12 @@ initial begin
 
         rop1 = i; rop2 = i;
         #10ns;
+
+        assert(GPR_out1 == (250+i) && GPR_out2 == (250+i)) $display("passed mmr %d",i); else $error("failed mmr %d",i);
        
     end
 
-    GPR_data = 32'd100;
+    GPR_in = 32'd100;
 
     $display("\n///////// loading data into registers /////////\n");
 
@@ -99,7 +99,7 @@ initial begin
         GPRLOAD = 0;
         #10ns;
 
-        GPR_data++;
+        GPR_in++;
 
     end
 
@@ -109,6 +109,8 @@ initial begin
 
         rop1 = i; rop2 = i;
         #10ns;
+
+        assert(GPR_out1 == (100+i) && GPR_out2 == (100+i)) $display("passed mmr %d",i); else $error("failed mmr %d",i);
        
     end
 
@@ -120,6 +122,8 @@ initial begin
 
         rop2 = i;
         #10ns;
+
+        assert(GPR_out1 == 100 && GPR_out2 == (100+i)) $display("passed mmr %d",i); else $error("failed mmr %d",i);
        
     end
 
