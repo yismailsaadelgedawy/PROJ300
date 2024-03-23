@@ -22,7 +22,7 @@ instruction_t instruction;
 
 // the "AC_update" input is the logical OR of cmp1, add1 and sub1
 // such that this circuit only updates when the AC result is updated on
-// these two execution routines
+// these execution routines
 always_ff @(posedge AC_update or posedge rst) begin
 
     if(rst) begin
