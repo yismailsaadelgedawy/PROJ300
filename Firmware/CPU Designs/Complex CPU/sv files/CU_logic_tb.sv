@@ -210,7 +210,7 @@ initial begin
     // cmp1
     CPU_state = 1<<21;
     #10ns;
-    assert(ACLOAD && COUNTER_CLR && ALUSEL == 'd0 && SYSTEMBUSSEL == 'd0) $display("passed cmp1"); else $error("failed cmp1");
+    assert(ACLOAD && COUNTER_CLR && ALUSEL == 'd1 && SYSTEMBUSSEL == 'd0) $display("passed cmp1"); else $error("failed cmp1");
     assert({RSELLOAD,ROP1LOAD,ROP2LOAD,TRLOAD,ARLOAD,PCLOAD,DRLOAD,IRLOAD,GPRLOAD,MEMLOAD,PCINC,COUNTER_LD,COUNTER_INC} == 'd0) $display("passed rest zero"); else $error("failed rest zero");
 
 

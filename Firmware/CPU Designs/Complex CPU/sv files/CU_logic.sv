@@ -324,7 +324,7 @@ always_comb begin
 
         ACLOAD = 1; COUNTER_CLR = 1;
         {RSELLOAD,ROP1LOAD,ROP2LOAD,TRLOAD,ARLOAD,PCLOAD,DRLOAD,IRLOAD,GPRLOAD,MEMLOAD,PCINC,COUNTER_LD,COUNTER_INC} = 'd0;
-        ALUSEL = 'd0;
+        ALUSEL = 'd1;   // chooses sub operation
         SYSTEMBUSSEL = 'd0;
 
         CPUstate = cmp1;

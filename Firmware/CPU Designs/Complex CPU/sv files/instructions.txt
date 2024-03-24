@@ -46,7 +46,7 @@ ldr2 : r <- AR
 
 rsel[0] == 1
 ALTldr1 : AR <- rop2
-ALTldr2 : r <- AR       // not needed
+ALTldr2 : r <- AR       // not needed; could optimise out
 ALTldr3 : DR <- M 
 ALTldr4 : r <- DR 
 
@@ -65,7 +65,7 @@ ALTstr4 : M <- DR
 
 
 (sets NZCV; special form of sub instruction where rsel[1] = 1 to set the first operand as r, and data (second operand) depends on rsel[0])
-cmp1 : AC <- data - r
+cmp1 : AC <- r - data
 
 
 b1   : PC <- rop2
