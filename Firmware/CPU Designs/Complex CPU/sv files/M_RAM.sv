@@ -19,6 +19,7 @@ assign data_out = RAM[address];
 
 // always_ff causes a weird bug when this is wired with everything else
 // no idea why...
+// always_latch is really useful for asynchronous latching logic!!!!
 always_latch begin
     if(load) RAM[address] <= data_in;
     

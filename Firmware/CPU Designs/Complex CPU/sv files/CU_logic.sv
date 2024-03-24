@@ -127,7 +127,11 @@ always_comb begin
 
     // nop1
     40'd2**3 : begin
-        // do nothing
+
+        {RSELLOAD,ROP1LOAD,ROP2LOAD,TRLOAD,ARLOAD,PCLOAD,DRLOAD,ACLOAD,IRLOAD,GPRLOAD,MEMLOAD,PCINC,COUNTER_LD,COUNTER_INC,COUNTER_CLR} = 'd0;
+        ALUSEL = 'd0;
+        SYSTEMBUSSEL = 'd0;
+
         CPUstate = nop1;
         
     end
@@ -557,10 +561,15 @@ always_comb begin
         CPUstate = mvn2;
     end
 
-    // default is nop
+    // default : nop1
     default : begin
-        // do nothing
+
+        {RSELLOAD,ROP1LOAD,ROP2LOAD,TRLOAD,ARLOAD,PCLOAD,DRLOAD,ACLOAD,IRLOAD,GPRLOAD,MEMLOAD,PCINC,COUNTER_LD,COUNTER_INC,COUNTER_CLR} = 'd0;
+        ALUSEL = 'd0;
+        SYSTEMBUSSEL = 'd0;
+
         CPUstate = nop1;
+
     end
 
     endcase

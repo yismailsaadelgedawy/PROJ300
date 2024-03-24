@@ -82,10 +82,12 @@ initial begin
     assert(COUNTER_LD && RSELLOAD && ROP1LOAD && ROP2LOAD && IRLOAD && ALUSEL == 'd0 && SYSTEMBUSSEL == 'd1) $display("passed fetch3"); else $error("failed fetch3");
     assert({TRLOAD,ARLOAD,PCLOAD,DRLOAD,ACLOAD,GPRLOAD,MEMLOAD,PCINC,COUNTER_INC,COUNTER_CLR} == 'd0) $display("passed rest zero"); else $error("failed rest zero");
     
-    
+        
     // nop1
     CPU_state = 1<<3;
     #10ns;
+    assert(ALUSEL == 'd0 && SYSTEMBUSSEL == 'd0) $display("passed nop1"); else $error("failed nop1");
+    assert({RSELLOAD,ROP1LOAD,ROP2LOAD,TRLOAD,ARLOAD,PCLOAD,DRLOAD,ACLOAD,IRLOAD,GPRLOAD,MEMLOAD,PCINC,COUNTER_LD,COUNTER_INC,COUNTER_CLR} == 'd0) $display("passed rest zero"); else $error("failed rest zero");
     
 
     // mov1

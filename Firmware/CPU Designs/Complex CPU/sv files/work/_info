@@ -125,7 +125,7 @@ Z8 w1709322684
 8C:/Users/minec/Desktop/github/PROJ300/Firmware/CPU Designs/Complex CPU/sv files/CPU_regN.sv
 FC:/Users/minec/Desktop/github/PROJ300/Firmware/CPU Designs/Complex CPU/sv files/CPU_regN.sv
 !i122 25
-L0 1 68
+Z9 L0 1 68
 R5
 r1
 !s85 0
@@ -217,24 +217,24 @@ R7
 n@c@u_counter_tb
 vCU_decoder
 R1
-!s110 1710739481
+!s110 1711280182
 !i10b 1
-!s100 [nbR7]PzjzDOSllQoU47o0
+!s100 hZQTg6HM<0mUViAcc:S=I1
 R2
-IAHG2RISIOY_6cnR0cW@Fd1
+Imo[`TcQX<_EI@ENCKZhlF2
 R3
 S1
 R0
-w1710739410
+w1711280176
 8C:/Users/minec/Desktop/github/PROJ300/Firmware/CPU Designs/Complex CPU/sv files/CU_decoder.sv
 FC:/Users/minec/Desktop/github/PROJ300/Firmware/CPU Designs/Complex CPU/sv files/CU_decoder.sv
-!i122 9
-Z9 L0 1 43
+!i122 346
+L0 1 35
 R5
 r1
 !s85 0
 31
-!s108 1710739481.000000
+!s108 1711280182.000000
 !s107 C:/Users/minec/Desktop/github/PROJ300/Firmware/CPU Designs/Complex CPU/sv files/CU_decoder.sv|
 !s90 -reportprogress|300|-work|work|C:/Users/minec/Desktop/github/PROJ300/Firmware/CPU Designs/Complex CPU/sv files/CU_decoder.sv|
 !i113 1
@@ -243,24 +243,24 @@ R7
 n@c@u_decoder
 vCU_decoder_tb
 R1
-!s110 1710739578
+!s110 1711280184
 !i10b 1
-!s100 QnW1=Ymlb6JHoYERU=`6X1
+!s100 6cAG0FICmYjP1?`4nBHVL2
 R2
-In>=;m4=Hi<86c<8DJ?5b41
+Ib9Pg<Mia7VCff<j]b[abA2
 R3
 S1
 R0
-w1710739569
+w1710739674
 8C:/Users/minec/Desktop/github/PROJ300/Firmware/CPU Designs/Complex CPU/sv files/CU_decoder_tb.sv
 FC:/Users/minec/Desktop/github/PROJ300/Firmware/CPU Designs/Complex CPU/sv files/CU_decoder_tb.sv
-!i122 12
-L0 1 55
+!i122 347
+Z10 L0 1 52
 R5
 r1
 !s85 0
 31
-!s108 1710739578.000000
+!s108 1711280184.000000
 !s107 C:/Users/minec/Desktop/github/PROJ300/Firmware/CPU Designs/Complex CPU/sv files/CU_decoder_tb.sv|
 !s90 -reportprogress|300|-work|work|C:/Users/minec/Desktop/github/PROJ300/Firmware/CPU Designs/Complex CPU/sv files/CU_decoder_tb.sv|
 !i113 1
@@ -269,24 +269,24 @@ R7
 n@c@u_decoder_tb
 vCU_logic
 R1
-Z10 !s110 1711265136
+Z11 !s110 1711279801
 !i10b 1
-!s100 Q64D5eAQ7k?RMWe8HNh]h2
+!s100 R>6b=X3LiImPc5FlB<HXK0
 R2
-I[fIYeVmVI7coEFgX5nMV@2
+IJPP3]N0[iFjhSz@fz`iH[1
 R3
 S1
 R0
-w1711265110
+w1711279729
 8CU_logic.sv
 FCU_logic.sv
-!i122 318
-L0 1 572
+!i122 344
+L0 1 581
 R5
 r1
 !s85 0
 31
-Z11 !s108 1711265136.000000
+Z12 !s108 1711279801.000000
 !s107 CU_logic.sv|
 !s90 -reportprogress|300|CU_logic.sv|
 !i113 1
@@ -294,32 +294,82 @@ R7
 n@c@u_logic
 vCU_logic_tb
 R1
-R10
+R11
 !i10b 1
-!s100 AYNL=I:WH_]W<<8QIIKb`0
+!s100 9WigJg8LBKf1M<`>IE:Ch0
 R2
-IU2[nhnaW>a>S<gKEAoc5[1
+INKik5^K4hV=k21ifn7;4?2
 R3
 S1
 R0
-w1711265123
+w1711279799
 8CU_logic_tb.sv
 FCU_logic_tb.sv
-!i122 319
-L0 1 432
+!i122 345
+L0 1 434
 R5
 r1
 !s85 0
 31
-R11
+R12
 !s107 CU_logic_tb.sv|
 !s90 -reportprogress|300|CU_logic_tb.sv|
 !i113 1
 R7
 n@c@u_logic_tb
+vdest_reg_selector
+R1
+!s110 1711277793
+!i10b 1
+!s100 X72g@eKL=OAi9I0ca[@[L1
+R2
+I@TV?5FN7G_9_b[onBK;X01
+R3
+S1
+R0
+w1711277650
+8C:/Users/minec/Desktop/github/PROJ300/Firmware/CPU Designs/Complex CPU/sv files/dest_reg_selector.sv
+FC:/Users/minec/Desktop/github/PROJ300/Firmware/CPU Designs/Complex CPU/sv files/dest_reg_selector.sv
+!i122 334
+L0 1 33
+R5
+r1
+!s85 0
+31
+!s108 1711277793.000000
+!s107 C:/Users/minec/Desktop/github/PROJ300/Firmware/CPU Designs/Complex CPU/sv files/dest_reg_selector.sv|
+!s90 -reportprogress|300|-work|work|C:/Users/minec/Desktop/github/PROJ300/Firmware/CPU Designs/Complex CPU/sv files/dest_reg_selector.sv|
+!i113 1
+R6
+R7
+vdest_reg_selector_tb
+R1
+!s110 1711277830
+!i10b 1
+!s100 T`3N4W?A13@E]PJ=X[zZl0
+R2
+IXQ_fSh=I17WVk?oE3RCCP3
+R3
+S1
+R0
+w1711277825
+8C:/Users/minec/Desktop/github/PROJ300/Firmware/CPU Designs/Complex CPU/sv files/dest_reg_selector_tb.sv
+FC:/Users/minec/Desktop/github/PROJ300/Firmware/CPU Designs/Complex CPU/sv files/dest_reg_selector_tb.sv
+!i122 335
+R9
+R5
+r1
+!s85 0
+31
+!s108 1711277830.000000
+!s107 C:/Users/minec/Desktop/github/PROJ300/Firmware/CPU Designs/Complex CPU/sv files/dest_reg_selector_tb.sv|
+!s90 -reportprogress|300|-work|work|C:/Users/minec/Desktop/github/PROJ300/Firmware/CPU Designs/Complex CPU/sv files/dest_reg_selector_tb.sv|
+!i113 1
+R6
+R7
 vflags_setter
 R1
-Z12 !s110 1710934396
+Z13 !s110 1710934396
 !i10b 1
 !s100 6ldB5KRKQg1cJ@Y2LD<F72
 R2
@@ -336,14 +386,14 @@ R5
 r1
 !s85 0
 31
-Z13 !s108 1710934396.000000
+Z14 !s108 1710934396.000000
 !s107 flags_setter.sv|
 !s90 -reportprogress|300|flags_setter.sv|
 !i113 1
 R7
 vflags_setter_tb
 R1
-R12
+R13
 !i10b 1
 !s100 @Q@GDQc;O6_nYJcDI183O2
 R2
@@ -360,7 +410,7 @@ R5
 r1
 !s85 0
 31
-R13
+R14
 !s107 flags_setter_tb.sv|
 !s90 -reportprogress|300|flags_setter_tb.sv|
 !i113 1
@@ -379,7 +429,7 @@ w1711003112
 8C:/Users/minec/Desktop/github/PROJ300/Firmware/CPU Designs/Complex CPU/sv files/GPR_DEMUX.sv
 FC:/Users/minec/Desktop/github/PROJ300/Firmware/CPU Designs/Complex CPU/sv files/GPR_DEMUX.sv
 !i122 147
-Z14 L0 1 90
+Z15 L0 1 90
 R5
 r1
 !s85 0
@@ -431,7 +481,7 @@ w1711003703
 8C:/Users/minec/Desktop/github/PROJ300/Firmware/CPU Designs/Complex CPU/sv files/GPR_MUX.sv
 FC:/Users/minec/Desktop/github/PROJ300/Firmware/CPU Designs/Complex CPU/sv files/GPR_MUX.sv
 !i122 172
-R14
+R15
 R5
 r1
 !s85 0
@@ -454,8 +504,8 @@ R3
 S1
 R0
 w1711008002
-Z15 8C:/Users/minec/Desktop/github/PROJ300/Firmware/CPU Designs/Complex CPU/sv files/operand_MUX_tb.sv
-Z16 FC:/Users/minec/Desktop/github/PROJ300/Firmware/CPU Designs/Complex CPU/sv files/operand_MUX_tb.sv
+Z16 8C:/Users/minec/Desktop/github/PROJ300/Firmware/CPU Designs/Complex CPU/sv files/operand_MUX_tb.sv
+Z17 FC:/Users/minec/Desktop/github/PROJ300/Firmware/CPU Designs/Complex CPU/sv files/operand_MUX_tb.sv
 !i122 162
 L0 1 47
 R5
@@ -463,15 +513,15 @@ r1
 !s85 0
 31
 !s108 1711008038.000000
-Z17 !s107 C:/Users/minec/Desktop/github/PROJ300/Firmware/CPU Designs/Complex CPU/sv files/operand_MUX_tb.sv|
-Z18 !s90 -reportprogress|300|-work|work|C:/Users/minec/Desktop/github/PROJ300/Firmware/CPU Designs/Complex CPU/sv files/operand_MUX_tb.sv|
+Z18 !s107 C:/Users/minec/Desktop/github/PROJ300/Firmware/CPU Designs/Complex CPU/sv files/operand_MUX_tb.sv|
+Z19 !s90 -reportprogress|300|-work|work|C:/Users/minec/Desktop/github/PROJ300/Firmware/CPU Designs/Complex CPU/sv files/operand_MUX_tb.sv|
 !i113 1
 R6
 R7
 n@g@p@r_@m@u@x_tb
 vGPR_selector
 R1
-Z19 !s110 1711191593
+Z20 !s110 1711191593
 !i10b 1
 !s100 ^3hcb=R2EdQ3m?BonETc91
 R2
@@ -488,7 +538,7 @@ R5
 r1
 !s85 0
 31
-Z20 !s108 1711191593.000000
+Z21 !s108 1711191593.000000
 !s107 GPR_selector.sv|
 !s90 -reportprogress|300|GPR_selector.sv|
 !i113 1
@@ -496,7 +546,7 @@ R7
 n@g@p@r_selector
 vGPR_selector_tb
 R1
-R19
+R20
 !i10b 1
 !s100 `N=Pga5hnUcoeVDj`_MbS1
 R2
@@ -513,7 +563,7 @@ R5
 r1
 !s85 0
 31
-R20
+R21
 !s107 GPR_selector_tb.sv|
 !s90 -reportprogress|300|GPR_selector_tb.sv|
 !i113 1
@@ -585,7 +635,7 @@ w1711188293
 8C:/Users/minec/Desktop/github/PROJ300/Firmware/CPU Designs/Complex CPU/sv files/Memory_tb.sv
 FC:/Users/minec/Desktop/github/PROJ300/Firmware/CPU Designs/Complex CPU/sv files/Memory_tb.sv
 !i122 315
-Z21 L0 1 176
+Z22 L0 1 176
 R5
 r1
 !s85 0
@@ -611,7 +661,7 @@ w1711115956
 8C:/Users/minec/Desktop/github/PROJ300/Firmware/CPU Designs/Complex CPU/sv files/M_DEMUX.sv
 FC:/Users/minec/Desktop/github/PROJ300/Firmware/CPU Designs/Complex CPU/sv files/M_DEMUX.sv
 !i122 212
-R9
+Z23 L0 1 43
 R5
 r1
 !s85 0
@@ -859,7 +909,7 @@ R7
 n@m_@r@a@m_tb
 vMemory
 R1
-Z22 !s110 1711191861
+Z24 !s110 1711191861
 !i10b 1
 !s100 0QTHnGSnZNSm?;DY=R1Pd3
 R2
@@ -876,7 +926,7 @@ R5
 r1
 !s85 0
 31
-Z23 !s108 1711191861.000000
+Z25 !s108 1711191861.000000
 !s107 Memory.sv|
 !s90 -reportprogress|300|Memory.sv|
 !i113 1
@@ -884,7 +934,7 @@ R7
 n@memory
 vMemory_tb
 R1
-R22
+R24
 !i10b 1
 !s100 i5n6Z54@lR[MSIcB0ViGS3
 R2
@@ -896,12 +946,12 @@ w1711191856
 8Memory_tb.sv
 FMemory_tb.sv
 !i122 317
-R21
+R22
 R5
 r1
 !s85 0
 31
-R23
+R25
 !s107 Memory_tb.sv|
 !s90 -reportprogress|300|Memory_tb.sv|
 !i113 1
@@ -944,17 +994,17 @@ R3
 S1
 R0
 w1711008351
-R15
 R16
+R17
 !i122 173
-L0 1 52
+R10
 R5
 r1
 !s85 0
 31
 !s108 1711009252.000000
-R17
 R18
+R19
 !i113 1
 R6
 R7
@@ -1025,7 +1075,7 @@ w1711175692
 8C:/Users/minec/Desktop/github/PROJ300/Firmware/CPU Designs/Complex CPU/sv files/testROM.sv
 FC:/Users/minec/Desktop/github/PROJ300/Firmware/CPU Designs/Complex CPU/sv files/testROM.sv
 !i122 223
-R9
+R23
 R5
 r1
 !s85 0

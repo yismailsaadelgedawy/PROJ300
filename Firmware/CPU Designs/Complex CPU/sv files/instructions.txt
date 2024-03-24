@@ -93,7 +93,7 @@ sub2 : r <- AC
 mul1 : AC <- data * data 
 mul2 : r <- AC
 
-
+(where rsel[1] = 1 to set the first operand as r; rsel[0] is dc)
 lsr1 : AC <- r >> rop2 
 lsr2 : r <- AC
 
