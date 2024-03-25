@@ -15,18 +15,16 @@
 
 // PROGRAM		"Quartus Prime"
 // VERSION		"Version 20.1.0 Build 711 06/05/2020 SJ Lite Edition"
-// CREATED		"Mon Mar 25 16:47:09 2024"
+// CREATED		"Mon Mar 25 17:14:32 2024"
 
 module TopLevel(
 	rst,
-	clk,
-	clk_fast
+	clk
 );
 
 
 input wire	rst;
 input wire	clk;
-input wire	clk_fast;
 
 wire	[37:0] AC;
 wire	ACLOAD;
@@ -155,31 +153,28 @@ CPU_regN	b2v_inst(
 
 
 
-CPU_regNA	b2v_inst11(
+CPU_latchN	b2v_inst11(
 	.inc(SYNTHESIZED_WIRE_1),
 	.load(RSELLOAD),
 	.rst(sw_rst),
-	.clk(clk_fast),
 	.d(system_bus[33:32]),
 	.q(rsel));
 	defparam	b2v_inst11.N = 2;
 
 
-CPU_regNA	b2v_inst12(
+CPU_latchN	b2v_inst12(
 	.inc(SYNTHESIZED_WIRE_2),
 	.load(ROP1LOAD),
 	.rst(sw_rst),
-	.clk(clk_fast),
 	.d(system_bus[31:16]),
 	.q(rop1[15:0]));
 	defparam	b2v_inst12.N = 16;
 
 
-CPU_regNA	b2v_inst13(
+CPU_latchN	b2v_inst13(
 	.inc(SYNTHESIZED_WIRE_3),
 	.load(ROP2LOAD),
 	.rst(sw_rst),
-	.clk(clk_fast),
 	.d(system_bus[15:0]),
 	.q(rop2[15:0]));
 	defparam	b2v_inst13.N = 16;
@@ -530,15 +525,14 @@ CPU_regN	b2v_inst6(
 	defparam	b2v_inst6.N = 32;
 
 
-
-CPU_regNA	b2v_inst8(
+CPU_latchN	b2v_inst60(
 	.inc(SYNTHESIZED_WIRE_20),
 	.load(IRLOAD),
 	.rst(sw_rst),
-	.clk(clk_fast),
 	.d(system_bus[37:34]),
 	.q(IR));
-	defparam	b2v_inst8.N = 4;
+	defparam	b2v_inst60.N = 4;
+
 
 
 
