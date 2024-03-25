@@ -86,8 +86,8 @@ initial begin
     // nop1
     CPU_state = 1<<3;
     #10ns;
-    assert(ALUSEL == 'd0 && SYSTEMBUSSEL == 'd0) $display("passed nop1"); else $error("failed nop1");
-    assert({RSELLOAD,ROP1LOAD,ROP2LOAD,TRLOAD,ARLOAD,PCLOAD,DRLOAD,ACLOAD,IRLOAD,GPRLOAD,MEMLOAD,PCINC,COUNTER_LD,COUNTER_INC,COUNTER_CLR} == 'd0) $display("passed rest zero"); else $error("failed rest zero");
+    assert(COUNTER_CLR && ALUSEL == 'd0 && SYSTEMBUSSEL == 'd0) $display("passed nop1"); else $error("failed nop1");
+    assert({RSELLOAD,ROP1LOAD,ROP2LOAD,TRLOAD,ARLOAD,PCLOAD,DRLOAD,ACLOAD,IRLOAD,GPRLOAD,MEMLOAD,PCINC,COUNTER_LD,COUNTER_INC} == 'd0) $display("passed rest zero"); else $error("failed rest zero");
     
 
     // mov1

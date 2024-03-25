@@ -5,7 +5,7 @@ module flags_setter (
     input logic [3:0] opcode,
     input logic [11:0] op1,op2,
     input logic [11:0] AC_result,   // concerned with the bottom 12 bits only
-    input logic AC_update,rst
+    input logic rst, ACLOAD
 
 );
 
@@ -20,13 +20,9 @@ instruction_t instruction;
 // add : 1001
 // sub : 1010
 
-// the "AC_update" input is the logical OR of cmp1, add1 and sub1
-// such that this circuit only updates when the AC result is updated on
-// these execution routines
 
-// if asynchronous fails to synth properly
-// use "bit" datatype for NZCV
-always_ff @(posedge AC_update or posedge rst) begin
+// always_ff caused bugs in testing
+always_latch begin
 
     if(rst) begin
         instruction <= reset;        
@@ -34,139 +30,145 @@ always_ff @(posedge AC_update or posedge rst) begin
     end
 
     else begin
-             
-        case(opcode)
 
-        // cmp (same as sub)
-        4'b0100 : begin
+        if(ACLOAD) begin
 
-            instruction <= cmp;
+            case(opcode)
 
-            // N
-            if(AC_result[11] == 1) begin
-                N <= 1;
-            end
-            else begin
-                N <= 0;
-            end
+            // cmp (same as sub)
+            4'b0100 : begin
 
-            // Z
-            if(AC_result == 'd0) begin
-                Z <= 1;
-            end
-            else begin
-                Z <= 0;
-            end
+                instruction <= cmp;
 
-            // C - set when borrow did NOT occur (op1 > op2)                
-            // so when result is smaller than either operand
-            if(AC_result < op1 || AC_result < op2) begin
-                C <= 1;
-            end
-            else begin
-                C <= 0;
-            end
+                // N
+                if(AC_result[11] == 1) begin
+                    N <= 1;
+                end
+                else begin
+                    N <= 0;
+                end
 
-            // V - sign bit changes to 0 when subtracting a positive number from a negative number
-            if(AC_result[11] == 0 && op1[11] == 1 && op2[11] == 0) begin
-                V <= 1;
-            end
-            else begin
-                V <= 0;
-            end
+                // Z
+                if(AC_result == 'd0) begin
+                    Z <= 1;
+                end
+                else begin
+                    Z <= 0;
+                end
 
+                // C - set when borrow did NOT occur (op1 > op2)                
+                // so when result is smaller than either operand
+                if(AC_result < op1 || AC_result < op2) begin
+                    C <= 1;
+                end
+                else begin
+                    C <= 0;
+                end
 
-
-        end
-
-        // add
-        4'b1001 : begin
-
-            instruction <= add;
-
-            // N
-            if(AC_result[11] == 1) begin
-                N <= 1;
-            end
-            else begin
-                N <= 0;
-            end
-
-            // Z
-            if(AC_result == 'd0) begin
-                Z <= 1;
-            end
-            else begin
-                Z <= 0;
-            end
-
-            // C - set due to overflow
-            // when result is smaller than either operand
-            if(AC_result < op1 || AC_result < op2) begin
-                C <= 1;
-            end
-            else begin
-                C <= 0;
-            end
-
-            // V - sign bit changes to 1 when adding two positive numbers
-            if(AC_result[11] == 1 && op1[11] == 0 && op2[11] == 0) begin
-                V <= 1;
-            end
-            else begin
-                V <= 0;
-            end
-
-        end
+                // V - sign bit changes to 0 when subtracting a positive number from a negative number
+                if(AC_result[11] == 0 && op1[11] == 1 && op2[11] == 0) begin
+                    V <= 1;
+                end
+                else begin
+                    V <= 0;
+                end
 
 
-        // sub
-        4'b1010 : begin
 
-            instruction <= sub;
-
-            // N
-            if(AC_result[11] == 1) begin
-                N <= 1;
-            end
-            else begin
-                N <= 0;
             end
 
-            // Z
-            if(AC_result == 'd0) begin
-                Z <= 1;
-            end
-            else begin
-                Z <= 0;
-            end
+            // add
+            4'b1001 : begin
 
-            // C - set when borrow did NOT occur (op1 > op2)                
-            // so when result is smaller than either operand
-            if(AC_result < op1 || AC_result < op2) begin
-                C <= 1;
-            end
-            else begin
-                C <= 0;
-            end
+                instruction <= add;
 
-            // V - sign bit changes to 0 when subtracting a positive number from a negative number
-            if(AC_result[11] == 0 && op1[11] == 1 && op2[11] == 0) begin
-                V <= 1;
-            end
-            else begin
-                V <= 0;
+                // N
+                if(AC_result[11] == 1) begin
+                    N <= 1;
+                end
+                else begin
+                    N <= 0;
+                end
+
+                // Z
+                if(AC_result == 'd0) begin
+                    Z <= 1;
+                end
+                else begin
+                    Z <= 0;
+                end
+
+                // C - set due to overflow
+                // when result is smaller than either operand
+                if(AC_result < op1 || AC_result < op2) begin
+                    C <= 1;
+                end
+                else begin
+                    C <= 0;
+                end
+
+                // V - sign bit changes to 1 when adding two positive numbers
+                if(AC_result[11] == 1 && op1[11] == 0 && op2[11] == 0) begin
+                    V <= 1;
+                end
+                else begin
+                    V <= 0;
+                end
+
             end
 
 
+            // sub
+            4'b1010 : begin
 
-        end
+                instruction <= sub;
+
+                // N
+                if(AC_result[11] == 1) begin
+                    N <= 1;
+                end
+                else begin
+                    N <= 0;
+                end
+
+                // Z
+                if(AC_result == 'd0) begin
+                    Z <= 1;
+                end
+                else begin
+                    Z <= 0;
+                end
+
+                // C - set when borrow did NOT occur (op1 > op2)                
+                // so when result is smaller than either operand
+                if(AC_result < op1 || AC_result < op2) begin
+                    C <= 1;
+                end
+                else begin
+                    C <= 0;
+                end
+
+                // V - sign bit changes to 0 when subtracting a positive number from a negative number
+                if(AC_result[11] == 0 && op1[11] == 1 && op2[11] == 0) begin
+                    V <= 1;
+                end
+                else begin
+                    V <= 0;
+                end
+
+
+
+            end
 
         
         endcase
 
         // otherwise, flags latch
         // NOT RESET!
+
+        end
+             
+        
 
 
     end

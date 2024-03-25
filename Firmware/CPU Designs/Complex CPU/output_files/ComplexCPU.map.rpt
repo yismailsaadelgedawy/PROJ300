@@ -1,5 +1,5 @@
 Analysis & Synthesis report for ComplexCPU
-Sun Mar 24 14:59:25 2024
+Mon Mar 25 16:46:38 2024
 Quartus Prime Version 20.1.0 Build 711 06/05/2020 SJ Lite Edition
 
 
@@ -16,10 +16,10 @@ Quartus Prime Version 20.1.0 Build 711 06/05/2020 SJ Lite Edition
   8. General Register Statistics
   9. Parameter Settings for User Entity Instance: CPU_regN:inst
  10. Parameter Settings for User Entity Instance: CU_logic:inst27
- 11. Parameter Settings for User Entity Instance: CPU_regN:inst6
- 12. Parameter Settings for User Entity Instance: ALU:inst19
- 13. Parameter Settings for User Entity Instance: CPU_regN:inst13
- 14. Parameter Settings for User Entity Instance: systemBus_muxN:inst15
+ 11. Parameter Settings for User Entity Instance: ALU:inst19
+ 12. Parameter Settings for User Entity Instance: CPU_regNA:inst11
+ 13. Parameter Settings for User Entity Instance: systemBus_muxN:inst15
+ 14. Parameter Settings for User Entity Instance: CPU_regN:inst6
  15. Parameter Settings for User Entity Instance: CPU_regN:inst4
  16. Parameter Settings for User Entity Instance: GPR_selector:inst18|CPU_regN:inst5
  17. Parameter Settings for User Entity Instance: GPR_selector:inst18|CPU_regN:inst7
@@ -34,11 +34,11 @@ Quartus Prime Version 20.1.0 Build 711 06/05/2020 SJ Lite Edition
  26. Parameter Settings for User Entity Instance: GPR_selector:inst18|CPU_regN:inst25
  27. Parameter Settings for User Entity Instance: GPR_selector:inst18|CPU_regN:inst27
  28. Parameter Settings for User Entity Instance: GPR_selector:inst18|CPU_regN:inst29
- 29. Parameter Settings for User Entity Instance: CPU_regN:inst11
- 30. Parameter Settings for User Entity Instance: CPU_regN:inst12
+ 29. Parameter Settings for User Entity Instance: CPU_regNA:inst12
+ 30. Parameter Settings for User Entity Instance: CPU_regNA:inst13
  31. Parameter Settings for User Entity Instance: CU_decoder:inst26
  32. Parameter Settings for User Entity Instance: CU_counter:inst25
- 33. Parameter Settings for User Entity Instance: CPU_regN:inst8
+ 33. Parameter Settings for User Entity Instance: CPU_regNA:inst8
  34. Parameter Settings for User Entity Instance: Memory:inst22|testROM:inst3
  35. Parameter Settings for User Entity Instance: Memory:inst22|M_RAM:inst4
  36. Parameter Settings for User Entity Instance: CPU_regN:inst24
@@ -85,14 +85,14 @@ https://fpgasoftware.intel.com/eula.
 +-------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                  ;
 +---------------------------------+---------------------------------------------+
-; Analysis & Synthesis Status     ; Successful - Sun Mar 24 14:59:25 2024       ;
+; Analysis & Synthesis Status     ; Successful - Mon Mar 25 16:46:38 2024       ;
 ; Quartus Prime Version           ; 20.1.0 Build 711 06/05/2020 SJ Lite Edition ;
 ; Revision Name                   ; ComplexCPU                                  ;
 ; Top-level Entity Name           ; TopLevel                                    ;
 ; Family                          ; Cyclone V                                   ;
 ; Logic utilization (in ALMs)     ; N/A                                         ;
 ; Total registers                 ; 0                                           ;
-; Total pins                      ; 2                                           ;
+; Total pins                      ; 3                                           ;
 ; Total virtual pins              ; 0                                           ;
 ; Total block memory bits         ; 0                                           ;
 ; Total DSP Blocks                ; 0                                           ;
@@ -214,6 +214,7 @@ https://fpgasoftware.intel.com/eula.
 +----------------------------------+-----------------+------------------------------------+------------------------------------------------------------------------------------------------------+---------+
 ; File Name with User-Entered Path ; Used in Netlist ; File Type                          ; File Name with Absolute Path                                                                         ; Library ;
 +----------------------------------+-----------------+------------------------------------+------------------------------------------------------------------------------------------------------+---------+
+; sv files/CPU_regNA.sv            ; yes             ; User SystemVerilog HDL File        ; C:/Users/minec/Desktop/github/PROJ300/Firmware/CPU Designs/Complex CPU/sv files/CPU_regNA.sv         ;         ;
 ; sv files/dest_reg_selector.sv    ; yes             ; User SystemVerilog HDL File        ; C:/Users/minec/Desktop/github/PROJ300/Firmware/CPU Designs/Complex CPU/sv files/dest_reg_selector.sv ;         ;
 ; sv files/flags_setter.sv         ; yes             ; User SystemVerilog HDL File        ; C:/Users/minec/Desktop/github/PROJ300/Firmware/CPU Designs/Complex CPU/sv files/flags_setter.sv      ;         ;
 ; sv files/CU_logic.sv             ; yes             ; User SystemVerilog HDL File        ; C:/Users/minec/Desktop/github/PROJ300/Firmware/CPU Designs/Complex CPU/sv files/CU_logic.sv          ;         ;
@@ -256,13 +257,13 @@ https://fpgasoftware.intel.com/eula.
 ;                                             ;       ;
 ; Dedicated logic registers                   ; 0     ;
 ;                                             ;       ;
-; I/O pins                                    ; 2     ;
+; I/O pins                                    ; 3     ;
 ;                                             ;       ;
 ; Total DSP Blocks                            ; 0     ;
 ;                                             ;       ;
 ; Maximum fan-out node                        ; rst   ;
 ; Maximum fan-out                             ; 1     ;
-; Total fan-out                               ; 2     ;
+; Total fan-out                               ; 3     ;
 ; Average fan-out                             ; 0.50  ;
 +---------------------------------------------+-------+
 
@@ -272,7 +273,7 @@ https://fpgasoftware.intel.com/eula.
 +----------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+---------------------+-------------+--------------+
 ; Compilation Hierarchy Node ; Combinational ALUTs ; Dedicated Logic Registers ; Block Memory Bits ; DSP Blocks ; Pins ; Virtual Pins ; Full Hierarchy Name ; Entity Name ; Library Name ;
 +----------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+---------------------+-------------+--------------+
-; |TopLevel                  ; 0 (0)               ; 0 (0)                     ; 0                 ; 0          ; 2    ; 0            ; |TopLevel           ; TopLevel    ; work         ;
+; |TopLevel                  ; 0 (0)               ; 0 (0)                     ; 0                 ; 0          ; 3    ; 0            ; |TopLevel           ; TopLevel    ; work         ;
 +----------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+---------------------+-------------+--------------+
 Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
 
@@ -312,16 +313,6 @@ Note: In order to hide this table in the UI and the text report file, please set
 Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
 
 
-+-------------------------------------------------------------+
-; Parameter Settings for User Entity Instance: CPU_regN:inst6 ;
-+----------------+-------+------------------------------------+
-; Parameter Name ; Value ; Type                               ;
-+----------------+-------+------------------------------------+
-; N              ; 32    ; Signed Integer                     ;
-+----------------+-------+------------------------------------+
-Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
-
-
 +---------------------------------------------------------+
 ; Parameter Settings for User Entity Instance: ALU:inst19 ;
 +----------------+-------+--------------------------------+
@@ -332,13 +323,13 @@ Note: In order to hide this table in the UI and the text report file, please set
 Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
 
 
-+--------------------------------------------------------------+
-; Parameter Settings for User Entity Instance: CPU_regN:inst13 ;
-+----------------+-------+-------------------------------------+
-; Parameter Name ; Value ; Type                                ;
-+----------------+-------+-------------------------------------+
-; N              ; 2     ; Signed Integer                      ;
-+----------------+-------+-------------------------------------+
++---------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: CPU_regNA:inst11 ;
++----------------+-------+--------------------------------------+
+; Parameter Name ; Value ; Type                                 ;
++----------------+-------+--------------------------------------+
+; N              ; 2     ; Signed Integer                       ;
++----------------+-------+--------------------------------------+
 Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
 
 
@@ -349,6 +340,16 @@ Note: In order to hide this table in the UI and the text report file, please set
 +----------------+-------+-------------------------------------------+
 ; N              ; 38    ; Signed Integer                            ;
 +----------------+-------+-------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: CPU_regN:inst6 ;
++----------------+-------+------------------------------------+
+; Parameter Name ; Value ; Type                               ;
++----------------+-------+------------------------------------+
+; N              ; 32    ; Signed Integer                     ;
++----------------+-------+------------------------------------+
 Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
 
 
@@ -492,23 +493,23 @@ Note: In order to hide this table in the UI and the text report file, please set
 Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
 
 
-+--------------------------------------------------------------+
-; Parameter Settings for User Entity Instance: CPU_regN:inst11 ;
-+----------------+-------+-------------------------------------+
-; Parameter Name ; Value ; Type                                ;
-+----------------+-------+-------------------------------------+
-; N              ; 16    ; Signed Integer                      ;
-+----------------+-------+-------------------------------------+
++---------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: CPU_regNA:inst12 ;
++----------------+-------+--------------------------------------+
+; Parameter Name ; Value ; Type                                 ;
++----------------+-------+--------------------------------------+
+; N              ; 16    ; Signed Integer                       ;
++----------------+-------+--------------------------------------+
 Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
 
 
-+--------------------------------------------------------------+
-; Parameter Settings for User Entity Instance: CPU_regN:inst12 ;
-+----------------+-------+-------------------------------------+
-; Parameter Name ; Value ; Type                                ;
-+----------------+-------+-------------------------------------+
-; N              ; 16    ; Signed Integer                      ;
-+----------------+-------+-------------------------------------+
++---------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: CPU_regNA:inst13 ;
++----------------+-------+--------------------------------------+
+; Parameter Name ; Value ; Type                                 ;
++----------------+-------+--------------------------------------+
+; N              ; 16    ; Signed Integer                       ;
++----------------+-------+--------------------------------------+
 Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
 
 
@@ -534,13 +535,13 @@ Note: In order to hide this table in the UI and the text report file, please set
 Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
 
 
-+-------------------------------------------------------------+
-; Parameter Settings for User Entity Instance: CPU_regN:inst8 ;
-+----------------+-------+------------------------------------+
-; Parameter Name ; Value ; Type                               ;
-+----------------+-------+------------------------------------+
-; N              ; 4     ; Signed Integer                     ;
-+----------------+-------+------------------------------------+
++--------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: CPU_regNA:inst8 ;
++----------------+-------+-------------------------------------+
+; Parameter Name ; Value ; Type                                ;
++----------------+-------+-------------------------------------+
+; N              ; 4     ; Signed Integer                      ;
++----------------+-------+-------------------------------------+
 Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
 
 
@@ -721,7 +722,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 +-------------------+---------------------------------+
 ; Type              ; Count                           ;
 +-------------------+---------------------------------+
-; boundary_port     ; 2                               ;
+; boundary_port     ; 3                               ;
 ;                   ;                                 ;
 ; Max LUT depth     ; 0.00                            ;
 ; Average LUT depth ; 0.00                            ;
@@ -743,10 +744,12 @@ Note: In order to hide this table in the UI and the text report file, please set
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 20.1.0 Build 711 06/05/2020 SJ Lite Edition
-    Info: Processing started: Sun Mar 24 14:59:16 2024
+    Info: Processing started: Mon Mar 25 16:46:29 2024
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off ComplexCPU -c ComplexCPU
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20030): Parallel compilation is enabled and will use 4 of the 4 processors detected
+Info (12021): Found 1 design units, including 1 entities, in source file sv files/cpu_regna.sv
+    Info (12023): Found entity 1: CPU_regNA File: C:/Users/minec/Desktop/github/PROJ300/Firmware/CPU Designs/Complex CPU/sv files/CPU_regNA.sv Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file sv files/dest_reg_selector.sv
     Info (12023): Found entity 1: dest_reg_selector File: C:/Users/minec/Desktop/github/PROJ300/Firmware/CPU Designs/Complex CPU/sv files/dest_reg_selector.sv Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file sv files/flags_setter.sv
@@ -804,14 +807,23 @@ Warning (10762): Verilog HDL Case Statement warning at CU_logic.sv(93): can't ch
 Info (10264): Verilog HDL Case Statement information at CU_logic.sv(93): all case item expressions in this case statement are onehot File: C:/Users/minec/Desktop/github/PROJ300/Firmware/CPU Designs/Complex CPU/sv files/CU_logic.sv Line: 93
 Info (12128): Elaborating entity "flags_setter" for hierarchy "flags_setter:inst23"
 Warning (10036): Verilog HDL or VHDL warning at flags_setter.sv(15): object "instruction" assigned a value but never read File: C:/Users/minec/Desktop/github/PROJ300/Firmware/CPU Designs/Complex CPU/sv files/flags_setter.sv Line: 15
-Info (12128): Elaborating entity "CPU_regN" for hierarchy "CPU_regN:inst6"
-Info (10264): Verilog HDL Case Statement information at CPU_regN.sv(35): all case item expressions in this case statement are onehot File: C:/Users/minec/Desktop/github/PROJ300/Firmware/CPU Designs/Complex CPU/sv files/CPU_regN.sv Line: 35
+Warning (10270): Verilog HDL Case Statement warning at flags_setter.sv(36): incomplete case statement has no default case item File: C:/Users/minec/Desktop/github/PROJ300/Firmware/CPU Designs/Complex CPU/sv files/flags_setter.sv Line: 36
+Info (10041): Inferred latch for "V" at flags_setter.sv(27) File: C:/Users/minec/Desktop/github/PROJ300/Firmware/CPU Designs/Complex CPU/sv files/flags_setter.sv Line: 27
+Info (10041): Inferred latch for "C" at flags_setter.sv(27) File: C:/Users/minec/Desktop/github/PROJ300/Firmware/CPU Designs/Complex CPU/sv files/flags_setter.sv Line: 27
+Info (10041): Inferred latch for "Z" at flags_setter.sv(27) File: C:/Users/minec/Desktop/github/PROJ300/Firmware/CPU Designs/Complex CPU/sv files/flags_setter.sv Line: 27
+Info (10041): Inferred latch for "N" at flags_setter.sv(27) File: C:/Users/minec/Desktop/github/PROJ300/Firmware/CPU Designs/Complex CPU/sv files/flags_setter.sv Line: 27
 Info (12128): Elaborating entity "ALU" for hierarchy "ALU:inst19"
 Info (12128): Elaborating entity "operand_MUX" for hierarchy "operand_MUX:inst20"
-Info (12128): Elaborating entity "CPU_regN" for hierarchy "CPU_regN:inst13"
-Warning (10230): Verilog HDL assignment warning at CPU_regN.sv(45): truncated value with size 32 to match size of target (2) File: C:/Users/minec/Desktop/github/PROJ300/Firmware/CPU Designs/Complex CPU/sv files/CPU_regN.sv Line: 45
-Info (10264): Verilog HDL Case Statement information at CPU_regN.sv(35): all case item expressions in this case statement are onehot File: C:/Users/minec/Desktop/github/PROJ300/Firmware/CPU Designs/Complex CPU/sv files/CPU_regN.sv Line: 35
+Info (12128): Elaborating entity "CPU_regNA" for hierarchy "CPU_regNA:inst11"
+Warning (10230): Verilog HDL assignment warning at CPU_regNA.sv(47): truncated value with size 32 to match size of target (2) File: C:/Users/minec/Desktop/github/PROJ300/Firmware/CPU Designs/Complex CPU/sv files/CPU_regNA.sv Line: 47
+Warning (10270): Verilog HDL Case Statement warning at CPU_regNA.sv(37): incomplete case statement has no default case item File: C:/Users/minec/Desktop/github/PROJ300/Firmware/CPU Designs/Complex CPU/sv files/CPU_regNA.sv Line: 37
+Info (10264): Verilog HDL Case Statement information at CPU_regNA.sv(37): all case item expressions in this case statement are onehot File: C:/Users/minec/Desktop/github/PROJ300/Firmware/CPU Designs/Complex CPU/sv files/CPU_regNA.sv Line: 37
+Warning (10240): Verilog HDL Always Construct warning at CPU_regNA.sv(22): inferring latch(es) for variable "internal_reg", which holds its previous value in one or more paths through the always construct File: C:/Users/minec/Desktop/github/PROJ300/Firmware/CPU Designs/Complex CPU/sv files/CPU_regNA.sv Line: 22
+Info (10041): Inferred latch for "internal_reg[0]" at CPU_regNA.sv(22) File: C:/Users/minec/Desktop/github/PROJ300/Firmware/CPU Designs/Complex CPU/sv files/CPU_regNA.sv Line: 22
+Info (10041): Inferred latch for "internal_reg[1]" at CPU_regNA.sv(22) File: C:/Users/minec/Desktop/github/PROJ300/Firmware/CPU Designs/Complex CPU/sv files/CPU_regNA.sv Line: 22
 Info (12128): Elaborating entity "systemBus_muxN" for hierarchy "systemBus_muxN:inst15"
+Info (12128): Elaborating entity "CPU_regN" for hierarchy "CPU_regN:inst6"
+Info (10264): Verilog HDL Case Statement information at CPU_regN.sv(35): all case item expressions in this case statement are onehot File: C:/Users/minec/Desktop/github/PROJ300/Firmware/CPU Designs/Complex CPU/sv files/CPU_regN.sv Line: 35
 Info (12128): Elaborating entity "CPU_regN" for hierarchy "CPU_regN:inst4"
 Info (10264): Verilog HDL Case Statement information at CPU_regN.sv(35): all case item expressions in this case statement are onehot File: C:/Users/minec/Desktop/github/PROJ300/Firmware/CPU Designs/Complex CPU/sv files/CPU_regN.sv Line: 35
 Info (12128): Elaborating entity "GPR_selector" for hierarchy "GPR_selector:inst18"
@@ -825,58 +837,82 @@ Info (12128): Elaborating entity "GPR_MUX" for hierarchy "GPR_selector:inst18|GP
 Info (12128): Elaborating entity "GPR_DEMUX" for hierarchy "GPR_selector:inst18|GPR_DEMUX:inst"
 Info (12128): Elaborating entity "conc32" for hierarchy "GPR_selector:inst18|conc32:inst1"
 Info (12128): Elaborating entity "dest_reg_selector" for hierarchy "dest_reg_selector:inst59"
-Info (12128): Elaborating entity "CPU_regN" for hierarchy "CPU_regN:inst11"
-Warning (10230): Verilog HDL assignment warning at CPU_regN.sv(45): truncated value with size 32 to match size of target (16) File: C:/Users/minec/Desktop/github/PROJ300/Firmware/CPU Designs/Complex CPU/sv files/CPU_regN.sv Line: 45
-Info (10264): Verilog HDL Case Statement information at CPU_regN.sv(35): all case item expressions in this case statement are onehot File: C:/Users/minec/Desktop/github/PROJ300/Firmware/CPU Designs/Complex CPU/sv files/CPU_regN.sv Line: 35
+Info (12128): Elaborating entity "CPU_regNA" for hierarchy "CPU_regNA:inst12"
+Warning (10230): Verilog HDL assignment warning at CPU_regNA.sv(47): truncated value with size 32 to match size of target (16) File: C:/Users/minec/Desktop/github/PROJ300/Firmware/CPU Designs/Complex CPU/sv files/CPU_regNA.sv Line: 47
+Warning (10270): Verilog HDL Case Statement warning at CPU_regNA.sv(37): incomplete case statement has no default case item File: C:/Users/minec/Desktop/github/PROJ300/Firmware/CPU Designs/Complex CPU/sv files/CPU_regNA.sv Line: 37
+Info (10264): Verilog HDL Case Statement information at CPU_regNA.sv(37): all case item expressions in this case statement are onehot File: C:/Users/minec/Desktop/github/PROJ300/Firmware/CPU Designs/Complex CPU/sv files/CPU_regNA.sv Line: 37
+Warning (10240): Verilog HDL Always Construct warning at CPU_regNA.sv(22): inferring latch(es) for variable "internal_reg", which holds its previous value in one or more paths through the always construct File: C:/Users/minec/Desktop/github/PROJ300/Firmware/CPU Designs/Complex CPU/sv files/CPU_regNA.sv Line: 22
+Info (10041): Inferred latch for "internal_reg[0]" at CPU_regNA.sv(22) File: C:/Users/minec/Desktop/github/PROJ300/Firmware/CPU Designs/Complex CPU/sv files/CPU_regNA.sv Line: 22
+Info (10041): Inferred latch for "internal_reg[1]" at CPU_regNA.sv(22) File: C:/Users/minec/Desktop/github/PROJ300/Firmware/CPU Designs/Complex CPU/sv files/CPU_regNA.sv Line: 22
+Info (10041): Inferred latch for "internal_reg[2]" at CPU_regNA.sv(22) File: C:/Users/minec/Desktop/github/PROJ300/Firmware/CPU Designs/Complex CPU/sv files/CPU_regNA.sv Line: 22
+Info (10041): Inferred latch for "internal_reg[3]" at CPU_regNA.sv(22) File: C:/Users/minec/Desktop/github/PROJ300/Firmware/CPU Designs/Complex CPU/sv files/CPU_regNA.sv Line: 22
+Info (10041): Inferred latch for "internal_reg[4]" at CPU_regNA.sv(22) File: C:/Users/minec/Desktop/github/PROJ300/Firmware/CPU Designs/Complex CPU/sv files/CPU_regNA.sv Line: 22
+Info (10041): Inferred latch for "internal_reg[5]" at CPU_regNA.sv(22) File: C:/Users/minec/Desktop/github/PROJ300/Firmware/CPU Designs/Complex CPU/sv files/CPU_regNA.sv Line: 22
+Info (10041): Inferred latch for "internal_reg[6]" at CPU_regNA.sv(22) File: C:/Users/minec/Desktop/github/PROJ300/Firmware/CPU Designs/Complex CPU/sv files/CPU_regNA.sv Line: 22
+Info (10041): Inferred latch for "internal_reg[7]" at CPU_regNA.sv(22) File: C:/Users/minec/Desktop/github/PROJ300/Firmware/CPU Designs/Complex CPU/sv files/CPU_regNA.sv Line: 22
+Info (10041): Inferred latch for "internal_reg[8]" at CPU_regNA.sv(22) File: C:/Users/minec/Desktop/github/PROJ300/Firmware/CPU Designs/Complex CPU/sv files/CPU_regNA.sv Line: 22
+Info (10041): Inferred latch for "internal_reg[9]" at CPU_regNA.sv(22) File: C:/Users/minec/Desktop/github/PROJ300/Firmware/CPU Designs/Complex CPU/sv files/CPU_regNA.sv Line: 22
+Info (10041): Inferred latch for "internal_reg[10]" at CPU_regNA.sv(22) File: C:/Users/minec/Desktop/github/PROJ300/Firmware/CPU Designs/Complex CPU/sv files/CPU_regNA.sv Line: 22
+Info (10041): Inferred latch for "internal_reg[11]" at CPU_regNA.sv(22) File: C:/Users/minec/Desktop/github/PROJ300/Firmware/CPU Designs/Complex CPU/sv files/CPU_regNA.sv Line: 22
+Info (10041): Inferred latch for "internal_reg[12]" at CPU_regNA.sv(22) File: C:/Users/minec/Desktop/github/PROJ300/Firmware/CPU Designs/Complex CPU/sv files/CPU_regNA.sv Line: 22
+Info (10041): Inferred latch for "internal_reg[13]" at CPU_regNA.sv(22) File: C:/Users/minec/Desktop/github/PROJ300/Firmware/CPU Designs/Complex CPU/sv files/CPU_regNA.sv Line: 22
+Info (10041): Inferred latch for "internal_reg[14]" at CPU_regNA.sv(22) File: C:/Users/minec/Desktop/github/PROJ300/Firmware/CPU Designs/Complex CPU/sv files/CPU_regNA.sv Line: 22
+Info (10041): Inferred latch for "internal_reg[15]" at CPU_regNA.sv(22) File: C:/Users/minec/Desktop/github/PROJ300/Firmware/CPU Designs/Complex CPU/sv files/CPU_regNA.sv Line: 22
 Info (12128): Elaborating entity "CU_decoder" for hierarchy "CU_decoder:inst26"
-Warning (10270): Verilog HDL Case Statement warning at CU_decoder.sv(19): incomplete case statement has no default case item File: C:/Users/minec/Desktop/github/PROJ300/Firmware/CPU Designs/Complex CPU/sv files/CU_decoder.sv Line: 19
-Info (10041): Inferred latch for "CPU_state[0]" at CU_decoder.sv(17) File: C:/Users/minec/Desktop/github/PROJ300/Firmware/CPU Designs/Complex CPU/sv files/CU_decoder.sv Line: 17
-Info (10041): Inferred latch for "CPU_state[1]" at CU_decoder.sv(17) File: C:/Users/minec/Desktop/github/PROJ300/Firmware/CPU Designs/Complex CPU/sv files/CU_decoder.sv Line: 17
-Info (10041): Inferred latch for "CPU_state[2]" at CU_decoder.sv(17) File: C:/Users/minec/Desktop/github/PROJ300/Firmware/CPU Designs/Complex CPU/sv files/CU_decoder.sv Line: 17
-Info (10041): Inferred latch for "CPU_state[3]" at CU_decoder.sv(17) File: C:/Users/minec/Desktop/github/PROJ300/Firmware/CPU Designs/Complex CPU/sv files/CU_decoder.sv Line: 17
-Info (10041): Inferred latch for "CPU_state[4]" at CU_decoder.sv(17) File: C:/Users/minec/Desktop/github/PROJ300/Firmware/CPU Designs/Complex CPU/sv files/CU_decoder.sv Line: 17
-Info (10041): Inferred latch for "CPU_state[5]" at CU_decoder.sv(17) File: C:/Users/minec/Desktop/github/PROJ300/Firmware/CPU Designs/Complex CPU/sv files/CU_decoder.sv Line: 17
-Info (10041): Inferred latch for "CPU_state[6]" at CU_decoder.sv(17) File: C:/Users/minec/Desktop/github/PROJ300/Firmware/CPU Designs/Complex CPU/sv files/CU_decoder.sv Line: 17
-Info (10041): Inferred latch for "CPU_state[7]" at CU_decoder.sv(17) File: C:/Users/minec/Desktop/github/PROJ300/Firmware/CPU Designs/Complex CPU/sv files/CU_decoder.sv Line: 17
-Info (10041): Inferred latch for "CPU_state[8]" at CU_decoder.sv(17) File: C:/Users/minec/Desktop/github/PROJ300/Firmware/CPU Designs/Complex CPU/sv files/CU_decoder.sv Line: 17
-Info (10041): Inferred latch for "CPU_state[9]" at CU_decoder.sv(17) File: C:/Users/minec/Desktop/github/PROJ300/Firmware/CPU Designs/Complex CPU/sv files/CU_decoder.sv Line: 17
-Info (10041): Inferred latch for "CPU_state[10]" at CU_decoder.sv(17) File: C:/Users/minec/Desktop/github/PROJ300/Firmware/CPU Designs/Complex CPU/sv files/CU_decoder.sv Line: 17
-Info (10041): Inferred latch for "CPU_state[11]" at CU_decoder.sv(17) File: C:/Users/minec/Desktop/github/PROJ300/Firmware/CPU Designs/Complex CPU/sv files/CU_decoder.sv Line: 17
-Info (10041): Inferred latch for "CPU_state[12]" at CU_decoder.sv(17) File: C:/Users/minec/Desktop/github/PROJ300/Firmware/CPU Designs/Complex CPU/sv files/CU_decoder.sv Line: 17
-Info (10041): Inferred latch for "CPU_state[13]" at CU_decoder.sv(17) File: C:/Users/minec/Desktop/github/PROJ300/Firmware/CPU Designs/Complex CPU/sv files/CU_decoder.sv Line: 17
-Info (10041): Inferred latch for "CPU_state[14]" at CU_decoder.sv(17) File: C:/Users/minec/Desktop/github/PROJ300/Firmware/CPU Designs/Complex CPU/sv files/CU_decoder.sv Line: 17
-Info (10041): Inferred latch for "CPU_state[15]" at CU_decoder.sv(17) File: C:/Users/minec/Desktop/github/PROJ300/Firmware/CPU Designs/Complex CPU/sv files/CU_decoder.sv Line: 17
-Info (10041): Inferred latch for "CPU_state[16]" at CU_decoder.sv(17) File: C:/Users/minec/Desktop/github/PROJ300/Firmware/CPU Designs/Complex CPU/sv files/CU_decoder.sv Line: 17
-Info (10041): Inferred latch for "CPU_state[17]" at CU_decoder.sv(17) File: C:/Users/minec/Desktop/github/PROJ300/Firmware/CPU Designs/Complex CPU/sv files/CU_decoder.sv Line: 17
-Info (10041): Inferred latch for "CPU_state[18]" at CU_decoder.sv(17) File: C:/Users/minec/Desktop/github/PROJ300/Firmware/CPU Designs/Complex CPU/sv files/CU_decoder.sv Line: 17
-Info (10041): Inferred latch for "CPU_state[19]" at CU_decoder.sv(17) File: C:/Users/minec/Desktop/github/PROJ300/Firmware/CPU Designs/Complex CPU/sv files/CU_decoder.sv Line: 17
-Info (10041): Inferred latch for "CPU_state[20]" at CU_decoder.sv(17) File: C:/Users/minec/Desktop/github/PROJ300/Firmware/CPU Designs/Complex CPU/sv files/CU_decoder.sv Line: 17
-Info (10041): Inferred latch for "CPU_state[21]" at CU_decoder.sv(17) File: C:/Users/minec/Desktop/github/PROJ300/Firmware/CPU Designs/Complex CPU/sv files/CU_decoder.sv Line: 17
-Info (10041): Inferred latch for "CPU_state[22]" at CU_decoder.sv(17) File: C:/Users/minec/Desktop/github/PROJ300/Firmware/CPU Designs/Complex CPU/sv files/CU_decoder.sv Line: 17
-Info (10041): Inferred latch for "CPU_state[23]" at CU_decoder.sv(17) File: C:/Users/minec/Desktop/github/PROJ300/Firmware/CPU Designs/Complex CPU/sv files/CU_decoder.sv Line: 17
-Info (10041): Inferred latch for "CPU_state[24]" at CU_decoder.sv(17) File: C:/Users/minec/Desktop/github/PROJ300/Firmware/CPU Designs/Complex CPU/sv files/CU_decoder.sv Line: 17
-Info (10041): Inferred latch for "CPU_state[25]" at CU_decoder.sv(17) File: C:/Users/minec/Desktop/github/PROJ300/Firmware/CPU Designs/Complex CPU/sv files/CU_decoder.sv Line: 17
-Info (10041): Inferred latch for "CPU_state[26]" at CU_decoder.sv(17) File: C:/Users/minec/Desktop/github/PROJ300/Firmware/CPU Designs/Complex CPU/sv files/CU_decoder.sv Line: 17
-Info (10041): Inferred latch for "CPU_state[27]" at CU_decoder.sv(17) File: C:/Users/minec/Desktop/github/PROJ300/Firmware/CPU Designs/Complex CPU/sv files/CU_decoder.sv Line: 17
-Info (10041): Inferred latch for "CPU_state[28]" at CU_decoder.sv(17) File: C:/Users/minec/Desktop/github/PROJ300/Firmware/CPU Designs/Complex CPU/sv files/CU_decoder.sv Line: 17
-Info (10041): Inferred latch for "CPU_state[29]" at CU_decoder.sv(17) File: C:/Users/minec/Desktop/github/PROJ300/Firmware/CPU Designs/Complex CPU/sv files/CU_decoder.sv Line: 17
-Info (10041): Inferred latch for "CPU_state[30]" at CU_decoder.sv(17) File: C:/Users/minec/Desktop/github/PROJ300/Firmware/CPU Designs/Complex CPU/sv files/CU_decoder.sv Line: 17
-Info (10041): Inferred latch for "CPU_state[31]" at CU_decoder.sv(17) File: C:/Users/minec/Desktop/github/PROJ300/Firmware/CPU Designs/Complex CPU/sv files/CU_decoder.sv Line: 17
-Info (10041): Inferred latch for "CPU_state[32]" at CU_decoder.sv(17) File: C:/Users/minec/Desktop/github/PROJ300/Firmware/CPU Designs/Complex CPU/sv files/CU_decoder.sv Line: 17
-Info (10041): Inferred latch for "CPU_state[33]" at CU_decoder.sv(17) File: C:/Users/minec/Desktop/github/PROJ300/Firmware/CPU Designs/Complex CPU/sv files/CU_decoder.sv Line: 17
-Info (10041): Inferred latch for "CPU_state[34]" at CU_decoder.sv(17) File: C:/Users/minec/Desktop/github/PROJ300/Firmware/CPU Designs/Complex CPU/sv files/CU_decoder.sv Line: 17
-Info (10041): Inferred latch for "CPU_state[35]" at CU_decoder.sv(17) File: C:/Users/minec/Desktop/github/PROJ300/Firmware/CPU Designs/Complex CPU/sv files/CU_decoder.sv Line: 17
-Info (10041): Inferred latch for "CPU_state[36]" at CU_decoder.sv(17) File: C:/Users/minec/Desktop/github/PROJ300/Firmware/CPU Designs/Complex CPU/sv files/CU_decoder.sv Line: 17
-Info (10041): Inferred latch for "CPU_state[37]" at CU_decoder.sv(17) File: C:/Users/minec/Desktop/github/PROJ300/Firmware/CPU Designs/Complex CPU/sv files/CU_decoder.sv Line: 17
-Info (10041): Inferred latch for "CPU_state[38]" at CU_decoder.sv(17) File: C:/Users/minec/Desktop/github/PROJ300/Firmware/CPU Designs/Complex CPU/sv files/CU_decoder.sv Line: 17
-Info (10041): Inferred latch for "CPU_state[39]" at CU_decoder.sv(17) File: C:/Users/minec/Desktop/github/PROJ300/Firmware/CPU Designs/Complex CPU/sv files/CU_decoder.sv Line: 17
+Warning (10270): Verilog HDL Case Statement warning at CU_decoder.sv(20): incomplete case statement has no default case item File: C:/Users/minec/Desktop/github/PROJ300/Firmware/CPU Designs/Complex CPU/sv files/CU_decoder.sv Line: 20
+Info (10041): Inferred latch for "CPU_state[0]" at CU_decoder.sv(18) File: C:/Users/minec/Desktop/github/PROJ300/Firmware/CPU Designs/Complex CPU/sv files/CU_decoder.sv Line: 18
+Info (10041): Inferred latch for "CPU_state[1]" at CU_decoder.sv(18) File: C:/Users/minec/Desktop/github/PROJ300/Firmware/CPU Designs/Complex CPU/sv files/CU_decoder.sv Line: 18
+Info (10041): Inferred latch for "CPU_state[2]" at CU_decoder.sv(18) File: C:/Users/minec/Desktop/github/PROJ300/Firmware/CPU Designs/Complex CPU/sv files/CU_decoder.sv Line: 18
+Info (10041): Inferred latch for "CPU_state[3]" at CU_decoder.sv(18) File: C:/Users/minec/Desktop/github/PROJ300/Firmware/CPU Designs/Complex CPU/sv files/CU_decoder.sv Line: 18
+Info (10041): Inferred latch for "CPU_state[4]" at CU_decoder.sv(18) File: C:/Users/minec/Desktop/github/PROJ300/Firmware/CPU Designs/Complex CPU/sv files/CU_decoder.sv Line: 18
+Info (10041): Inferred latch for "CPU_state[5]" at CU_decoder.sv(18) File: C:/Users/minec/Desktop/github/PROJ300/Firmware/CPU Designs/Complex CPU/sv files/CU_decoder.sv Line: 18
+Info (10041): Inferred latch for "CPU_state[6]" at CU_decoder.sv(18) File: C:/Users/minec/Desktop/github/PROJ300/Firmware/CPU Designs/Complex CPU/sv files/CU_decoder.sv Line: 18
+Info (10041): Inferred latch for "CPU_state[7]" at CU_decoder.sv(18) File: C:/Users/minec/Desktop/github/PROJ300/Firmware/CPU Designs/Complex CPU/sv files/CU_decoder.sv Line: 18
+Info (10041): Inferred latch for "CPU_state[8]" at CU_decoder.sv(18) File: C:/Users/minec/Desktop/github/PROJ300/Firmware/CPU Designs/Complex CPU/sv files/CU_decoder.sv Line: 18
+Info (10041): Inferred latch for "CPU_state[9]" at CU_decoder.sv(18) File: C:/Users/minec/Desktop/github/PROJ300/Firmware/CPU Designs/Complex CPU/sv files/CU_decoder.sv Line: 18
+Info (10041): Inferred latch for "CPU_state[10]" at CU_decoder.sv(18) File: C:/Users/minec/Desktop/github/PROJ300/Firmware/CPU Designs/Complex CPU/sv files/CU_decoder.sv Line: 18
+Info (10041): Inferred latch for "CPU_state[11]" at CU_decoder.sv(18) File: C:/Users/minec/Desktop/github/PROJ300/Firmware/CPU Designs/Complex CPU/sv files/CU_decoder.sv Line: 18
+Info (10041): Inferred latch for "CPU_state[12]" at CU_decoder.sv(18) File: C:/Users/minec/Desktop/github/PROJ300/Firmware/CPU Designs/Complex CPU/sv files/CU_decoder.sv Line: 18
+Info (10041): Inferred latch for "CPU_state[13]" at CU_decoder.sv(18) File: C:/Users/minec/Desktop/github/PROJ300/Firmware/CPU Designs/Complex CPU/sv files/CU_decoder.sv Line: 18
+Info (10041): Inferred latch for "CPU_state[14]" at CU_decoder.sv(18) File: C:/Users/minec/Desktop/github/PROJ300/Firmware/CPU Designs/Complex CPU/sv files/CU_decoder.sv Line: 18
+Info (10041): Inferred latch for "CPU_state[15]" at CU_decoder.sv(18) File: C:/Users/minec/Desktop/github/PROJ300/Firmware/CPU Designs/Complex CPU/sv files/CU_decoder.sv Line: 18
+Info (10041): Inferred latch for "CPU_state[16]" at CU_decoder.sv(18) File: C:/Users/minec/Desktop/github/PROJ300/Firmware/CPU Designs/Complex CPU/sv files/CU_decoder.sv Line: 18
+Info (10041): Inferred latch for "CPU_state[17]" at CU_decoder.sv(18) File: C:/Users/minec/Desktop/github/PROJ300/Firmware/CPU Designs/Complex CPU/sv files/CU_decoder.sv Line: 18
+Info (10041): Inferred latch for "CPU_state[18]" at CU_decoder.sv(18) File: C:/Users/minec/Desktop/github/PROJ300/Firmware/CPU Designs/Complex CPU/sv files/CU_decoder.sv Line: 18
+Info (10041): Inferred latch for "CPU_state[19]" at CU_decoder.sv(18) File: C:/Users/minec/Desktop/github/PROJ300/Firmware/CPU Designs/Complex CPU/sv files/CU_decoder.sv Line: 18
+Info (10041): Inferred latch for "CPU_state[20]" at CU_decoder.sv(18) File: C:/Users/minec/Desktop/github/PROJ300/Firmware/CPU Designs/Complex CPU/sv files/CU_decoder.sv Line: 18
+Info (10041): Inferred latch for "CPU_state[21]" at CU_decoder.sv(18) File: C:/Users/minec/Desktop/github/PROJ300/Firmware/CPU Designs/Complex CPU/sv files/CU_decoder.sv Line: 18
+Info (10041): Inferred latch for "CPU_state[22]" at CU_decoder.sv(18) File: C:/Users/minec/Desktop/github/PROJ300/Firmware/CPU Designs/Complex CPU/sv files/CU_decoder.sv Line: 18
+Info (10041): Inferred latch for "CPU_state[23]" at CU_decoder.sv(18) File: C:/Users/minec/Desktop/github/PROJ300/Firmware/CPU Designs/Complex CPU/sv files/CU_decoder.sv Line: 18
+Info (10041): Inferred latch for "CPU_state[24]" at CU_decoder.sv(18) File: C:/Users/minec/Desktop/github/PROJ300/Firmware/CPU Designs/Complex CPU/sv files/CU_decoder.sv Line: 18
+Info (10041): Inferred latch for "CPU_state[25]" at CU_decoder.sv(18) File: C:/Users/minec/Desktop/github/PROJ300/Firmware/CPU Designs/Complex CPU/sv files/CU_decoder.sv Line: 18
+Info (10041): Inferred latch for "CPU_state[26]" at CU_decoder.sv(18) File: C:/Users/minec/Desktop/github/PROJ300/Firmware/CPU Designs/Complex CPU/sv files/CU_decoder.sv Line: 18
+Info (10041): Inferred latch for "CPU_state[27]" at CU_decoder.sv(18) File: C:/Users/minec/Desktop/github/PROJ300/Firmware/CPU Designs/Complex CPU/sv files/CU_decoder.sv Line: 18
+Info (10041): Inferred latch for "CPU_state[28]" at CU_decoder.sv(18) File: C:/Users/minec/Desktop/github/PROJ300/Firmware/CPU Designs/Complex CPU/sv files/CU_decoder.sv Line: 18
+Info (10041): Inferred latch for "CPU_state[29]" at CU_decoder.sv(18) File: C:/Users/minec/Desktop/github/PROJ300/Firmware/CPU Designs/Complex CPU/sv files/CU_decoder.sv Line: 18
+Info (10041): Inferred latch for "CPU_state[30]" at CU_decoder.sv(18) File: C:/Users/minec/Desktop/github/PROJ300/Firmware/CPU Designs/Complex CPU/sv files/CU_decoder.sv Line: 18
+Info (10041): Inferred latch for "CPU_state[31]" at CU_decoder.sv(18) File: C:/Users/minec/Desktop/github/PROJ300/Firmware/CPU Designs/Complex CPU/sv files/CU_decoder.sv Line: 18
+Info (10041): Inferred latch for "CPU_state[32]" at CU_decoder.sv(18) File: C:/Users/minec/Desktop/github/PROJ300/Firmware/CPU Designs/Complex CPU/sv files/CU_decoder.sv Line: 18
+Info (10041): Inferred latch for "CPU_state[33]" at CU_decoder.sv(18) File: C:/Users/minec/Desktop/github/PROJ300/Firmware/CPU Designs/Complex CPU/sv files/CU_decoder.sv Line: 18
+Info (10041): Inferred latch for "CPU_state[34]" at CU_decoder.sv(18) File: C:/Users/minec/Desktop/github/PROJ300/Firmware/CPU Designs/Complex CPU/sv files/CU_decoder.sv Line: 18
+Info (10041): Inferred latch for "CPU_state[35]" at CU_decoder.sv(18) File: C:/Users/minec/Desktop/github/PROJ300/Firmware/CPU Designs/Complex CPU/sv files/CU_decoder.sv Line: 18
+Info (10041): Inferred latch for "CPU_state[36]" at CU_decoder.sv(18) File: C:/Users/minec/Desktop/github/PROJ300/Firmware/CPU Designs/Complex CPU/sv files/CU_decoder.sv Line: 18
+Info (10041): Inferred latch for "CPU_state[37]" at CU_decoder.sv(18) File: C:/Users/minec/Desktop/github/PROJ300/Firmware/CPU Designs/Complex CPU/sv files/CU_decoder.sv Line: 18
+Info (10041): Inferred latch for "CPU_state[38]" at CU_decoder.sv(18) File: C:/Users/minec/Desktop/github/PROJ300/Firmware/CPU Designs/Complex CPU/sv files/CU_decoder.sv Line: 18
+Info (10041): Inferred latch for "CPU_state[39]" at CU_decoder.sv(18) File: C:/Users/minec/Desktop/github/PROJ300/Firmware/CPU Designs/Complex CPU/sv files/CU_decoder.sv Line: 18
 Info (12128): Elaborating entity "CU_counter" for hierarchy "CU_counter:inst25"
 Warning (10036): Verilog HDL or VHDL warning at CU_counter.sv(14): object "opcode_reg" assigned a value but never read File: C:/Users/minec/Desktop/github/PROJ300/Firmware/CPU Designs/Complex CPU/sv files/CU_counter.sv Line: 14
 Warning (10230): Verilog HDL assignment warning at CU_counter.sv(238): truncated value with size 32 to match size of target (6) File: C:/Users/minec/Desktop/github/PROJ300/Firmware/CPU Designs/Complex CPU/sv files/CU_counter.sv Line: 238
 Info (10264): Verilog HDL Case Statement information at CU_counter.sv(115): all case item expressions in this case statement are onehot File: C:/Users/minec/Desktop/github/PROJ300/Firmware/CPU Designs/Complex CPU/sv files/CU_counter.sv Line: 115
-Info (12128): Elaborating entity "CPU_regN" for hierarchy "CPU_regN:inst8"
-Warning (10230): Verilog HDL assignment warning at CPU_regN.sv(45): truncated value with size 32 to match size of target (4) File: C:/Users/minec/Desktop/github/PROJ300/Firmware/CPU Designs/Complex CPU/sv files/CPU_regN.sv Line: 45
-Info (10264): Verilog HDL Case Statement information at CPU_regN.sv(35): all case item expressions in this case statement are onehot File: C:/Users/minec/Desktop/github/PROJ300/Firmware/CPU Designs/Complex CPU/sv files/CPU_regN.sv Line: 35
+Info (12128): Elaborating entity "CPU_regNA" for hierarchy "CPU_regNA:inst8"
+Warning (10230): Verilog HDL assignment warning at CPU_regNA.sv(47): truncated value with size 32 to match size of target (4) File: C:/Users/minec/Desktop/github/PROJ300/Firmware/CPU Designs/Complex CPU/sv files/CPU_regNA.sv Line: 47
+Warning (10270): Verilog HDL Case Statement warning at CPU_regNA.sv(37): incomplete case statement has no default case item File: C:/Users/minec/Desktop/github/PROJ300/Firmware/CPU Designs/Complex CPU/sv files/CPU_regNA.sv Line: 37
+Info (10264): Verilog HDL Case Statement information at CPU_regNA.sv(37): all case item expressions in this case statement are onehot File: C:/Users/minec/Desktop/github/PROJ300/Firmware/CPU Designs/Complex CPU/sv files/CPU_regNA.sv Line: 37
+Warning (10240): Verilog HDL Always Construct warning at CPU_regNA.sv(22): inferring latch(es) for variable "internal_reg", which holds its previous value in one or more paths through the always construct File: C:/Users/minec/Desktop/github/PROJ300/Firmware/CPU Designs/Complex CPU/sv files/CPU_regNA.sv Line: 22
+Info (10041): Inferred latch for "internal_reg[0]" at CPU_regNA.sv(22) File: C:/Users/minec/Desktop/github/PROJ300/Firmware/CPU Designs/Complex CPU/sv files/CPU_regNA.sv Line: 22
+Info (10041): Inferred latch for "internal_reg[1]" at CPU_regNA.sv(22) File: C:/Users/minec/Desktop/github/PROJ300/Firmware/CPU Designs/Complex CPU/sv files/CPU_regNA.sv Line: 22
+Info (10041): Inferred latch for "internal_reg[2]" at CPU_regNA.sv(22) File: C:/Users/minec/Desktop/github/PROJ300/Firmware/CPU Designs/Complex CPU/sv files/CPU_regNA.sv Line: 22
+Info (10041): Inferred latch for "internal_reg[3]" at CPU_regNA.sv(22) File: C:/Users/minec/Desktop/github/PROJ300/Firmware/CPU Designs/Complex CPU/sv files/CPU_regNA.sv Line: 22
 Info (12128): Elaborating entity "Memory" for hierarchy "Memory:inst22"
 Warning (275009): Pin "clk_50" not connected
 Warning (275009): Pin "rst" not connected
@@ -895,15 +931,16 @@ Info (12128): Elaborating entity "M_RAM" for hierarchy "Memory:inst22|M_RAM:inst
 Info (12128): Elaborating entity "M_mmr_DEMUX" for hierarchy "Memory:inst22|M_mmr_DEMUX:inst38"
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
-Warning (21074): Design contains 2 input pin(s) that do not drive logic
+Warning (21074): Design contains 3 input pin(s) that do not drive logic
     Warning (15610): No output dependent on input pin "rst"
-    Warning (15610): No output dependent on input pin "clk_50"
-Info (21057): Implemented 2 device resources after synthesis - the final resource count might be different
-    Info (21058): Implemented 2 input pins
+    Warning (15610): No output dependent on input pin "clk_fast"
+    Warning (15610): No output dependent on input pin "clk"
+Info (21057): Implemented 3 device resources after synthesis - the final resource count might be different
+    Info (21058): Implemented 3 input pins
     Info (21059): Implemented 0 output pins
-Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 28 warnings
-    Info: Peak virtual memory: 4808 megabytes
-    Info: Processing ended: Sun Mar 24 14:59:25 2024
+Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 36 warnings
+    Info: Peak virtual memory: 4811 megabytes
+    Info: Processing ended: Mon Mar 25 16:46:38 2024
     Info: Elapsed time: 00:00:09
     Info: Total CPU time (on all processors): 00:00:11
 

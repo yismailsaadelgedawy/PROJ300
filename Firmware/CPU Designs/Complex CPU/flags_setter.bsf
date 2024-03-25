@@ -55,15 +55,15 @@ https://fpgasoftware.intel.com/eula.
 	(port
 		(pt 0 96)
 		(input)
-		(text "AC_update" (rect 0 0 47 12)(font "Arial" ))
-		(text "AC_update" (rect 21 91 68 103)(font "Arial" ))
+		(text "rst" (rect 0 0 10 12)(font "Arial" ))
+		(text "rst" (rect 21 91 31 103)(font "Arial" ))
 		(line (pt 0 96)(pt 16 96)(line_width 1))
 	)
 	(port
 		(pt 0 112)
 		(input)
-		(text "rst" (rect 0 0 10 12)(font "Arial" ))
-		(text "rst" (rect 21 107 31 119)(font "Arial" ))
+		(text "ACLOAD" (rect 0 0 43 12)(font "Arial" ))
+		(text "ACLOAD" (rect 21 107 64 119)(font "Arial" ))
 		(line (pt 0 112)(pt 16 112)(line_width 1))
 	)
 	(port

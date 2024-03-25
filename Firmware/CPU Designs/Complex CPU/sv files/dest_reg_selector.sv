@@ -20,6 +20,12 @@ always_comb begin
         GPR_sel2 = rop2_AL;
     end
 
+    // ALTmov1
+    else if(state == 2**5) begin
+        GPR_sel1 = rop2; // passes operand2 bits; so the operand register is stored in TR
+        GPR_sel2 = rop2;
+    end
+
     else begin
         GPR_sel1 = rop1;
         GPR_sel2 = rop2;

@@ -36,8 +36,8 @@ rsel[0] == 0
 mov1 : r <- rop2
 
 rsel[0] == 1
-ALTmov1 : TR <- r
-ALTmov2 : r <- TR
+ALTmov1 : TR <- r (rop2)
+ALTmov2 : r (rop1) <- TR
 
 
 rsel[0] == 0
@@ -122,7 +122,7 @@ Counter lines
 
 LD  = fetch3
 INC = fetch1 | fetch2 | ALTmov1 | ldr1 | ALTldr1 | ALTldr2 | ALTldr3 | str1 | str2 | str3 | ALTstr1 | ALTstr2 | ALTstr3 | add1 | sub1 | mul1 | lsr1 | and1 | or1 | mvn1
-CLR = mov1 | ALTmov2 | ldr2 | ALTldr4 | str4 | ALTstr4 | cmp1 | b1 | bgt1 | blt1 | beq1 | add2 | sub2 | mul2 | lsr2 | and2 | or2 | mvn2
+CLR = nop1 | mov1 | ALTmov2 | ldr2 | ALTldr4 | str4 | ALTstr4 | cmp1 | b1 | bgt1 | blt1 | beq1 | add2 | sub2 | mul2 | lsr2 | and2 | or2 | mvn2
 
 
 Load lines (LHS)

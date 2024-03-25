@@ -12,7 +12,7 @@ vsim flags_setter_tb
 config wave -signalnamewidth 1
 
 # Add input signals to waveform window
-add wave -radix hex -group "Inputs" rst AC_update opcode op1 op2 AC_result
+add wave -radix hex -group "Inputs" rst ACLOAD opcode op1 op2 AC_result
 
 # Add output signals to waveform window
 add wave -group "Outputs" N Z C V

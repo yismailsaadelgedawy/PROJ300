@@ -33,6 +33,7 @@ dest_reg_selector dut (
 // loop vars
 int unsigned i=0;
 
+int unsigned err;
 
 // testing
 initial begin
@@ -49,15 +50,23 @@ initial begin
         #10ns;
 
         if(state == 2**26 || state == 2**28 || state == 2**30 || state == 2**32 || state == 2**34 || state == 2**36) begin
-            assert(GPR_sel1 == rop1_AL && GPR_sel2 == rop2_AL) $display("passed AL state %d",i); else $error("failed AL state %d",i);
+            assert(GPR_sel1 == rop1_AL && GPR_sel2 == rop2_AL) else begin $error("failed AL state %d",i); err++; end
+        end
+
+        else if(state == 2**5) begin
+            assert(GPR_sel1 == rop2 && GPR_sel2 == rop2) else begin $error("failed ALTmov1"); err++; end
         end
 
         else begin
-            assert(GPR_sel1 == rop1 && GPR_sel2 == rop2) else $error("failed rest of states %d",i);
+            assert(GPR_sel1 == rop1 && GPR_sel2 == rop2) else begin $error("failed rest of states %d",i); err++; end
         end        
 
 
     end
+
+
+    if(!err) $display("\n///////// ALL TESTS PASSED /////////\n");
+    else $display("\n///////// WARNING: ERRORS FOUND %d /////////\n", err);
 
 
 end
