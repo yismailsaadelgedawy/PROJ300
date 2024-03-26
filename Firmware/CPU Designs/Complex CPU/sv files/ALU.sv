@@ -53,7 +53,7 @@ always_comb begin
 
     3'd6 : begin
 
-        q = ~op1;
+        q = ~op2;
 
     end
 

@@ -1204,19 +1204,716 @@ initial begin
 
     ///////////////////////////////////////////
 
+    #30ns; // fetch instruction
 
-    
+    // cmp REGISTER (1 cycle)
+    #7ns;
+    assert(dut.b2v_inst27.CPUstate == cmp1) else begin $error("failed cmp"); err++; end 
+    assert(dut.PC == 'd93) else begin $error("failed PC %d",dut.PC); err++; end
+    assert(dut.ALU_out == (dut.b2v_inst18.regA - dut.b2v_inst18.regB)) else begin $error("failed AC cmp REG"); err++; end
+    assert({dut.N,dut.Z,dut.C,dut.V} == {4'b1000}) else begin $error("failed NZCV"); err++; end
+    #3ns;
+
+    ///////////////////////////////////////////
+
+    #30ns; // fetch instruction
+
+    // cmp REGISTER (1 cycle)
+    #7ns;
+    assert(dut.b2v_inst27.CPUstate == cmp1) else begin $error("failed cmp"); err++; end 
+    assert(dut.PC == 'd94) else begin $error("failed PC %d",dut.PC); err++; end
+    assert(dut.ALU_out == (dut.b2v_inst18.regB - dut.b2v_inst18.regC)) else begin $error("failed AC cmp REG"); err++; end
+    assert({dut.N,dut.Z,dut.C,dut.V} == {4'b1000}) else begin $error("failed NZCV"); err++; end
+    #3ns;
+
+    ///////////////////////////////////////////
+
+    #30ns; // fetch instruction
+
+    // cmp REGISTER (1 cycle)
+    #7ns;
+    assert(dut.b2v_inst27.CPUstate == cmp1) else begin $error("failed cmp"); err++; end 
+    assert(dut.PC == 'd95) else begin $error("failed PC %d",dut.PC); err++; end
+    assert(dut.ALU_out == (dut.b2v_inst18.regC - dut.b2v_inst18.regD)) else begin $error("failed AC cmp REG"); err++; end
+    assert({dut.N,dut.Z,dut.C,dut.V} == {4'b1000}) else begin $error("failed NZCV"); err++; end
+    #3ns;
+
+    ///////////////////////////////////////////
+
+    #30ns; // fetch instruction
+
+    // cmp REGISTER (1 cycle)
+    #7ns;
+    assert(dut.b2v_inst27.CPUstate == cmp1) else begin $error("failed cmp"); err++; end 
+    assert(dut.PC == 'd96) else begin $error("failed PC %d",dut.PC); err++; end
+    assert(dut.ALU_out == (dut.b2v_inst18.regD - dut.b2v_inst18.regE)) else begin $error("failed AC cmp REG"); err++; end
+    assert({dut.N,dut.Z,dut.C,dut.V} == {4'b1000}) else begin $error("failed NZCV"); err++; end
+    #3ns;
+
+    ///////////////////////////////////////////
+
+    #30ns; // fetch instruction
+
+    // cmp REGISTER (1 cycle)
+    #7ns;
+    assert(dut.b2v_inst27.CPUstate == cmp1) else begin $error("failed cmp"); err++; end 
+    assert(dut.PC == 'd97) else begin $error("failed PC %d",dut.PC); err++; end
+    assert(dut.ALU_out == (dut.b2v_inst18.regE - dut.b2v_inst18.regF)) else begin $error("failed AC cmp REG"); err++; end
+    assert({dut.N,dut.Z,dut.C,dut.V} == {4'b1000}) else begin $error("failed NZCV"); err++; end
+    #3ns;
+
+    ///////////////////////////////////////////
+
+    #30ns; // fetch instruction
+
+    // cmp REGISTER (1 cycle)
+    #7ns;
+    assert(dut.b2v_inst27.CPUstate == cmp1) else begin $error("failed cmp"); err++; end 
+    assert(dut.PC == 'd98) else begin $error("failed PC %d",dut.PC); err++; end
+    assert(dut.ALU_out == (dut.b2v_inst18.regF - dut.b2v_inst18.regG)) else begin $error("failed AC cmp REG"); err++; end
+    assert({dut.N,dut.Z,dut.C,dut.V} == {4'b1000}) else begin $error("failed NZCV"); err++; end
+    #3ns;
+
+    ///////////////////////////////////////////
+
+    #30ns; // fetch instruction
+
+    // cmp REGISTER (1 cycle)
+    #7ns;
+    assert(dut.b2v_inst27.CPUstate == cmp1) else begin $error("failed cmp"); err++; end 
+    assert(dut.PC == 'd99) else begin $error("failed PC %d",dut.PC); err++; end
+    assert(dut.ALU_out == (dut.b2v_inst18.regG - dut.b2v_inst18.regH)) else begin $error("failed AC cmp REG"); err++; end
+    assert({dut.N,dut.Z,dut.C,dut.V} == {4'b1000}) else begin $error("failed NZCV"); err++; end
+    #3ns;
+
+    ///////////////////////////////////////////
+
+    #30ns; // fetch instruction
+
+    // cmp REGISTER (1 cycle)
+    #7ns;
+    assert(dut.b2v_inst27.CPUstate == cmp1) else begin $error("failed cmp"); err++; end 
+    assert(dut.PC == 'd100) else begin $error("failed PC %d",dut.PC); err++; end
+    assert(dut.ALU_out == (dut.b2v_inst18.regH - dut.b2v_inst18.regI)) else begin $error("failed AC cmp REG"); err++; end
+    assert({dut.N,dut.Z,dut.C,dut.V} == {4'b1000}) else begin $error("failed NZCV"); err++; end
+    #3ns;
+
+    ///////////////////////////////////////////
+
+    #30ns; // fetch instruction
+
+    // cmp REGISTER (1 cycle)
+    #7ns;
+    assert(dut.b2v_inst27.CPUstate == cmp1) else begin $error("failed cmp"); err++; end 
+    assert(dut.PC == 'd101) else begin $error("failed PC %d",dut.PC); err++; end
+    assert(dut.ALU_out == (dut.b2v_inst18.regI - dut.b2v_inst18.regJ)) else begin $error("failed AC cmp REG"); err++; end
+    assert({dut.N,dut.Z,dut.C,dut.V} == {4'b1000}) else begin $error("failed NZCV"); err++; end
+    #3ns;
+
+    ///////////////////////////////////////////
+
+    #30ns; // fetch instruction
+
+    // cmp REGISTER (1 cycle)
+    #7ns;
+    assert(dut.b2v_inst27.CPUstate == cmp1) else begin $error("failed cmp"); err++; end 
+    assert(dut.PC == 'd102) else begin $error("failed PC %d",dut.PC); err++; end
+    assert(dut.ALU_out == (dut.b2v_inst18.regJ - dut.b2v_inst18.regK)) else begin $error("failed AC cmp REG"); err++; end
+    assert({dut.N,dut.Z,dut.C,dut.V} == {4'b1000}) else begin $error("failed NZCV"); err++; end
+    #3ns;
+
+    ///////////////////////////////////////////
+
+    #30ns; // fetch instruction
+
+    // cmp REGISTER (1 cycle)
+    #7ns;
+    assert(dut.b2v_inst27.CPUstate == cmp1) else begin $error("failed cmp"); err++; end 
+    assert(dut.PC == 'd103) else begin $error("failed PC %d",dut.PC); err++; end
+    assert(dut.ALU_out == (dut.b2v_inst18.regK - dut.b2v_inst18.regL)) else begin $error("failed AC cmp REG"); err++; end
+    assert({dut.N,dut.Z,dut.C,dut.V} == {4'b1000}) else begin $error("failed NZCV"); err++; end
+    #3ns;
+
+    ///////////////////////////////////////////
+
+    #30ns; // fetch instruction
+
+    // cmp REGISTER (1 cycle)
+    #7ns;
+    assert(dut.b2v_inst27.CPUstate == cmp1) else begin $error("failed cmp"); err++; end 
+    assert(dut.PC == 'd104) else begin $error("failed PC %d",dut.PC); err++; end
+    assert(dut.ALU_out == (dut.b2v_inst18.regL - dut.b2v_inst18.regM)) else begin $error("failed AC cmp REG"); err++; end
+    assert({dut.N,dut.Z,dut.C,dut.V} == {4'b1000}) else begin $error("failed NZCV"); err++; end
+    #3ns;
+
+    ///////////////////////////////////////////
+
+    #30ns; // fetch instruction
+
+    // cmp REGISTER (1 cycle)
+    #7ns;
+    assert(dut.b2v_inst27.CPUstate == cmp1) else begin $error("failed cmp"); err++; end 
+    assert(dut.PC == 'd105) else begin $error("failed PC %d",dut.PC); err++; end
+    assert(dut.ALU_out == (dut.b2v_inst18.regM - dut.b2v_inst18.regA)) else begin $error("failed AC cmp REG"); err++; end
+    assert({dut.N,dut.Z,dut.C,dut.V} == {4'b0010}) else begin $error("failed NZCV"); err++; end
+    #3ns;
+
+    ///////////////////////////////////////////
+
+    #30ns; // fetch instruction
+
+    // mov (1 cycle)
+    #7ns;
+    assert(dut.b2v_inst27.CPUstate == mov1) else begin $error("failed mov"); err++; end    
+    assert(dut.PC == 'd106) else begin $error("failed PC %d",dut.PC); err++; end
+    #3ns;
+
+    #30ns; // fetch instruction
+
+    // mov (1 cycle)
+    #7ns;
+    assert(dut.b2v_inst27.CPUstate == mov1) else begin $error("failed mov"); err++; end    
+    assert(dut.PC == 'd107) else begin $error("failed PC %d",dut.PC); err++; end
+    #3ns;
+
+    #30ns; // fetch instruction
+
+    // cmp REGISTER (1 cycle)
+    #7ns;
+    assert(dut.b2v_inst27.CPUstate == cmp1) else begin $error("failed cmp"); err++; end 
+    assert(dut.PC == 'd108) else begin $error("failed PC %d",dut.PC); err++; end
+    assert(dut.ALU_out == (dut.b2v_inst18.regB - dut.b2v_inst18.regA)) else begin $error("failed AC cmp REG"); err++; end
+    assert({dut.N,dut.Z,dut.C,dut.V} == {4'b0010}) else begin $error("failed NZCV"); err++; end
+    #3ns;
+
+    #30ns; // fetch instruction
+
+    // bgt (1 cycle)
+    #7ns;
+    assert(dut.b2v_inst27.CPUstate == bgt1) else begin $error("failed bgt"); err++; end 
+    assert(dut.PC == 'd109) else begin $error("failed PC %d",dut.PC); err++; end
+    assert(dut.PCLOAD) else begin $error("failed PCLOAD"); err++; end   // will branch
+    #3ns;
+
+    #30ns; // fetch instruction
+    assert(dut.AR == 'd110) else begin $error("failed bgt to address 116"); err++; end
 
 
 
+    // mov (1 cycle)
+    #7ns;
+    assert(dut.b2v_inst27.CPUstate == mov1) else begin $error("failed mov"); err++; end    
+    assert(dut.PC == 'd111) else begin $error("failed PC %d",dut.PC); err++; end
+    #3ns;
 
+    #30ns; // fetch instruction
+
+    // mov (1 cycle)
+    #7ns;
+    assert(dut.b2v_inst27.CPUstate == mov1) else begin $error("failed mov"); err++; end    
+    assert(dut.PC == 'd112) else begin $error("failed PC %d",dut.PC); err++; end
+    #3ns;
+
+    #30ns; // fetch instruction
+
+    // mov (1 cycle)
+    #7ns;
+    assert(dut.b2v_inst27.CPUstate == mov1) else begin $error("failed mov"); err++; end    
+    assert(dut.PC == 'd113) else begin $error("failed PC %d",dut.PC); err++; end
+    #3ns;
+
+    #30ns; // fetch instruction
+
+    // cmp REGISTER (1 cycle)
+    #7ns;
+    assert(dut.b2v_inst27.CPUstate == cmp1) else begin $error("failed cmp"); err++; end 
+    assert(dut.PC == 'd114) else begin $error("failed PC %d",dut.PC); err++; end
+    assert(dut.ALU_out == (dut.b2v_inst18.regA - dut.b2v_inst18.regB)) else begin $error("failed AC cmp REG"); err++; end
+    assert({dut.N,dut.Z,dut.C,dut.V} == {4'b1000}) else begin $error("failed NZCV"); err++; end
+    #3ns;
+
+    #30ns; // fetch instruction
+
+    // bgt (1 cycle)
+    #7ns;
+    assert(dut.b2v_inst27.CPUstate == bgt1) else begin $error("failed bgt"); err++; end 
+    assert(dut.PC == 'd115) else begin $error("failed PC %d",dut.PC); err++; end
+    assert(!dut.PCLOAD) else begin $error("failed PCLOAD"); err++; end  // will not branch
+    #3ns;
+
+    #30ns; // fetch instruction
+
+    // b (1 cycle)
+    #7ns;
+    assert(dut.b2v_inst27.CPUstate == b1) else begin $error("failed b"); err++; end 
+    assert(dut.PC == 'd116) else begin $error("failed PC %d",dut.PC); err++; end
+    assert(dut.PCLOAD) else begin $error("failed PCLOAD"); err++; end   // will branch
+    #3ns;
+
+    #30ns; // fetch instruction
+    assert(dut.AR == 'd117) else begin $error("failed bgt to address 116"); err++; end
+
+    // mov (1 cycle)
+    #7ns;
+    assert(dut.b2v_inst27.CPUstate == mov1) else begin $error("failed mov"); err++; end    
+    assert(dut.PC == 'd118) else begin $error("failed PC %d",dut.PC); err++; end
+    #3ns;
+
+    #30ns; // fetch instruction
+
+
+    ///////////////////////////////////////////
+
+
+    // mov (1 cycle)
+    #7ns;
+    assert(dut.b2v_inst27.CPUstate == mov1) else begin $error("failed mov"); err++; end    
+    assert(dut.PC == 'd119) else begin $error("failed PC %d",dut.PC); err++; end
+    #3ns;
+
+    #30ns; // fetch instruction
+
+    // mov (1 cycle)
+    #7ns;
+    assert(dut.b2v_inst27.CPUstate == mov1) else begin $error("failed mov"); err++; end    
+    assert(dut.PC == 'd120) else begin $error("failed PC %d",dut.PC); err++; end
+    #3ns;
+
+    #30ns; // fetch instruction
+
+    // cmp REGISTER (1 cycle)
+    #7ns;
+    assert(dut.b2v_inst27.CPUstate == cmp1) else begin $error("failed cmp"); err++; end 
+    assert(dut.PC == 'd121) else begin $error("failed PC %d",dut.PC); err++; end
+    assert(dut.ALU_out == (dut.b2v_inst18.regA - dut.b2v_inst18.regB)) else begin $error("failed AC cmp REG"); err++; end
+    assert({dut.N,dut.Z,dut.C,dut.V} == {4'b1000}) else begin $error("failed NZCV"); err++; end
+    #3ns;
+
+    #30ns; // fetch instruction
+
+    // blt (1 cycle)
+    #7ns;
+    assert(dut.b2v_inst27.CPUstate == blt1) else begin $error("failed blt"); err++; end 
+    assert(dut.PC == 'd122) else begin $error("failed PC %d",dut.PC); err++; end
+    assert(dut.PCLOAD) else begin $error("failed PCLOAD"); err++; end   // will branch
+    #3ns;
+
+    #30ns; // fetch instruction
+    assert(dut.AR == 'd123) else begin $error("failed bgt to address 123"); err++; end
+
+
+
+    // mov (1 cycle)
+    #7ns;
+    assert(dut.b2v_inst27.CPUstate == mov1) else begin $error("failed mov"); err++; end    
+    assert(dut.PC == 'd124) else begin $error("failed PC %d",dut.PC); err++; end
+    #3ns;
+
+    #30ns; // fetch instruction
+
+    // mov (1 cycle)
+    #7ns;
+    assert(dut.b2v_inst27.CPUstate == mov1) else begin $error("failed mov"); err++; end    
+    assert(dut.PC == 'd125) else begin $error("failed PC %d",dut.PC); err++; end
+    #3ns;
+
+    #30ns; // fetch instruction
+
+    // mov (1 cycle)
+    #7ns;
+    assert(dut.b2v_inst27.CPUstate == mov1) else begin $error("failed mov"); err++; end    
+    assert(dut.PC == 'd126) else begin $error("failed PC %d",dut.PC); err++; end
+    #3ns;
+
+    #30ns; // fetch instruction
+
+    // cmp REGISTER (1 cycle)
+    #7ns;
+    assert(dut.b2v_inst27.CPUstate == cmp1) else begin $error("failed cmp"); err++; end 
+    assert(dut.PC == 'd127) else begin $error("failed PC %d",dut.PC); err++; end
+    assert(dut.ALU_out == (dut.b2v_inst18.regB - dut.b2v_inst18.regA)) else begin $error("failed AC cmp REG"); err++; end
+    assert({dut.N,dut.Z,dut.C,dut.V} == {4'b0010}) else begin $error("failed NZCV"); err++; end
+    #3ns;
+
+    #30ns; // fetch instruction
+
+    // blt (1 cycle)
+    #7ns;
+    assert(dut.b2v_inst27.CPUstate == blt1) else begin $error("failed blt"); err++; end 
+    assert(dut.PC == 'd128) else begin $error("failed PC %d",dut.PC); err++; end
+    assert(!dut.PCLOAD) else begin $error("failed PCLOAD"); err++; end  // will not branch
+    #3ns;
+
+    #30ns; // fetch instruction
+
+    // b (1 cycle)
+    #7ns;
+    assert(dut.b2v_inst27.CPUstate == b1) else begin $error("failed b"); err++; end 
+    assert(dut.PC == 'd129) else begin $error("failed PC %d",dut.PC); err++; end
+    assert(dut.PCLOAD) else begin $error("failed PCLOAD"); err++; end   // will branch
+    #3ns;
+
+    #30ns; // fetch instruction
+    assert(dut.AR == 'd130) else begin $error("failed bgt to address 130"); err++; end
+
+    // mov (1 cycle)
+    #7ns;
+    assert(dut.b2v_inst27.CPUstate == mov1) else begin $error("failed mov"); err++; end    
+    assert(dut.PC == 'd131) else begin $error("failed PC %d",dut.PC); err++; end
+    #3ns;
+
+    #30ns; // fetch instruction
+
+
+    ///////////////////////////////////////////   
+
+
+    // mov (1 cycle)
+    #7ns;
+    assert(dut.b2v_inst27.CPUstate == mov1) else begin $error("failed mov"); err++; end    
+    assert(dut.PC == 'd132) else begin $error("failed PC %d",dut.PC); err++; end
+    #3ns;
+
+    #30ns; // fetch instruction
+
+    // mov (1 cycle)
+    #7ns;
+    assert(dut.b2v_inst27.CPUstate == mov1) else begin $error("failed mov"); err++; end    
+    assert(dut.PC == 'd133) else begin $error("failed PC %d",dut.PC); err++; end
+    #3ns;
+
+    #30ns; // fetch instruction
+
+    // cmp REGISTER (1 cycle)
+    #7ns;
+    assert(dut.b2v_inst27.CPUstate == cmp1) else begin $error("failed cmp"); err++; end 
+    assert(dut.PC == 'd134) else begin $error("failed PC %d",dut.PC); err++; end
+    assert(dut.ALU_out == (dut.b2v_inst18.regA - dut.b2v_inst18.regB)) else begin $error("failed AC cmp REG"); err++; end
+    assert({dut.N,dut.Z,dut.C,dut.V} == {4'b0110}) else begin $error("failed NZCV"); err++; end
+    #3ns;
+
+    #30ns; // fetch instruction
+
+    // beq (1 cycle)
+    #7ns;
+    assert(dut.b2v_inst27.CPUstate == beq1) else begin $error("failed beq"); err++; end 
+    assert(dut.PC == 'd135) else begin $error("failed PC %d",dut.PC); err++; end
+    assert(dut.PCLOAD) else begin $error("failed PCLOAD"); err++; end   // will branch
+    #3ns;
+
+    #30ns; // fetch instruction
+    assert(dut.AR == 'd136) else begin $error("failed bgt to address 136"); err++; end
+
+
+
+    // mov (1 cycle)
+    #7ns;
+    assert(dut.b2v_inst27.CPUstate == mov1) else begin $error("failed mov"); err++; end    
+    assert(dut.PC == 'd137) else begin $error("failed PC %d",dut.PC); err++; end
+    #3ns;
+
+    #30ns; // fetch instruction
+
+    // mov (1 cycle)
+    #7ns;
+    assert(dut.b2v_inst27.CPUstate == mov1) else begin $error("failed mov"); err++; end    
+    assert(dut.PC == 'd138) else begin $error("failed PC %d",dut.PC); err++; end
+    #3ns;
+
+    #30ns; // fetch instruction
+
+    // mov (1 cycle)
+    #7ns;
+    assert(dut.b2v_inst27.CPUstate == mov1) else begin $error("failed mov"); err++; end    
+    assert(dut.PC == 'd139) else begin $error("failed PC %d",dut.PC); err++; end
+    #3ns;
+
+    #30ns; // fetch instruction
+
+    // cmp REGISTER (1 cycle)
+    #7ns;
+    assert(dut.b2v_inst27.CPUstate == cmp1) else begin $error("failed cmp"); err++; end 
+    assert(dut.PC == 'd140) else begin $error("failed PC %d",dut.PC); err++; end
+    assert(dut.ALU_out == (dut.b2v_inst18.regB - dut.b2v_inst18.regA)) else begin $error("failed AC cmp REG"); err++; end
+    assert({dut.N,dut.Z,dut.C,dut.V} == {4'b0010}) else begin $error("failed NZCV"); err++; end
+    #3ns;
+
+    #30ns; // fetch instruction
+
+    // beq (1 cycle)
+    #7ns;
+    assert(dut.b2v_inst27.CPUstate == beq1) else begin $error("failed beq"); err++; end 
+    assert(dut.PC == 'd141) else begin $error("failed PC %d",dut.PC); err++; end
+    assert(!dut.PCLOAD) else begin $error("failed PCLOAD"); err++; end  // will not branch
+    #3ns;
+
+    #30ns; // fetch instruction
+
+    // b (1 cycle)
+    #7ns;
+    assert(dut.b2v_inst27.CPUstate == b1) else begin $error("failed b"); err++; end 
+    assert(dut.PC == 'd142) else begin $error("failed PC %d",dut.PC); err++; end
+    assert(dut.PCLOAD) else begin $error("failed PCLOAD"); err++; end   // will branch
+    #3ns;
+
+    #30ns; // fetch instruction
+    assert(dut.AR == 'd143) else begin $error("failed bgt to address 143"); err++; end
+
+    // mov (1 cycle)
+    #7ns;
+    assert(dut.b2v_inst27.CPUstate == mov1) else begin $error("failed mov"); err++; end    
+    assert(dut.PC == 'd144) else begin $error("failed PC %d",dut.PC); err++; end
+    #3ns;
+
+    #30ns; // fetch instruction
+
+
+    ///////////////////////////////////////////
+
+    // mov (1 cycle)
+    #7ns;
+    assert(dut.b2v_inst27.CPUstate == mov1) else begin $error("failed mov"); err++; end    
+    assert(dut.PC == 'd145) else begin $error("failed PC %d",dut.PC); err++; end
+    #3ns;
+
+    #30ns; // fetch instruction
+
+    // mov (1 cycle)
+    #7ns;
+    assert(dut.b2v_inst27.CPUstate == mov1) else begin $error("failed mov"); err++; end    
+    assert(dut.PC == 'd146) else begin $error("failed PC %d",dut.PC); err++; end
+    #3ns;
+
+    #30ns; // fetch instruction
+
+
+    // add (2 cycles)
+    #17ns;
+    assert(dut.b2v_inst27.CPUstate == add2) else begin $error("failed add"); err++; end    
+    assert(dut.PC == 'd147) else begin $error("failed PC %d",dut.PC); err++; end    
+    assert(dut.AC == ('d11 + 'd10)) else begin $error("failed add r2, #11,#10"); err++; end
+    #3ns;
+
+    #30ns; // fetch instruction
+
+    // add (2 cycles)
+    #17ns;
+    assert(dut.b2v_inst27.CPUstate == add2) else begin $error("failed add"); err++; end    
+    assert(dut.PC == 'd148) else begin $error("failed PC %d",dut.PC); err++; end    
+    assert(dut.AC == ('d11 + dut.b2v_inst18.regA)) else begin $error("failed add r2, #11,r0"); err++; end
+    #3ns;
+
+    #30ns; // fetch instruction
+
+    // add (2 cycles)
+    #17ns;
+    assert(dut.b2v_inst27.CPUstate == add2) else begin $error("failed add"); err++; end    
+    assert(dut.PC == 'd149) else begin $error("failed PC %d",dut.PC); err++; end    
+    assert(dut.AC == (dut.b2v_inst18.regB + 'd10)) else begin $error("failed add r2, r1,#10"); err++; end
+    #3ns;
+
+    #30ns; // fetch instruction
+
+    // add (2 cycles)
+    #17ns;
+    assert(dut.b2v_inst27.CPUstate == add2) else begin $error("failed add"); err++; end    
+    assert(dut.PC == 'd150) else begin $error("failed PC %d",dut.PC); err++; end    
+    assert(dut.AC == (dut.b2v_inst18.regA + dut.b2v_inst18.regB)) else begin $error("failed r2, r0,r1"); err++; end
+    #3ns;
+
+    #30ns; // fetch instruction 
+
+    ///////////////////////////////////////////
+
+   
+    // sub (2 cycles)
+    #17ns;
+    assert(dut.b2v_inst27.CPUstate == sub2) else begin $error("failed sub"); err++; end    
+    assert(dut.PC == 'd151) else begin $error("failed PC %d",dut.PC); err++; end    
+    assert(dut.AC == ('d11 - 'd10)) else begin $error("failed sub r2, #11,#10"); err++; end
+    #3ns;
+
+    #30ns; // fetch instruction
+
+    // sub (2 cycles)
+    #17ns;
+    assert(dut.b2v_inst27.CPUstate == sub2) else begin $error("failed sub"); err++; end    
+    assert(dut.PC == 'd152) else begin $error("failed PC %d",dut.PC); err++; end    
+    assert(dut.AC == ('d11 - dut.b2v_inst18.regA)) else begin $error("failed sub r2, #11,r0"); err++; end
+    #3ns;
+
+    #30ns; // fetch instruction
+
+    // sub (2 cycles)
+    #17ns;
+    assert(dut.b2v_inst27.CPUstate == sub2) else begin $error("failed sub"); err++; end    
+    assert(dut.PC == 'd153) else begin $error("failed PC %d",dut.PC); err++; end    
+    assert(dut.AC == (dut.b2v_inst18.regB - 'd10)) else begin $error("failed sub r2, r1,#10"); err++; end
+    #3ns;
+
+    #30ns; // fetch instruction
+
+    // sub (2 cycles)
+    #17ns;
+    assert(dut.b2v_inst27.CPUstate == sub2) else begin $error("failed sub"); err++; end    
+    assert(dut.PC == 'd154) else begin $error("failed PC %d",dut.PC); err++; end    
+    assert(dut.AC == (dut.b2v_inst18.regA - dut.b2v_inst18.regB)) else begin $error("failed sub, r0,r1"); err++; end
+    #3ns;
+
+    #30ns; // fetch instruction
+
+    ///////////////////////////////////////////
+
+   
+    // mul (2 cycles)
+    #17ns;
+    assert(dut.b2v_inst27.CPUstate == mul2) else begin $error("failed mul"); err++; end    
+    assert(dut.PC == 'd155) else begin $error("failed PC %d",dut.PC); err++; end    
+    assert(dut.AC == ('d11 * 'd10)) else begin $error("failed mul r2, #11,#10"); err++; end
+    #3ns;
+
+    #30ns; // fetch instruction
+
+    // mul (2 cycles)
+    #17ns;
+    assert(dut.b2v_inst27.CPUstate == mul2) else begin $error("failed mul"); err++; end    
+    assert(dut.PC == 'd156) else begin $error("failed PC %d",dut.PC); err++; end    
+    assert(dut.AC == ('d11 * dut.b2v_inst18.regA)) else begin $error("failed mul r2, #11,r0"); err++; end
+    #3ns;
+
+    #30ns; // fetch instruction
+
+    // mul (2 cycles)
+    #17ns;
+    assert(dut.b2v_inst27.CPUstate == mul2) else begin $error("failed mul"); err++; end    
+    assert(dut.PC == 'd157) else begin $error("failed PC %d",dut.PC); err++; end    
+    assert(dut.AC == (dut.b2v_inst18.regB * 'd10)) else begin $error("failed mul r2, r1,#10"); err++; end
+    #3ns;
+
+    #30ns; // fetch instruction
+
+    // mul (2 cycles)
+    #17ns;
+    assert(dut.b2v_inst27.CPUstate == mul2) else begin $error("failed mul"); err++; end    
+    assert(dut.PC == 'd158) else begin $error("failed PC %d",dut.PC); err++; end    
+    assert(dut.AC == (dut.b2v_inst18.regA * dut.b2v_inst18.regB)) else begin $error("failed mul, r0,r1"); err++; end
+    #3ns;
+
+    #30ns; // fetch instruction
+
+    ///////////////////////////////////////////
+
+   
+    // lsr (2 cycles)
+    #17ns;
+    assert(dut.b2v_inst27.CPUstate == lsr2) else begin $error("failed lsr"); err++; end    
+    assert(dut.PC == 'd159) else begin $error("failed PC %d",dut.PC); err++; end    
+    assert(dut.AC == (dut.b2v_inst18.regA >> 1)) else begin $error("failed lsr r2, r1,#1"); err++; end
+    #3ns;
+
+    #30ns; // fetch instruction
+
+    ///////////////////////////////////////////
+
+   
+    // and (2 cycles)
+    #17ns;
+    assert(dut.b2v_inst27.CPUstate == and2) else begin $error("failed and"); err++; end    
+    assert(dut.PC == 'd160) else begin $error("failed PC %d",dut.PC); err++; end    
+    assert(dut.AC == ('d11 & 'd10)) else begin $error("failed and r2, #11,#10"); err++; end
+    #3ns;
+
+    #30ns; // fetch instruction
+
+    // and (2 cycles)
+    #17ns;
+    assert(dut.b2v_inst27.CPUstate == and2) else begin $error("failed and"); err++; end    
+    assert(dut.PC == 'd161) else begin $error("failed PC %d",dut.PC); err++; end    
+    assert(dut.AC == ('d11 & dut.b2v_inst18.regA)) else begin $error("failed and r2, #11,r0"); err++; end
+    #3ns;
+
+    #30ns; // fetch instruction
+
+    // and (2 cycles)
+    #17ns;
+    assert(dut.b2v_inst27.CPUstate == and2) else begin $error("failed and"); err++; end    
+    assert(dut.PC == 'd162) else begin $error("failed PC %d",dut.PC); err++; end    
+    assert(dut.AC == (dut.b2v_inst18.regB & 'd10)) else begin $error("and mul r2, r1,#10"); err++; end
+    #3ns;
+
+    #30ns; // fetch instruction
+
+    // and (2 cycles)
+    #17ns;
+    assert(dut.b2v_inst27.CPUstate == and2) else begin $error("failed and"); err++; end    
+    assert(dut.PC == 'd163) else begin $error("failed PC %d",dut.PC); err++; end    
+    assert(dut.AC == (dut.b2v_inst18.regA & dut.b2v_inst18.regB)) else begin $error("failed and, r0,r1"); err++; end
+    #3ns;
+
+    #30ns; // fetch instruction
+
+    ///////////////////////////////////////////
+
+   
+    // or (2 cycles)
+    #17ns;
+    assert(dut.b2v_inst27.CPUstate == or2) else begin $error("failed or"); err++; end    
+    assert(dut.PC == 'd164) else begin $error("failed PC %d",dut.PC); err++; end    
+    assert(dut.AC == ('d11 | 'd10)) else begin $error("failed or r2, #11,#10"); err++; end
+    #3ns;
+
+    #30ns; // fetch instruction
+
+    // or (2 cycles)
+    #17ns;
+    assert(dut.b2v_inst27.CPUstate == or2) else begin $error("failed or"); err++; end    
+    assert(dut.PC == 'd165) else begin $error("failed PC %d",dut.PC); err++; end    
+    assert(dut.AC == ('d11 | dut.b2v_inst18.regA)) else begin $error("failed or r2, #11,r0"); err++; end
+    #3ns;
+
+    #30ns; // fetch instruction
+
+    // or (2 cycles)
+    #17ns;
+    assert(dut.b2v_inst27.CPUstate == or2) else begin $error("failed or"); err++; end    
+    assert(dut.PC == 'd166) else begin $error("failed PC %d",dut.PC); err++; end    
+    assert(dut.AC == (dut.b2v_inst18.regB | 'd10)) else begin $error("or mul r2, r1,#10"); err++; end
+    #3ns;
+
+    #30ns; // fetch instruction
+
+    // or (2 cycles)
+    #17ns;
+    assert(dut.b2v_inst27.CPUstate == or2) else begin $error("failed or"); err++; end    
+    assert(dut.PC == 'd167) else begin $error("failed PC %d",dut.PC); err++; end    
+    assert(dut.AC == (dut.b2v_inst18.regA | dut.b2v_inst18.regB)) else begin $error("failed or, r0,r1"); err++; end
+    #3ns;
+
+    #30ns; // fetch instruction
+
+    ///////////////////////////////////////////
+
+   
+    // mvn (2 cycles)
+    #17ns;
+    assert(dut.b2v_inst27.CPUstate == mvn2) else begin $error("failed mvn"); err++; end    
+    assert(dut.PC == 'd168) else begin $error("failed PC %d",dut.PC); err++; end    
+    assert(dut.AC == ('hfffffffe)) else begin $error("failed mvn r2, #0"); err++; end
+    #3ns;
+
+    #30ns; // fetch instruction
+
+    // mvn (2 cycles)
+    #17ns;
+    assert(dut.b2v_inst27.CPUstate == mvn2) else begin $error("failed mvn"); err++; end    
+    assert(dut.PC == 'd169) else begin $error("failed PC %d",dut.PC); err++; end    
+    assert(dut.AC == ('hfffffff5)) else begin $error("failed mvn r2, r1"); err++; end
+    #3ns;
+
+    #30ns; // fetch instruction
 
     if(!err) $display("\n///////// ALL TESTS PASSED /////////\n");
     else $display("\n///////// WARNING: ERRORS FOUND %d /////////\n", err);
-
-  
-
-
 
     $stop;
 
