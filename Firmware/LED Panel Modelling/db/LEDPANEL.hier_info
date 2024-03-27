@@ -1,0 +1,625 @@
+|TopLevel
+out_A[0] <= SN74HC573:inst21.q[0]
+out_A[1] <= SN74HC573:inst21.q[1]
+out_A[2] <= SN74HC573:inst21.q[2]
+out_A[3] <= SN74HC573:inst21.q[3]
+out_A[4] <= SN74HC573:inst21.q[4]
+out_A[5] <= SN74HC573:inst21.q[5]
+out_A[6] <= SN74HC573:inst21.q[6]
+out_A[7] <= SN74HC573:inst21.q[7]
+OE => SN74HC573:inst21.OE
+OE => SN74HC595:inst.OE
+OE => SN74HC573:inst22.OE
+OE => SN74HC595:inst2.OE
+OE => SN74HC573:inst23.OE
+OE => SN74HC595:inst3.OE
+OE => SN74HC573:inst24.OE
+OE => SN74HC595:inst4.OE
+SHCP => CD4024:inst15.clk
+SHCP => SN74LS74:inst29.clk
+SHCP => SN74HC595:inst.SHCP
+SHCP => SN74HC595:inst2.SHCP
+SHCP => SN74HC595:inst3.SHCP
+SHCP => SN74HC595:inst4.SHCP
+rst => CD4024:inst15.rst
+rst => inst14.IN1
+DS => SN74HC595:inst.DS
+STCP => SN74HC595:inst.STCP
+STCP => SN74HC595:inst2.STCP
+STCP => SN74HC595:inst3.STCP
+STCP => SN74HC595:inst4.STCP
+out_B[0] <= SN74HC573:inst22.q[0]
+out_B[1] <= SN74HC573:inst22.q[1]
+out_B[2] <= SN74HC573:inst22.q[2]
+out_B[3] <= SN74HC573:inst22.q[3]
+out_B[4] <= SN74HC573:inst22.q[4]
+out_B[5] <= SN74HC573:inst22.q[5]
+out_B[6] <= SN74HC573:inst22.q[6]
+out_B[7] <= SN74HC573:inst22.q[7]
+out_C[0] <= SN74HC573:inst23.q[0]
+out_C[1] <= SN74HC573:inst23.q[1]
+out_C[2] <= SN74HC573:inst23.q[2]
+out_C[3] <= SN74HC573:inst23.q[3]
+out_C[4] <= SN74HC573:inst23.q[4]
+out_C[5] <= SN74HC573:inst23.q[5]
+out_C[6] <= SN74HC573:inst23.q[6]
+out_C[7] <= SN74HC573:inst23.q[7]
+out_D[0] <= SN74HC573:inst24.q[0]
+out_D[1] <= SN74HC573:inst24.q[1]
+out_D[2] <= SN74HC573:inst24.q[2]
+out_D[3] <= SN74HC573:inst24.q[3]
+out_D[4] <= SN74HC573:inst24.q[4]
+out_D[5] <= SN74HC573:inst24.q[5]
+out_D[6] <= SN74HC573:inst24.q[6]
+out_D[7] <= SN74HC573:inst24.q[7]
+
+
+|TopLevel|SN74HC573:inst21
+q[0] <= q[0].DB_MAX_OUTPUT_PORT_TYPE
+q[1] <= q[1].DB_MAX_OUTPUT_PORT_TYPE
+q[2] <= q[2].DB_MAX_OUTPUT_PORT_TYPE
+q[3] <= q[3].DB_MAX_OUTPUT_PORT_TYPE
+q[4] <= q[4].DB_MAX_OUTPUT_PORT_TYPE
+q[5] <= q[5].DB_MAX_OUTPUT_PORT_TYPE
+q[6] <= q[6].DB_MAX_OUTPUT_PORT_TYPE
+q[7] <= q[7].DB_MAX_OUTPUT_PORT_TYPE
+OE => q[0].OE
+OE => q[1].OE
+OE => q[2].OE
+OE => q[3].OE
+OE => q[4].OE
+OE => q[5].OE
+OE => q[6].OE
+OE => q[7].OE
+d[0] => internal_reg[0].DATAIN
+d[1] => internal_reg[1].DATAIN
+d[2] => internal_reg[2].DATAIN
+d[3] => internal_reg[3].DATAIN
+d[4] => internal_reg[4].DATAIN
+d[5] => internal_reg[5].DATAIN
+d[6] => internal_reg[6].DATAIN
+d[7] => internal_reg[7].DATAIN
+LE => internal_reg[0].LATCH_ENABLE
+LE => internal_reg[1].LATCH_ENABLE
+LE => internal_reg[2].LATCH_ENABLE
+LE => internal_reg[3].LATCH_ENABLE
+LE => internal_reg[4].LATCH_ENABLE
+LE => internal_reg[5].LATCH_ENABLE
+LE => internal_reg[6].LATCH_ENABLE
+LE => internal_reg[7].LATCH_ENABLE
+
+
+|TopLevel|andfive:inst20
+q <= always0.DB_MAX_OUTPUT_PORT_TYPE
+a => always0.IN0
+b => always0.IN1
+c => always0.IN1
+d => always0.IN1
+e => always0.IN1
+
+
+|TopLevel|CD4024:inst15
+q[0] <= cnt_reg[0].DB_MAX_OUTPUT_PORT_TYPE
+q[1] <= cnt_reg[1].DB_MAX_OUTPUT_PORT_TYPE
+q[2] <= cnt_reg[2].DB_MAX_OUTPUT_PORT_TYPE
+q[3] <= cnt_reg[3].DB_MAX_OUTPUT_PORT_TYPE
+q[4] <= cnt_reg[4].DB_MAX_OUTPUT_PORT_TYPE
+q[5] <= cnt_reg[5].DB_MAX_OUTPUT_PORT_TYPE
+q[6] <= cnt_reg[6].DB_MAX_OUTPUT_PORT_TYPE
+clk => cnt_reg[0].CLK
+clk => cnt_reg[1].CLK
+clk => cnt_reg[2].CLK
+clk => cnt_reg[3].CLK
+clk => cnt_reg[4].CLK
+clk => cnt_reg[5].CLK
+clk => cnt_reg[6].CLK
+rst => cnt_reg[0].ACLR
+rst => cnt_reg[1].ACLR
+rst => cnt_reg[2].ACLR
+rst => cnt_reg[3].ACLR
+rst => cnt_reg[4].ACLR
+rst => cnt_reg[5].ACLR
+rst => cnt_reg[6].ACLR
+
+
+|TopLevel|SN74HC595:inst
+data_out[0] <= trisateN:inst2.q[0]
+data_out[1] <= trisateN:inst2.q[1]
+data_out[2] <= trisateN:inst2.q[2]
+data_out[3] <= trisateN:inst2.q[3]
+data_out[4] <= trisateN:inst2.q[4]
+data_out[5] <= trisateN:inst2.q[5]
+data_out[6] <= trisateN:inst2.q[6]
+data_out[7] <= trisateN:inst2.q[7]
+OE => trisateN:inst2.OE
+STCP => regN:inst1.STCP
+DS => SPSR:inst.DS
+MR => SPSR:inst.nrst
+SHCP => SPSR:inst.SHCP
+
+
+|TopLevel|SN74HC595:inst|trisateN:inst2
+q[0] <= q[0].DB_MAX_OUTPUT_PORT_TYPE
+q[1] <= q[1].DB_MAX_OUTPUT_PORT_TYPE
+q[2] <= q[2].DB_MAX_OUTPUT_PORT_TYPE
+q[3] <= q[3].DB_MAX_OUTPUT_PORT_TYPE
+q[4] <= q[4].DB_MAX_OUTPUT_PORT_TYPE
+q[5] <= q[5].DB_MAX_OUTPUT_PORT_TYPE
+q[6] <= q[6].DB_MAX_OUTPUT_PORT_TYPE
+q[7] <= q[7].DB_MAX_OUTPUT_PORT_TYPE
+d[0] => q[0].DATAIN
+d[1] => q[1].DATAIN
+d[2] => q[2].DATAIN
+d[3] => q[3].DATAIN
+d[4] => q[4].DATAIN
+d[5] => q[5].DATAIN
+d[6] => q[6].DATAIN
+d[7] => q[7].DATAIN
+OE => q[0].OE
+OE => q[1].OE
+OE => q[2].OE
+OE => q[3].OE
+OE => q[4].OE
+OE => q[5].OE
+OE => q[6].OE
+OE => q[7].OE
+
+
+|TopLevel|SN74HC595:inst|regN:inst1
+q[0] <= internal_reg[0].DB_MAX_OUTPUT_PORT_TYPE
+q[1] <= internal_reg[1].DB_MAX_OUTPUT_PORT_TYPE
+q[2] <= internal_reg[2].DB_MAX_OUTPUT_PORT_TYPE
+q[3] <= internal_reg[3].DB_MAX_OUTPUT_PORT_TYPE
+q[4] <= internal_reg[4].DB_MAX_OUTPUT_PORT_TYPE
+q[5] <= internal_reg[5].DB_MAX_OUTPUT_PORT_TYPE
+q[6] <= internal_reg[6].DB_MAX_OUTPUT_PORT_TYPE
+q[7] <= internal_reg[7].DB_MAX_OUTPUT_PORT_TYPE
+d[0] => Selector0.IN3
+d[1] => Selector7.IN3
+d[2] => Selector6.IN3
+d[3] => Selector5.IN3
+d[4] => Selector4.IN3
+d[5] => Selector3.IN3
+d[6] => Selector2.IN3
+d[7] => Selector1.IN3
+inc => Equal0.IN2
+inc => Equal1.IN2
+load => Equal0.IN3
+load => Equal1.IN3
+rst => Decoder0.IN0
+STCP => ~NO_FANOUT~
+
+
+|TopLevel|SN74HC595:inst|SPSR:inst
+q[0] <= shift_reg[0].DB_MAX_OUTPUT_PORT_TYPE
+q[1] <= shift_reg[1].DB_MAX_OUTPUT_PORT_TYPE
+q[2] <= shift_reg[2].DB_MAX_OUTPUT_PORT_TYPE
+q[3] <= shift_reg[3].DB_MAX_OUTPUT_PORT_TYPE
+q[4] <= shift_reg[4].DB_MAX_OUTPUT_PORT_TYPE
+q[5] <= shift_reg[5].DB_MAX_OUTPUT_PORT_TYPE
+q[6] <= shift_reg[6].DB_MAX_OUTPUT_PORT_TYPE
+q[7] <= shift_reg[7].DB_MAX_OUTPUT_PORT_TYPE
+DS => shift_reg[0].DATAIN
+nrst => shift_reg[0].ACLR
+nrst => shift_reg[1].ACLR
+nrst => shift_reg[2].ACLR
+nrst => shift_reg[3].ACLR
+nrst => shift_reg[4].ACLR
+nrst => shift_reg[5].ACLR
+nrst => shift_reg[6].ACLR
+nrst => shift_reg[7].ACLR
+SHCP => shift_reg[0].CLK
+SHCP => shift_reg[1].CLK
+SHCP => shift_reg[2].CLK
+SHCP => shift_reg[3].CLK
+SHCP => shift_reg[4].CLK
+SHCP => shift_reg[5].CLK
+SHCP => shift_reg[6].CLK
+SHCP => shift_reg[7].CLK
+
+
+|TopLevel|SN74LS74:inst29
+q <= Mux0.DB_MAX_OUTPUT_PORT_TYPE
+n_q <= Mux1.DB_MAX_OUTPUT_PORT_TYPE
+d => Mux0.IN3
+d => Mux1.IN3
+PRE => Mux0.IN4
+PRE => Mux1.IN4
+CLR => Mux0.IN5
+CLR => Mux1.IN5
+clk => ~NO_FANOUT~
+
+
+|TopLevel|SN74HC573:inst22
+q[0] <= q[0].DB_MAX_OUTPUT_PORT_TYPE
+q[1] <= q[1].DB_MAX_OUTPUT_PORT_TYPE
+q[2] <= q[2].DB_MAX_OUTPUT_PORT_TYPE
+q[3] <= q[3].DB_MAX_OUTPUT_PORT_TYPE
+q[4] <= q[4].DB_MAX_OUTPUT_PORT_TYPE
+q[5] <= q[5].DB_MAX_OUTPUT_PORT_TYPE
+q[6] <= q[6].DB_MAX_OUTPUT_PORT_TYPE
+q[7] <= q[7].DB_MAX_OUTPUT_PORT_TYPE
+OE => q[0].OE
+OE => q[1].OE
+OE => q[2].OE
+OE => q[3].OE
+OE => q[4].OE
+OE => q[5].OE
+OE => q[6].OE
+OE => q[7].OE
+d[0] => internal_reg[0].DATAIN
+d[1] => internal_reg[1].DATAIN
+d[2] => internal_reg[2].DATAIN
+d[3] => internal_reg[3].DATAIN
+d[4] => internal_reg[4].DATAIN
+d[5] => internal_reg[5].DATAIN
+d[6] => internal_reg[6].DATAIN
+d[7] => internal_reg[7].DATAIN
+LE => internal_reg[0].LATCH_ENABLE
+LE => internal_reg[1].LATCH_ENABLE
+LE => internal_reg[2].LATCH_ENABLE
+LE => internal_reg[3].LATCH_ENABLE
+LE => internal_reg[4].LATCH_ENABLE
+LE => internal_reg[5].LATCH_ENABLE
+LE => internal_reg[6].LATCH_ENABLE
+LE => internal_reg[7].LATCH_ENABLE
+
+
+|TopLevel|SN74HC595:inst2
+data_out[0] <= trisateN:inst2.q[0]
+data_out[1] <= trisateN:inst2.q[1]
+data_out[2] <= trisateN:inst2.q[2]
+data_out[3] <= trisateN:inst2.q[3]
+data_out[4] <= trisateN:inst2.q[4]
+data_out[5] <= trisateN:inst2.q[5]
+data_out[6] <= trisateN:inst2.q[6]
+data_out[7] <= trisateN:inst2.q[7]
+OE => trisateN:inst2.OE
+STCP => regN:inst1.STCP
+DS => SPSR:inst.DS
+MR => SPSR:inst.nrst
+SHCP => SPSR:inst.SHCP
+
+
+|TopLevel|SN74HC595:inst2|trisateN:inst2
+q[0] <= q[0].DB_MAX_OUTPUT_PORT_TYPE
+q[1] <= q[1].DB_MAX_OUTPUT_PORT_TYPE
+q[2] <= q[2].DB_MAX_OUTPUT_PORT_TYPE
+q[3] <= q[3].DB_MAX_OUTPUT_PORT_TYPE
+q[4] <= q[4].DB_MAX_OUTPUT_PORT_TYPE
+q[5] <= q[5].DB_MAX_OUTPUT_PORT_TYPE
+q[6] <= q[6].DB_MAX_OUTPUT_PORT_TYPE
+q[7] <= q[7].DB_MAX_OUTPUT_PORT_TYPE
+d[0] => q[0].DATAIN
+d[1] => q[1].DATAIN
+d[2] => q[2].DATAIN
+d[3] => q[3].DATAIN
+d[4] => q[4].DATAIN
+d[5] => q[5].DATAIN
+d[6] => q[6].DATAIN
+d[7] => q[7].DATAIN
+OE => q[0].OE
+OE => q[1].OE
+OE => q[2].OE
+OE => q[3].OE
+OE => q[4].OE
+OE => q[5].OE
+OE => q[6].OE
+OE => q[7].OE
+
+
+|TopLevel|SN74HC595:inst2|regN:inst1
+q[0] <= internal_reg[0].DB_MAX_OUTPUT_PORT_TYPE
+q[1] <= internal_reg[1].DB_MAX_OUTPUT_PORT_TYPE
+q[2] <= internal_reg[2].DB_MAX_OUTPUT_PORT_TYPE
+q[3] <= internal_reg[3].DB_MAX_OUTPUT_PORT_TYPE
+q[4] <= internal_reg[4].DB_MAX_OUTPUT_PORT_TYPE
+q[5] <= internal_reg[5].DB_MAX_OUTPUT_PORT_TYPE
+q[6] <= internal_reg[6].DB_MAX_OUTPUT_PORT_TYPE
+q[7] <= internal_reg[7].DB_MAX_OUTPUT_PORT_TYPE
+d[0] => Selector0.IN3
+d[1] => Selector7.IN3
+d[2] => Selector6.IN3
+d[3] => Selector5.IN3
+d[4] => Selector4.IN3
+d[5] => Selector3.IN3
+d[6] => Selector2.IN3
+d[7] => Selector1.IN3
+inc => Equal0.IN2
+inc => Equal1.IN2
+load => Equal0.IN3
+load => Equal1.IN3
+rst => Decoder0.IN0
+STCP => ~NO_FANOUT~
+
+
+|TopLevel|SN74HC595:inst2|SPSR:inst
+q[0] <= shift_reg[0].DB_MAX_OUTPUT_PORT_TYPE
+q[1] <= shift_reg[1].DB_MAX_OUTPUT_PORT_TYPE
+q[2] <= shift_reg[2].DB_MAX_OUTPUT_PORT_TYPE
+q[3] <= shift_reg[3].DB_MAX_OUTPUT_PORT_TYPE
+q[4] <= shift_reg[4].DB_MAX_OUTPUT_PORT_TYPE
+q[5] <= shift_reg[5].DB_MAX_OUTPUT_PORT_TYPE
+q[6] <= shift_reg[6].DB_MAX_OUTPUT_PORT_TYPE
+q[7] <= shift_reg[7].DB_MAX_OUTPUT_PORT_TYPE
+DS => shift_reg[0].DATAIN
+nrst => shift_reg[0].ACLR
+nrst => shift_reg[1].ACLR
+nrst => shift_reg[2].ACLR
+nrst => shift_reg[3].ACLR
+nrst => shift_reg[4].ACLR
+nrst => shift_reg[5].ACLR
+nrst => shift_reg[6].ACLR
+nrst => shift_reg[7].ACLR
+SHCP => shift_reg[0].CLK
+SHCP => shift_reg[1].CLK
+SHCP => shift_reg[2].CLK
+SHCP => shift_reg[3].CLK
+SHCP => shift_reg[4].CLK
+SHCP => shift_reg[5].CLK
+SHCP => shift_reg[6].CLK
+SHCP => shift_reg[7].CLK
+
+
+|TopLevel|SN74HC573:inst23
+q[0] <= q[0].DB_MAX_OUTPUT_PORT_TYPE
+q[1] <= q[1].DB_MAX_OUTPUT_PORT_TYPE
+q[2] <= q[2].DB_MAX_OUTPUT_PORT_TYPE
+q[3] <= q[3].DB_MAX_OUTPUT_PORT_TYPE
+q[4] <= q[4].DB_MAX_OUTPUT_PORT_TYPE
+q[5] <= q[5].DB_MAX_OUTPUT_PORT_TYPE
+q[6] <= q[6].DB_MAX_OUTPUT_PORT_TYPE
+q[7] <= q[7].DB_MAX_OUTPUT_PORT_TYPE
+OE => q[0].OE
+OE => q[1].OE
+OE => q[2].OE
+OE => q[3].OE
+OE => q[4].OE
+OE => q[5].OE
+OE => q[6].OE
+OE => q[7].OE
+d[0] => internal_reg[0].DATAIN
+d[1] => internal_reg[1].DATAIN
+d[2] => internal_reg[2].DATAIN
+d[3] => internal_reg[3].DATAIN
+d[4] => internal_reg[4].DATAIN
+d[5] => internal_reg[5].DATAIN
+d[6] => internal_reg[6].DATAIN
+d[7] => internal_reg[7].DATAIN
+LE => internal_reg[0].LATCH_ENABLE
+LE => internal_reg[1].LATCH_ENABLE
+LE => internal_reg[2].LATCH_ENABLE
+LE => internal_reg[3].LATCH_ENABLE
+LE => internal_reg[4].LATCH_ENABLE
+LE => internal_reg[5].LATCH_ENABLE
+LE => internal_reg[6].LATCH_ENABLE
+LE => internal_reg[7].LATCH_ENABLE
+
+
+|TopLevel|SN74HC595:inst3
+data_out[0] <= trisateN:inst2.q[0]
+data_out[1] <= trisateN:inst2.q[1]
+data_out[2] <= trisateN:inst2.q[2]
+data_out[3] <= trisateN:inst2.q[3]
+data_out[4] <= trisateN:inst2.q[4]
+data_out[5] <= trisateN:inst2.q[5]
+data_out[6] <= trisateN:inst2.q[6]
+data_out[7] <= trisateN:inst2.q[7]
+OE => trisateN:inst2.OE
+STCP => regN:inst1.STCP
+DS => SPSR:inst.DS
+MR => SPSR:inst.nrst
+SHCP => SPSR:inst.SHCP
+
+
+|TopLevel|SN74HC595:inst3|trisateN:inst2
+q[0] <= q[0].DB_MAX_OUTPUT_PORT_TYPE
+q[1] <= q[1].DB_MAX_OUTPUT_PORT_TYPE
+q[2] <= q[2].DB_MAX_OUTPUT_PORT_TYPE
+q[3] <= q[3].DB_MAX_OUTPUT_PORT_TYPE
+q[4] <= q[4].DB_MAX_OUTPUT_PORT_TYPE
+q[5] <= q[5].DB_MAX_OUTPUT_PORT_TYPE
+q[6] <= q[6].DB_MAX_OUTPUT_PORT_TYPE
+q[7] <= q[7].DB_MAX_OUTPUT_PORT_TYPE
+d[0] => q[0].DATAIN
+d[1] => q[1].DATAIN
+d[2] => q[2].DATAIN
+d[3] => q[3].DATAIN
+d[4] => q[4].DATAIN
+d[5] => q[5].DATAIN
+d[6] => q[6].DATAIN
+d[7] => q[7].DATAIN
+OE => q[0].OE
+OE => q[1].OE
+OE => q[2].OE
+OE => q[3].OE
+OE => q[4].OE
+OE => q[5].OE
+OE => q[6].OE
+OE => q[7].OE
+
+
+|TopLevel|SN74HC595:inst3|regN:inst1
+q[0] <= internal_reg[0].DB_MAX_OUTPUT_PORT_TYPE
+q[1] <= internal_reg[1].DB_MAX_OUTPUT_PORT_TYPE
+q[2] <= internal_reg[2].DB_MAX_OUTPUT_PORT_TYPE
+q[3] <= internal_reg[3].DB_MAX_OUTPUT_PORT_TYPE
+q[4] <= internal_reg[4].DB_MAX_OUTPUT_PORT_TYPE
+q[5] <= internal_reg[5].DB_MAX_OUTPUT_PORT_TYPE
+q[6] <= internal_reg[6].DB_MAX_OUTPUT_PORT_TYPE
+q[7] <= internal_reg[7].DB_MAX_OUTPUT_PORT_TYPE
+d[0] => Selector0.IN3
+d[1] => Selector7.IN3
+d[2] => Selector6.IN3
+d[3] => Selector5.IN3
+d[4] => Selector4.IN3
+d[5] => Selector3.IN3
+d[6] => Selector2.IN3
+d[7] => Selector1.IN3
+inc => Equal0.IN2
+inc => Equal1.IN2
+load => Equal0.IN3
+load => Equal1.IN3
+rst => Decoder0.IN0
+STCP => ~NO_FANOUT~
+
+
+|TopLevel|SN74HC595:inst3|SPSR:inst
+q[0] <= shift_reg[0].DB_MAX_OUTPUT_PORT_TYPE
+q[1] <= shift_reg[1].DB_MAX_OUTPUT_PORT_TYPE
+q[2] <= shift_reg[2].DB_MAX_OUTPUT_PORT_TYPE
+q[3] <= shift_reg[3].DB_MAX_OUTPUT_PORT_TYPE
+q[4] <= shift_reg[4].DB_MAX_OUTPUT_PORT_TYPE
+q[5] <= shift_reg[5].DB_MAX_OUTPUT_PORT_TYPE
+q[6] <= shift_reg[6].DB_MAX_OUTPUT_PORT_TYPE
+q[7] <= shift_reg[7].DB_MAX_OUTPUT_PORT_TYPE
+DS => shift_reg[0].DATAIN
+nrst => shift_reg[0].ACLR
+nrst => shift_reg[1].ACLR
+nrst => shift_reg[2].ACLR
+nrst => shift_reg[3].ACLR
+nrst => shift_reg[4].ACLR
+nrst => shift_reg[5].ACLR
+nrst => shift_reg[6].ACLR
+nrst => shift_reg[7].ACLR
+SHCP => shift_reg[0].CLK
+SHCP => shift_reg[1].CLK
+SHCP => shift_reg[2].CLK
+SHCP => shift_reg[3].CLK
+SHCP => shift_reg[4].CLK
+SHCP => shift_reg[5].CLK
+SHCP => shift_reg[6].CLK
+SHCP => shift_reg[7].CLK
+
+
+|TopLevel|SN74HC573:inst24
+q[0] <= q[0].DB_MAX_OUTPUT_PORT_TYPE
+q[1] <= q[1].DB_MAX_OUTPUT_PORT_TYPE
+q[2] <= q[2].DB_MAX_OUTPUT_PORT_TYPE
+q[3] <= q[3].DB_MAX_OUTPUT_PORT_TYPE
+q[4] <= q[4].DB_MAX_OUTPUT_PORT_TYPE
+q[5] <= q[5].DB_MAX_OUTPUT_PORT_TYPE
+q[6] <= q[6].DB_MAX_OUTPUT_PORT_TYPE
+q[7] <= q[7].DB_MAX_OUTPUT_PORT_TYPE
+OE => q[0].OE
+OE => q[1].OE
+OE => q[2].OE
+OE => q[3].OE
+OE => q[4].OE
+OE => q[5].OE
+OE => q[6].OE
+OE => q[7].OE
+d[0] => internal_reg[0].DATAIN
+d[1] => internal_reg[1].DATAIN
+d[2] => internal_reg[2].DATAIN
+d[3] => internal_reg[3].DATAIN
+d[4] => internal_reg[4].DATAIN
+d[5] => internal_reg[5].DATAIN
+d[6] => internal_reg[6].DATAIN
+d[7] => internal_reg[7].DATAIN
+LE => internal_reg[0].LATCH_ENABLE
+LE => internal_reg[1].LATCH_ENABLE
+LE => internal_reg[2].LATCH_ENABLE
+LE => internal_reg[3].LATCH_ENABLE
+LE => internal_reg[4].LATCH_ENABLE
+LE => internal_reg[5].LATCH_ENABLE
+LE => internal_reg[6].LATCH_ENABLE
+LE => internal_reg[7].LATCH_ENABLE
+
+
+|TopLevel|SN74HC595:inst4
+data_out[0] <= trisateN:inst2.q[0]
+data_out[1] <= trisateN:inst2.q[1]
+data_out[2] <= trisateN:inst2.q[2]
+data_out[3] <= trisateN:inst2.q[3]
+data_out[4] <= trisateN:inst2.q[4]
+data_out[5] <= trisateN:inst2.q[5]
+data_out[6] <= trisateN:inst2.q[6]
+data_out[7] <= trisateN:inst2.q[7]
+OE => trisateN:inst2.OE
+STCP => regN:inst1.STCP
+DS => SPSR:inst.DS
+MR => SPSR:inst.nrst
+SHCP => SPSR:inst.SHCP
+
+
+|TopLevel|SN74HC595:inst4|trisateN:inst2
+q[0] <= q[0].DB_MAX_OUTPUT_PORT_TYPE
+q[1] <= q[1].DB_MAX_OUTPUT_PORT_TYPE
+q[2] <= q[2].DB_MAX_OUTPUT_PORT_TYPE
+q[3] <= q[3].DB_MAX_OUTPUT_PORT_TYPE
+q[4] <= q[4].DB_MAX_OUTPUT_PORT_TYPE
+q[5] <= q[5].DB_MAX_OUTPUT_PORT_TYPE
+q[6] <= q[6].DB_MAX_OUTPUT_PORT_TYPE
+q[7] <= q[7].DB_MAX_OUTPUT_PORT_TYPE
+d[0] => q[0].DATAIN
+d[1] => q[1].DATAIN
+d[2] => q[2].DATAIN
+d[3] => q[3].DATAIN
+d[4] => q[4].DATAIN
+d[5] => q[5].DATAIN
+d[6] => q[6].DATAIN
+d[7] => q[7].DATAIN
+OE => q[0].OE
+OE => q[1].OE
+OE => q[2].OE
+OE => q[3].OE
+OE => q[4].OE
+OE => q[5].OE
+OE => q[6].OE
+OE => q[7].OE
+
+
+|TopLevel|SN74HC595:inst4|regN:inst1
+q[0] <= internal_reg[0].DB_MAX_OUTPUT_PORT_TYPE
+q[1] <= internal_reg[1].DB_MAX_OUTPUT_PORT_TYPE
+q[2] <= internal_reg[2].DB_MAX_OUTPUT_PORT_TYPE
+q[3] <= internal_reg[3].DB_MAX_OUTPUT_PORT_TYPE
+q[4] <= internal_reg[4].DB_MAX_OUTPUT_PORT_TYPE
+q[5] <= internal_reg[5].DB_MAX_OUTPUT_PORT_TYPE
+q[6] <= internal_reg[6].DB_MAX_OUTPUT_PORT_TYPE
+q[7] <= internal_reg[7].DB_MAX_OUTPUT_PORT_TYPE
+d[0] => Selector0.IN3
+d[1] => Selector7.IN3
+d[2] => Selector6.IN3
+d[3] => Selector5.IN3
+d[4] => Selector4.IN3
+d[5] => Selector3.IN3
+d[6] => Selector2.IN3
+d[7] => Selector1.IN3
+inc => Equal0.IN2
+inc => Equal1.IN2
+load => Equal0.IN3
+load => Equal1.IN3
+rst => Decoder0.IN0
+STCP => ~NO_FANOUT~
+
+
+|TopLevel|SN74HC595:inst4|SPSR:inst
+q[0] <= shift_reg[0].DB_MAX_OUTPUT_PORT_TYPE
+q[1] <= shift_reg[1].DB_MAX_OUTPUT_PORT_TYPE
+q[2] <= shift_reg[2].DB_MAX_OUTPUT_PORT_TYPE
+q[3] <= shift_reg[3].DB_MAX_OUTPUT_PORT_TYPE
+q[4] <= shift_reg[4].DB_MAX_OUTPUT_PORT_TYPE
+q[5] <= shift_reg[5].DB_MAX_OUTPUT_PORT_TYPE
+q[6] <= shift_reg[6].DB_MAX_OUTPUT_PORT_TYPE
+q[7] <= shift_reg[7].DB_MAX_OUTPUT_PORT_TYPE
+DS => shift_reg[0].DATAIN
+nrst => shift_reg[0].ACLR
+nrst => shift_reg[1].ACLR
+nrst => shift_reg[2].ACLR
+nrst => shift_reg[3].ACLR
+nrst => shift_reg[4].ACLR
+nrst => shift_reg[5].ACLR
+nrst => shift_reg[6].ACLR
+nrst => shift_reg[7].ACLR
+SHCP => shift_reg[0].CLK
+SHCP => shift_reg[1].CLK
+SHCP => shift_reg[2].CLK
+SHCP => shift_reg[3].CLK
+SHCP => shift_reg[4].CLK
+SHCP => shift_reg[5].CLK
+SHCP => shift_reg[6].CLK
+SHCP => shift_reg[7].CLK
+
+

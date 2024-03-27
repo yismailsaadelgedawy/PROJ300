@@ -1,0 +1,2 @@
+Warning (10273): Verilog HDL warning at SN74HC573.sv(18): extended using "x" or "z" File: C:/Users/minec/Desktop/github/PROJ300/Firmware/LED Panel Modelling/sv files/SN74HC573.sv Line: 18
+Warning (10273): Verilog HDL warning at tristateN.sv(10): extended using "x" or "z" File: C:/Users/minec/Desktop/github/PROJ300/Firmware/LED Panel Modelling/sv files/tristateN.sv Line: 10
