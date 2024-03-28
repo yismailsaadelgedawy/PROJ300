@@ -8,7 +8,7 @@ module regN #(parameter N=8) (
 
 );
 
-logic [N-1:0] internal_reg = 'd0;
+bit [N-1:0] internal_reg = 'd0;
 
 always_comb begin
 

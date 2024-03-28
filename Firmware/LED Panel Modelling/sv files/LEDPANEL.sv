@@ -15,7 +15,7 @@
 
 // PROGRAM		"Quartus Prime"
 // VERSION		"Version 20.1.0 Build 711 06/05/2020 SJ Lite Edition"
-// CREATED		"Thu Mar 28 01:39:16 2024"
+// CREATED		"Thu Mar 28 04:28:38 2024"
 
 module LEDPANEL(
 	DS,
@@ -50,23 +50,12 @@ wire	[7:0] shiftC;
 wire	[7:0] shiftD;
 wire	SYNTHESIZED_WIRE_0;
 wire	SYNTHESIZED_WIRE_1;
-wire	SYNTHESIZED_WIRE_18;
+wire	SYNTHESIZED_WIRE_2;
+wire	SYNTHESIZED_WIRE_3;
 wire	SYNTHESIZED_WIRE_4;
-wire	SYNTHESIZED_WIRE_19;
 wire	SYNTHESIZED_WIRE_7;
-wire	SYNTHESIZED_WIRE_20;
-wire	SYNTHESIZED_WIRE_10;
-wire	SYNTHESIZED_WIRE_21;
-wire	SYNTHESIZED_WIRE_13;
-wire	SYNTHESIZED_WIRE_22;
-wire	SYNTHESIZED_WIRE_23;
 
-assign	SYNTHESIZED_WIRE_18 = 1;
-assign	SYNTHESIZED_WIRE_19 = 1;
-assign	SYNTHESIZED_WIRE_20 = 1;
-assign	SYNTHESIZED_WIRE_21 = 1;
-assign	SYNTHESIZED_WIRE_22 = 1;
-assign	SYNTHESIZED_WIRE_23 = 1;
+assign	SYNTHESIZED_WIRE_7 = 1;
 
 
 
@@ -79,12 +68,22 @@ SN74HC595	b2v_inst(
 	.OE(OE),
 	.data_out(shiftA));
 
+
+andsix	b2v_inst1(
+	.a(SYNTHESIZED_WIRE_0),
+	.b(SYNTHESIZED_WIRE_1),
+	.c(count[2]),
+	.d(SYNTHESIZED_WIRE_2),
+	.e(SYNTHESIZED_WIRE_3),
+	.f(count[5]),
+	.q(LE));
+
 assign	MR = ~(rst_reg | rst);
 
 
 CD4024	b2v_inst15(
 	.clk(SHCP),
-	.rst(SYNTHESIZED_WIRE_0),
+	.rst(SYNTHESIZED_WIRE_4),
 	.q(count));
 
 
@@ -95,15 +94,6 @@ SN74HC595	b2v_inst2(
 	.STCP(STCP),
 	.OE(OE),
 	.data_out(shiftB));
-
-
-andfive	b2v_inst20(
-	.a(count[0]),
-	.b(count[1]),
-	.c(count[2]),
-	.d(count[3]),
-	.e(count[4]),
-	.q(SYNTHESIZED_WIRE_1));
 
 
 SN74HC573	b2v_inst21(
@@ -135,11 +125,11 @@ SN74HC573	b2v_inst24(
 
 
 SN74LS74	b2v_inst29(
-	.d(SYNTHESIZED_WIRE_1),
-	.PRE(SYNTHESIZED_WIRE_18),
-	.CLR(SYNTHESIZED_WIRE_18),
+	.d(LE),
+	.PRE(SYNTHESIZED_WIRE_7),
+	.CLR(SYNTHESIZED_WIRE_7),
 	.clk(SHCP),
-	.q(SYNTHESIZED_WIRE_4)
+	.q(rst_reg)
 	);
 
 
@@ -153,55 +143,6 @@ SN74HC595	b2v_inst3(
 
 
 
-SN74LS74	b2v_inst31(
-	.d(SYNTHESIZED_WIRE_4),
-	.PRE(SYNTHESIZED_WIRE_19),
-	.CLR(SYNTHESIZED_WIRE_19),
-	.clk(SHCP),
-	.q(SYNTHESIZED_WIRE_7)
-	);
-
-
-
-SN74LS74	b2v_inst33(
-	.d(SYNTHESIZED_WIRE_7),
-	.PRE(SYNTHESIZED_WIRE_20),
-	.CLR(SYNTHESIZED_WIRE_20),
-	.clk(SHCP),
-	.q(SYNTHESIZED_WIRE_10)
-	);
-
-
-
-SN74LS74	b2v_inst35(
-	.d(SYNTHESIZED_WIRE_10),
-	.PRE(SYNTHESIZED_WIRE_21),
-	.CLR(SYNTHESIZED_WIRE_21),
-	.clk(SHCP),
-	.q(SYNTHESIZED_WIRE_13)
-	);
-
-
-
-SN74LS74	b2v_inst37(
-	.d(SYNTHESIZED_WIRE_13),
-	.PRE(SYNTHESIZED_WIRE_22),
-	.CLR(SYNTHESIZED_WIRE_22),
-	.clk(SHCP),
-	.q(LE)
-	);
-
-
-
-SN74LS74	b2v_inst39(
-	.d(LE),
-	.PRE(SYNTHESIZED_WIRE_23),
-	.CLR(SYNTHESIZED_WIRE_23),
-	.clk(SHCP),
-	.q(rst_reg)
-	);
-
-
 SN74HC595	b2v_inst4(
 	.DS(shiftC[7]),
 	.MR(MR),
@@ -210,8 +151,15 @@ SN74HC595	b2v_inst4(
 	.OE(OE),
 	.data_out(shiftD));
 
+assign	SYNTHESIZED_WIRE_4 = rst_reg | rst;
 
-assign	SYNTHESIZED_WIRE_0 = rst_reg | rst;
+assign	SYNTHESIZED_WIRE_3 =  ~count[4];
+
+assign	SYNTHESIZED_WIRE_2 =  ~count[3];
+
+assign	SYNTHESIZED_WIRE_1 =  ~count[1];
+
+assign	SYNTHESIZED_WIRE_0 =  ~count[0];
 
 
 endmodule
