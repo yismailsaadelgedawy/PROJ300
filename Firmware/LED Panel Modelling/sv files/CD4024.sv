@@ -13,7 +13,8 @@ logic [6:0] cnt_reg;
 assign q = cnt_reg;
 
 
-always_ff @(posedge clk or posedge rst) begin
+// this IC counts on the falling edge of the clock
+always_ff @(negedge clk or posedge rst) begin
 
     if(rst) cnt_reg <= 0;
 
