@@ -10,10 +10,12 @@ logic STCP;
 logic OE;
 
 // out
-logic [7:0] out_D;
+logic [7:0] out_D;          // MSB
 logic [7:0] out_C;
 logic [7:0] out_B;
-logic [7:0] out_A;
+logic [7:0] out_A;          // LSB
+
+
 
 
 // inst and wiring
@@ -61,8 +63,19 @@ initial begin
     #3ns;
 
     rst = 0;
+
     DS = 1;
-    #370ns;  // 32+5 clock cycles
+    #10ns;
+    DS = 0;
+    #10ns;
+    DS = 0;
+    #10ns;
+    DS = 1;
+    #10ns;
+    DS = 0;
+    #10ns;
+
+    #320ns;  // 37 clock cycles total
     
     assert ({out_D,out_C,out_B,out_A} == {8'd255,8'd255,8'd255,8'd255}) $display("passed data out"); else $error("failed data out");
 

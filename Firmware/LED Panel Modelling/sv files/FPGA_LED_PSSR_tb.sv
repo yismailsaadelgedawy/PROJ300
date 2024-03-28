@@ -4,8 +4,8 @@ module FPGA_LED_PSSR_tb;
 
 // in
 logic clk,rst,load;
-logic [31:0] rA,rB;
-logic sel;
+logic [31:0] rA,rB,rC,rD;
+logic [1:0] sel;
 
 
 // out
@@ -21,6 +21,8 @@ FPGA_LED_PSSR dut (
     .load(load),
     .rA(rA),
     .rB(rB),
+    .rC(rC),
+    .rD(rD),
     .sel(sel),
 
     // out
@@ -49,7 +51,9 @@ initial begin
     load = 1;
     rA = 32'b1011;
     rB = 32'b1001;
-    sel = 0;
+    rC = 32'b1100;
+    rD = 32'b1101;
+    sel = 'd0;
     #50ns;
 
     rst = 0;
@@ -60,9 +64,14 @@ initial begin
     load = 0;
 
     #320ns;
-    
-    sel = 1;
 
+    sel = 'd1;
+    #320ns;
+
+    sel = 'd2;
+    #320ns;
+
+    sel = 'd3;
     #320ns;
 
     $stop;

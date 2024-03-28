@@ -45,7 +45,13 @@ https://fpgasoftware.intel.com/eula.
 		(text "q[4..0]" (rect 90 27 115 39)(font "Arial" ))
 		(line (pt 136 32)(pt 120 32)(line_width 3))
 	)
+	(parameter
+		"NUMBER_OF_DEVICES"
+		"4"
+		""
+		(type "PARAMETER_SIGNED_DEC")	)
 	(drawing
 		(rectangle (rect 16 16 120 64)(line_width 1))
 	)
+	(annotation_block (parameter)(rect 152 -64 252 16))
 )

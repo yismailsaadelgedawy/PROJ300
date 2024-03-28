@@ -2,8 +2,9 @@ module FPGA_LED_PSSR (
 
     output logic data_out,
 
-    input logic [31:0] rA,rB,
-    input logic sel, clk, rst, load
+    input logic [31:0] rA,rB,rC,rD,
+    input logic [1:0] sel,
+    input logic clk, rst, load
     
 );
 
@@ -11,11 +12,13 @@ module FPGA_LED_PSSR (
 
 logic [31:0] reg_a;
 logic [31:0] reg_b;
+logic [31:0] reg_c;
+logic [31:0] reg_d;
 
 // loop var
 int unsigned i;
 
-// data sent LSB first!!!
+// data sent MSB first!!!
 
 always_ff @(posedge clk) begin
 
@@ -23,7 +26,9 @@ always_ff @(posedge clk) begin
 
         reg_a <= 'd0;
         reg_b <= 'd0;
-        data_out = 0;
+        reg_c <= 'd0;
+        reg_d <= 'd0;
+        data_out <= 0;
 
     end
 
@@ -37,6 +42,8 @@ always_ff @(posedge clk) begin
 
             reg_a <= rA;
             reg_b <= rB;
+            reg_c <= rC;
+            reg_d <= rD;
 
         end
 
@@ -45,19 +52,48 @@ always_ff @(posedge clk) begin
             // internal MUX
             case(sel)
 
-            0 : begin               
-                data_out <= reg_a[0];
-                for(i=0;i<31;i++) begin
-                    reg_a[i] <= reg_a[i+1];
+            2'd0 : begin
+                
+                // restart
+                reg_d <= rD;
+
+                data_out <= reg_a[31];
+                for(i=31;i>0;i--) begin
+                    reg_a[i] <= reg_a[i-1];
                 end
+                reg_a[0] <= 0; // so zeros can follow!
                 
             end
 
-            1 : begin
-                data_out <= reg_b[0];
-                for(i=0;i<31;i++) begin
-                    reg_b[i] <= reg_b[i+1];
-                end   
+            2'd1 : begin
+                data_out <= reg_b[31];
+                for(i=31;i>0;i--) begin
+                    reg_b[i] <= reg_b[i-1];
+                end
+                reg_b[0] <= 0; // so zeros can follow!   
+            end
+
+            2'd2 : begin               
+                data_out <= reg_c[31];
+                for(i=31;i>0;i--) begin
+                    reg_c[i] <= reg_c[i-1];
+                end
+                reg_c[0] <= 0; // so zeros can follow!
+                
+            end
+
+            2'd3 : begin
+                
+                // restart...
+                reg_a <= rA;
+                reg_b <= rB;
+                reg_c <= rC;
+
+                data_out <= reg_d[31];
+                for(i=31;i>0;i--) begin
+                    reg_d[i] <= reg_d[i-1];
+                end
+                reg_d[0] <= 0; // so zeros can follow!   
             end    
             
 

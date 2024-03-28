@@ -1284,11 +1284,6 @@ https://fpgasoftware.intel.com/eula.
 	(pt 936 456)
 )
 (connector
-	(text "count[1]" (rect 904 456 942 473)(font "Intel Clear" ))
-	(pt 904 472)
-	(pt 936 472)
-)
-(connector
 	(text "count[3]" (rect 906 472 944 489)(font "Intel Clear" ))
 	(pt 904 488)
 	(pt 936 488)
@@ -1321,11 +1316,6 @@ https://fpgasoftware.intel.com/eula.
 (connector
 	(pt 936 536)
 	(pt 904 536)
-)
-(connector
-	(text "count[2]" (rect 1082 472 1120 489)(font "Intel Clear" ))
-	(pt 1144 488)
-	(pt 1072 488)
 )
 (connector
 	(pt 1136 504)
@@ -1715,6 +1705,16 @@ https://fpgasoftware.intel.com/eula.
 	(text "LE" (rect 1426 488 1437 505)(font "Intel Clear" ))
 	(pt 1464 504)
 	(pt 1416 504)
+)
+(connector
+	(text "count[2]" (rect 904 456 942 473)(font "Intel Clear" ))
+	(pt 904 472)
+	(pt 936 472)
+)
+(connector
+	(text "count[1]" (rect 1082 472 1120 489)(font "Intel Clear" ))
+	(pt 1144 488)
+	(pt 1072 488)
 )
 (junction (pt 904 536))
 (junction (pt 344 320))

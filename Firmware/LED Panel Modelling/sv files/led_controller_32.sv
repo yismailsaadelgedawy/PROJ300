@@ -15,7 +15,7 @@
 
 // PROGRAM		"Quartus Prime"
 // VERSION		"Version 20.1.0 Build 711 06/05/2020 SJ Lite Edition"
-// CREATED		"Thu Mar 28 17:35:31 2024"
+// CREATED		"Fri Mar 29 01:47:05 2024"
 
 module led_controller_32(
 	DS,
@@ -86,7 +86,7 @@ SN74HC08	b2v_inst11(
 	.A1(SYNTHESIZED_WIRE_0),
 	.B1(SYNTHESIZED_WIRE_1),
 	.A2(Y1),
-	.B2(count[2]),
+	.B2(count[1]),
 	.A3(Y2),
 	.B3(SYNTHESIZED_WIRE_2),
 	.A4(Y3),
@@ -217,7 +217,7 @@ SN74HC595	b2v_inst4(
 
 SN74LS04	b2v_inst9(
 	.A1(count[0]),
-	.A2(count[1]),
+	.A2(count[2]),
 	.A3(count[3]),
 	.A4(count[4]),
 	.A5(SYNTHESIZED_WIRE_25),
