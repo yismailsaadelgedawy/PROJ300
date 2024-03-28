@@ -52,6 +52,11 @@ set_global_assignment -name POWER_BOARD_THERMAL_MODEL "NONE (CONSERVATIVE)"
 set_global_assignment -name PARTITION_NETLIST_TYPE SOURCE -section_id Top
 set_global_assignment -name PARTITION_FITTER_PRESERVATION_LEVEL PLACEMENT_AND_ROUTING -section_id Top
 set_global_assignment -name PARTITION_COLOR 16764057 -section_id Top
+set_global_assignment -name SYSTEMVERILOG_FILE "sv files/FPGA_LED_PSSR.sv"
+set_global_assignment -name BDF_FILE demux1x32.bdf
+set_global_assignment -name SYSTEMVERILOG_FILE "sv files/FPGA_counter.sv"
+set_global_assignment -name SYSTEMVERILOG_FILE "sv files/SN74HC139.sv"
+set_global_assignment -name SYSTEMVERILOG_FILE "sv files/CN74HC138.sv"
 set_global_assignment -name SYSTEMVERILOG_FILE "sv files/andsix.sv"
 set_global_assignment -name SYSTEMVERILOG_FILE "sv files/SN74LS74.sv"
 set_global_assignment -name SYSTEMVERILOG_FILE "sv files/SN74HC573.sv"
@@ -67,4 +72,6 @@ set_global_assignment -name BDF_FILE SN74LS04.bdf
 set_global_assignment -name BDF_FILE SN74HC08.bdf
 set_global_assignment -name BDF_FILE CD4075.bdf
 set_global_assignment -name BDF_FILE CD4001.bdf
+set_global_assignment -name BDF_FILE 1x32DEMUX.bdf
+set_global_assignment -name BDF_FILE led_controller_32.bdf
 set_instance_assignment -name PARTITION_HIERARCHY root_partition -to | -section_id Top

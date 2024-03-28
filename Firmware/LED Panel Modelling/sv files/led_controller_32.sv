@@ -15,14 +15,15 @@
 
 // PROGRAM		"Quartus Prime"
 // VERSION		"Version 20.1.0 Build 711 06/05/2020 SJ Lite Edition"
-// CREATED		"Thu Mar 28 11:41:56 2024"
+// CREATED		"Thu Mar 28 17:35:31 2024"
 
-module LEDPANEL(
+module led_controller_32(
 	DS,
 	SHCP,
 	STCP,
 	OE,
 	rst,
+	LE,
 	out_A,
 	out_B,
 	out_C,
@@ -35,13 +36,14 @@ input wire	SHCP;
 input wire	STCP;
 input wire	OE;
 input wire	rst;
+output wire	LE;
 output wire	[7:0] out_A;
 output wire	[7:0] out_B;
 output wire	[7:0] out_C;
 output wire	[7:0] out_D;
 
 wire	[6:0] count;
-wire	LE;
+wire	LE_ALTERA_SYNTHESIZED;
 wire	MR;
 wire	rst_reg;
 wire	[7:0] shiftA;
@@ -104,7 +106,7 @@ SN74HC08	b2v_inst12(
 	
 	
 	
-	.Y1(LE)
+	.Y1(LE_ALTERA_SYNTHESIZED)
 	
 	
 	);
@@ -159,34 +161,34 @@ SN74HC595	b2v_inst2(
 
 SN74HC573	b2v_inst21(
 	.OE(OE),
-	.LE(LE),
+	.LE(LE_ALTERA_SYNTHESIZED),
 	.d(shiftA),
 	.q(out_A));
 
 
 SN74HC573	b2v_inst22(
 	.OE(OE),
-	.LE(LE),
+	.LE(LE_ALTERA_SYNTHESIZED),
 	.d(shiftB),
 	.q(out_B));
 
 
 SN74HC573	b2v_inst23(
 	.OE(OE),
-	.LE(LE),
+	.LE(LE_ALTERA_SYNTHESIZED),
 	.d(shiftC),
 	.q(out_C));
 
 
 SN74HC573	b2v_inst24(
 	.OE(OE),
-	.LE(LE),
+	.LE(LE_ALTERA_SYNTHESIZED),
 	.d(shiftD),
 	.q(out_D));
 
 
 SN74LS74	b2v_inst29(
-	.d(LE),
+	.d(LE_ALTERA_SYNTHESIZED),
 	.PRE(SYNTHESIZED_WIRE_24),
 	.CLR(SYNTHESIZED_WIRE_24),
 	.clk(SHCP),
@@ -227,5 +229,6 @@ SN74LS04	b2v_inst9(
 	
 	);
 
+assign	LE = LE_ALTERA_SYNTHESIZED;
 
 endmodule

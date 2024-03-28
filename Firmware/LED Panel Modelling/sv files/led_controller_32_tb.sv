@@ -1,4 +1,4 @@
-module LEDPANEL_tb;
+module led_controller_32_tb;
 
 // internal wires
 
@@ -17,7 +17,7 @@ logic [7:0] out_A;
 
 
 // inst and wiring
-LEDPANEL dut (
+led_controller_32 dut (
 
     // in
     .DS(DS),
