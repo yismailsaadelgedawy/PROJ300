@@ -15,7 +15,7 @@
 
 // PROGRAM		"Quartus Prime"
 // VERSION		"Version 20.1.0 Build 711 06/05/2020 SJ Lite Edition"
-// CREATED		"Fri Mar 29 01:25:17 2024"
+// CREATED		"Fri Mar 29 01:56:54 2024"
 
 module TopLevel(
 	SHCP,
@@ -78,6 +78,12 @@ wire	[7:0] B;
 wire	[7:0] C;
 wire	[7:0] D;
 wire	data_A;
+wire	data_AA;
+wire	data_AB;
+wire	data_AC;
+wire	data_AD;
+wire	data_AE;
+wire	data_AF;
 wire	data_B;
 wire	data_C;
 wire	data_D;
@@ -85,6 +91,24 @@ wire	data_E;
 wire	data_F;
 wire	data_G;
 wire	data_H;
+wire	data_I;
+wire	data_J;
+wire	data_K;
+wire	data_L;
+wire	data_M;
+wire	data_N;
+wire	data_O;
+wire	data_P;
+wire	data_Q;
+wire	data_R;
+wire	data_S;
+wire	data_T;
+wire	data_U;
+wire	data_V;
+wire	data_W;
+wire	data_X;
+wire	data_Y;
+wire	data_Z;
 wire	DS;
 wire	LE_A;
 wire	LE_B;
@@ -95,29 +119,35 @@ wire	Y0;
 wire	Y1;
 wire	Y2;
 wire	Y3;
-wire	SYNTHESIZED_WIRE_27;
-wire	SYNTHESIZED_WIRE_28;
+wire	SYNTHESIZED_WIRE_39;
+wire	SYNTHESIZED_WIRE_40;
+wire	SYNTHESIZED_WIRE_41;
+wire	SYNTHESIZED_WIRE_42;
+wire	SYNTHESIZED_WIRE_43;
+wire	SYNTHESIZED_WIRE_44;
+wire	SYNTHESIZED_WIRE_45;
+wire	SYNTHESIZED_WIRE_23;
+wire	SYNTHESIZED_WIRE_24;
+wire	SYNTHESIZED_WIRE_46;
 wire	SYNTHESIZED_WIRE_29;
-wire	SYNTHESIZED_WIRE_30;
-wire	SYNTHESIZED_WIRE_31;
-wire	SYNTHESIZED_WIRE_15;
-wire	SYNTHESIZED_WIRE_16;
-wire	SYNTHESIZED_WIRE_17;
+wire	SYNTHESIZED_WIRE_47;
 wire	SYNTHESIZED_WIRE_32;
-wire	SYNTHESIZED_WIRE_20;
-wire	SYNTHESIZED_WIRE_33;
-wire	SYNTHESIZED_WIRE_34;
-wire	SYNTHESIZED_WIRE_35;
+wire	SYNTHESIZED_WIRE_48;
+wire	SYNTHESIZED_WIRE_49;
+wire	SYNTHESIZED_WIRE_50;
 
-assign	SYNTHESIZED_WIRE_27 = 0;
-assign	SYNTHESIZED_WIRE_28 = 0;
-assign	SYNTHESIZED_WIRE_29 = 0;
-assign	SYNTHESIZED_WIRE_30 = 0;
-assign	SYNTHESIZED_WIRE_31 = 0;
-assign	SYNTHESIZED_WIRE_32 = 1;
-assign	SYNTHESIZED_WIRE_33 = 1;
-assign	SYNTHESIZED_WIRE_34 = 0;
-assign	SYNTHESIZED_WIRE_35 = 0;
+assign	SYNTHESIZED_WIRE_39 = 0;
+assign	SYNTHESIZED_WIRE_40 = 0;
+assign	SYNTHESIZED_WIRE_41 = 0;
+assign	SYNTHESIZED_WIRE_42 = 0;
+assign	SYNTHESIZED_WIRE_43 = 0;
+assign	SYNTHESIZED_WIRE_44 = 0;
+assign	SYNTHESIZED_WIRE_45 = 0;
+assign	SYNTHESIZED_WIRE_46 = 0;
+assign	SYNTHESIZED_WIRE_47 = 1;
+assign	SYNTHESIZED_WIRE_48 = 1;
+assign	SYNTHESIZED_WIRE_49 = 0;
+assign	SYNTHESIZED_WIRE_50 = 0;
 
 
 
@@ -136,8 +166,8 @@ led_controller_32	b2v_inst(
 
 
 CN74HC138	b2v_inst1(
-	.E1(SYNTHESIZED_WIRE_27),
-	.E2(SYNTHESIZED_WIRE_27),
+	.E1(SYNTHESIZED_WIRE_39),
+	.E2(SYNTHESIZED_WIRE_39),
 	.E3(Y0),
 	.A(addr[2:0]),
 	.Y(A));
@@ -161,10 +191,10 @@ SN74LS04	b2v_inst11(
 SN74LS04	b2v_inst12(
 	.A1(A[1]),
 	.A2(A[0]),
-	.A3(SYNTHESIZED_WIRE_28),
-	.A4(SYNTHESIZED_WIRE_28),
-	.A5(SYNTHESIZED_WIRE_28),
-	.A6(SYNTHESIZED_WIRE_28),
+	.A3(SYNTHESIZED_WIRE_40),
+	.A4(SYNTHESIZED_WIRE_40),
+	.A5(SYNTHESIZED_WIRE_40),
+	.A6(SYNTHESIZED_WIRE_40),
 	.Y1(data_B),
 	.Y2(data_A)
 	
@@ -177,12 +207,12 @@ SN74LS04	b2v_inst12(
 
 SN74LS04	b2v_inst15(
 	.A1(DS),
-	.A2(SYNTHESIZED_WIRE_29),
-	.A3(SYNTHESIZED_WIRE_29),
-	.A4(SYNTHESIZED_WIRE_29),
-	.A5(SYNTHESIZED_WIRE_29),
-	.A6(SYNTHESIZED_WIRE_29),
-	.Y1(SYNTHESIZED_WIRE_15)
+	.A2(SYNTHESIZED_WIRE_41),
+	.A3(SYNTHESIZED_WIRE_41),
+	.A4(SYNTHESIZED_WIRE_41),
+	.A5(SYNTHESIZED_WIRE_41),
+	.A6(SYNTHESIZED_WIRE_41),
+	.Y1(SYNTHESIZED_WIRE_23)
 	
 	
 	
@@ -196,8 +226,8 @@ SN74LS04	b2v_inst17(
 	.A2(out[2]),
 	.A3(out[1]),
 	.A4(out[0]),
-	.A5(SYNTHESIZED_WIRE_30),
-	.A6(SYNTHESIZED_WIRE_30),
+	.A5(SYNTHESIZED_WIRE_42),
+	.A6(SYNTHESIZED_WIRE_42),
 	.Y1(Y3),
 	.Y2(Y2),
 	.Y3(Y1),
@@ -208,24 +238,86 @@ SN74LS04	b2v_inst17(
 
 
 CN74HC138	b2v_inst19(
-	.E1(SYNTHESIZED_WIRE_31),
-	.E2(SYNTHESIZED_WIRE_31),
+	.E1(SYNTHESIZED_WIRE_43),
+	.E2(SYNTHESIZED_WIRE_43),
 	.E3(Y3),
-	.A(addr[2:0])
+	.A(addr[2:0]),
+	.Y(D));
+
+
+
+SN74LS04	b2v_inst21(
+	.A1(B[7]),
+	.A2(B[6]),
+	.A3(B[5]),
+	.A4(B[4]),
+	.A5(B[3]),
+	.A6(B[2])
+	
+	
+	
+	
+	
+	);
+
+assign	SYNTHESIZED_WIRE_24 = LE_A | LE_C | LE_D | LE_B;
+
+
+SN74LS04	b2v_inst23(
+	.A1(B[1]),
+	.A2(B[0]),
+	.A3(SYNTHESIZED_WIRE_44),
+	.A4(SYNTHESIZED_WIRE_44),
+	.A5(SYNTHESIZED_WIRE_44),
+	.A6(SYNTHESIZED_WIRE_44)
+	
+	
+	
+	
+	
 	);
 
 
-assign	SYNTHESIZED_WIRE_16 = LE_A | LE_C | LE_D | LE_B;
+
+SN74LS04	b2v_inst25(
+	.A1(C[7]),
+	.A2(C[6]),
+	.A3(C[5]),
+	.A4(C[4]),
+	.A5(C[3]),
+	.A6(C[2])
+	
+	
+	
+	
+	
+	);
+
+
+SN74LS04	b2v_inst26(
+	.A1(C[1]),
+	.A2(C[0]),
+	.A3(SYNTHESIZED_WIRE_45),
+	.A4(SYNTHESIZED_WIRE_45),
+	.A5(SYNTHESIZED_WIRE_45),
+	.A6(SYNTHESIZED_WIRE_45)
+	
+	
+	
+	
+	
+	);
+
 
 
 SN74HC139	b2v_inst28(
-	.E(SYNTHESIZED_WIRE_15),
+	.E(SYNTHESIZED_WIRE_23),
 	.A(addr[4:3]),
 	.Y(out));
 
 
 FPGA_counter	b2v_inst29(
-	.LE(SYNTHESIZED_WIRE_16),
+	.LE(SYNTHESIZED_WIRE_24),
 	.rst(rst),
 	.q(addr));
 	defparam	b2v_inst29.NUMBER_OF_DEVICES = 4;
@@ -244,20 +336,51 @@ led_controller_32	b2v_inst30(
 	.out_D(out_H));
 
 
+SN74LS04	b2v_inst31(
+	.A1(D[7]),
+	.A2(D[6]),
+	.A3(D[5]),
+	.A4(D[4]),
+	.A5(D[3]),
+	.A6(D[2])
+	
+	
+	
+	
+	
+	);
+
+
+SN74LS04	b2v_inst32(
+	.A1(D[1]),
+	.A2(D[0]),
+	.A3(SYNTHESIZED_WIRE_46),
+	.A4(SYNTHESIZED_WIRE_46),
+	.A5(SYNTHESIZED_WIRE_46),
+	.A6(SYNTHESIZED_WIRE_46)
+	
+	
+	
+	
+	
+	);
+
+
+
 SN74LS74	b2v_inst36(
-	.d(SYNTHESIZED_WIRE_17),
-	.PRE(SYNTHESIZED_WIRE_32),
-	.CLR(SYNTHESIZED_WIRE_32),
+	.d(SYNTHESIZED_WIRE_29),
+	.PRE(SYNTHESIZED_WIRE_47),
+	.CLR(SYNTHESIZED_WIRE_47),
 	.clk(SHCP),
-	.q(SYNTHESIZED_WIRE_20)
+	.q(SYNTHESIZED_WIRE_32)
 	);
 
 
 
 SN74LS74	b2v_inst38(
-	.d(SYNTHESIZED_WIRE_20),
-	.PRE(SYNTHESIZED_WIRE_33),
-	.CLR(SYNTHESIZED_WIRE_33),
+	.d(SYNTHESIZED_WIRE_32),
+	.PRE(SYNTHESIZED_WIRE_48),
+	.CLR(SYNTHESIZED_WIRE_48),
 	.clk(SHCP),
 	.q(DS)
 	);
@@ -273,7 +396,7 @@ FPGA_LED_PSSR	b2v_inst4(
 	.rC(rC),
 	.rD(rD),
 	.sel(addr[1:0]),
-	.data_out(SYNTHESIZED_WIRE_17));
+	.data_out(SYNTHESIZED_WIRE_29));
 
 
 led_controller_32	b2v_inst40(
@@ -304,20 +427,20 @@ led_controller_32	b2v_inst41(
 
 
 CN74HC138	b2v_inst6(
-	.E1(SYNTHESIZED_WIRE_34),
-	.E2(SYNTHESIZED_WIRE_34),
+	.E1(SYNTHESIZED_WIRE_49),
+	.E2(SYNTHESIZED_WIRE_49),
 	.E3(Y1),
-	.A(addr[2:0])
-	);
+	.A(addr[2:0]),
+	.Y(B));
 
 
 
 CN74HC138	b2v_inst8(
-	.E1(SYNTHESIZED_WIRE_35),
-	.E2(SYNTHESIZED_WIRE_35),
+	.E1(SYNTHESIZED_WIRE_50),
+	.E2(SYNTHESIZED_WIRE_50),
 	.E3(Y2),
-	.A(addr[2:0])
-	);
+	.A(addr[2:0]),
+	.Y(C));
 
 
 endmodule
