@@ -84,6 +84,32 @@ r1
 !i113 1
 R7
 R8
+vCD4001
+R1
+!s110 1711615495
+!i10b 1
+!s100 :jYKgF2BUFJKcL`Mh=B6;0
+R2
+I1>?]okNoRicE?]XK4TRDg2
+R3
+S1
+R0
+w1711615420
+8C:/Users/minec/Desktop/github/PROJ300/Firmware/LED Panel Modelling/sv files/CD4001.sv
+FC:/Users/minec/Desktop/github/PROJ300/Firmware/LED Panel Modelling/sv files/CD4001.sv
+!i122 62
+Z10 L0 20 43
+R5
+r1
+!s85 0
+31
+!s108 1711615495.000000
+!s107 C:/Users/minec/Desktop/github/PROJ300/Firmware/LED Panel Modelling/sv files/CD4001.sv|
+!s90 -reportprogress|300|-work|work|C:/Users/minec/Desktop/github/PROJ300/Firmware/LED Panel Modelling/sv files/CD4001.sv|
+!i113 1
+R7
+R8
+n@c@d4001
 vCD4024
 R1
 R9
@@ -103,33 +129,59 @@ R5
 r1
 !s85 0
 31
-Z10 !s108 1711542592.000000
+Z11 !s108 1711542592.000000
 !s107 C:/Users/minec/Desktop/github/PROJ300/Firmware/LED Panel Modelling/sv files/CD4024.sv|
 !s90 -reportprogress|300|-work|work|C:/Users/minec/Desktop/github/PROJ300/Firmware/LED Panel Modelling/sv files/CD4024.sv|
 !i113 1
 R7
 R8
 n@c@d4024
-vLEDPANEL
+vCD4075
 R1
-!s110 1711589359
+!s110 1711615519
 !i10b 1
-!s100 zZ3VJa:3[ZDiW``4Em2H93
+!s100 dAfWMR8^0[4CmUHm<oT:O1
 R2
-I60gg^l^>Y:i=<i8>N>iMA3
+Idk1`JnCz1ZnJDN6i7J7>c2
 R3
 S1
 R0
-w1711589355
-8C:/Users/minec/Desktop/github/PROJ300/Firmware/LED Panel Modelling/sv files/LEDPANEL.sv
-FC:/Users/minec/Desktop/github/PROJ300/Firmware/LED Panel Modelling/sv files/LEDPANEL.sv
-!i122 59
-L0 20 146
+w1711615388
+8C:/Users/minec/Desktop/github/PROJ300/Firmware/LED Panel Modelling/sv files/CD4075.sv
+FC:/Users/minec/Desktop/github/PROJ300/Firmware/LED Panel Modelling/sv files/CD4075.sv
+!i122 65
+L0 20 41
 R5
 r1
 !s85 0
 31
-!s108 1711589359.000000
+!s108 1711615519.000000
+!s107 C:/Users/minec/Desktop/github/PROJ300/Firmware/LED Panel Modelling/sv files/CD4075.sv|
+!s90 -reportprogress|300|-work|work|C:/Users/minec/Desktop/github/PROJ300/Firmware/LED Panel Modelling/sv files/CD4075.sv|
+!i113 1
+R7
+R8
+n@c@d4075
+vLEDPANEL
+R1
+!s110 1711615523
+!i10b 1
+!s100 No69Wf`S2<2lMZ8IIo>W31
+R2
+I31jQ8SzQzF?QAiTMaSSP30
+R3
+S1
+R0
+w1711615355
+8C:/Users/minec/Desktop/github/PROJ300/Firmware/LED Panel Modelling/sv files/LEDPANEL.sv
+FC:/Users/minec/Desktop/github/PROJ300/Firmware/LED Panel Modelling/sv files/LEDPANEL.sv
+!i122 66
+L0 20 212
+R5
+r1
+!s85 0
+31
+!s108 1711615523.000000
 !s107 C:/Users/minec/Desktop/github/PROJ300/Firmware/LED Panel Modelling/sv files/LEDPANEL.sv|
 !s90 -reportprogress|300|-work|work|C:/Users/minec/Desktop/github/PROJ300/Firmware/LED Panel Modelling/sv files/LEDPANEL.sv|
 !i113 1
@@ -188,6 +240,32 @@ r1
 R7
 R8
 nreg@n
+vSN74HC08
+R1
+!s110 1711615510
+!i10b 1
+!s100 FCggdPAYhz@@zAmHNnl8I2
+R2
+ITVYO4H3Mg>QG5b_?EU4`o2
+R3
+S1
+R0
+w1711615410
+8C:/Users/minec/Desktop/github/PROJ300/Firmware/LED Panel Modelling/sv files/SN74HC08.sv
+FC:/Users/minec/Desktop/github/PROJ300/Firmware/LED Panel Modelling/sv files/SN74HC08.sv
+!i122 64
+R10
+R5
+r1
+!s85 0
+31
+!s108 1711615510.000000
+!s107 C:/Users/minec/Desktop/github/PROJ300/Firmware/LED Panel Modelling/sv files/SN74HC08.sv|
+!s90 -reportprogress|300|-work|work|C:/Users/minec/Desktop/github/PROJ300/Firmware/LED Panel Modelling/sv files/SN74HC08.sv|
+!i113 1
+R7
+R8
+n@s@n74@h@c08
 vSN74HC573
 R1
 !s110 1711577884
@@ -233,7 +311,7 @@ R5
 r1
 !s85 0
 31
-R10
+R11
 !s107 C:/Users/minec/Desktop/github/PROJ300/Firmware/LED Panel Modelling/sv files/SN74HC595.sv|
 !s90 -reportprogress|300|-work|work|C:/Users/minec/Desktop/github/PROJ300/Firmware/LED Panel Modelling/sv files/SN74HC595.sv|
 !i113 1
@@ -259,13 +337,39 @@ R5
 r1
 !s85 0
 31
-R10
+R11
 !s107 C:/Users/minec/Desktop/github/PROJ300/Firmware/LED Panel Modelling/sv files/SN74HC595_tb.sv|
 !s90 -reportprogress|300|-work|work|C:/Users/minec/Desktop/github/PROJ300/Firmware/LED Panel Modelling/sv files/SN74HC595_tb.sv|
 !i113 1
 R7
 R8
 n@s@n74@h@c595_tb
+vSN74LS04
+R1
+!s110 1711615500
+!i10b 1
+!s100 CU_fceGiM43=kA97GhCHT1
+R2
+IYi@2M@Z?G5UR5PZV5^nMl2
+R3
+S1
+R0
+w1711615399
+8C:/Users/minec/Desktop/github/PROJ300/Firmware/LED Panel Modelling/sv files/SN74LS04.sv
+FC:/Users/minec/Desktop/github/PROJ300/Firmware/LED Panel Modelling/sv files/SN74LS04.sv
+!i122 63
+L0 20 47
+R5
+r1
+!s85 0
+31
+!s108 1711615500.000000
+!s107 C:/Users/minec/Desktop/github/PROJ300/Firmware/LED Panel Modelling/sv files/SN74LS04.sv|
+!s90 -reportprogress|300|-work|work|C:/Users/minec/Desktop/github/PROJ300/Firmware/LED Panel Modelling/sv files/SN74LS04.sv|
+!i113 1
+R7
+R8
+n@s@n74@l@s04
 vSN74LS74
 R1
 R9
@@ -285,7 +389,7 @@ R5
 r1
 !s85 0
 31
-R10
+R11
 !s107 C:/Users/minec/Desktop/github/PROJ300/Firmware/LED Panel Modelling/sv files/SN74LS74.sv|
 !s90 -reportprogress|300|-work|work|C:/Users/minec/Desktop/github/PROJ300/Firmware/LED Panel Modelling/sv files/SN74LS74.sv|
 !i113 1
@@ -311,7 +415,7 @@ R5
 r1
 !s85 0
 31
-R10
+R11
 !s107 C:/Users/minec/Desktop/github/PROJ300/Firmware/LED Panel Modelling/sv files/SPSR.sv|
 !s90 -reportprogress|300|-work|work|C:/Users/minec/Desktop/github/PROJ300/Firmware/LED Panel Modelling/sv files/SPSR.sv|
 !i113 1
@@ -337,7 +441,7 @@ R5
 r1
 !s85 0
 31
-R10
+R11
 !s107 C:/Users/minec/Desktop/github/PROJ300/Firmware/LED Panel Modelling/sv files/tristateN.sv|
 !s90 -reportprogress|300|-work|work|C:/Users/minec/Desktop/github/PROJ300/Firmware/LED Panel Modelling/sv files/tristateN.sv|
 !i113 1

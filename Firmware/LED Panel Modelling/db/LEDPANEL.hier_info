@@ -21,8 +21,8 @@ SHCP => SN74HC595:inst.SHCP
 SHCP => SN74HC595:inst2.SHCP
 SHCP => SN74HC595:inst3.SHCP
 SHCP => SN74HC595:inst4.SHCP
-rst => CD4024:inst15.rst
-rst => inst14.IN1
+rst => CD4075:inst13.C
+rst => CD4001:inst17.A
 DS => SN74HC595:inst.DS
 STCP => SN74HC595:inst.STCP
 STCP => SN74HC595:inst2.STCP
@@ -63,14 +63,14 @@ q[4] <= q[4].DB_MAX_OUTPUT_PORT_TYPE
 q[5] <= q[5].DB_MAX_OUTPUT_PORT_TYPE
 q[6] <= q[6].DB_MAX_OUTPUT_PORT_TYPE
 q[7] <= q[7].DB_MAX_OUTPUT_PORT_TYPE
-OE => q[0].OE
-OE => q[1].OE
-OE => q[2].OE
-OE => q[3].OE
-OE => q[4].OE
-OE => q[5].OE
-OE => q[6].OE
 OE => q[7].OE
+OE => q[6].OE
+OE => q[5].OE
+OE => q[4].OE
+OE => q[3].OE
+OE => q[2].OE
+OE => q[1].OE
+OE => q[0].OE
 d[0] => internal_reg[0].DATAIN
 d[1] => internal_reg[1].DATAIN
 d[2] => internal_reg[2].DATAIN
@@ -89,13 +89,49 @@ LE => internal_reg[6].LATCH_ENABLE
 LE => internal_reg[7].LATCH_ENABLE
 
 
-|TopLevel|andfive:inst20
-q <= always0.DB_MAX_OUTPUT_PORT_TYPE
-a => always0.IN0
-b => always0.IN1
-c => always0.IN1
-d => always0.IN1
-e => always0.IN1
+|TopLevel|SN74HC08:inst12
+Y1 <= inst.DB_MAX_OUTPUT_PORT_TYPE
+A1 => inst.IN0
+B1 => inst.IN1
+Y2 <= inst1.DB_MAX_OUTPUT_PORT_TYPE
+A2 => inst1.IN0
+B2 => inst1.IN1
+Y3 <= inst2.DB_MAX_OUTPUT_PORT_TYPE
+A3 => inst2.IN0
+B3 => inst2.IN1
+Y4 <= inst3.DB_MAX_OUTPUT_PORT_TYPE
+A4 => inst3.IN0
+B4 => inst3.IN1
+
+
+|TopLevel|SN74HC08:inst11
+Y1 <= inst.DB_MAX_OUTPUT_PORT_TYPE
+A1 => inst.IN0
+B1 => inst.IN1
+Y2 <= inst1.DB_MAX_OUTPUT_PORT_TYPE
+A2 => inst1.IN0
+B2 => inst1.IN1
+Y3 <= inst2.DB_MAX_OUTPUT_PORT_TYPE
+A3 => inst2.IN0
+B3 => inst2.IN1
+Y4 <= inst3.DB_MAX_OUTPUT_PORT_TYPE
+A4 => inst3.IN0
+B4 => inst3.IN1
+
+
+|TopLevel|SN74LS04:inst9
+Y1 <= inst.DB_MAX_OUTPUT_PORT_TYPE
+A1 => inst.IN0
+Y2 <= inst1.DB_MAX_OUTPUT_PORT_TYPE
+A2 => inst1.IN0
+Y3 <= inst2.DB_MAX_OUTPUT_PORT_TYPE
+A3 => inst2.IN0
+Y4 <= inst3.DB_MAX_OUTPUT_PORT_TYPE
+A4 => inst3.IN0
+Y5 <= inst4.DB_MAX_OUTPUT_PORT_TYPE
+A5 => inst4.IN0
+Y6 <= inst5.DB_MAX_OUTPUT_PORT_TYPE
+A6 => inst5.IN0
 
 
 |TopLevel|CD4024:inst15
@@ -120,6 +156,33 @@ rst => cnt_reg[3].ACLR
 rst => cnt_reg[4].ACLR
 rst => cnt_reg[5].ACLR
 rst => cnt_reg[6].ACLR
+
+
+|TopLevel|CD4075:inst13
+J <= inst.DB_MAX_OUTPUT_PORT_TYPE
+B => inst.IN0
+A => inst.IN1
+C => inst.IN2
+K <= inst1.DB_MAX_OUTPUT_PORT_TYPE
+E => inst1.IN0
+D => inst1.IN1
+F => inst1.IN2
+L <= inst2.DB_MAX_OUTPUT_PORT_TYPE
+H => inst2.IN0
+G => inst2.IN1
+I => inst2.IN2
+
+
+|TopLevel|SN74LS74:inst29
+q <= Mux0.DB_MAX_OUTPUT_PORT_TYPE
+n_q <= Mux1.DB_MAX_OUTPUT_PORT_TYPE
+d => Mux0.IN3
+d => Mux1.IN3
+PRE => Mux0.IN4
+PRE => Mux1.IN4
+CLR => Mux0.IN5
+CLR => Mux1.IN5
+clk => ~NO_FANOUT~
 
 
 |TopLevel|SN74HC595:inst
@@ -218,16 +281,19 @@ SHCP => shift_reg[6].CLK
 SHCP => shift_reg[7].CLK
 
 
-|TopLevel|SN74LS74:inst29
-q <= Mux0.DB_MAX_OUTPUT_PORT_TYPE
-n_q <= Mux1.DB_MAX_OUTPUT_PORT_TYPE
-d => Mux0.IN3
-d => Mux1.IN3
-PRE => Mux0.IN4
-PRE => Mux1.IN4
-CLR => Mux0.IN5
-CLR => Mux1.IN5
-clk => ~NO_FANOUT~
+|TopLevel|CD4001:inst17
+J <= inst.DB_MAX_OUTPUT_PORT_TYPE
+B => inst.IN0
+A => inst.IN1
+K <= inst1.DB_MAX_OUTPUT_PORT_TYPE
+D => inst1.IN0
+C => inst1.IN1
+L <= inst2.DB_MAX_OUTPUT_PORT_TYPE
+F => inst2.IN0
+E => inst2.IN1
+M <= inst3.DB_MAX_OUTPUT_PORT_TYPE
+H => inst3.IN0
+G => inst3.IN1
 
 
 |TopLevel|SN74HC573:inst22
@@ -239,14 +305,14 @@ q[4] <= q[4].DB_MAX_OUTPUT_PORT_TYPE
 q[5] <= q[5].DB_MAX_OUTPUT_PORT_TYPE
 q[6] <= q[6].DB_MAX_OUTPUT_PORT_TYPE
 q[7] <= q[7].DB_MAX_OUTPUT_PORT_TYPE
-OE => q[0].OE
-OE => q[1].OE
-OE => q[2].OE
-OE => q[3].OE
-OE => q[4].OE
-OE => q[5].OE
-OE => q[6].OE
 OE => q[7].OE
+OE => q[6].OE
+OE => q[5].OE
+OE => q[4].OE
+OE => q[3].OE
+OE => q[2].OE
+OE => q[1].OE
+OE => q[0].OE
 d[0] => internal_reg[0].DATAIN
 d[1] => internal_reg[1].DATAIN
 d[2] => internal_reg[2].DATAIN
@@ -370,14 +436,14 @@ q[4] <= q[4].DB_MAX_OUTPUT_PORT_TYPE
 q[5] <= q[5].DB_MAX_OUTPUT_PORT_TYPE
 q[6] <= q[6].DB_MAX_OUTPUT_PORT_TYPE
 q[7] <= q[7].DB_MAX_OUTPUT_PORT_TYPE
-OE => q[0].OE
-OE => q[1].OE
-OE => q[2].OE
-OE => q[3].OE
-OE => q[4].OE
-OE => q[5].OE
-OE => q[6].OE
 OE => q[7].OE
+OE => q[6].OE
+OE => q[5].OE
+OE => q[4].OE
+OE => q[3].OE
+OE => q[2].OE
+OE => q[1].OE
+OE => q[0].OE
 d[0] => internal_reg[0].DATAIN
 d[1] => internal_reg[1].DATAIN
 d[2] => internal_reg[2].DATAIN
@@ -501,14 +567,14 @@ q[4] <= q[4].DB_MAX_OUTPUT_PORT_TYPE
 q[5] <= q[5].DB_MAX_OUTPUT_PORT_TYPE
 q[6] <= q[6].DB_MAX_OUTPUT_PORT_TYPE
 q[7] <= q[7].DB_MAX_OUTPUT_PORT_TYPE
-OE => q[0].OE
-OE => q[1].OE
-OE => q[2].OE
-OE => q[3].OE
-OE => q[4].OE
-OE => q[5].OE
-OE => q[6].OE
 OE => q[7].OE
+OE => q[6].OE
+OE => q[5].OE
+OE => q[4].OE
+OE => q[3].OE
+OE => q[2].OE
+OE => q[1].OE
+OE => q[0].OE
 d[0] => internal_reg[0].DATAIN
 d[1] => internal_reg[1].DATAIN
 d[2] => internal_reg[2].DATAIN

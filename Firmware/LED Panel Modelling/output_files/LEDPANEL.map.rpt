@@ -1,5 +1,5 @@
 Analysis & Elaboration report for LEDPANEL
-Wed Mar 27 15:06:48 2024
+Thu Mar 28 11:39:31 2024
 Quartus Prime Version 20.1.0 Build 711 06/05/2020 SJ Lite Edition
 
 
@@ -50,7 +50,7 @@ https://fpgasoftware.intel.com/eula.
 +-----------------------------------------------------------------------------+
 ; Analysis & Elaboration Summary                                              ;
 +-------------------------------+---------------------------------------------+
-; Analysis & Elaboration Status ; Successful - Wed Mar 27 15:06:48 2024       ;
+; Analysis & Elaboration Status ; Successful - Thu Mar 28 11:39:31 2024       ;
 ; Quartus Prime Version         ; 20.1.0 Build 711 06/05/2020 SJ Lite Edition ;
 ; Revision Name                 ; LEDPANEL                                    ;
 ; Top-level Entity Name         ; TopLevel                                    ;
@@ -294,10 +294,12 @@ Note: In order to hide this table in the UI and the text report file, please set
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Elaboration
     Info: Version 20.1.0 Build 711 06/05/2020 SJ Lite Edition
-    Info: Processing started: Wed Mar 27 15:06:40 2024
+    Info: Processing started: Thu Mar 28 11:39:23 2024
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off LEDPANEL -c LEDPANEL --analysis_and_elaboration
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20030): Parallel compilation is enabled and will use 4 of the 4 processors detected
+Info (12021): Found 1 design units, including 1 entities, in source file sv files/andsix.sv
+    Info (12023): Found entity 1: andsix File: C:/Users/minec/Desktop/github/PROJ300/Firmware/LED Panel Modelling/sv files/andsix.sv Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file sv files/sn74ls74.sv
     Info (12023): Found entity 1: SN74LS74 File: C:/Users/minec/Desktop/github/PROJ300/Firmware/LED Panel Modelling/sv files/SN74LS74.sv Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file sv files/sn74hc573.sv
@@ -318,6 +320,14 @@ Info (12021): Found 1 design units, including 1 entities, in source file topleve
     Info (12023): Found entity 1: TopLevel
 Info (12021): Found 1 design units, including 1 entities, in source file sn74hc595.bdf
     Info (12023): Found entity 1: SN74HC595
+Info (12021): Found 1 design units, including 1 entities, in source file sn74ls04.bdf
+    Info (12023): Found entity 1: SN74LS04
+Info (12021): Found 1 design units, including 1 entities, in source file sn74hc08.bdf
+    Info (12023): Found entity 1: SN74HC08
+Info (12021): Found 1 design units, including 1 entities, in source file cd4075.bdf
+    Info (12023): Found entity 1: CD4075
+Info (12021): Found 1 design units, including 1 entities, in source file cd4001.bdf
+    Info (12023): Found entity 1: CD4001
 Info (12127): Elaborating entity "TopLevel" for the top level hierarchy
 Info (12128): Elaborating entity "SN74HC573" for hierarchy "SN74HC573:inst21"
 Warning (10230): Verilog HDL assignment warning at SN74HC573.sv(18): truncated value with size 32 to match size of target (8) File: C:/Users/minec/Desktop/github/PROJ300/Firmware/LED Panel Modelling/sv files/SN74HC573.sv Line: 18
@@ -329,9 +339,12 @@ Info (10041): Inferred latch for "internal_reg[4]" at SN74HC573.sv(26) File: C:/
 Info (10041): Inferred latch for "internal_reg[5]" at SN74HC573.sv(26) File: C:/Users/minec/Desktop/github/PROJ300/Firmware/LED Panel Modelling/sv files/SN74HC573.sv Line: 26
 Info (10041): Inferred latch for "internal_reg[6]" at SN74HC573.sv(26) File: C:/Users/minec/Desktop/github/PROJ300/Firmware/LED Panel Modelling/sv files/SN74HC573.sv Line: 26
 Info (10041): Inferred latch for "internal_reg[7]" at SN74HC573.sv(26) File: C:/Users/minec/Desktop/github/PROJ300/Firmware/LED Panel Modelling/sv files/SN74HC573.sv Line: 26
-Info (12128): Elaborating entity "andfive" for hierarchy "andfive:inst20"
+Info (12128): Elaborating entity "SN74HC08" for hierarchy "SN74HC08:inst12"
+Info (12128): Elaborating entity "SN74LS04" for hierarchy "SN74LS04:inst9"
 Info (12128): Elaborating entity "CD4024" for hierarchy "CD4024:inst15"
 Warning (10230): Verilog HDL assignment warning at CD4024.sv(20): truncated value with size 32 to match size of target (7) File: C:/Users/minec/Desktop/github/PROJ300/Firmware/LED Panel Modelling/sv files/CD4024.sv Line: 20
+Info (12128): Elaborating entity "CD4075" for hierarchy "CD4075:inst13"
+Info (12128): Elaborating entity "SN74LS74" for hierarchy "SN74LS74:inst29"
 Info (12128): Elaborating entity "SN74HC595" for hierarchy "SN74HC595:inst"
 Info (12128): Elaborating entity "trisateN" for hierarchy "SN74HC595:inst|trisateN:inst2"
 Warning (10230): Verilog HDL assignment warning at tristateN.sv(10): truncated value with size 32 to match size of target (8) File: C:/Users/minec/Desktop/github/PROJ300/Firmware/LED Panel Modelling/sv files/tristateN.sv Line: 10
@@ -349,13 +362,13 @@ Info (10041): Inferred latch for "internal_reg[5]" at regN.sv(20) File: C:/Users
 Info (10041): Inferred latch for "internal_reg[6]" at regN.sv(20) File: C:/Users/minec/Desktop/github/PROJ300/Firmware/LED Panel Modelling/sv files/regN.sv Line: 20
 Info (10041): Inferred latch for "internal_reg[7]" at regN.sv(20) File: C:/Users/minec/Desktop/github/PROJ300/Firmware/LED Panel Modelling/sv files/regN.sv Line: 20
 Info (12128): Elaborating entity "SPSR" for hierarchy "SN74HC595:inst|SPSR:inst"
-Info (12128): Elaborating entity "SN74LS74" for hierarchy "SN74LS74:inst29"
+Info (12128): Elaborating entity "CD4001" for hierarchy "CD4001:inst17"
 Info (144001): Generated suppressed messages file C:/Users/minec/Desktop/github/PROJ300/Firmware/LED Panel Modelling/output_files/LEDPANEL.map.smsg
 Info: Quartus Prime Analysis & Elaboration was successful. 0 errors, 7 warnings
-    Info: Peak virtual memory: 4768 megabytes
-    Info: Processing ended: Wed Mar 27 15:06:48 2024
+    Info: Peak virtual memory: 4770 megabytes
+    Info: Processing ended: Thu Mar 28 11:39:31 2024
     Info: Elapsed time: 00:00:08
-    Info: Total CPU time (on all processors): 00:00:09
+    Info: Total CPU time (on all processors): 00:00:10
 
 
 +--------------------------------------------+

@@ -63,4 +63,8 @@ set_global_assignment -name SYSTEMVERILOG_FILE "sv files/SPSR.sv"
 set_global_assignment -name SYSTEMVERILOG_FILE "sv files/regN.sv"
 set_global_assignment -name BDF_FILE TopLevel.bdf
 set_global_assignment -name BDF_FILE SN74HC595.bdf
+set_global_assignment -name BDF_FILE SN74LS04.bdf
+set_global_assignment -name BDF_FILE SN74HC08.bdf
+set_global_assignment -name BDF_FILE CD4075.bdf
+set_global_assignment -name BDF_FILE CD4001.bdf
 set_instance_assignment -name PARTITION_HIERARCHY root_partition -to | -section_id Top

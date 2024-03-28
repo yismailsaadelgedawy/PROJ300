@@ -1,5 +1,5 @@
 Flow report for LEDPANEL
-Wed Mar 27 15:06:48 2024
+Thu Mar 28 11:39:31 2024
 Quartus Prime Version 20.1.0 Build 711 06/05/2020 SJ Lite Edition
 
 
@@ -41,7 +41,7 @@ https://fpgasoftware.intel.com/eula.
 +---------------------------------------------------------------------------+
 ; Flow Summary                                                              ;
 +-----------------------------+---------------------------------------------+
-; Flow Status                 ; Successful - Wed Mar 27 15:06:48 2024       ;
+; Flow Status                 ; Successful - Thu Mar 28 11:39:31 2024       ;
 ; Quartus Prime Version       ; 20.1.0 Build 711 06/05/2020 SJ Lite Edition ;
 ; Revision Name               ; LEDPANEL                                    ;
 ; Top-level Entity Name       ; TopLevel                                    ;
@@ -63,7 +63,7 @@ https://fpgasoftware.intel.com/eula.
 +-------------------+---------------------+
 ; Option            ; Setting             ;
 +-------------------+---------------------+
-; Start date & time ; 03/27/2024 15:06:41 ;
+; Start date & time ; 03/28/2024 11:39:24 ;
 ; Main task         ; Compilation         ;
 ; Revision Name     ; LEDPANEL            ;
 +-------------------+---------------------+
@@ -74,7 +74,7 @@ https://fpgasoftware.intel.com/eula.
 +-------------------------------------+----------------------------------------+---------------+-------------+------------+
 ; Assignment Name                     ; Value                                  ; Default Value ; Entity Name ; Section Id ;
 +-------------------------------------+----------------------------------------+---------------+-------------+------------+
-; COMPILER_SIGNATURE_ID               ; 225373650927332.171154120010596        ; --            ; --          ; --         ;
+; COMPILER_SIGNATURE_ID               ; 225373650927332.171161516405664        ; --            ; --          ; --         ;
 ; MAX_CORE_JUNCTION_TEMP              ; 85                                     ; --            ; --          ; --         ;
 ; MIN_CORE_JUNCTION_TEMP              ; 0                                      ; --            ; --          ; --         ;
 ; PARTITION_COLOR                     ; -- (Not supported for targeted family) ; --            ; TopLevel    ; Top        ;
@@ -92,8 +92,8 @@ https://fpgasoftware.intel.com/eula.
 +------------------------+--------------+-------------------------+---------------------+------------------------------------+
 ; Module Name            ; Elapsed Time ; Average Processors Used ; Peak Virtual Memory ; Total CPU Time (on all processors) ;
 +------------------------+--------------+-------------------------+---------------------+------------------------------------+
-; Analysis & Elaboration ; 00:00:08     ; 1.0                     ; 4768 MB             ; 00:00:09                           ;
-; Total                  ; 00:00:08     ; --                      ; --                  ; 00:00:09                           ;
+; Analysis & Elaboration ; 00:00:08     ; 1.0                     ; 4770 MB             ; 00:00:10                           ;
+; Total                  ; 00:00:08     ; --                      ; --                  ; 00:00:10                           ;
 +------------------------+--------------+-------------------------+---------------------+------------------------------------+
 
 
