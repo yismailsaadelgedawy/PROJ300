@@ -5,7 +5,6 @@ module TopLevel_tb;
 
 // in
 logic rst;
-logic sw_load;
 logic clk;
 logic OE;
 logic [31:0] rA;
@@ -41,7 +40,6 @@ wire	[7:0] out_P;
 // inst and wiring
 TopLevel dut (
     // inputs
-    .sw_load(sw_load),
     .rst(rst),
     .clk(clk),
     .OE(OE),
@@ -94,7 +92,6 @@ initial begin
     
 
     // rst
-    sw_load = 1;
     rst = 1; // treat as if active high
     OE = 0; // output always enabled
 
@@ -102,11 +99,10 @@ initial begin
     assert ({out_D,out_C,out_B,out_A} == 'd0) $display("passed rst"); else $error("failed rst");
     #3ns;
 
-    // de-assert rst and load data
+    // de-assert rst
     rst = 0;
     #10ns;
-    sw_load = 0;
-    #10ns;
+
 
     // data transmssion start! //
 

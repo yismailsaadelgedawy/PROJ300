@@ -20,7 +20,6 @@
 module TopLevel(
 	OE,
 	rst,
-	sw_load,
 	clk,
 	rA,
 	rB,
@@ -47,7 +46,6 @@ module TopLevel(
 
 input wire	OE;
 input wire	rst;
-input wire	sw_load;
 input wire	clk;
 input wire	[31:0] rA;
 input wire	[31:0] rB;
@@ -421,7 +419,6 @@ SN74LS74	b2v_inst38(
 FPGA_LED_PSSR	b2v_inst4(
 	.clk(clk),
 	.rst(rst),
-	.load(sw_load),
 	.rA(rA),
 	.rB(rB),
 	.rC(rC),

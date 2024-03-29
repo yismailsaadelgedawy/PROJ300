@@ -12,7 +12,7 @@ vsim TopLevel_tb
 config wave -signalnamewidth 1
 
 # Add input signals to waveform window
-add wave -group "Inputs" rst sw_load clk OE rA rB rC rD
+add wave -group "Inputs" rst clk OE rA rB rC rD
 
 # Add output signals to waveform window
 add wave -group "Output 1" out_D out_C out_B out_A 

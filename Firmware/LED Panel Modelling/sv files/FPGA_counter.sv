@@ -9,7 +9,7 @@ module FPGA_counter #(parameter NUMBER_OF_DEVICES=4)(
 // 5-bit FPGA counter
 // up to 32 devices to show on the PCB
 
-logic [4:0] cnt_reg;
+bit [4:0] cnt_reg;
 
 assign q = cnt_reg;
 

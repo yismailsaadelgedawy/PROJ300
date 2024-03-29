@@ -47,7 +47,6 @@ initial begin
 
     // rst
     rst = 1;
-    load = 1;
     rA = 32'b1011;
     rB = 32'b1001;
     rC = 32'b1100;
@@ -57,10 +56,7 @@ initial begin
 
     rst = 0;
 
-    // load data
-    //load = 1;             -- already high!!!
     #10ns;
-    load = 0;
 
     #320ns;
 
