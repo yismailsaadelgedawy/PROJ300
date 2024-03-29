@@ -29,13 +29,17 @@ in addtion to:
 
 Total:
 
-1 x CD4001               (nor)x
-92 x HC595               (shift)x
-1 x CD4075               (or)x
-1 x CD4024               (counter)x
-33 x LS04                (inverter)x
-46 x HC08                (and)x
-25 x LS74                (ff)x
-92 x HC573               (latch)x
-4  x HC138               (1x8 demux)x
-1  x HC139               (1x4 demux)x
+1 x CD4001               (nor)xx
+92 x HC595               (shift)xx
+1 x CD4075               (or)xx
+1 x CD4024               (counter)xx
+33 x LS04                (inverter)xx
+46 x HC08                (and)xx
+25 x LS74                (ff)xx
+92 x HC573               (latch)xx
+4  x HC138               (1x8 demux)xx
+1  x HC139               (1x4 demux)xx
+
+13 GPRs * 32 = 416 red LEDsx
+10 MMRs * 32 = 320 yellow LEDsx
+MOSFET driver (3.3V -> 5V)x
