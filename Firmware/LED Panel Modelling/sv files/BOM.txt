@@ -1,0 +1,41 @@
+one led controller:
+
+4 x HC595               (shift)
+1 x LS04                (inverter)
+2 x HC08                (and)
+1 x LS74                (ff)
+4 x HC573               (latch)
+
+assuming 13 GPRs + 10 MMRs = 23 devices:
+
+92 x HC595               (shift)
+23 x LS04                (inverter)
+46 x HC08                (and)
+23 x LS74                (ff)
+92 x HC573               (latch)
+
+
+in addtion to:
+
+1  x CD4075             (or)
+1  x CD4024             (counter)
+1  x CD4001             (nor)
+10 x LS04               (inverter)
+2  x LS74               (ff)
+4  x HC138              (1x8 demux)
+1  x HC139              (1x4 demux)
+
+---------------------------------------------------------
+
+Total:
+
+1 x CD4001               (nor)x
+92 x HC595               (shift)x
+1 x CD4075               (or)x
+1 x CD4024               (counter)x
+33 x LS04                (inverter)x
+46 x HC08                (and)x
+25 x LS74                (ff)x
+92 x HC573               (latch)x
+4  x HC138               (1x8 demux)x
+1  x HC139               (1x4 demux)x

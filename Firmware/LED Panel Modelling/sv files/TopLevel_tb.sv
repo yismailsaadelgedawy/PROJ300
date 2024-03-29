@@ -6,8 +6,7 @@ module TopLevel_tb;
 // in
 logic rst;
 logic sw_load;
-logic SHCP;
-logic STCP;
+logic clk;
 logic OE;
 logic [31:0] rA;
 logic [31:0] rB;
@@ -44,8 +43,7 @@ TopLevel dut (
     // inputs
     .sw_load(sw_load),
     .rst(rst),
-    .SHCP(SHCP),
-    .STCP(STCP),
+    .clk(clk),
     .OE(OE),
     .rA(rA),
     .rB(rB),
@@ -76,11 +74,9 @@ TopLevel dut (
 // shift register clock
 always begin
 
-    SHCP = 1;
-    STCP = 1;
+    clk = 1;
     #5ns;
-    SHCP = 0;
-    STCP = 0;
+    clk = 0;
     #5ns;
 
 end

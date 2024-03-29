@@ -15,15 +15,17 @@
 
 // PROGRAM		"Quartus Prime"
 // VERSION		"Version 20.1.0 Build 711 06/05/2020 SJ Lite Edition"
-// CREATED		"Fri Mar 29 01:47:05 2024"
+// CREATED		"Fri Mar 29 02:39:37 2024"
 
 module led_controller_32(
 	DS,
 	SHCP,
 	STCP,
 	OE,
-	rst,
+	MR,
+	count,
 	LE,
+	rst_count,
 	out_A,
 	out_B,
 	out_C,
@@ -35,16 +37,16 @@ input wire	DS;
 input wire	SHCP;
 input wire	STCP;
 input wire	OE;
-input wire	rst;
+input wire	MR;
+input wire	[6:0] count;
 output wire	LE;
+output wire	rst_count;
 output wire	[7:0] out_A;
 output wire	[7:0] out_B;
 output wire	[7:0] out_C;
 output wire	[7:0] out_D;
 
-wire	[6:0] count;
 wire	LE_ALTERA_SYNTHESIZED;
-wire	MR;
 wire	rst_reg;
 wire	[7:0] shiftA;
 wire	[7:0] shiftB;
@@ -58,16 +60,11 @@ wire	SYNTHESIZED_WIRE_0;
 wire	SYNTHESIZED_WIRE_1;
 wire	SYNTHESIZED_WIRE_2;
 wire	SYNTHESIZED_WIRE_3;
-wire	SYNTHESIZED_WIRE_22;
-wire	SYNTHESIZED_WIRE_11;
-wire	SYNTHESIZED_WIRE_23;
-wire	SYNTHESIZED_WIRE_24;
-wire	SYNTHESIZED_WIRE_25;
+wire	SYNTHESIZED_WIRE_8;
+wire	SYNTHESIZED_WIRE_9;
 
-assign	SYNTHESIZED_WIRE_22 = 0;
-assign	SYNTHESIZED_WIRE_23 = 0;
-assign	SYNTHESIZED_WIRE_24 = 1;
-assign	SYNTHESIZED_WIRE_25 = 0;
+assign	SYNTHESIZED_WIRE_8 = 1;
+assign	SYNTHESIZED_WIRE_9 = 0;
 
 
 
@@ -112,44 +109,6 @@ SN74HC08	b2v_inst12(
 	);
 
 
-CD4075	b2v_inst13(
-	.C(rst),
-	.B(rst_reg),
-	.A(SYNTHESIZED_WIRE_22),
-	.F(SYNTHESIZED_WIRE_22),
-	.E(SYNTHESIZED_WIRE_22),
-	.D(SYNTHESIZED_WIRE_22),
-	.I(SYNTHESIZED_WIRE_22),
-	.H(SYNTHESIZED_WIRE_22),
-	.G(SYNTHESIZED_WIRE_22),
-	.J(SYNTHESIZED_WIRE_11)
-	
-	);
-
-
-CD4024	b2v_inst15(
-	.clk(SHCP),
-	.rst(SYNTHESIZED_WIRE_11),
-	.q(count));
-
-
-
-CD4001	b2v_inst17(
-	.A(rst),
-	.B(rst_reg),
-	.C(SYNTHESIZED_WIRE_23),
-	.D(SYNTHESIZED_WIRE_23),
-	.E(SYNTHESIZED_WIRE_23),
-	.F(SYNTHESIZED_WIRE_23),
-	.G(SYNTHESIZED_WIRE_23),
-	.H(SYNTHESIZED_WIRE_23),
-	.J(MR)
-	
-	
-	);
-
-
-
 SN74HC595	b2v_inst2(
 	.DS(shiftA[7]),
 	.MR(MR),
@@ -189,8 +148,8 @@ SN74HC573	b2v_inst24(
 
 SN74LS74	b2v_inst29(
 	.d(LE_ALTERA_SYNTHESIZED),
-	.PRE(SYNTHESIZED_WIRE_24),
-	.CLR(SYNTHESIZED_WIRE_24),
+	.PRE(SYNTHESIZED_WIRE_8),
+	.CLR(SYNTHESIZED_WIRE_8),
 	.clk(SHCP),
 	.q(rst_reg)
 	);
@@ -220,8 +179,8 @@ SN74LS04	b2v_inst9(
 	.A2(count[2]),
 	.A3(count[3]),
 	.A4(count[4]),
-	.A5(SYNTHESIZED_WIRE_25),
-	.A6(SYNTHESIZED_WIRE_25),
+	.A5(SYNTHESIZED_WIRE_9),
+	.A6(SYNTHESIZED_WIRE_9),
 	.Y1(SYNTHESIZED_WIRE_0),
 	.Y2(SYNTHESIZED_WIRE_1),
 	.Y3(SYNTHESIZED_WIRE_2),
@@ -230,5 +189,6 @@ SN74LS04	b2v_inst9(
 	);
 
 assign	LE = LE_ALTERA_SYNTHESIZED;
+assign	rst_count = rst_reg;
 
 endmodule
