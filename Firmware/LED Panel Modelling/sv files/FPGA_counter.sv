@@ -14,7 +14,7 @@ logic [4:0] cnt_reg;
 assign q = cnt_reg;
 
 
-always_ff @(posedge LE or posedge rst) begin
+always_ff @(posedge LE) begin
 
     if(rst) cnt_reg <= 0;
 

@@ -3,7 +3,7 @@ module FPGA_LED_PSSR_tb;
 // internal wires
 
 // in
-logic clk,rst,load;
+logic clk,rst;
 logic [31:0] rA,rB,rC,rD;
 logic [1:0] sel;
 
@@ -18,7 +18,6 @@ FPGA_LED_PSSR dut (
     // in
     .clk(clk),
     .rst(rst),
-    .load(load),
     .rA(rA),
     .rB(rB),
     .rC(rC),
