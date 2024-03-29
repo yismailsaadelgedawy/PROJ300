@@ -15,7 +15,7 @@
 
 // PROGRAM		"Quartus Prime"
 // VERSION		"Version 20.1.0 Build 711 06/05/2020 SJ Lite Edition"
-// CREATED		"Fri Mar 29 02:52:41 2024"
+// CREATED		"Fri Mar 29 12:50:00 2024"
 
 module TopLevel(
 	OE,
@@ -339,7 +339,7 @@ led_controller_32	b2v_inst30(
 	.OE(OE),
 	.count(count),
 	.LE(LE_B),
-	.rst_count(rst_count),
+	
 	.out_A(out_E),
 	.out_B(out_F),
 	.out_C(out_G),
@@ -438,7 +438,7 @@ led_controller_32	b2v_inst40(
 	.OE(OE),
 	.count(count),
 	.LE(LE_C),
-	.rst_count(rst_count),
+	
 	.out_A(out_I),
 	.out_B(out_J),
 	.out_C(out_K),
@@ -453,7 +453,7 @@ led_controller_32	b2v_inst41(
 	.OE(OE),
 	.count(count),
 	.LE(LE_D),
-	.rst_count(rst_count),
+	
 	.out_A(out_M),
 	.out_B(out_N),
 	.out_C(out_O),

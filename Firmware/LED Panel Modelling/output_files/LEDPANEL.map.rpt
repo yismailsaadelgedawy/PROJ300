@@ -1,5 +1,5 @@
-Analysis & Elaboration report for LEDPANEL
-Thu Mar 28 11:39:31 2024
+Analysis & Synthesis report for LEDPANEL
+Fri Mar 29 12:49:28 2024
 Quartus Prime Version 20.1.0 Build 711 06/05/2020 SJ Lite Edition
 
 
@@ -7,23 +7,69 @@ Quartus Prime Version 20.1.0 Build 711 06/05/2020 SJ Lite Edition
 ; Table of Contents ;
 ---------------------
   1. Legal Notice
-  2. Analysis & Elaboration Summary
-  3. Parallel Compilation
-  4. Parameter Settings for User Entity Instance: SN74HC595:inst|trisateN:inst2
-  5. Parameter Settings for User Entity Instance: SN74HC595:inst|regN:inst1
-  6. Parameter Settings for User Entity Instance: SN74HC595:inst|SPSR:inst
-  7. Parameter Settings for User Entity Instance: SN74HC595:inst2|trisateN:inst2
-  8. Parameter Settings for User Entity Instance: SN74HC595:inst2|regN:inst1
-  9. Parameter Settings for User Entity Instance: SN74HC595:inst2|SPSR:inst
- 10. Parameter Settings for User Entity Instance: SN74HC595:inst3|trisateN:inst2
- 11. Parameter Settings for User Entity Instance: SN74HC595:inst3|regN:inst1
- 12. Parameter Settings for User Entity Instance: SN74HC595:inst3|SPSR:inst
- 13. Parameter Settings for User Entity Instance: SN74HC595:inst4|trisateN:inst2
- 14. Parameter Settings for User Entity Instance: SN74HC595:inst4|regN:inst1
- 15. Parameter Settings for User Entity Instance: SN74HC595:inst4|SPSR:inst
- 16. Analysis & Elaboration Settings
- 17. Analysis & Elaboration Messages
- 18. Analysis & Elaboration Suppressed Messages
+  2. Analysis & Synthesis Summary
+  3. Analysis & Synthesis Settings
+  4. Parallel Compilation
+  5. Analysis & Synthesis Source Files Read
+  6. Analysis & Synthesis Resource Usage Summary
+  7. Analysis & Synthesis Resource Utilization by Entity
+  8. User-Specified and Inferred Latches
+  9. Registers Removed During Synthesis
+ 10. General Register Statistics
+ 11. Multiplexer Restructuring Statistics (Restructuring Performed)
+ 12. Parameter Settings for User Entity Instance: led_controller_32:inst|SN74HC595:inst|trisateN:inst2
+ 13. Parameter Settings for User Entity Instance: led_controller_32:inst|SN74HC595:inst|regN:inst1
+ 14. Parameter Settings for User Entity Instance: led_controller_32:inst|SN74HC595:inst|SPSR:inst
+ 15. Parameter Settings for User Entity Instance: led_controller_32:inst|SN74HC595:inst2|trisateN:inst2
+ 16. Parameter Settings for User Entity Instance: led_controller_32:inst|SN74HC595:inst2|regN:inst1
+ 17. Parameter Settings for User Entity Instance: led_controller_32:inst|SN74HC595:inst2|SPSR:inst
+ 18. Parameter Settings for User Entity Instance: led_controller_32:inst|SN74HC595:inst3|trisateN:inst2
+ 19. Parameter Settings for User Entity Instance: led_controller_32:inst|SN74HC595:inst3|regN:inst1
+ 20. Parameter Settings for User Entity Instance: led_controller_32:inst|SN74HC595:inst3|SPSR:inst
+ 21. Parameter Settings for User Entity Instance: led_controller_32:inst|SN74HC595:inst4|trisateN:inst2
+ 22. Parameter Settings for User Entity Instance: led_controller_32:inst|SN74HC595:inst4|regN:inst1
+ 23. Parameter Settings for User Entity Instance: led_controller_32:inst|SN74HC595:inst4|SPSR:inst
+ 24. Parameter Settings for User Entity Instance: FPGA_counter:inst29
+ 25. Parameter Settings for User Entity Instance: led_controller_32:inst40|SN74HC595:inst|trisateN:inst2
+ 26. Parameter Settings for User Entity Instance: led_controller_32:inst40|SN74HC595:inst|regN:inst1
+ 27. Parameter Settings for User Entity Instance: led_controller_32:inst40|SN74HC595:inst|SPSR:inst
+ 28. Parameter Settings for User Entity Instance: led_controller_32:inst40|SN74HC595:inst2|trisateN:inst2
+ 29. Parameter Settings for User Entity Instance: led_controller_32:inst40|SN74HC595:inst2|regN:inst1
+ 30. Parameter Settings for User Entity Instance: led_controller_32:inst40|SN74HC595:inst2|SPSR:inst
+ 31. Parameter Settings for User Entity Instance: led_controller_32:inst40|SN74HC595:inst3|trisateN:inst2
+ 32. Parameter Settings for User Entity Instance: led_controller_32:inst40|SN74HC595:inst3|regN:inst1
+ 33. Parameter Settings for User Entity Instance: led_controller_32:inst40|SN74HC595:inst3|SPSR:inst
+ 34. Parameter Settings for User Entity Instance: led_controller_32:inst40|SN74HC595:inst4|trisateN:inst2
+ 35. Parameter Settings for User Entity Instance: led_controller_32:inst40|SN74HC595:inst4|regN:inst1
+ 36. Parameter Settings for User Entity Instance: led_controller_32:inst40|SN74HC595:inst4|SPSR:inst
+ 37. Parameter Settings for User Entity Instance: led_controller_32:inst41|SN74HC595:inst|trisateN:inst2
+ 38. Parameter Settings for User Entity Instance: led_controller_32:inst41|SN74HC595:inst|regN:inst1
+ 39. Parameter Settings for User Entity Instance: led_controller_32:inst41|SN74HC595:inst|SPSR:inst
+ 40. Parameter Settings for User Entity Instance: led_controller_32:inst41|SN74HC595:inst2|trisateN:inst2
+ 41. Parameter Settings for User Entity Instance: led_controller_32:inst41|SN74HC595:inst2|regN:inst1
+ 42. Parameter Settings for User Entity Instance: led_controller_32:inst41|SN74HC595:inst2|SPSR:inst
+ 43. Parameter Settings for User Entity Instance: led_controller_32:inst41|SN74HC595:inst3|trisateN:inst2
+ 44. Parameter Settings for User Entity Instance: led_controller_32:inst41|SN74HC595:inst3|regN:inst1
+ 45. Parameter Settings for User Entity Instance: led_controller_32:inst41|SN74HC595:inst3|SPSR:inst
+ 46. Parameter Settings for User Entity Instance: led_controller_32:inst41|SN74HC595:inst4|trisateN:inst2
+ 47. Parameter Settings for User Entity Instance: led_controller_32:inst41|SN74HC595:inst4|regN:inst1
+ 48. Parameter Settings for User Entity Instance: led_controller_32:inst41|SN74HC595:inst4|SPSR:inst
+ 49. Parameter Settings for User Entity Instance: led_controller_32:inst30|SN74HC595:inst|trisateN:inst2
+ 50. Parameter Settings for User Entity Instance: led_controller_32:inst30|SN74HC595:inst|regN:inst1
+ 51. Parameter Settings for User Entity Instance: led_controller_32:inst30|SN74HC595:inst|SPSR:inst
+ 52. Parameter Settings for User Entity Instance: led_controller_32:inst30|SN74HC595:inst2|trisateN:inst2
+ 53. Parameter Settings for User Entity Instance: led_controller_32:inst30|SN74HC595:inst2|regN:inst1
+ 54. Parameter Settings for User Entity Instance: led_controller_32:inst30|SN74HC595:inst2|SPSR:inst
+ 55. Parameter Settings for User Entity Instance: led_controller_32:inst30|SN74HC595:inst3|trisateN:inst2
+ 56. Parameter Settings for User Entity Instance: led_controller_32:inst30|SN74HC595:inst3|regN:inst1
+ 57. Parameter Settings for User Entity Instance: led_controller_32:inst30|SN74HC595:inst3|SPSR:inst
+ 58. Parameter Settings for User Entity Instance: led_controller_32:inst30|SN74HC595:inst4|trisateN:inst2
+ 59. Parameter Settings for User Entity Instance: led_controller_32:inst30|SN74HC595:inst4|regN:inst1
+ 60. Parameter Settings for User Entity Instance: led_controller_32:inst30|SN74HC595:inst4|SPSR:inst
+ 61. Post-Synthesis Netlist Statistics for Top Partition
+ 62. Elapsed Time Per Partition
+ 63. Analysis & Synthesis Messages
+ 64. Analysis & Synthesis Suppressed Messages
 
 
 
@@ -47,162 +93,31 @@ https://fpgasoftware.intel.com/eula.
 
 
 
-+-----------------------------------------------------------------------------+
-; Analysis & Elaboration Summary                                              ;
-+-------------------------------+---------------------------------------------+
-; Analysis & Elaboration Status ; Successful - Thu Mar 28 11:39:31 2024       ;
-; Quartus Prime Version         ; 20.1.0 Build 711 06/05/2020 SJ Lite Edition ;
-; Revision Name                 ; LEDPANEL                                    ;
-; Top-level Entity Name         ; TopLevel                                    ;
-; Family                        ; Cyclone V                                   ;
-; Logic utilization (in ALMs)   ; N/A until Partition Merge                   ;
-; Total registers               ; N/A until Partition Merge                   ;
-; Total pins                    ; N/A until Partition Merge                   ;
-; Total virtual pins            ; N/A until Partition Merge                   ;
-; Total block memory bits       ; N/A until Partition Merge                   ;
-; Total PLLs                    ; N/A until Partition Merge                   ;
-; Total DLLs                    ; N/A until Partition Merge                   ;
-+-------------------------------+---------------------------------------------+
-
-
-+------------------------------------------+
-; Parallel Compilation                     ;
-+----------------------------+-------------+
-; Processors                 ; Number      ;
-+----------------------------+-------------+
-; Number detected on machine ; 8           ;
-; Maximum allowed            ; 4           ;
-;                            ;             ;
-; Average used               ; 1.00        ;
-; Maximum used               ; 1           ;
-;                            ;             ;
-; Usage by Processor         ; % Time Used ;
-;     Processor 1            ; 100.0%      ;
-+----------------------------+-------------+
-
-
-+----------------------------------------------------------------------------+
-; Parameter Settings for User Entity Instance: SN74HC595:inst|trisateN:inst2 ;
-+----------------+-------+---------------------------------------------------+
-; Parameter Name ; Value ; Type                                              ;
-+----------------+-------+---------------------------------------------------+
-; N              ; 8     ; Signed Integer                                    ;
-+----------------+-------+---------------------------------------------------+
-Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
-
-
-+------------------------------------------------------------------------+
-; Parameter Settings for User Entity Instance: SN74HC595:inst|regN:inst1 ;
-+----------------+-------+-----------------------------------------------+
-; Parameter Name ; Value ; Type                                          ;
-+----------------+-------+-----------------------------------------------+
-; N              ; 8     ; Signed Integer                                ;
-+----------------+-------+-----------------------------------------------+
-Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
-
-
-+-----------------------------------------------------------------------+
-; Parameter Settings for User Entity Instance: SN74HC595:inst|SPSR:inst ;
-+----------------+-------+----------------------------------------------+
-; Parameter Name ; Value ; Type                                         ;
-+----------------+-------+----------------------------------------------+
-; N              ; 8     ; Signed Integer                               ;
-+----------------+-------+----------------------------------------------+
-Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
-
-
-+-----------------------------------------------------------------------------+
-; Parameter Settings for User Entity Instance: SN74HC595:inst2|trisateN:inst2 ;
-+----------------+-------+----------------------------------------------------+
-; Parameter Name ; Value ; Type                                               ;
-+----------------+-------+----------------------------------------------------+
-; N              ; 8     ; Signed Integer                                     ;
-+----------------+-------+----------------------------------------------------+
-Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
-
-
-+-------------------------------------------------------------------------+
-; Parameter Settings for User Entity Instance: SN74HC595:inst2|regN:inst1 ;
-+----------------+-------+------------------------------------------------+
-; Parameter Name ; Value ; Type                                           ;
-+----------------+-------+------------------------------------------------+
-; N              ; 8     ; Signed Integer                                 ;
-+----------------+-------+------------------------------------------------+
-Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
-
-
-+------------------------------------------------------------------------+
-; Parameter Settings for User Entity Instance: SN74HC595:inst2|SPSR:inst ;
-+----------------+-------+-----------------------------------------------+
-; Parameter Name ; Value ; Type                                          ;
-+----------------+-------+-----------------------------------------------+
-; N              ; 8     ; Signed Integer                                ;
-+----------------+-------+-----------------------------------------------+
-Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
-
-
-+-----------------------------------------------------------------------------+
-; Parameter Settings for User Entity Instance: SN74HC595:inst3|trisateN:inst2 ;
-+----------------+-------+----------------------------------------------------+
-; Parameter Name ; Value ; Type                                               ;
-+----------------+-------+----------------------------------------------------+
-; N              ; 8     ; Signed Integer                                     ;
-+----------------+-------+----------------------------------------------------+
-Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
-
-
-+-------------------------------------------------------------------------+
-; Parameter Settings for User Entity Instance: SN74HC595:inst3|regN:inst1 ;
-+----------------+-------+------------------------------------------------+
-; Parameter Name ; Value ; Type                                           ;
-+----------------+-------+------------------------------------------------+
-; N              ; 8     ; Signed Integer                                 ;
-+----------------+-------+------------------------------------------------+
-Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
-
-
-+------------------------------------------------------------------------+
-; Parameter Settings for User Entity Instance: SN74HC595:inst3|SPSR:inst ;
-+----------------+-------+-----------------------------------------------+
-; Parameter Name ; Value ; Type                                          ;
-+----------------+-------+-----------------------------------------------+
-; N              ; 8     ; Signed Integer                                ;
-+----------------+-------+-----------------------------------------------+
-Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
-
-
-+-----------------------------------------------------------------------------+
-; Parameter Settings for User Entity Instance: SN74HC595:inst4|trisateN:inst2 ;
-+----------------+-------+----------------------------------------------------+
-; Parameter Name ; Value ; Type                                               ;
-+----------------+-------+----------------------------------------------------+
-; N              ; 8     ; Signed Integer                                     ;
-+----------------+-------+----------------------------------------------------+
-Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
-
-
-+-------------------------------------------------------------------------+
-; Parameter Settings for User Entity Instance: SN74HC595:inst4|regN:inst1 ;
-+----------------+-------+------------------------------------------------+
-; Parameter Name ; Value ; Type                                           ;
-+----------------+-------+------------------------------------------------+
-; N              ; 8     ; Signed Integer                                 ;
-+----------------+-------+------------------------------------------------+
-Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
-
-
-+------------------------------------------------------------------------+
-; Parameter Settings for User Entity Instance: SN74HC595:inst4|SPSR:inst ;
-+----------------+-------+-----------------------------------------------+
-; Parameter Name ; Value ; Type                                          ;
-+----------------+-------+-----------------------------------------------+
-; N              ; 8     ; Signed Integer                                ;
-+----------------+-------+-----------------------------------------------+
-Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
++-------------------------------------------------------------------------------+
+; Analysis & Synthesis Summary                                                  ;
++---------------------------------+---------------------------------------------+
+; Analysis & Synthesis Status     ; Successful - Fri Mar 29 12:49:28 2024       ;
+; Quartus Prime Version           ; 20.1.0 Build 711 06/05/2020 SJ Lite Edition ;
+; Revision Name                   ; LEDPANEL                                    ;
+; Top-level Entity Name           ; TopLevel                                    ;
+; Family                          ; Cyclone V                                   ;
+; Logic utilization (in ALMs)     ; N/A                                         ;
+; Total registers                 ; 268                                         ;
+; Total pins                      ; 260                                         ;
+; Total virtual pins              ; 0                                           ;
+; Total block memory bits         ; 0                                           ;
+; Total DSP Blocks                ; 0                                           ;
+; Total HSSI RX PCSs              ; 0                                           ;
+; Total HSSI PMA RX Deserializers ; 0                                           ;
+; Total HSSI TX PCSs              ; 0                                           ;
+; Total HSSI PMA TX Serializers   ; 0                                           ;
+; Total PLLs                      ; 0                                           ;
+; Total DLLs                      ; 0                                           ;
++---------------------------------+---------------------------------------------+
 
 
 +---------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Elaboration Settings                                                                                           ;
+; Analysis & Synthesis Settings                                                                                             ;
 +---------------------------------------------------------------------------------+--------------------+--------------------+
 ; Option                                                                          ; Setting            ; Default Value      ;
 +---------------------------------------------------------------------------------+--------------------+--------------------+
@@ -288,26 +203,844 @@ Note: In order to hide this table in the UI and the text report file, please set
 +---------------------------------------------------------------------------------+--------------------+--------------------+
 
 
-+---------------------------------+
-; Analysis & Elaboration Messages ;
-+---------------------------------+
++------------------------------------------+
+; Parallel Compilation                     ;
++----------------------------+-------------+
+; Processors                 ; Number      ;
++----------------------------+-------------+
+; Number detected on machine ; 8           ;
+; Maximum allowed            ; 4           ;
+;                            ;             ;
+; Average used               ; 1.00        ;
+; Maximum used               ; 4           ;
+;                            ;             ;
+; Usage by Processor         ; % Time Used ;
+;     Processor 1            ; 100.0%      ;
+;     Processors 2-4         ;   0.0%      ;
++----------------------------+-------------+
+
+
++--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Source Files Read                                                                                                                                                           ;
++----------------------------------+-----------------+------------------------------------+----------------------------------------------------------------------------------------------+---------+
+; File Name with User-Entered Path ; Used in Netlist ; File Type                          ; File Name with Absolute Path                                                                 ; Library ;
++----------------------------------+-----------------+------------------------------------+----------------------------------------------------------------------------------------------+---------+
+; sv files/FPGA_LED_PSSR.sv        ; yes             ; User SystemVerilog HDL File        ; C:/Users/minec/Desktop/github/PROJ300/Firmware/LED Panel Modelling/sv files/FPGA_LED_PSSR.sv ;         ;
+; sv files/FPGA_counter.sv         ; yes             ; User SystemVerilog HDL File        ; C:/Users/minec/Desktop/github/PROJ300/Firmware/LED Panel Modelling/sv files/FPGA_counter.sv  ;         ;
+; sv files/SN74HC139.sv            ; yes             ; User SystemVerilog HDL File        ; C:/Users/minec/Desktop/github/PROJ300/Firmware/LED Panel Modelling/sv files/SN74HC139.sv     ;         ;
+; sv files/CN74HC138.sv            ; yes             ; User SystemVerilog HDL File        ; C:/Users/minec/Desktop/github/PROJ300/Firmware/LED Panel Modelling/sv files/CN74HC138.sv     ;         ;
+; sv files/SN74LS74.sv             ; yes             ; User SystemVerilog HDL File        ; C:/Users/minec/Desktop/github/PROJ300/Firmware/LED Panel Modelling/sv files/SN74LS74.sv      ;         ;
+; sv files/SN74HC573.sv            ; yes             ; User SystemVerilog HDL File        ; C:/Users/minec/Desktop/github/PROJ300/Firmware/LED Panel Modelling/sv files/SN74HC573.sv     ;         ;
+; sv files/CD4024.sv               ; yes             ; User SystemVerilog HDL File        ; C:/Users/minec/Desktop/github/PROJ300/Firmware/LED Panel Modelling/sv files/CD4024.sv        ;         ;
+; sv files/tristateN.sv            ; yes             ; User SystemVerilog HDL File        ; C:/Users/minec/Desktop/github/PROJ300/Firmware/LED Panel Modelling/sv files/tristateN.sv     ;         ;
+; sv files/SPSR.sv                 ; yes             ; User SystemVerilog HDL File        ; C:/Users/minec/Desktop/github/PROJ300/Firmware/LED Panel Modelling/sv files/SPSR.sv          ;         ;
+; sv files/regN.sv                 ; yes             ; User SystemVerilog HDL File        ; C:/Users/minec/Desktop/github/PROJ300/Firmware/LED Panel Modelling/sv files/regN.sv          ;         ;
+; TopLevel.bdf                     ; yes             ; User Block Diagram/Schematic File  ; C:/Users/minec/Desktop/github/PROJ300/Firmware/LED Panel Modelling/TopLevel.bdf              ;         ;
+; SN74HC595.bdf                    ; yes             ; User Block Diagram/Schematic File  ; C:/Users/minec/Desktop/github/PROJ300/Firmware/LED Panel Modelling/SN74HC595.bdf             ;         ;
+; SN74LS04.bdf                     ; yes             ; User Block Diagram/Schematic File  ; C:/Users/minec/Desktop/github/PROJ300/Firmware/LED Panel Modelling/SN74LS04.bdf              ;         ;
+; SN74HC08.bdf                     ; yes             ; User Block Diagram/Schematic File  ; C:/Users/minec/Desktop/github/PROJ300/Firmware/LED Panel Modelling/SN74HC08.bdf              ;         ;
+; CD4075.bdf                       ; yes             ; User Block Diagram/Schematic File  ; C:/Users/minec/Desktop/github/PROJ300/Firmware/LED Panel Modelling/CD4075.bdf                ;         ;
+; CD4001.bdf                       ; yes             ; User Block Diagram/Schematic File  ; C:/Users/minec/Desktop/github/PROJ300/Firmware/LED Panel Modelling/CD4001.bdf                ;         ;
+; led_controller_32.bdf            ; yes             ; User Block Diagram/Schematic File  ; C:/Users/minec/Desktop/github/PROJ300/Firmware/LED Panel Modelling/led_controller_32.bdf     ;         ;
++----------------------------------+-----------------+------------------------------------+----------------------------------------------------------------------------------------------+---------+
+
+
++---------------------------------------------------------+
+; Analysis & Synthesis Resource Usage Summary             ;
++---------------------------------------------+-----------+
+; Resource                                    ; Usage     ;
++---------------------------------------------+-----------+
+; Estimate of Logic utilization (ALMs needed) ; 164       ;
+;                                             ;           ;
+; Combinational ALUT usage for logic          ; 157       ;
+;     -- 7 input functions                    ; 0         ;
+;     -- 6 input functions                    ; 6         ;
+;     -- 5 input functions                    ; 4         ;
+;     -- 4 input functions                    ; 2         ;
+;     -- <=3 input functions                  ; 145       ;
+;                                             ;           ;
+; Dedicated logic registers                   ; 268       ;
+;                                             ;           ;
+; I/O pins                                    ; 260       ;
+;                                             ;           ;
+; Total DSP Blocks                            ; 0         ;
+;                                             ;           ;
+; Maximum fan-out node                        ; clk~input ;
+; Maximum fan-out                             ; 263       ;
+; Total fan-out                               ; 2179      ;
+; Average fan-out                             ; 2.31      ;
++---------------------------------------------+-----------+
+
+
++------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                                                                      ;
++-------------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+--------------------------------------------------------------+-------------------+--------------+
+; Compilation Hierarchy Node    ; Combinational ALUTs ; Dedicated Logic Registers ; Block Memory Bits ; DSP Blocks ; Pins ; Virtual Pins ; Full Hierarchy Name                                          ; Entity Name       ; Library Name ;
++-------------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+--------------------------------------------------------------+-------------------+--------------+
+; |TopLevel                     ; 157 (1)             ; 268 (0)                   ; 0                 ; 0          ; 260  ; 0            ; |TopLevel                                                    ; TopLevel          ; work         ;
+;    |CD4001:inst43|            ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |TopLevel|CD4001:inst43                                      ; CD4001            ; work         ;
+;    |CD4024:inst34|            ; 6 (6)               ; 6 (6)                     ; 0                 ; 0          ; 0    ; 0            ; |TopLevel|CD4024:inst34                                      ; CD4024            ; work         ;
+;    |CN74HC138:inst1|          ; 4 (4)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |TopLevel|CN74HC138:inst1                                    ; CN74HC138         ; work         ;
+;    |FPGA_LED_PSSR:inst4|      ; 12 (12)             ; 129 (129)                 ; 0                 ; 0          ; 0    ; 0            ; |TopLevel|FPGA_LED_PSSR:inst4                                ; FPGA_LED_PSSR     ; work         ;
+;    |FPGA_counter:inst29|      ; 5 (5)               ; 5 (5)                     ; 0                 ; 0          ; 0    ; 0            ; |TopLevel|FPGA_counter:inst29                                ; FPGA_counter      ; work         ;
+;    |led_controller_32:inst30| ; 32 (0)              ; 32 (0)                    ; 0                 ; 0          ; 0    ; 0            ; |TopLevel|led_controller_32:inst30                           ; led_controller_32 ; work         ;
+;       |SN74HC573:inst21|      ; 8 (8)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |TopLevel|led_controller_32:inst30|SN74HC573:inst21          ; SN74HC573         ; work         ;
+;       |SN74HC573:inst22|      ; 8 (8)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |TopLevel|led_controller_32:inst30|SN74HC573:inst22          ; SN74HC573         ; work         ;
+;       |SN74HC573:inst23|      ; 8 (8)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |TopLevel|led_controller_32:inst30|SN74HC573:inst23          ; SN74HC573         ; work         ;
+;       |SN74HC573:inst24|      ; 8 (8)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |TopLevel|led_controller_32:inst30|SN74HC573:inst24          ; SN74HC573         ; work         ;
+;       |SN74HC595:inst2|       ; 0 (0)               ; 8 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |TopLevel|led_controller_32:inst30|SN74HC595:inst2           ; SN74HC595         ; work         ;
+;          |SPSR:inst|          ; 0 (0)               ; 8 (8)                     ; 0                 ; 0          ; 0    ; 0            ; |TopLevel|led_controller_32:inst30|SN74HC595:inst2|SPSR:inst ; SPSR              ; work         ;
+;       |SN74HC595:inst3|       ; 0 (0)               ; 8 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |TopLevel|led_controller_32:inst30|SN74HC595:inst3           ; SN74HC595         ; work         ;
+;          |SPSR:inst|          ; 0 (0)               ; 8 (8)                     ; 0                 ; 0          ; 0    ; 0            ; |TopLevel|led_controller_32:inst30|SN74HC595:inst3|SPSR:inst ; SPSR              ; work         ;
+;       |SN74HC595:inst4|       ; 0 (0)               ; 8 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |TopLevel|led_controller_32:inst30|SN74HC595:inst4           ; SN74HC595         ; work         ;
+;          |SPSR:inst|          ; 0 (0)               ; 8 (8)                     ; 0                 ; 0          ; 0    ; 0            ; |TopLevel|led_controller_32:inst30|SN74HC595:inst4|SPSR:inst ; SPSR              ; work         ;
+;       |SN74HC595:inst|        ; 0 (0)               ; 8 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |TopLevel|led_controller_32:inst30|SN74HC595:inst            ; SN74HC595         ; work         ;
+;          |SPSR:inst|          ; 0 (0)               ; 8 (8)                     ; 0                 ; 0          ; 0    ; 0            ; |TopLevel|led_controller_32:inst30|SN74HC595:inst|SPSR:inst  ; SPSR              ; work         ;
+;    |led_controller_32:inst40| ; 32 (0)              ; 32 (0)                    ; 0                 ; 0          ; 0    ; 0            ; |TopLevel|led_controller_32:inst40                           ; led_controller_32 ; work         ;
+;       |SN74HC573:inst21|      ; 8 (8)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |TopLevel|led_controller_32:inst40|SN74HC573:inst21          ; SN74HC573         ; work         ;
+;       |SN74HC573:inst22|      ; 8 (8)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |TopLevel|led_controller_32:inst40|SN74HC573:inst22          ; SN74HC573         ; work         ;
+;       |SN74HC573:inst23|      ; 8 (8)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |TopLevel|led_controller_32:inst40|SN74HC573:inst23          ; SN74HC573         ; work         ;
+;       |SN74HC573:inst24|      ; 8 (8)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |TopLevel|led_controller_32:inst40|SN74HC573:inst24          ; SN74HC573         ; work         ;
+;       |SN74HC595:inst2|       ; 0 (0)               ; 8 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |TopLevel|led_controller_32:inst40|SN74HC595:inst2           ; SN74HC595         ; work         ;
+;          |SPSR:inst|          ; 0 (0)               ; 8 (8)                     ; 0                 ; 0          ; 0    ; 0            ; |TopLevel|led_controller_32:inst40|SN74HC595:inst2|SPSR:inst ; SPSR              ; work         ;
+;       |SN74HC595:inst3|       ; 0 (0)               ; 8 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |TopLevel|led_controller_32:inst40|SN74HC595:inst3           ; SN74HC595         ; work         ;
+;          |SPSR:inst|          ; 0 (0)               ; 8 (8)                     ; 0                 ; 0          ; 0    ; 0            ; |TopLevel|led_controller_32:inst40|SN74HC595:inst3|SPSR:inst ; SPSR              ; work         ;
+;       |SN74HC595:inst4|       ; 0 (0)               ; 8 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |TopLevel|led_controller_32:inst40|SN74HC595:inst4           ; SN74HC595         ; work         ;
+;          |SPSR:inst|          ; 0 (0)               ; 8 (8)                     ; 0                 ; 0          ; 0    ; 0            ; |TopLevel|led_controller_32:inst40|SN74HC595:inst4|SPSR:inst ; SPSR              ; work         ;
+;       |SN74HC595:inst|        ; 0 (0)               ; 8 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |TopLevel|led_controller_32:inst40|SN74HC595:inst            ; SN74HC595         ; work         ;
+;          |SPSR:inst|          ; 0 (0)               ; 8 (8)                     ; 0                 ; 0          ; 0    ; 0            ; |TopLevel|led_controller_32:inst40|SN74HC595:inst|SPSR:inst  ; SPSR              ; work         ;
+;    |led_controller_32:inst41| ; 32 (0)              ; 32 (0)                    ; 0                 ; 0          ; 0    ; 0            ; |TopLevel|led_controller_32:inst41                           ; led_controller_32 ; work         ;
+;       |SN74HC573:inst21|      ; 8 (8)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |TopLevel|led_controller_32:inst41|SN74HC573:inst21          ; SN74HC573         ; work         ;
+;       |SN74HC573:inst22|      ; 8 (8)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |TopLevel|led_controller_32:inst41|SN74HC573:inst22          ; SN74HC573         ; work         ;
+;       |SN74HC573:inst23|      ; 8 (8)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |TopLevel|led_controller_32:inst41|SN74HC573:inst23          ; SN74HC573         ; work         ;
+;       |SN74HC573:inst24|      ; 8 (8)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |TopLevel|led_controller_32:inst41|SN74HC573:inst24          ; SN74HC573         ; work         ;
+;       |SN74HC595:inst2|       ; 0 (0)               ; 8 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |TopLevel|led_controller_32:inst41|SN74HC595:inst2           ; SN74HC595         ; work         ;
+;          |SPSR:inst|          ; 0 (0)               ; 8 (8)                     ; 0                 ; 0          ; 0    ; 0            ; |TopLevel|led_controller_32:inst41|SN74HC595:inst2|SPSR:inst ; SPSR              ; work         ;
+;       |SN74HC595:inst3|       ; 0 (0)               ; 8 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |TopLevel|led_controller_32:inst41|SN74HC595:inst3           ; SN74HC595         ; work         ;
+;          |SPSR:inst|          ; 0 (0)               ; 8 (8)                     ; 0                 ; 0          ; 0    ; 0            ; |TopLevel|led_controller_32:inst41|SN74HC595:inst3|SPSR:inst ; SPSR              ; work         ;
+;       |SN74HC595:inst4|       ; 0 (0)               ; 8 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |TopLevel|led_controller_32:inst41|SN74HC595:inst4           ; SN74HC595         ; work         ;
+;          |SPSR:inst|          ; 0 (0)               ; 8 (8)                     ; 0                 ; 0          ; 0    ; 0            ; |TopLevel|led_controller_32:inst41|SN74HC595:inst4|SPSR:inst ; SPSR              ; work         ;
+;       |SN74HC595:inst|        ; 0 (0)               ; 8 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |TopLevel|led_controller_32:inst41|SN74HC595:inst            ; SN74HC595         ; work         ;
+;          |SPSR:inst|          ; 0 (0)               ; 8 (8)                     ; 0                 ; 0          ; 0    ; 0            ; |TopLevel|led_controller_32:inst41|SN74HC595:inst|SPSR:inst  ; SPSR              ; work         ;
+;    |led_controller_32:inst|   ; 32 (0)              ; 32 (0)                    ; 0                 ; 0          ; 0    ; 0            ; |TopLevel|led_controller_32:inst                             ; led_controller_32 ; work         ;
+;       |SN74HC573:inst21|      ; 8 (8)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |TopLevel|led_controller_32:inst|SN74HC573:inst21            ; SN74HC573         ; work         ;
+;       |SN74HC573:inst22|      ; 8 (8)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |TopLevel|led_controller_32:inst|SN74HC573:inst22            ; SN74HC573         ; work         ;
+;       |SN74HC573:inst23|      ; 8 (8)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |TopLevel|led_controller_32:inst|SN74HC573:inst23            ; SN74HC573         ; work         ;
+;       |SN74HC573:inst24|      ; 8 (8)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |TopLevel|led_controller_32:inst|SN74HC573:inst24            ; SN74HC573         ; work         ;
+;       |SN74HC595:inst2|       ; 0 (0)               ; 8 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |TopLevel|led_controller_32:inst|SN74HC595:inst2             ; SN74HC595         ; work         ;
+;          |SPSR:inst|          ; 0 (0)               ; 8 (8)                     ; 0                 ; 0          ; 0    ; 0            ; |TopLevel|led_controller_32:inst|SN74HC595:inst2|SPSR:inst   ; SPSR              ; work         ;
+;       |SN74HC595:inst3|       ; 0 (0)               ; 8 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |TopLevel|led_controller_32:inst|SN74HC595:inst3             ; SN74HC595         ; work         ;
+;          |SPSR:inst|          ; 0 (0)               ; 8 (8)                     ; 0                 ; 0          ; 0    ; 0            ; |TopLevel|led_controller_32:inst|SN74HC595:inst3|SPSR:inst   ; SPSR              ; work         ;
+;       |SN74HC595:inst4|       ; 0 (0)               ; 8 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |TopLevel|led_controller_32:inst|SN74HC595:inst4             ; SN74HC595         ; work         ;
+;          |SPSR:inst|          ; 0 (0)               ; 8 (8)                     ; 0                 ; 0          ; 0    ; 0            ; |TopLevel|led_controller_32:inst|SN74HC595:inst4|SPSR:inst   ; SPSR              ; work         ;
+;       |SN74HC595:inst|        ; 0 (0)               ; 8 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |TopLevel|led_controller_32:inst|SN74HC595:inst              ; SN74HC595         ; work         ;
+;          |SPSR:inst|          ; 0 (0)               ; 8 (8)                     ; 0                 ; 0          ; 0    ; 0            ; |TopLevel|led_controller_32:inst|SN74HC595:inst|SPSR:inst    ; SPSR              ; work         ;
++-------------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+--------------------------------------------------------------+-------------------+--------------+
+Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
+
+
++----------------------------------------------------------------------------------------------------------------------------------+
+; User-Specified and Inferred Latches                                                                                              ;
++-----------------------------------------------------------+---------------------------------------------+------------------------+
+; Latch Name                                                ; Latch Enable Signal                         ; Free of Timing Hazards ;
++-----------------------------------------------------------+---------------------------------------------+------------------------+
+; led_controller_32:inst|SN74HC573:inst21|internal_reg[7]   ; led_controller_32:inst|SN74HC08:inst12|inst ; yes                    ;
+; led_controller_32:inst|SN74HC573:inst21|internal_reg[6]   ; led_controller_32:inst|SN74HC08:inst12|inst ; yes                    ;
+; led_controller_32:inst|SN74HC573:inst21|internal_reg[5]   ; led_controller_32:inst|SN74HC08:inst12|inst ; yes                    ;
+; led_controller_32:inst|SN74HC573:inst21|internal_reg[4]   ; led_controller_32:inst|SN74HC08:inst12|inst ; yes                    ;
+; led_controller_32:inst|SN74HC573:inst21|internal_reg[3]   ; led_controller_32:inst|SN74HC08:inst12|inst ; yes                    ;
+; led_controller_32:inst|SN74HC573:inst21|internal_reg[2]   ; led_controller_32:inst|SN74HC08:inst12|inst ; yes                    ;
+; led_controller_32:inst|SN74HC573:inst21|internal_reg[1]   ; led_controller_32:inst|SN74HC08:inst12|inst ; yes                    ;
+; led_controller_32:inst|SN74HC573:inst21|internal_reg[0]   ; led_controller_32:inst|SN74HC08:inst12|inst ; yes                    ;
+; led_controller_32:inst|SN74HC573:inst22|internal_reg[7]   ; led_controller_32:inst|SN74HC08:inst12|inst ; yes                    ;
+; led_controller_32:inst|SN74HC573:inst22|internal_reg[6]   ; led_controller_32:inst|SN74HC08:inst12|inst ; yes                    ;
+; led_controller_32:inst|SN74HC573:inst22|internal_reg[5]   ; led_controller_32:inst|SN74HC08:inst12|inst ; yes                    ;
+; led_controller_32:inst|SN74HC573:inst22|internal_reg[4]   ; led_controller_32:inst|SN74HC08:inst12|inst ; yes                    ;
+; led_controller_32:inst|SN74HC573:inst22|internal_reg[3]   ; led_controller_32:inst|SN74HC08:inst12|inst ; yes                    ;
+; led_controller_32:inst|SN74HC573:inst22|internal_reg[2]   ; led_controller_32:inst|SN74HC08:inst12|inst ; yes                    ;
+; led_controller_32:inst|SN74HC573:inst22|internal_reg[1]   ; led_controller_32:inst|SN74HC08:inst12|inst ; yes                    ;
+; led_controller_32:inst|SN74HC573:inst22|internal_reg[0]   ; led_controller_32:inst|SN74HC08:inst12|inst ; yes                    ;
+; led_controller_32:inst|SN74HC573:inst23|internal_reg[7]   ; led_controller_32:inst|SN74HC08:inst12|inst ; yes                    ;
+; led_controller_32:inst|SN74HC573:inst23|internal_reg[6]   ; led_controller_32:inst|SN74HC08:inst12|inst ; yes                    ;
+; led_controller_32:inst|SN74HC573:inst23|internal_reg[5]   ; led_controller_32:inst|SN74HC08:inst12|inst ; yes                    ;
+; led_controller_32:inst|SN74HC573:inst23|internal_reg[4]   ; led_controller_32:inst|SN74HC08:inst12|inst ; yes                    ;
+; led_controller_32:inst|SN74HC573:inst23|internal_reg[3]   ; led_controller_32:inst|SN74HC08:inst12|inst ; yes                    ;
+; led_controller_32:inst|SN74HC573:inst23|internal_reg[2]   ; led_controller_32:inst|SN74HC08:inst12|inst ; yes                    ;
+; led_controller_32:inst|SN74HC573:inst23|internal_reg[1]   ; led_controller_32:inst|SN74HC08:inst12|inst ; yes                    ;
+; led_controller_32:inst|SN74HC573:inst23|internal_reg[0]   ; led_controller_32:inst|SN74HC08:inst12|inst ; yes                    ;
+; led_controller_32:inst|SN74HC573:inst24|internal_reg[7]   ; led_controller_32:inst|SN74HC08:inst12|inst ; yes                    ;
+; led_controller_32:inst|SN74HC573:inst24|internal_reg[6]   ; led_controller_32:inst|SN74HC08:inst12|inst ; yes                    ;
+; led_controller_32:inst|SN74HC573:inst24|internal_reg[5]   ; led_controller_32:inst|SN74HC08:inst12|inst ; yes                    ;
+; led_controller_32:inst|SN74HC573:inst24|internal_reg[4]   ; led_controller_32:inst|SN74HC08:inst12|inst ; yes                    ;
+; led_controller_32:inst|SN74HC573:inst24|internal_reg[3]   ; led_controller_32:inst|SN74HC08:inst12|inst ; yes                    ;
+; led_controller_32:inst|SN74HC573:inst24|internal_reg[2]   ; led_controller_32:inst|SN74HC08:inst12|inst ; yes                    ;
+; led_controller_32:inst|SN74HC573:inst24|internal_reg[1]   ; led_controller_32:inst|SN74HC08:inst12|inst ; yes                    ;
+; led_controller_32:inst|SN74HC573:inst24|internal_reg[0]   ; led_controller_32:inst|SN74HC08:inst12|inst ; yes                    ;
+; led_controller_32:inst30|SN74HC573:inst21|internal_reg[7] ; led_controller_32:inst|SN74HC08:inst12|inst ; yes                    ;
+; led_controller_32:inst30|SN74HC573:inst21|internal_reg[6] ; led_controller_32:inst|SN74HC08:inst12|inst ; yes                    ;
+; led_controller_32:inst30|SN74HC573:inst21|internal_reg[5] ; led_controller_32:inst|SN74HC08:inst12|inst ; yes                    ;
+; led_controller_32:inst30|SN74HC573:inst21|internal_reg[4] ; led_controller_32:inst|SN74HC08:inst12|inst ; yes                    ;
+; led_controller_32:inst30|SN74HC573:inst21|internal_reg[3] ; led_controller_32:inst|SN74HC08:inst12|inst ; yes                    ;
+; led_controller_32:inst30|SN74HC573:inst21|internal_reg[2] ; led_controller_32:inst|SN74HC08:inst12|inst ; yes                    ;
+; led_controller_32:inst30|SN74HC573:inst21|internal_reg[1] ; led_controller_32:inst|SN74HC08:inst12|inst ; yes                    ;
+; led_controller_32:inst30|SN74HC573:inst21|internal_reg[0] ; led_controller_32:inst|SN74HC08:inst12|inst ; yes                    ;
+; led_controller_32:inst30|SN74HC573:inst22|internal_reg[7] ; led_controller_32:inst|SN74HC08:inst12|inst ; yes                    ;
+; led_controller_32:inst30|SN74HC573:inst22|internal_reg[6] ; led_controller_32:inst|SN74HC08:inst12|inst ; yes                    ;
+; led_controller_32:inst30|SN74HC573:inst22|internal_reg[5] ; led_controller_32:inst|SN74HC08:inst12|inst ; yes                    ;
+; led_controller_32:inst30|SN74HC573:inst22|internal_reg[4] ; led_controller_32:inst|SN74HC08:inst12|inst ; yes                    ;
+; led_controller_32:inst30|SN74HC573:inst22|internal_reg[3] ; led_controller_32:inst|SN74HC08:inst12|inst ; yes                    ;
+; led_controller_32:inst30|SN74HC573:inst22|internal_reg[2] ; led_controller_32:inst|SN74HC08:inst12|inst ; yes                    ;
+; led_controller_32:inst30|SN74HC573:inst22|internal_reg[1] ; led_controller_32:inst|SN74HC08:inst12|inst ; yes                    ;
+; led_controller_32:inst30|SN74HC573:inst22|internal_reg[0] ; led_controller_32:inst|SN74HC08:inst12|inst ; yes                    ;
+; led_controller_32:inst30|SN74HC573:inst23|internal_reg[7] ; led_controller_32:inst|SN74HC08:inst12|inst ; yes                    ;
+; led_controller_32:inst30|SN74HC573:inst23|internal_reg[6] ; led_controller_32:inst|SN74HC08:inst12|inst ; yes                    ;
+; led_controller_32:inst30|SN74HC573:inst23|internal_reg[5] ; led_controller_32:inst|SN74HC08:inst12|inst ; yes                    ;
+; led_controller_32:inst30|SN74HC573:inst23|internal_reg[4] ; led_controller_32:inst|SN74HC08:inst12|inst ; yes                    ;
+; led_controller_32:inst30|SN74HC573:inst23|internal_reg[3] ; led_controller_32:inst|SN74HC08:inst12|inst ; yes                    ;
+; led_controller_32:inst30|SN74HC573:inst23|internal_reg[2] ; led_controller_32:inst|SN74HC08:inst12|inst ; yes                    ;
+; led_controller_32:inst30|SN74HC573:inst23|internal_reg[1] ; led_controller_32:inst|SN74HC08:inst12|inst ; yes                    ;
+; led_controller_32:inst30|SN74HC573:inst23|internal_reg[0] ; led_controller_32:inst|SN74HC08:inst12|inst ; yes                    ;
+; led_controller_32:inst30|SN74HC573:inst24|internal_reg[7] ; led_controller_32:inst|SN74HC08:inst12|inst ; yes                    ;
+; led_controller_32:inst30|SN74HC573:inst24|internal_reg[6] ; led_controller_32:inst|SN74HC08:inst12|inst ; yes                    ;
+; led_controller_32:inst30|SN74HC573:inst24|internal_reg[5] ; led_controller_32:inst|SN74HC08:inst12|inst ; yes                    ;
+; led_controller_32:inst30|SN74HC573:inst24|internal_reg[4] ; led_controller_32:inst|SN74HC08:inst12|inst ; yes                    ;
+; led_controller_32:inst30|SN74HC573:inst24|internal_reg[3] ; led_controller_32:inst|SN74HC08:inst12|inst ; yes                    ;
+; led_controller_32:inst30|SN74HC573:inst24|internal_reg[2] ; led_controller_32:inst|SN74HC08:inst12|inst ; yes                    ;
+; led_controller_32:inst30|SN74HC573:inst24|internal_reg[1] ; led_controller_32:inst|SN74HC08:inst12|inst ; yes                    ;
+; led_controller_32:inst30|SN74HC573:inst24|internal_reg[0] ; led_controller_32:inst|SN74HC08:inst12|inst ; yes                    ;
+; led_controller_32:inst40|SN74HC573:inst21|internal_reg[7] ; led_controller_32:inst|SN74HC08:inst12|inst ; yes                    ;
+; led_controller_32:inst40|SN74HC573:inst21|internal_reg[6] ; led_controller_32:inst|SN74HC08:inst12|inst ; yes                    ;
+; led_controller_32:inst40|SN74HC573:inst21|internal_reg[5] ; led_controller_32:inst|SN74HC08:inst12|inst ; yes                    ;
+; led_controller_32:inst40|SN74HC573:inst21|internal_reg[4] ; led_controller_32:inst|SN74HC08:inst12|inst ; yes                    ;
+; led_controller_32:inst40|SN74HC573:inst21|internal_reg[3] ; led_controller_32:inst|SN74HC08:inst12|inst ; yes                    ;
+; led_controller_32:inst40|SN74HC573:inst21|internal_reg[2] ; led_controller_32:inst|SN74HC08:inst12|inst ; yes                    ;
+; led_controller_32:inst40|SN74HC573:inst21|internal_reg[1] ; led_controller_32:inst|SN74HC08:inst12|inst ; yes                    ;
+; led_controller_32:inst40|SN74HC573:inst21|internal_reg[0] ; led_controller_32:inst|SN74HC08:inst12|inst ; yes                    ;
+; led_controller_32:inst40|SN74HC573:inst22|internal_reg[7] ; led_controller_32:inst|SN74HC08:inst12|inst ; yes                    ;
+; led_controller_32:inst40|SN74HC573:inst22|internal_reg[6] ; led_controller_32:inst|SN74HC08:inst12|inst ; yes                    ;
+; led_controller_32:inst40|SN74HC573:inst22|internal_reg[5] ; led_controller_32:inst|SN74HC08:inst12|inst ; yes                    ;
+; led_controller_32:inst40|SN74HC573:inst22|internal_reg[4] ; led_controller_32:inst|SN74HC08:inst12|inst ; yes                    ;
+; led_controller_32:inst40|SN74HC573:inst22|internal_reg[3] ; led_controller_32:inst|SN74HC08:inst12|inst ; yes                    ;
+; led_controller_32:inst40|SN74HC573:inst22|internal_reg[2] ; led_controller_32:inst|SN74HC08:inst12|inst ; yes                    ;
+; led_controller_32:inst40|SN74HC573:inst22|internal_reg[1] ; led_controller_32:inst|SN74HC08:inst12|inst ; yes                    ;
+; led_controller_32:inst40|SN74HC573:inst22|internal_reg[0] ; led_controller_32:inst|SN74HC08:inst12|inst ; yes                    ;
+; led_controller_32:inst40|SN74HC573:inst23|internal_reg[7] ; led_controller_32:inst|SN74HC08:inst12|inst ; yes                    ;
+; led_controller_32:inst40|SN74HC573:inst23|internal_reg[6] ; led_controller_32:inst|SN74HC08:inst12|inst ; yes                    ;
+; led_controller_32:inst40|SN74HC573:inst23|internal_reg[5] ; led_controller_32:inst|SN74HC08:inst12|inst ; yes                    ;
+; led_controller_32:inst40|SN74HC573:inst23|internal_reg[4] ; led_controller_32:inst|SN74HC08:inst12|inst ; yes                    ;
+; led_controller_32:inst40|SN74HC573:inst23|internal_reg[3] ; led_controller_32:inst|SN74HC08:inst12|inst ; yes                    ;
+; led_controller_32:inst40|SN74HC573:inst23|internal_reg[2] ; led_controller_32:inst|SN74HC08:inst12|inst ; yes                    ;
+; led_controller_32:inst40|SN74HC573:inst23|internal_reg[1] ; led_controller_32:inst|SN74HC08:inst12|inst ; yes                    ;
+; led_controller_32:inst40|SN74HC573:inst23|internal_reg[0] ; led_controller_32:inst|SN74HC08:inst12|inst ; yes                    ;
+; led_controller_32:inst40|SN74HC573:inst24|internal_reg[7] ; led_controller_32:inst|SN74HC08:inst12|inst ; yes                    ;
+; led_controller_32:inst40|SN74HC573:inst24|internal_reg[6] ; led_controller_32:inst|SN74HC08:inst12|inst ; yes                    ;
+; led_controller_32:inst40|SN74HC573:inst24|internal_reg[5] ; led_controller_32:inst|SN74HC08:inst12|inst ; yes                    ;
+; led_controller_32:inst40|SN74HC573:inst24|internal_reg[4] ; led_controller_32:inst|SN74HC08:inst12|inst ; yes                    ;
+; led_controller_32:inst40|SN74HC573:inst24|internal_reg[3] ; led_controller_32:inst|SN74HC08:inst12|inst ; yes                    ;
+; led_controller_32:inst40|SN74HC573:inst24|internal_reg[2] ; led_controller_32:inst|SN74HC08:inst12|inst ; yes                    ;
+; led_controller_32:inst40|SN74HC573:inst24|internal_reg[1] ; led_controller_32:inst|SN74HC08:inst12|inst ; yes                    ;
+; led_controller_32:inst40|SN74HC573:inst24|internal_reg[0] ; led_controller_32:inst|SN74HC08:inst12|inst ; yes                    ;
+; led_controller_32:inst41|SN74HC573:inst21|internal_reg[7] ; led_controller_32:inst|SN74HC08:inst12|inst ; yes                    ;
+; led_controller_32:inst41|SN74HC573:inst21|internal_reg[6] ; led_controller_32:inst|SN74HC08:inst12|inst ; yes                    ;
+; led_controller_32:inst41|SN74HC573:inst21|internal_reg[5] ; led_controller_32:inst|SN74HC08:inst12|inst ; yes                    ;
+; led_controller_32:inst41|SN74HC573:inst21|internal_reg[4] ; led_controller_32:inst|SN74HC08:inst12|inst ; yes                    ;
+; Number of user-specified and inferred latches = 128       ;                                             ;                        ;
++-----------------------------------------------------------+---------------------------------------------+------------------------+
+Table restricted to first 100 entries. Note: All latches listed above may not be present at the end of synthesis due to various synthesis optimizations.
+
+
++------------------------------------------------------------+
+; Registers Removed During Synthesis                         ;
++---------------------------------------+--------------------+
+; Register name                         ; Reason for Removal ;
++---------------------------------------+--------------------+
+; CD4024:inst34|cnt_reg[6]              ; Lost fanout        ;
+; Total Number of Removed Registers = 1 ;                    ;
++---------------------------------------+--------------------+
+
+
++------------------------------------------------------+
+; General Register Statistics                          ;
++----------------------------------------------+-------+
+; Statistic                                    ; Value ;
++----------------------------------------------+-------+
+; Total registers                              ; 268   ;
+; Number of registers using Synchronous Clear  ; 129   ;
+; Number of registers using Synchronous Load   ; 124   ;
+; Number of registers using Asynchronous Clear ; 139   ;
+; Number of registers using Asynchronous Load  ; 0     ;
+; Number of registers using Clock Enable       ; 126   ;
+; Number of registers using Preset             ; 0     ;
++----------------------------------------------+-------+
+
+
++-------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Multiplexer Restructuring Statistics (Restructuring Performed)                                                                                        ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+-----------------------------------------+
+; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output              ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+-----------------------------------------+
+; 6:1                ; 31 bits   ; 124 LEs       ; 0 LEs                ; 124 LEs                ; Yes        ; |TopLevel|FPGA_LED_PSSR:inst4|reg_c[9]  ;
+; 6:1                ; 31 bits   ; 124 LEs       ; 0 LEs                ; 124 LEs                ; Yes        ; |TopLevel|FPGA_LED_PSSR:inst4|reg_b[9]  ;
+; 6:1                ; 31 bits   ; 124 LEs       ; 0 LEs                ; 124 LEs                ; Yes        ; |TopLevel|FPGA_LED_PSSR:inst4|reg_d[11] ;
+; 6:1                ; 31 bits   ; 124 LEs       ; 0 LEs                ; 124 LEs                ; Yes        ; |TopLevel|FPGA_LED_PSSR:inst4|reg_a[7]  ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+-----------------------------------------+
+
+
++---------------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: led_controller_32:inst|SN74HC595:inst|trisateN:inst2 ;
++----------------+-------+--------------------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                                     ;
++----------------+-------+--------------------------------------------------------------------------+
+; N              ; 8     ; Signed Integer                                                           ;
++----------------+-------+--------------------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-----------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: led_controller_32:inst|SN74HC595:inst|regN:inst1 ;
++----------------+-------+----------------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                                 ;
++----------------+-------+----------------------------------------------------------------------+
+; N              ; 8     ; Signed Integer                                                       ;
++----------------+-------+----------------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++----------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: led_controller_32:inst|SN74HC595:inst|SPSR:inst ;
++----------------+-------+---------------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                                ;
++----------------+-------+---------------------------------------------------------------------+
+; N              ; 8     ; Signed Integer                                                      ;
++----------------+-------+---------------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++----------------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: led_controller_32:inst|SN74HC595:inst2|trisateN:inst2 ;
++----------------+-------+---------------------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                                      ;
++----------------+-------+---------------------------------------------------------------------------+
+; N              ; 8     ; Signed Integer                                                            ;
++----------------+-------+---------------------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++------------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: led_controller_32:inst|SN74HC595:inst2|regN:inst1 ;
++----------------+-------+-----------------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                                  ;
++----------------+-------+-----------------------------------------------------------------------+
+; N              ; 8     ; Signed Integer                                                        ;
++----------------+-------+-----------------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-----------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: led_controller_32:inst|SN74HC595:inst2|SPSR:inst ;
++----------------+-------+----------------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                                 ;
++----------------+-------+----------------------------------------------------------------------+
+; N              ; 8     ; Signed Integer                                                       ;
++----------------+-------+----------------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++----------------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: led_controller_32:inst|SN74HC595:inst3|trisateN:inst2 ;
++----------------+-------+---------------------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                                      ;
++----------------+-------+---------------------------------------------------------------------------+
+; N              ; 8     ; Signed Integer                                                            ;
++----------------+-------+---------------------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++------------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: led_controller_32:inst|SN74HC595:inst3|regN:inst1 ;
++----------------+-------+-----------------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                                  ;
++----------------+-------+-----------------------------------------------------------------------+
+; N              ; 8     ; Signed Integer                                                        ;
++----------------+-------+-----------------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-----------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: led_controller_32:inst|SN74HC595:inst3|SPSR:inst ;
++----------------+-------+----------------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                                 ;
++----------------+-------+----------------------------------------------------------------------+
+; N              ; 8     ; Signed Integer                                                       ;
++----------------+-------+----------------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++----------------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: led_controller_32:inst|SN74HC595:inst4|trisateN:inst2 ;
++----------------+-------+---------------------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                                      ;
++----------------+-------+---------------------------------------------------------------------------+
+; N              ; 8     ; Signed Integer                                                            ;
++----------------+-------+---------------------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++------------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: led_controller_32:inst|SN74HC595:inst4|regN:inst1 ;
++----------------+-------+-----------------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                                  ;
++----------------+-------+-----------------------------------------------------------------------+
+; N              ; 8     ; Signed Integer                                                        ;
++----------------+-------+-----------------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-----------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: led_controller_32:inst|SN74HC595:inst4|SPSR:inst ;
++----------------+-------+----------------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                                 ;
++----------------+-------+----------------------------------------------------------------------+
+; N              ; 8     ; Signed Integer                                                       ;
++----------------+-------+----------------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: FPGA_counter:inst29 ;
++-------------------+-------+--------------------------------------+
+; Parameter Name    ; Value ; Type                                 ;
++-------------------+-------+--------------------------------------+
+; NUMBER_OF_DEVICES ; 4     ; Signed Integer                       ;
++-------------------+-------+--------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-----------------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: led_controller_32:inst40|SN74HC595:inst|trisateN:inst2 ;
++----------------+-------+----------------------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                                       ;
++----------------+-------+----------------------------------------------------------------------------+
+; N              ; 8     ; Signed Integer                                                             ;
++----------------+-------+----------------------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-------------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: led_controller_32:inst40|SN74HC595:inst|regN:inst1 ;
++----------------+-------+------------------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                                   ;
++----------------+-------+------------------------------------------------------------------------+
+; N              ; 8     ; Signed Integer                                                         ;
++----------------+-------+------------------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++------------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: led_controller_32:inst40|SN74HC595:inst|SPSR:inst ;
++----------------+-------+-----------------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                                  ;
++----------------+-------+-----------------------------------------------------------------------+
+; N              ; 8     ; Signed Integer                                                        ;
++----------------+-------+-----------------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++------------------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: led_controller_32:inst40|SN74HC595:inst2|trisateN:inst2 ;
++----------------+-------+-----------------------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                                        ;
++----------------+-------+-----------------------------------------------------------------------------+
+; N              ; 8     ; Signed Integer                                                              ;
++----------------+-------+-----------------------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++--------------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: led_controller_32:inst40|SN74HC595:inst2|regN:inst1 ;
++----------------+-------+-------------------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                                    ;
++----------------+-------+-------------------------------------------------------------------------+
+; N              ; 8     ; Signed Integer                                                          ;
++----------------+-------+-------------------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-------------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: led_controller_32:inst40|SN74HC595:inst2|SPSR:inst ;
++----------------+-------+------------------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                                   ;
++----------------+-------+------------------------------------------------------------------------+
+; N              ; 8     ; Signed Integer                                                         ;
++----------------+-------+------------------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++------------------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: led_controller_32:inst40|SN74HC595:inst3|trisateN:inst2 ;
++----------------+-------+-----------------------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                                        ;
++----------------+-------+-----------------------------------------------------------------------------+
+; N              ; 8     ; Signed Integer                                                              ;
++----------------+-------+-----------------------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++--------------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: led_controller_32:inst40|SN74HC595:inst3|regN:inst1 ;
++----------------+-------+-------------------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                                    ;
++----------------+-------+-------------------------------------------------------------------------+
+; N              ; 8     ; Signed Integer                                                          ;
++----------------+-------+-------------------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-------------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: led_controller_32:inst40|SN74HC595:inst3|SPSR:inst ;
++----------------+-------+------------------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                                   ;
++----------------+-------+------------------------------------------------------------------------+
+; N              ; 8     ; Signed Integer                                                         ;
++----------------+-------+------------------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++------------------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: led_controller_32:inst40|SN74HC595:inst4|trisateN:inst2 ;
++----------------+-------+-----------------------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                                        ;
++----------------+-------+-----------------------------------------------------------------------------+
+; N              ; 8     ; Signed Integer                                                              ;
++----------------+-------+-----------------------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++--------------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: led_controller_32:inst40|SN74HC595:inst4|regN:inst1 ;
++----------------+-------+-------------------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                                    ;
++----------------+-------+-------------------------------------------------------------------------+
+; N              ; 8     ; Signed Integer                                                          ;
++----------------+-------+-------------------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-------------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: led_controller_32:inst40|SN74HC595:inst4|SPSR:inst ;
++----------------+-------+------------------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                                   ;
++----------------+-------+------------------------------------------------------------------------+
+; N              ; 8     ; Signed Integer                                                         ;
++----------------+-------+------------------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-----------------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: led_controller_32:inst41|SN74HC595:inst|trisateN:inst2 ;
++----------------+-------+----------------------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                                       ;
++----------------+-------+----------------------------------------------------------------------------+
+; N              ; 8     ; Signed Integer                                                             ;
++----------------+-------+----------------------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-------------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: led_controller_32:inst41|SN74HC595:inst|regN:inst1 ;
++----------------+-------+------------------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                                   ;
++----------------+-------+------------------------------------------------------------------------+
+; N              ; 8     ; Signed Integer                                                         ;
++----------------+-------+------------------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++------------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: led_controller_32:inst41|SN74HC595:inst|SPSR:inst ;
++----------------+-------+-----------------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                                  ;
++----------------+-------+-----------------------------------------------------------------------+
+; N              ; 8     ; Signed Integer                                                        ;
++----------------+-------+-----------------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++------------------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: led_controller_32:inst41|SN74HC595:inst2|trisateN:inst2 ;
++----------------+-------+-----------------------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                                        ;
++----------------+-------+-----------------------------------------------------------------------------+
+; N              ; 8     ; Signed Integer                                                              ;
++----------------+-------+-----------------------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++--------------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: led_controller_32:inst41|SN74HC595:inst2|regN:inst1 ;
++----------------+-------+-------------------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                                    ;
++----------------+-------+-------------------------------------------------------------------------+
+; N              ; 8     ; Signed Integer                                                          ;
++----------------+-------+-------------------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-------------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: led_controller_32:inst41|SN74HC595:inst2|SPSR:inst ;
++----------------+-------+------------------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                                   ;
++----------------+-------+------------------------------------------------------------------------+
+; N              ; 8     ; Signed Integer                                                         ;
++----------------+-------+------------------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++------------------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: led_controller_32:inst41|SN74HC595:inst3|trisateN:inst2 ;
++----------------+-------+-----------------------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                                        ;
++----------------+-------+-----------------------------------------------------------------------------+
+; N              ; 8     ; Signed Integer                                                              ;
++----------------+-------+-----------------------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++--------------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: led_controller_32:inst41|SN74HC595:inst3|regN:inst1 ;
++----------------+-------+-------------------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                                    ;
++----------------+-------+-------------------------------------------------------------------------+
+; N              ; 8     ; Signed Integer                                                          ;
++----------------+-------+-------------------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-------------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: led_controller_32:inst41|SN74HC595:inst3|SPSR:inst ;
++----------------+-------+------------------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                                   ;
++----------------+-------+------------------------------------------------------------------------+
+; N              ; 8     ; Signed Integer                                                         ;
++----------------+-------+------------------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++------------------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: led_controller_32:inst41|SN74HC595:inst4|trisateN:inst2 ;
++----------------+-------+-----------------------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                                        ;
++----------------+-------+-----------------------------------------------------------------------------+
+; N              ; 8     ; Signed Integer                                                              ;
++----------------+-------+-----------------------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++--------------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: led_controller_32:inst41|SN74HC595:inst4|regN:inst1 ;
++----------------+-------+-------------------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                                    ;
++----------------+-------+-------------------------------------------------------------------------+
+; N              ; 8     ; Signed Integer                                                          ;
++----------------+-------+-------------------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-------------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: led_controller_32:inst41|SN74HC595:inst4|SPSR:inst ;
++----------------+-------+------------------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                                   ;
++----------------+-------+------------------------------------------------------------------------+
+; N              ; 8     ; Signed Integer                                                         ;
++----------------+-------+------------------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-----------------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: led_controller_32:inst30|SN74HC595:inst|trisateN:inst2 ;
++----------------+-------+----------------------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                                       ;
++----------------+-------+----------------------------------------------------------------------------+
+; N              ; 8     ; Signed Integer                                                             ;
++----------------+-------+----------------------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-------------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: led_controller_32:inst30|SN74HC595:inst|regN:inst1 ;
++----------------+-------+------------------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                                   ;
++----------------+-------+------------------------------------------------------------------------+
+; N              ; 8     ; Signed Integer                                                         ;
++----------------+-------+------------------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++------------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: led_controller_32:inst30|SN74HC595:inst|SPSR:inst ;
++----------------+-------+-----------------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                                  ;
++----------------+-------+-----------------------------------------------------------------------+
+; N              ; 8     ; Signed Integer                                                        ;
++----------------+-------+-----------------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++------------------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: led_controller_32:inst30|SN74HC595:inst2|trisateN:inst2 ;
++----------------+-------+-----------------------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                                        ;
++----------------+-------+-----------------------------------------------------------------------------+
+; N              ; 8     ; Signed Integer                                                              ;
++----------------+-------+-----------------------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++--------------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: led_controller_32:inst30|SN74HC595:inst2|regN:inst1 ;
++----------------+-------+-------------------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                                    ;
++----------------+-------+-------------------------------------------------------------------------+
+; N              ; 8     ; Signed Integer                                                          ;
++----------------+-------+-------------------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-------------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: led_controller_32:inst30|SN74HC595:inst2|SPSR:inst ;
++----------------+-------+------------------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                                   ;
++----------------+-------+------------------------------------------------------------------------+
+; N              ; 8     ; Signed Integer                                                         ;
++----------------+-------+------------------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++------------------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: led_controller_32:inst30|SN74HC595:inst3|trisateN:inst2 ;
++----------------+-------+-----------------------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                                        ;
++----------------+-------+-----------------------------------------------------------------------------+
+; N              ; 8     ; Signed Integer                                                              ;
++----------------+-------+-----------------------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++--------------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: led_controller_32:inst30|SN74HC595:inst3|regN:inst1 ;
++----------------+-------+-------------------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                                    ;
++----------------+-------+-------------------------------------------------------------------------+
+; N              ; 8     ; Signed Integer                                                          ;
++----------------+-------+-------------------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-------------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: led_controller_32:inst30|SN74HC595:inst3|SPSR:inst ;
++----------------+-------+------------------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                                   ;
++----------------+-------+------------------------------------------------------------------------+
+; N              ; 8     ; Signed Integer                                                         ;
++----------------+-------+------------------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++------------------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: led_controller_32:inst30|SN74HC595:inst4|trisateN:inst2 ;
++----------------+-------+-----------------------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                                        ;
++----------------+-------+-----------------------------------------------------------------------------+
+; N              ; 8     ; Signed Integer                                                              ;
++----------------+-------+-----------------------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++--------------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: led_controller_32:inst30|SN74HC595:inst4|regN:inst1 ;
++----------------+-------+-------------------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                                    ;
++----------------+-------+-------------------------------------------------------------------------+
+; N              ; 8     ; Signed Integer                                                          ;
++----------------+-------+-------------------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-------------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: led_controller_32:inst30|SN74HC595:inst4|SPSR:inst ;
++----------------+-------+------------------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                                   ;
++----------------+-------+------------------------------------------------------------------------+
+; N              ; 8     ; Signed Integer                                                         ;
++----------------+-------+------------------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-----------------------------------------------------+
+; Post-Synthesis Netlist Statistics for Top Partition ;
++-----------------------+-----------------------------+
+; Type                  ; Count                       ;
++-----------------------+-----------------------------+
+; arriav_ff             ; 268                         ;
+;     CLR               ; 139                         ;
+;     ENA SCLR          ; 2                           ;
+;     ENA SCLR SLD      ; 124                         ;
+;     SCLR              ; 3                           ;
+; arriav_io_obuf        ; 128                         ;
+; arriav_lcell_comb     ; 157                         ;
+;     arith             ; 5                           ;
+;         1 data inputs ; 4                           ;
+;         2 data inputs ; 1                           ;
+;     normal            ; 152                         ;
+;         1 data inputs ; 2                           ;
+;         2 data inputs ; 5                           ;
+;         3 data inputs ; 133                         ;
+;         4 data inputs ; 2                           ;
+;         5 data inputs ; 4                           ;
+;         6 data inputs ; 6                           ;
+; boundary_port         ; 260                         ;
+;                       ;                             ;
+; Max LUT depth         ; 2.00                        ;
+; Average LUT depth     ; 0.72                        ;
++-----------------------+-----------------------------+
+
+
++-------------------------------+
+; Elapsed Time Per Partition    ;
++----------------+--------------+
+; Partition Name ; Elapsed Time ;
++----------------+--------------+
+; Top            ; 00:00:00     ;
++----------------+--------------+
+
+
++-------------------------------+
+; Analysis & Synthesis Messages ;
++-------------------------------+
 Info: *******************************************************************
-Info: Running Quartus Prime Analysis & Elaboration
+Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 20.1.0 Build 711 06/05/2020 SJ Lite Edition
-    Info: Processing started: Thu Mar 28 11:39:23 2024
-Info: Command: quartus_map --read_settings_files=on --write_settings_files=off LEDPANEL -c LEDPANEL --analysis_and_elaboration
+    Info: Processing started: Fri Mar 29 12:49:18 2024
+Info: Command: quartus_map --read_settings_files=on --write_settings_files=off LEDPANEL -c LEDPANEL
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20030): Parallel compilation is enabled and will use 4 of the 4 processors detected
-Info (12021): Found 1 design units, including 1 entities, in source file sv files/andsix.sv
-    Info (12023): Found entity 1: andsix File: C:/Users/minec/Desktop/github/PROJ300/Firmware/LED Panel Modelling/sv files/andsix.sv Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file sv files/fpga_led_pssr.sv
+    Info (12023): Found entity 1: FPGA_LED_PSSR File: C:/Users/minec/Desktop/github/PROJ300/Firmware/LED Panel Modelling/sv files/FPGA_LED_PSSR.sv Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file demux1x32.bdf
+    Info (12023): Found entity 1: demux1x32
+Info (12021): Found 1 design units, including 1 entities, in source file sv files/fpga_counter.sv
+    Info (12023): Found entity 1: FPGA_counter File: C:/Users/minec/Desktop/github/PROJ300/Firmware/LED Panel Modelling/sv files/FPGA_counter.sv Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file sv files/sn74hc139.sv
+    Info (12023): Found entity 1: SN74HC139 File: C:/Users/minec/Desktop/github/PROJ300/Firmware/LED Panel Modelling/sv files/SN74HC139.sv Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file sv files/cn74hc138.sv
+    Info (12023): Found entity 1: CN74HC138 File: C:/Users/minec/Desktop/github/PROJ300/Firmware/LED Panel Modelling/sv files/CN74HC138.sv Line: 1
+Warning (12019): Can't analyze file -- file sv files/andsix.sv is missing
 Info (12021): Found 1 design units, including 1 entities, in source file sv files/sn74ls74.sv
     Info (12023): Found entity 1: SN74LS74 File: C:/Users/minec/Desktop/github/PROJ300/Firmware/LED Panel Modelling/sv files/SN74LS74.sv Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file sv files/sn74hc573.sv
     Info (12023): Found entity 1: SN74HC573 File: C:/Users/minec/Desktop/github/PROJ300/Firmware/LED Panel Modelling/sv files/SN74HC573.sv Line: 1
-Info (12021): Found 1 design units, including 1 entities, in source file sv files/andfour.sv
-    Info (12023): Found entity 1: andfour File: C:/Users/minec/Desktop/github/PROJ300/Firmware/LED Panel Modelling/sv files/andfour.sv Line: 1
-Info (12021): Found 1 design units, including 1 entities, in source file sv files/andfive.sv
-    Info (12023): Found entity 1: andfive File: C:/Users/minec/Desktop/github/PROJ300/Firmware/LED Panel Modelling/sv files/andfive.sv Line: 1
+Warning (12019): Can't analyze file -- file sv files/andfour.sv is missing
+Warning (12019): Can't analyze file -- file sv files/andfive.sv is missing
 Info (12021): Found 1 design units, including 1 entities, in source file sv files/cd4024.sv
     Info (12023): Found entity 1: CD4024 File: C:/Users/minec/Desktop/github/PROJ300/Firmware/LED Panel Modelling/sv files/CD4024.sv Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file sv files/tristaten.sv
@@ -328,8 +1061,15 @@ Info (12021): Found 1 design units, including 1 entities, in source file cd4075.
     Info (12023): Found entity 1: CD4075
 Info (12021): Found 1 design units, including 1 entities, in source file cd4001.bdf
     Info (12023): Found entity 1: CD4001
+Warning (12019): Can't analyze file -- file 1x32DEMUX.bdf is missing
+Info (12021): Found 1 design units, including 1 entities, in source file led_controller_32.bdf
+    Info (12023): Found entity 1: led_controller_32
 Info (12127): Elaborating entity "TopLevel" for the top level hierarchy
-Info (12128): Elaborating entity "SN74HC573" for hierarchy "SN74HC573:inst21"
+Info (12128): Elaborating entity "led_controller_32" for hierarchy "led_controller_32:inst"
+Info (12128): Elaborating entity "SN74HC08" for hierarchy "led_controller_32:inst|SN74HC08:inst12"
+Info (12128): Elaborating entity "SN74LS04" for hierarchy "led_controller_32:inst|SN74LS04:inst9"
+Info (12128): Elaborating entity "SN74LS74" for hierarchy "led_controller_32:inst|SN74LS74:inst29"
+Info (12128): Elaborating entity "SN74HC573" for hierarchy "led_controller_32:inst|SN74HC573:inst21"
 Warning (10230): Verilog HDL assignment warning at SN74HC573.sv(18): truncated value with size 32 to match size of target (8) File: C:/Users/minec/Desktop/github/PROJ300/Firmware/LED Panel Modelling/sv files/SN74HC573.sv Line: 18
 Info (10041): Inferred latch for "internal_reg[0]" at SN74HC573.sv(26) File: C:/Users/minec/Desktop/github/PROJ300/Firmware/LED Panel Modelling/sv files/SN74HC573.sv Line: 26
 Info (10041): Inferred latch for "internal_reg[1]" at SN74HC573.sv(26) File: C:/Users/minec/Desktop/github/PROJ300/Firmware/LED Panel Modelling/sv files/SN74HC573.sv Line: 26
@@ -339,16 +1079,10 @@ Info (10041): Inferred latch for "internal_reg[4]" at SN74HC573.sv(26) File: C:/
 Info (10041): Inferred latch for "internal_reg[5]" at SN74HC573.sv(26) File: C:/Users/minec/Desktop/github/PROJ300/Firmware/LED Panel Modelling/sv files/SN74HC573.sv Line: 26
 Info (10041): Inferred latch for "internal_reg[6]" at SN74HC573.sv(26) File: C:/Users/minec/Desktop/github/PROJ300/Firmware/LED Panel Modelling/sv files/SN74HC573.sv Line: 26
 Info (10041): Inferred latch for "internal_reg[7]" at SN74HC573.sv(26) File: C:/Users/minec/Desktop/github/PROJ300/Firmware/LED Panel Modelling/sv files/SN74HC573.sv Line: 26
-Info (12128): Elaborating entity "SN74HC08" for hierarchy "SN74HC08:inst12"
-Info (12128): Elaborating entity "SN74LS04" for hierarchy "SN74LS04:inst9"
-Info (12128): Elaborating entity "CD4024" for hierarchy "CD4024:inst15"
-Warning (10230): Verilog HDL assignment warning at CD4024.sv(20): truncated value with size 32 to match size of target (7) File: C:/Users/minec/Desktop/github/PROJ300/Firmware/LED Panel Modelling/sv files/CD4024.sv Line: 20
-Info (12128): Elaborating entity "CD4075" for hierarchy "CD4075:inst13"
-Info (12128): Elaborating entity "SN74LS74" for hierarchy "SN74LS74:inst29"
-Info (12128): Elaborating entity "SN74HC595" for hierarchy "SN74HC595:inst"
-Info (12128): Elaborating entity "trisateN" for hierarchy "SN74HC595:inst|trisateN:inst2"
+Info (12128): Elaborating entity "SN74HC595" for hierarchy "led_controller_32:inst|SN74HC595:inst"
+Info (12128): Elaborating entity "trisateN" for hierarchy "led_controller_32:inst|SN74HC595:inst|trisateN:inst2"
 Warning (10230): Verilog HDL assignment warning at tristateN.sv(10): truncated value with size 32 to match size of target (8) File: C:/Users/minec/Desktop/github/PROJ300/Firmware/LED Panel Modelling/sv files/tristateN.sv Line: 10
-Info (12128): Elaborating entity "regN" for hierarchy "SN74HC595:inst|regN:inst1"
+Info (12128): Elaborating entity "regN" for hierarchy "led_controller_32:inst|SN74HC595:inst|regN:inst1"
 Warning (10230): Verilog HDL assignment warning at regN.sv(45): truncated value with size 32 to match size of target (8) File: C:/Users/minec/Desktop/github/PROJ300/Firmware/LED Panel Modelling/sv files/regN.sv Line: 45
 Warning (10270): Verilog HDL Case Statement warning at regN.sv(35): incomplete case statement has no default case item File: C:/Users/minec/Desktop/github/PROJ300/Firmware/LED Panel Modelling/sv files/regN.sv Line: 35
 Info (10264): Verilog HDL Case Statement information at regN.sv(35): all case item expressions in this case statement are onehot File: C:/Users/minec/Desktop/github/PROJ300/Firmware/LED Panel Modelling/sv files/regN.sv Line: 35
@@ -361,19 +1095,292 @@ Info (10041): Inferred latch for "internal_reg[4]" at regN.sv(20) File: C:/Users
 Info (10041): Inferred latch for "internal_reg[5]" at regN.sv(20) File: C:/Users/minec/Desktop/github/PROJ300/Firmware/LED Panel Modelling/sv files/regN.sv Line: 20
 Info (10041): Inferred latch for "internal_reg[6]" at regN.sv(20) File: C:/Users/minec/Desktop/github/PROJ300/Firmware/LED Panel Modelling/sv files/regN.sv Line: 20
 Info (10041): Inferred latch for "internal_reg[7]" at regN.sv(20) File: C:/Users/minec/Desktop/github/PROJ300/Firmware/LED Panel Modelling/sv files/regN.sv Line: 20
-Info (12128): Elaborating entity "SPSR" for hierarchy "SN74HC595:inst|SPSR:inst"
-Info (12128): Elaborating entity "CD4001" for hierarchy "CD4001:inst17"
+Info (12128): Elaborating entity "SPSR" for hierarchy "led_controller_32:inst|SN74HC595:inst|SPSR:inst"
+Info (12128): Elaborating entity "CN74HC138" for hierarchy "CN74HC138:inst1"
+Info (12128): Elaborating entity "SN74HC139" for hierarchy "SN74HC139:inst28"
+Info (12128): Elaborating entity "FPGA_LED_PSSR" for hierarchy "FPGA_LED_PSSR:inst4"
+Info (12128): Elaborating entity "FPGA_counter" for hierarchy "FPGA_counter:inst29"
+Warning (10230): Verilog HDL assignment warning at FPGA_counter.sv(23): truncated value with size 32 to match size of target (5) File: C:/Users/minec/Desktop/github/PROJ300/Firmware/LED Panel Modelling/sv files/FPGA_counter.sv Line: 23
+Info (12128): Elaborating entity "CD4001" for hierarchy "CD4001:inst43"
+Info (12128): Elaborating entity "CD4024" for hierarchy "CD4024:inst34"
+Warning (10230): Verilog HDL assignment warning at CD4024.sv(21): truncated value with size 32 to match size of target (7) File: C:/Users/minec/Desktop/github/PROJ300/Firmware/LED Panel Modelling/sv files/CD4024.sv Line: 21
+Info (12128): Elaborating entity "CD4075" for hierarchy "CD4075:inst35"
+Warning (13046): Tri-state node(s) do not directly drive top-level pin(s)
+    Warning (13049): Converted tri-state buffer "led_controller_32:inst30|SN74HC595:inst4|trisateN:inst2|q[7]" feeding internal logic into a wire File: C:/Users/minec/Desktop/github/PROJ300/Firmware/LED Panel Modelling/sv files/tristateN.sv Line: 3
+    Warning (13049): Converted tri-state buffer "led_controller_32:inst30|SN74HC595:inst4|trisateN:inst2|q[6]" feeding internal logic into a wire File: C:/Users/minec/Desktop/github/PROJ300/Firmware/LED Panel Modelling/sv files/tristateN.sv Line: 3
+    Warning (13049): Converted tri-state buffer "led_controller_32:inst30|SN74HC595:inst4|trisateN:inst2|q[5]" feeding internal logic into a wire File: C:/Users/minec/Desktop/github/PROJ300/Firmware/LED Panel Modelling/sv files/tristateN.sv Line: 3
+    Warning (13049): Converted tri-state buffer "led_controller_32:inst30|SN74HC595:inst4|trisateN:inst2|q[4]" feeding internal logic into a wire File: C:/Users/minec/Desktop/github/PROJ300/Firmware/LED Panel Modelling/sv files/tristateN.sv Line: 3
+    Warning (13049): Converted tri-state buffer "led_controller_32:inst30|SN74HC595:inst4|trisateN:inst2|q[3]" feeding internal logic into a wire File: C:/Users/minec/Desktop/github/PROJ300/Firmware/LED Panel Modelling/sv files/tristateN.sv Line: 3
+    Warning (13049): Converted tri-state buffer "led_controller_32:inst30|SN74HC595:inst4|trisateN:inst2|q[2]" feeding internal logic into a wire File: C:/Users/minec/Desktop/github/PROJ300/Firmware/LED Panel Modelling/sv files/tristateN.sv Line: 3
+    Warning (13049): Converted tri-state buffer "led_controller_32:inst30|SN74HC595:inst4|trisateN:inst2|q[1]" feeding internal logic into a wire File: C:/Users/minec/Desktop/github/PROJ300/Firmware/LED Panel Modelling/sv files/tristateN.sv Line: 3
+    Warning (13049): Converted tri-state buffer "led_controller_32:inst30|SN74HC595:inst4|trisateN:inst2|q[0]" feeding internal logic into a wire File: C:/Users/minec/Desktop/github/PROJ300/Firmware/LED Panel Modelling/sv files/tristateN.sv Line: 3
+    Warning (13049): Converted tri-state buffer "led_controller_32:inst30|SN74HC595:inst3|trisateN:inst2|q[7]" feeding internal logic into a wire File: C:/Users/minec/Desktop/github/PROJ300/Firmware/LED Panel Modelling/sv files/tristateN.sv Line: 3
+    Warning (13049): Converted tri-state buffer "led_controller_32:inst30|SN74HC595:inst3|trisateN:inst2|q[6]" feeding internal logic into a wire File: C:/Users/minec/Desktop/github/PROJ300/Firmware/LED Panel Modelling/sv files/tristateN.sv Line: 3
+    Warning (13049): Converted tri-state buffer "led_controller_32:inst30|SN74HC595:inst3|trisateN:inst2|q[5]" feeding internal logic into a wire File: C:/Users/minec/Desktop/github/PROJ300/Firmware/LED Panel Modelling/sv files/tristateN.sv Line: 3
+    Warning (13049): Converted tri-state buffer "led_controller_32:inst30|SN74HC595:inst3|trisateN:inst2|q[4]" feeding internal logic into a wire File: C:/Users/minec/Desktop/github/PROJ300/Firmware/LED Panel Modelling/sv files/tristateN.sv Line: 3
+    Warning (13049): Converted tri-state buffer "led_controller_32:inst30|SN74HC595:inst3|trisateN:inst2|q[3]" feeding internal logic into a wire File: C:/Users/minec/Desktop/github/PROJ300/Firmware/LED Panel Modelling/sv files/tristateN.sv Line: 3
+    Warning (13049): Converted tri-state buffer "led_controller_32:inst30|SN74HC595:inst3|trisateN:inst2|q[2]" feeding internal logic into a wire File: C:/Users/minec/Desktop/github/PROJ300/Firmware/LED Panel Modelling/sv files/tristateN.sv Line: 3
+    Warning (13049): Converted tri-state buffer "led_controller_32:inst30|SN74HC595:inst3|trisateN:inst2|q[1]" feeding internal logic into a wire File: C:/Users/minec/Desktop/github/PROJ300/Firmware/LED Panel Modelling/sv files/tristateN.sv Line: 3
+    Warning (13049): Converted tri-state buffer "led_controller_32:inst30|SN74HC595:inst3|trisateN:inst2|q[0]" feeding internal logic into a wire File: C:/Users/minec/Desktop/github/PROJ300/Firmware/LED Panel Modelling/sv files/tristateN.sv Line: 3
+    Warning (13049): Converted tri-state buffer "led_controller_32:inst30|SN74HC595:inst2|trisateN:inst2|q[7]" feeding internal logic into a wire File: C:/Users/minec/Desktop/github/PROJ300/Firmware/LED Panel Modelling/sv files/tristateN.sv Line: 3
+    Warning (13049): Converted tri-state buffer "led_controller_32:inst30|SN74HC595:inst2|trisateN:inst2|q[6]" feeding internal logic into a wire File: C:/Users/minec/Desktop/github/PROJ300/Firmware/LED Panel Modelling/sv files/tristateN.sv Line: 3
+    Warning (13049): Converted tri-state buffer "led_controller_32:inst30|SN74HC595:inst2|trisateN:inst2|q[5]" feeding internal logic into a wire File: C:/Users/minec/Desktop/github/PROJ300/Firmware/LED Panel Modelling/sv files/tristateN.sv Line: 3
+    Warning (13049): Converted tri-state buffer "led_controller_32:inst30|SN74HC595:inst2|trisateN:inst2|q[4]" feeding internal logic into a wire File: C:/Users/minec/Desktop/github/PROJ300/Firmware/LED Panel Modelling/sv files/tristateN.sv Line: 3
+    Warning (13049): Converted tri-state buffer "led_controller_32:inst30|SN74HC595:inst2|trisateN:inst2|q[3]" feeding internal logic into a wire File: C:/Users/minec/Desktop/github/PROJ300/Firmware/LED Panel Modelling/sv files/tristateN.sv Line: 3
+    Warning (13049): Converted tri-state buffer "led_controller_32:inst30|SN74HC595:inst2|trisateN:inst2|q[2]" feeding internal logic into a wire File: C:/Users/minec/Desktop/github/PROJ300/Firmware/LED Panel Modelling/sv files/tristateN.sv Line: 3
+    Warning (13049): Converted tri-state buffer "led_controller_32:inst30|SN74HC595:inst2|trisateN:inst2|q[1]" feeding internal logic into a wire File: C:/Users/minec/Desktop/github/PROJ300/Firmware/LED Panel Modelling/sv files/tristateN.sv Line: 3
+    Warning (13049): Converted tri-state buffer "led_controller_32:inst30|SN74HC595:inst2|trisateN:inst2|q[0]" feeding internal logic into a wire File: C:/Users/minec/Desktop/github/PROJ300/Firmware/LED Panel Modelling/sv files/tristateN.sv Line: 3
+    Warning (13049): Converted tri-state buffer "led_controller_32:inst30|SN74HC595:inst|trisateN:inst2|q[7]" feeding internal logic into a wire File: C:/Users/minec/Desktop/github/PROJ300/Firmware/LED Panel Modelling/sv files/tristateN.sv Line: 3
+    Warning (13049): Converted tri-state buffer "led_controller_32:inst30|SN74HC595:inst|trisateN:inst2|q[6]" feeding internal logic into a wire File: C:/Users/minec/Desktop/github/PROJ300/Firmware/LED Panel Modelling/sv files/tristateN.sv Line: 3
+    Warning (13049): Converted tri-state buffer "led_controller_32:inst30|SN74HC595:inst|trisateN:inst2|q[5]" feeding internal logic into a wire File: C:/Users/minec/Desktop/github/PROJ300/Firmware/LED Panel Modelling/sv files/tristateN.sv Line: 3
+    Warning (13049): Converted tri-state buffer "led_controller_32:inst30|SN74HC595:inst|trisateN:inst2|q[4]" feeding internal logic into a wire File: C:/Users/minec/Desktop/github/PROJ300/Firmware/LED Panel Modelling/sv files/tristateN.sv Line: 3
+    Warning (13049): Converted tri-state buffer "led_controller_32:inst30|SN74HC595:inst|trisateN:inst2|q[3]" feeding internal logic into a wire File: C:/Users/minec/Desktop/github/PROJ300/Firmware/LED Panel Modelling/sv files/tristateN.sv Line: 3
+    Warning (13049): Converted tri-state buffer "led_controller_32:inst30|SN74HC595:inst|trisateN:inst2|q[2]" feeding internal logic into a wire File: C:/Users/minec/Desktop/github/PROJ300/Firmware/LED Panel Modelling/sv files/tristateN.sv Line: 3
+    Warning (13049): Converted tri-state buffer "led_controller_32:inst30|SN74HC595:inst|trisateN:inst2|q[1]" feeding internal logic into a wire File: C:/Users/minec/Desktop/github/PROJ300/Firmware/LED Panel Modelling/sv files/tristateN.sv Line: 3
+    Warning (13049): Converted tri-state buffer "led_controller_32:inst30|SN74HC595:inst|trisateN:inst2|q[0]" feeding internal logic into a wire File: C:/Users/minec/Desktop/github/PROJ300/Firmware/LED Panel Modelling/sv files/tristateN.sv Line: 3
+    Warning (13049): Converted tri-state buffer "led_controller_32:inst41|SN74HC595:inst4|trisateN:inst2|q[7]" feeding internal logic into a wire File: C:/Users/minec/Desktop/github/PROJ300/Firmware/LED Panel Modelling/sv files/tristateN.sv Line: 3
+    Warning (13049): Converted tri-state buffer "led_controller_32:inst41|SN74HC595:inst4|trisateN:inst2|q[6]" feeding internal logic into a wire File: C:/Users/minec/Desktop/github/PROJ300/Firmware/LED Panel Modelling/sv files/tristateN.sv Line: 3
+    Warning (13049): Converted tri-state buffer "led_controller_32:inst41|SN74HC595:inst4|trisateN:inst2|q[5]" feeding internal logic into a wire File: C:/Users/minec/Desktop/github/PROJ300/Firmware/LED Panel Modelling/sv files/tristateN.sv Line: 3
+    Warning (13049): Converted tri-state buffer "led_controller_32:inst41|SN74HC595:inst4|trisateN:inst2|q[4]" feeding internal logic into a wire File: C:/Users/minec/Desktop/github/PROJ300/Firmware/LED Panel Modelling/sv files/tristateN.sv Line: 3
+    Warning (13049): Converted tri-state buffer "led_controller_32:inst41|SN74HC595:inst4|trisateN:inst2|q[3]" feeding internal logic into a wire File: C:/Users/minec/Desktop/github/PROJ300/Firmware/LED Panel Modelling/sv files/tristateN.sv Line: 3
+    Warning (13049): Converted tri-state buffer "led_controller_32:inst41|SN74HC595:inst4|trisateN:inst2|q[2]" feeding internal logic into a wire File: C:/Users/minec/Desktop/github/PROJ300/Firmware/LED Panel Modelling/sv files/tristateN.sv Line: 3
+    Warning (13049): Converted tri-state buffer "led_controller_32:inst41|SN74HC595:inst4|trisateN:inst2|q[1]" feeding internal logic into a wire File: C:/Users/minec/Desktop/github/PROJ300/Firmware/LED Panel Modelling/sv files/tristateN.sv Line: 3
+    Warning (13049): Converted tri-state buffer "led_controller_32:inst41|SN74HC595:inst4|trisateN:inst2|q[0]" feeding internal logic into a wire File: C:/Users/minec/Desktop/github/PROJ300/Firmware/LED Panel Modelling/sv files/tristateN.sv Line: 3
+    Warning (13049): Converted tri-state buffer "led_controller_32:inst41|SN74HC595:inst3|trisateN:inst2|q[7]" feeding internal logic into a wire File: C:/Users/minec/Desktop/github/PROJ300/Firmware/LED Panel Modelling/sv files/tristateN.sv Line: 3
+    Warning (13049): Converted tri-state buffer "led_controller_32:inst41|SN74HC595:inst3|trisateN:inst2|q[6]" feeding internal logic into a wire File: C:/Users/minec/Desktop/github/PROJ300/Firmware/LED Panel Modelling/sv files/tristateN.sv Line: 3
+    Warning (13049): Converted tri-state buffer "led_controller_32:inst41|SN74HC595:inst3|trisateN:inst2|q[5]" feeding internal logic into a wire File: C:/Users/minec/Desktop/github/PROJ300/Firmware/LED Panel Modelling/sv files/tristateN.sv Line: 3
+    Warning (13049): Converted tri-state buffer "led_controller_32:inst41|SN74HC595:inst3|trisateN:inst2|q[4]" feeding internal logic into a wire File: C:/Users/minec/Desktop/github/PROJ300/Firmware/LED Panel Modelling/sv files/tristateN.sv Line: 3
+    Warning (13049): Converted tri-state buffer "led_controller_32:inst41|SN74HC595:inst3|trisateN:inst2|q[3]" feeding internal logic into a wire File: C:/Users/minec/Desktop/github/PROJ300/Firmware/LED Panel Modelling/sv files/tristateN.sv Line: 3
+    Warning (13049): Converted tri-state buffer "led_controller_32:inst41|SN74HC595:inst3|trisateN:inst2|q[2]" feeding internal logic into a wire File: C:/Users/minec/Desktop/github/PROJ300/Firmware/LED Panel Modelling/sv files/tristateN.sv Line: 3
+    Warning (13049): Converted tri-state buffer "led_controller_32:inst41|SN74HC595:inst3|trisateN:inst2|q[1]" feeding internal logic into a wire File: C:/Users/minec/Desktop/github/PROJ300/Firmware/LED Panel Modelling/sv files/tristateN.sv Line: 3
+    Warning (13049): Converted tri-state buffer "led_controller_32:inst41|SN74HC595:inst3|trisateN:inst2|q[0]" feeding internal logic into a wire File: C:/Users/minec/Desktop/github/PROJ300/Firmware/LED Panel Modelling/sv files/tristateN.sv Line: 3
+    Warning (13049): Converted tri-state buffer "led_controller_32:inst41|SN74HC595:inst2|trisateN:inst2|q[7]" feeding internal logic into a wire File: C:/Users/minec/Desktop/github/PROJ300/Firmware/LED Panel Modelling/sv files/tristateN.sv Line: 3
+    Warning (13049): Converted tri-state buffer "led_controller_32:inst41|SN74HC595:inst2|trisateN:inst2|q[6]" feeding internal logic into a wire File: C:/Users/minec/Desktop/github/PROJ300/Firmware/LED Panel Modelling/sv files/tristateN.sv Line: 3
+    Warning (13049): Converted tri-state buffer "led_controller_32:inst41|SN74HC595:inst2|trisateN:inst2|q[5]" feeding internal logic into a wire File: C:/Users/minec/Desktop/github/PROJ300/Firmware/LED Panel Modelling/sv files/tristateN.sv Line: 3
+    Warning (13049): Converted tri-state buffer "led_controller_32:inst41|SN74HC595:inst2|trisateN:inst2|q[4]" feeding internal logic into a wire File: C:/Users/minec/Desktop/github/PROJ300/Firmware/LED Panel Modelling/sv files/tristateN.sv Line: 3
+    Warning (13049): Converted tri-state buffer "led_controller_32:inst41|SN74HC595:inst2|trisateN:inst2|q[3]" feeding internal logic into a wire File: C:/Users/minec/Desktop/github/PROJ300/Firmware/LED Panel Modelling/sv files/tristateN.sv Line: 3
+    Warning (13049): Converted tri-state buffer "led_controller_32:inst41|SN74HC595:inst2|trisateN:inst2|q[2]" feeding internal logic into a wire File: C:/Users/minec/Desktop/github/PROJ300/Firmware/LED Panel Modelling/sv files/tristateN.sv Line: 3
+    Warning (13049): Converted tri-state buffer "led_controller_32:inst41|SN74HC595:inst2|trisateN:inst2|q[1]" feeding internal logic into a wire File: C:/Users/minec/Desktop/github/PROJ300/Firmware/LED Panel Modelling/sv files/tristateN.sv Line: 3
+    Warning (13049): Converted tri-state buffer "led_controller_32:inst41|SN74HC595:inst2|trisateN:inst2|q[0]" feeding internal logic into a wire File: C:/Users/minec/Desktop/github/PROJ300/Firmware/LED Panel Modelling/sv files/tristateN.sv Line: 3
+    Warning (13049): Converted tri-state buffer "led_controller_32:inst41|SN74HC595:inst|trisateN:inst2|q[7]" feeding internal logic into a wire File: C:/Users/minec/Desktop/github/PROJ300/Firmware/LED Panel Modelling/sv files/tristateN.sv Line: 3
+    Warning (13049): Converted tri-state buffer "led_controller_32:inst41|SN74HC595:inst|trisateN:inst2|q[6]" feeding internal logic into a wire File: C:/Users/minec/Desktop/github/PROJ300/Firmware/LED Panel Modelling/sv files/tristateN.sv Line: 3
+    Warning (13049): Converted tri-state buffer "led_controller_32:inst41|SN74HC595:inst|trisateN:inst2|q[5]" feeding internal logic into a wire File: C:/Users/minec/Desktop/github/PROJ300/Firmware/LED Panel Modelling/sv files/tristateN.sv Line: 3
+    Warning (13049): Converted tri-state buffer "led_controller_32:inst41|SN74HC595:inst|trisateN:inst2|q[4]" feeding internal logic into a wire File: C:/Users/minec/Desktop/github/PROJ300/Firmware/LED Panel Modelling/sv files/tristateN.sv Line: 3
+    Warning (13049): Converted tri-state buffer "led_controller_32:inst41|SN74HC595:inst|trisateN:inst2|q[3]" feeding internal logic into a wire File: C:/Users/minec/Desktop/github/PROJ300/Firmware/LED Panel Modelling/sv files/tristateN.sv Line: 3
+    Warning (13049): Converted tri-state buffer "led_controller_32:inst41|SN74HC595:inst|trisateN:inst2|q[2]" feeding internal logic into a wire File: C:/Users/minec/Desktop/github/PROJ300/Firmware/LED Panel Modelling/sv files/tristateN.sv Line: 3
+    Warning (13049): Converted tri-state buffer "led_controller_32:inst41|SN74HC595:inst|trisateN:inst2|q[1]" feeding internal logic into a wire File: C:/Users/minec/Desktop/github/PROJ300/Firmware/LED Panel Modelling/sv files/tristateN.sv Line: 3
+    Warning (13049): Converted tri-state buffer "led_controller_32:inst41|SN74HC595:inst|trisateN:inst2|q[0]" feeding internal logic into a wire File: C:/Users/minec/Desktop/github/PROJ300/Firmware/LED Panel Modelling/sv files/tristateN.sv Line: 3
+    Warning (13049): Converted tri-state buffer "led_controller_32:inst40|SN74HC595:inst4|trisateN:inst2|q[7]" feeding internal logic into a wire File: C:/Users/minec/Desktop/github/PROJ300/Firmware/LED Panel Modelling/sv files/tristateN.sv Line: 3
+    Warning (13049): Converted tri-state buffer "led_controller_32:inst40|SN74HC595:inst4|trisateN:inst2|q[6]" feeding internal logic into a wire File: C:/Users/minec/Desktop/github/PROJ300/Firmware/LED Panel Modelling/sv files/tristateN.sv Line: 3
+    Warning (13049): Converted tri-state buffer "led_controller_32:inst40|SN74HC595:inst4|trisateN:inst2|q[5]" feeding internal logic into a wire File: C:/Users/minec/Desktop/github/PROJ300/Firmware/LED Panel Modelling/sv files/tristateN.sv Line: 3
+    Warning (13049): Converted tri-state buffer "led_controller_32:inst40|SN74HC595:inst4|trisateN:inst2|q[4]" feeding internal logic into a wire File: C:/Users/minec/Desktop/github/PROJ300/Firmware/LED Panel Modelling/sv files/tristateN.sv Line: 3
+    Warning (13049): Converted tri-state buffer "led_controller_32:inst40|SN74HC595:inst4|trisateN:inst2|q[3]" feeding internal logic into a wire File: C:/Users/minec/Desktop/github/PROJ300/Firmware/LED Panel Modelling/sv files/tristateN.sv Line: 3
+    Warning (13049): Converted tri-state buffer "led_controller_32:inst40|SN74HC595:inst4|trisateN:inst2|q[2]" feeding internal logic into a wire File: C:/Users/minec/Desktop/github/PROJ300/Firmware/LED Panel Modelling/sv files/tristateN.sv Line: 3
+    Warning (13049): Converted tri-state buffer "led_controller_32:inst40|SN74HC595:inst4|trisateN:inst2|q[1]" feeding internal logic into a wire File: C:/Users/minec/Desktop/github/PROJ300/Firmware/LED Panel Modelling/sv files/tristateN.sv Line: 3
+    Warning (13049): Converted tri-state buffer "led_controller_32:inst40|SN74HC595:inst4|trisateN:inst2|q[0]" feeding internal logic into a wire File: C:/Users/minec/Desktop/github/PROJ300/Firmware/LED Panel Modelling/sv files/tristateN.sv Line: 3
+    Warning (13049): Converted tri-state buffer "led_controller_32:inst40|SN74HC595:inst3|trisateN:inst2|q[7]" feeding internal logic into a wire File: C:/Users/minec/Desktop/github/PROJ300/Firmware/LED Panel Modelling/sv files/tristateN.sv Line: 3
+    Warning (13049): Converted tri-state buffer "led_controller_32:inst40|SN74HC595:inst3|trisateN:inst2|q[6]" feeding internal logic into a wire File: C:/Users/minec/Desktop/github/PROJ300/Firmware/LED Panel Modelling/sv files/tristateN.sv Line: 3
+    Warning (13049): Converted tri-state buffer "led_controller_32:inst40|SN74HC595:inst3|trisateN:inst2|q[5]" feeding internal logic into a wire File: C:/Users/minec/Desktop/github/PROJ300/Firmware/LED Panel Modelling/sv files/tristateN.sv Line: 3
+    Warning (13049): Converted tri-state buffer "led_controller_32:inst40|SN74HC595:inst3|trisateN:inst2|q[4]" feeding internal logic into a wire File: C:/Users/minec/Desktop/github/PROJ300/Firmware/LED Panel Modelling/sv files/tristateN.sv Line: 3
+    Warning (13049): Converted tri-state buffer "led_controller_32:inst40|SN74HC595:inst3|trisateN:inst2|q[3]" feeding internal logic into a wire File: C:/Users/minec/Desktop/github/PROJ300/Firmware/LED Panel Modelling/sv files/tristateN.sv Line: 3
+    Warning (13049): Converted tri-state buffer "led_controller_32:inst40|SN74HC595:inst3|trisateN:inst2|q[2]" feeding internal logic into a wire File: C:/Users/minec/Desktop/github/PROJ300/Firmware/LED Panel Modelling/sv files/tristateN.sv Line: 3
+    Warning (13049): Converted tri-state buffer "led_controller_32:inst40|SN74HC595:inst3|trisateN:inst2|q[1]" feeding internal logic into a wire File: C:/Users/minec/Desktop/github/PROJ300/Firmware/LED Panel Modelling/sv files/tristateN.sv Line: 3
+    Warning (13049): Converted tri-state buffer "led_controller_32:inst40|SN74HC595:inst3|trisateN:inst2|q[0]" feeding internal logic into a wire File: C:/Users/minec/Desktop/github/PROJ300/Firmware/LED Panel Modelling/sv files/tristateN.sv Line: 3
+    Warning (13049): Converted tri-state buffer "led_controller_32:inst40|SN74HC595:inst2|trisateN:inst2|q[7]" feeding internal logic into a wire File: C:/Users/minec/Desktop/github/PROJ300/Firmware/LED Panel Modelling/sv files/tristateN.sv Line: 3
+    Warning (13049): Converted tri-state buffer "led_controller_32:inst40|SN74HC595:inst2|trisateN:inst2|q[6]" feeding internal logic into a wire File: C:/Users/minec/Desktop/github/PROJ300/Firmware/LED Panel Modelling/sv files/tristateN.sv Line: 3
+    Warning (13049): Converted tri-state buffer "led_controller_32:inst40|SN74HC595:inst2|trisateN:inst2|q[5]" feeding internal logic into a wire File: C:/Users/minec/Desktop/github/PROJ300/Firmware/LED Panel Modelling/sv files/tristateN.sv Line: 3
+    Warning (13049): Converted tri-state buffer "led_controller_32:inst40|SN74HC595:inst2|trisateN:inst2|q[4]" feeding internal logic into a wire File: C:/Users/minec/Desktop/github/PROJ300/Firmware/LED Panel Modelling/sv files/tristateN.sv Line: 3
+    Warning (13049): Converted tri-state buffer "led_controller_32:inst40|SN74HC595:inst2|trisateN:inst2|q[3]" feeding internal logic into a wire File: C:/Users/minec/Desktop/github/PROJ300/Firmware/LED Panel Modelling/sv files/tristateN.sv Line: 3
+    Warning (13049): Converted tri-state buffer "led_controller_32:inst40|SN74HC595:inst2|trisateN:inst2|q[2]" feeding internal logic into a wire File: C:/Users/minec/Desktop/github/PROJ300/Firmware/LED Panel Modelling/sv files/tristateN.sv Line: 3
+    Warning (13049): Converted tri-state buffer "led_controller_32:inst40|SN74HC595:inst2|trisateN:inst2|q[1]" feeding internal logic into a wire File: C:/Users/minec/Desktop/github/PROJ300/Firmware/LED Panel Modelling/sv files/tristateN.sv Line: 3
+    Warning (13049): Converted tri-state buffer "led_controller_32:inst40|SN74HC595:inst2|trisateN:inst2|q[0]" feeding internal logic into a wire File: C:/Users/minec/Desktop/github/PROJ300/Firmware/LED Panel Modelling/sv files/tristateN.sv Line: 3
+    Warning (13049): Converted tri-state buffer "led_controller_32:inst40|SN74HC595:inst|trisateN:inst2|q[7]" feeding internal logic into a wire File: C:/Users/minec/Desktop/github/PROJ300/Firmware/LED Panel Modelling/sv files/tristateN.sv Line: 3
+    Warning (13049): Converted tri-state buffer "led_controller_32:inst40|SN74HC595:inst|trisateN:inst2|q[6]" feeding internal logic into a wire File: C:/Users/minec/Desktop/github/PROJ300/Firmware/LED Panel Modelling/sv files/tristateN.sv Line: 3
+    Warning (13049): Converted tri-state buffer "led_controller_32:inst40|SN74HC595:inst|trisateN:inst2|q[5]" feeding internal logic into a wire File: C:/Users/minec/Desktop/github/PROJ300/Firmware/LED Panel Modelling/sv files/tristateN.sv Line: 3
+    Warning (13049): Converted tri-state buffer "led_controller_32:inst40|SN74HC595:inst|trisateN:inst2|q[4]" feeding internal logic into a wire File: C:/Users/minec/Desktop/github/PROJ300/Firmware/LED Panel Modelling/sv files/tristateN.sv Line: 3
+    Warning (13049): Converted tri-state buffer "led_controller_32:inst40|SN74HC595:inst|trisateN:inst2|q[3]" feeding internal logic into a wire File: C:/Users/minec/Desktop/github/PROJ300/Firmware/LED Panel Modelling/sv files/tristateN.sv Line: 3
+    Warning (13049): Converted tri-state buffer "led_controller_32:inst40|SN74HC595:inst|trisateN:inst2|q[2]" feeding internal logic into a wire File: C:/Users/minec/Desktop/github/PROJ300/Firmware/LED Panel Modelling/sv files/tristateN.sv Line: 3
+    Warning (13049): Converted tri-state buffer "led_controller_32:inst40|SN74HC595:inst|trisateN:inst2|q[1]" feeding internal logic into a wire File: C:/Users/minec/Desktop/github/PROJ300/Firmware/LED Panel Modelling/sv files/tristateN.sv Line: 3
+    Warning (13049): Converted tri-state buffer "led_controller_32:inst40|SN74HC595:inst|trisateN:inst2|q[0]" feeding internal logic into a wire File: C:/Users/minec/Desktop/github/PROJ300/Firmware/LED Panel Modelling/sv files/tristateN.sv Line: 3
+    Warning (13049): Converted tri-state buffer "led_controller_32:inst|SN74HC595:inst4|trisateN:inst2|q[7]" feeding internal logic into a wire File: C:/Users/minec/Desktop/github/PROJ300/Firmware/LED Panel Modelling/sv files/tristateN.sv Line: 3
+    Warning (13049): Converted tri-state buffer "led_controller_32:inst|SN74HC595:inst4|trisateN:inst2|q[6]" feeding internal logic into a wire File: C:/Users/minec/Desktop/github/PROJ300/Firmware/LED Panel Modelling/sv files/tristateN.sv Line: 3
+    Warning (13049): Converted tri-state buffer "led_controller_32:inst|SN74HC595:inst4|trisateN:inst2|q[5]" feeding internal logic into a wire File: C:/Users/minec/Desktop/github/PROJ300/Firmware/LED Panel Modelling/sv files/tristateN.sv Line: 3
+    Warning (13049): Converted tri-state buffer "led_controller_32:inst|SN74HC595:inst4|trisateN:inst2|q[4]" feeding internal logic into a wire File: C:/Users/minec/Desktop/github/PROJ300/Firmware/LED Panel Modelling/sv files/tristateN.sv Line: 3
+    Warning (13049): Converted tri-state buffer "led_controller_32:inst|SN74HC595:inst4|trisateN:inst2|q[3]" feeding internal logic into a wire File: C:/Users/minec/Desktop/github/PROJ300/Firmware/LED Panel Modelling/sv files/tristateN.sv Line: 3
+    Warning (13049): Converted tri-state buffer "led_controller_32:inst|SN74HC595:inst4|trisateN:inst2|q[2]" feeding internal logic into a wire File: C:/Users/minec/Desktop/github/PROJ300/Firmware/LED Panel Modelling/sv files/tristateN.sv Line: 3
+    Warning (13049): Converted tri-state buffer "led_controller_32:inst|SN74HC595:inst4|trisateN:inst2|q[1]" feeding internal logic into a wire File: C:/Users/minec/Desktop/github/PROJ300/Firmware/LED Panel Modelling/sv files/tristateN.sv Line: 3
+    Warning (13049): Converted tri-state buffer "led_controller_32:inst|SN74HC595:inst4|trisateN:inst2|q[0]" feeding internal logic into a wire File: C:/Users/minec/Desktop/github/PROJ300/Firmware/LED Panel Modelling/sv files/tristateN.sv Line: 3
+    Warning (13049): Converted tri-state buffer "led_controller_32:inst|SN74HC595:inst3|trisateN:inst2|q[7]" feeding internal logic into a wire File: C:/Users/minec/Desktop/github/PROJ300/Firmware/LED Panel Modelling/sv files/tristateN.sv Line: 3
+    Warning (13049): Converted tri-state buffer "led_controller_32:inst|SN74HC595:inst3|trisateN:inst2|q[6]" feeding internal logic into a wire File: C:/Users/minec/Desktop/github/PROJ300/Firmware/LED Panel Modelling/sv files/tristateN.sv Line: 3
+    Warning (13049): Converted tri-state buffer "led_controller_32:inst|SN74HC595:inst3|trisateN:inst2|q[5]" feeding internal logic into a wire File: C:/Users/minec/Desktop/github/PROJ300/Firmware/LED Panel Modelling/sv files/tristateN.sv Line: 3
+    Warning (13049): Converted tri-state buffer "led_controller_32:inst|SN74HC595:inst3|trisateN:inst2|q[4]" feeding internal logic into a wire File: C:/Users/minec/Desktop/github/PROJ300/Firmware/LED Panel Modelling/sv files/tristateN.sv Line: 3
+    Warning (13049): Converted tri-state buffer "led_controller_32:inst|SN74HC595:inst3|trisateN:inst2|q[3]" feeding internal logic into a wire File: C:/Users/minec/Desktop/github/PROJ300/Firmware/LED Panel Modelling/sv files/tristateN.sv Line: 3
+    Warning (13049): Converted tri-state buffer "led_controller_32:inst|SN74HC595:inst3|trisateN:inst2|q[2]" feeding internal logic into a wire File: C:/Users/minec/Desktop/github/PROJ300/Firmware/LED Panel Modelling/sv files/tristateN.sv Line: 3
+    Warning (13049): Converted tri-state buffer "led_controller_32:inst|SN74HC595:inst3|trisateN:inst2|q[1]" feeding internal logic into a wire File: C:/Users/minec/Desktop/github/PROJ300/Firmware/LED Panel Modelling/sv files/tristateN.sv Line: 3
+    Warning (13049): Converted tri-state buffer "led_controller_32:inst|SN74HC595:inst3|trisateN:inst2|q[0]" feeding internal logic into a wire File: C:/Users/minec/Desktop/github/PROJ300/Firmware/LED Panel Modelling/sv files/tristateN.sv Line: 3
+    Warning (13049): Converted tri-state buffer "led_controller_32:inst|SN74HC595:inst2|trisateN:inst2|q[7]" feeding internal logic into a wire File: C:/Users/minec/Desktop/github/PROJ300/Firmware/LED Panel Modelling/sv files/tristateN.sv Line: 3
+    Warning (13049): Converted tri-state buffer "led_controller_32:inst|SN74HC595:inst2|trisateN:inst2|q[6]" feeding internal logic into a wire File: C:/Users/minec/Desktop/github/PROJ300/Firmware/LED Panel Modelling/sv files/tristateN.sv Line: 3
+    Warning (13049): Converted tri-state buffer "led_controller_32:inst|SN74HC595:inst2|trisateN:inst2|q[5]" feeding internal logic into a wire File: C:/Users/minec/Desktop/github/PROJ300/Firmware/LED Panel Modelling/sv files/tristateN.sv Line: 3
+    Warning (13049): Converted tri-state buffer "led_controller_32:inst|SN74HC595:inst2|trisateN:inst2|q[4]" feeding internal logic into a wire File: C:/Users/minec/Desktop/github/PROJ300/Firmware/LED Panel Modelling/sv files/tristateN.sv Line: 3
+    Warning (13049): Converted tri-state buffer "led_controller_32:inst|SN74HC595:inst2|trisateN:inst2|q[3]" feeding internal logic into a wire File: C:/Users/minec/Desktop/github/PROJ300/Firmware/LED Panel Modelling/sv files/tristateN.sv Line: 3
+    Warning (13049): Converted tri-state buffer "led_controller_32:inst|SN74HC595:inst2|trisateN:inst2|q[2]" feeding internal logic into a wire File: C:/Users/minec/Desktop/github/PROJ300/Firmware/LED Panel Modelling/sv files/tristateN.sv Line: 3
+    Warning (13049): Converted tri-state buffer "led_controller_32:inst|SN74HC595:inst2|trisateN:inst2|q[1]" feeding internal logic into a wire File: C:/Users/minec/Desktop/github/PROJ300/Firmware/LED Panel Modelling/sv files/tristateN.sv Line: 3
+    Warning (13049): Converted tri-state buffer "led_controller_32:inst|SN74HC595:inst2|trisateN:inst2|q[0]" feeding internal logic into a wire File: C:/Users/minec/Desktop/github/PROJ300/Firmware/LED Panel Modelling/sv files/tristateN.sv Line: 3
+    Warning (13049): Converted tri-state buffer "led_controller_32:inst|SN74HC595:inst|trisateN:inst2|q[7]" feeding internal logic into a wire File: C:/Users/minec/Desktop/github/PROJ300/Firmware/LED Panel Modelling/sv files/tristateN.sv Line: 3
+    Warning (13049): Converted tri-state buffer "led_controller_32:inst|SN74HC595:inst|trisateN:inst2|q[6]" feeding internal logic into a wire File: C:/Users/minec/Desktop/github/PROJ300/Firmware/LED Panel Modelling/sv files/tristateN.sv Line: 3
+    Warning (13049): Converted tri-state buffer "led_controller_32:inst|SN74HC595:inst|trisateN:inst2|q[5]" feeding internal logic into a wire File: C:/Users/minec/Desktop/github/PROJ300/Firmware/LED Panel Modelling/sv files/tristateN.sv Line: 3
+    Warning (13049): Converted tri-state buffer "led_controller_32:inst|SN74HC595:inst|trisateN:inst2|q[4]" feeding internal logic into a wire File: C:/Users/minec/Desktop/github/PROJ300/Firmware/LED Panel Modelling/sv files/tristateN.sv Line: 3
+    Warning (13049): Converted tri-state buffer "led_controller_32:inst|SN74HC595:inst|trisateN:inst2|q[3]" feeding internal logic into a wire File: C:/Users/minec/Desktop/github/PROJ300/Firmware/LED Panel Modelling/sv files/tristateN.sv Line: 3
+    Warning (13049): Converted tri-state buffer "led_controller_32:inst|SN74HC595:inst|trisateN:inst2|q[2]" feeding internal logic into a wire File: C:/Users/minec/Desktop/github/PROJ300/Firmware/LED Panel Modelling/sv files/tristateN.sv Line: 3
+    Warning (13049): Converted tri-state buffer "led_controller_32:inst|SN74HC595:inst|trisateN:inst2|q[1]" feeding internal logic into a wire File: C:/Users/minec/Desktop/github/PROJ300/Firmware/LED Panel Modelling/sv files/tristateN.sv Line: 3
+    Warning (13049): Converted tri-state buffer "led_controller_32:inst|SN74HC595:inst|trisateN:inst2|q[0]" feeding internal logic into a wire File: C:/Users/minec/Desktop/github/PROJ300/Firmware/LED Panel Modelling/sv files/tristateN.sv Line: 3
+Warning (14026): LATCH primitive "led_controller_32:inst30|SN74HC595:inst4|regN:inst1|internal_reg[0]" is permanently enabled File: C:/Users/minec/Desktop/github/PROJ300/Firmware/LED Panel Modelling/sv files/regN.sv Line: 20
+Warning (14026): LATCH primitive "led_controller_32:inst30|SN74HC595:inst4|regN:inst1|internal_reg[1]" is permanently enabled File: C:/Users/minec/Desktop/github/PROJ300/Firmware/LED Panel Modelling/sv files/regN.sv Line: 20
+Warning (14026): LATCH primitive "led_controller_32:inst30|SN74HC595:inst4|regN:inst1|internal_reg[2]" is permanently enabled File: C:/Users/minec/Desktop/github/PROJ300/Firmware/LED Panel Modelling/sv files/regN.sv Line: 20
+Warning (14026): LATCH primitive "led_controller_32:inst30|SN74HC595:inst4|regN:inst1|internal_reg[3]" is permanently enabled File: C:/Users/minec/Desktop/github/PROJ300/Firmware/LED Panel Modelling/sv files/regN.sv Line: 20
+Warning (14026): LATCH primitive "led_controller_32:inst30|SN74HC595:inst4|regN:inst1|internal_reg[4]" is permanently enabled File: C:/Users/minec/Desktop/github/PROJ300/Firmware/LED Panel Modelling/sv files/regN.sv Line: 20
+Warning (14026): LATCH primitive "led_controller_32:inst30|SN74HC595:inst4|regN:inst1|internal_reg[5]" is permanently enabled File: C:/Users/minec/Desktop/github/PROJ300/Firmware/LED Panel Modelling/sv files/regN.sv Line: 20
+Warning (14026): LATCH primitive "led_controller_32:inst30|SN74HC595:inst4|regN:inst1|internal_reg[6]" is permanently enabled File: C:/Users/minec/Desktop/github/PROJ300/Firmware/LED Panel Modelling/sv files/regN.sv Line: 20
+Warning (14026): LATCH primitive "led_controller_32:inst30|SN74HC595:inst4|regN:inst1|internal_reg[7]" is permanently enabled File: C:/Users/minec/Desktop/github/PROJ300/Firmware/LED Panel Modelling/sv files/regN.sv Line: 20
+Warning (14026): LATCH primitive "led_controller_32:inst30|SN74HC595:inst3|regN:inst1|internal_reg[0]" is permanently enabled File: C:/Users/minec/Desktop/github/PROJ300/Firmware/LED Panel Modelling/sv files/regN.sv Line: 20
+Warning (14026): LATCH primitive "led_controller_32:inst30|SN74HC595:inst3|regN:inst1|internal_reg[1]" is permanently enabled File: C:/Users/minec/Desktop/github/PROJ300/Firmware/LED Panel Modelling/sv files/regN.sv Line: 20
+Warning (14026): LATCH primitive "led_controller_32:inst30|SN74HC595:inst3|regN:inst1|internal_reg[2]" is permanently enabled File: C:/Users/minec/Desktop/github/PROJ300/Firmware/LED Panel Modelling/sv files/regN.sv Line: 20
+Warning (14026): LATCH primitive "led_controller_32:inst30|SN74HC595:inst3|regN:inst1|internal_reg[3]" is permanently enabled File: C:/Users/minec/Desktop/github/PROJ300/Firmware/LED Panel Modelling/sv files/regN.sv Line: 20
+Warning (14026): LATCH primitive "led_controller_32:inst30|SN74HC595:inst3|regN:inst1|internal_reg[4]" is permanently enabled File: C:/Users/minec/Desktop/github/PROJ300/Firmware/LED Panel Modelling/sv files/regN.sv Line: 20
+Warning (14026): LATCH primitive "led_controller_32:inst30|SN74HC595:inst3|regN:inst1|internal_reg[5]" is permanently enabled File: C:/Users/minec/Desktop/github/PROJ300/Firmware/LED Panel Modelling/sv files/regN.sv Line: 20
+Warning (14026): LATCH primitive "led_controller_32:inst30|SN74HC595:inst3|regN:inst1|internal_reg[6]" is permanently enabled File: C:/Users/minec/Desktop/github/PROJ300/Firmware/LED Panel Modelling/sv files/regN.sv Line: 20
+Warning (14026): LATCH primitive "led_controller_32:inst30|SN74HC595:inst3|regN:inst1|internal_reg[7]" is permanently enabled File: C:/Users/minec/Desktop/github/PROJ300/Firmware/LED Panel Modelling/sv files/regN.sv Line: 20
+Warning (14026): LATCH primitive "led_controller_32:inst30|SN74HC595:inst2|regN:inst1|internal_reg[0]" is permanently enabled File: C:/Users/minec/Desktop/github/PROJ300/Firmware/LED Panel Modelling/sv files/regN.sv Line: 20
+Warning (14026): LATCH primitive "led_controller_32:inst30|SN74HC595:inst2|regN:inst1|internal_reg[1]" is permanently enabled File: C:/Users/minec/Desktop/github/PROJ300/Firmware/LED Panel Modelling/sv files/regN.sv Line: 20
+Warning (14026): LATCH primitive "led_controller_32:inst30|SN74HC595:inst2|regN:inst1|internal_reg[2]" is permanently enabled File: C:/Users/minec/Desktop/github/PROJ300/Firmware/LED Panel Modelling/sv files/regN.sv Line: 20
+Warning (14026): LATCH primitive "led_controller_32:inst30|SN74HC595:inst2|regN:inst1|internal_reg[3]" is permanently enabled File: C:/Users/minec/Desktop/github/PROJ300/Firmware/LED Panel Modelling/sv files/regN.sv Line: 20
+Warning (14026): LATCH primitive "led_controller_32:inst30|SN74HC595:inst2|regN:inst1|internal_reg[4]" is permanently enabled File: C:/Users/minec/Desktop/github/PROJ300/Firmware/LED Panel Modelling/sv files/regN.sv Line: 20
+Warning (14026): LATCH primitive "led_controller_32:inst30|SN74HC595:inst2|regN:inst1|internal_reg[5]" is permanently enabled File: C:/Users/minec/Desktop/github/PROJ300/Firmware/LED Panel Modelling/sv files/regN.sv Line: 20
+Warning (14026): LATCH primitive "led_controller_32:inst30|SN74HC595:inst2|regN:inst1|internal_reg[6]" is permanently enabled File: C:/Users/minec/Desktop/github/PROJ300/Firmware/LED Panel Modelling/sv files/regN.sv Line: 20
+Warning (14026): LATCH primitive "led_controller_32:inst30|SN74HC595:inst2|regN:inst1|internal_reg[7]" is permanently enabled File: C:/Users/minec/Desktop/github/PROJ300/Firmware/LED Panel Modelling/sv files/regN.sv Line: 20
+Warning (14026): LATCH primitive "led_controller_32:inst30|SN74HC595:inst|regN:inst1|internal_reg[0]" is permanently enabled File: C:/Users/minec/Desktop/github/PROJ300/Firmware/LED Panel Modelling/sv files/regN.sv Line: 20
+Warning (14026): LATCH primitive "led_controller_32:inst30|SN74HC595:inst|regN:inst1|internal_reg[1]" is permanently enabled File: C:/Users/minec/Desktop/github/PROJ300/Firmware/LED Panel Modelling/sv files/regN.sv Line: 20
+Warning (14026): LATCH primitive "led_controller_32:inst30|SN74HC595:inst|regN:inst1|internal_reg[2]" is permanently enabled File: C:/Users/minec/Desktop/github/PROJ300/Firmware/LED Panel Modelling/sv files/regN.sv Line: 20
+Warning (14026): LATCH primitive "led_controller_32:inst30|SN74HC595:inst|regN:inst1|internal_reg[3]" is permanently enabled File: C:/Users/minec/Desktop/github/PROJ300/Firmware/LED Panel Modelling/sv files/regN.sv Line: 20
+Warning (14026): LATCH primitive "led_controller_32:inst30|SN74HC595:inst|regN:inst1|internal_reg[4]" is permanently enabled File: C:/Users/minec/Desktop/github/PROJ300/Firmware/LED Panel Modelling/sv files/regN.sv Line: 20
+Warning (14026): LATCH primitive "led_controller_32:inst30|SN74HC595:inst|regN:inst1|internal_reg[5]" is permanently enabled File: C:/Users/minec/Desktop/github/PROJ300/Firmware/LED Panel Modelling/sv files/regN.sv Line: 20
+Warning (14026): LATCH primitive "led_controller_32:inst30|SN74HC595:inst|regN:inst1|internal_reg[6]" is permanently enabled File: C:/Users/minec/Desktop/github/PROJ300/Firmware/LED Panel Modelling/sv files/regN.sv Line: 20
+Warning (14026): LATCH primitive "led_controller_32:inst30|SN74HC595:inst|regN:inst1|internal_reg[7]" is permanently enabled File: C:/Users/minec/Desktop/github/PROJ300/Firmware/LED Panel Modelling/sv files/regN.sv Line: 20
+Warning (14026): LATCH primitive "led_controller_32:inst41|SN74HC595:inst4|regN:inst1|internal_reg[0]" is permanently enabled File: C:/Users/minec/Desktop/github/PROJ300/Firmware/LED Panel Modelling/sv files/regN.sv Line: 20
+Warning (14026): LATCH primitive "led_controller_32:inst41|SN74HC595:inst4|regN:inst1|internal_reg[1]" is permanently enabled File: C:/Users/minec/Desktop/github/PROJ300/Firmware/LED Panel Modelling/sv files/regN.sv Line: 20
+Warning (14026): LATCH primitive "led_controller_32:inst41|SN74HC595:inst4|regN:inst1|internal_reg[2]" is permanently enabled File: C:/Users/minec/Desktop/github/PROJ300/Firmware/LED Panel Modelling/sv files/regN.sv Line: 20
+Warning (14026): LATCH primitive "led_controller_32:inst41|SN74HC595:inst4|regN:inst1|internal_reg[3]" is permanently enabled File: C:/Users/minec/Desktop/github/PROJ300/Firmware/LED Panel Modelling/sv files/regN.sv Line: 20
+Warning (14026): LATCH primitive "led_controller_32:inst41|SN74HC595:inst4|regN:inst1|internal_reg[4]" is permanently enabled File: C:/Users/minec/Desktop/github/PROJ300/Firmware/LED Panel Modelling/sv files/regN.sv Line: 20
+Warning (14026): LATCH primitive "led_controller_32:inst41|SN74HC595:inst4|regN:inst1|internal_reg[5]" is permanently enabled File: C:/Users/minec/Desktop/github/PROJ300/Firmware/LED Panel Modelling/sv files/regN.sv Line: 20
+Warning (14026): LATCH primitive "led_controller_32:inst41|SN74HC595:inst4|regN:inst1|internal_reg[6]" is permanently enabled File: C:/Users/minec/Desktop/github/PROJ300/Firmware/LED Panel Modelling/sv files/regN.sv Line: 20
+Warning (14026): LATCH primitive "led_controller_32:inst41|SN74HC595:inst4|regN:inst1|internal_reg[7]" is permanently enabled File: C:/Users/minec/Desktop/github/PROJ300/Firmware/LED Panel Modelling/sv files/regN.sv Line: 20
+Warning (14026): LATCH primitive "led_controller_32:inst41|SN74HC595:inst3|regN:inst1|internal_reg[0]" is permanently enabled File: C:/Users/minec/Desktop/github/PROJ300/Firmware/LED Panel Modelling/sv files/regN.sv Line: 20
+Warning (14026): LATCH primitive "led_controller_32:inst41|SN74HC595:inst3|regN:inst1|internal_reg[1]" is permanently enabled File: C:/Users/minec/Desktop/github/PROJ300/Firmware/LED Panel Modelling/sv files/regN.sv Line: 20
+Warning (14026): LATCH primitive "led_controller_32:inst41|SN74HC595:inst3|regN:inst1|internal_reg[2]" is permanently enabled File: C:/Users/minec/Desktop/github/PROJ300/Firmware/LED Panel Modelling/sv files/regN.sv Line: 20
+Warning (14026): LATCH primitive "led_controller_32:inst41|SN74HC595:inst3|regN:inst1|internal_reg[3]" is permanently enabled File: C:/Users/minec/Desktop/github/PROJ300/Firmware/LED Panel Modelling/sv files/regN.sv Line: 20
+Warning (14026): LATCH primitive "led_controller_32:inst41|SN74HC595:inst3|regN:inst1|internal_reg[4]" is permanently enabled File: C:/Users/minec/Desktop/github/PROJ300/Firmware/LED Panel Modelling/sv files/regN.sv Line: 20
+Warning (14026): LATCH primitive "led_controller_32:inst41|SN74HC595:inst3|regN:inst1|internal_reg[5]" is permanently enabled File: C:/Users/minec/Desktop/github/PROJ300/Firmware/LED Panel Modelling/sv files/regN.sv Line: 20
+Warning (14026): LATCH primitive "led_controller_32:inst41|SN74HC595:inst3|regN:inst1|internal_reg[6]" is permanently enabled File: C:/Users/minec/Desktop/github/PROJ300/Firmware/LED Panel Modelling/sv files/regN.sv Line: 20
+Warning (14026): LATCH primitive "led_controller_32:inst41|SN74HC595:inst3|regN:inst1|internal_reg[7]" is permanently enabled File: C:/Users/minec/Desktop/github/PROJ300/Firmware/LED Panel Modelling/sv files/regN.sv Line: 20
+Warning (14026): LATCH primitive "led_controller_32:inst41|SN74HC595:inst2|regN:inst1|internal_reg[0]" is permanently enabled File: C:/Users/minec/Desktop/github/PROJ300/Firmware/LED Panel Modelling/sv files/regN.sv Line: 20
+Warning (14026): LATCH primitive "led_controller_32:inst41|SN74HC595:inst2|regN:inst1|internal_reg[1]" is permanently enabled File: C:/Users/minec/Desktop/github/PROJ300/Firmware/LED Panel Modelling/sv files/regN.sv Line: 20
+Warning (14026): LATCH primitive "led_controller_32:inst41|SN74HC595:inst2|regN:inst1|internal_reg[2]" is permanently enabled File: C:/Users/minec/Desktop/github/PROJ300/Firmware/LED Panel Modelling/sv files/regN.sv Line: 20
+Warning (14026): LATCH primitive "led_controller_32:inst41|SN74HC595:inst2|regN:inst1|internal_reg[3]" is permanently enabled File: C:/Users/minec/Desktop/github/PROJ300/Firmware/LED Panel Modelling/sv files/regN.sv Line: 20
+Warning (14026): LATCH primitive "led_controller_32:inst41|SN74HC595:inst2|regN:inst1|internal_reg[4]" is permanently enabled File: C:/Users/minec/Desktop/github/PROJ300/Firmware/LED Panel Modelling/sv files/regN.sv Line: 20
+Warning (14026): LATCH primitive "led_controller_32:inst41|SN74HC595:inst2|regN:inst1|internal_reg[5]" is permanently enabled File: C:/Users/minec/Desktop/github/PROJ300/Firmware/LED Panel Modelling/sv files/regN.sv Line: 20
+Warning (14026): LATCH primitive "led_controller_32:inst41|SN74HC595:inst2|regN:inst1|internal_reg[6]" is permanently enabled File: C:/Users/minec/Desktop/github/PROJ300/Firmware/LED Panel Modelling/sv files/regN.sv Line: 20
+Warning (14026): LATCH primitive "led_controller_32:inst41|SN74HC595:inst2|regN:inst1|internal_reg[7]" is permanently enabled File: C:/Users/minec/Desktop/github/PROJ300/Firmware/LED Panel Modelling/sv files/regN.sv Line: 20
+Warning (14026): LATCH primitive "led_controller_32:inst41|SN74HC595:inst|regN:inst1|internal_reg[0]" is permanently enabled File: C:/Users/minec/Desktop/github/PROJ300/Firmware/LED Panel Modelling/sv files/regN.sv Line: 20
+Warning (14026): LATCH primitive "led_controller_32:inst41|SN74HC595:inst|regN:inst1|internal_reg[1]" is permanently enabled File: C:/Users/minec/Desktop/github/PROJ300/Firmware/LED Panel Modelling/sv files/regN.sv Line: 20
+Warning (14026): LATCH primitive "led_controller_32:inst41|SN74HC595:inst|regN:inst1|internal_reg[2]" is permanently enabled File: C:/Users/minec/Desktop/github/PROJ300/Firmware/LED Panel Modelling/sv files/regN.sv Line: 20
+Warning (14026): LATCH primitive "led_controller_32:inst41|SN74HC595:inst|regN:inst1|internal_reg[3]" is permanently enabled File: C:/Users/minec/Desktop/github/PROJ300/Firmware/LED Panel Modelling/sv files/regN.sv Line: 20
+Warning (14026): LATCH primitive "led_controller_32:inst41|SN74HC595:inst|regN:inst1|internal_reg[4]" is permanently enabled File: C:/Users/minec/Desktop/github/PROJ300/Firmware/LED Panel Modelling/sv files/regN.sv Line: 20
+Warning (14026): LATCH primitive "led_controller_32:inst41|SN74HC595:inst|regN:inst1|internal_reg[5]" is permanently enabled File: C:/Users/minec/Desktop/github/PROJ300/Firmware/LED Panel Modelling/sv files/regN.sv Line: 20
+Warning (14026): LATCH primitive "led_controller_32:inst41|SN74HC595:inst|regN:inst1|internal_reg[6]" is permanently enabled File: C:/Users/minec/Desktop/github/PROJ300/Firmware/LED Panel Modelling/sv files/regN.sv Line: 20
+Warning (14026): LATCH primitive "led_controller_32:inst41|SN74HC595:inst|regN:inst1|internal_reg[7]" is permanently enabled File: C:/Users/minec/Desktop/github/PROJ300/Firmware/LED Panel Modelling/sv files/regN.sv Line: 20
+Warning (14026): LATCH primitive "led_controller_32:inst40|SN74HC595:inst4|regN:inst1|internal_reg[0]" is permanently enabled File: C:/Users/minec/Desktop/github/PROJ300/Firmware/LED Panel Modelling/sv files/regN.sv Line: 20
+Warning (14026): LATCH primitive "led_controller_32:inst40|SN74HC595:inst4|regN:inst1|internal_reg[1]" is permanently enabled File: C:/Users/minec/Desktop/github/PROJ300/Firmware/LED Panel Modelling/sv files/regN.sv Line: 20
+Warning (14026): LATCH primitive "led_controller_32:inst40|SN74HC595:inst4|regN:inst1|internal_reg[2]" is permanently enabled File: C:/Users/minec/Desktop/github/PROJ300/Firmware/LED Panel Modelling/sv files/regN.sv Line: 20
+Warning (14026): LATCH primitive "led_controller_32:inst40|SN74HC595:inst4|regN:inst1|internal_reg[3]" is permanently enabled File: C:/Users/minec/Desktop/github/PROJ300/Firmware/LED Panel Modelling/sv files/regN.sv Line: 20
+Warning (14026): LATCH primitive "led_controller_32:inst40|SN74HC595:inst4|regN:inst1|internal_reg[4]" is permanently enabled File: C:/Users/minec/Desktop/github/PROJ300/Firmware/LED Panel Modelling/sv files/regN.sv Line: 20
+Warning (14026): LATCH primitive "led_controller_32:inst40|SN74HC595:inst4|regN:inst1|internal_reg[5]" is permanently enabled File: C:/Users/minec/Desktop/github/PROJ300/Firmware/LED Panel Modelling/sv files/regN.sv Line: 20
+Warning (14026): LATCH primitive "led_controller_32:inst40|SN74HC595:inst4|regN:inst1|internal_reg[6]" is permanently enabled File: C:/Users/minec/Desktop/github/PROJ300/Firmware/LED Panel Modelling/sv files/regN.sv Line: 20
+Warning (14026): LATCH primitive "led_controller_32:inst40|SN74HC595:inst4|regN:inst1|internal_reg[7]" is permanently enabled File: C:/Users/minec/Desktop/github/PROJ300/Firmware/LED Panel Modelling/sv files/regN.sv Line: 20
+Warning (14026): LATCH primitive "led_controller_32:inst40|SN74HC595:inst3|regN:inst1|internal_reg[0]" is permanently enabled File: C:/Users/minec/Desktop/github/PROJ300/Firmware/LED Panel Modelling/sv files/regN.sv Line: 20
+Warning (14026): LATCH primitive "led_controller_32:inst40|SN74HC595:inst3|regN:inst1|internal_reg[1]" is permanently enabled File: C:/Users/minec/Desktop/github/PROJ300/Firmware/LED Panel Modelling/sv files/regN.sv Line: 20
+Warning (14026): LATCH primitive "led_controller_32:inst40|SN74HC595:inst3|regN:inst1|internal_reg[2]" is permanently enabled File: C:/Users/minec/Desktop/github/PROJ300/Firmware/LED Panel Modelling/sv files/regN.sv Line: 20
+Warning (14026): LATCH primitive "led_controller_32:inst40|SN74HC595:inst3|regN:inst1|internal_reg[3]" is permanently enabled File: C:/Users/minec/Desktop/github/PROJ300/Firmware/LED Panel Modelling/sv files/regN.sv Line: 20
+Warning (14026): LATCH primitive "led_controller_32:inst40|SN74HC595:inst3|regN:inst1|internal_reg[4]" is permanently enabled File: C:/Users/minec/Desktop/github/PROJ300/Firmware/LED Panel Modelling/sv files/regN.sv Line: 20
+Warning (14026): LATCH primitive "led_controller_32:inst40|SN74HC595:inst3|regN:inst1|internal_reg[5]" is permanently enabled File: C:/Users/minec/Desktop/github/PROJ300/Firmware/LED Panel Modelling/sv files/regN.sv Line: 20
+Warning (14026): LATCH primitive "led_controller_32:inst40|SN74HC595:inst3|regN:inst1|internal_reg[6]" is permanently enabled File: C:/Users/minec/Desktop/github/PROJ300/Firmware/LED Panel Modelling/sv files/regN.sv Line: 20
+Warning (14026): LATCH primitive "led_controller_32:inst40|SN74HC595:inst3|regN:inst1|internal_reg[7]" is permanently enabled File: C:/Users/minec/Desktop/github/PROJ300/Firmware/LED Panel Modelling/sv files/regN.sv Line: 20
+Warning (14026): LATCH primitive "led_controller_32:inst40|SN74HC595:inst2|regN:inst1|internal_reg[0]" is permanently enabled File: C:/Users/minec/Desktop/github/PROJ300/Firmware/LED Panel Modelling/sv files/regN.sv Line: 20
+Warning (14026): LATCH primitive "led_controller_32:inst40|SN74HC595:inst2|regN:inst1|internal_reg[1]" is permanently enabled File: C:/Users/minec/Desktop/github/PROJ300/Firmware/LED Panel Modelling/sv files/regN.sv Line: 20
+Warning (14026): LATCH primitive "led_controller_32:inst40|SN74HC595:inst2|regN:inst1|internal_reg[2]" is permanently enabled File: C:/Users/minec/Desktop/github/PROJ300/Firmware/LED Panel Modelling/sv files/regN.sv Line: 20
+Warning (14026): LATCH primitive "led_controller_32:inst40|SN74HC595:inst2|regN:inst1|internal_reg[3]" is permanently enabled File: C:/Users/minec/Desktop/github/PROJ300/Firmware/LED Panel Modelling/sv files/regN.sv Line: 20
+Warning (14026): LATCH primitive "led_controller_32:inst40|SN74HC595:inst2|regN:inst1|internal_reg[4]" is permanently enabled File: C:/Users/minec/Desktop/github/PROJ300/Firmware/LED Panel Modelling/sv files/regN.sv Line: 20
+Warning (14026): LATCH primitive "led_controller_32:inst40|SN74HC595:inst2|regN:inst1|internal_reg[5]" is permanently enabled File: C:/Users/minec/Desktop/github/PROJ300/Firmware/LED Panel Modelling/sv files/regN.sv Line: 20
+Warning (14026): LATCH primitive "led_controller_32:inst40|SN74HC595:inst2|regN:inst1|internal_reg[6]" is permanently enabled File: C:/Users/minec/Desktop/github/PROJ300/Firmware/LED Panel Modelling/sv files/regN.sv Line: 20
+Warning (14026): LATCH primitive "led_controller_32:inst40|SN74HC595:inst2|regN:inst1|internal_reg[7]" is permanently enabled File: C:/Users/minec/Desktop/github/PROJ300/Firmware/LED Panel Modelling/sv files/regN.sv Line: 20
+Warning (14026): LATCH primitive "led_controller_32:inst40|SN74HC595:inst|regN:inst1|internal_reg[0]" is permanently enabled File: C:/Users/minec/Desktop/github/PROJ300/Firmware/LED Panel Modelling/sv files/regN.sv Line: 20
+Warning (14026): LATCH primitive "led_controller_32:inst40|SN74HC595:inst|regN:inst1|internal_reg[1]" is permanently enabled File: C:/Users/minec/Desktop/github/PROJ300/Firmware/LED Panel Modelling/sv files/regN.sv Line: 20
+Warning (14026): LATCH primitive "led_controller_32:inst40|SN74HC595:inst|regN:inst1|internal_reg[2]" is permanently enabled File: C:/Users/minec/Desktop/github/PROJ300/Firmware/LED Panel Modelling/sv files/regN.sv Line: 20
+Warning (14026): LATCH primitive "led_controller_32:inst40|SN74HC595:inst|regN:inst1|internal_reg[3]" is permanently enabled File: C:/Users/minec/Desktop/github/PROJ300/Firmware/LED Panel Modelling/sv files/regN.sv Line: 20
+Warning (14026): LATCH primitive "led_controller_32:inst40|SN74HC595:inst|regN:inst1|internal_reg[4]" is permanently enabled File: C:/Users/minec/Desktop/github/PROJ300/Firmware/LED Panel Modelling/sv files/regN.sv Line: 20
+Warning (14026): LATCH primitive "led_controller_32:inst40|SN74HC595:inst|regN:inst1|internal_reg[5]" is permanently enabled File: C:/Users/minec/Desktop/github/PROJ300/Firmware/LED Panel Modelling/sv files/regN.sv Line: 20
+Warning (14026): LATCH primitive "led_controller_32:inst40|SN74HC595:inst|regN:inst1|internal_reg[6]" is permanently enabled File: C:/Users/minec/Desktop/github/PROJ300/Firmware/LED Panel Modelling/sv files/regN.sv Line: 20
+Warning (14026): LATCH primitive "led_controller_32:inst40|SN74HC595:inst|regN:inst1|internal_reg[7]" is permanently enabled File: C:/Users/minec/Desktop/github/PROJ300/Firmware/LED Panel Modelling/sv files/regN.sv Line: 20
+Warning (14026): LATCH primitive "led_controller_32:inst|SN74HC595:inst4|regN:inst1|internal_reg[0]" is permanently enabled File: C:/Users/minec/Desktop/github/PROJ300/Firmware/LED Panel Modelling/sv files/regN.sv Line: 20
+Warning (14026): LATCH primitive "led_controller_32:inst|SN74HC595:inst4|regN:inst1|internal_reg[1]" is permanently enabled File: C:/Users/minec/Desktop/github/PROJ300/Firmware/LED Panel Modelling/sv files/regN.sv Line: 20
+Warning (14026): LATCH primitive "led_controller_32:inst|SN74HC595:inst4|regN:inst1|internal_reg[2]" is permanently enabled File: C:/Users/minec/Desktop/github/PROJ300/Firmware/LED Panel Modelling/sv files/regN.sv Line: 20
+Warning (14026): LATCH primitive "led_controller_32:inst|SN74HC595:inst4|regN:inst1|internal_reg[3]" is permanently enabled File: C:/Users/minec/Desktop/github/PROJ300/Firmware/LED Panel Modelling/sv files/regN.sv Line: 20
+Warning (14026): LATCH primitive "led_controller_32:inst|SN74HC595:inst4|regN:inst1|internal_reg[4]" is permanently enabled File: C:/Users/minec/Desktop/github/PROJ300/Firmware/LED Panel Modelling/sv files/regN.sv Line: 20
+Warning (14026): LATCH primitive "led_controller_32:inst|SN74HC595:inst4|regN:inst1|internal_reg[5]" is permanently enabled File: C:/Users/minec/Desktop/github/PROJ300/Firmware/LED Panel Modelling/sv files/regN.sv Line: 20
+Warning (14026): LATCH primitive "led_controller_32:inst|SN74HC595:inst4|regN:inst1|internal_reg[6]" is permanently enabled File: C:/Users/minec/Desktop/github/PROJ300/Firmware/LED Panel Modelling/sv files/regN.sv Line: 20
+Warning (14026): LATCH primitive "led_controller_32:inst|SN74HC595:inst4|regN:inst1|internal_reg[7]" is permanently enabled File: C:/Users/minec/Desktop/github/PROJ300/Firmware/LED Panel Modelling/sv files/regN.sv Line: 20
+Warning (14026): LATCH primitive "led_controller_32:inst|SN74HC595:inst3|regN:inst1|internal_reg[0]" is permanently enabled File: C:/Users/minec/Desktop/github/PROJ300/Firmware/LED Panel Modelling/sv files/regN.sv Line: 20
+Warning (14026): LATCH primitive "led_controller_32:inst|SN74HC595:inst3|regN:inst1|internal_reg[1]" is permanently enabled File: C:/Users/minec/Desktop/github/PROJ300/Firmware/LED Panel Modelling/sv files/regN.sv Line: 20
+Warning (14026): LATCH primitive "led_controller_32:inst|SN74HC595:inst3|regN:inst1|internal_reg[2]" is permanently enabled File: C:/Users/minec/Desktop/github/PROJ300/Firmware/LED Panel Modelling/sv files/regN.sv Line: 20
+Warning (14026): LATCH primitive "led_controller_32:inst|SN74HC595:inst3|regN:inst1|internal_reg[3]" is permanently enabled File: C:/Users/minec/Desktop/github/PROJ300/Firmware/LED Panel Modelling/sv files/regN.sv Line: 20
+Warning (14026): LATCH primitive "led_controller_32:inst|SN74HC595:inst3|regN:inst1|internal_reg[4]" is permanently enabled File: C:/Users/minec/Desktop/github/PROJ300/Firmware/LED Panel Modelling/sv files/regN.sv Line: 20
+Warning (14026): LATCH primitive "led_controller_32:inst|SN74HC595:inst3|regN:inst1|internal_reg[5]" is permanently enabled File: C:/Users/minec/Desktop/github/PROJ300/Firmware/LED Panel Modelling/sv files/regN.sv Line: 20
+Warning (14026): LATCH primitive "led_controller_32:inst|SN74HC595:inst3|regN:inst1|internal_reg[6]" is permanently enabled File: C:/Users/minec/Desktop/github/PROJ300/Firmware/LED Panel Modelling/sv files/regN.sv Line: 20
+Warning (14026): LATCH primitive "led_controller_32:inst|SN74HC595:inst3|regN:inst1|internal_reg[7]" is permanently enabled File: C:/Users/minec/Desktop/github/PROJ300/Firmware/LED Panel Modelling/sv files/regN.sv Line: 20
+Warning (14026): LATCH primitive "led_controller_32:inst|SN74HC595:inst2|regN:inst1|internal_reg[0]" is permanently enabled File: C:/Users/minec/Desktop/github/PROJ300/Firmware/LED Panel Modelling/sv files/regN.sv Line: 20
+Warning (14026): LATCH primitive "led_controller_32:inst|SN74HC595:inst2|regN:inst1|internal_reg[1]" is permanently enabled File: C:/Users/minec/Desktop/github/PROJ300/Firmware/LED Panel Modelling/sv files/regN.sv Line: 20
+Warning (14026): LATCH primitive "led_controller_32:inst|SN74HC595:inst2|regN:inst1|internal_reg[2]" is permanently enabled File: C:/Users/minec/Desktop/github/PROJ300/Firmware/LED Panel Modelling/sv files/regN.sv Line: 20
+Warning (14026): LATCH primitive "led_controller_32:inst|SN74HC595:inst2|regN:inst1|internal_reg[3]" is permanently enabled File: C:/Users/minec/Desktop/github/PROJ300/Firmware/LED Panel Modelling/sv files/regN.sv Line: 20
+Warning (14026): LATCH primitive "led_controller_32:inst|SN74HC595:inst2|regN:inst1|internal_reg[4]" is permanently enabled File: C:/Users/minec/Desktop/github/PROJ300/Firmware/LED Panel Modelling/sv files/regN.sv Line: 20
+Warning (14026): LATCH primitive "led_controller_32:inst|SN74HC595:inst2|regN:inst1|internal_reg[5]" is permanently enabled File: C:/Users/minec/Desktop/github/PROJ300/Firmware/LED Panel Modelling/sv files/regN.sv Line: 20
+Warning (14026): LATCH primitive "led_controller_32:inst|SN74HC595:inst2|regN:inst1|internal_reg[6]" is permanently enabled File: C:/Users/minec/Desktop/github/PROJ300/Firmware/LED Panel Modelling/sv files/regN.sv Line: 20
+Warning (14026): LATCH primitive "led_controller_32:inst|SN74HC595:inst2|regN:inst1|internal_reg[7]" is permanently enabled File: C:/Users/minec/Desktop/github/PROJ300/Firmware/LED Panel Modelling/sv files/regN.sv Line: 20
+Warning (14026): LATCH primitive "led_controller_32:inst|SN74HC595:inst|regN:inst1|internal_reg[0]" is permanently enabled File: C:/Users/minec/Desktop/github/PROJ300/Firmware/LED Panel Modelling/sv files/regN.sv Line: 20
+Warning (14026): LATCH primitive "led_controller_32:inst|SN74HC595:inst|regN:inst1|internal_reg[1]" is permanently enabled File: C:/Users/minec/Desktop/github/PROJ300/Firmware/LED Panel Modelling/sv files/regN.sv Line: 20
+Warning (14026): LATCH primitive "led_controller_32:inst|SN74HC595:inst|regN:inst1|internal_reg[2]" is permanently enabled File: C:/Users/minec/Desktop/github/PROJ300/Firmware/LED Panel Modelling/sv files/regN.sv Line: 20
+Warning (14026): LATCH primitive "led_controller_32:inst|SN74HC595:inst|regN:inst1|internal_reg[3]" is permanently enabled File: C:/Users/minec/Desktop/github/PROJ300/Firmware/LED Panel Modelling/sv files/regN.sv Line: 20
+Warning (14026): LATCH primitive "led_controller_32:inst|SN74HC595:inst|regN:inst1|internal_reg[4]" is permanently enabled File: C:/Users/minec/Desktop/github/PROJ300/Firmware/LED Panel Modelling/sv files/regN.sv Line: 20
+Warning (14026): LATCH primitive "led_controller_32:inst|SN74HC595:inst|regN:inst1|internal_reg[5]" is permanently enabled File: C:/Users/minec/Desktop/github/PROJ300/Firmware/LED Panel Modelling/sv files/regN.sv Line: 20
+Warning (14026): LATCH primitive "led_controller_32:inst|SN74HC595:inst|regN:inst1|internal_reg[6]" is permanently enabled File: C:/Users/minec/Desktop/github/PROJ300/Firmware/LED Panel Modelling/sv files/regN.sv Line: 20
+Warning (14026): LATCH primitive "led_controller_32:inst|SN74HC595:inst|regN:inst1|internal_reg[7]" is permanently enabled File: C:/Users/minec/Desktop/github/PROJ300/Firmware/LED Panel Modelling/sv files/regN.sv Line: 20
+Info (286030): Timing-Driven Synthesis is running
+Info (17049): 1 registers lost all their fanouts during netlist optimizations.
 Info (144001): Generated suppressed messages file C:/Users/minec/Desktop/github/PROJ300/Firmware/LED Panel Modelling/output_files/LEDPANEL.map.smsg
-Info: Quartus Prime Analysis & Elaboration was successful. 0 errors, 7 warnings
-    Info: Peak virtual memory: 4770 megabytes
-    Info: Processing ended: Thu Mar 28 11:39:31 2024
-    Info: Elapsed time: 00:00:08
-    Info: Total CPU time (on all processors): 00:00:10
+Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
+    Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
+Info (21057): Implemented 665 device resources after synthesis - the final resource count might be different
+    Info (21058): Implemented 132 input pins
+    Info (21059): Implemented 128 output pins
+    Info (21061): Implemented 405 logic cells
+Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 269 warnings
+    Info: Peak virtual memory: 4828 megabytes
+    Info: Processing ended: Fri Mar 29 12:49:28 2024
+    Info: Elapsed time: 00:00:10
+    Info: Total CPU time (on all processors): 00:00:11
 
 
-+--------------------------------------------+
-; Analysis & Elaboration Suppressed Messages ;
-+--------------------------------------------+
++------------------------------------------+
+; Analysis & Synthesis Suppressed Messages ;
++------------------------------------------+
 The suppressed messages can be found in C:/Users/minec/Desktop/github/PROJ300/Firmware/LED Panel Modelling/output_files/LEDPANEL.map.smsg.
 
 

@@ -165,24 +165,24 @@ R8
 R9
 vFPGA_counter
 R1
-R10
+!s110 1711705419
 !i10b 1
-!s100 X2nm82af^2HVM2[G<77f73
+!s100 JHM@n[Ll6gRKzhR3Y]RQB2
 R3
-ICdB^@N=JM4PanfKIJTM3Z1
+IM[n?`aUMdA0Pj^SbiYL[@3
 R4
 S1
 R0
-w1711664664
+w1711705411
 8C:/Users/minec/Desktop/github/PROJ300/Firmware/LED Panel Modelling/sv files/FPGA_counter.sv
 FC:/Users/minec/Desktop/github/PROJ300/Firmware/LED Panel Modelling/sv files/FPGA_counter.sv
-!i122 288
-L0 1 28
+!i122 307
+L0 1 33
 R6
 r1
 !s85 0
 31
-R11
+!s108 1711705419.000000
 !s107 C:/Users/minec/Desktop/github/PROJ300/Firmware/LED Panel Modelling/sv files/FPGA_counter.sv|
 !s90 -reportprogress|300|-work|work|C:/Users/minec/Desktop/github/PROJ300/Firmware/LED Panel Modelling/sv files/FPGA_counter.sv|
 !i113 1
@@ -527,24 +527,24 @@ R9
 n@s@p@s@r
 vTopLevel
 R1
-Z16 !s110 1711670421
+Z16 !s110 1711705819
 !i10b 1
-!s100 hIi46zH;ON2cob79;=ZOX2
+!s100 i5Voj2GZmMO<nzm8lEaoo3
 R3
-IoiJIbdB0dGD_Qz>7hPWzE0
+IYD9T9I94JO?0jH]M]zz4_2
 R4
 S1
 R0
-w1711670352
+w1711705800
 8TopLevel.sv
 FTopLevel.sv
-!i122 305
+!i122 308
 L0 20 479
 R6
 r1
 !s85 0
 31
-Z17 !s108 1711670421.000000
+Z17 !s108 1711705819.000000
 !s107 TopLevel.sv|
 !s90 -reportprogress|300|TopLevel.sv|
 !i113 1
@@ -563,7 +563,7 @@ R0
 w1711670120
 8TopLevel_tb.sv
 FTopLevel_tb.sv
-!i122 306
+!i122 309
 L0 2 139
 R6
 r1

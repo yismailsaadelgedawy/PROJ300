@@ -1,4 +1,298 @@
 |TopLevel
+out_A[0] <= led_controller_32:inst.out_A[0]
+out_A[1] <= led_controller_32:inst.out_A[1]
+out_A[2] <= led_controller_32:inst.out_A[2]
+out_A[3] <= led_controller_32:inst.out_A[3]
+out_A[4] <= led_controller_32:inst.out_A[4]
+out_A[5] <= led_controller_32:inst.out_A[5]
+out_A[6] <= led_controller_32:inst.out_A[6]
+out_A[7] <= led_controller_32:inst.out_A[7]
+clk => FPGA_LED_PSSR:inst4.clk
+clk => led_controller_32:inst40.SHCP
+clk => led_controller_32:inst40.STCP
+clk => CD4024:inst34.clk
+clk => led_controller_32:inst41.SHCP
+clk => led_controller_32:inst41.STCP
+clk => led_controller_32:inst30.SHCP
+clk => led_controller_32:inst30.STCP
+clk => SN74LS74:inst36.clk
+clk => SN74LS74:inst38.clk
+clk => led_controller_32:inst.SHCP
+clk => led_controller_32:inst.STCP
+rst => FPGA_LED_PSSR:inst4.rst
+rst => CD4001:inst43.A
+rst => CD4075:inst35.C
+rst => FPGA_counter:inst29.rst
+sw_load => FPGA_LED_PSSR:inst4.load
+rA[0] => FPGA_LED_PSSR:inst4.rA[0]
+rA[1] => FPGA_LED_PSSR:inst4.rA[1]
+rA[2] => FPGA_LED_PSSR:inst4.rA[2]
+rA[3] => FPGA_LED_PSSR:inst4.rA[3]
+rA[4] => FPGA_LED_PSSR:inst4.rA[4]
+rA[5] => FPGA_LED_PSSR:inst4.rA[5]
+rA[6] => FPGA_LED_PSSR:inst4.rA[6]
+rA[7] => FPGA_LED_PSSR:inst4.rA[7]
+rA[8] => FPGA_LED_PSSR:inst4.rA[8]
+rA[9] => FPGA_LED_PSSR:inst4.rA[9]
+rA[10] => FPGA_LED_PSSR:inst4.rA[10]
+rA[11] => FPGA_LED_PSSR:inst4.rA[11]
+rA[12] => FPGA_LED_PSSR:inst4.rA[12]
+rA[13] => FPGA_LED_PSSR:inst4.rA[13]
+rA[14] => FPGA_LED_PSSR:inst4.rA[14]
+rA[15] => FPGA_LED_PSSR:inst4.rA[15]
+rA[16] => FPGA_LED_PSSR:inst4.rA[16]
+rA[17] => FPGA_LED_PSSR:inst4.rA[17]
+rA[18] => FPGA_LED_PSSR:inst4.rA[18]
+rA[19] => FPGA_LED_PSSR:inst4.rA[19]
+rA[20] => FPGA_LED_PSSR:inst4.rA[20]
+rA[21] => FPGA_LED_PSSR:inst4.rA[21]
+rA[22] => FPGA_LED_PSSR:inst4.rA[22]
+rA[23] => FPGA_LED_PSSR:inst4.rA[23]
+rA[24] => FPGA_LED_PSSR:inst4.rA[24]
+rA[25] => FPGA_LED_PSSR:inst4.rA[25]
+rA[26] => FPGA_LED_PSSR:inst4.rA[26]
+rA[27] => FPGA_LED_PSSR:inst4.rA[27]
+rA[28] => FPGA_LED_PSSR:inst4.rA[28]
+rA[29] => FPGA_LED_PSSR:inst4.rA[29]
+rA[30] => FPGA_LED_PSSR:inst4.rA[30]
+rA[31] => FPGA_LED_PSSR:inst4.rA[31]
+rB[0] => FPGA_LED_PSSR:inst4.rB[0]
+rB[1] => FPGA_LED_PSSR:inst4.rB[1]
+rB[2] => FPGA_LED_PSSR:inst4.rB[2]
+rB[3] => FPGA_LED_PSSR:inst4.rB[3]
+rB[4] => FPGA_LED_PSSR:inst4.rB[4]
+rB[5] => FPGA_LED_PSSR:inst4.rB[5]
+rB[6] => FPGA_LED_PSSR:inst4.rB[6]
+rB[7] => FPGA_LED_PSSR:inst4.rB[7]
+rB[8] => FPGA_LED_PSSR:inst4.rB[8]
+rB[9] => FPGA_LED_PSSR:inst4.rB[9]
+rB[10] => FPGA_LED_PSSR:inst4.rB[10]
+rB[11] => FPGA_LED_PSSR:inst4.rB[11]
+rB[12] => FPGA_LED_PSSR:inst4.rB[12]
+rB[13] => FPGA_LED_PSSR:inst4.rB[13]
+rB[14] => FPGA_LED_PSSR:inst4.rB[14]
+rB[15] => FPGA_LED_PSSR:inst4.rB[15]
+rB[16] => FPGA_LED_PSSR:inst4.rB[16]
+rB[17] => FPGA_LED_PSSR:inst4.rB[17]
+rB[18] => FPGA_LED_PSSR:inst4.rB[18]
+rB[19] => FPGA_LED_PSSR:inst4.rB[19]
+rB[20] => FPGA_LED_PSSR:inst4.rB[20]
+rB[21] => FPGA_LED_PSSR:inst4.rB[21]
+rB[22] => FPGA_LED_PSSR:inst4.rB[22]
+rB[23] => FPGA_LED_PSSR:inst4.rB[23]
+rB[24] => FPGA_LED_PSSR:inst4.rB[24]
+rB[25] => FPGA_LED_PSSR:inst4.rB[25]
+rB[26] => FPGA_LED_PSSR:inst4.rB[26]
+rB[27] => FPGA_LED_PSSR:inst4.rB[27]
+rB[28] => FPGA_LED_PSSR:inst4.rB[28]
+rB[29] => FPGA_LED_PSSR:inst4.rB[29]
+rB[30] => FPGA_LED_PSSR:inst4.rB[30]
+rB[31] => FPGA_LED_PSSR:inst4.rB[31]
+rC[0] => FPGA_LED_PSSR:inst4.rC[0]
+rC[1] => FPGA_LED_PSSR:inst4.rC[1]
+rC[2] => FPGA_LED_PSSR:inst4.rC[2]
+rC[3] => FPGA_LED_PSSR:inst4.rC[3]
+rC[4] => FPGA_LED_PSSR:inst4.rC[4]
+rC[5] => FPGA_LED_PSSR:inst4.rC[5]
+rC[6] => FPGA_LED_PSSR:inst4.rC[6]
+rC[7] => FPGA_LED_PSSR:inst4.rC[7]
+rC[8] => FPGA_LED_PSSR:inst4.rC[8]
+rC[9] => FPGA_LED_PSSR:inst4.rC[9]
+rC[10] => FPGA_LED_PSSR:inst4.rC[10]
+rC[11] => FPGA_LED_PSSR:inst4.rC[11]
+rC[12] => FPGA_LED_PSSR:inst4.rC[12]
+rC[13] => FPGA_LED_PSSR:inst4.rC[13]
+rC[14] => FPGA_LED_PSSR:inst4.rC[14]
+rC[15] => FPGA_LED_PSSR:inst4.rC[15]
+rC[16] => FPGA_LED_PSSR:inst4.rC[16]
+rC[17] => FPGA_LED_PSSR:inst4.rC[17]
+rC[18] => FPGA_LED_PSSR:inst4.rC[18]
+rC[19] => FPGA_LED_PSSR:inst4.rC[19]
+rC[20] => FPGA_LED_PSSR:inst4.rC[20]
+rC[21] => FPGA_LED_PSSR:inst4.rC[21]
+rC[22] => FPGA_LED_PSSR:inst4.rC[22]
+rC[23] => FPGA_LED_PSSR:inst4.rC[23]
+rC[24] => FPGA_LED_PSSR:inst4.rC[24]
+rC[25] => FPGA_LED_PSSR:inst4.rC[25]
+rC[26] => FPGA_LED_PSSR:inst4.rC[26]
+rC[27] => FPGA_LED_PSSR:inst4.rC[27]
+rC[28] => FPGA_LED_PSSR:inst4.rC[28]
+rC[29] => FPGA_LED_PSSR:inst4.rC[29]
+rC[30] => FPGA_LED_PSSR:inst4.rC[30]
+rC[31] => FPGA_LED_PSSR:inst4.rC[31]
+rD[0] => FPGA_LED_PSSR:inst4.rD[0]
+rD[1] => FPGA_LED_PSSR:inst4.rD[1]
+rD[2] => FPGA_LED_PSSR:inst4.rD[2]
+rD[3] => FPGA_LED_PSSR:inst4.rD[3]
+rD[4] => FPGA_LED_PSSR:inst4.rD[4]
+rD[5] => FPGA_LED_PSSR:inst4.rD[5]
+rD[6] => FPGA_LED_PSSR:inst4.rD[6]
+rD[7] => FPGA_LED_PSSR:inst4.rD[7]
+rD[8] => FPGA_LED_PSSR:inst4.rD[8]
+rD[9] => FPGA_LED_PSSR:inst4.rD[9]
+rD[10] => FPGA_LED_PSSR:inst4.rD[10]
+rD[11] => FPGA_LED_PSSR:inst4.rD[11]
+rD[12] => FPGA_LED_PSSR:inst4.rD[12]
+rD[13] => FPGA_LED_PSSR:inst4.rD[13]
+rD[14] => FPGA_LED_PSSR:inst4.rD[14]
+rD[15] => FPGA_LED_PSSR:inst4.rD[15]
+rD[16] => FPGA_LED_PSSR:inst4.rD[16]
+rD[17] => FPGA_LED_PSSR:inst4.rD[17]
+rD[18] => FPGA_LED_PSSR:inst4.rD[18]
+rD[19] => FPGA_LED_PSSR:inst4.rD[19]
+rD[20] => FPGA_LED_PSSR:inst4.rD[20]
+rD[21] => FPGA_LED_PSSR:inst4.rD[21]
+rD[22] => FPGA_LED_PSSR:inst4.rD[22]
+rD[23] => FPGA_LED_PSSR:inst4.rD[23]
+rD[24] => FPGA_LED_PSSR:inst4.rD[24]
+rD[25] => FPGA_LED_PSSR:inst4.rD[25]
+rD[26] => FPGA_LED_PSSR:inst4.rD[26]
+rD[27] => FPGA_LED_PSSR:inst4.rD[27]
+rD[28] => FPGA_LED_PSSR:inst4.rD[28]
+rD[29] => FPGA_LED_PSSR:inst4.rD[29]
+rD[30] => FPGA_LED_PSSR:inst4.rD[30]
+rD[31] => FPGA_LED_PSSR:inst4.rD[31]
+OE => led_controller_32:inst40.OE
+OE => led_controller_32:inst41.OE
+OE => led_controller_32:inst30.OE
+OE => led_controller_32:inst.OE
+out_B[0] <= led_controller_32:inst.out_B[0]
+out_B[1] <= led_controller_32:inst.out_B[1]
+out_B[2] <= led_controller_32:inst.out_B[2]
+out_B[3] <= led_controller_32:inst.out_B[3]
+out_B[4] <= led_controller_32:inst.out_B[4]
+out_B[5] <= led_controller_32:inst.out_B[5]
+out_B[6] <= led_controller_32:inst.out_B[6]
+out_B[7] <= led_controller_32:inst.out_B[7]
+out_C[0] <= led_controller_32:inst.out_C[0]
+out_C[1] <= led_controller_32:inst.out_C[1]
+out_C[2] <= led_controller_32:inst.out_C[2]
+out_C[3] <= led_controller_32:inst.out_C[3]
+out_C[4] <= led_controller_32:inst.out_C[4]
+out_C[5] <= led_controller_32:inst.out_C[5]
+out_C[6] <= led_controller_32:inst.out_C[6]
+out_C[7] <= led_controller_32:inst.out_C[7]
+out_D[0] <= led_controller_32:inst.out_D[0]
+out_D[1] <= led_controller_32:inst.out_D[1]
+out_D[2] <= led_controller_32:inst.out_D[2]
+out_D[3] <= led_controller_32:inst.out_D[3]
+out_D[4] <= led_controller_32:inst.out_D[4]
+out_D[5] <= led_controller_32:inst.out_D[5]
+out_D[6] <= led_controller_32:inst.out_D[6]
+out_D[7] <= led_controller_32:inst.out_D[7]
+out_E[0] <= led_controller_32:inst30.out_A[0]
+out_E[1] <= led_controller_32:inst30.out_A[1]
+out_E[2] <= led_controller_32:inst30.out_A[2]
+out_E[3] <= led_controller_32:inst30.out_A[3]
+out_E[4] <= led_controller_32:inst30.out_A[4]
+out_E[5] <= led_controller_32:inst30.out_A[5]
+out_E[6] <= led_controller_32:inst30.out_A[6]
+out_E[7] <= led_controller_32:inst30.out_A[7]
+out_F[0] <= led_controller_32:inst30.out_B[0]
+out_F[1] <= led_controller_32:inst30.out_B[1]
+out_F[2] <= led_controller_32:inst30.out_B[2]
+out_F[3] <= led_controller_32:inst30.out_B[3]
+out_F[4] <= led_controller_32:inst30.out_B[4]
+out_F[5] <= led_controller_32:inst30.out_B[5]
+out_F[6] <= led_controller_32:inst30.out_B[6]
+out_F[7] <= led_controller_32:inst30.out_B[7]
+out_G[0] <= led_controller_32:inst30.out_C[0]
+out_G[1] <= led_controller_32:inst30.out_C[1]
+out_G[2] <= led_controller_32:inst30.out_C[2]
+out_G[3] <= led_controller_32:inst30.out_C[3]
+out_G[4] <= led_controller_32:inst30.out_C[4]
+out_G[5] <= led_controller_32:inst30.out_C[5]
+out_G[6] <= led_controller_32:inst30.out_C[6]
+out_G[7] <= led_controller_32:inst30.out_C[7]
+out_H[0] <= led_controller_32:inst30.out_D[0]
+out_H[1] <= led_controller_32:inst30.out_D[1]
+out_H[2] <= led_controller_32:inst30.out_D[2]
+out_H[3] <= led_controller_32:inst30.out_D[3]
+out_H[4] <= led_controller_32:inst30.out_D[4]
+out_H[5] <= led_controller_32:inst30.out_D[5]
+out_H[6] <= led_controller_32:inst30.out_D[6]
+out_H[7] <= led_controller_32:inst30.out_D[7]
+out_I[0] <= led_controller_32:inst40.out_A[0]
+out_I[1] <= led_controller_32:inst40.out_A[1]
+out_I[2] <= led_controller_32:inst40.out_A[2]
+out_I[3] <= led_controller_32:inst40.out_A[3]
+out_I[4] <= led_controller_32:inst40.out_A[4]
+out_I[5] <= led_controller_32:inst40.out_A[5]
+out_I[6] <= led_controller_32:inst40.out_A[6]
+out_I[7] <= led_controller_32:inst40.out_A[7]
+out_J[0] <= led_controller_32:inst40.out_B[0]
+out_J[1] <= led_controller_32:inst40.out_B[1]
+out_J[2] <= led_controller_32:inst40.out_B[2]
+out_J[3] <= led_controller_32:inst40.out_B[3]
+out_J[4] <= led_controller_32:inst40.out_B[4]
+out_J[5] <= led_controller_32:inst40.out_B[5]
+out_J[6] <= led_controller_32:inst40.out_B[6]
+out_J[7] <= led_controller_32:inst40.out_B[7]
+out_K[0] <= led_controller_32:inst40.out_C[0]
+out_K[1] <= led_controller_32:inst40.out_C[1]
+out_K[2] <= led_controller_32:inst40.out_C[2]
+out_K[3] <= led_controller_32:inst40.out_C[3]
+out_K[4] <= led_controller_32:inst40.out_C[4]
+out_K[5] <= led_controller_32:inst40.out_C[5]
+out_K[6] <= led_controller_32:inst40.out_C[6]
+out_K[7] <= led_controller_32:inst40.out_C[7]
+out_L[0] <= led_controller_32:inst40.out_D[0]
+out_L[1] <= led_controller_32:inst40.out_D[1]
+out_L[2] <= led_controller_32:inst40.out_D[2]
+out_L[3] <= led_controller_32:inst40.out_D[3]
+out_L[4] <= led_controller_32:inst40.out_D[4]
+out_L[5] <= led_controller_32:inst40.out_D[5]
+out_L[6] <= led_controller_32:inst40.out_D[6]
+out_L[7] <= led_controller_32:inst40.out_D[7]
+out_M[0] <= led_controller_32:inst41.out_A[0]
+out_M[1] <= led_controller_32:inst41.out_A[1]
+out_M[2] <= led_controller_32:inst41.out_A[2]
+out_M[3] <= led_controller_32:inst41.out_A[3]
+out_M[4] <= led_controller_32:inst41.out_A[4]
+out_M[5] <= led_controller_32:inst41.out_A[5]
+out_M[6] <= led_controller_32:inst41.out_A[6]
+out_M[7] <= led_controller_32:inst41.out_A[7]
+out_N[0] <= led_controller_32:inst41.out_B[0]
+out_N[1] <= led_controller_32:inst41.out_B[1]
+out_N[2] <= led_controller_32:inst41.out_B[2]
+out_N[3] <= led_controller_32:inst41.out_B[3]
+out_N[4] <= led_controller_32:inst41.out_B[4]
+out_N[5] <= led_controller_32:inst41.out_B[5]
+out_N[6] <= led_controller_32:inst41.out_B[6]
+out_N[7] <= led_controller_32:inst41.out_B[7]
+out_O[0] <= led_controller_32:inst41.out_C[0]
+out_O[1] <= led_controller_32:inst41.out_C[1]
+out_O[2] <= led_controller_32:inst41.out_C[2]
+out_O[3] <= led_controller_32:inst41.out_C[3]
+out_O[4] <= led_controller_32:inst41.out_C[4]
+out_O[5] <= led_controller_32:inst41.out_C[5]
+out_O[6] <= led_controller_32:inst41.out_C[6]
+out_O[7] <= led_controller_32:inst41.out_C[7]
+out_P[0] <= led_controller_32:inst41.out_D[0]
+out_P[1] <= led_controller_32:inst41.out_D[1]
+out_P[2] <= led_controller_32:inst41.out_D[2]
+out_P[3] <= led_controller_32:inst41.out_D[3]
+out_P[4] <= led_controller_32:inst41.out_D[4]
+out_P[5] <= led_controller_32:inst41.out_D[5]
+out_P[6] <= led_controller_32:inst41.out_D[6]
+out_P[7] <= led_controller_32:inst41.out_D[7]
+
+
+|TopLevel|led_controller_32:inst
+LE <= SN74HC08:inst12.Y1
+count[0] => SN74LS04:inst9.A1
+count[1] => SN74HC08:inst11.B2
+count[2] => SN74LS04:inst9.A2
+count[3] => SN74LS04:inst9.A3
+count[4] => SN74LS04:inst9.A4
+count[5] => SN74HC08:inst12.B1
+count[6] => ~NO_FANOUT~
+rst_count <= rst_reg.DB_MAX_OUTPUT_PORT_TYPE
+SHCP => SN74LS74:inst29.clk
+SHCP => SN74HC595:inst.SHCP
+SHCP => SN74HC595:inst2.SHCP
+SHCP => SN74HC595:inst3.SHCP
+SHCP => SN74HC595:inst4.SHCP
 out_A[0] <= SN74HC573:inst21.q[0]
 out_A[1] <= SN74HC573:inst21.q[1]
 out_A[2] <= SN74HC573:inst21.q[2]
@@ -15,15 +309,11 @@ OE => SN74HC573:inst23.OE
 OE => SN74HC595:inst3.OE
 OE => SN74HC573:inst24.OE
 OE => SN74HC595:inst4.OE
-SHCP => CD4024:inst15.clk
-SHCP => SN74LS74:inst29.clk
-SHCP => SN74HC595:inst.SHCP
-SHCP => SN74HC595:inst2.SHCP
-SHCP => SN74HC595:inst3.SHCP
-SHCP => SN74HC595:inst4.SHCP
-rst => CD4075:inst13.C
-rst => CD4001:inst17.A
 DS => SN74HC595:inst.DS
+MR => SN74HC595:inst.MR
+MR => SN74HC595:inst2.MR
+MR => SN74HC595:inst3.MR
+MR => SN74HC595:inst4.MR
 STCP => SN74HC595:inst.STCP
 STCP => SN74HC595:inst2.STCP
 STCP => SN74HC595:inst3.STCP
@@ -54,7 +344,64 @@ out_D[6] <= SN74HC573:inst24.q[6]
 out_D[7] <= SN74HC573:inst24.q[7]
 
 
-|TopLevel|SN74HC573:inst21
+|TopLevel|led_controller_32:inst|SN74HC08:inst12
+Y1 <= inst.DB_MAX_OUTPUT_PORT_TYPE
+A1 => inst.IN0
+B1 => inst.IN1
+Y2 <= inst1.DB_MAX_OUTPUT_PORT_TYPE
+A2 => inst1.IN0
+B2 => inst1.IN1
+Y3 <= inst2.DB_MAX_OUTPUT_PORT_TYPE
+A3 => inst2.IN0
+B3 => inst2.IN1
+Y4 <= inst3.DB_MAX_OUTPUT_PORT_TYPE
+A4 => inst3.IN0
+B4 => inst3.IN1
+
+
+|TopLevel|led_controller_32:inst|SN74HC08:inst11
+Y1 <= inst.DB_MAX_OUTPUT_PORT_TYPE
+A1 => inst.IN0
+B1 => inst.IN1
+Y2 <= inst1.DB_MAX_OUTPUT_PORT_TYPE
+A2 => inst1.IN0
+B2 => inst1.IN1
+Y3 <= inst2.DB_MAX_OUTPUT_PORT_TYPE
+A3 => inst2.IN0
+B3 => inst2.IN1
+Y4 <= inst3.DB_MAX_OUTPUT_PORT_TYPE
+A4 => inst3.IN0
+B4 => inst3.IN1
+
+
+|TopLevel|led_controller_32:inst|SN74LS04:inst9
+Y1 <= inst.DB_MAX_OUTPUT_PORT_TYPE
+A1 => inst.IN0
+Y2 <= inst1.DB_MAX_OUTPUT_PORT_TYPE
+A2 => inst1.IN0
+Y3 <= inst2.DB_MAX_OUTPUT_PORT_TYPE
+A3 => inst2.IN0
+Y4 <= inst3.DB_MAX_OUTPUT_PORT_TYPE
+A4 => inst3.IN0
+Y5 <= inst4.DB_MAX_OUTPUT_PORT_TYPE
+A5 => inst4.IN0
+Y6 <= inst5.DB_MAX_OUTPUT_PORT_TYPE
+A6 => inst5.IN0
+
+
+|TopLevel|led_controller_32:inst|SN74LS74:inst29
+q <= Mux0.DB_MAX_OUTPUT_PORT_TYPE
+n_q <= Mux1.DB_MAX_OUTPUT_PORT_TYPE
+d => Mux0.IN3
+d => Mux1.IN3
+PRE => Mux0.IN4
+PRE => Mux1.IN4
+CLR => Mux0.IN5
+CLR => Mux1.IN5
+clk => ~NO_FANOUT~
+
+
+|TopLevel|led_controller_32:inst|SN74HC573:inst21
 q[0] <= q[0].DB_MAX_OUTPUT_PORT_TYPE
 q[1] <= q[1].DB_MAX_OUTPUT_PORT_TYPE
 q[2] <= q[2].DB_MAX_OUTPUT_PORT_TYPE
@@ -89,37 +436,496 @@ LE => internal_reg[6].LATCH_ENABLE
 LE => internal_reg[7].LATCH_ENABLE
 
 
-|TopLevel|SN74HC08:inst12
-Y1 <= inst.DB_MAX_OUTPUT_PORT_TYPE
-A1 => inst.IN0
-B1 => inst.IN1
-Y2 <= inst1.DB_MAX_OUTPUT_PORT_TYPE
-A2 => inst1.IN0
-B2 => inst1.IN1
-Y3 <= inst2.DB_MAX_OUTPUT_PORT_TYPE
-A3 => inst2.IN0
-B3 => inst2.IN1
-Y4 <= inst3.DB_MAX_OUTPUT_PORT_TYPE
-A4 => inst3.IN0
-B4 => inst3.IN1
+|TopLevel|led_controller_32:inst|SN74HC595:inst
+data_out[0] <= trisateN:inst2.q[0]
+data_out[1] <= trisateN:inst2.q[1]
+data_out[2] <= trisateN:inst2.q[2]
+data_out[3] <= trisateN:inst2.q[3]
+data_out[4] <= trisateN:inst2.q[4]
+data_out[5] <= trisateN:inst2.q[5]
+data_out[6] <= trisateN:inst2.q[6]
+data_out[7] <= trisateN:inst2.q[7]
+OE => trisateN:inst2.OE
+STCP => regN:inst1.STCP
+DS => SPSR:inst.DS
+MR => SPSR:inst.nrst
+SHCP => SPSR:inst.SHCP
 
 
-|TopLevel|SN74HC08:inst11
-Y1 <= inst.DB_MAX_OUTPUT_PORT_TYPE
-A1 => inst.IN0
-B1 => inst.IN1
-Y2 <= inst1.DB_MAX_OUTPUT_PORT_TYPE
-A2 => inst1.IN0
-B2 => inst1.IN1
-Y3 <= inst2.DB_MAX_OUTPUT_PORT_TYPE
-A3 => inst2.IN0
-B3 => inst2.IN1
-Y4 <= inst3.DB_MAX_OUTPUT_PORT_TYPE
-A4 => inst3.IN0
-B4 => inst3.IN1
+|TopLevel|led_controller_32:inst|SN74HC595:inst|trisateN:inst2
+q[0] <= q[0].DB_MAX_OUTPUT_PORT_TYPE
+q[1] <= q[1].DB_MAX_OUTPUT_PORT_TYPE
+q[2] <= q[2].DB_MAX_OUTPUT_PORT_TYPE
+q[3] <= q[3].DB_MAX_OUTPUT_PORT_TYPE
+q[4] <= q[4].DB_MAX_OUTPUT_PORT_TYPE
+q[5] <= q[5].DB_MAX_OUTPUT_PORT_TYPE
+q[6] <= q[6].DB_MAX_OUTPUT_PORT_TYPE
+q[7] <= q[7].DB_MAX_OUTPUT_PORT_TYPE
+d[0] => q[0].DATAIN
+d[1] => q[1].DATAIN
+d[2] => q[2].DATAIN
+d[3] => q[3].DATAIN
+d[4] => q[4].DATAIN
+d[5] => q[5].DATAIN
+d[6] => q[6].DATAIN
+d[7] => q[7].DATAIN
+OE => q[0].OE
+OE => q[1].OE
+OE => q[2].OE
+OE => q[3].OE
+OE => q[4].OE
+OE => q[5].OE
+OE => q[6].OE
+OE => q[7].OE
 
 
-|TopLevel|SN74LS04:inst9
+|TopLevel|led_controller_32:inst|SN74HC595:inst|regN:inst1
+q[0] <= internal_reg[0].DB_MAX_OUTPUT_PORT_TYPE
+q[1] <= internal_reg[1].DB_MAX_OUTPUT_PORT_TYPE
+q[2] <= internal_reg[2].DB_MAX_OUTPUT_PORT_TYPE
+q[3] <= internal_reg[3].DB_MAX_OUTPUT_PORT_TYPE
+q[4] <= internal_reg[4].DB_MAX_OUTPUT_PORT_TYPE
+q[5] <= internal_reg[5].DB_MAX_OUTPUT_PORT_TYPE
+q[6] <= internal_reg[6].DB_MAX_OUTPUT_PORT_TYPE
+q[7] <= internal_reg[7].DB_MAX_OUTPUT_PORT_TYPE
+d[0] => Selector0.IN3
+d[1] => Selector7.IN3
+d[2] => Selector6.IN3
+d[3] => Selector5.IN3
+d[4] => Selector4.IN3
+d[5] => Selector3.IN3
+d[6] => Selector2.IN3
+d[7] => Selector1.IN3
+inc => Equal0.IN2
+inc => Equal1.IN2
+load => Equal0.IN3
+load => Equal1.IN3
+rst => Decoder0.IN0
+STCP => ~NO_FANOUT~
+
+
+|TopLevel|led_controller_32:inst|SN74HC595:inst|SPSR:inst
+q[0] <= shift_reg[0].DB_MAX_OUTPUT_PORT_TYPE
+q[1] <= shift_reg[1].DB_MAX_OUTPUT_PORT_TYPE
+q[2] <= shift_reg[2].DB_MAX_OUTPUT_PORT_TYPE
+q[3] <= shift_reg[3].DB_MAX_OUTPUT_PORT_TYPE
+q[4] <= shift_reg[4].DB_MAX_OUTPUT_PORT_TYPE
+q[5] <= shift_reg[5].DB_MAX_OUTPUT_PORT_TYPE
+q[6] <= shift_reg[6].DB_MAX_OUTPUT_PORT_TYPE
+q[7] <= shift_reg[7].DB_MAX_OUTPUT_PORT_TYPE
+DS => shift_reg[0].DATAIN
+nrst => shift_reg[0].ACLR
+nrst => shift_reg[1].ACLR
+nrst => shift_reg[2].ACLR
+nrst => shift_reg[3].ACLR
+nrst => shift_reg[4].ACLR
+nrst => shift_reg[5].ACLR
+nrst => shift_reg[6].ACLR
+nrst => shift_reg[7].ACLR
+SHCP => shift_reg[0].CLK
+SHCP => shift_reg[1].CLK
+SHCP => shift_reg[2].CLK
+SHCP => shift_reg[3].CLK
+SHCP => shift_reg[4].CLK
+SHCP => shift_reg[5].CLK
+SHCP => shift_reg[6].CLK
+SHCP => shift_reg[7].CLK
+
+
+|TopLevel|led_controller_32:inst|SN74HC573:inst22
+q[0] <= q[0].DB_MAX_OUTPUT_PORT_TYPE
+q[1] <= q[1].DB_MAX_OUTPUT_PORT_TYPE
+q[2] <= q[2].DB_MAX_OUTPUT_PORT_TYPE
+q[3] <= q[3].DB_MAX_OUTPUT_PORT_TYPE
+q[4] <= q[4].DB_MAX_OUTPUT_PORT_TYPE
+q[5] <= q[5].DB_MAX_OUTPUT_PORT_TYPE
+q[6] <= q[6].DB_MAX_OUTPUT_PORT_TYPE
+q[7] <= q[7].DB_MAX_OUTPUT_PORT_TYPE
+OE => q[7].OE
+OE => q[6].OE
+OE => q[5].OE
+OE => q[4].OE
+OE => q[3].OE
+OE => q[2].OE
+OE => q[1].OE
+OE => q[0].OE
+d[0] => internal_reg[0].DATAIN
+d[1] => internal_reg[1].DATAIN
+d[2] => internal_reg[2].DATAIN
+d[3] => internal_reg[3].DATAIN
+d[4] => internal_reg[4].DATAIN
+d[5] => internal_reg[5].DATAIN
+d[6] => internal_reg[6].DATAIN
+d[7] => internal_reg[7].DATAIN
+LE => internal_reg[0].LATCH_ENABLE
+LE => internal_reg[1].LATCH_ENABLE
+LE => internal_reg[2].LATCH_ENABLE
+LE => internal_reg[3].LATCH_ENABLE
+LE => internal_reg[4].LATCH_ENABLE
+LE => internal_reg[5].LATCH_ENABLE
+LE => internal_reg[6].LATCH_ENABLE
+LE => internal_reg[7].LATCH_ENABLE
+
+
+|TopLevel|led_controller_32:inst|SN74HC595:inst2
+data_out[0] <= trisateN:inst2.q[0]
+data_out[1] <= trisateN:inst2.q[1]
+data_out[2] <= trisateN:inst2.q[2]
+data_out[3] <= trisateN:inst2.q[3]
+data_out[4] <= trisateN:inst2.q[4]
+data_out[5] <= trisateN:inst2.q[5]
+data_out[6] <= trisateN:inst2.q[6]
+data_out[7] <= trisateN:inst2.q[7]
+OE => trisateN:inst2.OE
+STCP => regN:inst1.STCP
+DS => SPSR:inst.DS
+MR => SPSR:inst.nrst
+SHCP => SPSR:inst.SHCP
+
+
+|TopLevel|led_controller_32:inst|SN74HC595:inst2|trisateN:inst2
+q[0] <= q[0].DB_MAX_OUTPUT_PORT_TYPE
+q[1] <= q[1].DB_MAX_OUTPUT_PORT_TYPE
+q[2] <= q[2].DB_MAX_OUTPUT_PORT_TYPE
+q[3] <= q[3].DB_MAX_OUTPUT_PORT_TYPE
+q[4] <= q[4].DB_MAX_OUTPUT_PORT_TYPE
+q[5] <= q[5].DB_MAX_OUTPUT_PORT_TYPE
+q[6] <= q[6].DB_MAX_OUTPUT_PORT_TYPE
+q[7] <= q[7].DB_MAX_OUTPUT_PORT_TYPE
+d[0] => q[0].DATAIN
+d[1] => q[1].DATAIN
+d[2] => q[2].DATAIN
+d[3] => q[3].DATAIN
+d[4] => q[4].DATAIN
+d[5] => q[5].DATAIN
+d[6] => q[6].DATAIN
+d[7] => q[7].DATAIN
+OE => q[0].OE
+OE => q[1].OE
+OE => q[2].OE
+OE => q[3].OE
+OE => q[4].OE
+OE => q[5].OE
+OE => q[6].OE
+OE => q[7].OE
+
+
+|TopLevel|led_controller_32:inst|SN74HC595:inst2|regN:inst1
+q[0] <= internal_reg[0].DB_MAX_OUTPUT_PORT_TYPE
+q[1] <= internal_reg[1].DB_MAX_OUTPUT_PORT_TYPE
+q[2] <= internal_reg[2].DB_MAX_OUTPUT_PORT_TYPE
+q[3] <= internal_reg[3].DB_MAX_OUTPUT_PORT_TYPE
+q[4] <= internal_reg[4].DB_MAX_OUTPUT_PORT_TYPE
+q[5] <= internal_reg[5].DB_MAX_OUTPUT_PORT_TYPE
+q[6] <= internal_reg[6].DB_MAX_OUTPUT_PORT_TYPE
+q[7] <= internal_reg[7].DB_MAX_OUTPUT_PORT_TYPE
+d[0] => Selector0.IN3
+d[1] => Selector7.IN3
+d[2] => Selector6.IN3
+d[3] => Selector5.IN3
+d[4] => Selector4.IN3
+d[5] => Selector3.IN3
+d[6] => Selector2.IN3
+d[7] => Selector1.IN3
+inc => Equal0.IN2
+inc => Equal1.IN2
+load => Equal0.IN3
+load => Equal1.IN3
+rst => Decoder0.IN0
+STCP => ~NO_FANOUT~
+
+
+|TopLevel|led_controller_32:inst|SN74HC595:inst2|SPSR:inst
+q[0] <= shift_reg[0].DB_MAX_OUTPUT_PORT_TYPE
+q[1] <= shift_reg[1].DB_MAX_OUTPUT_PORT_TYPE
+q[2] <= shift_reg[2].DB_MAX_OUTPUT_PORT_TYPE
+q[3] <= shift_reg[3].DB_MAX_OUTPUT_PORT_TYPE
+q[4] <= shift_reg[4].DB_MAX_OUTPUT_PORT_TYPE
+q[5] <= shift_reg[5].DB_MAX_OUTPUT_PORT_TYPE
+q[6] <= shift_reg[6].DB_MAX_OUTPUT_PORT_TYPE
+q[7] <= shift_reg[7].DB_MAX_OUTPUT_PORT_TYPE
+DS => shift_reg[0].DATAIN
+nrst => shift_reg[0].ACLR
+nrst => shift_reg[1].ACLR
+nrst => shift_reg[2].ACLR
+nrst => shift_reg[3].ACLR
+nrst => shift_reg[4].ACLR
+nrst => shift_reg[5].ACLR
+nrst => shift_reg[6].ACLR
+nrst => shift_reg[7].ACLR
+SHCP => shift_reg[0].CLK
+SHCP => shift_reg[1].CLK
+SHCP => shift_reg[2].CLK
+SHCP => shift_reg[3].CLK
+SHCP => shift_reg[4].CLK
+SHCP => shift_reg[5].CLK
+SHCP => shift_reg[6].CLK
+SHCP => shift_reg[7].CLK
+
+
+|TopLevel|led_controller_32:inst|SN74HC573:inst23
+q[0] <= q[0].DB_MAX_OUTPUT_PORT_TYPE
+q[1] <= q[1].DB_MAX_OUTPUT_PORT_TYPE
+q[2] <= q[2].DB_MAX_OUTPUT_PORT_TYPE
+q[3] <= q[3].DB_MAX_OUTPUT_PORT_TYPE
+q[4] <= q[4].DB_MAX_OUTPUT_PORT_TYPE
+q[5] <= q[5].DB_MAX_OUTPUT_PORT_TYPE
+q[6] <= q[6].DB_MAX_OUTPUT_PORT_TYPE
+q[7] <= q[7].DB_MAX_OUTPUT_PORT_TYPE
+OE => q[7].OE
+OE => q[6].OE
+OE => q[5].OE
+OE => q[4].OE
+OE => q[3].OE
+OE => q[2].OE
+OE => q[1].OE
+OE => q[0].OE
+d[0] => internal_reg[0].DATAIN
+d[1] => internal_reg[1].DATAIN
+d[2] => internal_reg[2].DATAIN
+d[3] => internal_reg[3].DATAIN
+d[4] => internal_reg[4].DATAIN
+d[5] => internal_reg[5].DATAIN
+d[6] => internal_reg[6].DATAIN
+d[7] => internal_reg[7].DATAIN
+LE => internal_reg[0].LATCH_ENABLE
+LE => internal_reg[1].LATCH_ENABLE
+LE => internal_reg[2].LATCH_ENABLE
+LE => internal_reg[3].LATCH_ENABLE
+LE => internal_reg[4].LATCH_ENABLE
+LE => internal_reg[5].LATCH_ENABLE
+LE => internal_reg[6].LATCH_ENABLE
+LE => internal_reg[7].LATCH_ENABLE
+
+
+|TopLevel|led_controller_32:inst|SN74HC595:inst3
+data_out[0] <= trisateN:inst2.q[0]
+data_out[1] <= trisateN:inst2.q[1]
+data_out[2] <= trisateN:inst2.q[2]
+data_out[3] <= trisateN:inst2.q[3]
+data_out[4] <= trisateN:inst2.q[4]
+data_out[5] <= trisateN:inst2.q[5]
+data_out[6] <= trisateN:inst2.q[6]
+data_out[7] <= trisateN:inst2.q[7]
+OE => trisateN:inst2.OE
+STCP => regN:inst1.STCP
+DS => SPSR:inst.DS
+MR => SPSR:inst.nrst
+SHCP => SPSR:inst.SHCP
+
+
+|TopLevel|led_controller_32:inst|SN74HC595:inst3|trisateN:inst2
+q[0] <= q[0].DB_MAX_OUTPUT_PORT_TYPE
+q[1] <= q[1].DB_MAX_OUTPUT_PORT_TYPE
+q[2] <= q[2].DB_MAX_OUTPUT_PORT_TYPE
+q[3] <= q[3].DB_MAX_OUTPUT_PORT_TYPE
+q[4] <= q[4].DB_MAX_OUTPUT_PORT_TYPE
+q[5] <= q[5].DB_MAX_OUTPUT_PORT_TYPE
+q[6] <= q[6].DB_MAX_OUTPUT_PORT_TYPE
+q[7] <= q[7].DB_MAX_OUTPUT_PORT_TYPE
+d[0] => q[0].DATAIN
+d[1] => q[1].DATAIN
+d[2] => q[2].DATAIN
+d[3] => q[3].DATAIN
+d[4] => q[4].DATAIN
+d[5] => q[5].DATAIN
+d[6] => q[6].DATAIN
+d[7] => q[7].DATAIN
+OE => q[0].OE
+OE => q[1].OE
+OE => q[2].OE
+OE => q[3].OE
+OE => q[4].OE
+OE => q[5].OE
+OE => q[6].OE
+OE => q[7].OE
+
+
+|TopLevel|led_controller_32:inst|SN74HC595:inst3|regN:inst1
+q[0] <= internal_reg[0].DB_MAX_OUTPUT_PORT_TYPE
+q[1] <= internal_reg[1].DB_MAX_OUTPUT_PORT_TYPE
+q[2] <= internal_reg[2].DB_MAX_OUTPUT_PORT_TYPE
+q[3] <= internal_reg[3].DB_MAX_OUTPUT_PORT_TYPE
+q[4] <= internal_reg[4].DB_MAX_OUTPUT_PORT_TYPE
+q[5] <= internal_reg[5].DB_MAX_OUTPUT_PORT_TYPE
+q[6] <= internal_reg[6].DB_MAX_OUTPUT_PORT_TYPE
+q[7] <= internal_reg[7].DB_MAX_OUTPUT_PORT_TYPE
+d[0] => Selector0.IN3
+d[1] => Selector7.IN3
+d[2] => Selector6.IN3
+d[3] => Selector5.IN3
+d[4] => Selector4.IN3
+d[5] => Selector3.IN3
+d[6] => Selector2.IN3
+d[7] => Selector1.IN3
+inc => Equal0.IN2
+inc => Equal1.IN2
+load => Equal0.IN3
+load => Equal1.IN3
+rst => Decoder0.IN0
+STCP => ~NO_FANOUT~
+
+
+|TopLevel|led_controller_32:inst|SN74HC595:inst3|SPSR:inst
+q[0] <= shift_reg[0].DB_MAX_OUTPUT_PORT_TYPE
+q[1] <= shift_reg[1].DB_MAX_OUTPUT_PORT_TYPE
+q[2] <= shift_reg[2].DB_MAX_OUTPUT_PORT_TYPE
+q[3] <= shift_reg[3].DB_MAX_OUTPUT_PORT_TYPE
+q[4] <= shift_reg[4].DB_MAX_OUTPUT_PORT_TYPE
+q[5] <= shift_reg[5].DB_MAX_OUTPUT_PORT_TYPE
+q[6] <= shift_reg[6].DB_MAX_OUTPUT_PORT_TYPE
+q[7] <= shift_reg[7].DB_MAX_OUTPUT_PORT_TYPE
+DS => shift_reg[0].DATAIN
+nrst => shift_reg[0].ACLR
+nrst => shift_reg[1].ACLR
+nrst => shift_reg[2].ACLR
+nrst => shift_reg[3].ACLR
+nrst => shift_reg[4].ACLR
+nrst => shift_reg[5].ACLR
+nrst => shift_reg[6].ACLR
+nrst => shift_reg[7].ACLR
+SHCP => shift_reg[0].CLK
+SHCP => shift_reg[1].CLK
+SHCP => shift_reg[2].CLK
+SHCP => shift_reg[3].CLK
+SHCP => shift_reg[4].CLK
+SHCP => shift_reg[5].CLK
+SHCP => shift_reg[6].CLK
+SHCP => shift_reg[7].CLK
+
+
+|TopLevel|led_controller_32:inst|SN74HC573:inst24
+q[0] <= q[0].DB_MAX_OUTPUT_PORT_TYPE
+q[1] <= q[1].DB_MAX_OUTPUT_PORT_TYPE
+q[2] <= q[2].DB_MAX_OUTPUT_PORT_TYPE
+q[3] <= q[3].DB_MAX_OUTPUT_PORT_TYPE
+q[4] <= q[4].DB_MAX_OUTPUT_PORT_TYPE
+q[5] <= q[5].DB_MAX_OUTPUT_PORT_TYPE
+q[6] <= q[6].DB_MAX_OUTPUT_PORT_TYPE
+q[7] <= q[7].DB_MAX_OUTPUT_PORT_TYPE
+OE => q[7].OE
+OE => q[6].OE
+OE => q[5].OE
+OE => q[4].OE
+OE => q[3].OE
+OE => q[2].OE
+OE => q[1].OE
+OE => q[0].OE
+d[0] => internal_reg[0].DATAIN
+d[1] => internal_reg[1].DATAIN
+d[2] => internal_reg[2].DATAIN
+d[3] => internal_reg[3].DATAIN
+d[4] => internal_reg[4].DATAIN
+d[5] => internal_reg[5].DATAIN
+d[6] => internal_reg[6].DATAIN
+d[7] => internal_reg[7].DATAIN
+LE => internal_reg[0].LATCH_ENABLE
+LE => internal_reg[1].LATCH_ENABLE
+LE => internal_reg[2].LATCH_ENABLE
+LE => internal_reg[3].LATCH_ENABLE
+LE => internal_reg[4].LATCH_ENABLE
+LE => internal_reg[5].LATCH_ENABLE
+LE => internal_reg[6].LATCH_ENABLE
+LE => internal_reg[7].LATCH_ENABLE
+
+
+|TopLevel|led_controller_32:inst|SN74HC595:inst4
+data_out[0] <= trisateN:inst2.q[0]
+data_out[1] <= trisateN:inst2.q[1]
+data_out[2] <= trisateN:inst2.q[2]
+data_out[3] <= trisateN:inst2.q[3]
+data_out[4] <= trisateN:inst2.q[4]
+data_out[5] <= trisateN:inst2.q[5]
+data_out[6] <= trisateN:inst2.q[6]
+data_out[7] <= trisateN:inst2.q[7]
+OE => trisateN:inst2.OE
+STCP => regN:inst1.STCP
+DS => SPSR:inst.DS
+MR => SPSR:inst.nrst
+SHCP => SPSR:inst.SHCP
+
+
+|TopLevel|led_controller_32:inst|SN74HC595:inst4|trisateN:inst2
+q[0] <= q[0].DB_MAX_OUTPUT_PORT_TYPE
+q[1] <= q[1].DB_MAX_OUTPUT_PORT_TYPE
+q[2] <= q[2].DB_MAX_OUTPUT_PORT_TYPE
+q[3] <= q[3].DB_MAX_OUTPUT_PORT_TYPE
+q[4] <= q[4].DB_MAX_OUTPUT_PORT_TYPE
+q[5] <= q[5].DB_MAX_OUTPUT_PORT_TYPE
+q[6] <= q[6].DB_MAX_OUTPUT_PORT_TYPE
+q[7] <= q[7].DB_MAX_OUTPUT_PORT_TYPE
+d[0] => q[0].DATAIN
+d[1] => q[1].DATAIN
+d[2] => q[2].DATAIN
+d[3] => q[3].DATAIN
+d[4] => q[4].DATAIN
+d[5] => q[5].DATAIN
+d[6] => q[6].DATAIN
+d[7] => q[7].DATAIN
+OE => q[0].OE
+OE => q[1].OE
+OE => q[2].OE
+OE => q[3].OE
+OE => q[4].OE
+OE => q[5].OE
+OE => q[6].OE
+OE => q[7].OE
+
+
+|TopLevel|led_controller_32:inst|SN74HC595:inst4|regN:inst1
+q[0] <= internal_reg[0].DB_MAX_OUTPUT_PORT_TYPE
+q[1] <= internal_reg[1].DB_MAX_OUTPUT_PORT_TYPE
+q[2] <= internal_reg[2].DB_MAX_OUTPUT_PORT_TYPE
+q[3] <= internal_reg[3].DB_MAX_OUTPUT_PORT_TYPE
+q[4] <= internal_reg[4].DB_MAX_OUTPUT_PORT_TYPE
+q[5] <= internal_reg[5].DB_MAX_OUTPUT_PORT_TYPE
+q[6] <= internal_reg[6].DB_MAX_OUTPUT_PORT_TYPE
+q[7] <= internal_reg[7].DB_MAX_OUTPUT_PORT_TYPE
+d[0] => Selector0.IN3
+d[1] => Selector7.IN3
+d[2] => Selector6.IN3
+d[3] => Selector5.IN3
+d[4] => Selector4.IN3
+d[5] => Selector3.IN3
+d[6] => Selector2.IN3
+d[7] => Selector1.IN3
+inc => Equal0.IN2
+inc => Equal1.IN2
+load => Equal0.IN3
+load => Equal1.IN3
+rst => Decoder0.IN0
+STCP => ~NO_FANOUT~
+
+
+|TopLevel|led_controller_32:inst|SN74HC595:inst4|SPSR:inst
+q[0] <= shift_reg[0].DB_MAX_OUTPUT_PORT_TYPE
+q[1] <= shift_reg[1].DB_MAX_OUTPUT_PORT_TYPE
+q[2] <= shift_reg[2].DB_MAX_OUTPUT_PORT_TYPE
+q[3] <= shift_reg[3].DB_MAX_OUTPUT_PORT_TYPE
+q[4] <= shift_reg[4].DB_MAX_OUTPUT_PORT_TYPE
+q[5] <= shift_reg[5].DB_MAX_OUTPUT_PORT_TYPE
+q[6] <= shift_reg[6].DB_MAX_OUTPUT_PORT_TYPE
+q[7] <= shift_reg[7].DB_MAX_OUTPUT_PORT_TYPE
+DS => shift_reg[0].DATAIN
+nrst => shift_reg[0].ACLR
+nrst => shift_reg[1].ACLR
+nrst => shift_reg[2].ACLR
+nrst => shift_reg[3].ACLR
+nrst => shift_reg[4].ACLR
+nrst => shift_reg[5].ACLR
+nrst => shift_reg[6].ACLR
+nrst => shift_reg[7].ACLR
+SHCP => shift_reg[0].CLK
+SHCP => shift_reg[1].CLK
+SHCP => shift_reg[2].CLK
+SHCP => shift_reg[3].CLK
+SHCP => shift_reg[4].CLK
+SHCP => shift_reg[5].CLK
+SHCP => shift_reg[6].CLK
+SHCP => shift_reg[7].CLK
+
+
+|TopLevel|SN74LS04:inst12
 Y1 <= inst.DB_MAX_OUTPUT_PORT_TYPE
 A1 => inst.IN0
 Y2 <= inst1.DB_MAX_OUTPUT_PORT_TYPE
@@ -134,7 +940,1702 @@ Y6 <= inst5.DB_MAX_OUTPUT_PORT_TYPE
 A6 => inst5.IN0
 
 
-|TopLevel|CD4024:inst15
+|TopLevel|CN74HC138:inst1
+Y[0] <= Y.DB_MAX_OUTPUT_PORT_TYPE
+Y[1] <= Y.DB_MAX_OUTPUT_PORT_TYPE
+Y[2] <= Y.DB_MAX_OUTPUT_PORT_TYPE
+Y[3] <= Y.DB_MAX_OUTPUT_PORT_TYPE
+Y[4] <= Y.DB_MAX_OUTPUT_PORT_TYPE
+Y[5] <= Y.DB_MAX_OUTPUT_PORT_TYPE
+Y[6] <= Y.DB_MAX_OUTPUT_PORT_TYPE
+Y[7] <= Y.DB_MAX_OUTPUT_PORT_TYPE
+E1 => always0.IN0
+E2 => always0.IN1
+E3 => Y.DATAB
+E3 => Y.DATAB
+E3 => Y.DATAB
+E3 => Y.DATAB
+E3 => Y.DATAB
+E3 => Y.DATAB
+E3 => Y.DATAB
+E3 => Y.DATAB
+A[0] => Decoder0.IN2
+A[1] => Decoder0.IN1
+A[2] => Decoder0.IN0
+
+
+|TopLevel|SN74LS04:inst17
+Y1 <= inst.DB_MAX_OUTPUT_PORT_TYPE
+A1 => inst.IN0
+Y2 <= inst1.DB_MAX_OUTPUT_PORT_TYPE
+A2 => inst1.IN0
+Y3 <= inst2.DB_MAX_OUTPUT_PORT_TYPE
+A3 => inst2.IN0
+Y4 <= inst3.DB_MAX_OUTPUT_PORT_TYPE
+A4 => inst3.IN0
+Y5 <= inst4.DB_MAX_OUTPUT_PORT_TYPE
+A5 => inst4.IN0
+Y6 <= inst5.DB_MAX_OUTPUT_PORT_TYPE
+A6 => inst5.IN0
+
+
+|TopLevel|SN74HC139:inst28
+Y[0] <= Y.DB_MAX_OUTPUT_PORT_TYPE
+Y[1] <= Y.DB_MAX_OUTPUT_PORT_TYPE
+Y[2] <= Y.DB_MAX_OUTPUT_PORT_TYPE
+Y[3] <= Y.DB_MAX_OUTPUT_PORT_TYPE
+E => Y.DATAB
+E => Y.DATAB
+E => Y.DATAB
+E => Y.DATAB
+E => Y.OUTPUTSELECT
+E => Y.OUTPUTSELECT
+E => Y.OUTPUTSELECT
+E => Y.OUTPUTSELECT
+A[0] => Decoder0.IN1
+A[1] => Decoder0.IN0
+
+
+|TopLevel|SN74LS04:inst15
+Y1 <= inst.DB_MAX_OUTPUT_PORT_TYPE
+A1 => inst.IN0
+Y2 <= inst1.DB_MAX_OUTPUT_PORT_TYPE
+A2 => inst1.IN0
+Y3 <= inst2.DB_MAX_OUTPUT_PORT_TYPE
+A3 => inst2.IN0
+Y4 <= inst3.DB_MAX_OUTPUT_PORT_TYPE
+A4 => inst3.IN0
+Y5 <= inst4.DB_MAX_OUTPUT_PORT_TYPE
+A5 => inst4.IN0
+Y6 <= inst5.DB_MAX_OUTPUT_PORT_TYPE
+A6 => inst5.IN0
+
+
+|TopLevel|SN74LS74:inst38
+q <= Mux0.DB_MAX_OUTPUT_PORT_TYPE
+n_q <= Mux1.DB_MAX_OUTPUT_PORT_TYPE
+d => Mux0.IN3
+d => Mux1.IN3
+PRE => Mux0.IN4
+PRE => Mux1.IN4
+CLR => Mux0.IN5
+CLR => Mux1.IN5
+clk => ~NO_FANOUT~
+
+
+|TopLevel|SN74LS74:inst36
+q <= Mux0.DB_MAX_OUTPUT_PORT_TYPE
+n_q <= Mux1.DB_MAX_OUTPUT_PORT_TYPE
+d => Mux0.IN3
+d => Mux1.IN3
+PRE => Mux0.IN4
+PRE => Mux1.IN4
+CLR => Mux0.IN5
+CLR => Mux1.IN5
+clk => ~NO_FANOUT~
+
+
+|TopLevel|FPGA_LED_PSSR:inst4
+data_out <= data_out~reg0.DB_MAX_OUTPUT_PORT_TYPE
+rA[0] => Mux31.IN1
+rA[0] => reg_a.DATAB
+rA[1] => Mux30.IN0
+rA[1] => reg_a.DATAB
+rA[2] => Mux29.IN0
+rA[2] => reg_a.DATAB
+rA[3] => Mux28.IN0
+rA[3] => reg_a.DATAB
+rA[4] => Mux27.IN0
+rA[4] => reg_a.DATAB
+rA[5] => Mux26.IN0
+rA[5] => reg_a.DATAB
+rA[6] => Mux25.IN0
+rA[6] => reg_a.DATAB
+rA[7] => Mux24.IN0
+rA[7] => reg_a.DATAB
+rA[8] => Mux23.IN0
+rA[8] => reg_a.DATAB
+rA[9] => Mux22.IN0
+rA[9] => reg_a.DATAB
+rA[10] => Mux21.IN0
+rA[10] => reg_a.DATAB
+rA[11] => Mux20.IN0
+rA[11] => reg_a.DATAB
+rA[12] => Mux19.IN0
+rA[12] => reg_a.DATAB
+rA[13] => Mux18.IN0
+rA[13] => reg_a.DATAB
+rA[14] => Mux17.IN0
+rA[14] => reg_a.DATAB
+rA[15] => Mux16.IN0
+rA[15] => reg_a.DATAB
+rA[16] => Mux15.IN0
+rA[16] => reg_a.DATAB
+rA[17] => Mux14.IN0
+rA[17] => reg_a.DATAB
+rA[18] => Mux13.IN0
+rA[18] => reg_a.DATAB
+rA[19] => Mux12.IN0
+rA[19] => reg_a.DATAB
+rA[20] => Mux11.IN0
+rA[20] => reg_a.DATAB
+rA[21] => Mux10.IN0
+rA[21] => reg_a.DATAB
+rA[22] => Mux9.IN0
+rA[22] => reg_a.DATAB
+rA[23] => Mux8.IN0
+rA[23] => reg_a.DATAB
+rA[24] => Mux7.IN0
+rA[24] => reg_a.DATAB
+rA[25] => Mux6.IN0
+rA[25] => reg_a.DATAB
+rA[26] => Mux5.IN0
+rA[26] => reg_a.DATAB
+rA[27] => Mux4.IN0
+rA[27] => reg_a.DATAB
+rA[28] => Mux3.IN0
+rA[28] => reg_a.DATAB
+rA[29] => Mux2.IN0
+rA[29] => reg_a.DATAB
+rA[30] => Mux1.IN0
+rA[30] => reg_a.DATAB
+rA[31] => Mux0.IN0
+rA[31] => reg_a.DATAB
+rB[0] => Mux63.IN1
+rB[0] => reg_b.DATAB
+rB[1] => Mux62.IN0
+rB[1] => reg_b.DATAB
+rB[2] => Mux61.IN0
+rB[2] => reg_b.DATAB
+rB[3] => Mux60.IN0
+rB[3] => reg_b.DATAB
+rB[4] => Mux59.IN0
+rB[4] => reg_b.DATAB
+rB[5] => Mux58.IN0
+rB[5] => reg_b.DATAB
+rB[6] => Mux57.IN0
+rB[6] => reg_b.DATAB
+rB[7] => Mux56.IN0
+rB[7] => reg_b.DATAB
+rB[8] => Mux55.IN0
+rB[8] => reg_b.DATAB
+rB[9] => Mux54.IN0
+rB[9] => reg_b.DATAB
+rB[10] => Mux53.IN0
+rB[10] => reg_b.DATAB
+rB[11] => Mux52.IN0
+rB[11] => reg_b.DATAB
+rB[12] => Mux51.IN0
+rB[12] => reg_b.DATAB
+rB[13] => Mux50.IN0
+rB[13] => reg_b.DATAB
+rB[14] => Mux49.IN0
+rB[14] => reg_b.DATAB
+rB[15] => Mux48.IN0
+rB[15] => reg_b.DATAB
+rB[16] => Mux47.IN0
+rB[16] => reg_b.DATAB
+rB[17] => Mux46.IN0
+rB[17] => reg_b.DATAB
+rB[18] => Mux45.IN0
+rB[18] => reg_b.DATAB
+rB[19] => Mux44.IN0
+rB[19] => reg_b.DATAB
+rB[20] => Mux43.IN0
+rB[20] => reg_b.DATAB
+rB[21] => Mux42.IN0
+rB[21] => reg_b.DATAB
+rB[22] => Mux41.IN0
+rB[22] => reg_b.DATAB
+rB[23] => Mux40.IN0
+rB[23] => reg_b.DATAB
+rB[24] => Mux39.IN0
+rB[24] => reg_b.DATAB
+rB[25] => Mux38.IN0
+rB[25] => reg_b.DATAB
+rB[26] => Mux37.IN0
+rB[26] => reg_b.DATAB
+rB[27] => Mux36.IN0
+rB[27] => reg_b.DATAB
+rB[28] => Mux35.IN0
+rB[28] => reg_b.DATAB
+rB[29] => Mux34.IN0
+rB[29] => reg_b.DATAB
+rB[30] => Mux33.IN0
+rB[30] => reg_b.DATAB
+rB[31] => Mux32.IN0
+rB[31] => reg_b.DATAB
+rC[0] => Mux95.IN1
+rC[0] => reg_c.DATAB
+rC[1] => Mux94.IN0
+rC[1] => reg_c.DATAB
+rC[2] => Mux93.IN0
+rC[2] => reg_c.DATAB
+rC[3] => Mux92.IN0
+rC[3] => reg_c.DATAB
+rC[4] => Mux91.IN0
+rC[4] => reg_c.DATAB
+rC[5] => Mux90.IN0
+rC[5] => reg_c.DATAB
+rC[6] => Mux89.IN0
+rC[6] => reg_c.DATAB
+rC[7] => Mux88.IN0
+rC[7] => reg_c.DATAB
+rC[8] => Mux87.IN0
+rC[8] => reg_c.DATAB
+rC[9] => Mux86.IN0
+rC[9] => reg_c.DATAB
+rC[10] => Mux85.IN0
+rC[10] => reg_c.DATAB
+rC[11] => Mux84.IN0
+rC[11] => reg_c.DATAB
+rC[12] => Mux83.IN0
+rC[12] => reg_c.DATAB
+rC[13] => Mux82.IN0
+rC[13] => reg_c.DATAB
+rC[14] => Mux81.IN0
+rC[14] => reg_c.DATAB
+rC[15] => Mux80.IN0
+rC[15] => reg_c.DATAB
+rC[16] => Mux79.IN0
+rC[16] => reg_c.DATAB
+rC[17] => Mux78.IN0
+rC[17] => reg_c.DATAB
+rC[18] => Mux77.IN0
+rC[18] => reg_c.DATAB
+rC[19] => Mux76.IN0
+rC[19] => reg_c.DATAB
+rC[20] => Mux75.IN0
+rC[20] => reg_c.DATAB
+rC[21] => Mux74.IN0
+rC[21] => reg_c.DATAB
+rC[22] => Mux73.IN0
+rC[22] => reg_c.DATAB
+rC[23] => Mux72.IN0
+rC[23] => reg_c.DATAB
+rC[24] => Mux71.IN0
+rC[24] => reg_c.DATAB
+rC[25] => Mux70.IN0
+rC[25] => reg_c.DATAB
+rC[26] => Mux69.IN0
+rC[26] => reg_c.DATAB
+rC[27] => Mux68.IN0
+rC[27] => reg_c.DATAB
+rC[28] => Mux67.IN0
+rC[28] => reg_c.DATAB
+rC[29] => Mux66.IN0
+rC[29] => reg_c.DATAB
+rC[30] => Mux65.IN0
+rC[30] => reg_c.DATAB
+rC[31] => Mux64.IN0
+rC[31] => reg_c.DATAB
+rD[0] => Mux128.IN1
+rD[0] => reg_d.DATAB
+rD[1] => Mux127.IN0
+rD[1] => reg_d.DATAB
+rD[2] => Mux126.IN0
+rD[2] => reg_d.DATAB
+rD[3] => Mux125.IN0
+rD[3] => reg_d.DATAB
+rD[4] => Mux124.IN0
+rD[4] => reg_d.DATAB
+rD[5] => Mux123.IN0
+rD[5] => reg_d.DATAB
+rD[6] => Mux122.IN0
+rD[6] => reg_d.DATAB
+rD[7] => Mux121.IN0
+rD[7] => reg_d.DATAB
+rD[8] => Mux120.IN0
+rD[8] => reg_d.DATAB
+rD[9] => Mux119.IN0
+rD[9] => reg_d.DATAB
+rD[10] => Mux118.IN0
+rD[10] => reg_d.DATAB
+rD[11] => Mux117.IN0
+rD[11] => reg_d.DATAB
+rD[12] => Mux116.IN0
+rD[12] => reg_d.DATAB
+rD[13] => Mux115.IN0
+rD[13] => reg_d.DATAB
+rD[14] => Mux114.IN0
+rD[14] => reg_d.DATAB
+rD[15] => Mux113.IN0
+rD[15] => reg_d.DATAB
+rD[16] => Mux112.IN0
+rD[16] => reg_d.DATAB
+rD[17] => Mux111.IN0
+rD[17] => reg_d.DATAB
+rD[18] => Mux110.IN0
+rD[18] => reg_d.DATAB
+rD[19] => Mux109.IN0
+rD[19] => reg_d.DATAB
+rD[20] => Mux108.IN0
+rD[20] => reg_d.DATAB
+rD[21] => Mux107.IN0
+rD[21] => reg_d.DATAB
+rD[22] => Mux106.IN0
+rD[22] => reg_d.DATAB
+rD[23] => Mux105.IN0
+rD[23] => reg_d.DATAB
+rD[24] => Mux104.IN0
+rD[24] => reg_d.DATAB
+rD[25] => Mux103.IN0
+rD[25] => reg_d.DATAB
+rD[26] => Mux102.IN0
+rD[26] => reg_d.DATAB
+rD[27] => Mux101.IN0
+rD[27] => reg_d.DATAB
+rD[28] => Mux100.IN0
+rD[28] => reg_d.DATAB
+rD[29] => Mux99.IN0
+rD[29] => reg_d.DATAB
+rD[30] => Mux98.IN0
+rD[30] => reg_d.DATAB
+rD[31] => Mux97.IN0
+rD[31] => reg_d.DATAB
+sel[0] => Mux0.IN2
+sel[0] => Mux1.IN2
+sel[0] => Mux2.IN2
+sel[0] => Mux3.IN2
+sel[0] => Mux4.IN2
+sel[0] => Mux5.IN2
+sel[0] => Mux6.IN2
+sel[0] => Mux7.IN2
+sel[0] => Mux8.IN2
+sel[0] => Mux9.IN2
+sel[0] => Mux10.IN2
+sel[0] => Mux11.IN2
+sel[0] => Mux12.IN2
+sel[0] => Mux13.IN2
+sel[0] => Mux14.IN2
+sel[0] => Mux15.IN2
+sel[0] => Mux16.IN2
+sel[0] => Mux17.IN2
+sel[0] => Mux18.IN2
+sel[0] => Mux19.IN2
+sel[0] => Mux20.IN2
+sel[0] => Mux21.IN2
+sel[0] => Mux22.IN2
+sel[0] => Mux23.IN2
+sel[0] => Mux24.IN2
+sel[0] => Mux25.IN2
+sel[0] => Mux26.IN2
+sel[0] => Mux27.IN2
+sel[0] => Mux28.IN2
+sel[0] => Mux29.IN2
+sel[0] => Mux30.IN2
+sel[0] => Mux31.IN3
+sel[0] => Mux32.IN2
+sel[0] => Mux33.IN2
+sel[0] => Mux34.IN2
+sel[0] => Mux35.IN2
+sel[0] => Mux36.IN2
+sel[0] => Mux37.IN2
+sel[0] => Mux38.IN2
+sel[0] => Mux39.IN2
+sel[0] => Mux40.IN2
+sel[0] => Mux41.IN2
+sel[0] => Mux42.IN2
+sel[0] => Mux43.IN2
+sel[0] => Mux44.IN2
+sel[0] => Mux45.IN2
+sel[0] => Mux46.IN2
+sel[0] => Mux47.IN2
+sel[0] => Mux48.IN2
+sel[0] => Mux49.IN2
+sel[0] => Mux50.IN2
+sel[0] => Mux51.IN2
+sel[0] => Mux52.IN2
+sel[0] => Mux53.IN2
+sel[0] => Mux54.IN2
+sel[0] => Mux55.IN2
+sel[0] => Mux56.IN2
+sel[0] => Mux57.IN2
+sel[0] => Mux58.IN2
+sel[0] => Mux59.IN2
+sel[0] => Mux60.IN2
+sel[0] => Mux61.IN2
+sel[0] => Mux62.IN2
+sel[0] => Mux63.IN3
+sel[0] => Mux64.IN2
+sel[0] => Mux65.IN2
+sel[0] => Mux66.IN2
+sel[0] => Mux67.IN2
+sel[0] => Mux68.IN2
+sel[0] => Mux69.IN2
+sel[0] => Mux70.IN2
+sel[0] => Mux71.IN2
+sel[0] => Mux72.IN2
+sel[0] => Mux73.IN2
+sel[0] => Mux74.IN2
+sel[0] => Mux75.IN2
+sel[0] => Mux76.IN2
+sel[0] => Mux77.IN2
+sel[0] => Mux78.IN2
+sel[0] => Mux79.IN2
+sel[0] => Mux80.IN2
+sel[0] => Mux81.IN2
+sel[0] => Mux82.IN2
+sel[0] => Mux83.IN2
+sel[0] => Mux84.IN2
+sel[0] => Mux85.IN2
+sel[0] => Mux86.IN2
+sel[0] => Mux87.IN2
+sel[0] => Mux88.IN2
+sel[0] => Mux89.IN2
+sel[0] => Mux90.IN2
+sel[0] => Mux91.IN2
+sel[0] => Mux92.IN2
+sel[0] => Mux93.IN2
+sel[0] => Mux94.IN2
+sel[0] => Mux95.IN3
+sel[0] => Mux96.IN1
+sel[0] => Mux97.IN2
+sel[0] => Mux98.IN2
+sel[0] => Mux99.IN2
+sel[0] => Mux100.IN2
+sel[0] => Mux101.IN2
+sel[0] => Mux102.IN2
+sel[0] => Mux103.IN2
+sel[0] => Mux104.IN2
+sel[0] => Mux105.IN2
+sel[0] => Mux106.IN2
+sel[0] => Mux107.IN2
+sel[0] => Mux108.IN2
+sel[0] => Mux109.IN2
+sel[0] => Mux110.IN2
+sel[0] => Mux111.IN2
+sel[0] => Mux112.IN2
+sel[0] => Mux113.IN2
+sel[0] => Mux114.IN2
+sel[0] => Mux115.IN2
+sel[0] => Mux116.IN2
+sel[0] => Mux117.IN2
+sel[0] => Mux118.IN2
+sel[0] => Mux119.IN2
+sel[0] => Mux120.IN2
+sel[0] => Mux121.IN2
+sel[0] => Mux122.IN2
+sel[0] => Mux123.IN2
+sel[0] => Mux124.IN2
+sel[0] => Mux125.IN2
+sel[0] => Mux126.IN2
+sel[0] => Mux127.IN2
+sel[0] => Mux128.IN3
+sel[1] => Mux0.IN1
+sel[1] => Mux1.IN1
+sel[1] => Mux2.IN1
+sel[1] => Mux3.IN1
+sel[1] => Mux4.IN1
+sel[1] => Mux5.IN1
+sel[1] => Mux6.IN1
+sel[1] => Mux7.IN1
+sel[1] => Mux8.IN1
+sel[1] => Mux9.IN1
+sel[1] => Mux10.IN1
+sel[1] => Mux11.IN1
+sel[1] => Mux12.IN1
+sel[1] => Mux13.IN1
+sel[1] => Mux14.IN1
+sel[1] => Mux15.IN1
+sel[1] => Mux16.IN1
+sel[1] => Mux17.IN1
+sel[1] => Mux18.IN1
+sel[1] => Mux19.IN1
+sel[1] => Mux20.IN1
+sel[1] => Mux21.IN1
+sel[1] => Mux22.IN1
+sel[1] => Mux23.IN1
+sel[1] => Mux24.IN1
+sel[1] => Mux25.IN1
+sel[1] => Mux26.IN1
+sel[1] => Mux27.IN1
+sel[1] => Mux28.IN1
+sel[1] => Mux29.IN1
+sel[1] => Mux30.IN1
+sel[1] => Mux31.IN2
+sel[1] => Mux32.IN1
+sel[1] => Mux33.IN1
+sel[1] => Mux34.IN1
+sel[1] => Mux35.IN1
+sel[1] => Mux36.IN1
+sel[1] => Mux37.IN1
+sel[1] => Mux38.IN1
+sel[1] => Mux39.IN1
+sel[1] => Mux40.IN1
+sel[1] => Mux41.IN1
+sel[1] => Mux42.IN1
+sel[1] => Mux43.IN1
+sel[1] => Mux44.IN1
+sel[1] => Mux45.IN1
+sel[1] => Mux46.IN1
+sel[1] => Mux47.IN1
+sel[1] => Mux48.IN1
+sel[1] => Mux49.IN1
+sel[1] => Mux50.IN1
+sel[1] => Mux51.IN1
+sel[1] => Mux52.IN1
+sel[1] => Mux53.IN1
+sel[1] => Mux54.IN1
+sel[1] => Mux55.IN1
+sel[1] => Mux56.IN1
+sel[1] => Mux57.IN1
+sel[1] => Mux58.IN1
+sel[1] => Mux59.IN1
+sel[1] => Mux60.IN1
+sel[1] => Mux61.IN1
+sel[1] => Mux62.IN1
+sel[1] => Mux63.IN2
+sel[1] => Mux64.IN1
+sel[1] => Mux65.IN1
+sel[1] => Mux66.IN1
+sel[1] => Mux67.IN1
+sel[1] => Mux68.IN1
+sel[1] => Mux69.IN1
+sel[1] => Mux70.IN1
+sel[1] => Mux71.IN1
+sel[1] => Mux72.IN1
+sel[1] => Mux73.IN1
+sel[1] => Mux74.IN1
+sel[1] => Mux75.IN1
+sel[1] => Mux76.IN1
+sel[1] => Mux77.IN1
+sel[1] => Mux78.IN1
+sel[1] => Mux79.IN1
+sel[1] => Mux80.IN1
+sel[1] => Mux81.IN1
+sel[1] => Mux82.IN1
+sel[1] => Mux83.IN1
+sel[1] => Mux84.IN1
+sel[1] => Mux85.IN1
+sel[1] => Mux86.IN1
+sel[1] => Mux87.IN1
+sel[1] => Mux88.IN1
+sel[1] => Mux89.IN1
+sel[1] => Mux90.IN1
+sel[1] => Mux91.IN1
+sel[1] => Mux92.IN1
+sel[1] => Mux93.IN1
+sel[1] => Mux94.IN1
+sel[1] => Mux95.IN2
+sel[1] => Mux96.IN0
+sel[1] => Mux97.IN1
+sel[1] => Mux98.IN1
+sel[1] => Mux99.IN1
+sel[1] => Mux100.IN1
+sel[1] => Mux101.IN1
+sel[1] => Mux102.IN1
+sel[1] => Mux103.IN1
+sel[1] => Mux104.IN1
+sel[1] => Mux105.IN1
+sel[1] => Mux106.IN1
+sel[1] => Mux107.IN1
+sel[1] => Mux108.IN1
+sel[1] => Mux109.IN1
+sel[1] => Mux110.IN1
+sel[1] => Mux111.IN1
+sel[1] => Mux112.IN1
+sel[1] => Mux113.IN1
+sel[1] => Mux114.IN1
+sel[1] => Mux115.IN1
+sel[1] => Mux116.IN1
+sel[1] => Mux117.IN1
+sel[1] => Mux118.IN1
+sel[1] => Mux119.IN1
+sel[1] => Mux120.IN1
+sel[1] => Mux121.IN1
+sel[1] => Mux122.IN1
+sel[1] => Mux123.IN1
+sel[1] => Mux124.IN1
+sel[1] => Mux125.IN1
+sel[1] => Mux126.IN1
+sel[1] => Mux127.IN1
+sel[1] => Mux128.IN2
+clk => data_out~reg0.CLK
+clk => reg_d[0].CLK
+clk => reg_d[1].CLK
+clk => reg_d[2].CLK
+clk => reg_d[3].CLK
+clk => reg_d[4].CLK
+clk => reg_d[5].CLK
+clk => reg_d[6].CLK
+clk => reg_d[7].CLK
+clk => reg_d[8].CLK
+clk => reg_d[9].CLK
+clk => reg_d[10].CLK
+clk => reg_d[11].CLK
+clk => reg_d[12].CLK
+clk => reg_d[13].CLK
+clk => reg_d[14].CLK
+clk => reg_d[15].CLK
+clk => reg_d[16].CLK
+clk => reg_d[17].CLK
+clk => reg_d[18].CLK
+clk => reg_d[19].CLK
+clk => reg_d[20].CLK
+clk => reg_d[21].CLK
+clk => reg_d[22].CLK
+clk => reg_d[23].CLK
+clk => reg_d[24].CLK
+clk => reg_d[25].CLK
+clk => reg_d[26].CLK
+clk => reg_d[27].CLK
+clk => reg_d[28].CLK
+clk => reg_d[29].CLK
+clk => reg_d[30].CLK
+clk => reg_d[31].CLK
+clk => reg_c[0].CLK
+clk => reg_c[1].CLK
+clk => reg_c[2].CLK
+clk => reg_c[3].CLK
+clk => reg_c[4].CLK
+clk => reg_c[5].CLK
+clk => reg_c[6].CLK
+clk => reg_c[7].CLK
+clk => reg_c[8].CLK
+clk => reg_c[9].CLK
+clk => reg_c[10].CLK
+clk => reg_c[11].CLK
+clk => reg_c[12].CLK
+clk => reg_c[13].CLK
+clk => reg_c[14].CLK
+clk => reg_c[15].CLK
+clk => reg_c[16].CLK
+clk => reg_c[17].CLK
+clk => reg_c[18].CLK
+clk => reg_c[19].CLK
+clk => reg_c[20].CLK
+clk => reg_c[21].CLK
+clk => reg_c[22].CLK
+clk => reg_c[23].CLK
+clk => reg_c[24].CLK
+clk => reg_c[25].CLK
+clk => reg_c[26].CLK
+clk => reg_c[27].CLK
+clk => reg_c[28].CLK
+clk => reg_c[29].CLK
+clk => reg_c[30].CLK
+clk => reg_c[31].CLK
+clk => reg_b[0].CLK
+clk => reg_b[1].CLK
+clk => reg_b[2].CLK
+clk => reg_b[3].CLK
+clk => reg_b[4].CLK
+clk => reg_b[5].CLK
+clk => reg_b[6].CLK
+clk => reg_b[7].CLK
+clk => reg_b[8].CLK
+clk => reg_b[9].CLK
+clk => reg_b[10].CLK
+clk => reg_b[11].CLK
+clk => reg_b[12].CLK
+clk => reg_b[13].CLK
+clk => reg_b[14].CLK
+clk => reg_b[15].CLK
+clk => reg_b[16].CLK
+clk => reg_b[17].CLK
+clk => reg_b[18].CLK
+clk => reg_b[19].CLK
+clk => reg_b[20].CLK
+clk => reg_b[21].CLK
+clk => reg_b[22].CLK
+clk => reg_b[23].CLK
+clk => reg_b[24].CLK
+clk => reg_b[25].CLK
+clk => reg_b[26].CLK
+clk => reg_b[27].CLK
+clk => reg_b[28].CLK
+clk => reg_b[29].CLK
+clk => reg_b[30].CLK
+clk => reg_b[31].CLK
+clk => reg_a[0].CLK
+clk => reg_a[1].CLK
+clk => reg_a[2].CLK
+clk => reg_a[3].CLK
+clk => reg_a[4].CLK
+clk => reg_a[5].CLK
+clk => reg_a[6].CLK
+clk => reg_a[7].CLK
+clk => reg_a[8].CLK
+clk => reg_a[9].CLK
+clk => reg_a[10].CLK
+clk => reg_a[11].CLK
+clk => reg_a[12].CLK
+clk => reg_a[13].CLK
+clk => reg_a[14].CLK
+clk => reg_a[15].CLK
+clk => reg_a[16].CLK
+clk => reg_a[17].CLK
+clk => reg_a[18].CLK
+clk => reg_a[19].CLK
+clk => reg_a[20].CLK
+clk => reg_a[21].CLK
+clk => reg_a[22].CLK
+clk => reg_a[23].CLK
+clk => reg_a[24].CLK
+clk => reg_a[25].CLK
+clk => reg_a[26].CLK
+clk => reg_a[27].CLK
+clk => reg_a[28].CLK
+clk => reg_a[29].CLK
+clk => reg_a[30].CLK
+clk => reg_a[31].CLK
+rst => reg_a.OUTPUTSELECT
+rst => reg_a.OUTPUTSELECT
+rst => reg_a.OUTPUTSELECT
+rst => reg_a.OUTPUTSELECT
+rst => reg_a.OUTPUTSELECT
+rst => reg_a.OUTPUTSELECT
+rst => reg_a.OUTPUTSELECT
+rst => reg_a.OUTPUTSELECT
+rst => reg_a.OUTPUTSELECT
+rst => reg_a.OUTPUTSELECT
+rst => reg_a.OUTPUTSELECT
+rst => reg_a.OUTPUTSELECT
+rst => reg_a.OUTPUTSELECT
+rst => reg_a.OUTPUTSELECT
+rst => reg_a.OUTPUTSELECT
+rst => reg_a.OUTPUTSELECT
+rst => reg_a.OUTPUTSELECT
+rst => reg_a.OUTPUTSELECT
+rst => reg_a.OUTPUTSELECT
+rst => reg_a.OUTPUTSELECT
+rst => reg_a.OUTPUTSELECT
+rst => reg_a.OUTPUTSELECT
+rst => reg_a.OUTPUTSELECT
+rst => reg_a.OUTPUTSELECT
+rst => reg_a.OUTPUTSELECT
+rst => reg_a.OUTPUTSELECT
+rst => reg_a.OUTPUTSELECT
+rst => reg_a.OUTPUTSELECT
+rst => reg_a.OUTPUTSELECT
+rst => reg_a.OUTPUTSELECT
+rst => reg_a.OUTPUTSELECT
+rst => reg_a.OUTPUTSELECT
+rst => reg_b.OUTPUTSELECT
+rst => reg_b.OUTPUTSELECT
+rst => reg_b.OUTPUTSELECT
+rst => reg_b.OUTPUTSELECT
+rst => reg_b.OUTPUTSELECT
+rst => reg_b.OUTPUTSELECT
+rst => reg_b.OUTPUTSELECT
+rst => reg_b.OUTPUTSELECT
+rst => reg_b.OUTPUTSELECT
+rst => reg_b.OUTPUTSELECT
+rst => reg_b.OUTPUTSELECT
+rst => reg_b.OUTPUTSELECT
+rst => reg_b.OUTPUTSELECT
+rst => reg_b.OUTPUTSELECT
+rst => reg_b.OUTPUTSELECT
+rst => reg_b.OUTPUTSELECT
+rst => reg_b.OUTPUTSELECT
+rst => reg_b.OUTPUTSELECT
+rst => reg_b.OUTPUTSELECT
+rst => reg_b.OUTPUTSELECT
+rst => reg_b.OUTPUTSELECT
+rst => reg_b.OUTPUTSELECT
+rst => reg_b.OUTPUTSELECT
+rst => reg_b.OUTPUTSELECT
+rst => reg_b.OUTPUTSELECT
+rst => reg_b.OUTPUTSELECT
+rst => reg_b.OUTPUTSELECT
+rst => reg_b.OUTPUTSELECT
+rst => reg_b.OUTPUTSELECT
+rst => reg_b.OUTPUTSELECT
+rst => reg_b.OUTPUTSELECT
+rst => reg_b.OUTPUTSELECT
+rst => reg_c.OUTPUTSELECT
+rst => reg_c.OUTPUTSELECT
+rst => reg_c.OUTPUTSELECT
+rst => reg_c.OUTPUTSELECT
+rst => reg_c.OUTPUTSELECT
+rst => reg_c.OUTPUTSELECT
+rst => reg_c.OUTPUTSELECT
+rst => reg_c.OUTPUTSELECT
+rst => reg_c.OUTPUTSELECT
+rst => reg_c.OUTPUTSELECT
+rst => reg_c.OUTPUTSELECT
+rst => reg_c.OUTPUTSELECT
+rst => reg_c.OUTPUTSELECT
+rst => reg_c.OUTPUTSELECT
+rst => reg_c.OUTPUTSELECT
+rst => reg_c.OUTPUTSELECT
+rst => reg_c.OUTPUTSELECT
+rst => reg_c.OUTPUTSELECT
+rst => reg_c.OUTPUTSELECT
+rst => reg_c.OUTPUTSELECT
+rst => reg_c.OUTPUTSELECT
+rst => reg_c.OUTPUTSELECT
+rst => reg_c.OUTPUTSELECT
+rst => reg_c.OUTPUTSELECT
+rst => reg_c.OUTPUTSELECT
+rst => reg_c.OUTPUTSELECT
+rst => reg_c.OUTPUTSELECT
+rst => reg_c.OUTPUTSELECT
+rst => reg_c.OUTPUTSELECT
+rst => reg_c.OUTPUTSELECT
+rst => reg_c.OUTPUTSELECT
+rst => reg_c.OUTPUTSELECT
+rst => reg_d.OUTPUTSELECT
+rst => reg_d.OUTPUTSELECT
+rst => reg_d.OUTPUTSELECT
+rst => reg_d.OUTPUTSELECT
+rst => reg_d.OUTPUTSELECT
+rst => reg_d.OUTPUTSELECT
+rst => reg_d.OUTPUTSELECT
+rst => reg_d.OUTPUTSELECT
+rst => reg_d.OUTPUTSELECT
+rst => reg_d.OUTPUTSELECT
+rst => reg_d.OUTPUTSELECT
+rst => reg_d.OUTPUTSELECT
+rst => reg_d.OUTPUTSELECT
+rst => reg_d.OUTPUTSELECT
+rst => reg_d.OUTPUTSELECT
+rst => reg_d.OUTPUTSELECT
+rst => reg_d.OUTPUTSELECT
+rst => reg_d.OUTPUTSELECT
+rst => reg_d.OUTPUTSELECT
+rst => reg_d.OUTPUTSELECT
+rst => reg_d.OUTPUTSELECT
+rst => reg_d.OUTPUTSELECT
+rst => reg_d.OUTPUTSELECT
+rst => reg_d.OUTPUTSELECT
+rst => reg_d.OUTPUTSELECT
+rst => reg_d.OUTPUTSELECT
+rst => reg_d.OUTPUTSELECT
+rst => reg_d.OUTPUTSELECT
+rst => reg_d.OUTPUTSELECT
+rst => reg_d.OUTPUTSELECT
+rst => reg_d.OUTPUTSELECT
+rst => reg_d.OUTPUTSELECT
+rst => data_out.OUTPUTSELECT
+load => reg_a.OUTPUTSELECT
+load => reg_a.OUTPUTSELECT
+load => reg_a.OUTPUTSELECT
+load => reg_a.OUTPUTSELECT
+load => reg_a.OUTPUTSELECT
+load => reg_a.OUTPUTSELECT
+load => reg_a.OUTPUTSELECT
+load => reg_a.OUTPUTSELECT
+load => reg_a.OUTPUTSELECT
+load => reg_a.OUTPUTSELECT
+load => reg_a.OUTPUTSELECT
+load => reg_a.OUTPUTSELECT
+load => reg_a.OUTPUTSELECT
+load => reg_a.OUTPUTSELECT
+load => reg_a.OUTPUTSELECT
+load => reg_a.OUTPUTSELECT
+load => reg_a.OUTPUTSELECT
+load => reg_a.OUTPUTSELECT
+load => reg_a.OUTPUTSELECT
+load => reg_a.OUTPUTSELECT
+load => reg_a.OUTPUTSELECT
+load => reg_a.OUTPUTSELECT
+load => reg_a.OUTPUTSELECT
+load => reg_a.OUTPUTSELECT
+load => reg_a.OUTPUTSELECT
+load => reg_a.OUTPUTSELECT
+load => reg_a.OUTPUTSELECT
+load => reg_a.OUTPUTSELECT
+load => reg_a.OUTPUTSELECT
+load => reg_a.OUTPUTSELECT
+load => reg_a.OUTPUTSELECT
+load => reg_a.OUTPUTSELECT
+load => reg_b.OUTPUTSELECT
+load => reg_b.OUTPUTSELECT
+load => reg_b.OUTPUTSELECT
+load => reg_b.OUTPUTSELECT
+load => reg_b.OUTPUTSELECT
+load => reg_b.OUTPUTSELECT
+load => reg_b.OUTPUTSELECT
+load => reg_b.OUTPUTSELECT
+load => reg_b.OUTPUTSELECT
+load => reg_b.OUTPUTSELECT
+load => reg_b.OUTPUTSELECT
+load => reg_b.OUTPUTSELECT
+load => reg_b.OUTPUTSELECT
+load => reg_b.OUTPUTSELECT
+load => reg_b.OUTPUTSELECT
+load => reg_b.OUTPUTSELECT
+load => reg_b.OUTPUTSELECT
+load => reg_b.OUTPUTSELECT
+load => reg_b.OUTPUTSELECT
+load => reg_b.OUTPUTSELECT
+load => reg_b.OUTPUTSELECT
+load => reg_b.OUTPUTSELECT
+load => reg_b.OUTPUTSELECT
+load => reg_b.OUTPUTSELECT
+load => reg_b.OUTPUTSELECT
+load => reg_b.OUTPUTSELECT
+load => reg_b.OUTPUTSELECT
+load => reg_b.OUTPUTSELECT
+load => reg_b.OUTPUTSELECT
+load => reg_b.OUTPUTSELECT
+load => reg_b.OUTPUTSELECT
+load => reg_b.OUTPUTSELECT
+load => reg_c.OUTPUTSELECT
+load => reg_c.OUTPUTSELECT
+load => reg_c.OUTPUTSELECT
+load => reg_c.OUTPUTSELECT
+load => reg_c.OUTPUTSELECT
+load => reg_c.OUTPUTSELECT
+load => reg_c.OUTPUTSELECT
+load => reg_c.OUTPUTSELECT
+load => reg_c.OUTPUTSELECT
+load => reg_c.OUTPUTSELECT
+load => reg_c.OUTPUTSELECT
+load => reg_c.OUTPUTSELECT
+load => reg_c.OUTPUTSELECT
+load => reg_c.OUTPUTSELECT
+load => reg_c.OUTPUTSELECT
+load => reg_c.OUTPUTSELECT
+load => reg_c.OUTPUTSELECT
+load => reg_c.OUTPUTSELECT
+load => reg_c.OUTPUTSELECT
+load => reg_c.OUTPUTSELECT
+load => reg_c.OUTPUTSELECT
+load => reg_c.OUTPUTSELECT
+load => reg_c.OUTPUTSELECT
+load => reg_c.OUTPUTSELECT
+load => reg_c.OUTPUTSELECT
+load => reg_c.OUTPUTSELECT
+load => reg_c.OUTPUTSELECT
+load => reg_c.OUTPUTSELECT
+load => reg_c.OUTPUTSELECT
+load => reg_c.OUTPUTSELECT
+load => reg_c.OUTPUTSELECT
+load => reg_c.OUTPUTSELECT
+load => reg_d.OUTPUTSELECT
+load => reg_d.OUTPUTSELECT
+load => reg_d.OUTPUTSELECT
+load => reg_d.OUTPUTSELECT
+load => reg_d.OUTPUTSELECT
+load => reg_d.OUTPUTSELECT
+load => reg_d.OUTPUTSELECT
+load => reg_d.OUTPUTSELECT
+load => reg_d.OUTPUTSELECT
+load => reg_d.OUTPUTSELECT
+load => reg_d.OUTPUTSELECT
+load => reg_d.OUTPUTSELECT
+load => reg_d.OUTPUTSELECT
+load => reg_d.OUTPUTSELECT
+load => reg_d.OUTPUTSELECT
+load => reg_d.OUTPUTSELECT
+load => reg_d.OUTPUTSELECT
+load => reg_d.OUTPUTSELECT
+load => reg_d.OUTPUTSELECT
+load => reg_d.OUTPUTSELECT
+load => reg_d.OUTPUTSELECT
+load => reg_d.OUTPUTSELECT
+load => reg_d.OUTPUTSELECT
+load => reg_d.OUTPUTSELECT
+load => reg_d.OUTPUTSELECT
+load => reg_d.OUTPUTSELECT
+load => reg_d.OUTPUTSELECT
+load => reg_d.OUTPUTSELECT
+load => reg_d.OUTPUTSELECT
+load => reg_d.OUTPUTSELECT
+load => reg_d.OUTPUTSELECT
+load => reg_d.OUTPUTSELECT
+load => data_out.OUTPUTSELECT
+
+
+|TopLevel|FPGA_counter:inst29
+q[0] <= cnt_reg[0].DB_MAX_OUTPUT_PORT_TYPE
+q[1] <= cnt_reg[1].DB_MAX_OUTPUT_PORT_TYPE
+q[2] <= cnt_reg[2].DB_MAX_OUTPUT_PORT_TYPE
+q[3] <= cnt_reg[3].DB_MAX_OUTPUT_PORT_TYPE
+q[4] <= cnt_reg[4].DB_MAX_OUTPUT_PORT_TYPE
+LE => cnt_reg[0].CLK
+LE => cnt_reg[1].CLK
+LE => cnt_reg[2].CLK
+LE => cnt_reg[3].CLK
+LE => cnt_reg[4].CLK
+rst => cnt_reg[0].ACLR
+rst => cnt_reg[1].ACLR
+rst => cnt_reg[2].ACLR
+rst => cnt_reg[3].ACLR
+rst => cnt_reg[4].ACLR
+
+
+|TopLevel|led_controller_32:inst40
+LE <= SN74HC08:inst12.Y1
+count[0] => SN74LS04:inst9.A1
+count[1] => SN74HC08:inst11.B2
+count[2] => SN74LS04:inst9.A2
+count[3] => SN74LS04:inst9.A3
+count[4] => SN74LS04:inst9.A4
+count[5] => SN74HC08:inst12.B1
+count[6] => ~NO_FANOUT~
+rst_count <= rst_reg.DB_MAX_OUTPUT_PORT_TYPE
+SHCP => SN74LS74:inst29.clk
+SHCP => SN74HC595:inst.SHCP
+SHCP => SN74HC595:inst2.SHCP
+SHCP => SN74HC595:inst3.SHCP
+SHCP => SN74HC595:inst4.SHCP
+out_A[0] <= SN74HC573:inst21.q[0]
+out_A[1] <= SN74HC573:inst21.q[1]
+out_A[2] <= SN74HC573:inst21.q[2]
+out_A[3] <= SN74HC573:inst21.q[3]
+out_A[4] <= SN74HC573:inst21.q[4]
+out_A[5] <= SN74HC573:inst21.q[5]
+out_A[6] <= SN74HC573:inst21.q[6]
+out_A[7] <= SN74HC573:inst21.q[7]
+OE => SN74HC573:inst21.OE
+OE => SN74HC595:inst.OE
+OE => SN74HC573:inst22.OE
+OE => SN74HC595:inst2.OE
+OE => SN74HC573:inst23.OE
+OE => SN74HC595:inst3.OE
+OE => SN74HC573:inst24.OE
+OE => SN74HC595:inst4.OE
+DS => SN74HC595:inst.DS
+MR => SN74HC595:inst.MR
+MR => SN74HC595:inst2.MR
+MR => SN74HC595:inst3.MR
+MR => SN74HC595:inst4.MR
+STCP => SN74HC595:inst.STCP
+STCP => SN74HC595:inst2.STCP
+STCP => SN74HC595:inst3.STCP
+STCP => SN74HC595:inst4.STCP
+out_B[0] <= SN74HC573:inst22.q[0]
+out_B[1] <= SN74HC573:inst22.q[1]
+out_B[2] <= SN74HC573:inst22.q[2]
+out_B[3] <= SN74HC573:inst22.q[3]
+out_B[4] <= SN74HC573:inst22.q[4]
+out_B[5] <= SN74HC573:inst22.q[5]
+out_B[6] <= SN74HC573:inst22.q[6]
+out_B[7] <= SN74HC573:inst22.q[7]
+out_C[0] <= SN74HC573:inst23.q[0]
+out_C[1] <= SN74HC573:inst23.q[1]
+out_C[2] <= SN74HC573:inst23.q[2]
+out_C[3] <= SN74HC573:inst23.q[3]
+out_C[4] <= SN74HC573:inst23.q[4]
+out_C[5] <= SN74HC573:inst23.q[5]
+out_C[6] <= SN74HC573:inst23.q[6]
+out_C[7] <= SN74HC573:inst23.q[7]
+out_D[0] <= SN74HC573:inst24.q[0]
+out_D[1] <= SN74HC573:inst24.q[1]
+out_D[2] <= SN74HC573:inst24.q[2]
+out_D[3] <= SN74HC573:inst24.q[3]
+out_D[4] <= SN74HC573:inst24.q[4]
+out_D[5] <= SN74HC573:inst24.q[5]
+out_D[6] <= SN74HC573:inst24.q[6]
+out_D[7] <= SN74HC573:inst24.q[7]
+
+
+|TopLevel|led_controller_32:inst40|SN74HC08:inst12
+Y1 <= inst.DB_MAX_OUTPUT_PORT_TYPE
+A1 => inst.IN0
+B1 => inst.IN1
+Y2 <= inst1.DB_MAX_OUTPUT_PORT_TYPE
+A2 => inst1.IN0
+B2 => inst1.IN1
+Y3 <= inst2.DB_MAX_OUTPUT_PORT_TYPE
+A3 => inst2.IN0
+B3 => inst2.IN1
+Y4 <= inst3.DB_MAX_OUTPUT_PORT_TYPE
+A4 => inst3.IN0
+B4 => inst3.IN1
+
+
+|TopLevel|led_controller_32:inst40|SN74HC08:inst11
+Y1 <= inst.DB_MAX_OUTPUT_PORT_TYPE
+A1 => inst.IN0
+B1 => inst.IN1
+Y2 <= inst1.DB_MAX_OUTPUT_PORT_TYPE
+A2 => inst1.IN0
+B2 => inst1.IN1
+Y3 <= inst2.DB_MAX_OUTPUT_PORT_TYPE
+A3 => inst2.IN0
+B3 => inst2.IN1
+Y4 <= inst3.DB_MAX_OUTPUT_PORT_TYPE
+A4 => inst3.IN0
+B4 => inst3.IN1
+
+
+|TopLevel|led_controller_32:inst40|SN74LS04:inst9
+Y1 <= inst.DB_MAX_OUTPUT_PORT_TYPE
+A1 => inst.IN0
+Y2 <= inst1.DB_MAX_OUTPUT_PORT_TYPE
+A2 => inst1.IN0
+Y3 <= inst2.DB_MAX_OUTPUT_PORT_TYPE
+A3 => inst2.IN0
+Y4 <= inst3.DB_MAX_OUTPUT_PORT_TYPE
+A4 => inst3.IN0
+Y5 <= inst4.DB_MAX_OUTPUT_PORT_TYPE
+A5 => inst4.IN0
+Y6 <= inst5.DB_MAX_OUTPUT_PORT_TYPE
+A6 => inst5.IN0
+
+
+|TopLevel|led_controller_32:inst40|SN74LS74:inst29
+q <= Mux0.DB_MAX_OUTPUT_PORT_TYPE
+n_q <= Mux1.DB_MAX_OUTPUT_PORT_TYPE
+d => Mux0.IN3
+d => Mux1.IN3
+PRE => Mux0.IN4
+PRE => Mux1.IN4
+CLR => Mux0.IN5
+CLR => Mux1.IN5
+clk => ~NO_FANOUT~
+
+
+|TopLevel|led_controller_32:inst40|SN74HC573:inst21
+q[0] <= q[0].DB_MAX_OUTPUT_PORT_TYPE
+q[1] <= q[1].DB_MAX_OUTPUT_PORT_TYPE
+q[2] <= q[2].DB_MAX_OUTPUT_PORT_TYPE
+q[3] <= q[3].DB_MAX_OUTPUT_PORT_TYPE
+q[4] <= q[4].DB_MAX_OUTPUT_PORT_TYPE
+q[5] <= q[5].DB_MAX_OUTPUT_PORT_TYPE
+q[6] <= q[6].DB_MAX_OUTPUT_PORT_TYPE
+q[7] <= q[7].DB_MAX_OUTPUT_PORT_TYPE
+OE => q[7].OE
+OE => q[6].OE
+OE => q[5].OE
+OE => q[4].OE
+OE => q[3].OE
+OE => q[2].OE
+OE => q[1].OE
+OE => q[0].OE
+d[0] => internal_reg[0].DATAIN
+d[1] => internal_reg[1].DATAIN
+d[2] => internal_reg[2].DATAIN
+d[3] => internal_reg[3].DATAIN
+d[4] => internal_reg[4].DATAIN
+d[5] => internal_reg[5].DATAIN
+d[6] => internal_reg[6].DATAIN
+d[7] => internal_reg[7].DATAIN
+LE => internal_reg[0].LATCH_ENABLE
+LE => internal_reg[1].LATCH_ENABLE
+LE => internal_reg[2].LATCH_ENABLE
+LE => internal_reg[3].LATCH_ENABLE
+LE => internal_reg[4].LATCH_ENABLE
+LE => internal_reg[5].LATCH_ENABLE
+LE => internal_reg[6].LATCH_ENABLE
+LE => internal_reg[7].LATCH_ENABLE
+
+
+|TopLevel|led_controller_32:inst40|SN74HC595:inst
+data_out[0] <= trisateN:inst2.q[0]
+data_out[1] <= trisateN:inst2.q[1]
+data_out[2] <= trisateN:inst2.q[2]
+data_out[3] <= trisateN:inst2.q[3]
+data_out[4] <= trisateN:inst2.q[4]
+data_out[5] <= trisateN:inst2.q[5]
+data_out[6] <= trisateN:inst2.q[6]
+data_out[7] <= trisateN:inst2.q[7]
+OE => trisateN:inst2.OE
+STCP => regN:inst1.STCP
+DS => SPSR:inst.DS
+MR => SPSR:inst.nrst
+SHCP => SPSR:inst.SHCP
+
+
+|TopLevel|led_controller_32:inst40|SN74HC595:inst|trisateN:inst2
+q[0] <= q[0].DB_MAX_OUTPUT_PORT_TYPE
+q[1] <= q[1].DB_MAX_OUTPUT_PORT_TYPE
+q[2] <= q[2].DB_MAX_OUTPUT_PORT_TYPE
+q[3] <= q[3].DB_MAX_OUTPUT_PORT_TYPE
+q[4] <= q[4].DB_MAX_OUTPUT_PORT_TYPE
+q[5] <= q[5].DB_MAX_OUTPUT_PORT_TYPE
+q[6] <= q[6].DB_MAX_OUTPUT_PORT_TYPE
+q[7] <= q[7].DB_MAX_OUTPUT_PORT_TYPE
+d[0] => q[0].DATAIN
+d[1] => q[1].DATAIN
+d[2] => q[2].DATAIN
+d[3] => q[3].DATAIN
+d[4] => q[4].DATAIN
+d[5] => q[5].DATAIN
+d[6] => q[6].DATAIN
+d[7] => q[7].DATAIN
+OE => q[0].OE
+OE => q[1].OE
+OE => q[2].OE
+OE => q[3].OE
+OE => q[4].OE
+OE => q[5].OE
+OE => q[6].OE
+OE => q[7].OE
+
+
+|TopLevel|led_controller_32:inst40|SN74HC595:inst|regN:inst1
+q[0] <= internal_reg[0].DB_MAX_OUTPUT_PORT_TYPE
+q[1] <= internal_reg[1].DB_MAX_OUTPUT_PORT_TYPE
+q[2] <= internal_reg[2].DB_MAX_OUTPUT_PORT_TYPE
+q[3] <= internal_reg[3].DB_MAX_OUTPUT_PORT_TYPE
+q[4] <= internal_reg[4].DB_MAX_OUTPUT_PORT_TYPE
+q[5] <= internal_reg[5].DB_MAX_OUTPUT_PORT_TYPE
+q[6] <= internal_reg[6].DB_MAX_OUTPUT_PORT_TYPE
+q[7] <= internal_reg[7].DB_MAX_OUTPUT_PORT_TYPE
+d[0] => Selector0.IN3
+d[1] => Selector7.IN3
+d[2] => Selector6.IN3
+d[3] => Selector5.IN3
+d[4] => Selector4.IN3
+d[5] => Selector3.IN3
+d[6] => Selector2.IN3
+d[7] => Selector1.IN3
+inc => Equal0.IN2
+inc => Equal1.IN2
+load => Equal0.IN3
+load => Equal1.IN3
+rst => Decoder0.IN0
+STCP => ~NO_FANOUT~
+
+
+|TopLevel|led_controller_32:inst40|SN74HC595:inst|SPSR:inst
+q[0] <= shift_reg[0].DB_MAX_OUTPUT_PORT_TYPE
+q[1] <= shift_reg[1].DB_MAX_OUTPUT_PORT_TYPE
+q[2] <= shift_reg[2].DB_MAX_OUTPUT_PORT_TYPE
+q[3] <= shift_reg[3].DB_MAX_OUTPUT_PORT_TYPE
+q[4] <= shift_reg[4].DB_MAX_OUTPUT_PORT_TYPE
+q[5] <= shift_reg[5].DB_MAX_OUTPUT_PORT_TYPE
+q[6] <= shift_reg[6].DB_MAX_OUTPUT_PORT_TYPE
+q[7] <= shift_reg[7].DB_MAX_OUTPUT_PORT_TYPE
+DS => shift_reg[0].DATAIN
+nrst => shift_reg[0].ACLR
+nrst => shift_reg[1].ACLR
+nrst => shift_reg[2].ACLR
+nrst => shift_reg[3].ACLR
+nrst => shift_reg[4].ACLR
+nrst => shift_reg[5].ACLR
+nrst => shift_reg[6].ACLR
+nrst => shift_reg[7].ACLR
+SHCP => shift_reg[0].CLK
+SHCP => shift_reg[1].CLK
+SHCP => shift_reg[2].CLK
+SHCP => shift_reg[3].CLK
+SHCP => shift_reg[4].CLK
+SHCP => shift_reg[5].CLK
+SHCP => shift_reg[6].CLK
+SHCP => shift_reg[7].CLK
+
+
+|TopLevel|led_controller_32:inst40|SN74HC573:inst22
+q[0] <= q[0].DB_MAX_OUTPUT_PORT_TYPE
+q[1] <= q[1].DB_MAX_OUTPUT_PORT_TYPE
+q[2] <= q[2].DB_MAX_OUTPUT_PORT_TYPE
+q[3] <= q[3].DB_MAX_OUTPUT_PORT_TYPE
+q[4] <= q[4].DB_MAX_OUTPUT_PORT_TYPE
+q[5] <= q[5].DB_MAX_OUTPUT_PORT_TYPE
+q[6] <= q[6].DB_MAX_OUTPUT_PORT_TYPE
+q[7] <= q[7].DB_MAX_OUTPUT_PORT_TYPE
+OE => q[7].OE
+OE => q[6].OE
+OE => q[5].OE
+OE => q[4].OE
+OE => q[3].OE
+OE => q[2].OE
+OE => q[1].OE
+OE => q[0].OE
+d[0] => internal_reg[0].DATAIN
+d[1] => internal_reg[1].DATAIN
+d[2] => internal_reg[2].DATAIN
+d[3] => internal_reg[3].DATAIN
+d[4] => internal_reg[4].DATAIN
+d[5] => internal_reg[5].DATAIN
+d[6] => internal_reg[6].DATAIN
+d[7] => internal_reg[7].DATAIN
+LE => internal_reg[0].LATCH_ENABLE
+LE => internal_reg[1].LATCH_ENABLE
+LE => internal_reg[2].LATCH_ENABLE
+LE => internal_reg[3].LATCH_ENABLE
+LE => internal_reg[4].LATCH_ENABLE
+LE => internal_reg[5].LATCH_ENABLE
+LE => internal_reg[6].LATCH_ENABLE
+LE => internal_reg[7].LATCH_ENABLE
+
+
+|TopLevel|led_controller_32:inst40|SN74HC595:inst2
+data_out[0] <= trisateN:inst2.q[0]
+data_out[1] <= trisateN:inst2.q[1]
+data_out[2] <= trisateN:inst2.q[2]
+data_out[3] <= trisateN:inst2.q[3]
+data_out[4] <= trisateN:inst2.q[4]
+data_out[5] <= trisateN:inst2.q[5]
+data_out[6] <= trisateN:inst2.q[6]
+data_out[7] <= trisateN:inst2.q[7]
+OE => trisateN:inst2.OE
+STCP => regN:inst1.STCP
+DS => SPSR:inst.DS
+MR => SPSR:inst.nrst
+SHCP => SPSR:inst.SHCP
+
+
+|TopLevel|led_controller_32:inst40|SN74HC595:inst2|trisateN:inst2
+q[0] <= q[0].DB_MAX_OUTPUT_PORT_TYPE
+q[1] <= q[1].DB_MAX_OUTPUT_PORT_TYPE
+q[2] <= q[2].DB_MAX_OUTPUT_PORT_TYPE
+q[3] <= q[3].DB_MAX_OUTPUT_PORT_TYPE
+q[4] <= q[4].DB_MAX_OUTPUT_PORT_TYPE
+q[5] <= q[5].DB_MAX_OUTPUT_PORT_TYPE
+q[6] <= q[6].DB_MAX_OUTPUT_PORT_TYPE
+q[7] <= q[7].DB_MAX_OUTPUT_PORT_TYPE
+d[0] => q[0].DATAIN
+d[1] => q[1].DATAIN
+d[2] => q[2].DATAIN
+d[3] => q[3].DATAIN
+d[4] => q[4].DATAIN
+d[5] => q[5].DATAIN
+d[6] => q[6].DATAIN
+d[7] => q[7].DATAIN
+OE => q[0].OE
+OE => q[1].OE
+OE => q[2].OE
+OE => q[3].OE
+OE => q[4].OE
+OE => q[5].OE
+OE => q[6].OE
+OE => q[7].OE
+
+
+|TopLevel|led_controller_32:inst40|SN74HC595:inst2|regN:inst1
+q[0] <= internal_reg[0].DB_MAX_OUTPUT_PORT_TYPE
+q[1] <= internal_reg[1].DB_MAX_OUTPUT_PORT_TYPE
+q[2] <= internal_reg[2].DB_MAX_OUTPUT_PORT_TYPE
+q[3] <= internal_reg[3].DB_MAX_OUTPUT_PORT_TYPE
+q[4] <= internal_reg[4].DB_MAX_OUTPUT_PORT_TYPE
+q[5] <= internal_reg[5].DB_MAX_OUTPUT_PORT_TYPE
+q[6] <= internal_reg[6].DB_MAX_OUTPUT_PORT_TYPE
+q[7] <= internal_reg[7].DB_MAX_OUTPUT_PORT_TYPE
+d[0] => Selector0.IN3
+d[1] => Selector7.IN3
+d[2] => Selector6.IN3
+d[3] => Selector5.IN3
+d[4] => Selector4.IN3
+d[5] => Selector3.IN3
+d[6] => Selector2.IN3
+d[7] => Selector1.IN3
+inc => Equal0.IN2
+inc => Equal1.IN2
+load => Equal0.IN3
+load => Equal1.IN3
+rst => Decoder0.IN0
+STCP => ~NO_FANOUT~
+
+
+|TopLevel|led_controller_32:inst40|SN74HC595:inst2|SPSR:inst
+q[0] <= shift_reg[0].DB_MAX_OUTPUT_PORT_TYPE
+q[1] <= shift_reg[1].DB_MAX_OUTPUT_PORT_TYPE
+q[2] <= shift_reg[2].DB_MAX_OUTPUT_PORT_TYPE
+q[3] <= shift_reg[3].DB_MAX_OUTPUT_PORT_TYPE
+q[4] <= shift_reg[4].DB_MAX_OUTPUT_PORT_TYPE
+q[5] <= shift_reg[5].DB_MAX_OUTPUT_PORT_TYPE
+q[6] <= shift_reg[6].DB_MAX_OUTPUT_PORT_TYPE
+q[7] <= shift_reg[7].DB_MAX_OUTPUT_PORT_TYPE
+DS => shift_reg[0].DATAIN
+nrst => shift_reg[0].ACLR
+nrst => shift_reg[1].ACLR
+nrst => shift_reg[2].ACLR
+nrst => shift_reg[3].ACLR
+nrst => shift_reg[4].ACLR
+nrst => shift_reg[5].ACLR
+nrst => shift_reg[6].ACLR
+nrst => shift_reg[7].ACLR
+SHCP => shift_reg[0].CLK
+SHCP => shift_reg[1].CLK
+SHCP => shift_reg[2].CLK
+SHCP => shift_reg[3].CLK
+SHCP => shift_reg[4].CLK
+SHCP => shift_reg[5].CLK
+SHCP => shift_reg[6].CLK
+SHCP => shift_reg[7].CLK
+
+
+|TopLevel|led_controller_32:inst40|SN74HC573:inst23
+q[0] <= q[0].DB_MAX_OUTPUT_PORT_TYPE
+q[1] <= q[1].DB_MAX_OUTPUT_PORT_TYPE
+q[2] <= q[2].DB_MAX_OUTPUT_PORT_TYPE
+q[3] <= q[3].DB_MAX_OUTPUT_PORT_TYPE
+q[4] <= q[4].DB_MAX_OUTPUT_PORT_TYPE
+q[5] <= q[5].DB_MAX_OUTPUT_PORT_TYPE
+q[6] <= q[6].DB_MAX_OUTPUT_PORT_TYPE
+q[7] <= q[7].DB_MAX_OUTPUT_PORT_TYPE
+OE => q[7].OE
+OE => q[6].OE
+OE => q[5].OE
+OE => q[4].OE
+OE => q[3].OE
+OE => q[2].OE
+OE => q[1].OE
+OE => q[0].OE
+d[0] => internal_reg[0].DATAIN
+d[1] => internal_reg[1].DATAIN
+d[2] => internal_reg[2].DATAIN
+d[3] => internal_reg[3].DATAIN
+d[4] => internal_reg[4].DATAIN
+d[5] => internal_reg[5].DATAIN
+d[6] => internal_reg[6].DATAIN
+d[7] => internal_reg[7].DATAIN
+LE => internal_reg[0].LATCH_ENABLE
+LE => internal_reg[1].LATCH_ENABLE
+LE => internal_reg[2].LATCH_ENABLE
+LE => internal_reg[3].LATCH_ENABLE
+LE => internal_reg[4].LATCH_ENABLE
+LE => internal_reg[5].LATCH_ENABLE
+LE => internal_reg[6].LATCH_ENABLE
+LE => internal_reg[7].LATCH_ENABLE
+
+
+|TopLevel|led_controller_32:inst40|SN74HC595:inst3
+data_out[0] <= trisateN:inst2.q[0]
+data_out[1] <= trisateN:inst2.q[1]
+data_out[2] <= trisateN:inst2.q[2]
+data_out[3] <= trisateN:inst2.q[3]
+data_out[4] <= trisateN:inst2.q[4]
+data_out[5] <= trisateN:inst2.q[5]
+data_out[6] <= trisateN:inst2.q[6]
+data_out[7] <= trisateN:inst2.q[7]
+OE => trisateN:inst2.OE
+STCP => regN:inst1.STCP
+DS => SPSR:inst.DS
+MR => SPSR:inst.nrst
+SHCP => SPSR:inst.SHCP
+
+
+|TopLevel|led_controller_32:inst40|SN74HC595:inst3|trisateN:inst2
+q[0] <= q[0].DB_MAX_OUTPUT_PORT_TYPE
+q[1] <= q[1].DB_MAX_OUTPUT_PORT_TYPE
+q[2] <= q[2].DB_MAX_OUTPUT_PORT_TYPE
+q[3] <= q[3].DB_MAX_OUTPUT_PORT_TYPE
+q[4] <= q[4].DB_MAX_OUTPUT_PORT_TYPE
+q[5] <= q[5].DB_MAX_OUTPUT_PORT_TYPE
+q[6] <= q[6].DB_MAX_OUTPUT_PORT_TYPE
+q[7] <= q[7].DB_MAX_OUTPUT_PORT_TYPE
+d[0] => q[0].DATAIN
+d[1] => q[1].DATAIN
+d[2] => q[2].DATAIN
+d[3] => q[3].DATAIN
+d[4] => q[4].DATAIN
+d[5] => q[5].DATAIN
+d[6] => q[6].DATAIN
+d[7] => q[7].DATAIN
+OE => q[0].OE
+OE => q[1].OE
+OE => q[2].OE
+OE => q[3].OE
+OE => q[4].OE
+OE => q[5].OE
+OE => q[6].OE
+OE => q[7].OE
+
+
+|TopLevel|led_controller_32:inst40|SN74HC595:inst3|regN:inst1
+q[0] <= internal_reg[0].DB_MAX_OUTPUT_PORT_TYPE
+q[1] <= internal_reg[1].DB_MAX_OUTPUT_PORT_TYPE
+q[2] <= internal_reg[2].DB_MAX_OUTPUT_PORT_TYPE
+q[3] <= internal_reg[3].DB_MAX_OUTPUT_PORT_TYPE
+q[4] <= internal_reg[4].DB_MAX_OUTPUT_PORT_TYPE
+q[5] <= internal_reg[5].DB_MAX_OUTPUT_PORT_TYPE
+q[6] <= internal_reg[6].DB_MAX_OUTPUT_PORT_TYPE
+q[7] <= internal_reg[7].DB_MAX_OUTPUT_PORT_TYPE
+d[0] => Selector0.IN3
+d[1] => Selector7.IN3
+d[2] => Selector6.IN3
+d[3] => Selector5.IN3
+d[4] => Selector4.IN3
+d[5] => Selector3.IN3
+d[6] => Selector2.IN3
+d[7] => Selector1.IN3
+inc => Equal0.IN2
+inc => Equal1.IN2
+load => Equal0.IN3
+load => Equal1.IN3
+rst => Decoder0.IN0
+STCP => ~NO_FANOUT~
+
+
+|TopLevel|led_controller_32:inst40|SN74HC595:inst3|SPSR:inst
+q[0] <= shift_reg[0].DB_MAX_OUTPUT_PORT_TYPE
+q[1] <= shift_reg[1].DB_MAX_OUTPUT_PORT_TYPE
+q[2] <= shift_reg[2].DB_MAX_OUTPUT_PORT_TYPE
+q[3] <= shift_reg[3].DB_MAX_OUTPUT_PORT_TYPE
+q[4] <= shift_reg[4].DB_MAX_OUTPUT_PORT_TYPE
+q[5] <= shift_reg[5].DB_MAX_OUTPUT_PORT_TYPE
+q[6] <= shift_reg[6].DB_MAX_OUTPUT_PORT_TYPE
+q[7] <= shift_reg[7].DB_MAX_OUTPUT_PORT_TYPE
+DS => shift_reg[0].DATAIN
+nrst => shift_reg[0].ACLR
+nrst => shift_reg[1].ACLR
+nrst => shift_reg[2].ACLR
+nrst => shift_reg[3].ACLR
+nrst => shift_reg[4].ACLR
+nrst => shift_reg[5].ACLR
+nrst => shift_reg[6].ACLR
+nrst => shift_reg[7].ACLR
+SHCP => shift_reg[0].CLK
+SHCP => shift_reg[1].CLK
+SHCP => shift_reg[2].CLK
+SHCP => shift_reg[3].CLK
+SHCP => shift_reg[4].CLK
+SHCP => shift_reg[5].CLK
+SHCP => shift_reg[6].CLK
+SHCP => shift_reg[7].CLK
+
+
+|TopLevel|led_controller_32:inst40|SN74HC573:inst24
+q[0] <= q[0].DB_MAX_OUTPUT_PORT_TYPE
+q[1] <= q[1].DB_MAX_OUTPUT_PORT_TYPE
+q[2] <= q[2].DB_MAX_OUTPUT_PORT_TYPE
+q[3] <= q[3].DB_MAX_OUTPUT_PORT_TYPE
+q[4] <= q[4].DB_MAX_OUTPUT_PORT_TYPE
+q[5] <= q[5].DB_MAX_OUTPUT_PORT_TYPE
+q[6] <= q[6].DB_MAX_OUTPUT_PORT_TYPE
+q[7] <= q[7].DB_MAX_OUTPUT_PORT_TYPE
+OE => q[7].OE
+OE => q[6].OE
+OE => q[5].OE
+OE => q[4].OE
+OE => q[3].OE
+OE => q[2].OE
+OE => q[1].OE
+OE => q[0].OE
+d[0] => internal_reg[0].DATAIN
+d[1] => internal_reg[1].DATAIN
+d[2] => internal_reg[2].DATAIN
+d[3] => internal_reg[3].DATAIN
+d[4] => internal_reg[4].DATAIN
+d[5] => internal_reg[5].DATAIN
+d[6] => internal_reg[6].DATAIN
+d[7] => internal_reg[7].DATAIN
+LE => internal_reg[0].LATCH_ENABLE
+LE => internal_reg[1].LATCH_ENABLE
+LE => internal_reg[2].LATCH_ENABLE
+LE => internal_reg[3].LATCH_ENABLE
+LE => internal_reg[4].LATCH_ENABLE
+LE => internal_reg[5].LATCH_ENABLE
+LE => internal_reg[6].LATCH_ENABLE
+LE => internal_reg[7].LATCH_ENABLE
+
+
+|TopLevel|led_controller_32:inst40|SN74HC595:inst4
+data_out[0] <= trisateN:inst2.q[0]
+data_out[1] <= trisateN:inst2.q[1]
+data_out[2] <= trisateN:inst2.q[2]
+data_out[3] <= trisateN:inst2.q[3]
+data_out[4] <= trisateN:inst2.q[4]
+data_out[5] <= trisateN:inst2.q[5]
+data_out[6] <= trisateN:inst2.q[6]
+data_out[7] <= trisateN:inst2.q[7]
+OE => trisateN:inst2.OE
+STCP => regN:inst1.STCP
+DS => SPSR:inst.DS
+MR => SPSR:inst.nrst
+SHCP => SPSR:inst.SHCP
+
+
+|TopLevel|led_controller_32:inst40|SN74HC595:inst4|trisateN:inst2
+q[0] <= q[0].DB_MAX_OUTPUT_PORT_TYPE
+q[1] <= q[1].DB_MAX_OUTPUT_PORT_TYPE
+q[2] <= q[2].DB_MAX_OUTPUT_PORT_TYPE
+q[3] <= q[3].DB_MAX_OUTPUT_PORT_TYPE
+q[4] <= q[4].DB_MAX_OUTPUT_PORT_TYPE
+q[5] <= q[5].DB_MAX_OUTPUT_PORT_TYPE
+q[6] <= q[6].DB_MAX_OUTPUT_PORT_TYPE
+q[7] <= q[7].DB_MAX_OUTPUT_PORT_TYPE
+d[0] => q[0].DATAIN
+d[1] => q[1].DATAIN
+d[2] => q[2].DATAIN
+d[3] => q[3].DATAIN
+d[4] => q[4].DATAIN
+d[5] => q[5].DATAIN
+d[6] => q[6].DATAIN
+d[7] => q[7].DATAIN
+OE => q[0].OE
+OE => q[1].OE
+OE => q[2].OE
+OE => q[3].OE
+OE => q[4].OE
+OE => q[5].OE
+OE => q[6].OE
+OE => q[7].OE
+
+
+|TopLevel|led_controller_32:inst40|SN74HC595:inst4|regN:inst1
+q[0] <= internal_reg[0].DB_MAX_OUTPUT_PORT_TYPE
+q[1] <= internal_reg[1].DB_MAX_OUTPUT_PORT_TYPE
+q[2] <= internal_reg[2].DB_MAX_OUTPUT_PORT_TYPE
+q[3] <= internal_reg[3].DB_MAX_OUTPUT_PORT_TYPE
+q[4] <= internal_reg[4].DB_MAX_OUTPUT_PORT_TYPE
+q[5] <= internal_reg[5].DB_MAX_OUTPUT_PORT_TYPE
+q[6] <= internal_reg[6].DB_MAX_OUTPUT_PORT_TYPE
+q[7] <= internal_reg[7].DB_MAX_OUTPUT_PORT_TYPE
+d[0] => Selector0.IN3
+d[1] => Selector7.IN3
+d[2] => Selector6.IN3
+d[3] => Selector5.IN3
+d[4] => Selector4.IN3
+d[5] => Selector3.IN3
+d[6] => Selector2.IN3
+d[7] => Selector1.IN3
+inc => Equal0.IN2
+inc => Equal1.IN2
+load => Equal0.IN3
+load => Equal1.IN3
+rst => Decoder0.IN0
+STCP => ~NO_FANOUT~
+
+
+|TopLevel|led_controller_32:inst40|SN74HC595:inst4|SPSR:inst
+q[0] <= shift_reg[0].DB_MAX_OUTPUT_PORT_TYPE
+q[1] <= shift_reg[1].DB_MAX_OUTPUT_PORT_TYPE
+q[2] <= shift_reg[2].DB_MAX_OUTPUT_PORT_TYPE
+q[3] <= shift_reg[3].DB_MAX_OUTPUT_PORT_TYPE
+q[4] <= shift_reg[4].DB_MAX_OUTPUT_PORT_TYPE
+q[5] <= shift_reg[5].DB_MAX_OUTPUT_PORT_TYPE
+q[6] <= shift_reg[6].DB_MAX_OUTPUT_PORT_TYPE
+q[7] <= shift_reg[7].DB_MAX_OUTPUT_PORT_TYPE
+DS => shift_reg[0].DATAIN
+nrst => shift_reg[0].ACLR
+nrst => shift_reg[1].ACLR
+nrst => shift_reg[2].ACLR
+nrst => shift_reg[3].ACLR
+nrst => shift_reg[4].ACLR
+nrst => shift_reg[5].ACLR
+nrst => shift_reg[6].ACLR
+nrst => shift_reg[7].ACLR
+SHCP => shift_reg[0].CLK
+SHCP => shift_reg[1].CLK
+SHCP => shift_reg[2].CLK
+SHCP => shift_reg[3].CLK
+SHCP => shift_reg[4].CLK
+SHCP => shift_reg[5].CLK
+SHCP => shift_reg[6].CLK
+SHCP => shift_reg[7].CLK
+
+
+|TopLevel|SN74LS04:inst11
+Y1 <= inst.DB_MAX_OUTPUT_PORT_TYPE
+A1 => inst.IN0
+Y2 <= inst1.DB_MAX_OUTPUT_PORT_TYPE
+A2 => inst1.IN0
+Y3 <= inst2.DB_MAX_OUTPUT_PORT_TYPE
+A3 => inst2.IN0
+Y4 <= inst3.DB_MAX_OUTPUT_PORT_TYPE
+A4 => inst3.IN0
+Y5 <= inst4.DB_MAX_OUTPUT_PORT_TYPE
+A5 => inst4.IN0
+Y6 <= inst5.DB_MAX_OUTPUT_PORT_TYPE
+A6 => inst5.IN0
+
+
+|TopLevel|CD4001:inst43
+J <= inst.DB_MAX_OUTPUT_PORT_TYPE
+B => inst.IN0
+A => inst.IN1
+K <= inst1.DB_MAX_OUTPUT_PORT_TYPE
+D => inst1.IN0
+C => inst1.IN1
+L <= inst2.DB_MAX_OUTPUT_PORT_TYPE
+F => inst2.IN0
+E => inst2.IN1
+M <= inst3.DB_MAX_OUTPUT_PORT_TYPE
+H => inst3.IN0
+G => inst3.IN1
+
+
+|TopLevel|CD4024:inst34
 q[0] <= cnt_reg[0].DB_MAX_OUTPUT_PORT_TYPE
 q[1] <= cnt_reg[1].DB_MAX_OUTPUT_PORT_TYPE
 q[2] <= cnt_reg[2].DB_MAX_OUTPUT_PORT_TYPE
@@ -158,7 +2659,7 @@ rst => cnt_reg[5].ACLR
 rst => cnt_reg[6].ACLR
 
 
-|TopLevel|CD4075:inst13
+|TopLevel|CD4075:inst35
 J <= inst.DB_MAX_OUTPUT_PORT_TYPE
 B => inst.IN0
 A => inst.IN1
@@ -173,7 +2674,118 @@ G => inst2.IN1
 I => inst2.IN2
 
 
-|TopLevel|SN74LS74:inst29
+|TopLevel|led_controller_32:inst41
+LE <= SN74HC08:inst12.Y1
+count[0] => SN74LS04:inst9.A1
+count[1] => SN74HC08:inst11.B2
+count[2] => SN74LS04:inst9.A2
+count[3] => SN74LS04:inst9.A3
+count[4] => SN74LS04:inst9.A4
+count[5] => SN74HC08:inst12.B1
+count[6] => ~NO_FANOUT~
+rst_count <= rst_reg.DB_MAX_OUTPUT_PORT_TYPE
+SHCP => SN74LS74:inst29.clk
+SHCP => SN74HC595:inst.SHCP
+SHCP => SN74HC595:inst2.SHCP
+SHCP => SN74HC595:inst3.SHCP
+SHCP => SN74HC595:inst4.SHCP
+out_A[0] <= SN74HC573:inst21.q[0]
+out_A[1] <= SN74HC573:inst21.q[1]
+out_A[2] <= SN74HC573:inst21.q[2]
+out_A[3] <= SN74HC573:inst21.q[3]
+out_A[4] <= SN74HC573:inst21.q[4]
+out_A[5] <= SN74HC573:inst21.q[5]
+out_A[6] <= SN74HC573:inst21.q[6]
+out_A[7] <= SN74HC573:inst21.q[7]
+OE => SN74HC573:inst21.OE
+OE => SN74HC595:inst.OE
+OE => SN74HC573:inst22.OE
+OE => SN74HC595:inst2.OE
+OE => SN74HC573:inst23.OE
+OE => SN74HC595:inst3.OE
+OE => SN74HC573:inst24.OE
+OE => SN74HC595:inst4.OE
+DS => SN74HC595:inst.DS
+MR => SN74HC595:inst.MR
+MR => SN74HC595:inst2.MR
+MR => SN74HC595:inst3.MR
+MR => SN74HC595:inst4.MR
+STCP => SN74HC595:inst.STCP
+STCP => SN74HC595:inst2.STCP
+STCP => SN74HC595:inst3.STCP
+STCP => SN74HC595:inst4.STCP
+out_B[0] <= SN74HC573:inst22.q[0]
+out_B[1] <= SN74HC573:inst22.q[1]
+out_B[2] <= SN74HC573:inst22.q[2]
+out_B[3] <= SN74HC573:inst22.q[3]
+out_B[4] <= SN74HC573:inst22.q[4]
+out_B[5] <= SN74HC573:inst22.q[5]
+out_B[6] <= SN74HC573:inst22.q[6]
+out_B[7] <= SN74HC573:inst22.q[7]
+out_C[0] <= SN74HC573:inst23.q[0]
+out_C[1] <= SN74HC573:inst23.q[1]
+out_C[2] <= SN74HC573:inst23.q[2]
+out_C[3] <= SN74HC573:inst23.q[3]
+out_C[4] <= SN74HC573:inst23.q[4]
+out_C[5] <= SN74HC573:inst23.q[5]
+out_C[6] <= SN74HC573:inst23.q[6]
+out_C[7] <= SN74HC573:inst23.q[7]
+out_D[0] <= SN74HC573:inst24.q[0]
+out_D[1] <= SN74HC573:inst24.q[1]
+out_D[2] <= SN74HC573:inst24.q[2]
+out_D[3] <= SN74HC573:inst24.q[3]
+out_D[4] <= SN74HC573:inst24.q[4]
+out_D[5] <= SN74HC573:inst24.q[5]
+out_D[6] <= SN74HC573:inst24.q[6]
+out_D[7] <= SN74HC573:inst24.q[7]
+
+
+|TopLevel|led_controller_32:inst41|SN74HC08:inst12
+Y1 <= inst.DB_MAX_OUTPUT_PORT_TYPE
+A1 => inst.IN0
+B1 => inst.IN1
+Y2 <= inst1.DB_MAX_OUTPUT_PORT_TYPE
+A2 => inst1.IN0
+B2 => inst1.IN1
+Y3 <= inst2.DB_MAX_OUTPUT_PORT_TYPE
+A3 => inst2.IN0
+B3 => inst2.IN1
+Y4 <= inst3.DB_MAX_OUTPUT_PORT_TYPE
+A4 => inst3.IN0
+B4 => inst3.IN1
+
+
+|TopLevel|led_controller_32:inst41|SN74HC08:inst11
+Y1 <= inst.DB_MAX_OUTPUT_PORT_TYPE
+A1 => inst.IN0
+B1 => inst.IN1
+Y2 <= inst1.DB_MAX_OUTPUT_PORT_TYPE
+A2 => inst1.IN0
+B2 => inst1.IN1
+Y3 <= inst2.DB_MAX_OUTPUT_PORT_TYPE
+A3 => inst2.IN0
+B3 => inst2.IN1
+Y4 <= inst3.DB_MAX_OUTPUT_PORT_TYPE
+A4 => inst3.IN0
+B4 => inst3.IN1
+
+
+|TopLevel|led_controller_32:inst41|SN74LS04:inst9
+Y1 <= inst.DB_MAX_OUTPUT_PORT_TYPE
+A1 => inst.IN0
+Y2 <= inst1.DB_MAX_OUTPUT_PORT_TYPE
+A2 => inst1.IN0
+Y3 <= inst2.DB_MAX_OUTPUT_PORT_TYPE
+A3 => inst2.IN0
+Y4 <= inst3.DB_MAX_OUTPUT_PORT_TYPE
+A4 => inst3.IN0
+Y5 <= inst4.DB_MAX_OUTPUT_PORT_TYPE
+A5 => inst4.IN0
+Y6 <= inst5.DB_MAX_OUTPUT_PORT_TYPE
+A6 => inst5.IN0
+
+
+|TopLevel|led_controller_32:inst41|SN74LS74:inst29
 q <= Mux0.DB_MAX_OUTPUT_PORT_TYPE
 n_q <= Mux1.DB_MAX_OUTPUT_PORT_TYPE
 d => Mux0.IN3
@@ -185,118 +2797,7 @@ CLR => Mux1.IN5
 clk => ~NO_FANOUT~
 
 
-|TopLevel|SN74HC595:inst
-data_out[0] <= trisateN:inst2.q[0]
-data_out[1] <= trisateN:inst2.q[1]
-data_out[2] <= trisateN:inst2.q[2]
-data_out[3] <= trisateN:inst2.q[3]
-data_out[4] <= trisateN:inst2.q[4]
-data_out[5] <= trisateN:inst2.q[5]
-data_out[6] <= trisateN:inst2.q[6]
-data_out[7] <= trisateN:inst2.q[7]
-OE => trisateN:inst2.OE
-STCP => regN:inst1.STCP
-DS => SPSR:inst.DS
-MR => SPSR:inst.nrst
-SHCP => SPSR:inst.SHCP
-
-
-|TopLevel|SN74HC595:inst|trisateN:inst2
-q[0] <= q[0].DB_MAX_OUTPUT_PORT_TYPE
-q[1] <= q[1].DB_MAX_OUTPUT_PORT_TYPE
-q[2] <= q[2].DB_MAX_OUTPUT_PORT_TYPE
-q[3] <= q[3].DB_MAX_OUTPUT_PORT_TYPE
-q[4] <= q[4].DB_MAX_OUTPUT_PORT_TYPE
-q[5] <= q[5].DB_MAX_OUTPUT_PORT_TYPE
-q[6] <= q[6].DB_MAX_OUTPUT_PORT_TYPE
-q[7] <= q[7].DB_MAX_OUTPUT_PORT_TYPE
-d[0] => q[0].DATAIN
-d[1] => q[1].DATAIN
-d[2] => q[2].DATAIN
-d[3] => q[3].DATAIN
-d[4] => q[4].DATAIN
-d[5] => q[5].DATAIN
-d[6] => q[6].DATAIN
-d[7] => q[7].DATAIN
-OE => q[0].OE
-OE => q[1].OE
-OE => q[2].OE
-OE => q[3].OE
-OE => q[4].OE
-OE => q[5].OE
-OE => q[6].OE
-OE => q[7].OE
-
-
-|TopLevel|SN74HC595:inst|regN:inst1
-q[0] <= internal_reg[0].DB_MAX_OUTPUT_PORT_TYPE
-q[1] <= internal_reg[1].DB_MAX_OUTPUT_PORT_TYPE
-q[2] <= internal_reg[2].DB_MAX_OUTPUT_PORT_TYPE
-q[3] <= internal_reg[3].DB_MAX_OUTPUT_PORT_TYPE
-q[4] <= internal_reg[4].DB_MAX_OUTPUT_PORT_TYPE
-q[5] <= internal_reg[5].DB_MAX_OUTPUT_PORT_TYPE
-q[6] <= internal_reg[6].DB_MAX_OUTPUT_PORT_TYPE
-q[7] <= internal_reg[7].DB_MAX_OUTPUT_PORT_TYPE
-d[0] => Selector0.IN3
-d[1] => Selector7.IN3
-d[2] => Selector6.IN3
-d[3] => Selector5.IN3
-d[4] => Selector4.IN3
-d[5] => Selector3.IN3
-d[6] => Selector2.IN3
-d[7] => Selector1.IN3
-inc => Equal0.IN2
-inc => Equal1.IN2
-load => Equal0.IN3
-load => Equal1.IN3
-rst => Decoder0.IN0
-STCP => ~NO_FANOUT~
-
-
-|TopLevel|SN74HC595:inst|SPSR:inst
-q[0] <= shift_reg[0].DB_MAX_OUTPUT_PORT_TYPE
-q[1] <= shift_reg[1].DB_MAX_OUTPUT_PORT_TYPE
-q[2] <= shift_reg[2].DB_MAX_OUTPUT_PORT_TYPE
-q[3] <= shift_reg[3].DB_MAX_OUTPUT_PORT_TYPE
-q[4] <= shift_reg[4].DB_MAX_OUTPUT_PORT_TYPE
-q[5] <= shift_reg[5].DB_MAX_OUTPUT_PORT_TYPE
-q[6] <= shift_reg[6].DB_MAX_OUTPUT_PORT_TYPE
-q[7] <= shift_reg[7].DB_MAX_OUTPUT_PORT_TYPE
-DS => shift_reg[0].DATAIN
-nrst => shift_reg[0].ACLR
-nrst => shift_reg[1].ACLR
-nrst => shift_reg[2].ACLR
-nrst => shift_reg[3].ACLR
-nrst => shift_reg[4].ACLR
-nrst => shift_reg[5].ACLR
-nrst => shift_reg[6].ACLR
-nrst => shift_reg[7].ACLR
-SHCP => shift_reg[0].CLK
-SHCP => shift_reg[1].CLK
-SHCP => shift_reg[2].CLK
-SHCP => shift_reg[3].CLK
-SHCP => shift_reg[4].CLK
-SHCP => shift_reg[5].CLK
-SHCP => shift_reg[6].CLK
-SHCP => shift_reg[7].CLK
-
-
-|TopLevel|CD4001:inst17
-J <= inst.DB_MAX_OUTPUT_PORT_TYPE
-B => inst.IN0
-A => inst.IN1
-K <= inst1.DB_MAX_OUTPUT_PORT_TYPE
-D => inst1.IN0
-C => inst1.IN1
-L <= inst2.DB_MAX_OUTPUT_PORT_TYPE
-F => inst2.IN0
-E => inst2.IN1
-M <= inst3.DB_MAX_OUTPUT_PORT_TYPE
-H => inst3.IN0
-G => inst3.IN1
-
-
-|TopLevel|SN74HC573:inst22
+|TopLevel|led_controller_32:inst41|SN74HC573:inst21
 q[0] <= q[0].DB_MAX_OUTPUT_PORT_TYPE
 q[1] <= q[1].DB_MAX_OUTPUT_PORT_TYPE
 q[2] <= q[2].DB_MAX_OUTPUT_PORT_TYPE
@@ -331,7 +2832,7 @@ LE => internal_reg[6].LATCH_ENABLE
 LE => internal_reg[7].LATCH_ENABLE
 
 
-|TopLevel|SN74HC595:inst2
+|TopLevel|led_controller_32:inst41|SN74HC595:inst
 data_out[0] <= trisateN:inst2.q[0]
 data_out[1] <= trisateN:inst2.q[1]
 data_out[2] <= trisateN:inst2.q[2]
@@ -347,7 +2848,7 @@ MR => SPSR:inst.nrst
 SHCP => SPSR:inst.SHCP
 
 
-|TopLevel|SN74HC595:inst2|trisateN:inst2
+|TopLevel|led_controller_32:inst41|SN74HC595:inst|trisateN:inst2
 q[0] <= q[0].DB_MAX_OUTPUT_PORT_TYPE
 q[1] <= q[1].DB_MAX_OUTPUT_PORT_TYPE
 q[2] <= q[2].DB_MAX_OUTPUT_PORT_TYPE
@@ -374,7 +2875,7 @@ OE => q[6].OE
 OE => q[7].OE
 
 
-|TopLevel|SN74HC595:inst2|regN:inst1
+|TopLevel|led_controller_32:inst41|SN74HC595:inst|regN:inst1
 q[0] <= internal_reg[0].DB_MAX_OUTPUT_PORT_TYPE
 q[1] <= internal_reg[1].DB_MAX_OUTPUT_PORT_TYPE
 q[2] <= internal_reg[2].DB_MAX_OUTPUT_PORT_TYPE
@@ -399,7 +2900,7 @@ rst => Decoder0.IN0
 STCP => ~NO_FANOUT~
 
 
-|TopLevel|SN74HC595:inst2|SPSR:inst
+|TopLevel|led_controller_32:inst41|SN74HC595:inst|SPSR:inst
 q[0] <= shift_reg[0].DB_MAX_OUTPUT_PORT_TYPE
 q[1] <= shift_reg[1].DB_MAX_OUTPUT_PORT_TYPE
 q[2] <= shift_reg[2].DB_MAX_OUTPUT_PORT_TYPE
@@ -427,7 +2928,7 @@ SHCP => shift_reg[6].CLK
 SHCP => shift_reg[7].CLK
 
 
-|TopLevel|SN74HC573:inst23
+|TopLevel|led_controller_32:inst41|SN74HC573:inst22
 q[0] <= q[0].DB_MAX_OUTPUT_PORT_TYPE
 q[1] <= q[1].DB_MAX_OUTPUT_PORT_TYPE
 q[2] <= q[2].DB_MAX_OUTPUT_PORT_TYPE
@@ -462,7 +2963,7 @@ LE => internal_reg[6].LATCH_ENABLE
 LE => internal_reg[7].LATCH_ENABLE
 
 
-|TopLevel|SN74HC595:inst3
+|TopLevel|led_controller_32:inst41|SN74HC595:inst2
 data_out[0] <= trisateN:inst2.q[0]
 data_out[1] <= trisateN:inst2.q[1]
 data_out[2] <= trisateN:inst2.q[2]
@@ -478,7 +2979,7 @@ MR => SPSR:inst.nrst
 SHCP => SPSR:inst.SHCP
 
 
-|TopLevel|SN74HC595:inst3|trisateN:inst2
+|TopLevel|led_controller_32:inst41|SN74HC595:inst2|trisateN:inst2
 q[0] <= q[0].DB_MAX_OUTPUT_PORT_TYPE
 q[1] <= q[1].DB_MAX_OUTPUT_PORT_TYPE
 q[2] <= q[2].DB_MAX_OUTPUT_PORT_TYPE
@@ -505,7 +3006,7 @@ OE => q[6].OE
 OE => q[7].OE
 
 
-|TopLevel|SN74HC595:inst3|regN:inst1
+|TopLevel|led_controller_32:inst41|SN74HC595:inst2|regN:inst1
 q[0] <= internal_reg[0].DB_MAX_OUTPUT_PORT_TYPE
 q[1] <= internal_reg[1].DB_MAX_OUTPUT_PORT_TYPE
 q[2] <= internal_reg[2].DB_MAX_OUTPUT_PORT_TYPE
@@ -530,7 +3031,7 @@ rst => Decoder0.IN0
 STCP => ~NO_FANOUT~
 
 
-|TopLevel|SN74HC595:inst3|SPSR:inst
+|TopLevel|led_controller_32:inst41|SN74HC595:inst2|SPSR:inst
 q[0] <= shift_reg[0].DB_MAX_OUTPUT_PORT_TYPE
 q[1] <= shift_reg[1].DB_MAX_OUTPUT_PORT_TYPE
 q[2] <= shift_reg[2].DB_MAX_OUTPUT_PORT_TYPE
@@ -558,7 +3059,7 @@ SHCP => shift_reg[6].CLK
 SHCP => shift_reg[7].CLK
 
 
-|TopLevel|SN74HC573:inst24
+|TopLevel|led_controller_32:inst41|SN74HC573:inst23
 q[0] <= q[0].DB_MAX_OUTPUT_PORT_TYPE
 q[1] <= q[1].DB_MAX_OUTPUT_PORT_TYPE
 q[2] <= q[2].DB_MAX_OUTPUT_PORT_TYPE
@@ -593,7 +3094,7 @@ LE => internal_reg[6].LATCH_ENABLE
 LE => internal_reg[7].LATCH_ENABLE
 
 
-|TopLevel|SN74HC595:inst4
+|TopLevel|led_controller_32:inst41|SN74HC595:inst3
 data_out[0] <= trisateN:inst2.q[0]
 data_out[1] <= trisateN:inst2.q[1]
 data_out[2] <= trisateN:inst2.q[2]
@@ -609,7 +3110,7 @@ MR => SPSR:inst.nrst
 SHCP => SPSR:inst.SHCP
 
 
-|TopLevel|SN74HC595:inst4|trisateN:inst2
+|TopLevel|led_controller_32:inst41|SN74HC595:inst3|trisateN:inst2
 q[0] <= q[0].DB_MAX_OUTPUT_PORT_TYPE
 q[1] <= q[1].DB_MAX_OUTPUT_PORT_TYPE
 q[2] <= q[2].DB_MAX_OUTPUT_PORT_TYPE
@@ -636,7 +3137,7 @@ OE => q[6].OE
 OE => q[7].OE
 
 
-|TopLevel|SN74HC595:inst4|regN:inst1
+|TopLevel|led_controller_32:inst41|SN74HC595:inst3|regN:inst1
 q[0] <= internal_reg[0].DB_MAX_OUTPUT_PORT_TYPE
 q[1] <= internal_reg[1].DB_MAX_OUTPUT_PORT_TYPE
 q[2] <= internal_reg[2].DB_MAX_OUTPUT_PORT_TYPE
@@ -661,7 +3162,7 @@ rst => Decoder0.IN0
 STCP => ~NO_FANOUT~
 
 
-|TopLevel|SN74HC595:inst4|SPSR:inst
+|TopLevel|led_controller_32:inst41|SN74HC595:inst3|SPSR:inst
 q[0] <= shift_reg[0].DB_MAX_OUTPUT_PORT_TYPE
 q[1] <= shift_reg[1].DB_MAX_OUTPUT_PORT_TYPE
 q[2] <= shift_reg[2].DB_MAX_OUTPUT_PORT_TYPE
@@ -687,5 +3188,945 @@ SHCP => shift_reg[4].CLK
 SHCP => shift_reg[5].CLK
 SHCP => shift_reg[6].CLK
 SHCP => shift_reg[7].CLK
+
+
+|TopLevel|led_controller_32:inst41|SN74HC573:inst24
+q[0] <= q[0].DB_MAX_OUTPUT_PORT_TYPE
+q[1] <= q[1].DB_MAX_OUTPUT_PORT_TYPE
+q[2] <= q[2].DB_MAX_OUTPUT_PORT_TYPE
+q[3] <= q[3].DB_MAX_OUTPUT_PORT_TYPE
+q[4] <= q[4].DB_MAX_OUTPUT_PORT_TYPE
+q[5] <= q[5].DB_MAX_OUTPUT_PORT_TYPE
+q[6] <= q[6].DB_MAX_OUTPUT_PORT_TYPE
+q[7] <= q[7].DB_MAX_OUTPUT_PORT_TYPE
+OE => q[7].OE
+OE => q[6].OE
+OE => q[5].OE
+OE => q[4].OE
+OE => q[3].OE
+OE => q[2].OE
+OE => q[1].OE
+OE => q[0].OE
+d[0] => internal_reg[0].DATAIN
+d[1] => internal_reg[1].DATAIN
+d[2] => internal_reg[2].DATAIN
+d[3] => internal_reg[3].DATAIN
+d[4] => internal_reg[4].DATAIN
+d[5] => internal_reg[5].DATAIN
+d[6] => internal_reg[6].DATAIN
+d[7] => internal_reg[7].DATAIN
+LE => internal_reg[0].LATCH_ENABLE
+LE => internal_reg[1].LATCH_ENABLE
+LE => internal_reg[2].LATCH_ENABLE
+LE => internal_reg[3].LATCH_ENABLE
+LE => internal_reg[4].LATCH_ENABLE
+LE => internal_reg[5].LATCH_ENABLE
+LE => internal_reg[6].LATCH_ENABLE
+LE => internal_reg[7].LATCH_ENABLE
+
+
+|TopLevel|led_controller_32:inst41|SN74HC595:inst4
+data_out[0] <= trisateN:inst2.q[0]
+data_out[1] <= trisateN:inst2.q[1]
+data_out[2] <= trisateN:inst2.q[2]
+data_out[3] <= trisateN:inst2.q[3]
+data_out[4] <= trisateN:inst2.q[4]
+data_out[5] <= trisateN:inst2.q[5]
+data_out[6] <= trisateN:inst2.q[6]
+data_out[7] <= trisateN:inst2.q[7]
+OE => trisateN:inst2.OE
+STCP => regN:inst1.STCP
+DS => SPSR:inst.DS
+MR => SPSR:inst.nrst
+SHCP => SPSR:inst.SHCP
+
+
+|TopLevel|led_controller_32:inst41|SN74HC595:inst4|trisateN:inst2
+q[0] <= q[0].DB_MAX_OUTPUT_PORT_TYPE
+q[1] <= q[1].DB_MAX_OUTPUT_PORT_TYPE
+q[2] <= q[2].DB_MAX_OUTPUT_PORT_TYPE
+q[3] <= q[3].DB_MAX_OUTPUT_PORT_TYPE
+q[4] <= q[4].DB_MAX_OUTPUT_PORT_TYPE
+q[5] <= q[5].DB_MAX_OUTPUT_PORT_TYPE
+q[6] <= q[6].DB_MAX_OUTPUT_PORT_TYPE
+q[7] <= q[7].DB_MAX_OUTPUT_PORT_TYPE
+d[0] => q[0].DATAIN
+d[1] => q[1].DATAIN
+d[2] => q[2].DATAIN
+d[3] => q[3].DATAIN
+d[4] => q[4].DATAIN
+d[5] => q[5].DATAIN
+d[6] => q[6].DATAIN
+d[7] => q[7].DATAIN
+OE => q[0].OE
+OE => q[1].OE
+OE => q[2].OE
+OE => q[3].OE
+OE => q[4].OE
+OE => q[5].OE
+OE => q[6].OE
+OE => q[7].OE
+
+
+|TopLevel|led_controller_32:inst41|SN74HC595:inst4|regN:inst1
+q[0] <= internal_reg[0].DB_MAX_OUTPUT_PORT_TYPE
+q[1] <= internal_reg[1].DB_MAX_OUTPUT_PORT_TYPE
+q[2] <= internal_reg[2].DB_MAX_OUTPUT_PORT_TYPE
+q[3] <= internal_reg[3].DB_MAX_OUTPUT_PORT_TYPE
+q[4] <= internal_reg[4].DB_MAX_OUTPUT_PORT_TYPE
+q[5] <= internal_reg[5].DB_MAX_OUTPUT_PORT_TYPE
+q[6] <= internal_reg[6].DB_MAX_OUTPUT_PORT_TYPE
+q[7] <= internal_reg[7].DB_MAX_OUTPUT_PORT_TYPE
+d[0] => Selector0.IN3
+d[1] => Selector7.IN3
+d[2] => Selector6.IN3
+d[3] => Selector5.IN3
+d[4] => Selector4.IN3
+d[5] => Selector3.IN3
+d[6] => Selector2.IN3
+d[7] => Selector1.IN3
+inc => Equal0.IN2
+inc => Equal1.IN2
+load => Equal0.IN3
+load => Equal1.IN3
+rst => Decoder0.IN0
+STCP => ~NO_FANOUT~
+
+
+|TopLevel|led_controller_32:inst41|SN74HC595:inst4|SPSR:inst
+q[0] <= shift_reg[0].DB_MAX_OUTPUT_PORT_TYPE
+q[1] <= shift_reg[1].DB_MAX_OUTPUT_PORT_TYPE
+q[2] <= shift_reg[2].DB_MAX_OUTPUT_PORT_TYPE
+q[3] <= shift_reg[3].DB_MAX_OUTPUT_PORT_TYPE
+q[4] <= shift_reg[4].DB_MAX_OUTPUT_PORT_TYPE
+q[5] <= shift_reg[5].DB_MAX_OUTPUT_PORT_TYPE
+q[6] <= shift_reg[6].DB_MAX_OUTPUT_PORT_TYPE
+q[7] <= shift_reg[7].DB_MAX_OUTPUT_PORT_TYPE
+DS => shift_reg[0].DATAIN
+nrst => shift_reg[0].ACLR
+nrst => shift_reg[1].ACLR
+nrst => shift_reg[2].ACLR
+nrst => shift_reg[3].ACLR
+nrst => shift_reg[4].ACLR
+nrst => shift_reg[5].ACLR
+nrst => shift_reg[6].ACLR
+nrst => shift_reg[7].ACLR
+SHCP => shift_reg[0].CLK
+SHCP => shift_reg[1].CLK
+SHCP => shift_reg[2].CLK
+SHCP => shift_reg[3].CLK
+SHCP => shift_reg[4].CLK
+SHCP => shift_reg[5].CLK
+SHCP => shift_reg[6].CLK
+SHCP => shift_reg[7].CLK
+
+
+|TopLevel|led_controller_32:inst30
+LE <= SN74HC08:inst12.Y1
+count[0] => SN74LS04:inst9.A1
+count[1] => SN74HC08:inst11.B2
+count[2] => SN74LS04:inst9.A2
+count[3] => SN74LS04:inst9.A3
+count[4] => SN74LS04:inst9.A4
+count[5] => SN74HC08:inst12.B1
+count[6] => ~NO_FANOUT~
+rst_count <= rst_reg.DB_MAX_OUTPUT_PORT_TYPE
+SHCP => SN74LS74:inst29.clk
+SHCP => SN74HC595:inst.SHCP
+SHCP => SN74HC595:inst2.SHCP
+SHCP => SN74HC595:inst3.SHCP
+SHCP => SN74HC595:inst4.SHCP
+out_A[0] <= SN74HC573:inst21.q[0]
+out_A[1] <= SN74HC573:inst21.q[1]
+out_A[2] <= SN74HC573:inst21.q[2]
+out_A[3] <= SN74HC573:inst21.q[3]
+out_A[4] <= SN74HC573:inst21.q[4]
+out_A[5] <= SN74HC573:inst21.q[5]
+out_A[6] <= SN74HC573:inst21.q[6]
+out_A[7] <= SN74HC573:inst21.q[7]
+OE => SN74HC573:inst21.OE
+OE => SN74HC595:inst.OE
+OE => SN74HC573:inst22.OE
+OE => SN74HC595:inst2.OE
+OE => SN74HC573:inst23.OE
+OE => SN74HC595:inst3.OE
+OE => SN74HC573:inst24.OE
+OE => SN74HC595:inst4.OE
+DS => SN74HC595:inst.DS
+MR => SN74HC595:inst.MR
+MR => SN74HC595:inst2.MR
+MR => SN74HC595:inst3.MR
+MR => SN74HC595:inst4.MR
+STCP => SN74HC595:inst.STCP
+STCP => SN74HC595:inst2.STCP
+STCP => SN74HC595:inst3.STCP
+STCP => SN74HC595:inst4.STCP
+out_B[0] <= SN74HC573:inst22.q[0]
+out_B[1] <= SN74HC573:inst22.q[1]
+out_B[2] <= SN74HC573:inst22.q[2]
+out_B[3] <= SN74HC573:inst22.q[3]
+out_B[4] <= SN74HC573:inst22.q[4]
+out_B[5] <= SN74HC573:inst22.q[5]
+out_B[6] <= SN74HC573:inst22.q[6]
+out_B[7] <= SN74HC573:inst22.q[7]
+out_C[0] <= SN74HC573:inst23.q[0]
+out_C[1] <= SN74HC573:inst23.q[1]
+out_C[2] <= SN74HC573:inst23.q[2]
+out_C[3] <= SN74HC573:inst23.q[3]
+out_C[4] <= SN74HC573:inst23.q[4]
+out_C[5] <= SN74HC573:inst23.q[5]
+out_C[6] <= SN74HC573:inst23.q[6]
+out_C[7] <= SN74HC573:inst23.q[7]
+out_D[0] <= SN74HC573:inst24.q[0]
+out_D[1] <= SN74HC573:inst24.q[1]
+out_D[2] <= SN74HC573:inst24.q[2]
+out_D[3] <= SN74HC573:inst24.q[3]
+out_D[4] <= SN74HC573:inst24.q[4]
+out_D[5] <= SN74HC573:inst24.q[5]
+out_D[6] <= SN74HC573:inst24.q[6]
+out_D[7] <= SN74HC573:inst24.q[7]
+
+
+|TopLevel|led_controller_32:inst30|SN74HC08:inst12
+Y1 <= inst.DB_MAX_OUTPUT_PORT_TYPE
+A1 => inst.IN0
+B1 => inst.IN1
+Y2 <= inst1.DB_MAX_OUTPUT_PORT_TYPE
+A2 => inst1.IN0
+B2 => inst1.IN1
+Y3 <= inst2.DB_MAX_OUTPUT_PORT_TYPE
+A3 => inst2.IN0
+B3 => inst2.IN1
+Y4 <= inst3.DB_MAX_OUTPUT_PORT_TYPE
+A4 => inst3.IN0
+B4 => inst3.IN1
+
+
+|TopLevel|led_controller_32:inst30|SN74HC08:inst11
+Y1 <= inst.DB_MAX_OUTPUT_PORT_TYPE
+A1 => inst.IN0
+B1 => inst.IN1
+Y2 <= inst1.DB_MAX_OUTPUT_PORT_TYPE
+A2 => inst1.IN0
+B2 => inst1.IN1
+Y3 <= inst2.DB_MAX_OUTPUT_PORT_TYPE
+A3 => inst2.IN0
+B3 => inst2.IN1
+Y4 <= inst3.DB_MAX_OUTPUT_PORT_TYPE
+A4 => inst3.IN0
+B4 => inst3.IN1
+
+
+|TopLevel|led_controller_32:inst30|SN74LS04:inst9
+Y1 <= inst.DB_MAX_OUTPUT_PORT_TYPE
+A1 => inst.IN0
+Y2 <= inst1.DB_MAX_OUTPUT_PORT_TYPE
+A2 => inst1.IN0
+Y3 <= inst2.DB_MAX_OUTPUT_PORT_TYPE
+A3 => inst2.IN0
+Y4 <= inst3.DB_MAX_OUTPUT_PORT_TYPE
+A4 => inst3.IN0
+Y5 <= inst4.DB_MAX_OUTPUT_PORT_TYPE
+A5 => inst4.IN0
+Y6 <= inst5.DB_MAX_OUTPUT_PORT_TYPE
+A6 => inst5.IN0
+
+
+|TopLevel|led_controller_32:inst30|SN74LS74:inst29
+q <= Mux0.DB_MAX_OUTPUT_PORT_TYPE
+n_q <= Mux1.DB_MAX_OUTPUT_PORT_TYPE
+d => Mux0.IN3
+d => Mux1.IN3
+PRE => Mux0.IN4
+PRE => Mux1.IN4
+CLR => Mux0.IN5
+CLR => Mux1.IN5
+clk => ~NO_FANOUT~
+
+
+|TopLevel|led_controller_32:inst30|SN74HC573:inst21
+q[0] <= q[0].DB_MAX_OUTPUT_PORT_TYPE
+q[1] <= q[1].DB_MAX_OUTPUT_PORT_TYPE
+q[2] <= q[2].DB_MAX_OUTPUT_PORT_TYPE
+q[3] <= q[3].DB_MAX_OUTPUT_PORT_TYPE
+q[4] <= q[4].DB_MAX_OUTPUT_PORT_TYPE
+q[5] <= q[5].DB_MAX_OUTPUT_PORT_TYPE
+q[6] <= q[6].DB_MAX_OUTPUT_PORT_TYPE
+q[7] <= q[7].DB_MAX_OUTPUT_PORT_TYPE
+OE => q[7].OE
+OE => q[6].OE
+OE => q[5].OE
+OE => q[4].OE
+OE => q[3].OE
+OE => q[2].OE
+OE => q[1].OE
+OE => q[0].OE
+d[0] => internal_reg[0].DATAIN
+d[1] => internal_reg[1].DATAIN
+d[2] => internal_reg[2].DATAIN
+d[3] => internal_reg[3].DATAIN
+d[4] => internal_reg[4].DATAIN
+d[5] => internal_reg[5].DATAIN
+d[6] => internal_reg[6].DATAIN
+d[7] => internal_reg[7].DATAIN
+LE => internal_reg[0].LATCH_ENABLE
+LE => internal_reg[1].LATCH_ENABLE
+LE => internal_reg[2].LATCH_ENABLE
+LE => internal_reg[3].LATCH_ENABLE
+LE => internal_reg[4].LATCH_ENABLE
+LE => internal_reg[5].LATCH_ENABLE
+LE => internal_reg[6].LATCH_ENABLE
+LE => internal_reg[7].LATCH_ENABLE
+
+
+|TopLevel|led_controller_32:inst30|SN74HC595:inst
+data_out[0] <= trisateN:inst2.q[0]
+data_out[1] <= trisateN:inst2.q[1]
+data_out[2] <= trisateN:inst2.q[2]
+data_out[3] <= trisateN:inst2.q[3]
+data_out[4] <= trisateN:inst2.q[4]
+data_out[5] <= trisateN:inst2.q[5]
+data_out[6] <= trisateN:inst2.q[6]
+data_out[7] <= trisateN:inst2.q[7]
+OE => trisateN:inst2.OE
+STCP => regN:inst1.STCP
+DS => SPSR:inst.DS
+MR => SPSR:inst.nrst
+SHCP => SPSR:inst.SHCP
+
+
+|TopLevel|led_controller_32:inst30|SN74HC595:inst|trisateN:inst2
+q[0] <= q[0].DB_MAX_OUTPUT_PORT_TYPE
+q[1] <= q[1].DB_MAX_OUTPUT_PORT_TYPE
+q[2] <= q[2].DB_MAX_OUTPUT_PORT_TYPE
+q[3] <= q[3].DB_MAX_OUTPUT_PORT_TYPE
+q[4] <= q[4].DB_MAX_OUTPUT_PORT_TYPE
+q[5] <= q[5].DB_MAX_OUTPUT_PORT_TYPE
+q[6] <= q[6].DB_MAX_OUTPUT_PORT_TYPE
+q[7] <= q[7].DB_MAX_OUTPUT_PORT_TYPE
+d[0] => q[0].DATAIN
+d[1] => q[1].DATAIN
+d[2] => q[2].DATAIN
+d[3] => q[3].DATAIN
+d[4] => q[4].DATAIN
+d[5] => q[5].DATAIN
+d[6] => q[6].DATAIN
+d[7] => q[7].DATAIN
+OE => q[0].OE
+OE => q[1].OE
+OE => q[2].OE
+OE => q[3].OE
+OE => q[4].OE
+OE => q[5].OE
+OE => q[6].OE
+OE => q[7].OE
+
+
+|TopLevel|led_controller_32:inst30|SN74HC595:inst|regN:inst1
+q[0] <= internal_reg[0].DB_MAX_OUTPUT_PORT_TYPE
+q[1] <= internal_reg[1].DB_MAX_OUTPUT_PORT_TYPE
+q[2] <= internal_reg[2].DB_MAX_OUTPUT_PORT_TYPE
+q[3] <= internal_reg[3].DB_MAX_OUTPUT_PORT_TYPE
+q[4] <= internal_reg[4].DB_MAX_OUTPUT_PORT_TYPE
+q[5] <= internal_reg[5].DB_MAX_OUTPUT_PORT_TYPE
+q[6] <= internal_reg[6].DB_MAX_OUTPUT_PORT_TYPE
+q[7] <= internal_reg[7].DB_MAX_OUTPUT_PORT_TYPE
+d[0] => Selector0.IN3
+d[1] => Selector7.IN3
+d[2] => Selector6.IN3
+d[3] => Selector5.IN3
+d[4] => Selector4.IN3
+d[5] => Selector3.IN3
+d[6] => Selector2.IN3
+d[7] => Selector1.IN3
+inc => Equal0.IN2
+inc => Equal1.IN2
+load => Equal0.IN3
+load => Equal1.IN3
+rst => Decoder0.IN0
+STCP => ~NO_FANOUT~
+
+
+|TopLevel|led_controller_32:inst30|SN74HC595:inst|SPSR:inst
+q[0] <= shift_reg[0].DB_MAX_OUTPUT_PORT_TYPE
+q[1] <= shift_reg[1].DB_MAX_OUTPUT_PORT_TYPE
+q[2] <= shift_reg[2].DB_MAX_OUTPUT_PORT_TYPE
+q[3] <= shift_reg[3].DB_MAX_OUTPUT_PORT_TYPE
+q[4] <= shift_reg[4].DB_MAX_OUTPUT_PORT_TYPE
+q[5] <= shift_reg[5].DB_MAX_OUTPUT_PORT_TYPE
+q[6] <= shift_reg[6].DB_MAX_OUTPUT_PORT_TYPE
+q[7] <= shift_reg[7].DB_MAX_OUTPUT_PORT_TYPE
+DS => shift_reg[0].DATAIN
+nrst => shift_reg[0].ACLR
+nrst => shift_reg[1].ACLR
+nrst => shift_reg[2].ACLR
+nrst => shift_reg[3].ACLR
+nrst => shift_reg[4].ACLR
+nrst => shift_reg[5].ACLR
+nrst => shift_reg[6].ACLR
+nrst => shift_reg[7].ACLR
+SHCP => shift_reg[0].CLK
+SHCP => shift_reg[1].CLK
+SHCP => shift_reg[2].CLK
+SHCP => shift_reg[3].CLK
+SHCP => shift_reg[4].CLK
+SHCP => shift_reg[5].CLK
+SHCP => shift_reg[6].CLK
+SHCP => shift_reg[7].CLK
+
+
+|TopLevel|led_controller_32:inst30|SN74HC573:inst22
+q[0] <= q[0].DB_MAX_OUTPUT_PORT_TYPE
+q[1] <= q[1].DB_MAX_OUTPUT_PORT_TYPE
+q[2] <= q[2].DB_MAX_OUTPUT_PORT_TYPE
+q[3] <= q[3].DB_MAX_OUTPUT_PORT_TYPE
+q[4] <= q[4].DB_MAX_OUTPUT_PORT_TYPE
+q[5] <= q[5].DB_MAX_OUTPUT_PORT_TYPE
+q[6] <= q[6].DB_MAX_OUTPUT_PORT_TYPE
+q[7] <= q[7].DB_MAX_OUTPUT_PORT_TYPE
+OE => q[7].OE
+OE => q[6].OE
+OE => q[5].OE
+OE => q[4].OE
+OE => q[3].OE
+OE => q[2].OE
+OE => q[1].OE
+OE => q[0].OE
+d[0] => internal_reg[0].DATAIN
+d[1] => internal_reg[1].DATAIN
+d[2] => internal_reg[2].DATAIN
+d[3] => internal_reg[3].DATAIN
+d[4] => internal_reg[4].DATAIN
+d[5] => internal_reg[5].DATAIN
+d[6] => internal_reg[6].DATAIN
+d[7] => internal_reg[7].DATAIN
+LE => internal_reg[0].LATCH_ENABLE
+LE => internal_reg[1].LATCH_ENABLE
+LE => internal_reg[2].LATCH_ENABLE
+LE => internal_reg[3].LATCH_ENABLE
+LE => internal_reg[4].LATCH_ENABLE
+LE => internal_reg[5].LATCH_ENABLE
+LE => internal_reg[6].LATCH_ENABLE
+LE => internal_reg[7].LATCH_ENABLE
+
+
+|TopLevel|led_controller_32:inst30|SN74HC595:inst2
+data_out[0] <= trisateN:inst2.q[0]
+data_out[1] <= trisateN:inst2.q[1]
+data_out[2] <= trisateN:inst2.q[2]
+data_out[3] <= trisateN:inst2.q[3]
+data_out[4] <= trisateN:inst2.q[4]
+data_out[5] <= trisateN:inst2.q[5]
+data_out[6] <= trisateN:inst2.q[6]
+data_out[7] <= trisateN:inst2.q[7]
+OE => trisateN:inst2.OE
+STCP => regN:inst1.STCP
+DS => SPSR:inst.DS
+MR => SPSR:inst.nrst
+SHCP => SPSR:inst.SHCP
+
+
+|TopLevel|led_controller_32:inst30|SN74HC595:inst2|trisateN:inst2
+q[0] <= q[0].DB_MAX_OUTPUT_PORT_TYPE
+q[1] <= q[1].DB_MAX_OUTPUT_PORT_TYPE
+q[2] <= q[2].DB_MAX_OUTPUT_PORT_TYPE
+q[3] <= q[3].DB_MAX_OUTPUT_PORT_TYPE
+q[4] <= q[4].DB_MAX_OUTPUT_PORT_TYPE
+q[5] <= q[5].DB_MAX_OUTPUT_PORT_TYPE
+q[6] <= q[6].DB_MAX_OUTPUT_PORT_TYPE
+q[7] <= q[7].DB_MAX_OUTPUT_PORT_TYPE
+d[0] => q[0].DATAIN
+d[1] => q[1].DATAIN
+d[2] => q[2].DATAIN
+d[3] => q[3].DATAIN
+d[4] => q[4].DATAIN
+d[5] => q[5].DATAIN
+d[6] => q[6].DATAIN
+d[7] => q[7].DATAIN
+OE => q[0].OE
+OE => q[1].OE
+OE => q[2].OE
+OE => q[3].OE
+OE => q[4].OE
+OE => q[5].OE
+OE => q[6].OE
+OE => q[7].OE
+
+
+|TopLevel|led_controller_32:inst30|SN74HC595:inst2|regN:inst1
+q[0] <= internal_reg[0].DB_MAX_OUTPUT_PORT_TYPE
+q[1] <= internal_reg[1].DB_MAX_OUTPUT_PORT_TYPE
+q[2] <= internal_reg[2].DB_MAX_OUTPUT_PORT_TYPE
+q[3] <= internal_reg[3].DB_MAX_OUTPUT_PORT_TYPE
+q[4] <= internal_reg[4].DB_MAX_OUTPUT_PORT_TYPE
+q[5] <= internal_reg[5].DB_MAX_OUTPUT_PORT_TYPE
+q[6] <= internal_reg[6].DB_MAX_OUTPUT_PORT_TYPE
+q[7] <= internal_reg[7].DB_MAX_OUTPUT_PORT_TYPE
+d[0] => Selector0.IN3
+d[1] => Selector7.IN3
+d[2] => Selector6.IN3
+d[3] => Selector5.IN3
+d[4] => Selector4.IN3
+d[5] => Selector3.IN3
+d[6] => Selector2.IN3
+d[7] => Selector1.IN3
+inc => Equal0.IN2
+inc => Equal1.IN2
+load => Equal0.IN3
+load => Equal1.IN3
+rst => Decoder0.IN0
+STCP => ~NO_FANOUT~
+
+
+|TopLevel|led_controller_32:inst30|SN74HC595:inst2|SPSR:inst
+q[0] <= shift_reg[0].DB_MAX_OUTPUT_PORT_TYPE
+q[1] <= shift_reg[1].DB_MAX_OUTPUT_PORT_TYPE
+q[2] <= shift_reg[2].DB_MAX_OUTPUT_PORT_TYPE
+q[3] <= shift_reg[3].DB_MAX_OUTPUT_PORT_TYPE
+q[4] <= shift_reg[4].DB_MAX_OUTPUT_PORT_TYPE
+q[5] <= shift_reg[5].DB_MAX_OUTPUT_PORT_TYPE
+q[6] <= shift_reg[6].DB_MAX_OUTPUT_PORT_TYPE
+q[7] <= shift_reg[7].DB_MAX_OUTPUT_PORT_TYPE
+DS => shift_reg[0].DATAIN
+nrst => shift_reg[0].ACLR
+nrst => shift_reg[1].ACLR
+nrst => shift_reg[2].ACLR
+nrst => shift_reg[3].ACLR
+nrst => shift_reg[4].ACLR
+nrst => shift_reg[5].ACLR
+nrst => shift_reg[6].ACLR
+nrst => shift_reg[7].ACLR
+SHCP => shift_reg[0].CLK
+SHCP => shift_reg[1].CLK
+SHCP => shift_reg[2].CLK
+SHCP => shift_reg[3].CLK
+SHCP => shift_reg[4].CLK
+SHCP => shift_reg[5].CLK
+SHCP => shift_reg[6].CLK
+SHCP => shift_reg[7].CLK
+
+
+|TopLevel|led_controller_32:inst30|SN74HC573:inst23
+q[0] <= q[0].DB_MAX_OUTPUT_PORT_TYPE
+q[1] <= q[1].DB_MAX_OUTPUT_PORT_TYPE
+q[2] <= q[2].DB_MAX_OUTPUT_PORT_TYPE
+q[3] <= q[3].DB_MAX_OUTPUT_PORT_TYPE
+q[4] <= q[4].DB_MAX_OUTPUT_PORT_TYPE
+q[5] <= q[5].DB_MAX_OUTPUT_PORT_TYPE
+q[6] <= q[6].DB_MAX_OUTPUT_PORT_TYPE
+q[7] <= q[7].DB_MAX_OUTPUT_PORT_TYPE
+OE => q[7].OE
+OE => q[6].OE
+OE => q[5].OE
+OE => q[4].OE
+OE => q[3].OE
+OE => q[2].OE
+OE => q[1].OE
+OE => q[0].OE
+d[0] => internal_reg[0].DATAIN
+d[1] => internal_reg[1].DATAIN
+d[2] => internal_reg[2].DATAIN
+d[3] => internal_reg[3].DATAIN
+d[4] => internal_reg[4].DATAIN
+d[5] => internal_reg[5].DATAIN
+d[6] => internal_reg[6].DATAIN
+d[7] => internal_reg[7].DATAIN
+LE => internal_reg[0].LATCH_ENABLE
+LE => internal_reg[1].LATCH_ENABLE
+LE => internal_reg[2].LATCH_ENABLE
+LE => internal_reg[3].LATCH_ENABLE
+LE => internal_reg[4].LATCH_ENABLE
+LE => internal_reg[5].LATCH_ENABLE
+LE => internal_reg[6].LATCH_ENABLE
+LE => internal_reg[7].LATCH_ENABLE
+
+
+|TopLevel|led_controller_32:inst30|SN74HC595:inst3
+data_out[0] <= trisateN:inst2.q[0]
+data_out[1] <= trisateN:inst2.q[1]
+data_out[2] <= trisateN:inst2.q[2]
+data_out[3] <= trisateN:inst2.q[3]
+data_out[4] <= trisateN:inst2.q[4]
+data_out[5] <= trisateN:inst2.q[5]
+data_out[6] <= trisateN:inst2.q[6]
+data_out[7] <= trisateN:inst2.q[7]
+OE => trisateN:inst2.OE
+STCP => regN:inst1.STCP
+DS => SPSR:inst.DS
+MR => SPSR:inst.nrst
+SHCP => SPSR:inst.SHCP
+
+
+|TopLevel|led_controller_32:inst30|SN74HC595:inst3|trisateN:inst2
+q[0] <= q[0].DB_MAX_OUTPUT_PORT_TYPE
+q[1] <= q[1].DB_MAX_OUTPUT_PORT_TYPE
+q[2] <= q[2].DB_MAX_OUTPUT_PORT_TYPE
+q[3] <= q[3].DB_MAX_OUTPUT_PORT_TYPE
+q[4] <= q[4].DB_MAX_OUTPUT_PORT_TYPE
+q[5] <= q[5].DB_MAX_OUTPUT_PORT_TYPE
+q[6] <= q[6].DB_MAX_OUTPUT_PORT_TYPE
+q[7] <= q[7].DB_MAX_OUTPUT_PORT_TYPE
+d[0] => q[0].DATAIN
+d[1] => q[1].DATAIN
+d[2] => q[2].DATAIN
+d[3] => q[3].DATAIN
+d[4] => q[4].DATAIN
+d[5] => q[5].DATAIN
+d[6] => q[6].DATAIN
+d[7] => q[7].DATAIN
+OE => q[0].OE
+OE => q[1].OE
+OE => q[2].OE
+OE => q[3].OE
+OE => q[4].OE
+OE => q[5].OE
+OE => q[6].OE
+OE => q[7].OE
+
+
+|TopLevel|led_controller_32:inst30|SN74HC595:inst3|regN:inst1
+q[0] <= internal_reg[0].DB_MAX_OUTPUT_PORT_TYPE
+q[1] <= internal_reg[1].DB_MAX_OUTPUT_PORT_TYPE
+q[2] <= internal_reg[2].DB_MAX_OUTPUT_PORT_TYPE
+q[3] <= internal_reg[3].DB_MAX_OUTPUT_PORT_TYPE
+q[4] <= internal_reg[4].DB_MAX_OUTPUT_PORT_TYPE
+q[5] <= internal_reg[5].DB_MAX_OUTPUT_PORT_TYPE
+q[6] <= internal_reg[6].DB_MAX_OUTPUT_PORT_TYPE
+q[7] <= internal_reg[7].DB_MAX_OUTPUT_PORT_TYPE
+d[0] => Selector0.IN3
+d[1] => Selector7.IN3
+d[2] => Selector6.IN3
+d[3] => Selector5.IN3
+d[4] => Selector4.IN3
+d[5] => Selector3.IN3
+d[6] => Selector2.IN3
+d[7] => Selector1.IN3
+inc => Equal0.IN2
+inc => Equal1.IN2
+load => Equal0.IN3
+load => Equal1.IN3
+rst => Decoder0.IN0
+STCP => ~NO_FANOUT~
+
+
+|TopLevel|led_controller_32:inst30|SN74HC595:inst3|SPSR:inst
+q[0] <= shift_reg[0].DB_MAX_OUTPUT_PORT_TYPE
+q[1] <= shift_reg[1].DB_MAX_OUTPUT_PORT_TYPE
+q[2] <= shift_reg[2].DB_MAX_OUTPUT_PORT_TYPE
+q[3] <= shift_reg[3].DB_MAX_OUTPUT_PORT_TYPE
+q[4] <= shift_reg[4].DB_MAX_OUTPUT_PORT_TYPE
+q[5] <= shift_reg[5].DB_MAX_OUTPUT_PORT_TYPE
+q[6] <= shift_reg[6].DB_MAX_OUTPUT_PORT_TYPE
+q[7] <= shift_reg[7].DB_MAX_OUTPUT_PORT_TYPE
+DS => shift_reg[0].DATAIN
+nrst => shift_reg[0].ACLR
+nrst => shift_reg[1].ACLR
+nrst => shift_reg[2].ACLR
+nrst => shift_reg[3].ACLR
+nrst => shift_reg[4].ACLR
+nrst => shift_reg[5].ACLR
+nrst => shift_reg[6].ACLR
+nrst => shift_reg[7].ACLR
+SHCP => shift_reg[0].CLK
+SHCP => shift_reg[1].CLK
+SHCP => shift_reg[2].CLK
+SHCP => shift_reg[3].CLK
+SHCP => shift_reg[4].CLK
+SHCP => shift_reg[5].CLK
+SHCP => shift_reg[6].CLK
+SHCP => shift_reg[7].CLK
+
+
+|TopLevel|led_controller_32:inst30|SN74HC573:inst24
+q[0] <= q[0].DB_MAX_OUTPUT_PORT_TYPE
+q[1] <= q[1].DB_MAX_OUTPUT_PORT_TYPE
+q[2] <= q[2].DB_MAX_OUTPUT_PORT_TYPE
+q[3] <= q[3].DB_MAX_OUTPUT_PORT_TYPE
+q[4] <= q[4].DB_MAX_OUTPUT_PORT_TYPE
+q[5] <= q[5].DB_MAX_OUTPUT_PORT_TYPE
+q[6] <= q[6].DB_MAX_OUTPUT_PORT_TYPE
+q[7] <= q[7].DB_MAX_OUTPUT_PORT_TYPE
+OE => q[7].OE
+OE => q[6].OE
+OE => q[5].OE
+OE => q[4].OE
+OE => q[3].OE
+OE => q[2].OE
+OE => q[1].OE
+OE => q[0].OE
+d[0] => internal_reg[0].DATAIN
+d[1] => internal_reg[1].DATAIN
+d[2] => internal_reg[2].DATAIN
+d[3] => internal_reg[3].DATAIN
+d[4] => internal_reg[4].DATAIN
+d[5] => internal_reg[5].DATAIN
+d[6] => internal_reg[6].DATAIN
+d[7] => internal_reg[7].DATAIN
+LE => internal_reg[0].LATCH_ENABLE
+LE => internal_reg[1].LATCH_ENABLE
+LE => internal_reg[2].LATCH_ENABLE
+LE => internal_reg[3].LATCH_ENABLE
+LE => internal_reg[4].LATCH_ENABLE
+LE => internal_reg[5].LATCH_ENABLE
+LE => internal_reg[6].LATCH_ENABLE
+LE => internal_reg[7].LATCH_ENABLE
+
+
+|TopLevel|led_controller_32:inst30|SN74HC595:inst4
+data_out[0] <= trisateN:inst2.q[0]
+data_out[1] <= trisateN:inst2.q[1]
+data_out[2] <= trisateN:inst2.q[2]
+data_out[3] <= trisateN:inst2.q[3]
+data_out[4] <= trisateN:inst2.q[4]
+data_out[5] <= trisateN:inst2.q[5]
+data_out[6] <= trisateN:inst2.q[6]
+data_out[7] <= trisateN:inst2.q[7]
+OE => trisateN:inst2.OE
+STCP => regN:inst1.STCP
+DS => SPSR:inst.DS
+MR => SPSR:inst.nrst
+SHCP => SPSR:inst.SHCP
+
+
+|TopLevel|led_controller_32:inst30|SN74HC595:inst4|trisateN:inst2
+q[0] <= q[0].DB_MAX_OUTPUT_PORT_TYPE
+q[1] <= q[1].DB_MAX_OUTPUT_PORT_TYPE
+q[2] <= q[2].DB_MAX_OUTPUT_PORT_TYPE
+q[3] <= q[3].DB_MAX_OUTPUT_PORT_TYPE
+q[4] <= q[4].DB_MAX_OUTPUT_PORT_TYPE
+q[5] <= q[5].DB_MAX_OUTPUT_PORT_TYPE
+q[6] <= q[6].DB_MAX_OUTPUT_PORT_TYPE
+q[7] <= q[7].DB_MAX_OUTPUT_PORT_TYPE
+d[0] => q[0].DATAIN
+d[1] => q[1].DATAIN
+d[2] => q[2].DATAIN
+d[3] => q[3].DATAIN
+d[4] => q[4].DATAIN
+d[5] => q[5].DATAIN
+d[6] => q[6].DATAIN
+d[7] => q[7].DATAIN
+OE => q[0].OE
+OE => q[1].OE
+OE => q[2].OE
+OE => q[3].OE
+OE => q[4].OE
+OE => q[5].OE
+OE => q[6].OE
+OE => q[7].OE
+
+
+|TopLevel|led_controller_32:inst30|SN74HC595:inst4|regN:inst1
+q[0] <= internal_reg[0].DB_MAX_OUTPUT_PORT_TYPE
+q[1] <= internal_reg[1].DB_MAX_OUTPUT_PORT_TYPE
+q[2] <= internal_reg[2].DB_MAX_OUTPUT_PORT_TYPE
+q[3] <= internal_reg[3].DB_MAX_OUTPUT_PORT_TYPE
+q[4] <= internal_reg[4].DB_MAX_OUTPUT_PORT_TYPE
+q[5] <= internal_reg[5].DB_MAX_OUTPUT_PORT_TYPE
+q[6] <= internal_reg[6].DB_MAX_OUTPUT_PORT_TYPE
+q[7] <= internal_reg[7].DB_MAX_OUTPUT_PORT_TYPE
+d[0] => Selector0.IN3
+d[1] => Selector7.IN3
+d[2] => Selector6.IN3
+d[3] => Selector5.IN3
+d[4] => Selector4.IN3
+d[5] => Selector3.IN3
+d[6] => Selector2.IN3
+d[7] => Selector1.IN3
+inc => Equal0.IN2
+inc => Equal1.IN2
+load => Equal0.IN3
+load => Equal1.IN3
+rst => Decoder0.IN0
+STCP => ~NO_FANOUT~
+
+
+|TopLevel|led_controller_32:inst30|SN74HC595:inst4|SPSR:inst
+q[0] <= shift_reg[0].DB_MAX_OUTPUT_PORT_TYPE
+q[1] <= shift_reg[1].DB_MAX_OUTPUT_PORT_TYPE
+q[2] <= shift_reg[2].DB_MAX_OUTPUT_PORT_TYPE
+q[3] <= shift_reg[3].DB_MAX_OUTPUT_PORT_TYPE
+q[4] <= shift_reg[4].DB_MAX_OUTPUT_PORT_TYPE
+q[5] <= shift_reg[5].DB_MAX_OUTPUT_PORT_TYPE
+q[6] <= shift_reg[6].DB_MAX_OUTPUT_PORT_TYPE
+q[7] <= shift_reg[7].DB_MAX_OUTPUT_PORT_TYPE
+DS => shift_reg[0].DATAIN
+nrst => shift_reg[0].ACLR
+nrst => shift_reg[1].ACLR
+nrst => shift_reg[2].ACLR
+nrst => shift_reg[3].ACLR
+nrst => shift_reg[4].ACLR
+nrst => shift_reg[5].ACLR
+nrst => shift_reg[6].ACLR
+nrst => shift_reg[7].ACLR
+SHCP => shift_reg[0].CLK
+SHCP => shift_reg[1].CLK
+SHCP => shift_reg[2].CLK
+SHCP => shift_reg[3].CLK
+SHCP => shift_reg[4].CLK
+SHCP => shift_reg[5].CLK
+SHCP => shift_reg[6].CLK
+SHCP => shift_reg[7].CLK
+
+
+|TopLevel|CN74HC138:inst19
+Y[0] <= Y.DB_MAX_OUTPUT_PORT_TYPE
+Y[1] <= Y.DB_MAX_OUTPUT_PORT_TYPE
+Y[2] <= Y.DB_MAX_OUTPUT_PORT_TYPE
+Y[3] <= Y.DB_MAX_OUTPUT_PORT_TYPE
+Y[4] <= Y.DB_MAX_OUTPUT_PORT_TYPE
+Y[5] <= Y.DB_MAX_OUTPUT_PORT_TYPE
+Y[6] <= Y.DB_MAX_OUTPUT_PORT_TYPE
+Y[7] <= Y.DB_MAX_OUTPUT_PORT_TYPE
+E1 => always0.IN0
+E2 => always0.IN1
+E3 => Y.DATAB
+E3 => Y.DATAB
+E3 => Y.DATAB
+E3 => Y.DATAB
+E3 => Y.DATAB
+E3 => Y.DATAB
+E3 => Y.DATAB
+E3 => Y.DATAB
+A[0] => Decoder0.IN2
+A[1] => Decoder0.IN1
+A[2] => Decoder0.IN0
+
+
+|TopLevel|SN74LS04:inst21
+Y1 <= inst.DB_MAX_OUTPUT_PORT_TYPE
+A1 => inst.IN0
+Y2 <= inst1.DB_MAX_OUTPUT_PORT_TYPE
+A2 => inst1.IN0
+Y3 <= inst2.DB_MAX_OUTPUT_PORT_TYPE
+A3 => inst2.IN0
+Y4 <= inst3.DB_MAX_OUTPUT_PORT_TYPE
+A4 => inst3.IN0
+Y5 <= inst4.DB_MAX_OUTPUT_PORT_TYPE
+A5 => inst4.IN0
+Y6 <= inst5.DB_MAX_OUTPUT_PORT_TYPE
+A6 => inst5.IN0
+
+
+|TopLevel|CN74HC138:inst6
+Y[0] <= Y.DB_MAX_OUTPUT_PORT_TYPE
+Y[1] <= Y.DB_MAX_OUTPUT_PORT_TYPE
+Y[2] <= Y.DB_MAX_OUTPUT_PORT_TYPE
+Y[3] <= Y.DB_MAX_OUTPUT_PORT_TYPE
+Y[4] <= Y.DB_MAX_OUTPUT_PORT_TYPE
+Y[5] <= Y.DB_MAX_OUTPUT_PORT_TYPE
+Y[6] <= Y.DB_MAX_OUTPUT_PORT_TYPE
+Y[7] <= Y.DB_MAX_OUTPUT_PORT_TYPE
+E1 => always0.IN0
+E2 => always0.IN1
+E3 => Y.DATAB
+E3 => Y.DATAB
+E3 => Y.DATAB
+E3 => Y.DATAB
+E3 => Y.DATAB
+E3 => Y.DATAB
+E3 => Y.DATAB
+E3 => Y.DATAB
+A[0] => Decoder0.IN2
+A[1] => Decoder0.IN1
+A[2] => Decoder0.IN0
+
+
+|TopLevel|SN74LS04:inst23
+Y1 <= inst.DB_MAX_OUTPUT_PORT_TYPE
+A1 => inst.IN0
+Y2 <= inst1.DB_MAX_OUTPUT_PORT_TYPE
+A2 => inst1.IN0
+Y3 <= inst2.DB_MAX_OUTPUT_PORT_TYPE
+A3 => inst2.IN0
+Y4 <= inst3.DB_MAX_OUTPUT_PORT_TYPE
+A4 => inst3.IN0
+Y5 <= inst4.DB_MAX_OUTPUT_PORT_TYPE
+A5 => inst4.IN0
+Y6 <= inst5.DB_MAX_OUTPUT_PORT_TYPE
+A6 => inst5.IN0
+
+
+|TopLevel|SN74LS04:inst25
+Y1 <= inst.DB_MAX_OUTPUT_PORT_TYPE
+A1 => inst.IN0
+Y2 <= inst1.DB_MAX_OUTPUT_PORT_TYPE
+A2 => inst1.IN0
+Y3 <= inst2.DB_MAX_OUTPUT_PORT_TYPE
+A3 => inst2.IN0
+Y4 <= inst3.DB_MAX_OUTPUT_PORT_TYPE
+A4 => inst3.IN0
+Y5 <= inst4.DB_MAX_OUTPUT_PORT_TYPE
+A5 => inst4.IN0
+Y6 <= inst5.DB_MAX_OUTPUT_PORT_TYPE
+A6 => inst5.IN0
+
+
+|TopLevel|CN74HC138:inst8
+Y[0] <= Y.DB_MAX_OUTPUT_PORT_TYPE
+Y[1] <= Y.DB_MAX_OUTPUT_PORT_TYPE
+Y[2] <= Y.DB_MAX_OUTPUT_PORT_TYPE
+Y[3] <= Y.DB_MAX_OUTPUT_PORT_TYPE
+Y[4] <= Y.DB_MAX_OUTPUT_PORT_TYPE
+Y[5] <= Y.DB_MAX_OUTPUT_PORT_TYPE
+Y[6] <= Y.DB_MAX_OUTPUT_PORT_TYPE
+Y[7] <= Y.DB_MAX_OUTPUT_PORT_TYPE
+E1 => always0.IN0
+E2 => always0.IN1
+E3 => Y.DATAB
+E3 => Y.DATAB
+E3 => Y.DATAB
+E3 => Y.DATAB
+E3 => Y.DATAB
+E3 => Y.DATAB
+E3 => Y.DATAB
+E3 => Y.DATAB
+A[0] => Decoder0.IN2
+A[1] => Decoder0.IN1
+A[2] => Decoder0.IN0
+
+
+|TopLevel|SN74LS04:inst26
+Y1 <= inst.DB_MAX_OUTPUT_PORT_TYPE
+A1 => inst.IN0
+Y2 <= inst1.DB_MAX_OUTPUT_PORT_TYPE
+A2 => inst1.IN0
+Y3 <= inst2.DB_MAX_OUTPUT_PORT_TYPE
+A3 => inst2.IN0
+Y4 <= inst3.DB_MAX_OUTPUT_PORT_TYPE
+A4 => inst3.IN0
+Y5 <= inst4.DB_MAX_OUTPUT_PORT_TYPE
+A5 => inst4.IN0
+Y6 <= inst5.DB_MAX_OUTPUT_PORT_TYPE
+A6 => inst5.IN0
+
+
+|TopLevel|SN74LS04:inst31
+Y1 <= inst.DB_MAX_OUTPUT_PORT_TYPE
+A1 => inst.IN0
+Y2 <= inst1.DB_MAX_OUTPUT_PORT_TYPE
+A2 => inst1.IN0
+Y3 <= inst2.DB_MAX_OUTPUT_PORT_TYPE
+A3 => inst2.IN0
+Y4 <= inst3.DB_MAX_OUTPUT_PORT_TYPE
+A4 => inst3.IN0
+Y5 <= inst4.DB_MAX_OUTPUT_PORT_TYPE
+A5 => inst4.IN0
+Y6 <= inst5.DB_MAX_OUTPUT_PORT_TYPE
+A6 => inst5.IN0
+
+
+|TopLevel|SN74LS04:inst32
+Y1 <= inst.DB_MAX_OUTPUT_PORT_TYPE
+A1 => inst.IN0
+Y2 <= inst1.DB_MAX_OUTPUT_PORT_TYPE
+A2 => inst1.IN0
+Y3 <= inst2.DB_MAX_OUTPUT_PORT_TYPE
+A3 => inst2.IN0
+Y4 <= inst3.DB_MAX_OUTPUT_PORT_TYPE
+A4 => inst3.IN0
+Y5 <= inst4.DB_MAX_OUTPUT_PORT_TYPE
+A5 => inst4.IN0
+Y6 <= inst5.DB_MAX_OUTPUT_PORT_TYPE
+A6 => inst5.IN0
 
 

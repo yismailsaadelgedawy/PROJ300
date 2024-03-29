@@ -18,9 +18,14 @@ always_ff @(posedge LE or posedge rst) begin
 
     if(rst) cnt_reg <= 0;
 
-    else cnt_reg <= cnt_reg + 1;
+    else  begin
 
-    if(cnt_reg == NUMBER_OF_DEVICES-1) cnt_reg <= 0;
+        cnt_reg <= cnt_reg + 1;
+        if(cnt_reg == NUMBER_OF_DEVICES-1) cnt_reg <= 0;        
+        
+    end
+
+    
 
 end
 
