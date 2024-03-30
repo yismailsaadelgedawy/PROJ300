@@ -6,7 +6,6 @@ module TopLevel_tb;
 // in
 logic rst;
 logic clk;
-logic OE;
 logic [31:0] rA;
 logic [31:0] rB;
 logic [31:0] rC;
@@ -42,7 +41,6 @@ TopLevel dut (
     // inputs
     .rst(rst),
     .clk(clk),
-    .OE(OE),
     .rA(rA),
     .rB(rB),
     .rC(rC),
@@ -93,7 +91,6 @@ initial begin
 
     // rst
     rst = 1; // treat as if active high
-    OE = 0; // output always enabled
 
     #7ns;
     assert ({out_D,out_C,out_B,out_A} == 'd0) $display("passed rst"); else $error("failed rst");
