@@ -241,6 +241,13 @@ en => Equal0.IN3
 
 
 |TopLevel|UART:inst
+eot <= bsy_detector:inst2.eot
+clk_50MHz => uart_clk_divN:inst.clk_in
+SW0 => uart_clk_divN:inst.rst
+SW0 => uart_controller:inst1.rst
+SW0 => bsy_detector:inst2.rst
+UART2_RX => uart_clk_divN:inst.sense
+UART2_RX => uart_controller:inst1.data_in
 data_out[0] <= bsy_detector:inst2.data_out[0]
 data_out[1] <= bsy_detector:inst2.data_out[1]
 data_out[2] <= bsy_detector:inst2.data_out[2]
@@ -249,47 +256,44 @@ data_out[4] <= bsy_detector:inst2.data_out[4]
 data_out[5] <= bsy_detector:inst2.data_out[5]
 data_out[6] <= bsy_detector:inst2.data_out[6]
 data_out[7] <= bsy_detector:inst2.data_out[7]
-clk_50MHz => uart_clk_divN:inst.clk_in
-SW0 => uart_clk_divN:inst.rst
-SW0 => uart_controller:inst1.rst
-SW0 => bsy_detector:inst2.rst
-UART2_RX => uart_clk_divN:inst.sense
-UART2_RX => uart_controller:inst1.data_in
 
 
 |TopLevel|UART:inst|bsy_detector:inst2
-data_out[0] <= data_out[0]~reg0.DB_MAX_OUTPUT_PORT_TYPE
-data_out[1] <= data_out[1]~reg0.DB_MAX_OUTPUT_PORT_TYPE
-data_out[2] <= data_out[2]~reg0.DB_MAX_OUTPUT_PORT_TYPE
-data_out[3] <= data_out[3]~reg0.DB_MAX_OUTPUT_PORT_TYPE
-data_out[4] <= data_out[4]~reg0.DB_MAX_OUTPUT_PORT_TYPE
-data_out[5] <= data_out[5]~reg0.DB_MAX_OUTPUT_PORT_TYPE
-data_out[6] <= data_out[6]~reg0.DB_MAX_OUTPUT_PORT_TYPE
-data_out[7] <= data_out[7]~reg0.DB_MAX_OUTPUT_PORT_TYPE
-data_in[0] => data_out[0]~reg0.DATAIN
-data_in[1] => data_out[1]~reg0.DATAIN
-data_in[2] => data_out[2]~reg0.DATAIN
-data_in[3] => data_out[3]~reg0.DATAIN
-data_in[4] => data_out[4]~reg0.DATAIN
-data_in[5] => data_out[5]~reg0.DATAIN
-data_in[6] => data_out[6]~reg0.DATAIN
-data_in[7] => data_out[7]~reg0.DATAIN
-bsy => data_out[0]~reg0.CLK
-bsy => data_out[1]~reg0.CLK
-bsy => data_out[2]~reg0.CLK
-bsy => data_out[3]~reg0.CLK
-bsy => data_out[4]~reg0.CLK
-bsy => data_out[5]~reg0.CLK
-bsy => data_out[6]~reg0.CLK
-bsy => data_out[7]~reg0.CLK
-rst => data_out[0]~reg0.ACLR
-rst => data_out[1]~reg0.ACLR
-rst => data_out[2]~reg0.ACLR
-rst => data_out[3]~reg0.ACLR
-rst => data_out[4]~reg0.ACLR
-rst => data_out[5]~reg0.ACLR
-rst => data_out[6]~reg0.ACLR
-rst => data_out[7]~reg0.ACLR
+data_out[0] <= data_out[0]$latch.DB_MAX_OUTPUT_PORT_TYPE
+data_out[1] <= data_out[1]$latch.DB_MAX_OUTPUT_PORT_TYPE
+data_out[2] <= data_out[2]$latch.DB_MAX_OUTPUT_PORT_TYPE
+data_out[3] <= data_out[3]$latch.DB_MAX_OUTPUT_PORT_TYPE
+data_out[4] <= data_out[4]$latch.DB_MAX_OUTPUT_PORT_TYPE
+data_out[5] <= data_out[5]$latch.DB_MAX_OUTPUT_PORT_TYPE
+data_out[6] <= data_out[6]$latch.DB_MAX_OUTPUT_PORT_TYPE
+data_out[7] <= data_out[7]$latch.DB_MAX_OUTPUT_PORT_TYPE
+eot <= eot$latch.DB_MAX_OUTPUT_PORT_TYPE
+data_in[0] => data_out[0]$latch.DATAIN
+data_in[1] => data_out[1]$latch.DATAIN
+data_in[2] => data_out[2]$latch.DATAIN
+data_in[3] => data_out[3]$latch.DATAIN
+data_in[4] => data_out[4]$latch.DATAIN
+data_in[5] => data_out[5]$latch.DATAIN
+data_in[6] => data_out[6]$latch.DATAIN
+data_in[7] => data_out[7]$latch.DATAIN
+bsy => data_out[0]$latch.LATCH_ENABLE
+bsy => data_out[1]$latch.LATCH_ENABLE
+bsy => data_out[2]$latch.LATCH_ENABLE
+bsy => data_out[3]$latch.LATCH_ENABLE
+bsy => data_out[4]$latch.LATCH_ENABLE
+bsy => data_out[5]$latch.LATCH_ENABLE
+bsy => data_out[6]$latch.LATCH_ENABLE
+bsy => data_out[7]$latch.LATCH_ENABLE
+bsy => eot$latch.DATAIN
+rst => data_out[0]$latch.ACLR
+rst => data_out[1]$latch.ACLR
+rst => data_out[2]$latch.ACLR
+rst => data_out[3]$latch.ACLR
+rst => data_out[4]$latch.ACLR
+rst => data_out[5]$latch.ACLR
+rst => data_out[6]$latch.ACLR
+rst => data_out[7]$latch.ACLR
+rst => eot$latch.LATCH_ENABLE
 
 
 |TopLevel|UART:inst|uart_controller:inst1

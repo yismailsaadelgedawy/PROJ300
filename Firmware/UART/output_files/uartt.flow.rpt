@@ -1,6 +1,6 @@
 Flow report for uartt
-Wed Feb 21 13:07:24 2024
-Quartus Prime Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
+Tue Apr 02 11:40:53 2024
+Quartus Prime Version 20.1.0 Build 711 06/05/2020 SJ Lite Edition
 
 
 ---------------------
@@ -41,15 +41,15 @@ https://fpgasoftware.intel.com/eula.
 +-------------------------------------------------------------------------------+
 ; Flow Summary                                                                  ;
 +---------------------------------+---------------------------------------------+
-; Flow Status                     ; Successful - Wed Feb 21 13:07:19 2024       ;
-; Quartus Prime Version           ; 20.1.1 Build 720 11/11/2020 SJ Lite Edition ;
+; Flow Status                     ; Successful - Tue Apr 02 11:40:33 2024       ;
+; Quartus Prime Version           ; 20.1.0 Build 711 06/05/2020 SJ Lite Edition ;
 ; Revision Name                   ; uartt                                       ;
 ; Top-level Entity Name           ; TopLevel                                    ;
 ; Family                          ; Cyclone V                                   ;
 ; Device                          ; 5CEBA4F23C7                                 ;
 ; Timing Models                   ; Final                                       ;
-; Logic utilization (in ALMs)     ; 773 / 18,480 ( 4 % )                        ;
-; Total registers                 ; 949                                         ;
+; Logic utilization (in ALMs)     ; 772 / 18,480 ( 4 % )                        ;
+; Total registers                 ; 937                                         ;
 ; Total pins                      ; 38 / 224 ( 17 % )                           ;
 ; Total virtual pins              ; 0                                           ;
 ; Total block memory bits         ; 0 / 3,153,920 ( 0 % )                       ;
@@ -68,7 +68,7 @@ https://fpgasoftware.intel.com/eula.
 +-------------------+---------------------+
 ; Option            ; Setting             ;
 +-------------------+---------------------+
-; Start date & time ; 02/21/2024 13:05:12 ;
+; Start date & time ; 04/02/2024 11:37:55 ;
 ; Main task         ; Compilation         ;
 ; Revision Name     ; uartt               ;
 +-------------------+---------------------+
@@ -79,7 +79,7 @@ https://fpgasoftware.intel.com/eula.
 +-------------------------------------+----------------------------------------+---------------+-------------+------------+
 ; Assignment Name                     ; Value                                  ; Default Value ; Entity Name ; Section Id ;
 +-------------------------------------+----------------------------------------+---------------+-------------+------------+
-; COMPILER_SIGNATURE_ID               ; 127913727136950.170852071203296        ; --            ; --          ; --         ;
+; COMPILER_SIGNATURE_ID               ; 225373650927332.171204707411248        ; --            ; --          ; --         ;
 ; MAX_CORE_JUNCTION_TEMP              ; 85                                     ; --            ; --          ; --         ;
 ; MIN_CORE_JUNCTION_TEMP              ; 0                                      ; --            ; --          ; --         ;
 ; PARTITION_COLOR                     ; -- (Not supported for targeted family) ; --            ; TopLevel    ; Top        ;
@@ -98,11 +98,11 @@ https://fpgasoftware.intel.com/eula.
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
 ; Module Name          ; Elapsed Time ; Average Processors Used ; Peak Virtual Memory ; Total CPU Time (on all processors) ;
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
-; Analysis & Synthesis ; 00:00:06     ; 1.0                     ; 4910 MB             ; 00:00:08                           ;
-; Fitter               ; 00:01:55     ; 1.1                     ; 7508 MB             ; 00:02:18                           ;
-; Assembler            ; 00:00:04     ; 1.0                     ; 4832 MB             ; 00:00:03                           ;
-; Timing Analyzer      ; 00:00:04     ; 3.0                     ; 5248 MB             ; 00:00:08                           ;
-; Total                ; 00:02:09     ; --                      ; --                  ; 00:02:37                           ;
+; Analysis & Synthesis ; 00:00:34     ; 1.0                     ; 4850 MB             ; 00:00:32                           ;
+; Fitter               ; 00:01:46     ; 1.2                     ; 6212 MB             ; 00:02:00                           ;
+; Assembler            ; 00:00:12     ; 1.0                     ; 4835 MB             ; 00:00:06                           ;
+; Timing Analyzer      ; 00:00:18     ; 1.9                     ; 5095 MB             ; 00:00:21                           ;
+; Total                ; 00:02:50     ; --                      ; --                  ; 00:02:59                           ;
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
 
 
@@ -111,10 +111,10 @@ https://fpgasoftware.intel.com/eula.
 +----------------------+------------------+------------+------------+----------------+
 ; Module Name          ; Machine Hostname ; OS Name    ; OS Version ; Processor type ;
 +----------------------+------------------+------------+------------+----------------+
-; Analysis & Synthesis ; MoofisBoofis     ; Windows 10 ; 10.0       ; x86_64         ;
-; Fitter               ; MoofisBoofis     ; Windows 10 ; 10.0       ; x86_64         ;
-; Assembler            ; MoofisBoofis     ; Windows 10 ; 10.0       ; x86_64         ;
-; Timing Analyzer      ; MoofisBoofis     ; Windows 10 ; 10.0       ; x86_64         ;
+; Analysis & Synthesis ; Moofis           ; Windows 10 ; 10.0       ; x86_64         ;
+; Fitter               ; Moofis           ; Windows 10 ; 10.0       ; x86_64         ;
+; Assembler            ; Moofis           ; Windows 10 ; 10.0       ; x86_64         ;
+; Timing Analyzer      ; Moofis           ; Windows 10 ; 10.0       ; x86_64         ;
 +----------------------+------------------+------------+------------+----------------+
 
 

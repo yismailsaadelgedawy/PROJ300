@@ -1,6 +1,6 @@
 Analysis & Synthesis report for uartt
-Wed Feb 21 13:05:19 2024
-Quartus Prime Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
+Tue Apr 02 11:38:29 2024
+Quartus Prime Version 20.1.0 Build 711 06/05/2020 SJ Lite Edition
 
 
 ---------------------
@@ -14,16 +14,17 @@ Quartus Prime Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
   6. Analysis & Synthesis Resource Usage Summary
   7. Analysis & Synthesis Resource Utilization by Entity
   8. State Machine - |TopLevel|debouncer:inst8|state_reg
-  9. General Register Statistics
- 10. Inverted Register Statistics
- 11. Multiplexer Restructuring Statistics (Restructuring Performed)
- 12. Parameter Settings for User Entity Instance: d_ffN:inst13
- 13. Parameter Settings for User Entity Instance: d_ffN:inst12
- 14. Parameter Settings for User Entity Instance: UART:inst|uart_clk_divN:inst
- 15. Parameter Settings for User Entity Instance: instructionRAM:inst1
- 16. Post-Synthesis Netlist Statistics for Top Partition
- 17. Elapsed Time Per Partition
- 18. Analysis & Synthesis Messages
+  9. User-Specified and Inferred Latches
+ 10. General Register Statistics
+ 11. Inverted Register Statistics
+ 12. Multiplexer Restructuring Statistics (Restructuring Performed)
+ 13. Parameter Settings for User Entity Instance: d_ffN:inst13
+ 14. Parameter Settings for User Entity Instance: d_ffN:inst12
+ 15. Parameter Settings for User Entity Instance: UART:inst|uart_clk_divN:inst
+ 16. Parameter Settings for User Entity Instance: instructionRAM:inst1
+ 17. Post-Synthesis Netlist Statistics for Top Partition
+ 18. Elapsed Time Per Partition
+ 19. Analysis & Synthesis Messages
 
 
 
@@ -50,13 +51,13 @@ https://fpgasoftware.intel.com/eula.
 +-------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                  ;
 +---------------------------------+---------------------------------------------+
-; Analysis & Synthesis Status     ; Successful - Wed Feb 21 13:05:19 2024       ;
-; Quartus Prime Version           ; 20.1.1 Build 720 11/11/2020 SJ Lite Edition ;
+; Analysis & Synthesis Status     ; Successful - Tue Apr 02 11:38:29 2024       ;
+; Quartus Prime Version           ; 20.1.0 Build 711 06/05/2020 SJ Lite Edition ;
 ; Revision Name                   ; uartt                                       ;
 ; Top-level Entity Name           ; TopLevel                                    ;
 ; Family                          ; Cyclone V                                   ;
 ; Logic utilization (in ALMs)     ; N/A                                         ;
-; Total registers                 ; 944                                         ;
+; Total registers                 ; 936                                         ;
 ; Total pins                      ; 38                                          ;
 ; Total virtual pins              ; 0                                           ;
 ; Total block memory bits         ; 0                                           ;
@@ -163,40 +164,35 @@ https://fpgasoftware.intel.com/eula.
 +----------------------------+-------------+
 ; Processors                 ; Number      ;
 +----------------------------+-------------+
-; Number detected on machine ; 16          ;
-; Maximum allowed            ; 16          ;
+; Number detected on machine ; 8           ;
+; Maximum allowed            ; 4           ;
 ;                            ;             ;
 ; Average used               ; 1.00        ;
-; Maximum used               ; 16          ;
+; Maximum used               ; 4           ;
 ;                            ;             ;
 ; Usage by Processor         ; % Time Used ;
 ;     Processor 1            ; 100.0%      ;
 ;     Processor 2            ;   0.0%      ;
 ;     Processor 3            ;   0.0%      ;
 ;     Processor 4            ;   0.0%      ;
-;     Processor 5            ;   0.0%      ;
-;     Processor 6            ;   0.0%      ;
-;     Processor 7            ;   0.0%      ;
-;     Processor 8            ;   0.0%      ;
-;     Processors 9-16        ;   0.0%      ;
 +----------------------------+-------------+
 
 
-+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Source Files Read                                                                                                                                                              ;
-+----------------------------------+-----------------+------------------------------------+-------------------------------------------------------------------------------------------------+---------+
-; File Name with User-Entered Path ; Used in Netlist ; File Type                          ; File Name with Absolute Path                                                                    ; Library ;
-+----------------------------------+-----------------+------------------------------------+-------------------------------------------------------------------------------------------------+---------+
-; sv files/instructionRAM.sv       ; yes             ; User SystemVerilog HDL File        ; C:/Users/minec/Desktop/Work/GitHub Repos/PROJ300/Firmware/UART/sv files/instructionRAM.sv       ;         ;
-; sv files/d_ffN.sv                ; yes             ; User SystemVerilog HDL File        ; C:/Users/minec/Desktop/Work/GitHub Repos/PROJ300/Firmware/UART/sv files/d_ffN.sv                ;         ;
-; sv files/debouncer.sv            ; yes             ; User SystemVerilog HDL File        ; C:/Users/minec/Desktop/Work/GitHub Repos/PROJ300/Firmware/UART/sv files/debouncer.sv            ;         ;
-; sv files/seven_seg_controller.sv ; yes             ; User SystemVerilog HDL File        ; C:/Users/minec/Desktop/Work/GitHub Repos/PROJ300/Firmware/UART/sv files/seven_seg_controller.sv ;         ;
-; sv files/bsy_detector.sv         ; yes             ; User SystemVerilog HDL File        ; C:/Users/minec/Desktop/Work/GitHub Repos/PROJ300/Firmware/UART/sv files/bsy_detector.sv         ;         ;
-; sv files/uart_controller.sv      ; yes             ; User SystemVerilog HDL File        ; C:/Users/minec/Desktop/Work/GitHub Repos/PROJ300/Firmware/UART/sv files/uart_controller.sv      ;         ;
-; sv files/uart_clk_divN.sv        ; yes             ; User SystemVerilog HDL File        ; C:/Users/minec/Desktop/Work/GitHub Repos/PROJ300/Firmware/UART/sv files/uart_clk_divN.sv        ;         ;
-; UART.bdf                         ; yes             ; User Block Diagram/Schematic File  ; C:/Users/minec/Desktop/Work/GitHub Repos/PROJ300/Firmware/UART/UART.bdf                         ;         ;
-; output_files/TopLevel.bdf        ; yes             ; User Block Diagram/Schematic File  ; C:/Users/minec/Desktop/Work/GitHub Repos/PROJ300/Firmware/UART/output_files/TopLevel.bdf        ;         ;
-+----------------------------------+-----------------+------------------------------------+-------------------------------------------------------------------------------------------------+---------+
++------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Source Files Read                                                                                                                                                   ;
++----------------------------------+-----------------+------------------------------------+--------------------------------------------------------------------------------------+---------+
+; File Name with User-Entered Path ; Used in Netlist ; File Type                          ; File Name with Absolute Path                                                         ; Library ;
++----------------------------------+-----------------+------------------------------------+--------------------------------------------------------------------------------------+---------+
+; sv files/instructionRAM.sv       ; yes             ; User SystemVerilog HDL File        ; C:/Users/minec/Desktop/github/PROJ300/Firmware/UART/sv files/instructionRAM.sv       ;         ;
+; sv files/d_ffN.sv                ; yes             ; User SystemVerilog HDL File        ; C:/Users/minec/Desktop/github/PROJ300/Firmware/UART/sv files/d_ffN.sv                ;         ;
+; sv files/debouncer.sv            ; yes             ; User SystemVerilog HDL File        ; C:/Users/minec/Desktop/github/PROJ300/Firmware/UART/sv files/debouncer.sv            ;         ;
+; sv files/seven_seg_controller.sv ; yes             ; User SystemVerilog HDL File        ; C:/Users/minec/Desktop/github/PROJ300/Firmware/UART/sv files/seven_seg_controller.sv ;         ;
+; sv files/bsy_detector.sv         ; yes             ; User SystemVerilog HDL File        ; C:/Users/minec/Desktop/github/PROJ300/Firmware/UART/sv files/bsy_detector.sv         ;         ;
+; sv files/uart_controller.sv      ; yes             ; User SystemVerilog HDL File        ; C:/Users/minec/Desktop/github/PROJ300/Firmware/UART/sv files/uart_controller.sv      ;         ;
+; sv files/uart_clk_divN.sv        ; yes             ; User SystemVerilog HDL File        ; C:/Users/minec/Desktop/github/PROJ300/Firmware/UART/sv files/uart_clk_divN.sv        ;         ;
+; UART.bdf                         ; yes             ; User Block Diagram/Schematic File  ; C:/Users/minec/Desktop/github/PROJ300/Firmware/UART/UART.bdf                         ;         ;
+; output_files/TopLevel.bdf        ; yes             ; User Block Diagram/Schematic File  ; C:/Users/minec/Desktop/github/PROJ300/Firmware/UART/output_files/TopLevel.bdf        ;         ;
++----------------------------------+-----------------+------------------------------------+--------------------------------------------------------------------------------------+---------+
 
 
 +---------------------------------------------------------+
@@ -204,16 +200,16 @@ https://fpgasoftware.intel.com/eula.
 +---------------------------------------------+-----------+
 ; Resource                                    ; Usage     ;
 +---------------------------------------------+-----------+
-; Estimate of Logic utilization (ALMs needed) ; 850       ;
+; Estimate of Logic utilization (ALMs needed) ; 849       ;
 ;                                             ;           ;
-; Combinational ALUT usage for logic          ; 851       ;
+; Combinational ALUT usage for logic          ; 859       ;
 ;     -- 7 input functions                    ; 2         ;
 ;     -- 6 input functions                    ; 621       ;
 ;     -- 5 input functions                    ; 51        ;
-;     -- 4 input functions                    ; 48        ;
+;     -- 4 input functions                    ; 56        ;
 ;     -- <=3 input functions                  ; 129       ;
 ;                                             ;           ;
-; Dedicated logic registers                   ; 944       ;
+; Dedicated logic registers                   ; 936       ;
 ;                                             ;           ;
 ; I/O pins                                    ; 38        ;
 ;                                             ;           ;
@@ -221,7 +217,7 @@ https://fpgasoftware.intel.com/eula.
 ;                                             ;           ;
 ; Maximum fan-out node                        ; SW0~input ;
 ; Maximum fan-out                             ; 1009      ;
-; Total fan-out                               ; 8270      ;
+; Total fan-out                               ; 8278      ;
 ; Average fan-out                             ; 4.42      ;
 +---------------------------------------------+-----------+
 
@@ -231,9 +227,9 @@ https://fpgasoftware.intel.com/eula.
 +---------------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+-------------------------------------------+----------------------+--------------+
 ; Compilation Hierarchy Node      ; Combinational ALUTs ; Dedicated Logic Registers ; Block Memory Bits ; DSP Blocks ; Pins ; Virtual Pins ; Full Hierarchy Name                       ; Entity Name          ; Library Name ;
 +---------------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+-------------------------------------------+----------------------+--------------+
-; |TopLevel                       ; 851 (0)             ; 944 (0)                   ; 0                 ; 0          ; 38   ; 0            ; |TopLevel                                 ; TopLevel             ; work         ;
-;    |UART:inst|                  ; 48 (0)              ; 49 (0)                    ; 0                 ; 0          ; 0    ; 0            ; |TopLevel|UART:inst                       ; UART                 ; work         ;
-;       |bsy_detector:inst2|      ; 0 (0)               ; 8 (8)                     ; 0                 ; 0          ; 0    ; 0            ; |TopLevel|UART:inst|bsy_detector:inst2    ; bsy_detector         ; work         ;
+; |TopLevel                       ; 859 (0)             ; 936 (0)                   ; 0                 ; 0          ; 38   ; 0            ; |TopLevel                                 ; TopLevel             ; work         ;
+;    |UART:inst|                  ; 56 (0)              ; 41 (0)                    ; 0                 ; 0          ; 0    ; 0            ; |TopLevel|UART:inst                       ; UART                 ; work         ;
+;       |bsy_detector:inst2|      ; 8 (8)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |TopLevel|UART:inst|bsy_detector:inst2    ; bsy_detector         ; work         ;
 ;       |uart_clk_divN:inst|      ; 41 (41)             ; 28 (28)                   ; 0                 ; 0          ; 0    ; 0            ; |TopLevel|UART:inst|uart_clk_divN:inst    ; uart_clk_divN        ; work         ;
 ;       |uart_controller:inst1|   ; 7 (7)               ; 13 (13)                   ; 0                 ; 0          ; 0    ; 0            ; |TopLevel|UART:inst|uart_controller:inst1 ; uart_controller      ; work         ;
 ;    |d_ffN:inst12|               ; 8 (8)               ; 8 (8)                     ; 0                 ; 0          ; 0    ; 0            ; |TopLevel|d_ffN:inst12                    ; d_ffN                ; work         ;
@@ -258,15 +254,33 @@ Encoding Type:  One-Hot
 +--------------+--------------+--------------+--------------+
 
 
++-------------------------------------------------------------------------------------------------------------------+
+; User-Specified and Inferred Latches                                                                               ;
++----------------------------------------------------+-------------------------------------+------------------------+
+; Latch Name                                         ; Latch Enable Signal                 ; Free of Timing Hazards ;
++----------------------------------------------------+-------------------------------------+------------------------+
+; UART:inst|bsy_detector:inst2|data_out[0]           ; UART:inst|uart_controller:inst1|bsy ; yes                    ;
+; UART:inst|bsy_detector:inst2|data_out[1]           ; UART:inst|uart_controller:inst1|bsy ; yes                    ;
+; UART:inst|bsy_detector:inst2|data_out[2]           ; UART:inst|uart_controller:inst1|bsy ; yes                    ;
+; UART:inst|bsy_detector:inst2|data_out[3]           ; UART:inst|uart_controller:inst1|bsy ; yes                    ;
+; UART:inst|bsy_detector:inst2|data_out[4]           ; UART:inst|uart_controller:inst1|bsy ; yes                    ;
+; UART:inst|bsy_detector:inst2|data_out[5]           ; UART:inst|uart_controller:inst1|bsy ; yes                    ;
+; UART:inst|bsy_detector:inst2|data_out[6]           ; UART:inst|uart_controller:inst1|bsy ; yes                    ;
+; UART:inst|bsy_detector:inst2|data_out[7]           ; UART:inst|uart_controller:inst1|bsy ; yes                    ;
+; Number of user-specified and inferred latches = 8  ;                                     ;                        ;
++----------------------------------------------------+-------------------------------------+------------------------+
+Note: All latches listed above may not be present at the end of synthesis due to various synthesis optimizations.
+
+
 +------------------------------------------------------+
 ; General Register Statistics                          ;
 +----------------------------------------------+-------+
 ; Statistic                                    ; Value ;
 +----------------------------------------------+-------+
-; Total registers                              ; 944   ;
+; Total registers                              ; 936   ;
 ; Number of registers using Synchronous Clear  ; 901   ;
 ; Number of registers using Synchronous Load   ; 8     ;
-; Number of registers using Asynchronous Clear ; 50    ;
+; Number of registers using Asynchronous Clear ; 42    ;
 ; Number of registers using Asynchronous Load  ; 0     ;
 ; Number of registers using Clock Enable       ; 885   ;
 ; Number of registers using Preset             ; 0     ;
@@ -448,30 +462,30 @@ Note: In order to hide this table in the UI and the text report file, please set
 +-----------------------+-----------------------------+
 ; Type                  ; Count                       ;
 +-----------------------+-----------------------------+
-; arriav_ff             ; 944                         ;
-;     CLR               ; 17                          ;
+; arriav_ff             ; 936                         ;
+;     CLR               ; 9                           ;
 ;     ENA               ; 4                           ;
 ;     ENA CLR SCLR      ; 33                          ;
 ;     ENA SCLR          ; 840                         ;
 ;     ENA SCLR SLD      ; 8                           ;
 ;     SCLR              ; 20                          ;
 ;     plain             ; 22                          ;
-; arriav_lcell_comb     ; 855                         ;
+; arriav_lcell_comb     ; 863                         ;
 ;     arith             ; 66                          ;
 ;         1 data inputs ; 66                          ;
 ;     extend            ; 2                           ;
 ;         7 data inputs ; 2                           ;
-;     normal            ; 787                         ;
+;     normal            ; 795                         ;
 ;         1 data inputs ; 4                           ;
 ;         2 data inputs ; 44                          ;
 ;         3 data inputs ; 19                          ;
-;         4 data inputs ; 48                          ;
+;         4 data inputs ; 56                          ;
 ;         5 data inputs ; 51                          ;
 ;         6 data inputs ; 621                         ;
 ; boundary_port         ; 38                          ;
 ;                       ;                             ;
 ; Max LUT depth         ; 6.50                        ;
-; Average LUT depth     ; 4.32                        ;
+; Average LUT depth     ; 4.31                        ;
 +-----------------------+-----------------------------+
 
 
@@ -480,7 +494,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 +----------------+--------------+
 ; Partition Name ; Elapsed Time ;
 +----------------+--------------+
-; Top            ; 00:00:01     ;
+; Top            ; 00:00:04     ;
 +----------------+--------------+
 
 
@@ -489,37 +503,37 @@ Note: In order to hide this table in the UI and the text report file, please set
 +-------------------------------+
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
-    Info: Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
-    Info: Processing started: Wed Feb 21 13:05:12 2024
+    Info: Version 20.1.0 Build 711 06/05/2020 SJ Lite Edition
+    Info: Processing started: Tue Apr 02 11:37:54 2024
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off uartt -c uartt
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
-Info (20030): Parallel compilation is enabled and will use 16 of the 16 processors detected
+Info (20030): Parallel compilation is enabled and will use 4 of the 4 processors detected
 Info (12021): Found 1 design units, including 1 entities, in source file sv files/instructionram.sv
-    Info (12023): Found entity 1: instructionRAM File: C:/Users/minec/Desktop/Work/GitHub Repos/PROJ300/Firmware/UART/sv files/instructionRAM.sv Line: 1
+    Info (12023): Found entity 1: instructionRAM File: C:/Users/minec/Desktop/github/PROJ300/Firmware/UART/sv files/instructionRAM.sv Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file sv files/d_ffn.sv
-    Info (12023): Found entity 1: d_ffN File: C:/Users/minec/Desktop/Work/GitHub Repos/PROJ300/Firmware/UART/sv files/d_ffN.sv Line: 1
+    Info (12023): Found entity 1: d_ffN File: C:/Users/minec/Desktop/github/PROJ300/Firmware/UART/sv files/d_ffN.sv Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file sv files/debug_address_countern.sv
-    Info (12023): Found entity 1: debug_address_counterN File: C:/Users/minec/Desktop/Work/GitHub Repos/PROJ300/Firmware/UART/sv files/debug_address_counterN.sv Line: 1
+    Info (12023): Found entity 1: debug_address_counterN File: C:/Users/minec/Desktop/github/PROJ300/Firmware/UART/sv files/debug_address_counterN.sv Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file sv files/fine_clk_divn.sv
-    Info (12023): Found entity 1: fine_clk_divN File: C:/Users/minec/Desktop/Work/GitHub Repos/PROJ300/Firmware/UART/sv files/fine_clk_divN.sv Line: 1
+    Info (12023): Found entity 1: fine_clk_divN File: C:/Users/minec/Desktop/github/PROJ300/Firmware/UART/sv files/fine_clk_divN.sv Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file sv files/pulse_gen.sv
-    Info (12023): Found entity 1: pulse_gen File: C:/Users/minec/Desktop/Work/GitHub Repos/PROJ300/Firmware/UART/sv files/pulse_gen.sv Line: 1
+    Info (12023): Found entity 1: pulse_gen File: C:/Users/minec/Desktop/github/PROJ300/Firmware/UART/sv files/pulse_gen.sv Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file sv files/debouncer.sv
-    Info (12023): Found entity 1: debouncer File: C:/Users/minec/Desktop/Work/GitHub Repos/PROJ300/Firmware/UART/sv files/debouncer.sv Line: 1
+    Info (12023): Found entity 1: debouncer File: C:/Users/minec/Desktop/github/PROJ300/Firmware/UART/sv files/debouncer.sv Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file sv files/seven_seg_controller.sv
-    Info (12023): Found entity 1: seven_seg_controller File: C:/Users/minec/Desktop/Work/GitHub Repos/PROJ300/Firmware/UART/sv files/seven_seg_controller.sv Line: 1
+    Info (12023): Found entity 1: seven_seg_controller File: C:/Users/minec/Desktop/github/PROJ300/Firmware/UART/sv files/seven_seg_controller.sv Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file sv files/bsy_detector.sv
-    Info (12023): Found entity 1: bsy_detector File: C:/Users/minec/Desktop/Work/GitHub Repos/PROJ300/Firmware/UART/sv files/bsy_detector.sv Line: 1
+    Info (12023): Found entity 1: bsy_detector File: C:/Users/minec/Desktop/github/PROJ300/Firmware/UART/sv files/bsy_detector.sv Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file sv files/uart_controller.sv
-    Info (12023): Found entity 1: uart_controller File: C:/Users/minec/Desktop/Work/GitHub Repos/PROJ300/Firmware/UART/sv files/uart_controller.sv Line: 1
+    Info (12023): Found entity 1: uart_controller File: C:/Users/minec/Desktop/github/PROJ300/Firmware/UART/sv files/uart_controller.sv Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file sv files/uart_clk_divn.sv
-    Info (12023): Found entity 1: uart_clk_divN File: C:/Users/minec/Desktop/Work/GitHub Repos/PROJ300/Firmware/UART/sv files/uart_clk_divN.sv Line: 1
+    Info (12023): Found entity 1: uart_clk_divN File: C:/Users/minec/Desktop/github/PROJ300/Firmware/UART/sv files/uart_clk_divN.sv Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file uart.bdf
     Info (12023): Found entity 1: UART
 Info (12021): Found 1 design units, including 1 entities, in source file output_files/toplevel.bdf
     Info (12023): Found entity 1: TopLevel
-Warning (10222): Verilog HDL Parameter Declaration warning at fine_clk_divN.sv(18): Parameter Declaration in module "fine_clk_divN" behaves as a Local Parameter Declaration because the module has a Module Parameter Port List File: C:/Users/minec/Desktop/Work/GitHub Repos/PROJ300/Firmware/UART/sv files/fine_clk_divN.sv Line: 18
-Warning (10222): Verilog HDL Parameter Declaration warning at uart_clk_divN.sv(18): Parameter Declaration in module "uart_clk_divN" behaves as a Local Parameter Declaration because the module has a Module Parameter Port List File: C:/Users/minec/Desktop/Work/GitHub Repos/PROJ300/Firmware/UART/sv files/uart_clk_divN.sv Line: 18
+Warning (10222): Verilog HDL Parameter Declaration warning at fine_clk_divN.sv(18): Parameter Declaration in module "fine_clk_divN" behaves as a Local Parameter Declaration because the module has a Module Parameter Port List File: C:/Users/minec/Desktop/github/PROJ300/Firmware/UART/sv files/fine_clk_divN.sv Line: 18
+Warning (10222): Verilog HDL Parameter Declaration warning at uart_clk_divN.sv(18): Parameter Declaration in module "uart_clk_divN" behaves as a Local Parameter Declaration because the module has a Module Parameter Port List File: C:/Users/minec/Desktop/github/PROJ300/Firmware/UART/sv files/uart_clk_divN.sv Line: 18
 Info (12127): Elaborating entity "TopLevel" for the top level hierarchy
 Warning (275085): Found inconsistent dimensions for element "data"
 Warning (275085): Found inconsistent dimensions for element "data"
@@ -528,8 +542,8 @@ Warning (275080): Converted elements in bus name "data" using legacy naming rule
     Warning (275081): Converted element name(s) from "data[7..0]" to "data7..0"
     Warning (275081): Converted element name(s) from "data[7..0]" to "data7..0"
 Info (12128): Elaborating entity "debouncer" for hierarchy "debouncer:inst8"
-Warning (10230): Verilog HDL assignment warning at debouncer.sv(48): truncated value with size 32 to match size of target (25) File: C:/Users/minec/Desktop/Work/GitHub Repos/PROJ300/Firmware/UART/sv files/debouncer.sv Line: 48
-Warning (10230): Verilog HDL assignment warning at debouncer.sv(75): truncated value with size 32 to match size of target (25) File: C:/Users/minec/Desktop/Work/GitHub Repos/PROJ300/Firmware/UART/sv files/debouncer.sv Line: 75
+Warning (10230): Verilog HDL assignment warning at debouncer.sv(48): truncated value with size 32 to match size of target (25) File: C:/Users/minec/Desktop/github/PROJ300/Firmware/UART/sv files/debouncer.sv Line: 48
+Warning (10230): Verilog HDL assignment warning at debouncer.sv(75): truncated value with size 32 to match size of target (25) File: C:/Users/minec/Desktop/github/PROJ300/Firmware/UART/sv files/debouncer.sv Line: 75
 Info (12128): Elaborating entity "seven_seg_controller" for hierarchy "seven_seg_controller:inst3"
 Info (12128): Elaborating entity "d_ffN" for hierarchy "d_ffN:inst13"
 Info (12128): Elaborating entity "UART" for hierarchy "UART:inst"
@@ -540,16 +554,25 @@ Warning (275080): Converted elements in bus name "data" using legacy naming rule
     Warning (275081): Converted element name(s) from "data[7..0]" to "data7..0"
     Warning (275081): Converted element name(s) from "data[7..0]" to "data7..0"
 Info (12128): Elaborating entity "bsy_detector" for hierarchy "UART:inst|bsy_detector:inst2"
+Info (10041): Inferred latch for "eot" at bsy_detector.sv(15) File: C:/Users/minec/Desktop/github/PROJ300/Firmware/UART/sv files/bsy_detector.sv Line: 15
+Info (10041): Inferred latch for "data_out[0]" at bsy_detector.sv(15) File: C:/Users/minec/Desktop/github/PROJ300/Firmware/UART/sv files/bsy_detector.sv Line: 15
+Info (10041): Inferred latch for "data_out[1]" at bsy_detector.sv(15) File: C:/Users/minec/Desktop/github/PROJ300/Firmware/UART/sv files/bsy_detector.sv Line: 15
+Info (10041): Inferred latch for "data_out[2]" at bsy_detector.sv(15) File: C:/Users/minec/Desktop/github/PROJ300/Firmware/UART/sv files/bsy_detector.sv Line: 15
+Info (10041): Inferred latch for "data_out[3]" at bsy_detector.sv(15) File: C:/Users/minec/Desktop/github/PROJ300/Firmware/UART/sv files/bsy_detector.sv Line: 15
+Info (10041): Inferred latch for "data_out[4]" at bsy_detector.sv(15) File: C:/Users/minec/Desktop/github/PROJ300/Firmware/UART/sv files/bsy_detector.sv Line: 15
+Info (10041): Inferred latch for "data_out[5]" at bsy_detector.sv(15) File: C:/Users/minec/Desktop/github/PROJ300/Firmware/UART/sv files/bsy_detector.sv Line: 15
+Info (10041): Inferred latch for "data_out[6]" at bsy_detector.sv(15) File: C:/Users/minec/Desktop/github/PROJ300/Firmware/UART/sv files/bsy_detector.sv Line: 15
+Info (10041): Inferred latch for "data_out[7]" at bsy_detector.sv(15) File: C:/Users/minec/Desktop/github/PROJ300/Firmware/UART/sv files/bsy_detector.sv Line: 15
 Info (12128): Elaborating entity "uart_controller" for hierarchy "UART:inst|uart_controller:inst1"
-Warning (10230): Verilog HDL assignment warning at uart_controller.sv(35): truncated value with size 32 to match size of target (4) File: C:/Users/minec/Desktop/Work/GitHub Repos/PROJ300/Firmware/UART/sv files/uart_controller.sv Line: 35
+Warning (10230): Verilog HDL assignment warning at uart_controller.sv(35): truncated value with size 32 to match size of target (4) File: C:/Users/minec/Desktop/github/PROJ300/Firmware/UART/sv files/uart_controller.sv Line: 35
 Info (12128): Elaborating entity "uart_clk_divN" for hierarchy "UART:inst|uart_clk_divN:inst"
-Warning (10230): Verilog HDL assignment warning at uart_clk_divN.sv(19): truncated value with size 32 to match size of target (25) File: C:/Users/minec/Desktop/Work/GitHub Repos/PROJ300/Firmware/UART/sv files/uart_clk_divN.sv Line: 19
-Warning (10230): Verilog HDL assignment warning at uart_clk_divN.sv(29): truncated value with size 32 to match size of target (25) File: C:/Users/minec/Desktop/Work/GitHub Repos/PROJ300/Firmware/UART/sv files/uart_clk_divN.sv Line: 29
-Warning (10230): Verilog HDL assignment warning at uart_clk_divN.sv(68): truncated value with size 32 to match size of target (25) File: C:/Users/minec/Desktop/Work/GitHub Repos/PROJ300/Firmware/UART/sv files/uart_clk_divN.sv Line: 68
-Warning (10230): Verilog HDL assignment warning at uart_clk_divN.sv(86): truncated value with size 32 to match size of target (25) File: C:/Users/minec/Desktop/Work/GitHub Repos/PROJ300/Firmware/UART/sv files/uart_clk_divN.sv Line: 86
+Warning (10230): Verilog HDL assignment warning at uart_clk_divN.sv(19): truncated value with size 32 to match size of target (25) File: C:/Users/minec/Desktop/github/PROJ300/Firmware/UART/sv files/uart_clk_divN.sv Line: 19
+Warning (10230): Verilog HDL assignment warning at uart_clk_divN.sv(29): truncated value with size 32 to match size of target (25) File: C:/Users/minec/Desktop/github/PROJ300/Firmware/UART/sv files/uart_clk_divN.sv Line: 29
+Warning (10230): Verilog HDL assignment warning at uart_clk_divN.sv(68): truncated value with size 32 to match size of target (25) File: C:/Users/minec/Desktop/github/PROJ300/Firmware/UART/sv files/uart_clk_divN.sv Line: 68
+Warning (10230): Verilog HDL assignment warning at uart_clk_divN.sv(86): truncated value with size 32 to match size of target (25) File: C:/Users/minec/Desktop/github/PROJ300/Firmware/UART/sv files/uart_clk_divN.sv Line: 86
 Info (12128): Elaborating entity "instructionRAM" for hierarchy "instructionRAM:inst1"
-Warning (10230): Verilog HDL assignment warning at instructionRAM.sv(100): truncated value with size 32 to match size of target (8) File: C:/Users/minec/Desktop/Work/GitHub Repos/PROJ300/Firmware/UART/sv files/instructionRAM.sv Line: 100
-Warning (10230): Verilog HDL assignment warning at instructionRAM.sv(131): truncated value with size 32 to match size of target (8) File: C:/Users/minec/Desktop/Work/GitHub Repos/PROJ300/Firmware/UART/sv files/instructionRAM.sv Line: 131
+Warning (10230): Verilog HDL assignment warning at instructionRAM.sv(100): truncated value with size 32 to match size of target (8) File: C:/Users/minec/Desktop/github/PROJ300/Firmware/UART/sv files/instructionRAM.sv Line: 100
+Warning (10230): Verilog HDL assignment warning at instructionRAM.sv(131): truncated value with size 32 to match size of target (8) File: C:/Users/minec/Desktop/github/PROJ300/Firmware/UART/sv files/instructionRAM.sv Line: 131
 Info (286030): Timing-Driven Synthesis is running
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
@@ -558,9 +581,9 @@ Info (21057): Implemented 1738 device resources after synthesis - the final reso
     Info (21059): Implemented 32 output pins
     Info (21061): Implemented 1700 logic cells
 Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 24 warnings
-    Info: Peak virtual memory: 4910 megabytes
-    Info: Processing ended: Wed Feb 21 13:05:19 2024
-    Info: Elapsed time: 00:00:07
-    Info: Total CPU time (on all processors): 00:00:08
+    Info: Peak virtual memory: 4850 megabytes
+    Info: Processing ended: Tue Apr 02 11:38:29 2024
+    Info: Elapsed time: 00:00:35
+    Info: Total CPU time (on all processors): 00:00:32
 
 

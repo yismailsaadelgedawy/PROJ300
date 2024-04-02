@@ -1,10 +1,10 @@
-/* Quartus Prime Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition */
+/* Quartus Prime Version 20.1.0 Build 711 06/05/2020 SJ Lite Edition */
 JedecChain;
 	FileRevision(JESD32A);
 	DefaultMfr(6E);
 
 	P ActionCode(Cfg)
-		Device PartName(5CEBA4F23) Path("C:/Users/minec/Desktop/Work/GitHub Repos/PROJ300/Firmware/UART/output_files/") File("uartt.sof") MfrSpec(OpMask(1));
+		Device PartName(5CEBA4F23) Path("C:/Users/minec/Desktop/github/PROJ300/Firmware/UART/output_files/") File("uartt.sof") MfrSpec(OpMask(1));
 
 ChainEnd;
 
