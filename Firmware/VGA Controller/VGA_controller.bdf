@@ -35,6 +35,7 @@ https://fpgasoftware.intel.com/eula.
 		(line (pt 109 12)(pt 113 8))
 	)
 	(text "VCC" (rect 128 7 148 17)(font "Arial" (font_size 6)))
+	(annotation_block (location)(rect -664 176 -608 200))
 )
 (pin
 	(input)
@@ -51,7 +52,7 @@ https://fpgasoftware.intel.com/eula.
 		(line (pt 109 12)(pt 113 8))
 	)
 	(text "VCC" (rect 128 7 148 17)(font "Arial" (font_size 6)))
-	(annotation_block (location)(rect -592 128 -536 152))
+	(annotation_block (location)(rect -664 136 -608 160))
 )
 (pin
 	(input)
@@ -68,7 +69,7 @@ https://fpgasoftware.intel.com/eula.
 		(line (pt 109 12)(pt 113 8))
 	)
 	(text "VCC" (rect 128 7 148 17)(font "Arial" (font_size 6)))
-	(annotation_block (location)(rect -600 152 -536 176))
+	(annotation_block (location)(rect -672 152 -608 176))
 )
 (pin
 	(output)
@@ -776,14 +777,14 @@ https://fpgasoftware.intel.com/eula.
 		(pt 248 32)
 		(output)
 		(text "row_offset[10..0]" (rect 0 0 84 12)(font "Arial" ))
-		(text "row_offset[10..0]" (rect 156 27 227 39)(font "Arial" ))
+		(text "row_offset[10..0]" (rect 156 27 240 39)(font "Arial" ))
 		(line (pt 248 32)(pt 232 32)(line_width 3))
 	)
 	(port
 		(pt 248 48)
 		(output)
 		(text "column_offset[10..0]" (rect 0 0 103 12)(font "Arial" ))
-		(text "column_offset[10..0]" (rect 140 43 227 55)(font "Arial" ))
+		(text "column_offset[10..0]" (rect 140 43 243 55)(font "Arial" ))
 		(line (pt 248 48)(pt 232 48)(line_width 3))
 	)
 	(drawing

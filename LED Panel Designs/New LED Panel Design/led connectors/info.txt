@@ -1,0 +1,4 @@
+final design idea
+this, instead, is an LED connector pannel that connects
+to 23 addressable WS2812B strips to show the contents of
+13 x GPRs and 10 x MMRs

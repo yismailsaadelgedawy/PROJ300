@@ -1,0 +1,3 @@
+initial design idea
+electronics works but PCB too large - impractical
+full BOM found under: PROJ300\Firmware\LED Panel Modelling\sv files\BOM.txt
