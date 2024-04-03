@@ -12,9 +12,10 @@ int main()
     // uart2 setup
     uart2_setup();
 
-    test_instruction(0x01, 0x00, 0x4000, 0x2000);
+    // clear terminal and move cursor to (0,0)
+    printf("\033[2J"); printf("\033[H");
 
-  
+   
 
     sleep();
 
