@@ -1,10 +1,5 @@
 // functions file
 #include "functions.hpp"
-#include "mbed.h"
-#include <cstdint>
-#include <cstdlib>
-#include "string"
-#include "iostream"
 
 // USART2
 UnbufferedSerial uart2(PD_5, PD_6);
@@ -30,11 +25,15 @@ uint16_t stack_addr[2996]; // stack address counter; starts at boundary address 
 uint16_t str_idx = 0;
 uint16_t ldr_idx = 0;
 
- 
+void clear_terminal() {
+    // clear terminal and move cursor to (0,0)
+    printf("\033[2J"); printf("\033[H");
+} 
 
 void stack_usage() {
 
-    cout << "The variables stored on the stack are: " << endl;
+    cout << "\n////////////////////////////////////////////////////////" << endl << endl;
+    cout << "\nThe variables stored on the stack are:" << endl << endl;
 
     for(int i=0;i<str_idx;i++) {
 
@@ -42,7 +41,7 @@ void stack_usage() {
 
     }
 
-    cout << "Their values: " << endl;
+    cout << "\nTheir values: " << endl;
 
     for(int i=0;i<str_idx;i++) {
 
@@ -50,13 +49,15 @@ void stack_usage() {
 
     }
 
-    cout << "Their addresses: " << endl;
+    cout << "\nTheir addresses: " << endl;
 
     for(int i=0;i<str_idx;i++) {
 
-        cout << stack_addr[i] << " ";
+        printf("%03x ",stack_addr[i]);
 
     }
+
+    cout << "\n\n////////////////////////////////////////////////////////" << endl << endl;
     
 
 
@@ -133,9 +134,8 @@ void test_instruction(uint8_t opcd, uint8_t select, uint16_t oprnd1, uint16_t op
 }
 
 void print_instruction() {
-
-    printf("opcode, sel, op1, op2: \n");
-    printf("%04x, ",opcode);            // print 4 digits, with trailing zeros if needed
+    
+    printf("\n%04x, ",opcode);            // print 4 digits, with trailing zeros if needed
     printf("%02x, ",sel);
     printf("%02x",op1h);
     printf("%02x, ",op1l);
@@ -252,7 +252,7 @@ void word(string var_name, uint16_t var_value) {
 
     str_idx++;
 
-    cout << "Variable stored on stack is: " << var_names[str_idx] << "with value: " << var_values[str_idx] << "at address: " << stack_addr[str_idx] << endl;
+    
 
 
 }
@@ -314,10 +314,9 @@ void ldr(gpr_t gpr, string var_name) {
     }
 
     // implicity calls ldr
-    ldr(gpr,"[]",stack_addr[ldr_idx]);
-    
+    ldr(gpr,"[]",stack_addr[ldr_idx]);  
 
-    cout << "Variable loaded from stack is: " << var_names[ldr_idx] << "with value: " << var_values[ldr_idx] << "at address: " << stack_addr[ldr_idx] << endl;
+    
 
 
 }
@@ -592,7 +591,7 @@ void mul(gpr_t gpr_result, gpr_t gpr_op1, gpr_t gpr_op2) {
 void lsr(gpr_t gpr_result, gpr_t gpr_op1, uint16_t literal2) {
 
     opcode = 0x0C;
-    sel = 0x00;
+    sel = 0x02;
     op1 = gpr_op1;
     op2 = literal2;
     

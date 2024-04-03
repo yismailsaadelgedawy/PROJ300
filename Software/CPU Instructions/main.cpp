@@ -9,12 +9,13 @@ DigitalOut blue(PB_7); //
 
 int main()
 {   
-    // uart2 setup
-    uart2_setup();
+    
+    uart2_setup();  // uart2 setup
+    clear_terminal();   // clear terminal
 
-    // clear terminal and move cursor to (0,0)
-    printf("\033[2J"); printf("\033[H");
+    
 
+    stack_usage();
    
 
     sleep();
