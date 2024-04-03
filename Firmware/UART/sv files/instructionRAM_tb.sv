@@ -1,7 +1,7 @@
 module instructionRAM_tb;
 
 // parameters
-parameter ADDR_WIDTH=8, MAX_ADDRESS=255;
+parameter ADDR_WIDTH=10, MAX_ADDRESS=(2**ADDR_WIDTH)-1;
 
 
 // internal wires
@@ -10,11 +10,11 @@ parameter ADDR_WIDTH=8, MAX_ADDRESS=255;
 logic clk, rst, DEBUG;
 logic [1:0] MODE;
 logic [ADDR_WIDTH-1:0] address;
-logic [ADDR_WIDTH-1:0] data_in;
+logic [7:0] data_in;
 
 
 // out
-logic [ADDR_WIDTH-1:0] data_out;
+logic [37:0] data_out;
 
 
 // wiring
@@ -46,6 +46,9 @@ always begin
 
 end
 
+// this component runs at a higher frequency that the UART module, so the delays are > 1 cycles
+// as the data will be held for more than one cycle
+
 // testing -- writing MUST be done first
 initial begin
 
@@ -73,40 +76,69 @@ initial begin
     address = 'd0; // ignored
 
 
-
     data_in = 'd0; // simulating idle before MCU sends data
     #80ns;
 
-    data_in = 'h4A;
-    #80ns;  // data will be held the same value for more than one clock cycle (this is where it breaks!)
+    // will now send 6 bytes representing the CPU instruction (0x01 0x01 0x00 0x02 0x00 0x03)
+    
 
-    // next address byte
+    data_in = 'h01; // opcode
+    #80ns;
+    data_in = 'h24; // next address byte
+    #80ns;
+    data_in = 'h01; // sel
+    #80ns;
+    data_in = 'h24;
+    #80ns;
+    data_in = 'h00; // op1h
+    #80ns;
+    data_in = 'h24;
+    #80ns;
+    data_in = 'h02; // op1l
+    #80ns;
+    data_in = 'h24;
+    #80ns;
+    data_in = 'h00; // op2h
+    #80ns;
+    data_in = 'h24;
+    #80ns;
+    data_in = 'h03; // op2l
+    #80ns;
     data_in = 'h24;
     #80ns;
 
-    data_in = 'h4B;
+    // and again...
+    data_in = 'h02; // opcode
+    #80ns;                              
+    data_in = 'h24; // next address byte
     #80ns;
-
+    data_in = 'h01; // sel
+    #80ns;
+    data_in = 'h24;
+    #80ns;
+    data_in = 'h00; // op1h
+    #80ns;
+    data_in = 'h24;
+    #80ns;
+    data_in = 'h02; // op1l
+    #80ns;
+    data_in = 'h24;
+    #80ns;
+    data_in = 'h00; // op2h
+    #80ns;
+    data_in = 'h24;
+    #80ns;
+    data_in = 'h03; // op2l
+    #80ns;
     data_in = 'h24;
     #80ns;
 
-    data_in = 'h4C;
-    #80ns;
 
-    data_in = 'h24;
-    #80ns;
-
-    data_in = 'h4D;
-    #80ns;
-
-    data_in = 'h24;
-    #80ns;
+    #300ns;
 
 
+    $display("\n////////////// DEBUGGING FROM RAM //////////////\n");
 
-    $display(" ");
-    $display("////////////// DEBUGGING FROM RAM //////////////");
-    $display(" ");
 
     // address and DEBUG should be ignored
     MODE = 2'd1; // debug mode
@@ -115,7 +147,7 @@ initial begin
     data_in = 'd0; // ignored
 
     #15ns;
-    assert (data_out == 'h4A) $display("passed debug 1..."); else $error("failed debug 1...");
+    assert (data_out == {'h01,'h01,'h00,'h02,'h00,'h03}) $display("passed debug 1..."); else $error("failed debug 1...");
     #5ns;
 
     DEBUG = 1; #20ns; // button press
@@ -123,39 +155,23 @@ initial begin
     #20ns; // wait a cycle
 
     #15ns;
-    assert (data_out == 'h4B) $display("passed debug 2..."); else $error("failed debug 2...");
+    assert (data_out == {'h02,'h01,'h00,'h02,'h00,'h03}) $display("passed debug 2..."); else $error("failed debug 2...");
     #5ns;
 
-    DEBUG = 1; #20ns; // button press, wait a clock cycle
-    DEBUG = 0;
-    #20ns; // wait a cycle
-
-    #15ns;
-    assert (data_out == 'h4C) $display("passed debug 3..."); else $error("failed debug 3...");
-    #5ns;
-
-    DEBUG = 1; #20ns; // button press, wait a clock cycle
-    DEBUG = 0;
-    #20ns; // wait a cycle
-
-    #15ns;
-    assert (data_out == 'h4D) $display("passed debug 4..."); else $error("failed debug 4..");
-    #5ns;
-
-
+    
 
     ////// pressing btn few more times to stress test //////
 
-    $display(" ");
-    $display("////// pressing btn few more times to stress test //////");
-    $display(" ");
+
+    $display("\n////// pressing btn few more times to stress test //////\n");
+
 
     DEBUG = 1; #20ns; // button press, wait a clock cycle
     DEBUG = 0;
     #20ns; // wait a cycle
 
     #15ns;
-    assert (data_out == 'h4D) $display("passed debug: end of instructions"); else $error("failed debug: end of instructions");
+    assert (data_out == {'h02,'h01,'h00,'h02,'h00,'h03}) $display("passed debug: end of instructions"); else $error("failed debug: end of instructions");
     #5ns;
 
     DEBUG = 1; #20ns; // button press, wait a clock cycle
@@ -163,7 +179,7 @@ initial begin
     #20ns; // wait a cycle
 
     #15ns;
-    assert (data_out == 'h4D) $display("passed debug: end of instructions"); else $error("failed debug: end of instructions");
+    assert (data_out == {'h02,'h01,'h00,'h02,'h00,'h03}) $display("passed debug: end of instructions"); else $error("failed debug: end of instructions");
     #5ns;
 
 
@@ -172,7 +188,7 @@ initial begin
     #20ns; // wait a cycle
 
     #15ns;
-    assert (data_out == 'h4D) $display("passed debug: end of instructions"); else $error("failed debug: end of instructions");
+    assert (data_out == {'h02,'h01,'h00,'h02,'h00,'h03}) $display("passed debug: end of instructions"); else $error("failed debug: end of instructions");
     #5ns;
 
     DEBUG = 1; #20ns; // button press, wait a clock cycle
@@ -180,7 +196,7 @@ initial begin
     #20ns; // wait a cycle
 
     #15ns;
-    assert (data_out == 'h4D) $display("passed debug: end of instructions"); else $error("failed debug: end of instructions");
+    assert (data_out == {'h02,'h01,'h00,'h02,'h00,'h03}) $display("passed debug: end of instructions"); else $error("failed debug: end of instructions");
     #5ns;
 
 
@@ -189,34 +205,20 @@ initial begin
     $display(" ");
 
     // only 'address' is relevant here
-    MODE = 2'd2; // debug mode
+    MODE = 2'd2; // random access mode
     DEBUG = 0; // ignored
     address = 'd0; // first byte stored
     data_in = 'd0; // ignored
 
     #15ns;
-    assert (data_out == 'h4A) $display("passed fetch 1"); else $error("failed fetch 1");
+    assert (data_out == {'h01,'h01,'h00,'h02,'h00,'h03}) $display("passed fetch 1"); else $error("failed fetch 1");
     #5ns;
 
     address = 'd1; // second byte stored
 
     #15ns;
-    assert (data_out == 'h4B) $display("passed fetch 2"); else $error("failed fetch 2");
-    #5ns;
-
-    address = 'd2; // third byte stored
-
-    #15ns;
-    assert (data_out == 'h4C) $display("passed fetch 3"); else $error("failed fetch 3");
-    #5ns;
-
-    address = 'd3; // fourth byte stored
-
-    #15ns;
-    assert (data_out == 'h4D) $display("passed fetch 3"); else $error("failed fetch 3");
-    #5ns;
-
-    
+    assert (data_out == {'h02,'h01,'h00,'h02,'h00,'h03}) $display("passed fetch 2"); else $error("failed fetch 2");
+    #5ns;    
 
 
 
