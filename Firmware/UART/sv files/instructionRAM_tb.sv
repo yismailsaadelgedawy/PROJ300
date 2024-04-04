@@ -131,10 +131,11 @@ initial begin
 
 
     // testing random access fetch
+    // asynchronous to the clock
     for(int unsigned i=0; i<4; i++) begin
 
         addr = i[11:0];
-        #10ns;
+        #2ns;
 
     end
 

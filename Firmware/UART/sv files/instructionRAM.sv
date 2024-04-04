@@ -24,6 +24,10 @@ int unsigned debug_address_cnt = 0;
 logic current = 0;
 logic prev = 0;
 
+// this MUST be asynchronous to the clock
+// the CPU is an a faster clock domain (25MHz-50MHz)!
+assign instruction = ram[addr];
+
 
 // always_comb and always_latch update when any input CHANGES
 // which is why if load is held high, the count does not keep counting!
@@ -38,7 +42,6 @@ always_ff @(posedge clk) begin
         address_cnt <= 'd0;
         debug_address_cnt <= 'd0;
         {debugA,debugB,debugC} <= 'd0;
-        instruction <= 'd0;
 
         // clearing out all RAM contents
         for (i=0; i<NUMBER_OF_INSTRUCTIONS; i++) begin
@@ -50,8 +53,7 @@ always_ff @(posedge clk) begin
     end
 
     else begin
-
-        instruction <= ram[addr];
+        
 
         if(load) begin
 
