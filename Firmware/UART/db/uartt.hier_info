@@ -218,18 +218,22 @@ CPU_instruction[37] <= instructionRAM:inst20.instruction[37]
 sw_rst => instructionRAM:inst20.rst
 sw_rst => fine_clk_divN:inst12.rst
 sw_rst => intermediaryRAM:inst1.rst
+sw_rst => d_ffN:inst16.rst
+sw_rst => d_ffN:inst14.rst
+sw_rst => d_ffN:inst15.rst
+sw_rst => d_ffN:inst11.rst
 debug_btnA => instructionRAM:inst20.btnA
 debug_btnB => instructionRAM:inst20.btnB
 clk_50 => fine_clk_divN:inst12.clk_in
-eot_flag => intermediaryRAM:inst1.load
-UART_data[0] => intermediaryRAM:inst1.data_in[0]
-UART_data[1] => intermediaryRAM:inst1.data_in[1]
-UART_data[2] => intermediaryRAM:inst1.data_in[2]
-UART_data[3] => intermediaryRAM:inst1.data_in[3]
-UART_data[4] => intermediaryRAM:inst1.data_in[4]
-UART_data[5] => intermediaryRAM:inst1.data_in[5]
-UART_data[6] => intermediaryRAM:inst1.data_in[6]
-UART_data[7] => intermediaryRAM:inst1.data_in[7]
+eot_flag => d_ffN:inst14.d[0]
+UART_data[0] => d_ffN:inst11.d[0]
+UART_data[1] => d_ffN:inst11.d[1]
+UART_data[2] => d_ffN:inst11.d[2]
+UART_data[3] => d_ffN:inst11.d[3]
+UART_data[4] => d_ffN:inst11.d[4]
+UART_data[5] => d_ffN:inst11.d[5]
+UART_data[6] => d_ffN:inst11.d[6]
+UART_data[7] => d_ffN:inst11.d[7]
 addr[0] => instructionRAM:inst20.addr[0]
 addr[1] => instructionRAM:inst20.addr[1]
 addr[2] => instructionRAM:inst20.addr[2]
@@ -16425,6 +16429,102 @@ clk_in => counter_reg[22].CLK
 clk_in => counter_reg[23].CLK
 clk_in => counter_reg[24].CLK
 rst => Decoder0.IN0
+
+
+|TopLevel|InstructionBuffer:inst1|d_ffN:inst16
+q[0] <= q[0]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+d[0] => Selector0.IN4
+clk => q[0]~reg0.CLK
+rst => Equal0.IN2
+rst => WideNor0.IN1
+rst => Selector0.IN5
+en => Equal0.IN3
+
+
+|TopLevel|InstructionBuffer:inst1|d_ffN:inst14
+q[0] <= q[0]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+d[0] => Selector0.IN4
+clk => q[0]~reg0.CLK
+rst => Equal0.IN2
+rst => WideNor0.IN1
+rst => Selector0.IN5
+en => Equal0.IN3
+
+
+|TopLevel|InstructionBuffer:inst1|d_ffN:inst15
+q[0] <= q[0]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+q[1] <= q[1]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+q[2] <= q[2]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+q[3] <= q[3]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+q[4] <= q[4]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+q[5] <= q[5]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+q[6] <= q[6]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+q[7] <= q[7]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+d[0] => Selector7.IN4
+d[1] => Selector6.IN4
+d[2] => Selector5.IN4
+d[3] => Selector4.IN4
+d[4] => Selector3.IN4
+d[5] => Selector2.IN4
+d[6] => Selector1.IN4
+d[7] => Selector0.IN4
+clk => q[0]~reg0.CLK
+clk => q[1]~reg0.CLK
+clk => q[2]~reg0.CLK
+clk => q[3]~reg0.CLK
+clk => q[4]~reg0.CLK
+clk => q[5]~reg0.CLK
+clk => q[6]~reg0.CLK
+clk => q[7]~reg0.CLK
+rst => Equal0.IN2
+rst => WideNor0.IN1
+rst => Selector0.IN5
+rst => Selector1.IN5
+rst => Selector2.IN5
+rst => Selector3.IN5
+rst => Selector4.IN5
+rst => Selector5.IN5
+rst => Selector6.IN5
+rst => Selector7.IN5
+en => Equal0.IN3
+
+
+|TopLevel|InstructionBuffer:inst1|d_ffN:inst11
+q[0] <= q[0]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+q[1] <= q[1]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+q[2] <= q[2]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+q[3] <= q[3]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+q[4] <= q[4]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+q[5] <= q[5]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+q[6] <= q[6]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+q[7] <= q[7]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+d[0] => Selector7.IN4
+d[1] => Selector6.IN4
+d[2] => Selector5.IN4
+d[3] => Selector4.IN4
+d[4] => Selector3.IN4
+d[5] => Selector2.IN4
+d[6] => Selector1.IN4
+d[7] => Selector0.IN4
+clk => q[0]~reg0.CLK
+clk => q[1]~reg0.CLK
+clk => q[2]~reg0.CLK
+clk => q[3]~reg0.CLK
+clk => q[4]~reg0.CLK
+clk => q[5]~reg0.CLK
+clk => q[6]~reg0.CLK
+clk => q[7]~reg0.CLK
+rst => Equal0.IN2
+rst => WideNor0.IN1
+rst => Selector0.IN5
+rst => Selector1.IN5
+rst => Selector2.IN5
+rst => Selector3.IN5
+rst => Selector4.IN5
+rst => Selector5.IN5
+rst => Selector6.IN5
+rst => Selector7.IN5
+en => Equal0.IN3
 
 
 |TopLevel|UART:inst

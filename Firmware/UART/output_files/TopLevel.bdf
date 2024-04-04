@@ -1099,4 +1099,4 @@ https://fpgasoftware.intel.com/eula.
 (text "debug SW2 and SW1" (rect 560 216 656 232)(font "Intel Clear" (italic)))
 (text "Debug Displays" (rect 96 936 190 955)(font "Intel Clear" (font_size 8)(bold)))
 (text "open this to change the max number of instructions the CPU can read (default 100)" (rect 672 384 1055 400)(font "Intel Clear" (italic)))
-(rectangle (rect 96 960 736 1432)(color 0 0 255)(line_width 2))
+(rectangle (rect 96 960 736 1368)(color 0 0 255)(line_width 2))

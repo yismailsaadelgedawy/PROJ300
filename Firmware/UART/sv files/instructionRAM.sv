@@ -36,12 +36,12 @@ always_ff @(posedge clk) begin
 
     if(rst) begin
 
-        current = 0;
-        prev = 0;
+        current <= 0;
+        prev <= 0;
 
         address_cnt <= 'd0;
         debug_address_cnt <= 'd0;
-        {debugA,debugB,debugC} <= 'd0;
+        {debugA,debugB,debugC} <= 'd0;  // no idea why this does not synthesise properly...
 
         // clearing out all RAM contents
         for (i=0; i<NUMBER_OF_INSTRUCTIONS; i++) begin
