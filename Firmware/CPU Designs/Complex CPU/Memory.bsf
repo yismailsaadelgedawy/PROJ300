@@ -55,8 +55,8 @@ https://fpgasoftware.intel.com/eula.
 	(port
 		(pt 0 96)
 		(input)
-		(text "CU" (rect 0 0 17 19)(font "Intel Clear" (font_size 8)))
-		(text "CU" (rect 21 91 38 110)(font "Intel Clear" (font_size 8)))
+		(text "MEMLOAD" (rect 0 0 62 19)(font "Intel Clear" (font_size 8)))
+		(text "MEMLOAD" (rect 21 91 83 110)(font "Intel Clear" (font_size 8)))
 		(line (pt 0 96)(pt 16 96))
 	)
 	(port
