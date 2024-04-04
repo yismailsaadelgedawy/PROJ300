@@ -31,12 +31,19 @@ int main()
     // begin transmission of bytes
     
     red = 1;
-    transmit(0x4A);
-    transmit(0x4B);
-    transmit(0x4C);
-    transmit(0x4D);
-    transmit(0x4E);
-    transmit(0x4F);
+    transmit(0x01);
+    transmit(0x02);
+    transmit(0x03);
+    transmit(0x04);
+    transmit(0x05);
+    transmit(0x06);
+
+    transmit(0x0A);
+    transmit(0x0B);
+    transmit(0x0C);
+    transmit(0x0D);
+    transmit(0x0E);
+    transmit(0x0F);
 
     red = 0;
 
@@ -56,11 +63,7 @@ void transmit(char ch) {
     // clears the TXE bit automatically
     USART2->DR = ch;
 
-    wait_us(100000);   // 100ms delay
-
-    while(!(USART2->SR & 0x80)) {}
-    USART2->DR = '$'; // signifies to RAM to move on to next address
-    wait_us(100000);
+    wait_us(10000);   // 10ms delay
 
 
 }

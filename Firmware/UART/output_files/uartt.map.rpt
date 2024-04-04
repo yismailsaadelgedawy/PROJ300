@@ -1,5 +1,5 @@
 Analysis & Synthesis report for uartt
-Tue Apr 02 11:38:29 2024
+Thu Apr 04 06:09:23 2024
 Quartus Prime Version 20.1.0 Build 711 06/05/2020 SJ Lite Edition
 
 
@@ -18,13 +18,11 @@ Quartus Prime Version 20.1.0 Build 711 06/05/2020 SJ Lite Edition
  10. General Register Statistics
  11. Inverted Register Statistics
  12. Multiplexer Restructuring Statistics (Restructuring Performed)
- 13. Parameter Settings for User Entity Instance: d_ffN:inst13
- 14. Parameter Settings for User Entity Instance: d_ffN:inst12
- 15. Parameter Settings for User Entity Instance: UART:inst|uart_clk_divN:inst
- 16. Parameter Settings for User Entity Instance: instructionRAM:inst1
- 17. Post-Synthesis Netlist Statistics for Top Partition
- 18. Elapsed Time Per Partition
- 19. Analysis & Synthesis Messages
+ 13. Parameter Settings for User Entity Instance: UART:inst|uart_clk_divN:inst
+ 14. Parameter Settings for User Entity Instance: fine_clk_divN:inst12
+ 15. Post-Synthesis Netlist Statistics for Top Partition
+ 16. Elapsed Time Per Partition
+ 17. Analysis & Synthesis Messages
 
 
 
@@ -51,13 +49,13 @@ https://fpgasoftware.intel.com/eula.
 +-------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                  ;
 +---------------------------------+---------------------------------------------+
-; Analysis & Synthesis Status     ; Successful - Tue Apr 02 11:38:29 2024       ;
+; Analysis & Synthesis Status     ; Successful - Thu Apr 04 06:09:23 2024       ;
 ; Quartus Prime Version           ; 20.1.0 Build 711 06/05/2020 SJ Lite Edition ;
 ; Revision Name                   ; uartt                                       ;
 ; Top-level Entity Name           ; TopLevel                                    ;
 ; Family                          ; Cyclone V                                   ;
 ; Logic utilization (in ALMs)     ; N/A                                         ;
-; Total registers                 ; 936                                         ;
+; Total registers                 ; 178                                         ;
 ; Total pins                      ; 38                                          ;
 ; Total virtual pins              ; 0                                           ;
 ; Total block memory bits         ; 0                                           ;
@@ -173,8 +171,7 @@ https://fpgasoftware.intel.com/eula.
 ; Usage by Processor         ; % Time Used ;
 ;     Processor 1            ; 100.0%      ;
 ;     Processor 2            ;   0.0%      ;
-;     Processor 3            ;   0.0%      ;
-;     Processor 4            ;   0.0%      ;
+;     Processors 3-4         ;   0.0%      ;
 +----------------------------+-------------+
 
 
@@ -184,7 +181,7 @@ https://fpgasoftware.intel.com/eula.
 ; File Name with User-Entered Path ; Used in Netlist ; File Type                          ; File Name with Absolute Path                                                         ; Library ;
 +----------------------------------+-----------------+------------------------------------+--------------------------------------------------------------------------------------+---------+
 ; sv files/instructionRAM.sv       ; yes             ; User SystemVerilog HDL File        ; C:/Users/minec/Desktop/github/PROJ300/Firmware/UART/sv files/instructionRAM.sv       ;         ;
-; sv files/d_ffN.sv                ; yes             ; User SystemVerilog HDL File        ; C:/Users/minec/Desktop/github/PROJ300/Firmware/UART/sv files/d_ffN.sv                ;         ;
+; sv files/fine_clk_divN.sv        ; yes             ; User SystemVerilog HDL File        ; C:/Users/minec/Desktop/github/PROJ300/Firmware/UART/sv files/fine_clk_divN.sv        ;         ;
 ; sv files/debouncer.sv            ; yes             ; User SystemVerilog HDL File        ; C:/Users/minec/Desktop/github/PROJ300/Firmware/UART/sv files/debouncer.sv            ;         ;
 ; sv files/seven_seg_controller.sv ; yes             ; User SystemVerilog HDL File        ; C:/Users/minec/Desktop/github/PROJ300/Firmware/UART/sv files/seven_seg_controller.sv ;         ;
 ; sv files/bsy_detector.sv         ; yes             ; User SystemVerilog HDL File        ; C:/Users/minec/Desktop/github/PROJ300/Firmware/UART/sv files/bsy_detector.sv         ;         ;
@@ -200,25 +197,25 @@ https://fpgasoftware.intel.com/eula.
 +---------------------------------------------+-----------+
 ; Resource                                    ; Usage     ;
 +---------------------------------------------+-----------+
-; Estimate of Logic utilization (ALMs needed) ; 849       ;
+; Estimate of Logic utilization (ALMs needed) ; 139       ;
 ;                                             ;           ;
-; Combinational ALUT usage for logic          ; 859       ;
-;     -- 7 input functions                    ; 2         ;
-;     -- 6 input functions                    ; 621       ;
-;     -- 5 input functions                    ; 51        ;
-;     -- 4 input functions                    ; 56        ;
-;     -- <=3 input functions                  ; 129       ;
+; Combinational ALUT usage for logic          ; 231       ;
+;     -- 7 input functions                    ; 0         ;
+;     -- 6 input functions                    ; 40        ;
+;     -- 5 input functions                    ; 21        ;
+;     -- 4 input functions                    ; 57        ;
+;     -- <=3 input functions                  ; 113       ;
 ;                                             ;           ;
-; Dedicated logic registers                   ; 936       ;
+; Dedicated logic registers                   ; 178       ;
 ;                                             ;           ;
 ; I/O pins                                    ; 38        ;
 ;                                             ;           ;
 ; Total DSP Blocks                            ; 0         ;
 ;                                             ;           ;
 ; Maximum fan-out node                        ; SW0~input ;
-; Maximum fan-out                             ; 1009      ;
-; Total fan-out                               ; 8278      ;
-; Average fan-out                             ; 4.42      ;
+; Maximum fan-out                             ; 122       ;
+; Total fan-out                               ; 1538      ;
+; Average fan-out                             ; 3.17      ;
 +---------------------------------------------+-----------+
 
 
@@ -227,15 +224,14 @@ https://fpgasoftware.intel.com/eula.
 +---------------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+-------------------------------------------+----------------------+--------------+
 ; Compilation Hierarchy Node      ; Combinational ALUTs ; Dedicated Logic Registers ; Block Memory Bits ; DSP Blocks ; Pins ; Virtual Pins ; Full Hierarchy Name                       ; Entity Name          ; Library Name ;
 +---------------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+-------------------------------------------+----------------------+--------------+
-; |TopLevel                       ; 859 (0)             ; 936 (0)                   ; 0                 ; 0          ; 38   ; 0            ; |TopLevel                                 ; TopLevel             ; work         ;
+; |TopLevel                       ; 231 (0)             ; 178 (0)                   ; 0                 ; 0          ; 38   ; 0            ; |TopLevel                                 ; TopLevel             ; work         ;
 ;    |UART:inst|                  ; 56 (0)              ; 41 (0)                    ; 0                 ; 0          ; 0    ; 0            ; |TopLevel|UART:inst                       ; UART                 ; work         ;
-;       |bsy_detector:inst2|      ; 8 (8)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |TopLevel|UART:inst|bsy_detector:inst2    ; bsy_detector         ; work         ;
-;       |uart_clk_divN:inst|      ; 41 (41)             ; 28 (28)                   ; 0                 ; 0          ; 0    ; 0            ; |TopLevel|UART:inst|uart_clk_divN:inst    ; uart_clk_divN        ; work         ;
+;       |bsy_detector:inst2|      ; 9 (9)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |TopLevel|UART:inst|bsy_detector:inst2    ; bsy_detector         ; work         ;
+;       |uart_clk_divN:inst|      ; 40 (40)             ; 28 (28)                   ; 0                 ; 0          ; 0    ; 0            ; |TopLevel|UART:inst|uart_clk_divN:inst    ; uart_clk_divN        ; work         ;
 ;       |uart_controller:inst1|   ; 7 (7)               ; 13 (13)                   ; 0                 ; 0          ; 0    ; 0            ; |TopLevel|UART:inst|uart_controller:inst1 ; uart_controller      ; work         ;
-;    |d_ffN:inst12|               ; 8 (8)               ; 8 (8)                     ; 0                 ; 0          ; 0    ; 0            ; |TopLevel|d_ffN:inst12                    ; d_ffN                ; work         ;
-;    |d_ffN:inst13|               ; 8 (8)               ; 8 (8)                     ; 0                 ; 0          ; 0    ; 0            ; |TopLevel|d_ffN:inst13                    ; d_ffN                ; work         ;
 ;    |debouncer:inst8|            ; 36 (36)             ; 29 (29)                   ; 0                 ; 0          ; 0    ; 0            ; |TopLevel|debouncer:inst8                 ; debouncer            ; work         ;
-;    |instructionRAM:inst1|       ; 723 (723)           ; 850 (850)                 ; 0                 ; 0          ; 0    ; 0            ; |TopLevel|instructionRAM:inst1            ; instructionRAM       ; work         ;
+;    |fine_clk_divN:inst12|       ; 31 (31)             ; 26 (26)                   ; 0                 ; 0          ; 0    ; 0            ; |TopLevel|fine_clk_divN:inst12            ; fine_clk_divN        ; work         ;
+;    |instructionRAM:inst14|      ; 80 (80)             ; 82 (82)                   ; 0                 ; 0          ; 0    ; 0            ; |TopLevel|instructionRAM:inst14           ; instructionRAM       ; work         ;
 ;    |seven_seg_controller:inst3| ; 14 (14)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |TopLevel|seven_seg_controller:inst3      ; seven_seg_controller ; work         ;
 ;    |seven_seg_controller:inst6| ; 14 (14)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |TopLevel|seven_seg_controller:inst6      ; seven_seg_controller ; work         ;
 +---------------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+-------------------------------------------+----------------------+--------------+
@@ -267,7 +263,8 @@ Encoding Type:  One-Hot
 ; UART:inst|bsy_detector:inst2|data_out[5]           ; UART:inst|uart_controller:inst1|bsy ; yes                    ;
 ; UART:inst|bsy_detector:inst2|data_out[6]           ; UART:inst|uart_controller:inst1|bsy ; yes                    ;
 ; UART:inst|bsy_detector:inst2|data_out[7]           ; UART:inst|uart_controller:inst1|bsy ; yes                    ;
-; Number of user-specified and inferred latches = 8  ;                                     ;                        ;
+; UART:inst|bsy_detector:inst2|eot                   ; SW0                                 ; yes                    ;
+; Number of user-specified and inferred latches = 9  ;                                     ;                        ;
 +----------------------------------------------------+-------------------------------------+------------------------+
 Note: All latches listed above may not be present at the end of synthesis due to various synthesis optimizations.
 
@@ -277,12 +274,12 @@ Note: All latches listed above may not be present at the end of synthesis due to
 +----------------------------------------------+-------+
 ; Statistic                                    ; Value ;
 +----------------------------------------------+-------+
-; Total registers                              ; 936   ;
-; Number of registers using Synchronous Clear  ; 901   ;
-; Number of registers using Synchronous Load   ; 8     ;
+; Total registers                              ; 178   ;
+; Number of registers using Synchronous Clear  ; 159   ;
+; Number of registers using Synchronous Load   ; 0     ;
 ; Number of registers using Asynchronous Clear ; 42    ;
 ; Number of registers using Asynchronous Load  ; 0     ;
-; Number of registers using Clock Enable       ; 885   ;
+; Number of registers using Clock Enable       ; 109   ;
 ; Number of registers using Preset             ; 0     ;
 +----------------------------------------------+-------+
 
@@ -292,7 +289,7 @@ Note: All latches listed above may not be present at the end of synthesis due to
 +----------------------------------------+---------+
 ; Inverted Register                      ; Fan out ;
 +----------------------------------------+---------+
-; UART:inst|uart_controller:inst1|bsy    ; 10      ;
+; UART:inst|uart_controller:inst1|bsy    ; 11      ;
 ; Total number of inverted registers = 1 ;         ;
 +----------------------------------------+---------+
 
@@ -302,138 +299,23 @@ Note: All latches listed above may not be present at the end of synthesis due to
 +--------------------+-----------+---------------+----------------------+------------------------+------------+--------------------------------------------------------+
 ; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output                             ;
 +--------------------+-----------+---------------+----------------------+------------------------+------------+--------------------------------------------------------+
-; 3:1                ; 16 bits   ; 32 LEs        ; 0 LEs                ; 32 LEs                 ; Yes        ; |TopLevel|instructionRAM:inst1|current_data_reg[5]     ;
-; 3:1                ; 8 bits    ; 16 LEs        ; 0 LEs                ; 16 LEs                 ; Yes        ; |TopLevel|instructionRAM:inst1|ram[0][2]               ;
-; 3:1                ; 8 bits    ; 16 LEs        ; 0 LEs                ; 16 LEs                 ; Yes        ; |TopLevel|instructionRAM:inst1|ram[1][3]               ;
-; 3:1                ; 8 bits    ; 16 LEs        ; 0 LEs                ; 16 LEs                 ; Yes        ; |TopLevel|instructionRAM:inst1|ram[2][5]               ;
-; 3:1                ; 8 bits    ; 16 LEs        ; 0 LEs                ; 16 LEs                 ; Yes        ; |TopLevel|instructionRAM:inst1|ram[3][5]               ;
-; 3:1                ; 8 bits    ; 16 LEs        ; 0 LEs                ; 16 LEs                 ; Yes        ; |TopLevel|instructionRAM:inst1|ram[4][5]               ;
-; 3:1                ; 8 bits    ; 16 LEs        ; 0 LEs                ; 16 LEs                 ; Yes        ; |TopLevel|instructionRAM:inst1|ram[5][0]               ;
-; 3:1                ; 8 bits    ; 16 LEs        ; 0 LEs                ; 16 LEs                 ; Yes        ; |TopLevel|instructionRAM:inst1|ram[6][5]               ;
-; 3:1                ; 8 bits    ; 16 LEs        ; 0 LEs                ; 16 LEs                 ; Yes        ; |TopLevel|instructionRAM:inst1|ram[7][0]               ;
-; 3:1                ; 8 bits    ; 16 LEs        ; 0 LEs                ; 16 LEs                 ; Yes        ; |TopLevel|instructionRAM:inst1|ram[8][1]               ;
-; 3:1                ; 8 bits    ; 16 LEs        ; 0 LEs                ; 16 LEs                 ; Yes        ; |TopLevel|instructionRAM:inst1|ram[9][5]               ;
-; 3:1                ; 8 bits    ; 16 LEs        ; 0 LEs                ; 16 LEs                 ; Yes        ; |TopLevel|instructionRAM:inst1|ram[10][0]              ;
-; 3:1                ; 8 bits    ; 16 LEs        ; 0 LEs                ; 16 LEs                 ; Yes        ; |TopLevel|instructionRAM:inst1|ram[11][4]              ;
-; 3:1                ; 8 bits    ; 16 LEs        ; 0 LEs                ; 16 LEs                 ; Yes        ; |TopLevel|instructionRAM:inst1|ram[12][1]              ;
-; 3:1                ; 8 bits    ; 16 LEs        ; 0 LEs                ; 16 LEs                 ; Yes        ; |TopLevel|instructionRAM:inst1|ram[13][6]              ;
-; 3:1                ; 8 bits    ; 16 LEs        ; 0 LEs                ; 16 LEs                 ; Yes        ; |TopLevel|instructionRAM:inst1|ram[14][7]              ;
-; 3:1                ; 8 bits    ; 16 LEs        ; 0 LEs                ; 16 LEs                 ; Yes        ; |TopLevel|instructionRAM:inst1|ram[15][1]              ;
-; 3:1                ; 8 bits    ; 16 LEs        ; 0 LEs                ; 16 LEs                 ; Yes        ; |TopLevel|instructionRAM:inst1|ram[16][1]              ;
-; 3:1                ; 8 bits    ; 16 LEs        ; 0 LEs                ; 16 LEs                 ; Yes        ; |TopLevel|instructionRAM:inst1|ram[17][4]              ;
-; 3:1                ; 8 bits    ; 16 LEs        ; 0 LEs                ; 16 LEs                 ; Yes        ; |TopLevel|instructionRAM:inst1|ram[18][6]              ;
-; 3:1                ; 8 bits    ; 16 LEs        ; 0 LEs                ; 16 LEs                 ; Yes        ; |TopLevel|instructionRAM:inst1|ram[19][5]              ;
-; 3:1                ; 8 bits    ; 16 LEs        ; 0 LEs                ; 16 LEs                 ; Yes        ; |TopLevel|instructionRAM:inst1|ram[20][1]              ;
-; 3:1                ; 8 bits    ; 16 LEs        ; 0 LEs                ; 16 LEs                 ; Yes        ; |TopLevel|instructionRAM:inst1|ram[21][4]              ;
-; 3:1                ; 8 bits    ; 16 LEs        ; 0 LEs                ; 16 LEs                 ; Yes        ; |TopLevel|instructionRAM:inst1|ram[22][5]              ;
-; 3:1                ; 8 bits    ; 16 LEs        ; 0 LEs                ; 16 LEs                 ; Yes        ; |TopLevel|instructionRAM:inst1|ram[23][5]              ;
-; 3:1                ; 8 bits    ; 16 LEs        ; 0 LEs                ; 16 LEs                 ; Yes        ; |TopLevel|instructionRAM:inst1|ram[24][5]              ;
-; 3:1                ; 8 bits    ; 16 LEs        ; 0 LEs                ; 16 LEs                 ; Yes        ; |TopLevel|instructionRAM:inst1|ram[25][4]              ;
-; 3:1                ; 8 bits    ; 16 LEs        ; 0 LEs                ; 16 LEs                 ; Yes        ; |TopLevel|instructionRAM:inst1|ram[26][7]              ;
-; 3:1                ; 8 bits    ; 16 LEs        ; 0 LEs                ; 16 LEs                 ; Yes        ; |TopLevel|instructionRAM:inst1|ram[27][1]              ;
-; 3:1                ; 8 bits    ; 16 LEs        ; 0 LEs                ; 16 LEs                 ; Yes        ; |TopLevel|instructionRAM:inst1|ram[28][4]              ;
-; 3:1                ; 8 bits    ; 16 LEs        ; 0 LEs                ; 16 LEs                 ; Yes        ; |TopLevel|instructionRAM:inst1|ram[29][2]              ;
-; 3:1                ; 8 bits    ; 16 LEs        ; 0 LEs                ; 16 LEs                 ; Yes        ; |TopLevel|instructionRAM:inst1|ram[30][1]              ;
-; 3:1                ; 8 bits    ; 16 LEs        ; 0 LEs                ; 16 LEs                 ; Yes        ; |TopLevel|instructionRAM:inst1|ram[31][2]              ;
-; 3:1                ; 8 bits    ; 16 LEs        ; 0 LEs                ; 16 LEs                 ; Yes        ; |TopLevel|instructionRAM:inst1|ram[32][0]              ;
-; 3:1                ; 8 bits    ; 16 LEs        ; 0 LEs                ; 16 LEs                 ; Yes        ; |TopLevel|instructionRAM:inst1|ram[33][3]              ;
-; 3:1                ; 8 bits    ; 16 LEs        ; 0 LEs                ; 16 LEs                 ; Yes        ; |TopLevel|instructionRAM:inst1|ram[34][4]              ;
-; 3:1                ; 8 bits    ; 16 LEs        ; 0 LEs                ; 16 LEs                 ; Yes        ; |TopLevel|instructionRAM:inst1|ram[35][3]              ;
-; 3:1                ; 8 bits    ; 16 LEs        ; 0 LEs                ; 16 LEs                 ; Yes        ; |TopLevel|instructionRAM:inst1|ram[36][5]              ;
-; 3:1                ; 8 bits    ; 16 LEs        ; 0 LEs                ; 16 LEs                 ; Yes        ; |TopLevel|instructionRAM:inst1|ram[37][3]              ;
-; 3:1                ; 8 bits    ; 16 LEs        ; 0 LEs                ; 16 LEs                 ; Yes        ; |TopLevel|instructionRAM:inst1|ram[38][3]              ;
-; 3:1                ; 8 bits    ; 16 LEs        ; 0 LEs                ; 16 LEs                 ; Yes        ; |TopLevel|instructionRAM:inst1|ram[39][3]              ;
-; 3:1                ; 8 bits    ; 16 LEs        ; 0 LEs                ; 16 LEs                 ; Yes        ; |TopLevel|instructionRAM:inst1|ram[40][4]              ;
-; 3:1                ; 8 bits    ; 16 LEs        ; 0 LEs                ; 16 LEs                 ; Yes        ; |TopLevel|instructionRAM:inst1|ram[41][7]              ;
-; 3:1                ; 8 bits    ; 16 LEs        ; 0 LEs                ; 16 LEs                 ; Yes        ; |TopLevel|instructionRAM:inst1|ram[42][3]              ;
-; 3:1                ; 8 bits    ; 16 LEs        ; 0 LEs                ; 16 LEs                 ; Yes        ; |TopLevel|instructionRAM:inst1|ram[43][7]              ;
-; 3:1                ; 8 bits    ; 16 LEs        ; 0 LEs                ; 16 LEs                 ; Yes        ; |TopLevel|instructionRAM:inst1|ram[44][4]              ;
-; 3:1                ; 8 bits    ; 16 LEs        ; 0 LEs                ; 16 LEs                 ; Yes        ; |TopLevel|instructionRAM:inst1|ram[45][4]              ;
-; 3:1                ; 8 bits    ; 16 LEs        ; 0 LEs                ; 16 LEs                 ; Yes        ; |TopLevel|instructionRAM:inst1|ram[46][4]              ;
-; 3:1                ; 8 bits    ; 16 LEs        ; 0 LEs                ; 16 LEs                 ; Yes        ; |TopLevel|instructionRAM:inst1|ram[47][4]              ;
-; 3:1                ; 8 bits    ; 16 LEs        ; 0 LEs                ; 16 LEs                 ; Yes        ; |TopLevel|instructionRAM:inst1|ram[48][7]              ;
-; 3:1                ; 8 bits    ; 16 LEs        ; 0 LEs                ; 16 LEs                 ; Yes        ; |TopLevel|instructionRAM:inst1|ram[49][0]              ;
-; 3:1                ; 8 bits    ; 16 LEs        ; 0 LEs                ; 16 LEs                 ; Yes        ; |TopLevel|instructionRAM:inst1|ram[50][5]              ;
-; 3:1                ; 8 bits    ; 16 LEs        ; 0 LEs                ; 16 LEs                 ; Yes        ; |TopLevel|instructionRAM:inst1|ram[51][3]              ;
-; 3:1                ; 8 bits    ; 16 LEs        ; 0 LEs                ; 16 LEs                 ; Yes        ; |TopLevel|instructionRAM:inst1|ram[52][0]              ;
-; 3:1                ; 8 bits    ; 16 LEs        ; 0 LEs                ; 16 LEs                 ; Yes        ; |TopLevel|instructionRAM:inst1|ram[53][4]              ;
-; 3:1                ; 8 bits    ; 16 LEs        ; 0 LEs                ; 16 LEs                 ; Yes        ; |TopLevel|instructionRAM:inst1|ram[54][4]              ;
-; 3:1                ; 8 bits    ; 16 LEs        ; 0 LEs                ; 16 LEs                 ; Yes        ; |TopLevel|instructionRAM:inst1|ram[55][1]              ;
-; 3:1                ; 8 bits    ; 16 LEs        ; 0 LEs                ; 16 LEs                 ; Yes        ; |TopLevel|instructionRAM:inst1|ram[56][2]              ;
-; 3:1                ; 8 bits    ; 16 LEs        ; 0 LEs                ; 16 LEs                 ; Yes        ; |TopLevel|instructionRAM:inst1|ram[57][4]              ;
-; 3:1                ; 8 bits    ; 16 LEs        ; 0 LEs                ; 16 LEs                 ; Yes        ; |TopLevel|instructionRAM:inst1|ram[58][4]              ;
-; 3:1                ; 8 bits    ; 16 LEs        ; 0 LEs                ; 16 LEs                 ; Yes        ; |TopLevel|instructionRAM:inst1|ram[59][1]              ;
-; 3:1                ; 8 bits    ; 16 LEs        ; 0 LEs                ; 16 LEs                 ; Yes        ; |TopLevel|instructionRAM:inst1|ram[60][1]              ;
-; 3:1                ; 8 bits    ; 16 LEs        ; 0 LEs                ; 16 LEs                 ; Yes        ; |TopLevel|instructionRAM:inst1|ram[61][7]              ;
-; 3:1                ; 8 bits    ; 16 LEs        ; 0 LEs                ; 16 LEs                 ; Yes        ; |TopLevel|instructionRAM:inst1|ram[62][6]              ;
-; 3:1                ; 8 bits    ; 16 LEs        ; 0 LEs                ; 16 LEs                 ; Yes        ; |TopLevel|instructionRAM:inst1|ram[63][1]              ;
-; 3:1                ; 8 bits    ; 16 LEs        ; 0 LEs                ; 16 LEs                 ; Yes        ; |TopLevel|instructionRAM:inst1|ram[64][7]              ;
-; 3:1                ; 8 bits    ; 16 LEs        ; 0 LEs                ; 16 LEs                 ; Yes        ; |TopLevel|instructionRAM:inst1|ram[65][1]              ;
-; 3:1                ; 8 bits    ; 16 LEs        ; 0 LEs                ; 16 LEs                 ; Yes        ; |TopLevel|instructionRAM:inst1|ram[66][1]              ;
-; 3:1                ; 8 bits    ; 16 LEs        ; 0 LEs                ; 16 LEs                 ; Yes        ; |TopLevel|instructionRAM:inst1|ram[67][4]              ;
-; 3:1                ; 8 bits    ; 16 LEs        ; 0 LEs                ; 16 LEs                 ; Yes        ; |TopLevel|instructionRAM:inst1|ram[68][4]              ;
-; 3:1                ; 8 bits    ; 16 LEs        ; 0 LEs                ; 16 LEs                 ; Yes        ; |TopLevel|instructionRAM:inst1|ram[69][4]              ;
-; 3:1                ; 8 bits    ; 16 LEs        ; 0 LEs                ; 16 LEs                 ; Yes        ; |TopLevel|instructionRAM:inst1|ram[70][4]              ;
-; 3:1                ; 8 bits    ; 16 LEs        ; 0 LEs                ; 16 LEs                 ; Yes        ; |TopLevel|instructionRAM:inst1|ram[71][4]              ;
-; 3:1                ; 8 bits    ; 16 LEs        ; 0 LEs                ; 16 LEs                 ; Yes        ; |TopLevel|instructionRAM:inst1|ram[72][5]              ;
-; 3:1                ; 8 bits    ; 16 LEs        ; 0 LEs                ; 16 LEs                 ; Yes        ; |TopLevel|instructionRAM:inst1|ram[73][6]              ;
-; 3:1                ; 8 bits    ; 16 LEs        ; 0 LEs                ; 16 LEs                 ; Yes        ; |TopLevel|instructionRAM:inst1|ram[74][6]              ;
-; 3:1                ; 8 bits    ; 16 LEs        ; 0 LEs                ; 16 LEs                 ; Yes        ; |TopLevel|instructionRAM:inst1|ram[75][6]              ;
-; 3:1                ; 8 bits    ; 16 LEs        ; 0 LEs                ; 16 LEs                 ; Yes        ; |TopLevel|instructionRAM:inst1|ram[76][6]              ;
-; 3:1                ; 8 bits    ; 16 LEs        ; 0 LEs                ; 16 LEs                 ; Yes        ; |TopLevel|instructionRAM:inst1|ram[77][6]              ;
-; 3:1                ; 8 bits    ; 16 LEs        ; 0 LEs                ; 16 LEs                 ; Yes        ; |TopLevel|instructionRAM:inst1|ram[78][6]              ;
-; 3:1                ; 8 bits    ; 16 LEs        ; 0 LEs                ; 16 LEs                 ; Yes        ; |TopLevel|instructionRAM:inst1|ram[79][0]              ;
-; 3:1                ; 8 bits    ; 16 LEs        ; 0 LEs                ; 16 LEs                 ; Yes        ; |TopLevel|instructionRAM:inst1|ram[80][6]              ;
-; 3:1                ; 8 bits    ; 16 LEs        ; 0 LEs                ; 16 LEs                 ; Yes        ; |TopLevel|instructionRAM:inst1|ram[81][3]              ;
-; 3:1                ; 8 bits    ; 16 LEs        ; 0 LEs                ; 16 LEs                 ; Yes        ; |TopLevel|instructionRAM:inst1|ram[82][0]              ;
-; 3:1                ; 8 bits    ; 16 LEs        ; 0 LEs                ; 16 LEs                 ; Yes        ; |TopLevel|instructionRAM:inst1|ram[83][7]              ;
-; 3:1                ; 8 bits    ; 16 LEs        ; 0 LEs                ; 16 LEs                 ; Yes        ; |TopLevel|instructionRAM:inst1|ram[84][6]              ;
-; 3:1                ; 8 bits    ; 16 LEs        ; 0 LEs                ; 16 LEs                 ; Yes        ; |TopLevel|instructionRAM:inst1|ram[85][2]              ;
-; 3:1                ; 8 bits    ; 16 LEs        ; 0 LEs                ; 16 LEs                 ; Yes        ; |TopLevel|instructionRAM:inst1|ram[86][4]              ;
-; 3:1                ; 8 bits    ; 16 LEs        ; 0 LEs                ; 16 LEs                 ; Yes        ; |TopLevel|instructionRAM:inst1|ram[87][2]              ;
-; 3:1                ; 8 bits    ; 16 LEs        ; 0 LEs                ; 16 LEs                 ; Yes        ; |TopLevel|instructionRAM:inst1|ram[88][6]              ;
-; 3:1                ; 8 bits    ; 16 LEs        ; 0 LEs                ; 16 LEs                 ; Yes        ; |TopLevel|instructionRAM:inst1|ram[89][4]              ;
-; 3:1                ; 8 bits    ; 16 LEs        ; 0 LEs                ; 16 LEs                 ; Yes        ; |TopLevel|instructionRAM:inst1|ram[90][4]              ;
-; 3:1                ; 8 bits    ; 16 LEs        ; 0 LEs                ; 16 LEs                 ; Yes        ; |TopLevel|instructionRAM:inst1|ram[91][1]              ;
-; 3:1                ; 8 bits    ; 16 LEs        ; 0 LEs                ; 16 LEs                 ; Yes        ; |TopLevel|instructionRAM:inst1|ram[92][0]              ;
-; 3:1                ; 8 bits    ; 16 LEs        ; 0 LEs                ; 16 LEs                 ; Yes        ; |TopLevel|instructionRAM:inst1|ram[93][0]              ;
-; 3:1                ; 8 bits    ; 16 LEs        ; 0 LEs                ; 16 LEs                 ; Yes        ; |TopLevel|instructionRAM:inst1|ram[94][0]              ;
-; 3:1                ; 8 bits    ; 16 LEs        ; 0 LEs                ; 16 LEs                 ; Yes        ; |TopLevel|instructionRAM:inst1|ram[95][5]              ;
-; 3:1                ; 8 bits    ; 16 LEs        ; 0 LEs                ; 16 LEs                 ; Yes        ; |TopLevel|instructionRAM:inst1|ram[96][5]              ;
-; 3:1                ; 8 bits    ; 16 LEs        ; 0 LEs                ; 16 LEs                 ; Yes        ; |TopLevel|instructionRAM:inst1|ram[97][3]              ;
-; 3:1                ; 8 bits    ; 16 LEs        ; 0 LEs                ; 16 LEs                 ; Yes        ; |TopLevel|instructionRAM:inst1|ram[98][3]              ;
-; 3:1                ; 8 bits    ; 16 LEs        ; 0 LEs                ; 16 LEs                 ; Yes        ; |TopLevel|instructionRAM:inst1|ram[99][3]              ;
-; 3:1                ; 8 bits    ; 16 LEs        ; 0 LEs                ; 16 LEs                 ; Yes        ; |TopLevel|instructionRAM:inst1|ram[100][1]             ;
-; 3:1                ; 8 bits    ; 16 LEs        ; 0 LEs                ; 16 LEs                 ; Yes        ; |TopLevel|UART:inst|uart_controller:inst1|shift_reg[0] ;
-; 4:1                ; 8 bits    ; 16 LEs        ; 0 LEs                ; 16 LEs                 ; Yes        ; |TopLevel|instructionRAM:inst1|addressDEBUG_reg[6]     ;
-; 4:1                ; 8 bits    ; 16 LEs        ; 0 LEs                ; 16 LEs                 ; Yes        ; |TopLevel|instructionRAM:inst1|addressWRITE_reg[5]     ;
-; 4:1                ; 6 bits    ; 12 LEs        ; 12 LEs               ; 0 LEs                  ; Yes        ; |TopLevel|UART:inst|uart_clk_divN:inst|counter_reg[3]  ;
-; 4:1                ; 19 bits   ; 38 LEs        ; 0 LEs                ; 38 LEs                 ; Yes        ; |TopLevel|UART:inst|uart_clk_divN:inst|counter_reg[17] ;
-; 6:1                ; 25 bits   ; 100 LEs       ; 0 LEs                ; 100 LEs                ; Yes        ; |TopLevel|debouncer:inst8|counter_reg[4]               ;
-; 132:1              ; 8 bits    ; 704 LEs       ; 528 LEs              ; 176 LEs                ; Yes        ; |TopLevel|instructionRAM:inst1|data_out[7]             ;
-; 6:1                ; 3 bits    ; 12 LEs        ; 6 LEs                ; 6 LEs                  ; No         ; |TopLevel|debouncer:inst8|Selector1                    ;
-; 128:1              ; 8 bits    ; 680 LEs       ; 560 LEs              ; 120 LEs                ; No         ; |TopLevel|instructionRAM:inst1|Mux15                   ;
+; 3:1                ; 8 bits    ; 16 LEs        ; 0 LEs                ; 16 LEs                 ; Yes        ; |TopLevel|instructionRAM:inst14|ram[0][0]              ;
+; 3:1                ; 8 bits    ; 16 LEs        ; 0 LEs                ; 16 LEs                 ; Yes        ; |TopLevel|instructionRAM:inst14|ram[1][3]              ;
+; 3:1                ; 8 bits    ; 16 LEs        ; 0 LEs                ; 16 LEs                 ; Yes        ; |TopLevel|instructionRAM:inst14|ram[2][4]              ;
+; 3:1                ; 8 bits    ; 16 LEs        ; 0 LEs                ; 16 LEs                 ; Yes        ; |TopLevel|instructionRAM:inst14|ram[3][4]              ;
+; 3:1                ; 8 bits    ; 16 LEs        ; 0 LEs                ; 16 LEs                 ; Yes        ; |TopLevel|instructionRAM:inst14|ram[4][4]              ;
+; 3:1                ; 8 bits    ; 16 LEs        ; 0 LEs                ; 16 LEs                 ; Yes        ; |TopLevel|instructionRAM:inst14|ram[5][4]              ;
+; 3:1                ; 8 bits    ; 16 LEs        ; 0 LEs                ; 16 LEs                 ; Yes        ; |TopLevel|UART:inst|uart_controller:inst1|shift_reg[3] ;
+; 3:1                ; 25 bits   ; 50 LEs        ; 0 LEs                ; 50 LEs                 ; Yes        ; |TopLevel|fine_clk_divN:inst12|counter_reg[13]         ;
+; 4:1                ; 12 bits   ; 24 LEs        ; 0 LEs                ; 24 LEs                 ; Yes        ; |TopLevel|instructionRAM:inst14|addressDEBUG_reg[5]    ;
+; 4:1                ; 6 bits    ; 12 LEs        ; 12 LEs               ; 0 LEs                  ; Yes        ; |TopLevel|UART:inst|uart_clk_divN:inst|counter_reg[11] ;
+; 4:1                ; 19 bits   ; 38 LEs        ; 0 LEs                ; 38 LEs                 ; Yes        ; |TopLevel|UART:inst|uart_clk_divN:inst|counter_reg[7]  ;
+; 5:1                ; 12 bits   ; 36 LEs        ; 0 LEs                ; 36 LEs                 ; Yes        ; |TopLevel|instructionRAM:inst14|addressWRITE_reg[8]    ;
+; 12:1               ; 8 bits    ; 64 LEs        ; 32 LEs               ; 32 LEs                 ; Yes        ; |TopLevel|instructionRAM:inst14|data_out[0]            ;
+; 6:1                ; 25 bits   ; 100 LEs       ; 0 LEs                ; 100 LEs                ; Yes        ; |TopLevel|debouncer:inst8|counter_reg[21]              ;
+; 8:1                ; 8 bits    ; 40 LEs        ; 32 LEs               ; 8 LEs                  ; No         ; |TopLevel|instructionRAM:inst14|Mux12                  ;
+; 6:1                ; 3 bits    ; 12 LEs        ; 6 LEs                ; 6 LEs                  ; No         ; |TopLevel|debouncer:inst8|Selector2                    ;
 +--------------------+-----------+---------------+----------------------+------------------------+------------+--------------------------------------------------------+
-
-
-+-----------------------------------------------------------+
-; Parameter Settings for User Entity Instance: d_ffN:inst13 ;
-+----------------+-------+----------------------------------+
-; Parameter Name ; Value ; Type                             ;
-+----------------+-------+----------------------------------+
-; N              ; 8     ; Signed Integer                   ;
-+----------------+-------+----------------------------------+
-Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
-
-
-+-----------------------------------------------------------+
-; Parameter Settings for User Entity Instance: d_ffN:inst12 ;
-+----------------+-------+----------------------------------+
-; Parameter Name ; Value ; Type                             ;
-+----------------+-------+----------------------------------+
-; N              ; 8     ; Signed Integer                   ;
-+----------------+-------+----------------------------------+
-Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
 
 
 +---------------------------------------------------------------------------+
@@ -447,12 +329,11 @@ Note: In order to hide this table in the UI and the text report file, please set
 
 
 +-------------------------------------------------------------------+
-; Parameter Settings for User Entity Instance: instructionRAM:inst1 ;
+; Parameter Settings for User Entity Instance: fine_clk_divN:inst12 ;
 +----------------+-------+------------------------------------------+
 ; Parameter Name ; Value ; Type                                     ;
 +----------------+-------+------------------------------------------+
-; ADDR_WIDTH     ; 8     ; Signed Integer                           ;
-; MAX_ADDRESS    ; 100   ; Signed Integer                           ;
+; f              ; 9600  ; Signed Integer                           ;
 +----------------+-------+------------------------------------------+
 Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
 
@@ -462,30 +343,27 @@ Note: In order to hide this table in the UI and the text report file, please set
 +-----------------------+-----------------------------+
 ; Type                  ; Count                       ;
 +-----------------------+-----------------------------+
-; arriav_ff             ; 936                         ;
+; arriav_ff             ; 178                         ;
 ;     CLR               ; 9                           ;
 ;     ENA               ; 4                           ;
 ;     ENA CLR SCLR      ; 33                          ;
-;     ENA SCLR          ; 840                         ;
-;     ENA SCLR SLD      ; 8                           ;
-;     SCLR              ; 20                          ;
-;     plain             ; 22                          ;
-; arriav_lcell_comb     ; 863                         ;
-;     arith             ; 66                          ;
-;         1 data inputs ; 66                          ;
-;     extend            ; 2                           ;
-;         7 data inputs ; 2                           ;
-;     normal            ; 795                         ;
+;     ENA SCLR          ; 72                          ;
+;     SCLR              ; 54                          ;
+;     plain             ; 6                           ;
+; arriav_lcell_comb     ; 235                         ;
+;     arith             ; 99                          ;
+;         1 data inputs ; 99                          ;
+;     normal            ; 136                         ;
 ;         1 data inputs ; 4                           ;
-;         2 data inputs ; 44                          ;
-;         3 data inputs ; 19                          ;
-;         4 data inputs ; 56                          ;
-;         5 data inputs ; 51                          ;
-;         6 data inputs ; 621                         ;
+;         2 data inputs ; 6                           ;
+;         3 data inputs ; 8                           ;
+;         4 data inputs ; 57                          ;
+;         5 data inputs ; 21                          ;
+;         6 data inputs ; 40                          ;
 ; boundary_port         ; 38                          ;
 ;                       ;                             ;
-; Max LUT depth         ; 6.50                        ;
-; Average LUT depth     ; 4.31                        ;
+; Max LUT depth         ; 5.10                        ;
+; Average LUT depth     ; 2.56                        ;
 +-----------------------+-----------------------------+
 
 
@@ -494,7 +372,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 +----------------+--------------+
 ; Partition Name ; Elapsed Time ;
 +----------------+--------------+
-; Top            ; 00:00:04     ;
+; Top            ; 00:00:00     ;
 +----------------+--------------+
 
 
@@ -504,7 +382,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 20.1.0 Build 711 06/05/2020 SJ Lite Edition
-    Info: Processing started: Tue Apr 02 11:37:54 2024
+    Info: Processing started: Thu Apr 04 06:09:14 2024
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off uartt -c uartt
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20030): Parallel compilation is enabled and will use 4 of the 4 processors detected
@@ -545,7 +423,6 @@ Info (12128): Elaborating entity "debouncer" for hierarchy "debouncer:inst8"
 Warning (10230): Verilog HDL assignment warning at debouncer.sv(48): truncated value with size 32 to match size of target (25) File: C:/Users/minec/Desktop/github/PROJ300/Firmware/UART/sv files/debouncer.sv Line: 48
 Warning (10230): Verilog HDL assignment warning at debouncer.sv(75): truncated value with size 32 to match size of target (25) File: C:/Users/minec/Desktop/github/PROJ300/Firmware/UART/sv files/debouncer.sv Line: 75
 Info (12128): Elaborating entity "seven_seg_controller" for hierarchy "seven_seg_controller:inst3"
-Info (12128): Elaborating entity "d_ffN" for hierarchy "d_ffN:inst13"
 Info (12128): Elaborating entity "UART" for hierarchy "UART:inst"
 Warning (275085): Found inconsistent dimensions for element "data"
 Warning (275085): Found inconsistent dimensions for element "data"
@@ -570,20 +447,25 @@ Warning (10230): Verilog HDL assignment warning at uart_clk_divN.sv(19): truncat
 Warning (10230): Verilog HDL assignment warning at uart_clk_divN.sv(29): truncated value with size 32 to match size of target (25) File: C:/Users/minec/Desktop/github/PROJ300/Firmware/UART/sv files/uart_clk_divN.sv Line: 29
 Warning (10230): Verilog HDL assignment warning at uart_clk_divN.sv(68): truncated value with size 32 to match size of target (25) File: C:/Users/minec/Desktop/github/PROJ300/Firmware/UART/sv files/uart_clk_divN.sv Line: 68
 Warning (10230): Verilog HDL assignment warning at uart_clk_divN.sv(86): truncated value with size 32 to match size of target (25) File: C:/Users/minec/Desktop/github/PROJ300/Firmware/UART/sv files/uart_clk_divN.sv Line: 86
-Info (12128): Elaborating entity "instructionRAM" for hierarchy "instructionRAM:inst1"
-Warning (10230): Verilog HDL assignment warning at instructionRAM.sv(100): truncated value with size 32 to match size of target (8) File: C:/Users/minec/Desktop/github/PROJ300/Firmware/UART/sv files/instructionRAM.sv Line: 100
-Warning (10230): Verilog HDL assignment warning at instructionRAM.sv(131): truncated value with size 32 to match size of target (8) File: C:/Users/minec/Desktop/github/PROJ300/Firmware/UART/sv files/instructionRAM.sv Line: 131
+Info (12128): Elaborating entity "instructionRAM" for hierarchy "instructionRAM:inst14"
+Warning (10036): Verilog HDL or VHDL warning at instructionRAM.sv(39): object "current_data_reg" assigned a value but never read File: C:/Users/minec/Desktop/github/PROJ300/Firmware/UART/sv files/instructionRAM.sv Line: 39
+Warning (10036): Verilog HDL or VHDL warning at instructionRAM.sv(40): object "prev_data_reg" assigned a value but never read File: C:/Users/minec/Desktop/github/PROJ300/Firmware/UART/sv files/instructionRAM.sv Line: 40
+Warning (10230): Verilog HDL assignment warning at instructionRAM.sv(81): truncated value with size 32 to match size of target (12) File: C:/Users/minec/Desktop/github/PROJ300/Firmware/UART/sv files/instructionRAM.sv Line: 81
+Warning (10230): Verilog HDL assignment warning at instructionRAM.sv(114): truncated value with size 32 to match size of target (12) File: C:/Users/minec/Desktop/github/PROJ300/Firmware/UART/sv files/instructionRAM.sv Line: 114
+Info (12128): Elaborating entity "fine_clk_divN" for hierarchy "fine_clk_divN:inst12"
+Warning (10230): Verilog HDL assignment warning at fine_clk_divN.sv(19): truncated value with size 32 to match size of target (25) File: C:/Users/minec/Desktop/github/PROJ300/Firmware/UART/sv files/fine_clk_divN.sv Line: 19
+Warning (10230): Verilog HDL assignment warning at fine_clk_divN.sv(38): truncated value with size 32 to match size of target (25) File: C:/Users/minec/Desktop/github/PROJ300/Firmware/UART/sv files/fine_clk_divN.sv Line: 38
 Info (286030): Timing-Driven Synthesis is running
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
-Info (21057): Implemented 1738 device resources after synthesis - the final resource count might be different
+Info (21057): Implemented 330 device resources after synthesis - the final resource count might be different
     Info (21058): Implemented 6 input pins
     Info (21059): Implemented 32 output pins
-    Info (21061): Implemented 1700 logic cells
-Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 24 warnings
-    Info: Peak virtual memory: 4850 megabytes
-    Info: Processing ended: Tue Apr 02 11:38:29 2024
-    Info: Elapsed time: 00:00:35
-    Info: Total CPU time (on all processors): 00:00:32
+    Info (21061): Implemented 292 logic cells
+Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 28 warnings
+    Info: Peak virtual memory: 4843 megabytes
+    Info: Processing ended: Thu Apr 04 06:09:23 2024
+    Info: Elapsed time: 00:00:09
+    Info: Total CPU time (on all processors): 00:00:10
 
 
