@@ -84,7 +84,8 @@ void transmit(char ch) {
     // clears the TXE bit automatically
     USART2->DR = ch;
 
-    wait_us(100000);   // 100ms delay
+    wait_us(10000);   // 10ms delay
+
 
 }
 

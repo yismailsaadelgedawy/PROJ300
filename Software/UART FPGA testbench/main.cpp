@@ -31,19 +31,38 @@ int main()
     // begin transmission of bytes
     
     red = 1;
-    transmit(0x01);
-    transmit(0x02);
-    transmit(0x03);
-    transmit(0x04);
-    transmit(0x05);
-    transmit(0x06);
 
-    transmit(0x0A);
-    transmit(0x0B);
-    transmit(0x0C);
-    transmit(0x0D);
-    transmit(0x0E);
-    transmit(0x0F);
+    // simulating an instruction
+    transmit(0x01); // opcode
+    transmit(0x01); // sel
+    transmit(0x00); // op1h
+    transmit(0x02); // op1l
+    transmit(0x00); // op2h
+    transmit(0x03); // op2l
+
+    // simulating an instruction
+    transmit(0x02); // opcode
+    transmit(0x01); // sel
+    transmit(0x00); // op1h
+    transmit(0x03); // op1l
+    transmit(0x00); // op2h
+    transmit(0x05); // op2l
+
+    // simulating an instruction
+    transmit(0x03); // opcode
+    transmit(0x01); // sel
+    transmit(0x00); // op1h
+    transmit(0x05); // op1l
+    transmit(0x00); // op2h
+    transmit(0x07); // op2l
+
+    // simulating an instruction
+    transmit(0x04); // opcode
+    transmit(0x01); // sel
+    transmit(0x00); // op1h
+    transmit(0x08); // op1l
+    transmit(0x00); // op2h
+    transmit(0x09); // op2l
 
     red = 0;
 

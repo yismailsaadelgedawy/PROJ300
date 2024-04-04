@@ -1,227 +1,149 @@
 module instructionRAM_tb;
 
-// parameters
-parameter ADDR_WIDTH=8, MAX_ADDRESS=255;
-
-
 // internal wires
 
 // in
-logic clk, rst, DEBUG;
-logic [1:0] MODE;
-logic [ADDR_WIDTH-1:0] address;
-logic [ADDR_WIDTH-1:0] data_in;
-
+logic clk;
+logic [7:0] opcode, sel, op1h, op1l, op2h, op2l;
+logic [11:0] addr;
+logic rst, btnA, btnB, load;
 
 // out
-logic [ADDR_WIDTH-1:0] data_out;
+logic [37:0] instruction;
+logic [7:0] debugA, debugB, debugC;
 
-
-// wiring
+// inst and wiring
 instructionRAM dut (
 
     // in
-    .clk(clk),
     .rst(rst),
-    .DEBUG(DEBUG),
-    .MODE(MODE),
-    .address(address),
-    .data_in(data_in),
+    .clk(clk),
+    .opcode(opcode),
+    .sel(sel),
+    .op1h(op1h),
+    .op1l(op1l),
+    .op2h(op2h),
+    .op2l(op2l),
+    .addr(addr),
+    .btnA(btnA),
+    .btnB(btnB),
+    .load(load),
 
     // out
-    .data_out(data_out)
+    .instruction(instruction),
+    .debugA(debugA),
+    .debugB(debugB),
+    .debugC(debugC)
 
 
 );
 
 
-// 50MHz clock
-// T = 20ns
+// clk
 always begin
 
     clk = 1;
-    #10ns;
+    #5ns;
     clk = 0;
-    #10ns;
+    #5ns;
 
 end
 
-// testing -- writing MUST be done first
+
+// testing
 initial begin
 
-    // reset state
+    // rst
     rst = 1;
-    MODE = 2'd0; // write mode by default
-    DEBUG = 0; // debug button not pressed
-    address = 'd0;
-    data_in = 'd0;
-
-    #15ns;
-    assert (data_out == 'd0) $display("passed reset"); else $error("failed reset");
-    #5ns;
+    addr = 'd0;
+    btnA = 0;
+    btnB = 0;
+    load = 0;
+    opcode = 8'h01;
+    sel = 8'h01;
+    op1h = 8'h00;
+    op1l = 8'h02;
+    op2h = 8'h00;
+    op2l = 8'h03;
     
+    #7ns;
+    assert(instruction == 'd0 && {debugA,debugB,debugC} == 'd0) $display("passed rst"); else $error("failed rst");
+    #3ns;
+
     rst = 0;
-
-    $display(" ");
-    $display("////////////// WRITING TO RAM //////////////");
-    $display(" ");
-
-    // data_out should stay 0
-
-    MODE = 2'd0; // write mode
-    DEBUG = 0; // ignored
-    address = 'd0; // ignored
-
-
-
-    data_in = 'd0; // simulating idle before MCU sends data
-    #80ns;
-
-    data_in = 'h4A;
-    #80ns;  // data will be held the same value for more than one clock cycle (this is where it breaks!)
-
-    // next address byte
-    data_in = 'h24;
-    #80ns;
-
-    data_in = 'h4B;
-    #80ns;
-
-    data_in = 'h24;
-    #80ns;
-
-    data_in = 'h4C;
-    #80ns;
-
-    data_in = 'h24;
-    #80ns;
-
-    data_in = 'h4D;
-    #80ns;
-
-    data_in = 'h24;
-    #80ns;
-
-
-
-    $display(" ");
-    $display("////////////// DEBUGGING FROM RAM //////////////");
-    $display(" ");
-
-    // address and DEBUG should be ignored
-    MODE = 2'd1; // debug mode
-    DEBUG = 0;
-    address = 'd0; // ignored
-    data_in = 'd0; // ignored
-
-    #15ns;
-    assert (data_out == 'h4A) $display("passed debug 1..."); else $error("failed debug 1...");
-    #5ns;
-
-    DEBUG = 1; #20ns; // button press
-    DEBUG = 0;
-    #20ns; // wait a cycle
-
-    #15ns;
-    assert (data_out == 'h4B) $display("passed debug 2..."); else $error("failed debug 2...");
-    #5ns;
-
-    DEBUG = 1; #20ns; // button press, wait a clock cycle
-    DEBUG = 0;
-    #20ns; // wait a cycle
-
-    #15ns;
-    assert (data_out == 'h4C) $display("passed debug 3..."); else $error("failed debug 3...");
-    #5ns;
-
-    DEBUG = 1; #20ns; // button press, wait a clock cycle
-    DEBUG = 0;
-    #20ns; // wait a cycle
-
-    #15ns;
-    assert (data_out == 'h4D) $display("passed debug 4..."); else $error("failed debug 4..");
-    #5ns;
-
-
-
-    ////// pressing btn few more times to stress test //////
-
-    $display(" ");
-    $display("////// pressing btn few more times to stress test //////");
-    $display(" ");
-
-    DEBUG = 1; #20ns; // button press, wait a clock cycle
-    DEBUG = 0;
-    #20ns; // wait a cycle
-
-    #15ns;
-    assert (data_out == 'h4D) $display("passed debug: end of instructions"); else $error("failed debug: end of instructions");
-    #5ns;
-
-    DEBUG = 1; #20ns; // button press, wait a clock cycle
-    DEBUG = 0;
-    #20ns; // wait a cycle
-
-    #15ns;
-    assert (data_out == 'h4D) $display("passed debug: end of instructions"); else $error("failed debug: end of instructions");
-    #5ns;
-
-
-    DEBUG = 1; #20ns; // button press, wait a clock cycle
-    DEBUG = 0;
-    #20ns; // wait a cycle
-
-    #15ns;
-    assert (data_out == 'h4D) $display("passed debug: end of instructions"); else $error("failed debug: end of instructions");
-    #5ns;
-
-    DEBUG = 1; #20ns; // button press, wait a clock cycle
-    DEBUG = 0;
-    #20ns; // wait a cycle
-
-    #15ns;
-    assert (data_out == 'h4D) $display("passed debug: end of instructions"); else $error("failed debug: end of instructions");
-    #5ns;
-
-
-    $display(" ");
-    $display("////////////// RANDOM ACCESS FETCH FROM RAM //////////////");
-    $display(" ");
-
-    // only 'address' is relevant here
-    MODE = 2'd2; // debug mode
-    DEBUG = 0; // ignored
-    address = 'd0; // first byte stored
-    data_in = 'd0; // ignored
-
-    #15ns;
-    assert (data_out == 'h4A) $display("passed fetch 1"); else $error("failed fetch 1");
-    #5ns;
-
-    address = 'd1; // second byte stored
-
-    #15ns;
-    assert (data_out == 'h4B) $display("passed fetch 2"); else $error("failed fetch 2");
-    #5ns;
-
-    address = 'd2; // third byte stored
-
-    #15ns;
-    assert (data_out == 'h4C) $display("passed fetch 3"); else $error("failed fetch 3");
-    #5ns;
-
-    address = 'd3; // fourth byte stored
-
-    #15ns;
-    assert (data_out == 'h4D) $display("passed fetch 3"); else $error("failed fetch 3");
-    #5ns;
-
     
+    #7ns;
+    assert(instruction == 'd0 && {debugA,debugB,debugC} == 'd0) $display("passed 1"); else $error("failed 1");
+    #3ns;
 
+    load = 1;
+    #10ns;
+    load = 0;
+    
+    #7ns;
+    assert(instruction == {4'b0001,2'b01,16'b10,16'b11} && {debugA,debugB,debugC} == {8'd1,8'd1,8'd0}) $display("passed 2"); else $error("failed 2");
+    #3ns;
+
+
+    btnB = 1;
+    
+    #7ns;
+    assert({debugA,debugB,debugC} == {8'd2,8'd0,8'd3}) $display("passed 3"); else $error("failed 3");
+    #3ns;
+
+    // loading more instructions
+
+    opcode = 8'h02;
+    sel = 8'h01;
+    op1h = 8'h00;
+    op1l = 8'h02;
+    op2h = 8'h00;
+    op2l = 8'h03;
+
+    load = 1;
+    #10ns;
+    load = 0;
+    #10ns;
+
+    opcode = 8'h03;
+    sel = 8'h01;
+    op1h = 8'h00;
+    op1l = 8'h02;
+    op2h = 8'h00;
+    op2l = 8'h03;
+
+    load = 1;
+    #10ns;
+    load = 0;
+    #10ns;
+
+    opcode = 8'h04;
+    sel = 8'h01;
+    op1h = 8'h00;
+    op1l = 8'h02;
+    op2h = 8'h00;
+    op2l = 8'h03;
+
+    load = 1;
+    #10ns;
+    load = 0;
+    #10ns;
+
+
+    // testing random access fetch
+    for(int unsigned i=0; i<4; i++) begin
+
+        addr = i[11:0];
+        #10ns;
+
+    end
 
 
     $stop;
 
+
 end
+
+
 
 endmodule

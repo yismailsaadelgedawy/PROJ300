@@ -1,5 +1,5 @@
 Analysis & Synthesis report for uartt
-Thu Apr 04 06:09:23 2024
+Thu Apr 04 08:44:30 2024
 Quartus Prime Version 20.1.0 Build 711 06/05/2020 SJ Lite Edition
 
 
@@ -13,16 +13,19 @@ Quartus Prime Version 20.1.0 Build 711 06/05/2020 SJ Lite Edition
   5. Analysis & Synthesis Source Files Read
   6. Analysis & Synthesis Resource Usage Summary
   7. Analysis & Synthesis Resource Utilization by Entity
-  8. State Machine - |TopLevel|debouncer:inst8|state_reg
-  9. User-Specified and Inferred Latches
- 10. General Register Statistics
- 11. Inverted Register Statistics
- 12. Multiplexer Restructuring Statistics (Restructuring Performed)
- 13. Parameter Settings for User Entity Instance: UART:inst|uart_clk_divN:inst
- 14. Parameter Settings for User Entity Instance: fine_clk_divN:inst12
- 15. Post-Synthesis Netlist Statistics for Top Partition
- 16. Elapsed Time Per Partition
- 17. Analysis & Synthesis Messages
+  8. State Machine - |TopLevel|debouncer:inst14|state_reg
+  9. State Machine - |TopLevel|debouncer:inst8|state_reg
+ 10. User-Specified and Inferred Latches
+ 11. General Register Statistics
+ 12. Inverted Register Statistics
+ 13. Multiplexer Restructuring Statistics (Restructuring Performed)
+ 14. Parameter Settings for User Entity Instance: instructionRAM:inst20
+ 15. Parameter Settings for User Entity Instance: fine_clk_divN:inst12
+ 16. Parameter Settings for User Entity Instance: UART:inst|uart_clk_divN:inst
+ 17. Post-Synthesis Netlist Statistics for Top Partition
+ 18. Elapsed Time Per Partition
+ 19. Analysis & Synthesis Messages
+ 20. Analysis & Synthesis Suppressed Messages
 
 
 
@@ -49,14 +52,14 @@ https://fpgasoftware.intel.com/eula.
 +-------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                  ;
 +---------------------------------+---------------------------------------------+
-; Analysis & Synthesis Status     ; Successful - Thu Apr 04 06:09:23 2024       ;
+; Analysis & Synthesis Status     ; Successful - Thu Apr 04 08:44:30 2024       ;
 ; Quartus Prime Version           ; 20.1.0 Build 711 06/05/2020 SJ Lite Edition ;
 ; Revision Name                   ; uartt                                       ;
 ; Top-level Entity Name           ; TopLevel                                    ;
 ; Family                          ; Cyclone V                                   ;
 ; Logic utilization (in ALMs)     ; N/A                                         ;
-; Total registers                 ; 178                                         ;
-; Total pins                      ; 38                                          ;
+; Total registers                 ; 418                                         ;
+; Total pins                      ; 53                                          ;
 ; Total virtual pins              ; 0                                           ;
 ; Total block memory bits         ; 0                                           ;
 ; Total DSP Blocks                ; 0                                           ;
@@ -180,6 +183,7 @@ https://fpgasoftware.intel.com/eula.
 +----------------------------------+-----------------+------------------------------------+--------------------------------------------------------------------------------------+---------+
 ; File Name with User-Entered Path ; Used in Netlist ; File Type                          ; File Name with Absolute Path                                                         ; Library ;
 +----------------------------------+-----------------+------------------------------------+--------------------------------------------------------------------------------------+---------+
+; sv files/intermediaryRAM.sv      ; yes             ; User SystemVerilog HDL File        ; C:/Users/minec/Desktop/github/PROJ300/Firmware/UART/sv files/intermediaryRAM.sv      ;         ;
 ; sv files/instructionRAM.sv       ; yes             ; User SystemVerilog HDL File        ; C:/Users/minec/Desktop/github/PROJ300/Firmware/UART/sv files/instructionRAM.sv       ;         ;
 ; sv files/fine_clk_divN.sv        ; yes             ; User SystemVerilog HDL File        ; C:/Users/minec/Desktop/github/PROJ300/Firmware/UART/sv files/fine_clk_divN.sv        ;         ;
 ; sv files/debouncer.sv            ; yes             ; User SystemVerilog HDL File        ; C:/Users/minec/Desktop/github/PROJ300/Firmware/UART/sv files/debouncer.sv            ;         ;
@@ -197,45 +201,60 @@ https://fpgasoftware.intel.com/eula.
 +---------------------------------------------+-----------+
 ; Resource                                    ; Usage     ;
 +---------------------------------------------+-----------+
-; Estimate of Logic utilization (ALMs needed) ; 139       ;
+; Estimate of Logic utilization (ALMs needed) ; 256       ;
 ;                                             ;           ;
-; Combinational ALUT usage for logic          ; 231       ;
+; Combinational ALUT usage for logic          ; 366       ;
 ;     -- 7 input functions                    ; 0         ;
-;     -- 6 input functions                    ; 40        ;
-;     -- 5 input functions                    ; 21        ;
-;     -- 4 input functions                    ; 57        ;
-;     -- <=3 input functions                  ; 113       ;
+;     -- 6 input functions                    ; 77        ;
+;     -- 5 input functions                    ; 9         ;
+;     -- 4 input functions                    ; 74        ;
+;     -- <=3 input functions                  ; 206       ;
 ;                                             ;           ;
-; Dedicated logic registers                   ; 178       ;
+; Dedicated logic registers                   ; 418       ;
 ;                                             ;           ;
-; I/O pins                                    ; 38        ;
+; I/O pins                                    ; 53        ;
 ;                                             ;           ;
 ; Total DSP Blocks                            ; 0         ;
 ;                                             ;           ;
 ; Maximum fan-out node                        ; SW0~input ;
-; Maximum fan-out                             ; 122       ;
-; Total fan-out                               ; 1538      ;
-; Average fan-out                             ; 3.17      ;
+; Maximum fan-out                             ; 376       ;
+; Total fan-out                               ; 2922      ;
+; Average fan-out                             ; 3.28      ;
 +---------------------------------------------+-----------+
 
 
-+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                                                        ;
-+---------------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+-------------------------------------------+----------------------+--------------+
-; Compilation Hierarchy Node      ; Combinational ALUTs ; Dedicated Logic Registers ; Block Memory Bits ; DSP Blocks ; Pins ; Virtual Pins ; Full Hierarchy Name                       ; Entity Name          ; Library Name ;
-+---------------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+-------------------------------------------+----------------------+--------------+
-; |TopLevel                       ; 231 (0)             ; 178 (0)                   ; 0                 ; 0          ; 38   ; 0            ; |TopLevel                                 ; TopLevel             ; work         ;
-;    |UART:inst|                  ; 56 (0)              ; 41 (0)                    ; 0                 ; 0          ; 0    ; 0            ; |TopLevel|UART:inst                       ; UART                 ; work         ;
-;       |bsy_detector:inst2|      ; 9 (9)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |TopLevel|UART:inst|bsy_detector:inst2    ; bsy_detector         ; work         ;
-;       |uart_clk_divN:inst|      ; 40 (40)             ; 28 (28)                   ; 0                 ; 0          ; 0    ; 0            ; |TopLevel|UART:inst|uart_clk_divN:inst    ; uart_clk_divN        ; work         ;
-;       |uart_controller:inst1|   ; 7 (7)               ; 13 (13)                   ; 0                 ; 0          ; 0    ; 0            ; |TopLevel|UART:inst|uart_controller:inst1 ; uart_controller      ; work         ;
-;    |debouncer:inst8|            ; 36 (36)             ; 29 (29)                   ; 0                 ; 0          ; 0    ; 0            ; |TopLevel|debouncer:inst8                 ; debouncer            ; work         ;
-;    |fine_clk_divN:inst12|       ; 31 (31)             ; 26 (26)                   ; 0                 ; 0          ; 0    ; 0            ; |TopLevel|fine_clk_divN:inst12            ; fine_clk_divN        ; work         ;
-;    |instructionRAM:inst14|      ; 80 (80)             ; 82 (82)                   ; 0                 ; 0          ; 0    ; 0            ; |TopLevel|instructionRAM:inst14           ; instructionRAM       ; work         ;
-;    |seven_seg_controller:inst3| ; 14 (14)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |TopLevel|seven_seg_controller:inst3      ; seven_seg_controller ; work         ;
-;    |seven_seg_controller:inst6| ; 14 (14)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |TopLevel|seven_seg_controller:inst6      ; seven_seg_controller ; work         ;
-+---------------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+-------------------------------------------+----------------------+--------------+
++-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                                                         ;
++----------------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+-------------------------------------------+----------------------+--------------+
+; Compilation Hierarchy Node       ; Combinational ALUTs ; Dedicated Logic Registers ; Block Memory Bits ; DSP Blocks ; Pins ; Virtual Pins ; Full Hierarchy Name                       ; Entity Name          ; Library Name ;
++----------------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+-------------------------------------------+----------------------+--------------+
+; |TopLevel                        ; 366 (0)             ; 418 (0)                   ; 0                 ; 0          ; 53   ; 0            ; |TopLevel                                 ; TopLevel             ; work         ;
+;    |UART:inst|                   ; 56 (0)              ; 41 (0)                    ; 0                 ; 0          ; 0    ; 0            ; |TopLevel|UART:inst                       ; UART                 ; work         ;
+;       |bsy_detector:inst2|       ; 9 (9)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |TopLevel|UART:inst|bsy_detector:inst2    ; bsy_detector         ; work         ;
+;       |uart_clk_divN:inst|       ; 40 (40)             ; 28 (28)                   ; 0                 ; 0          ; 0    ; 0            ; |TopLevel|UART:inst|uart_clk_divN:inst    ; uart_clk_divN        ; work         ;
+;       |uart_controller:inst1|    ; 7 (7)               ; 13 (13)                   ; 0                 ; 0          ; 0    ; 0            ; |TopLevel|UART:inst|uart_controller:inst1 ; uart_controller      ; work         ;
+;    |debouncer:inst14|            ; 36 (36)             ; 29 (29)                   ; 0                 ; 0          ; 0    ; 0            ; |TopLevel|debouncer:inst14                ; debouncer            ; work         ;
+;    |debouncer:inst8|             ; 36 (36)             ; 29 (29)                   ; 0                 ; 0          ; 0    ; 0            ; |TopLevel|debouncer:inst8                 ; debouncer            ; work         ;
+;    |fine_clk_divN:inst12|        ; 31 (31)             ; 26 (26)                   ; 0                 ; 0          ; 0    ; 0            ; |TopLevel|fine_clk_divN:inst12            ; fine_clk_divN        ; work         ;
+;    |instructionRAM:inst20|       ; 134 (134)           ; 242 (242)                 ; 0                 ; 0          ; 0    ; 0            ; |TopLevel|instructionRAM:inst20           ; instructionRAM       ; work         ;
+;    |intermediaryRAM:inst1|       ; 31 (31)             ; 51 (51)                   ; 0                 ; 0          ; 0    ; 0            ; |TopLevel|intermediaryRAM:inst1           ; intermediaryRAM      ; work         ;
+;    |seven_seg_controller:inst16| ; 14 (14)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |TopLevel|seven_seg_controller:inst16     ; seven_seg_controller ; work         ;
+;    |seven_seg_controller:inst3|  ; 14 (14)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |TopLevel|seven_seg_controller:inst3      ; seven_seg_controller ; work         ;
+;    |seven_seg_controller:inst6|  ; 14 (14)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |TopLevel|seven_seg_controller:inst6      ; seven_seg_controller ; work         ;
++----------------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+-------------------------------------------+----------------------+--------------+
 Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
+
+
+Encoding Type:  One-Hot
++-----------------------------------------------------------+
+; State Machine - |TopLevel|debouncer:inst14|state_reg      ;
++--------------+--------------+--------------+--------------+
+; Name         ; state_reg.00 ; state_reg.10 ; state_reg.01 ;
++--------------+--------------+--------------+--------------+
+; state_reg.00 ; 0            ; 0            ; 0            ;
+; state_reg.01 ; 1            ; 0            ; 1            ;
+; state_reg.10 ; 1            ; 1            ; 0            ;
++--------------+--------------+--------------+--------------+
 
 
 Encoding Type:  One-Hot
@@ -256,6 +275,7 @@ Encoding Type:  One-Hot
 ; Latch Name                                         ; Latch Enable Signal                 ; Free of Timing Hazards ;
 +----------------------------------------------------+-------------------------------------+------------------------+
 ; UART:inst|bsy_detector:inst2|data_out[0]           ; UART:inst|uart_controller:inst1|bsy ; yes                    ;
+; UART:inst|bsy_detector:inst2|eot                   ; SW0                                 ; yes                    ;
 ; UART:inst|bsy_detector:inst2|data_out[1]           ; UART:inst|uart_controller:inst1|bsy ; yes                    ;
 ; UART:inst|bsy_detector:inst2|data_out[2]           ; UART:inst|uart_controller:inst1|bsy ; yes                    ;
 ; UART:inst|bsy_detector:inst2|data_out[3]           ; UART:inst|uart_controller:inst1|bsy ; yes                    ;
@@ -263,7 +283,6 @@ Encoding Type:  One-Hot
 ; UART:inst|bsy_detector:inst2|data_out[5]           ; UART:inst|uart_controller:inst1|bsy ; yes                    ;
 ; UART:inst|bsy_detector:inst2|data_out[6]           ; UART:inst|uart_controller:inst1|bsy ; yes                    ;
 ; UART:inst|bsy_detector:inst2|data_out[7]           ; UART:inst|uart_controller:inst1|bsy ; yes                    ;
-; UART:inst|bsy_detector:inst2|eot                   ; SW0                                 ; yes                    ;
 ; Number of user-specified and inferred latches = 9  ;                                     ;                        ;
 +----------------------------------------------------+-------------------------------------+------------------------+
 Note: All latches listed above may not be present at the end of synthesis due to various synthesis optimizations.
@@ -274,12 +293,12 @@ Note: All latches listed above may not be present at the end of synthesis due to
 +----------------------------------------------+-------+
 ; Statistic                                    ; Value ;
 +----------------------------------------------+-------+
-; Total registers                              ; 178   ;
-; Number of registers using Synchronous Clear  ; 159   ;
+; Total registers                              ; 418   ;
+; Number of registers using Synchronous Clear  ; 391   ;
 ; Number of registers using Synchronous Load   ; 0     ;
-; Number of registers using Asynchronous Clear ; 42    ;
+; Number of registers using Asynchronous Clear ; 71    ;
 ; Number of registers using Asynchronous Load  ; 0     ;
-; Number of registers using Clock Enable       ; 109   ;
+; Number of registers using Clock Enable       ; 294   ;
 ; Number of registers using Preset             ; 0     ;
 +----------------------------------------------+-------+
 
@@ -299,32 +318,38 @@ Note: All latches listed above may not be present at the end of synthesis due to
 +--------------------+-----------+---------------+----------------------+------------------------+------------+--------------------------------------------------------+
 ; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output                             ;
 +--------------------+-----------+---------------+----------------------+------------------------+------------+--------------------------------------------------------+
-; 3:1                ; 8 bits    ; 16 LEs        ; 0 LEs                ; 16 LEs                 ; Yes        ; |TopLevel|instructionRAM:inst14|ram[0][0]              ;
-; 3:1                ; 8 bits    ; 16 LEs        ; 0 LEs                ; 16 LEs                 ; Yes        ; |TopLevel|instructionRAM:inst14|ram[1][3]              ;
-; 3:1                ; 8 bits    ; 16 LEs        ; 0 LEs                ; 16 LEs                 ; Yes        ; |TopLevel|instructionRAM:inst14|ram[2][4]              ;
-; 3:1                ; 8 bits    ; 16 LEs        ; 0 LEs                ; 16 LEs                 ; Yes        ; |TopLevel|instructionRAM:inst14|ram[3][4]              ;
-; 3:1                ; 8 bits    ; 16 LEs        ; 0 LEs                ; 16 LEs                 ; Yes        ; |TopLevel|instructionRAM:inst14|ram[4][4]              ;
-; 3:1                ; 8 bits    ; 16 LEs        ; 0 LEs                ; 16 LEs                 ; Yes        ; |TopLevel|instructionRAM:inst14|ram[5][4]              ;
-; 3:1                ; 8 bits    ; 16 LEs        ; 0 LEs                ; 16 LEs                 ; Yes        ; |TopLevel|UART:inst|uart_controller:inst1|shift_reg[3] ;
-; 3:1                ; 25 bits   ; 50 LEs        ; 0 LEs                ; 50 LEs                 ; Yes        ; |TopLevel|fine_clk_divN:inst12|counter_reg[13]         ;
-; 4:1                ; 12 bits   ; 24 LEs        ; 0 LEs                ; 24 LEs                 ; Yes        ; |TopLevel|instructionRAM:inst14|addressDEBUG_reg[5]    ;
-; 4:1                ; 6 bits    ; 12 LEs        ; 12 LEs               ; 0 LEs                  ; Yes        ; |TopLevel|UART:inst|uart_clk_divN:inst|counter_reg[11] ;
-; 4:1                ; 19 bits   ; 38 LEs        ; 0 LEs                ; 38 LEs                 ; Yes        ; |TopLevel|UART:inst|uart_clk_divN:inst|counter_reg[7]  ;
-; 5:1                ; 12 bits   ; 36 LEs        ; 0 LEs                ; 36 LEs                 ; Yes        ; |TopLevel|instructionRAM:inst14|addressWRITE_reg[8]    ;
-; 12:1               ; 8 bits    ; 64 LEs        ; 32 LEs               ; 32 LEs                 ; Yes        ; |TopLevel|instructionRAM:inst14|data_out[0]            ;
-; 6:1                ; 25 bits   ; 100 LEs       ; 0 LEs                ; 100 LEs                ; Yes        ; |TopLevel|debouncer:inst8|counter_reg[21]              ;
-; 8:1                ; 8 bits    ; 40 LEs        ; 32 LEs               ; 8 LEs                  ; No         ; |TopLevel|instructionRAM:inst14|Mux12                  ;
-; 6:1                ; 3 bits    ; 12 LEs        ; 6 LEs                ; 6 LEs                  ; No         ; |TopLevel|debouncer:inst8|Selector2                    ;
+; 3:1                ; 38 bits   ; 76 LEs        ; 0 LEs                ; 76 LEs                 ; Yes        ; |TopLevel|instructionRAM:inst20|ram[0][32]             ;
+; 3:1                ; 38 bits   ; 76 LEs        ; 0 LEs                ; 76 LEs                 ; Yes        ; |TopLevel|instructionRAM:inst20|ram[1][19]             ;
+; 3:1                ; 38 bits   ; 76 LEs        ; 0 LEs                ; 76 LEs                 ; Yes        ; |TopLevel|instructionRAM:inst20|ram[2][35]             ;
+; 3:1                ; 38 bits   ; 76 LEs        ; 0 LEs                ; 76 LEs                 ; Yes        ; |TopLevel|instructionRAM:inst20|ram[3][25]             ;
+; 3:1                ; 32 bits   ; 64 LEs        ; 0 LEs                ; 64 LEs                 ; Yes        ; |TopLevel|instructionRAM:inst20|debug_address_cnt[19]  ;
+; 3:1                ; 4 bits    ; 8 LEs         ; 4 LEs                ; 4 LEs                  ; Yes        ; |TopLevel|intermediaryRAM:inst1|ram[0][1]              ;
+; 3:1                ; 2 bits    ; 4 LEs         ; 2 LEs                ; 2 LEs                  ; Yes        ; |TopLevel|intermediaryRAM:inst1|ram[1][0]              ;
+; 3:1                ; 8 bits    ; 16 LEs        ; 0 LEs                ; 16 LEs                 ; Yes        ; |TopLevel|intermediaryRAM:inst1|ram[2][2]              ;
+; 3:1                ; 8 bits    ; 16 LEs        ; 0 LEs                ; 16 LEs                 ; Yes        ; |TopLevel|intermediaryRAM:inst1|ram[3][2]              ;
+; 3:1                ; 8 bits    ; 16 LEs        ; 0 LEs                ; 16 LEs                 ; Yes        ; |TopLevel|intermediaryRAM:inst1|ram[4][7]              ;
+; 3:1                ; 8 bits    ; 16 LEs        ; 0 LEs                ; 16 LEs                 ; Yes        ; |TopLevel|intermediaryRAM:inst1|ram[5][3]              ;
+; 3:1                ; 25 bits   ; 50 LEs        ; 0 LEs                ; 50 LEs                 ; Yes        ; |TopLevel|fine_clk_divN:inst12|counter_reg[15]         ;
+; 3:1                ; 8 bits    ; 16 LEs        ; 0 LEs                ; 16 LEs                 ; Yes        ; |TopLevel|UART:inst|uart_controller:inst1|shift_reg[0] ;
+; 4:1                ; 12 bits   ; 24 LEs        ; 0 LEs                ; 24 LEs                 ; Yes        ; |TopLevel|intermediaryRAM:inst1|addressWRITE_reg[0]    ;
+; 4:1                ; 6 bits    ; 12 LEs        ; 12 LEs               ; 0 LEs                  ; Yes        ; |TopLevel|UART:inst|uart_clk_divN:inst|counter_reg[1]  ;
+; 4:1                ; 19 bits   ; 38 LEs        ; 0 LEs                ; 38 LEs                 ; Yes        ; |TopLevel|UART:inst|uart_clk_divN:inst|counter_reg[15] ;
+; 6:1                ; 10 bits   ; 40 LEs        ; 20 LEs               ; 20 LEs                 ; Yes        ; |TopLevel|instructionRAM:inst20|debugB[2]              ;
+; 9:1                ; 14 bits   ; 84 LEs        ; 70 LEs               ; 14 LEs                 ; Yes        ; |TopLevel|instructionRAM:inst20|debugC[4]              ;
+; 6:1                ; 25 bits   ; 100 LEs       ; 0 LEs                ; 100 LEs                ; Yes        ; |TopLevel|debouncer:inst14|counter_reg[5]              ;
+; 6:1                ; 25 bits   ; 100 LEs       ; 0 LEs                ; 100 LEs                ; Yes        ; |TopLevel|debouncer:inst8|counter_reg[17]              ;
+; 6:1                ; 3 bits    ; 12 LEs        ; 6 LEs                ; 6 LEs                  ; No         ; |TopLevel|debouncer:inst14|Selector2                   ;
+; 6:1                ; 3 bits    ; 12 LEs        ; 6 LEs                ; 6 LEs                  ; No         ; |TopLevel|debouncer:inst8|Selector1                    ;
 +--------------------+-----------+---------------+----------------------+------------------------+------------+--------------------------------------------------------+
 
 
-+---------------------------------------------------------------------------+
-; Parameter Settings for User Entity Instance: UART:inst|uart_clk_divN:inst ;
-+----------------+-------+--------------------------------------------------+
-; Parameter Name ; Value ; Type                                             ;
-+----------------+-------+--------------------------------------------------+
-; baud           ; 9600  ; Signed Integer                                   ;
-+----------------+-------+--------------------------------------------------+
++--------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: instructionRAM:inst20 ;
++------------------------+-------+-----------------------------------+
+; Parameter Name         ; Value ; Type                              ;
++------------------------+-------+-----------------------------------+
+; NUMBER_OF_INSTRUCTIONS ; 4     ; Signed Integer                    ;
++------------------------+-------+-----------------------------------+
 Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
 
 
@@ -338,32 +363,43 @@ Note: In order to hide this table in the UI and the text report file, please set
 Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
 
 
++---------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: UART:inst|uart_clk_divN:inst ;
++----------------+-------+--------------------------------------------------+
+; Parameter Name ; Value ; Type                                             ;
++----------------+-------+--------------------------------------------------+
+; baud           ; 9600  ; Signed Integer                                   ;
++----------------+-------+--------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
 +-----------------------------------------------------+
 ; Post-Synthesis Netlist Statistics for Top Partition ;
 +-----------------------+-----------------------------+
 ; Type                  ; Count                       ;
 +-----------------------+-----------------------------+
-; arriav_ff             ; 178                         ;
-;     CLR               ; 9                           ;
-;     ENA               ; 4                           ;
-;     ENA CLR SCLR      ; 33                          ;
-;     ENA SCLR          ; 72                          ;
-;     SCLR              ; 54                          ;
+; arriav_ff             ; 418                         ;
+;     CLR               ; 13                          ;
+;     ENA               ; 8                           ;
+;     ENA CLR SCLR      ; 58                          ;
+;     ENA SCLR          ; 228                         ;
+;     SCLR              ; 105                         ;
 ;     plain             ; 6                           ;
-; arriav_lcell_comb     ; 235                         ;
-;     arith             ; 99                          ;
-;         1 data inputs ; 99                          ;
-;     normal            ; 136                         ;
-;         1 data inputs ; 4                           ;
-;         2 data inputs ; 6                           ;
-;         3 data inputs ; 8                           ;
-;         4 data inputs ; 57                          ;
-;         5 data inputs ; 21                          ;
-;         6 data inputs ; 40                          ;
-; boundary_port         ; 38                          ;
+; arriav_lcell_comb     ; 372                         ;
+;     arith             ; 176                         ;
+;         1 data inputs ; 175                         ;
+;         2 data inputs ; 1                           ;
+;     normal            ; 196                         ;
+;         1 data inputs ; 6                           ;
+;         2 data inputs ; 8                           ;
+;         3 data inputs ; 22                          ;
+;         4 data inputs ; 74                          ;
+;         5 data inputs ; 9                           ;
+;         6 data inputs ; 77                          ;
+; boundary_port         ; 53                          ;
 ;                       ;                             ;
-; Max LUT depth         ; 5.10                        ;
-; Average LUT depth     ; 2.56                        ;
+; Max LUT depth         ; 4.10                        ;
+; Average LUT depth     ; 2.33                        ;
 +-----------------------+-----------------------------+
 
 
@@ -382,10 +418,12 @@ Note: In order to hide this table in the UI and the text report file, please set
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 20.1.0 Build 711 06/05/2020 SJ Lite Edition
-    Info: Processing started: Thu Apr 04 06:09:14 2024
+    Info: Processing started: Thu Apr 04 08:44:19 2024
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off uartt -c uartt
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20030): Parallel compilation is enabled and will use 4 of the 4 processors detected
+Info (12021): Found 1 design units, including 1 entities, in source file sv files/intermediaryram.sv
+    Info (12023): Found entity 1: intermediaryRAM File: C:/Users/minec/Desktop/github/PROJ300/Firmware/UART/sv files/intermediaryRAM.sv Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file sv files/instructionram.sv
     Info (12023): Found entity 1: instructionRAM File: C:/Users/minec/Desktop/github/PROJ300/Firmware/UART/sv files/instructionRAM.sv Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file sv files/d_ffn.sv
@@ -418,11 +456,19 @@ Warning (275085): Found inconsistent dimensions for element "data"
 Warning (275080): Converted elements in bus name "data" using legacy naming rules. Make any assignments on the new names, not on the original names.
     Warning (275081): Converted element name(s) from "data[7..0]" to "data7..0"
     Warning (275081): Converted element name(s) from "data[7..0]" to "data7..0"
-    Warning (275081): Converted element name(s) from "data[7..0]" to "data7..0"
 Info (12128): Elaborating entity "debouncer" for hierarchy "debouncer:inst8"
 Warning (10230): Verilog HDL assignment warning at debouncer.sv(48): truncated value with size 32 to match size of target (25) File: C:/Users/minec/Desktop/github/PROJ300/Firmware/UART/sv files/debouncer.sv Line: 48
 Warning (10230): Verilog HDL assignment warning at debouncer.sv(75): truncated value with size 32 to match size of target (25) File: C:/Users/minec/Desktop/github/PROJ300/Firmware/UART/sv files/debouncer.sv Line: 75
 Info (12128): Elaborating entity "seven_seg_controller" for hierarchy "seven_seg_controller:inst3"
+Info (12128): Elaborating entity "instructionRAM" for hierarchy "instructionRAM:inst20"
+Info (12128): Elaborating entity "intermediaryRAM" for hierarchy "intermediaryRAM:inst1"
+Warning (10036): Verilog HDL or VHDL warning at intermediaryRAM.sv(39): object "current_data_reg" assigned a value but never read File: C:/Users/minec/Desktop/github/PROJ300/Firmware/UART/sv files/intermediaryRAM.sv Line: 39
+Warning (10036): Verilog HDL or VHDL warning at intermediaryRAM.sv(40): object "prev_data_reg" assigned a value but never read File: C:/Users/minec/Desktop/github/PROJ300/Firmware/UART/sv files/intermediaryRAM.sv Line: 40
+Warning (10230): Verilog HDL assignment warning at intermediaryRAM.sv(95): truncated value with size 32 to match size of target (12) File: C:/Users/minec/Desktop/github/PROJ300/Firmware/UART/sv files/intermediaryRAM.sv Line: 95
+Warning (10230): Verilog HDL assignment warning at intermediaryRAM.sv(129): truncated value with size 32 to match size of target (12) File: C:/Users/minec/Desktop/github/PROJ300/Firmware/UART/sv files/intermediaryRAM.sv Line: 129
+Info (12128): Elaborating entity "fine_clk_divN" for hierarchy "fine_clk_divN:inst12"
+Warning (10230): Verilog HDL assignment warning at fine_clk_divN.sv(19): truncated value with size 32 to match size of target (25) File: C:/Users/minec/Desktop/github/PROJ300/Firmware/UART/sv files/fine_clk_divN.sv Line: 19
+Warning (10230): Verilog HDL assignment warning at fine_clk_divN.sv(38): truncated value with size 32 to match size of target (25) File: C:/Users/minec/Desktop/github/PROJ300/Firmware/UART/sv files/fine_clk_divN.sv Line: 38
 Info (12128): Elaborating entity "UART" for hierarchy "UART:inst"
 Warning (275085): Found inconsistent dimensions for element "data"
 Warning (275085): Found inconsistent dimensions for element "data"
@@ -447,25 +493,24 @@ Warning (10230): Verilog HDL assignment warning at uart_clk_divN.sv(19): truncat
 Warning (10230): Verilog HDL assignment warning at uart_clk_divN.sv(29): truncated value with size 32 to match size of target (25) File: C:/Users/minec/Desktop/github/PROJ300/Firmware/UART/sv files/uart_clk_divN.sv Line: 29
 Warning (10230): Verilog HDL assignment warning at uart_clk_divN.sv(68): truncated value with size 32 to match size of target (25) File: C:/Users/minec/Desktop/github/PROJ300/Firmware/UART/sv files/uart_clk_divN.sv Line: 68
 Warning (10230): Verilog HDL assignment warning at uart_clk_divN.sv(86): truncated value with size 32 to match size of target (25) File: C:/Users/minec/Desktop/github/PROJ300/Firmware/UART/sv files/uart_clk_divN.sv Line: 86
-Info (12128): Elaborating entity "instructionRAM" for hierarchy "instructionRAM:inst14"
-Warning (10036): Verilog HDL or VHDL warning at instructionRAM.sv(39): object "current_data_reg" assigned a value but never read File: C:/Users/minec/Desktop/github/PROJ300/Firmware/UART/sv files/instructionRAM.sv Line: 39
-Warning (10036): Verilog HDL or VHDL warning at instructionRAM.sv(40): object "prev_data_reg" assigned a value but never read File: C:/Users/minec/Desktop/github/PROJ300/Firmware/UART/sv files/instructionRAM.sv Line: 40
-Warning (10230): Verilog HDL assignment warning at instructionRAM.sv(81): truncated value with size 32 to match size of target (12) File: C:/Users/minec/Desktop/github/PROJ300/Firmware/UART/sv files/instructionRAM.sv Line: 81
-Warning (10230): Verilog HDL assignment warning at instructionRAM.sv(114): truncated value with size 32 to match size of target (12) File: C:/Users/minec/Desktop/github/PROJ300/Firmware/UART/sv files/instructionRAM.sv Line: 114
-Info (12128): Elaborating entity "fine_clk_divN" for hierarchy "fine_clk_divN:inst12"
-Warning (10230): Verilog HDL assignment warning at fine_clk_divN.sv(19): truncated value with size 32 to match size of target (25) File: C:/Users/minec/Desktop/github/PROJ300/Firmware/UART/sv files/fine_clk_divN.sv Line: 19
-Warning (10230): Verilog HDL assignment warning at fine_clk_divN.sv(38): truncated value with size 32 to match size of target (25) File: C:/Users/minec/Desktop/github/PROJ300/Firmware/UART/sv files/fine_clk_divN.sv Line: 38
 Info (286030): Timing-Driven Synthesis is running
+Info (144001): Generated suppressed messages file C:/Users/minec/Desktop/github/PROJ300/Firmware/UART/output_files/uartt.map.smsg
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
-Info (21057): Implemented 330 device resources after synthesis - the final resource count might be different
-    Info (21058): Implemented 6 input pins
-    Info (21059): Implemented 32 output pins
-    Info (21061): Implemented 292 logic cells
-Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 28 warnings
-    Info: Peak virtual memory: 4843 megabytes
-    Info: Processing ended: Thu Apr 04 06:09:23 2024
-    Info: Elapsed time: 00:00:09
-    Info: Total CPU time (on all processors): 00:00:10
+Info (21057): Implemented 617 device resources after synthesis - the final resource count might be different
+    Info (21058): Implemented 7 input pins
+    Info (21059): Implemented 46 output pins
+    Info (21061): Implemented 564 logic cells
+Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 27 warnings
+    Info: Peak virtual memory: 4846 megabytes
+    Info: Processing ended: Thu Apr 04 08:44:30 2024
+    Info: Elapsed time: 00:00:11
+    Info: Total CPU time (on all processors): 00:00:12
+
+
++------------------------------------------+
+; Analysis & Synthesis Suppressed Messages ;
++------------------------------------------+
+The suppressed messages can be found in C:/Users/minec/Desktop/github/PROJ300/Firmware/UART/output_files/uartt.map.smsg.
 
 

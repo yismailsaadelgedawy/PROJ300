@@ -1,167 +1,103 @@
-module instructionRAM (
+module instructionRAM #(parameter NUMBER_OF_INSTRUCTIONS = 4) (
 
-    output logic [7:0] data_out,
+    output logic [37:0] instruction,
+    output logic [7:0] debugA, debugB, debugC,
 
-    input logic [7:0] data_in,
-    input logic [1:0] MODE,
-    input logic [11:0] address,
-    input logic clk, rst, DEBUG, load
-
+    input logic [7:0] opcode, sel, op1h, op1l, op2h, op2l,
+    input logic [11:0] addr,
+    input logic rst, btnA, btnB, load, clk    // connected to rdy of instruction RAM
+    
 );
 
 
-// MODE may have 3 values
-// 0 : write to RAM in FIFO order
-// 1 : debug read from RAM in FIFO order
-// 2 : CPU fetch via random access
-
-
-// address registers that will be used depending on the MODE input
-logic [11:0] addressWRITE_reg = 'd0;
-logic [11:0] addressDEBUG_reg = 'd0;
-
-
-
-// RAM creation
-// MAX_ADDRESS * ADDR_WIDTH-bit memory locations
-logic [7:0] ram [5:0];
-
+// 4 instructions for now
+bit [37:0] ram [NUMBER_OF_INSTRUCTIONS-1:0];
 
 // loop var
-int unsigned i=0;
+int unsigned i;
+
+// addr counters
+int unsigned address_cnt = 0;
+int unsigned debug_address_cnt = 0;
 
 
-// registers used for rising edge detection
-// of DEBUG input
-logic current_reg = 0;
-logic prev_reg = 0;
-
-logic [7:0] current_data_reg = 'd0;
-logic [7:0] prev_data_reg = 'd0;
+logic current = 0;
+logic prev = 0;
 
 
-
-
-// connect this to 9600Hz to avoid clock domain issues for the love of god...
+// always_comb and always_latch update when any input CHANGES
+// which is why if load is held high, the count does not keep counting!
+// equivalent to verilog's always @(*) where * is a wildcard meaning any input change!
 always_ff @(posedge clk) begin
 
     if(rst) begin
 
-        addressWRITE_reg <= 'd0;
-        addressDEBUG_reg <= 'd0;
-        current_data_reg <= 'd0;
-        prev_data_reg <= 'd0;
-        data_out <= 'd0;
+        current = 0;
+        prev = 0;
+
+        address_cnt <= 'd0;
+        debug_address_cnt <= 'd0;
+        {debugA,debugB,debugC} <= 'd0;
+        instruction <= 'd0;
 
         // clearing out all RAM contents
-        for (i=0; i<6; i++) begin
+        for (i=0; i<NUMBER_OF_INSTRUCTIONS; i++) begin
 
             ram[i] <= 'd0;
 
         end
 
-
     end
 
     else begin
 
-        case(MODE)        
+        instruction <= ram[addr];
 
-        // WRITE
-        2'd0 : begin
+        if(load) begin
 
-            // clear other address registers upon switching modes
-            addressDEBUG_reg <= 'd0;
-            data_out <= 'd0;
-
-
-            if (load) begin
-
-                ram[addressWRITE_reg] <= data_in;
-                addressWRITE_reg <= addressWRITE_reg + 1;
-
-            end
-
-            if(addressWRITE_reg == 'd6) begin
-
-                addressWRITE_reg <= 'd0;
-
-            end      
-
+            ram[address_cnt] <= {opcode[3:0], sel[1:0], op1h, op1l, op2h, op2l};
+            address_cnt <= address_cnt + 1;
 
         end
 
-        // DEBUG READ
-        2'd1 : begin
-
-            // clear other address registers upon switching modes
-            addressWRITE_reg <= 'd0;
-
-            current_reg <= DEBUG; // clk cycle 1
-            prev_reg <= current_reg; // clk cycle 2
-
-            data_out <= ram[addressDEBUG_reg];
+        current <= btnA;    // cycle 1
+        prev <= current;    // cycle 2
 
 
-            // rising edge detector
-            if (current_reg && !prev_reg) begin
-
-                // checks that
-                // max address has not been reeached and,
-                // next mem location is not empty (non-zero)
-                if (addressDEBUG_reg != 'd5 && ram[addressDEBUG_reg + 1] != 'd0) begin
-
-                    addressDEBUG_reg <= addressDEBUG_reg + 1;
-
-                end
-
-
-            end
-
-            
+        // rising edge detector:
+        // this acts as a "guard"
+        // without it (i.e. level triggered), since the circuitry updates 9600 times/sec,
+        // it will "see" many button inputs - bad!
+        // e.g. NOT if(btnA)...
+        if(current && !prev) begin
+           
+            if(debug_address_cnt != NUMBER_OF_INSTRUCTIONS-1) debug_address_cnt <= debug_address_cnt + 1;                     
+                    
 
         end
 
-        // CPU RANDOM ACCESS INSTRUCTION FETCH
-        // uses address input
-        2'd2 : begin
+        if(!btnB) begin
 
-            // clear other address registers upon switching modes
-            addressWRITE_reg <= 'd0;
-            addressDEBUG_reg <= 'd0;
-
-            data_out <= ram[address];
-
-            
+            debugA <= ram[debug_address_cnt][37:34];
+            debugB <= ram[debug_address_cnt][33:32];
+            debugC <= ram[debug_address_cnt][31:24];
 
         end
 
+        else begin
 
-        // defaualt is random access fetch
-        default : begin
-
-            // clear other address registers upon switching modes
-            addressWRITE_reg <= 'd0;
-            addressDEBUG_reg <= 'd0;
-
-            data_out <= ram[address];
-
+            debugA <= ram[debug_address_cnt][23:16];
+            debugB <= ram[debug_address_cnt][15:8];
+            debugC <= ram[debug_address_cnt][7:0];
 
         end
-
-
-
-        endcase
-
-
 
     end
 
-
+    
 
 
 end
-
 
 
 

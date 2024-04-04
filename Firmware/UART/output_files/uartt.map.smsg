@@ -1,1 +1,1 @@
-Warning (10268): Verilog HDL information at instructionRAMN.sv(42): always construct contains both blocking and non-blocking assignments File: C:/Users/minec/Desktop/Work/GitHub Repos/PROJ300/Firmware/UART/sv files/instructionRAMN.sv Line: 42
+Warning (10268): Verilog HDL information at instructionRAM.sv(31): always construct contains both blocking and non-blocking assignments File: C:/Users/minec/Desktop/github/PROJ300/Firmware/UART/sv files/instructionRAM.sv Line: 31
