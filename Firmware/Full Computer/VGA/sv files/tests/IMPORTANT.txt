@@ -1,0 +1,2 @@
+case...inside statement is a new language feature that is NOT supported by Quartus
+use if...else instead

@@ -39,7 +39,7 @@
 
 set_global_assignment -name FAMILY "Cyclone V"
 set_global_assignment -name DEVICE 5CEBA4F23C7
-set_global_assignment -name TOP_LEVEL_ENTITY Computer
+set_global_assignment -name TOP_LEVEL_ENTITY TopLevel
 set_global_assignment -name ORIGINAL_QUARTUS_VERSION 20.1.0
 set_global_assignment -name PROJECT_CREATION_TIME_DATE "21:47:17  APRIL 04, 2024"
 set_global_assignment -name LAST_QUARTUS_VERSION "20.1.0 Lite Edition"
@@ -47,4 +47,76 @@ set_global_assignment -name PROJECT_OUTPUT_DIRECTORY output_files
 set_global_assignment -name MIN_CORE_JUNCTION_TEMP 0
 set_global_assignment -name MAX_CORE_JUNCTION_TEMP 85
 set_global_assignment -name ERROR_CHECK_FREQUENCY_DIVISOR 256
+set_global_assignment -name POWER_PRESET_COOLING_SOLUTION "23 MM HEAT SINK WITH 200 LFPM AIRFLOW"
+set_global_assignment -name POWER_BOARD_THERMAL_MODEL "NONE (CONSERVATIVE)"
+set_global_assignment -name PARTITION_NETLIST_TYPE SOURCE -section_id Top
+set_global_assignment -name PARTITION_FITTER_PRESERVATION_LEVEL PLACEMENT_AND_ROUTING -section_id Top
+set_global_assignment -name PARTITION_COLOR 16764057 -section_id Top
+set_global_assignment -name SYSTEMVERILOG_FILE "UART/sv files/bsy_detector.sv"
+set_global_assignment -name SYSTEMVERILOG_FILE "VGA/sv files/mux12.sv"
 set_global_assignment -name BDF_FILE TopLevel.bdf
+set_global_assignment -name BDF_FILE VGA/VGA_controller.bdf
+set_global_assignment -name BDF_FILE VGA/sprites.bdf
+set_global_assignment -name BDF_FILE VGA/rgbMUX.bdf
+set_global_assignment -name SYSTEMVERILOG_FILE "VGA/sv files/xnor_2.sv"
+set_global_assignment -name SYSTEMVERILOG_FILE "VGA/sv files/vsync_cnt.sv"
+set_global_assignment -name SYSTEMVERILOG_FILE "VGA/sv files/t_ff.sv"
+set_global_assignment -name SYSTEMVERILOG_FILE "VGA/sv files/sprite_ROM_square.sv"
+set_global_assignment -name SYSTEMVERILOG_FILE "VGA/sv files/sprite_MUX.sv"
+set_global_assignment -name SYSTEMVERILOG_FILE "VGA/sv files/selector.sv"
+set_global_assignment -name SYSTEMVERILOG_FILE "VGA/sv files/rgb_controller.sv"
+set_global_assignment -name SYSTEMVERILOG_FILE "VGA/sv files/pixel_offset_controller.sv"
+set_global_assignment -name SYSTEMVERILOG_FILE "VGA/sv files/not4.sv"
+set_global_assignment -name SYSTEMVERILOG_FILE "VGA/sv files/hsync_cnt.sv"
+set_global_assignment -name SYSTEMVERILOG_FILE "VGA/sv files/fine_clk_divN.sv"
+set_global_assignment -name SYSTEMVERILOG_FILE "VGA/sv files/clk_divN.sv"
+set_global_assignment -name BDF_FILE UART/UART.bdf
+set_global_assignment -name BDF_FILE UART/InstructionBuffer.bdf
+set_global_assignment -name SYSTEMVERILOG_FILE "UART/sv files/uart_controller.sv"
+set_global_assignment -name SYSTEMVERILOG_FILE "UART/sv files/uart_clk_divN.sv"
+set_global_assignment -name SYSTEMVERILOG_FILE "UART/sv files/seven_seg_controller.sv"
+set_global_assignment -name SYSTEMVERILOG_FILE "UART/sv files/pulse_gen.sv"
+set_global_assignment -name SYSTEMVERILOG_FILE "UART/sv files/intermediaryRAM.sv"
+set_global_assignment -name SYSTEMVERILOG_FILE "UART/sv files/instructionRAM.sv"
+set_global_assignment -name SYSTEMVERILOG_FILE "UART/sv files/debug_address_counterN.sv"
+set_global_assignment -name SYSTEMVERILOG_FILE "UART/sv files/debouncer.sv"
+set_global_assignment -name SYSTEMVERILOG_FILE "UART/sv files/d_ffN.sv"
+set_global_assignment -name BDF_FILE PS2/PS2controller.bdf
+set_global_assignment -name SYSTEMVERILOG_FILE "PS2/sv files/seven_seg_controller.sv"
+set_global_assignment -name SYSTEMVERILOG_FILE "PS2/sv files/ps2_controller.sv"
+set_global_assignment -name SYSTEMVERILOG_FILE "PS2/sv files/break_code_detector.sv"
+set_global_assignment -name BDF_FILE CPU/TestCircuit.bdf
+set_global_assignment -name BDF_FILE CPU/Memory.bdf
+set_global_assignment -name BDF_FILE CPU/GPR_selector.bdf
+set_global_assignment -name BDF_FILE CPU/CPU.bdf
+set_global_assignment -name SYSTEMVERILOG_FILE "CPU/sv files/testROM.sv"
+set_global_assignment -name SYSTEMVERILOG_FILE "CPU/sv files/systemBus_muxN.sv"
+set_global_assignment -name SYSTEMVERILOG_FILE "CPU/sv files/operand_MUX.sv"
+set_global_assignment -name SYSTEMVERILOG_FILE "CPU/sv files/M_RAM.sv"
+set_global_assignment -name SYSTEMVERILOG_FILE "CPU/sv files/M_MUX.sv"
+set_global_assignment -name SYSTEMVERILOG_FILE "CPU/sv files/M_mmr_selector.sv"
+set_global_assignment -name SYSTEMVERILOG_FILE "CPU/sv files/M_mmr_MUX.sv"
+set_global_assignment -name SYSTEMVERILOG_FILE "CPU/sv files/M_mmr_DEMUX.sv"
+set_global_assignment -name SYSTEMVERILOG_FILE "CPU/sv files/M_DEMUX.sv"
+set_global_assignment -name SYSTEMVERILOG_FILE "CPU/sv files/M_addr_checker.sv"
+set_global_assignment -name SYSTEMVERILOG_FILE "CPU/sv files/GPR_MUX.sv"
+set_global_assignment -name SYSTEMVERILOG_FILE "CPU/sv files/GPR_DEMUX.sv"
+set_global_assignment -name SYSTEMVERILOG_FILE "CPU/sv files/flags_setter.sv"
+set_global_assignment -name SYSTEMVERILOG_FILE "CPU/sv files/dest_reg_selector.sv"
+set_global_assignment -name SYSTEMVERILOG_FILE "CPU/sv files/CU_logic.sv"
+set_global_assignment -name SYSTEMVERILOG_FILE "CPU/sv files/CU_decoder.sv"
+set_global_assignment -name SYSTEMVERILOG_FILE "CPU/sv files/CU_counter.sv"
+set_global_assignment -name SYSTEMVERILOG_FILE "CPU/sv files/CPU_regN.sv"
+set_global_assignment -name SYSTEMVERILOG_FILE "CPU/sv files/CPU_latchN.sv"
+set_global_assignment -name SYSTEMVERILOG_FILE "CPU/sv files/conc32.sv"
+set_global_assignment -name SYSTEMVERILOG_FILE "CPU/sv files/ALU.sv"
+set_global_assignment -name BDF_FILE Audio/music_frequencies.bdf
+set_global_assignment -name BDF_FILE Audio/AudioController.bdf
+set_global_assignment -name SYSTEMVERILOG_FILE "Audio/sv files/special_key_detector.sv"
+set_global_assignment -name SYSTEMVERILOG_FILE "Audio/sv files/octave_mux.sv"
+set_global_assignment -name SYSTEMVERILOG_FILE "Audio/sv files/muxN.sv"
+set_global_assignment -name SYSTEMVERILOG_FILE "Audio/sv files/key_detector.sv"
+set_global_assignment -name VERILOG_INPUT_VERSION VERILOG_2001
+set_global_assignment -name VERILOG_SHOW_LMF_MAPPING_MESSAGES OFF
+set_global_assignment -name ALLOW_ANY_RAM_SIZE_FOR_RECOGNITION OFF
+set_instance_assignment -name PARTITION_HIERARCHY root_partition -to | -section_id Top
