@@ -6,6 +6,8 @@ DigitalOut red(PB_14); // for debugging purposes
 DigitalOut blue(PB_7); //
 
 
+// took 1min 47 sec initially with 100ms delay
+// now reduced to 10ms delay: 13.74s
 
 int main()
 {   

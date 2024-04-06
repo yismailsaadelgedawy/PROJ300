@@ -1,6 +1,6 @@
 Timing Analyzer report for VGA_controller
-Thu Feb 08 15:18:44 2024
-Quartus Prime Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
+Sat Apr  6 08:48:20 2024
+Quartus Prime Version 23.1std.0 Build 991 11/28/2023 SC Lite Edition
 
 
 ---------------------
@@ -61,7 +61,7 @@ Quartus Prime Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
 ----------------
 ; Legal Notice ;
 ----------------
-Copyright (C) 2020  Intel Corporation. All rights reserved.
+Copyright (C) 2023  Intel Corporation. All rights reserved.
 Your use of Intel Corporation's design tools, logic functions 
 and other software and tools, and any partner logic 
 functions, and any output files from any of the foregoing 
@@ -78,18 +78,18 @@ https://fpgasoftware.intel.com/eula.
 
 
 
-+-----------------------------------------------------------------------------+
-; Timing Analyzer Summary                                                     ;
-+-----------------------+-----------------------------------------------------+
-; Quartus Prime Version ; Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition ;
-; Timing Analyzer       ; Legacy Timing Analyzer                              ;
-; Revision Name         ; VGA_controller                                      ;
-; Device Family         ; Cyclone V                                           ;
-; Device Name           ; 5CEBA4F23C7                                         ;
-; Timing Models         ; Final                                               ;
-; Delay Model           ; Combined                                            ;
-; Rise/Fall Delays      ; Enabled                                             ;
-+-----------------------+-----------------------------------------------------+
++--------------------------------------------------------------------------------+
+; Timing Analyzer Summary                                                        ;
++-----------------------+--------------------------------------------------------+
+; Quartus Prime Version ; Version 23.1std.0 Build 991 11/28/2023 SC Lite Edition ;
+; Timing Analyzer       ; Legacy Timing Analyzer                                 ;
+; Revision Name         ; VGA_controller                                         ;
+; Device Family         ; Cyclone V                                              ;
+; Device Name           ; 5CEBA4F23C7                                            ;
+; Timing Models         ; Final                                                  ;
+; Delay Model           ; Combined                                               ;
+; Rise/Fall Delays      ; Enabled                                                ;
++-----------------------+--------------------------------------------------------+
 
 
 +------------------------------------------+
@@ -97,29 +97,17 @@ https://fpgasoftware.intel.com/eula.
 +----------------------------+-------------+
 ; Processors                 ; Number      ;
 +----------------------------+-------------+
-; Number detected on machine ; 16          ;
-; Maximum allowed            ; 16          ;
+; Number detected on machine ; 8           ;
+; Maximum allowed            ; 4           ;
 ;                            ;             ;
-; Average used               ; 1.55        ;
-; Maximum used               ; 16          ;
+; Average used               ; 1.25        ;
+; Maximum used               ; 4           ;
 ;                            ;             ;
 ; Usage by Processor         ; % Time Used ;
 ;     Processor 1            ; 100.0%      ;
-;     Processor 2            ;   4.3%      ;
-;     Processor 3            ;   4.3%      ;
-;     Processor 4            ;   4.2%      ;
-;     Processor 5            ;   3.6%      ;
-;     Processor 6            ;   3.6%      ;
-;     Processor 7            ;   3.6%      ;
-;     Processor 8            ;   3.6%      ;
-;     Processor 9            ;   3.6%      ;
-;     Processor 10           ;   3.6%      ;
-;     Processor 11           ;   3.6%      ;
-;     Processor 12           ;   3.5%      ;
-;     Processor 13           ;   3.5%      ;
-;     Processor 14           ;   3.5%      ;
-;     Processor 15           ;   3.5%      ;
-;     Processor 16           ;   3.5%      ;
+;     Processor 2            ;   8.6%      ;
+;     Processor 3            ;   8.4%      ;
+;     Processor 4            ;   8.2%      ;
 +----------------------------+-------------+
 
 
@@ -139,9 +127,9 @@ https://fpgasoftware.intel.com/eula.
 +------------+-----------------+-------------------------------------------------+------+
 ; Fmax       ; Restricted Fmax ; Clock Name                                      ; Note ;
 +------------+-----------------+-------------------------------------------------+------+
-; 158.33 MHz ; 158.33 MHz      ; VGA_controller:inst|t_ff:inst|q                 ;      ;
-; 177.02 MHz ; 177.02 MHz      ; 50MHz_clk                                       ;      ;
-; 341.76 MHz ; 341.76 MHz      ; VGA_controller:inst|clk_divN:inst15|counter[17] ;      ;
+; 154.23 MHz ; 154.23 MHz      ; VGA_controller:inst|t_ff:inst|q                 ;      ;
+; 183.45 MHz ; 183.45 MHz      ; 50MHz_clk                                       ;      ;
+; 346.02 MHz ; 346.02 MHz      ; VGA_controller:inst|clk_divN:inst15|counter[17] ;      ;
 +------------+-----------------+-------------------------------------------------+------+
 This panel reports FMAX for every clock in the design, regardless of the user-specified clock periods.  FMAX is only computed for paths where the source and destination registers or ports are driven by the same clock.  Paths of different clocks, including generated clocks, are ignored.  For paths between a clock and its inversion, FMAX is computed as if the rising and falling edges are scaled along with FMAX, such that the duty cycle (in terms of a percentage) is maintained. Altera recommends that you always use clock constraints and other slack reports for sign-off analysis.
 
@@ -157,9 +145,9 @@ HTML report is unavailable in plain text report export.
 +-------------------------------------------------+--------+---------------+
 ; Clock                                           ; Slack  ; End Point TNS ;
 +-------------------------------------------------+--------+---------------+
-; VGA_controller:inst|t_ff:inst|q                 ; -5.316 ; -192.313      ;
-; 50MHz_clk                                       ; -4.649 ; -393.159      ;
-; VGA_controller:inst|clk_divN:inst15|counter[17] ; -4.258 ; -91.253       ;
+; VGA_controller:inst|t_ff:inst|q                 ; -5.484 ; -191.322      ;
+; VGA_controller:inst|clk_divN:inst15|counter[17] ; -4.646 ; -101.819      ;
+; 50MHz_clk                                       ; -4.451 ; -404.119      ;
 +-------------------------------------------------+--------+---------------+
 
 
@@ -168,8 +156,8 @@ HTML report is unavailable in plain text report export.
 +-------------------------------------------------+-------+---------------+
 ; Clock                                           ; Slack ; End Point TNS ;
 +-------------------------------------------------+-------+---------------+
-; VGA_controller:inst|t_ff:inst|q                 ; 0.410 ; 0.000         ;
-; 50MHz_clk                                       ; 0.440 ; 0.000         ;
+; VGA_controller:inst|t_ff:inst|q                 ; 0.346 ; 0.000         ;
+; 50MHz_clk                                       ; 0.438 ; 0.000         ;
 ; VGA_controller:inst|clk_divN:inst15|counter[17] ; 0.504 ; 0.000         ;
 +-------------------------------------------------+-------+---------------+
 
@@ -191,9 +179,9 @@ No paths to report.
 +-------------------------------------------------+--------+---------------+
 ; Clock                                           ; Slack  ; End Point TNS ;
 +-------------------------------------------------+--------+---------------+
-; 50MHz_clk                                       ; -0.538 ; -115.127      ;
-; VGA_controller:inst|t_ff:inst|q                 ; -0.538 ; -62.867       ;
-; VGA_controller:inst|clk_divN:inst15|counter[17] ; -0.538 ; -17.880       ;
+; 50MHz_clk                                       ; -0.549 ; -115.160      ;
+; VGA_controller:inst|t_ff:inst|q                 ; -0.538 ; -62.922       ;
+; VGA_controller:inst|clk_divN:inst15|counter[17] ; -0.538 ; -17.524       ;
 +-------------------------------------------------+--------+---------------+
 
 
@@ -208,9 +196,9 @@ No synchronizer chains to report.
 +------------+-----------------+-------------------------------------------------+------+
 ; Fmax       ; Restricted Fmax ; Clock Name                                      ; Note ;
 +------------+-----------------+-------------------------------------------------+------+
-; 155.21 MHz ; 155.21 MHz      ; VGA_controller:inst|t_ff:inst|q                 ;      ;
-; 169.49 MHz ; 169.49 MHz      ; 50MHz_clk                                       ;      ;
-; 326.05 MHz ; 326.05 MHz      ; VGA_controller:inst|clk_divN:inst15|counter[17] ;      ;
+; 149.79 MHz ; 149.79 MHz      ; VGA_controller:inst|t_ff:inst|q                 ;      ;
+; 175.16 MHz ; 175.16 MHz      ; 50MHz_clk                                       ;      ;
+; 331.02 MHz ; 331.02 MHz      ; VGA_controller:inst|clk_divN:inst15|counter[17] ;      ;
 +------------+-----------------+-------------------------------------------------+------+
 This panel reports FMAX for every clock in the design, regardless of the user-specified clock periods.  FMAX is only computed for paths where the source and destination registers or ports are driven by the same clock.  Paths of different clocks, including generated clocks, are ignored.  For paths between a clock and its inversion, FMAX is computed as if the rising and falling edges are scaled along with FMAX, such that the duty cycle (in terms of a percentage) is maintained. Altera recommends that you always use clock constraints and other slack reports for sign-off analysis.
 
@@ -220,9 +208,9 @@ This panel reports FMAX for every clock in the design, regardless of the user-sp
 +-------------------------------------------------+--------+---------------+
 ; Clock                                           ; Slack  ; End Point TNS ;
 +-------------------------------------------------+--------+---------------+
-; VGA_controller:inst|t_ff:inst|q                 ; -5.443 ; -190.744      ;
-; 50MHz_clk                                       ; -4.900 ; -399.187      ;
-; VGA_controller:inst|clk_divN:inst15|counter[17] ; -4.255 ; -92.069       ;
+; VGA_controller:inst|t_ff:inst|q                 ; -5.676 ; -189.655      ;
+; VGA_controller:inst|clk_divN:inst15|counter[17] ; -4.776 ; -103.262      ;
+; 50MHz_clk                                       ; -4.709 ; -410.003      ;
 +-------------------------------------------------+--------+---------------+
 
 
@@ -231,8 +219,8 @@ This panel reports FMAX for every clock in the design, regardless of the user-sp
 +-------------------------------------------------+-------+---------------+
 ; Clock                                           ; Slack ; End Point TNS ;
 +-------------------------------------------------+-------+---------------+
-; VGA_controller:inst|t_ff:inst|q                 ; 0.324 ; 0.000         ;
-; 50MHz_clk                                       ; 0.447 ; 0.000         ;
+; VGA_controller:inst|t_ff:inst|q                 ; 0.354 ; 0.000         ;
+; 50MHz_clk                                       ; 0.446 ; 0.000         ;
 ; VGA_controller:inst|clk_divN:inst15|counter[17] ; 0.540 ; 0.000         ;
 +-------------------------------------------------+-------+---------------+
 
@@ -254,9 +242,9 @@ No paths to report.
 +-------------------------------------------------+--------+---------------+
 ; Clock                                           ; Slack  ; End Point TNS ;
 +-------------------------------------------------+--------+---------------+
-; 50MHz_clk                                       ; -0.538 ; -118.754      ;
-; VGA_controller:inst|t_ff:inst|q                 ; -0.538 ; -62.180       ;
-; VGA_controller:inst|clk_divN:inst15|counter[17] ; -0.538 ; -17.646       ;
+; 50MHz_clk                                       ; -0.607 ; -119.392      ;
+; VGA_controller:inst|t_ff:inst|q                 ; -0.538 ; -62.295       ;
+; VGA_controller:inst|clk_divN:inst15|counter[17] ; -0.538 ; -17.464       ;
 +-------------------------------------------------+--------+---------------+
 
 
@@ -271,9 +259,9 @@ No synchronizer chains to report.
 +-------------------------------------------------+--------+---------------+
 ; Clock                                           ; Slack  ; End Point TNS ;
 +-------------------------------------------------+--------+---------------+
-; 50MHz_clk                                       ; -3.033 ; -131.310      ;
-; VGA_controller:inst|t_ff:inst|q                 ; -2.246 ; -75.191       ;
-; VGA_controller:inst|clk_divN:inst15|counter[17] ; -1.549 ; -32.567       ;
+; 50MHz_clk                                       ; -3.109 ; -135.636      ;
+; VGA_controller:inst|t_ff:inst|q                 ; -2.286 ; -73.526       ;
+; VGA_controller:inst|clk_divN:inst15|counter[17] ; -1.912 ; -39.426       ;
 +-------------------------------------------------+--------+---------------+
 
 
@@ -282,9 +270,9 @@ No synchronizer chains to report.
 +-------------------------------------------------+--------+---------------+
 ; Clock                                           ; Slack  ; End Point TNS ;
 +-------------------------------------------------+--------+---------------+
-; VGA_controller:inst|t_ff:inst|q                 ; -0.030 ; -0.108        ;
+; VGA_controller:inst|t_ff:inst|q                 ; -0.026 ; -0.030        ;
 ; VGA_controller:inst|clk_divN:inst15|counter[17] ; 0.153  ; 0.000         ;
-; 50MHz_clk                                       ; 0.182  ; 0.000         ;
+; 50MHz_clk                                       ; 0.183  ; 0.000         ;
 +-------------------------------------------------+--------+---------------+
 
 
@@ -305,9 +293,9 @@ No paths to report.
 +-------------------------------------------------+--------+---------------+
 ; Clock                                           ; Slack  ; End Point TNS ;
 +-------------------------------------------------+--------+---------------+
-; 50MHz_clk                                       ; -0.467 ; -14.665       ;
-; VGA_controller:inst|clk_divN:inst15|counter[17] ; 0.017  ; 0.000         ;
-; VGA_controller:inst|t_ff:inst|q                 ; 0.026  ; 0.000         ;
+; 50MHz_clk                                       ; -0.508 ; -14.343       ;
+; VGA_controller:inst|t_ff:inst|q                 ; 0.033  ; 0.000         ;
+; VGA_controller:inst|clk_divN:inst15|counter[17] ; 0.044  ; 0.000         ;
 +-------------------------------------------------+--------+---------------+
 
 
@@ -322,9 +310,9 @@ No synchronizer chains to report.
 +-------------------------------------------------+--------+---------------+
 ; Clock                                           ; Slack  ; End Point TNS ;
 +-------------------------------------------------+--------+---------------+
-; 50MHz_clk                                       ; -2.565 ; -111.861      ;
-; VGA_controller:inst|t_ff:inst|q                 ; -2.032 ; -65.059       ;
-; VGA_controller:inst|clk_divN:inst15|counter[17] ; -1.380 ; -29.284       ;
+; 50MHz_clk                                       ; -2.658 ; -115.929      ;
+; VGA_controller:inst|t_ff:inst|q                 ; -2.083 ; -63.404       ;
+; VGA_controller:inst|clk_divN:inst15|counter[17] ; -1.685 ; -35.450       ;
 +-------------------------------------------------+--------+---------------+
 
 
@@ -333,9 +321,9 @@ No synchronizer chains to report.
 +-------------------------------------------------+--------+---------------+
 ; Clock                                           ; Slack  ; End Point TNS ;
 +-------------------------------------------------+--------+---------------+
-; VGA_controller:inst|t_ff:inst|q                 ; -0.071 ; -0.498        ;
-; VGA_controller:inst|clk_divN:inst15|counter[17] ; 0.106  ; 0.000         ;
-; 50MHz_clk                                       ; 0.171  ; 0.000         ;
+; VGA_controller:inst|t_ff:inst|q                 ; -0.084 ; -0.466        ;
+; VGA_controller:inst|clk_divN:inst15|counter[17] ; 0.141  ; 0.000         ;
+; 50MHz_clk                                       ; 0.174  ; 0.000         ;
 +-------------------------------------------------+--------+---------------+
 
 
@@ -356,9 +344,9 @@ No paths to report.
 +-------------------------------------------------+--------+---------------+
 ; Clock                                           ; Slack  ; End Point TNS ;
 +-------------------------------------------------+--------+---------------+
-; 50MHz_clk                                       ; -0.454 ; -14.853       ;
-; VGA_controller:inst|clk_divN:inst15|counter[17] ; 0.050  ; 0.000         ;
-; VGA_controller:inst|t_ff:inst|q                 ; 0.059  ; 0.000         ;
+; 50MHz_clk                                       ; -0.501 ; -14.703       ;
+; VGA_controller:inst|t_ff:inst|q                 ; 0.070  ; 0.000         ;
+; VGA_controller:inst|clk_divN:inst15|counter[17] ; 0.071  ; 0.000         ;
 +-------------------------------------------------+--------+---------------+
 
 
@@ -373,14 +361,14 @@ No synchronizer chains to report.
 +--------------------------------------------------+----------+--------+----------+---------+---------------------+
 ; Clock                                            ; Setup    ; Hold   ; Recovery ; Removal ; Minimum Pulse Width ;
 +--------------------------------------------------+----------+--------+----------+---------+---------------------+
-; Worst-case Slack                                 ; -5.443   ; -0.071 ; N/A      ; N/A     ; -0.538              ;
-;  50MHz_clk                                       ; -4.900   ; 0.171  ; N/A      ; N/A     ; -0.538              ;
-;  VGA_controller:inst|clk_divN:inst15|counter[17] ; -4.258   ; 0.106  ; N/A      ; N/A     ; -0.538              ;
-;  VGA_controller:inst|t_ff:inst|q                 ; -5.443   ; -0.071 ; N/A      ; N/A     ; -0.538              ;
-; Design-wide TNS                                  ; -682.0   ; -0.498 ; 0.0      ; 0.0     ; -198.58             ;
-;  50MHz_clk                                       ; -399.187 ; 0.000  ; N/A      ; N/A     ; -118.754            ;
-;  VGA_controller:inst|clk_divN:inst15|counter[17] ; -92.069  ; 0.000  ; N/A      ; N/A     ; -17.880             ;
-;  VGA_controller:inst|t_ff:inst|q                 ; -192.313 ; -0.498 ; N/A      ; N/A     ; -62.867             ;
+; Worst-case Slack                                 ; -5.676   ; -0.084 ; N/A      ; N/A     ; -0.607              ;
+;  50MHz_clk                                       ; -4.709   ; 0.174  ; N/A      ; N/A     ; -0.607              ;
+;  VGA_controller:inst|clk_divN:inst15|counter[17] ; -4.776   ; 0.141  ; N/A      ; N/A     ; -0.538              ;
+;  VGA_controller:inst|t_ff:inst|q                 ; -5.676   ; -0.084 ; N/A      ; N/A     ; -0.538              ;
+; Design-wide TNS                                  ; -702.92  ; -0.466 ; 0.0      ; 0.0     ; -199.151            ;
+;  50MHz_clk                                       ; -410.003 ; 0.000  ; N/A      ; N/A     ; -119.392            ;
+;  VGA_controller:inst|clk_divN:inst15|counter[17] ; -103.262 ; 0.000  ; N/A      ; N/A     ; -17.524             ;
+;  VGA_controller:inst|t_ff:inst|q                 ; -191.322 ; -0.466 ; N/A      ; N/A     ; -62.922             ;
 +--------------------------------------------------+----------+--------+----------+---------+---------------------+
 
 
@@ -714,12 +702,12 @@ No non-DPA dedicated SERDES Receiver circuitry present in device or used in desi
 +--------------------------+
 Info: *******************************************************************
 Info: Running Quartus Prime Timing Analyzer
-    Info: Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
-    Info: Processing started: Thu Feb 08 15:18:40 2024
+    Info: Version 23.1std.0 Build 991 11/28/2023 SC Lite Edition
+    Info: Processing started: Sat Apr  6 08:48:15 2024
 Info: Command: quartus_sta VGA_controller -c VGA_controller
 Info: qsta_default_script.tcl version: #1
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
-Info (20030): Parallel compilation is enabled and will use 16 of the 16 processors detected
+Info (20030): Parallel compilation is enabled and will use 4 of the 4 processors detected
 Info (21077): Low junction temperature is 0 degrees C
 Info (21077): High junction temperature is 85 degrees C
 Critical Warning (332012): Synopsys Design Constraints File file not found: 'VGA_controller.sdc'. A Synopsys Design Constraints File is required by the Timing Analyzer to get proper timing constraints. Without it, the Compiler will not properly optimize the design.
@@ -734,108 +722,108 @@ Info: Found TIMING_ANALYZER_REPORT_SCRIPT_INCLUDE_DEFAULT_ANALYSIS = ON
 Info: Analyzing Slow 1100mV 85C Model
 Critical Warning (332148): Timing requirements not met
     Info (11105): For recommendations on closing timing, run Report Timing Closure Recommendations in the Timing Analyzer.
-Info (332146): Worst-case setup slack is -5.316
+Info (332146): Worst-case setup slack is -5.484
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):    -5.316            -192.313 VGA_controller:inst|t_ff:inst|q 
-    Info (332119):    -4.649            -393.159 50MHz_clk 
-    Info (332119):    -4.258             -91.253 VGA_controller:inst|clk_divN:inst15|counter[17] 
-Info (332146): Worst-case hold slack is 0.410
+    Info (332119):    -5.484            -191.322 VGA_controller:inst|t_ff:inst|q 
+    Info (332119):    -4.646            -101.819 VGA_controller:inst|clk_divN:inst15|counter[17] 
+    Info (332119):    -4.451            -404.119 50MHz_clk 
+Info (332146): Worst-case hold slack is 0.346
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):     0.410               0.000 VGA_controller:inst|t_ff:inst|q 
-    Info (332119):     0.440               0.000 50MHz_clk 
+    Info (332119):     0.346               0.000 VGA_controller:inst|t_ff:inst|q 
+    Info (332119):     0.438               0.000 50MHz_clk 
     Info (332119):     0.504               0.000 VGA_controller:inst|clk_divN:inst15|counter[17] 
 Info (332140): No Recovery paths to report
 Info (332140): No Removal paths to report
-Info (332146): Worst-case minimum pulse width slack is -0.538
+Info (332146): Worst-case minimum pulse width slack is -0.549
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):    -0.538            -115.127 50MHz_clk 
-    Info (332119):    -0.538             -62.867 VGA_controller:inst|t_ff:inst|q 
-    Info (332119):    -0.538             -17.880 VGA_controller:inst|clk_divN:inst15|counter[17] 
+    Info (332119):    -0.549            -115.160 50MHz_clk 
+    Info (332119):    -0.538             -62.922 VGA_controller:inst|t_ff:inst|q 
+    Info (332119):    -0.538             -17.524 VGA_controller:inst|clk_divN:inst15|counter[17] 
 Info: Analyzing Slow 1100mV 0C Model
 Info (334003): Started post-fitting delay annotation
 Info (334004): Delay annotation completed successfully
 Info (332123): Deriving Clock Uncertainty. Please refer to report_sdc in the Timing Analyzer to see clock uncertainties.
 Critical Warning (332148): Timing requirements not met
     Info (11105): For recommendations on closing timing, run Report Timing Closure Recommendations in the Timing Analyzer.
-Info (332146): Worst-case setup slack is -5.443
+Info (332146): Worst-case setup slack is -5.676
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):    -5.443            -190.744 VGA_controller:inst|t_ff:inst|q 
-    Info (332119):    -4.900            -399.187 50MHz_clk 
-    Info (332119):    -4.255             -92.069 VGA_controller:inst|clk_divN:inst15|counter[17] 
-Info (332146): Worst-case hold slack is 0.324
+    Info (332119):    -5.676            -189.655 VGA_controller:inst|t_ff:inst|q 
+    Info (332119):    -4.776            -103.262 VGA_controller:inst|clk_divN:inst15|counter[17] 
+    Info (332119):    -4.709            -410.003 50MHz_clk 
+Info (332146): Worst-case hold slack is 0.354
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):     0.324               0.000 VGA_controller:inst|t_ff:inst|q 
-    Info (332119):     0.447               0.000 50MHz_clk 
+    Info (332119):     0.354               0.000 VGA_controller:inst|t_ff:inst|q 
+    Info (332119):     0.446               0.000 50MHz_clk 
     Info (332119):     0.540               0.000 VGA_controller:inst|clk_divN:inst15|counter[17] 
 Info (332140): No Recovery paths to report
 Info (332140): No Removal paths to report
-Info (332146): Worst-case minimum pulse width slack is -0.538
+Info (332146): Worst-case minimum pulse width slack is -0.607
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):    -0.538            -118.754 50MHz_clk 
-    Info (332119):    -0.538             -62.180 VGA_controller:inst|t_ff:inst|q 
-    Info (332119):    -0.538             -17.646 VGA_controller:inst|clk_divN:inst15|counter[17] 
+    Info (332119):    -0.607            -119.392 50MHz_clk 
+    Info (332119):    -0.538             -62.295 VGA_controller:inst|t_ff:inst|q 
+    Info (332119):    -0.538             -17.464 VGA_controller:inst|clk_divN:inst15|counter[17] 
 Info: Analyzing Fast 1100mV 85C Model
 Info (334003): Started post-fitting delay annotation
 Info (334004): Delay annotation completed successfully
 Info (332123): Deriving Clock Uncertainty. Please refer to report_sdc in the Timing Analyzer to see clock uncertainties.
 Critical Warning (332148): Timing requirements not met
     Info (11105): For recommendations on closing timing, run Report Timing Closure Recommendations in the Timing Analyzer.
-Info (332146): Worst-case setup slack is -3.033
+Info (332146): Worst-case setup slack is -3.109
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):    -3.033            -131.310 50MHz_clk 
-    Info (332119):    -2.246             -75.191 VGA_controller:inst|t_ff:inst|q 
-    Info (332119):    -1.549             -32.567 VGA_controller:inst|clk_divN:inst15|counter[17] 
-Info (332146): Worst-case hold slack is -0.030
+    Info (332119):    -3.109            -135.636 50MHz_clk 
+    Info (332119):    -2.286             -73.526 VGA_controller:inst|t_ff:inst|q 
+    Info (332119):    -1.912             -39.426 VGA_controller:inst|clk_divN:inst15|counter[17] 
+Info (332146): Worst-case hold slack is -0.026
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):    -0.030              -0.108 VGA_controller:inst|t_ff:inst|q 
+    Info (332119):    -0.026              -0.030 VGA_controller:inst|t_ff:inst|q 
     Info (332119):     0.153               0.000 VGA_controller:inst|clk_divN:inst15|counter[17] 
-    Info (332119):     0.182               0.000 50MHz_clk 
+    Info (332119):     0.183               0.000 50MHz_clk 
 Info (332140): No Recovery paths to report
 Info (332140): No Removal paths to report
-Info (332146): Worst-case minimum pulse width slack is -0.467
+Info (332146): Worst-case minimum pulse width slack is -0.508
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):    -0.467             -14.665 50MHz_clk 
-    Info (332119):     0.017               0.000 VGA_controller:inst|clk_divN:inst15|counter[17] 
-    Info (332119):     0.026               0.000 VGA_controller:inst|t_ff:inst|q 
+    Info (332119):    -0.508             -14.343 50MHz_clk 
+    Info (332119):     0.033               0.000 VGA_controller:inst|t_ff:inst|q 
+    Info (332119):     0.044               0.000 VGA_controller:inst|clk_divN:inst15|counter[17] 
 Info: Analyzing Fast 1100mV 0C Model
 Info (332123): Deriving Clock Uncertainty. Please refer to report_sdc in the Timing Analyzer to see clock uncertainties.
 Critical Warning (332148): Timing requirements not met
     Info (11105): For recommendations on closing timing, run Report Timing Closure Recommendations in the Timing Analyzer.
-Info (332146): Worst-case setup slack is -2.565
+Info (332146): Worst-case setup slack is -2.658
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):    -2.565            -111.861 50MHz_clk 
-    Info (332119):    -2.032             -65.059 VGA_controller:inst|t_ff:inst|q 
-    Info (332119):    -1.380             -29.284 VGA_controller:inst|clk_divN:inst15|counter[17] 
-Info (332146): Worst-case hold slack is -0.071
+    Info (332119):    -2.658            -115.929 50MHz_clk 
+    Info (332119):    -2.083             -63.404 VGA_controller:inst|t_ff:inst|q 
+    Info (332119):    -1.685             -35.450 VGA_controller:inst|clk_divN:inst15|counter[17] 
+Info (332146): Worst-case hold slack is -0.084
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):    -0.071              -0.498 VGA_controller:inst|t_ff:inst|q 
-    Info (332119):     0.106               0.000 VGA_controller:inst|clk_divN:inst15|counter[17] 
-    Info (332119):     0.171               0.000 50MHz_clk 
+    Info (332119):    -0.084              -0.466 VGA_controller:inst|t_ff:inst|q 
+    Info (332119):     0.141               0.000 VGA_controller:inst|clk_divN:inst15|counter[17] 
+    Info (332119):     0.174               0.000 50MHz_clk 
 Info (332140): No Recovery paths to report
 Info (332140): No Removal paths to report
-Info (332146): Worst-case minimum pulse width slack is -0.454
+Info (332146): Worst-case minimum pulse width slack is -0.501
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):    -0.454             -14.853 50MHz_clk 
-    Info (332119):     0.050               0.000 VGA_controller:inst|clk_divN:inst15|counter[17] 
-    Info (332119):     0.059               0.000 VGA_controller:inst|t_ff:inst|q 
+    Info (332119):    -0.501             -14.703 50MHz_clk 
+    Info (332119):     0.070               0.000 VGA_controller:inst|t_ff:inst|q 
+    Info (332119):     0.071               0.000 VGA_controller:inst|clk_divN:inst15|counter[17] 
 Info (332102): Design is not fully constrained for setup requirements
 Info (332102): Design is not fully constrained for hold requirements
 Info: Quartus Prime Timing Analyzer was successful. 0 errors, 6 warnings
-    Info: Peak virtual memory: 5228 megabytes
-    Info: Processing ended: Thu Feb 08 15:18:44 2024
-    Info: Elapsed time: 00:00:04
+    Info: Peak virtual memory: 5079 megabytes
+    Info: Processing ended: Sat Apr  6 08:48:20 2024
+    Info: Elapsed time: 00:00:05
     Info: Total CPU time (on all processors): 00:00:04
 
 

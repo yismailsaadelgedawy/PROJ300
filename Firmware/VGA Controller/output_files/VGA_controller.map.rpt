@@ -1,6 +1,6 @@
 Analysis & Synthesis report for VGA_controller
-Thu Feb 08 15:18:15 2024
-Quartus Prime Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
+Sat Apr  6 08:47:51 2024
+Quartus Prime Version 23.1std.0 Build 991 11/28/2023 SC Lite Edition
 
 
 ---------------------
@@ -36,7 +36,7 @@ Quartus Prime Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
 ----------------
 ; Legal Notice ;
 ----------------
-Copyright (C) 2020  Intel Corporation. All rights reserved.
+Copyright (C) 2023  Intel Corporation. All rights reserved.
 Your use of Intel Corporation's design tools, logic functions 
 and other software and tools, and any partner logic 
 functions, and any output files from any of the foregoing 
@@ -53,27 +53,27 @@ https://fpgasoftware.intel.com/eula.
 
 
 
-+-------------------------------------------------------------------------------+
-; Analysis & Synthesis Summary                                                  ;
-+---------------------------------+---------------------------------------------+
-; Analysis & Synthesis Status     ; Successful - Thu Feb 08 15:18:15 2024       ;
-; Quartus Prime Version           ; 20.1.1 Build 720 11/11/2020 SJ Lite Edition ;
-; Revision Name                   ; VGA_controller                              ;
-; Top-level Entity Name           ; TopLevel                                    ;
-; Family                          ; Cyclone V                                   ;
-; Logic utilization (in ALMs)     ; N/A                                         ;
-; Total registers                 ; 249                                         ;
-; Total pins                      ; 30                                          ;
-; Total virtual pins              ; 0                                           ;
-; Total block memory bits         ; 0                                           ;
-; Total DSP Blocks                ; 0                                           ;
-; Total HSSI RX PCSs              ; 0                                           ;
-; Total HSSI PMA RX Deserializers ; 0                                           ;
-; Total HSSI TX PCSs              ; 0                                           ;
-; Total HSSI PMA TX Serializers   ; 0                                           ;
-; Total PLLs                      ; 0                                           ;
-; Total DLLs                      ; 0                                           ;
-+---------------------------------+---------------------------------------------+
++----------------------------------------------------------------------------------+
+; Analysis & Synthesis Summary                                                     ;
++---------------------------------+------------------------------------------------+
+; Analysis & Synthesis Status     ; Successful - Sat Apr  6 08:47:51 2024          ;
+; Quartus Prime Version           ; 23.1std.0 Build 991 11/28/2023 SC Lite Edition ;
+; Revision Name                   ; VGA_controller                                 ;
+; Top-level Entity Name           ; TopLevel                                       ;
+; Family                          ; Cyclone V                                      ;
+; Logic utilization (in ALMs)     ; N/A                                            ;
+; Total registers                 ; 249                                            ;
+; Total pins                      ; 30                                             ;
+; Total virtual pins              ; 0                                              ;
+; Total block memory bits         ; 0                                              ;
+; Total DSP Blocks                ; 0                                              ;
+; Total HSSI RX PCSs              ; 0                                              ;
+; Total HSSI PMA RX Deserializers ; 0                                              ;
+; Total HSSI TX PCSs              ; 0                                              ;
+; Total HSSI PMA TX Serializers   ; 0                                              ;
+; Total PLLs                      ; 0                                              ;
+; Total DLLs                      ; 0                                              ;
++---------------------------------+------------------------------------------------+
 
 
 +---------------------------------------------------------------------------------------------------------------------------+
@@ -168,41 +168,41 @@ https://fpgasoftware.intel.com/eula.
 +----------------------------+-------------+
 ; Processors                 ; Number      ;
 +----------------------------+-------------+
-; Number detected on machine ; 16          ;
-; Maximum allowed            ; 16          ;
+; Number detected on machine ; 8           ;
+; Maximum allowed            ; 4           ;
 ;                            ;             ;
 ; Average used               ; 1.00        ;
-; Maximum used               ; 16          ;
+; Maximum used               ; 4           ;
 ;                            ;             ;
 ; Usage by Processor         ; % Time Used ;
 ;     Processor 1            ; 100.0%      ;
-;     Processors 2-16        ;   0.0%      ;
+;     Processors 2-4         ;   0.0%      ;
 +----------------------------+-------------+
 
 
-+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Source Files Read                                                                                                                                                                              ;
-+-------------------------------------+-----------------+------------------------------------+--------------------------------------------------------------------------------------------------------------+---------+
-; File Name with User-Entered Path    ; Used in Netlist ; File Type                          ; File Name with Absolute Path                                                                                 ; Library ;
-+-------------------------------------+-----------------+------------------------------------+--------------------------------------------------------------------------------------------------------------+---------+
-; sv files/fine_clk_divN.sv           ; yes             ; User SystemVerilog HDL File        ; C:/Users/minec/Desktop/Work/GitHub Repos/PROJ300/Firmware/VGA Controller/sv files/fine_clk_divN.sv           ;         ;
-; sv files/clk_divN.sv                ; yes             ; User SystemVerilog HDL File        ; C:/Users/minec/Desktop/Work/GitHub Repos/PROJ300/Firmware/VGA Controller/sv files/clk_divN.sv                ;         ;
-; sv files/d_ffN.sv                   ; yes             ; User SystemVerilog HDL File        ; C:/Users/minec/Desktop/Work/GitHub Repos/PROJ300/Firmware/VGA Controller/sv files/d_ffN.sv                   ;         ;
-; sv files/pixel_offset_controller.sv ; yes             ; User SystemVerilog HDL File        ; C:/Users/minec/Desktop/Work/GitHub Repos/PROJ300/Firmware/VGA Controller/sv files/pixel_offset_controller.sv ;         ;
-; sv files/not4.sv                    ; yes             ; User SystemVerilog HDL File        ; C:/Users/minec/Desktop/Work/GitHub Repos/PROJ300/Firmware/VGA Controller/sv files/not4.sv                    ;         ;
-; sv files/sprite_MUX.sv              ; yes             ; User SystemVerilog HDL File        ; C:/Users/minec/Desktop/Work/GitHub Repos/PROJ300/Firmware/VGA Controller/sv files/sprite_MUX.sv              ;         ;
-; sv files/selector.sv                ; yes             ; User SystemVerilog HDL File        ; C:/Users/minec/Desktop/Work/GitHub Repos/PROJ300/Firmware/VGA Controller/sv files/selector.sv                ;         ;
-; sv files/sprite_ROM_square.sv       ; yes             ; User SystemVerilog HDL File        ; C:/Users/minec/Desktop/Work/GitHub Repos/PROJ300/Firmware/VGA Controller/sv files/sprite_ROM_square.sv       ;         ;
-; sv files/xnor_2.sv                  ; yes             ; User SystemVerilog HDL File        ; C:/Users/minec/Desktop/Work/GitHub Repos/PROJ300/Firmware/VGA Controller/sv files/xnor_2.sv                  ;         ;
-; sv files/rgb_controller.sv          ; yes             ; User SystemVerilog HDL File        ; C:/Users/minec/Desktop/Work/GitHub Repos/PROJ300/Firmware/VGA Controller/sv files/rgb_controller.sv          ;         ;
-; sv files/vsync_cnt.sv               ; yes             ; User SystemVerilog HDL File        ; C:/Users/minec/Desktop/Work/GitHub Repos/PROJ300/Firmware/VGA Controller/sv files/vsync_cnt.sv               ;         ;
-; sv files/t_ff.sv                    ; yes             ; User SystemVerilog HDL File        ; C:/Users/minec/Desktop/Work/GitHub Repos/PROJ300/Firmware/VGA Controller/sv files/t_ff.sv                    ;         ;
-; sv files/hsync_cnt.sv               ; yes             ; User SystemVerilog HDL File        ; C:/Users/minec/Desktop/Work/GitHub Repos/PROJ300/Firmware/VGA Controller/sv files/hsync_cnt.sv               ;         ;
-; VGA_controller.bdf                  ; yes             ; User Block Diagram/Schematic File  ; C:/Users/minec/Desktop/Work/GitHub Repos/PROJ300/Firmware/VGA Controller/VGA_controller.bdf                  ;         ;
-; rgbMUX.bdf                          ; yes             ; User Block Diagram/Schematic File  ; C:/Users/minec/Desktop/Work/GitHub Repos/PROJ300/Firmware/VGA Controller/rgbMUX.bdf                          ;         ;
-; TopLevel.bdf                        ; yes             ; User Block Diagram/Schematic File  ; C:/Users/minec/Desktop/Work/GitHub Repos/PROJ300/Firmware/VGA Controller/TopLevel.bdf                        ;         ;
-; sprites.bdf                         ; yes             ; User Block Diagram/Schematic File  ; C:/Users/minec/Desktop/Work/GitHub Repos/PROJ300/Firmware/VGA Controller/sprites.bdf                         ;         ;
-+-------------------------------------+-----------------+------------------------------------+--------------------------------------------------------------------------------------------------------------+---------+
++----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Source Files Read                                                                                                                                                                   ;
++-------------------------------------+-----------------+------------------------------------+---------------------------------------------------------------------------------------------------+---------+
+; File Name with User-Entered Path    ; Used in Netlist ; File Type                          ; File Name with Absolute Path                                                                      ; Library ;
++-------------------------------------+-----------------+------------------------------------+---------------------------------------------------------------------------------------------------+---------+
+; sv files/fine_clk_divN.sv           ; yes             ; User SystemVerilog HDL File        ; C:/Users/minec/Desktop/github/PROJ300/Firmware/VGA Controller/sv files/fine_clk_divN.sv           ;         ;
+; sv files/clk_divN.sv                ; yes             ; User SystemVerilog HDL File        ; C:/Users/minec/Desktop/github/PROJ300/Firmware/VGA Controller/sv files/clk_divN.sv                ;         ;
+; sv files/d_ffN.sv                   ; yes             ; User SystemVerilog HDL File        ; C:/Users/minec/Desktop/github/PROJ300/Firmware/VGA Controller/sv files/d_ffN.sv                   ;         ;
+; sv files/pixel_offset_controller.sv ; yes             ; User SystemVerilog HDL File        ; C:/Users/minec/Desktop/github/PROJ300/Firmware/VGA Controller/sv files/pixel_offset_controller.sv ;         ;
+; sv files/not4.sv                    ; yes             ; User SystemVerilog HDL File        ; C:/Users/minec/Desktop/github/PROJ300/Firmware/VGA Controller/sv files/not4.sv                    ;         ;
+; sv files/sprite_MUX.sv              ; yes             ; User SystemVerilog HDL File        ; C:/Users/minec/Desktop/github/PROJ300/Firmware/VGA Controller/sv files/sprite_MUX.sv              ;         ;
+; sv files/selector.sv                ; yes             ; User SystemVerilog HDL File        ; C:/Users/minec/Desktop/github/PROJ300/Firmware/VGA Controller/sv files/selector.sv                ;         ;
+; sv files/sprite_ROM_square.sv       ; yes             ; User SystemVerilog HDL File        ; C:/Users/minec/Desktop/github/PROJ300/Firmware/VGA Controller/sv files/sprite_ROM_square.sv       ;         ;
+; sv files/xnor_2.sv                  ; yes             ; User SystemVerilog HDL File        ; C:/Users/minec/Desktop/github/PROJ300/Firmware/VGA Controller/sv files/xnor_2.sv                  ;         ;
+; sv files/rgb_controller.sv          ; yes             ; User SystemVerilog HDL File        ; C:/Users/minec/Desktop/github/PROJ300/Firmware/VGA Controller/sv files/rgb_controller.sv          ;         ;
+; sv files/vsync_cnt.sv               ; yes             ; User SystemVerilog HDL File        ; C:/Users/minec/Desktop/github/PROJ300/Firmware/VGA Controller/sv files/vsync_cnt.sv               ;         ;
+; sv files/t_ff.sv                    ; yes             ; User SystemVerilog HDL File        ; C:/Users/minec/Desktop/github/PROJ300/Firmware/VGA Controller/sv files/t_ff.sv                    ;         ;
+; sv files/hsync_cnt.sv               ; yes             ; User SystemVerilog HDL File        ; C:/Users/minec/Desktop/github/PROJ300/Firmware/VGA Controller/sv files/hsync_cnt.sv               ;         ;
+; VGA_controller.bdf                  ; yes             ; User Block Diagram/Schematic File  ; C:/Users/minec/Desktop/github/PROJ300/Firmware/VGA Controller/VGA_controller.bdf                  ;         ;
+; rgbMUX.bdf                          ; yes             ; User Block Diagram/Schematic File  ; C:/Users/minec/Desktop/github/PROJ300/Firmware/VGA Controller/rgbMUX.bdf                          ;         ;
+; TopLevel.bdf                        ; yes             ; User Block Diagram/Schematic File  ; C:/Users/minec/Desktop/github/PROJ300/Firmware/VGA Controller/TopLevel.bdf                        ;         ;
+; sprites.bdf                         ; yes             ; User Block Diagram/Schematic File  ; C:/Users/minec/Desktop/github/PROJ300/Firmware/VGA Controller/sprites.bdf                         ;         ;
++-------------------------------------+-----------------+------------------------------------+---------------------------------------------------------------------------------------------------+---------+
 
 
 +---------------------------------------------------------------+
@@ -461,37 +461,37 @@ Note: In order to hide this table in the UI and the text report file, please set
 +-------------------------------+
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
-    Info: Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
-    Info: Processing started: Thu Feb 08 15:18:10 2024
+    Info: Version 23.1std.0 Build 991 11/28/2023 SC Lite Edition
+    Info: Processing started: Sat Apr  6 08:47:42 2024
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off VGA_controller -c VGA_controller
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
-Info (20030): Parallel compilation is enabled and will use 16 of the 16 processors detected
+Info (20030): Parallel compilation is enabled and will use 4 of the 4 processors detected
 Info (12021): Found 1 design units, including 1 entities, in source file sv files/fine_clk_divn.sv
-    Info (12023): Found entity 1: fine_clk_divN File: C:/Users/minec/Desktop/Work/GitHub Repos/PROJ300/Firmware/VGA Controller/sv files/fine_clk_divN.sv Line: 1
+    Info (12023): Found entity 1: fine_clk_divN File: C:/Users/minec/Desktop/github/PROJ300/Firmware/VGA Controller/sv files/fine_clk_divN.sv Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file sv files/clk_divn.sv
-    Info (12023): Found entity 1: clk_divN File: C:/Users/minec/Desktop/Work/GitHub Repos/PROJ300/Firmware/VGA Controller/sv files/clk_divN.sv Line: 1
+    Info (12023): Found entity 1: clk_divN File: C:/Users/minec/Desktop/github/PROJ300/Firmware/VGA Controller/sv files/clk_divN.sv Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file sv files/d_ffn.sv
-    Info (12023): Found entity 1: d_ffN File: C:/Users/minec/Desktop/Work/GitHub Repos/PROJ300/Firmware/VGA Controller/sv files/d_ffN.sv Line: 1
+    Info (12023): Found entity 1: d_ffN File: C:/Users/minec/Desktop/github/PROJ300/Firmware/VGA Controller/sv files/d_ffN.sv Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file sv files/pixel_offset_controller.sv
-    Info (12023): Found entity 1: pixel_offset_controller File: C:/Users/minec/Desktop/Work/GitHub Repos/PROJ300/Firmware/VGA Controller/sv files/pixel_offset_controller.sv Line: 1
+    Info (12023): Found entity 1: pixel_offset_controller File: C:/Users/minec/Desktop/github/PROJ300/Firmware/VGA Controller/sv files/pixel_offset_controller.sv Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file sv files/not4.sv
-    Info (12023): Found entity 1: not4 File: C:/Users/minec/Desktop/Work/GitHub Repos/PROJ300/Firmware/VGA Controller/sv files/not4.sv Line: 1
+    Info (12023): Found entity 1: not4 File: C:/Users/minec/Desktop/github/PROJ300/Firmware/VGA Controller/sv files/not4.sv Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file sv files/sprite_mux.sv
-    Info (12023): Found entity 1: sprite_MUX File: C:/Users/minec/Desktop/Work/GitHub Repos/PROJ300/Firmware/VGA Controller/sv files/sprite_MUX.sv Line: 1
+    Info (12023): Found entity 1: sprite_MUX File: C:/Users/minec/Desktop/github/PROJ300/Firmware/VGA Controller/sv files/sprite_MUX.sv Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file sv files/selector.sv
-    Info (12023): Found entity 1: selector File: C:/Users/minec/Desktop/Work/GitHub Repos/PROJ300/Firmware/VGA Controller/sv files/selector.sv Line: 1
+    Info (12023): Found entity 1: selector File: C:/Users/minec/Desktop/github/PROJ300/Firmware/VGA Controller/sv files/selector.sv Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file sv files/sprite_rom_square.sv
-    Info (12023): Found entity 1: sprite_ROM_square File: C:/Users/minec/Desktop/Work/GitHub Repos/PROJ300/Firmware/VGA Controller/sv files/sprite_ROM_square.sv Line: 1
+    Info (12023): Found entity 1: sprite_ROM_square File: C:/Users/minec/Desktop/github/PROJ300/Firmware/VGA Controller/sv files/sprite_ROM_square.sv Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file sv files/xnor_2.sv
-    Info (12023): Found entity 1: xnor_2 File: C:/Users/minec/Desktop/Work/GitHub Repos/PROJ300/Firmware/VGA Controller/sv files/xnor_2.sv Line: 1
+    Info (12023): Found entity 1: xnor_2 File: C:/Users/minec/Desktop/github/PROJ300/Firmware/VGA Controller/sv files/xnor_2.sv Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file sv files/rgb_controller.sv
-    Info (12023): Found entity 1: rgb_controller File: C:/Users/minec/Desktop/Work/GitHub Repos/PROJ300/Firmware/VGA Controller/sv files/rgb_controller.sv Line: 1
+    Info (12023): Found entity 1: rgb_controller File: C:/Users/minec/Desktop/github/PROJ300/Firmware/VGA Controller/sv files/rgb_controller.sv Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file sv files/vsync_cnt.sv
-    Info (12023): Found entity 1: vsync_cnt File: C:/Users/minec/Desktop/Work/GitHub Repos/PROJ300/Firmware/VGA Controller/sv files/vsync_cnt.sv Line: 1
+    Info (12023): Found entity 1: vsync_cnt File: C:/Users/minec/Desktop/github/PROJ300/Firmware/VGA Controller/sv files/vsync_cnt.sv Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file sv files/t_ff.sv
-    Info (12023): Found entity 1: t_ff File: C:/Users/minec/Desktop/Work/GitHub Repos/PROJ300/Firmware/VGA Controller/sv files/t_ff.sv Line: 1
+    Info (12023): Found entity 1: t_ff File: C:/Users/minec/Desktop/github/PROJ300/Firmware/VGA Controller/sv files/t_ff.sv Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file sv files/hsync_cnt.sv
-    Info (12023): Found entity 1: hsync_cnt File: C:/Users/minec/Desktop/Work/GitHub Repos/PROJ300/Firmware/VGA Controller/sv files/hsync_cnt.sv Line: 1
+    Info (12023): Found entity 1: hsync_cnt File: C:/Users/minec/Desktop/github/PROJ300/Firmware/VGA Controller/sv files/hsync_cnt.sv Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file vga_controller.bdf
     Info (12023): Found entity 1: VGA_controller
 Info (12021): Found 1 design units, including 1 entities, in source file rgbmux.bdf
@@ -500,44 +500,44 @@ Info (12021): Found 1 design units, including 1 entities, in source file topleve
     Info (12023): Found entity 1: TopLevel
 Info (12021): Found 1 design units, including 1 entities, in source file sprites.bdf
     Info (12023): Found entity 1: sprites
-Warning (10222): Verilog HDL Parameter Declaration warning at fine_clk_divN.sv(18): Parameter Declaration in module "fine_clk_divN" behaves as a Local Parameter Declaration because the module has a Module Parameter Port List File: C:/Users/minec/Desktop/Work/GitHub Repos/PROJ300/Firmware/VGA Controller/sv files/fine_clk_divN.sv Line: 18
+Warning (10222): Verilog HDL Parameter Declaration warning at fine_clk_divN.sv(18): Parameter Declaration in module "fine_clk_divN" behaves as a Local Parameter Declaration because the module has a Module Parameter Port List File: C:/Users/minec/Desktop/github/PROJ300/Firmware/VGA Controller/sv files/fine_clk_divN.sv Line: 18
 Info (12127): Elaborating entity "TopLevel" for the top level hierarchy
 Info (12128): Elaborating entity "VGA_controller" for hierarchy "VGA_controller:inst"
 Info (12128): Elaborating entity "hsync_cnt" for hierarchy "VGA_controller:inst|hsync_cnt:inst1"
-Warning (10230): Verilog HDL assignment warning at hsync_cnt.sv(25): truncated value with size 32 to match size of target (11) File: C:/Users/minec/Desktop/Work/GitHub Repos/PROJ300/Firmware/VGA Controller/sv files/hsync_cnt.sv Line: 25
+Warning (10230): Verilog HDL assignment warning at hsync_cnt.sv(25): truncated value with size 32 to match size of target (11) File: C:/Users/minec/Desktop/github/PROJ300/Firmware/VGA Controller/sv files/hsync_cnt.sv Line: 25
 Info (12128): Elaborating entity "t_ff" for hierarchy "VGA_controller:inst|t_ff:inst"
 Info (12128): Elaborating entity "vsync_cnt" for hierarchy "VGA_controller:inst|vsync_cnt:inst2"
-Warning (10230): Verilog HDL assignment warning at vsync_cnt.sv(27): truncated value with size 32 to match size of target (11) File: C:/Users/minec/Desktop/Work/GitHub Repos/PROJ300/Firmware/VGA Controller/sv files/vsync_cnt.sv Line: 27
+Warning (10230): Verilog HDL assignment warning at vsync_cnt.sv(27): truncated value with size 32 to match size of target (11) File: C:/Users/minec/Desktop/github/PROJ300/Firmware/VGA Controller/sv files/vsync_cnt.sv Line: 27
 Info (12128): Elaborating entity "rgb_controller" for hierarchy "VGA_controller:inst|rgb_controller:inst4"
-Warning (10036): Verilog HDL or VHDL warning at rgb_controller.sv(4): object "row_reg" assigned a value but never read File: C:/Users/minec/Desktop/Work/GitHub Repos/PROJ300/Firmware/VGA Controller/sv files/rgb_controller.sv Line: 4
-Warning (10036): Verilog HDL or VHDL warning at rgb_controller.sv(5): object "column_reg" assigned a value but never read File: C:/Users/minec/Desktop/Work/GitHub Repos/PROJ300/Firmware/VGA Controller/sv files/rgb_controller.sv Line: 5
+Warning (10036): Verilog HDL or VHDL warning at rgb_controller.sv(4): object "row_reg" assigned a value but never read File: C:/Users/minec/Desktop/github/PROJ300/Firmware/VGA Controller/sv files/rgb_controller.sv Line: 4
+Warning (10036): Verilog HDL or VHDL warning at rgb_controller.sv(5): object "column_reg" assigned a value but never read File: C:/Users/minec/Desktop/github/PROJ300/Firmware/VGA Controller/sv files/rgb_controller.sv Line: 5
 Info (12128): Elaborating entity "xnor_2" for hierarchy "VGA_controller:inst|xnor_2:inst5"
 Info (12128): Elaborating entity "sprites" for hierarchy "VGA_controller:inst|sprites:inst6"
 Info (12128): Elaborating entity "sprite_ROM_square" for hierarchy "VGA_controller:inst|sprites:inst6|sprite_ROM_square:inst11"
 Info (12128): Elaborating entity "rgbMUX" for hierarchy "VGA_controller:inst|sprites:inst6|rgbMUX:inst9"
 Info (12128): Elaborating entity "sprite_MUX" for hierarchy "VGA_controller:inst|sprites:inst6|rgbMUX:inst9|sprite_MUX:inst1"
 Info (12128): Elaborating entity "selector" for hierarchy "VGA_controller:inst|sprites:inst6|rgbMUX:inst9|selector:inst"
-Warning (10935): Verilog HDL Casex/Casez warning at selector.sv(18): casex/casez item expression overlaps with a previous casex/casez item expression File: C:/Users/minec/Desktop/Work/GitHub Repos/PROJ300/Firmware/VGA Controller/sv files/selector.sv Line: 18
-Warning (10935): Verilog HDL Casex/Casez warning at selector.sv(24): casex/casez item expression overlaps with a previous casex/casez item expression File: C:/Users/minec/Desktop/Work/GitHub Repos/PROJ300/Firmware/VGA Controller/sv files/selector.sv Line: 24
+Warning (10935): Verilog HDL Casex/Casez warning at selector.sv(18): casex/casez item expression overlaps with a previous casex/casez item expression File: C:/Users/minec/Desktop/github/PROJ300/Firmware/VGA Controller/sv files/selector.sv Line: 18
+Warning (10935): Verilog HDL Casex/Casez warning at selector.sv(24): casex/casez item expression overlaps with a previous casex/casez item expression File: C:/Users/minec/Desktop/github/PROJ300/Firmware/VGA Controller/sv files/selector.sv Line: 24
 Info (12128): Elaborating entity "d_ffN" for hierarchy "VGA_controller:inst|d_ffN:inst18"
 Info (12128): Elaborating entity "pixel_offset_controller" for hierarchy "VGA_controller:inst|pixel_offset_controller:inst7"
-Warning (10230): Verilog HDL assignment warning at pixel_offset_controller.sv(42): truncated value with size 32 to match size of target (11) File: C:/Users/minec/Desktop/Work/GitHub Repos/PROJ300/Firmware/VGA Controller/sv files/pixel_offset_controller.sv Line: 42
-Warning (10230): Verilog HDL assignment warning at pixel_offset_controller.sv(54): truncated value with size 32 to match size of target (11) File: C:/Users/minec/Desktop/Work/GitHub Repos/PROJ300/Firmware/VGA Controller/sv files/pixel_offset_controller.sv Line: 54
-Warning (10230): Verilog HDL assignment warning at pixel_offset_controller.sv(64): truncated value with size 32 to match size of target (11) File: C:/Users/minec/Desktop/Work/GitHub Repos/PROJ300/Firmware/VGA Controller/sv files/pixel_offset_controller.sv Line: 64
-Warning (10230): Verilog HDL assignment warning at pixel_offset_controller.sv(75): truncated value with size 32 to match size of target (11) File: C:/Users/minec/Desktop/Work/GitHub Repos/PROJ300/Firmware/VGA Controller/sv files/pixel_offset_controller.sv Line: 75
+Warning (10230): Verilog HDL assignment warning at pixel_offset_controller.sv(42): truncated value with size 32 to match size of target (11) File: C:/Users/minec/Desktop/github/PROJ300/Firmware/VGA Controller/sv files/pixel_offset_controller.sv Line: 42
+Warning (10230): Verilog HDL assignment warning at pixel_offset_controller.sv(54): truncated value with size 32 to match size of target (11) File: C:/Users/minec/Desktop/github/PROJ300/Firmware/VGA Controller/sv files/pixel_offset_controller.sv Line: 54
+Warning (10230): Verilog HDL assignment warning at pixel_offset_controller.sv(64): truncated value with size 32 to match size of target (11) File: C:/Users/minec/Desktop/github/PROJ300/Firmware/VGA Controller/sv files/pixel_offset_controller.sv Line: 64
+Warning (10230): Verilog HDL assignment warning at pixel_offset_controller.sv(75): truncated value with size 32 to match size of target (11) File: C:/Users/minec/Desktop/github/PROJ300/Firmware/VGA Controller/sv files/pixel_offset_controller.sv Line: 75
 Info (12128): Elaborating entity "clk_divN" for hierarchy "VGA_controller:inst|clk_divN:inst15"
-Warning (10230): Verilog HDL assignment warning at clk_divN.sv(26): truncated value with size 32 to match size of target (18) File: C:/Users/minec/Desktop/Work/GitHub Repos/PROJ300/Firmware/VGA Controller/sv files/clk_divN.sv Line: 26
+Warning (10230): Verilog HDL assignment warning at clk_divN.sv(26): truncated value with size 32 to match size of target (18) File: C:/Users/minec/Desktop/github/PROJ300/Firmware/VGA Controller/sv files/clk_divN.sv Line: 26
 Info (12128): Elaborating entity "not4" for hierarchy "not4:inst8"
 Info (12128): Elaborating entity "fine_clk_divN" for hierarchy "fine_clk_divN:inst2"
-Warning (10230): Verilog HDL assignment warning at fine_clk_divN.sv(38): truncated value with size 32 to match size of target (25) File: C:/Users/minec/Desktop/Work/GitHub Repos/PROJ300/Firmware/VGA Controller/sv files/fine_clk_divN.sv Line: 38
+Warning (10230): Verilog HDL assignment warning at fine_clk_divN.sv(38): truncated value with size 32 to match size of target (25) File: C:/Users/minec/Desktop/github/PROJ300/Firmware/VGA Controller/sv files/fine_clk_divN.sv Line: 38
 Info (12128): Elaborating entity "fine_clk_divN" for hierarchy "fine_clk_divN:inst3"
-Warning (10230): Verilog HDL assignment warning at fine_clk_divN.sv(38): truncated value with size 32 to match size of target (25) File: C:/Users/minec/Desktop/Work/GitHub Repos/PROJ300/Firmware/VGA Controller/sv files/fine_clk_divN.sv Line: 38
+Warning (10230): Verilog HDL assignment warning at fine_clk_divN.sv(38): truncated value with size 32 to match size of target (25) File: C:/Users/minec/Desktop/github/PROJ300/Firmware/VGA Controller/sv files/fine_clk_divN.sv Line: 38
 Info (12128): Elaborating entity "fine_clk_divN" for hierarchy "fine_clk_divN:inst4"
-Warning (10230): Verilog HDL assignment warning at fine_clk_divN.sv(38): truncated value with size 32 to match size of target (25) File: C:/Users/minec/Desktop/Work/GitHub Repos/PROJ300/Firmware/VGA Controller/sv files/fine_clk_divN.sv Line: 38
+Warning (10230): Verilog HDL assignment warning at fine_clk_divN.sv(38): truncated value with size 32 to match size of target (25) File: C:/Users/minec/Desktop/github/PROJ300/Firmware/VGA Controller/sv files/fine_clk_divN.sv Line: 38
 Info (12128): Elaborating entity "fine_clk_divN" for hierarchy "fine_clk_divN:inst5"
-Warning (10230): Verilog HDL assignment warning at fine_clk_divN.sv(38): truncated value with size 32 to match size of target (25) File: C:/Users/minec/Desktop/Work/GitHub Repos/PROJ300/Firmware/VGA Controller/sv files/fine_clk_divN.sv Line: 38
+Warning (10230): Verilog HDL assignment warning at fine_clk_divN.sv(38): truncated value with size 32 to match size of target (25) File: C:/Users/minec/Desktop/github/PROJ300/Firmware/VGA Controller/sv files/fine_clk_divN.sv Line: 38
 Info (12128): Elaborating entity "fine_clk_divN" for hierarchy "fine_clk_divN:inst6"
-Warning (10230): Verilog HDL assignment warning at fine_clk_divN.sv(38): truncated value with size 32 to match size of target (25) File: C:/Users/minec/Desktop/Work/GitHub Repos/PROJ300/Firmware/VGA Controller/sv files/fine_clk_divN.sv Line: 38
+Warning (10230): Verilog HDL assignment warning at fine_clk_divN.sv(38): truncated value with size 32 to match size of target (25) File: C:/Users/minec/Desktop/github/PROJ300/Firmware/VGA Controller/sv files/fine_clk_divN.sv Line: 38
 Warning (13024): Output pins are stuck at VCC or GND
     Warning (13410): Pin "b[3]" is stuck at GND
     Warning (13410): Pin "b[2]" is stuck at GND
@@ -551,9 +551,9 @@ Info (21057): Implemented 450 device resources after synthesis - the final resou
     Info (21059): Implemented 24 output pins
     Info (21061): Implemented 420 logic cells
 Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 23 warnings
-    Info: Peak virtual memory: 4902 megabytes
-    Info: Processing ended: Thu Feb 08 15:18:15 2024
-    Info: Elapsed time: 00:00:05
-    Info: Total CPU time (on all processors): 00:00:06
+    Info: Peak virtual memory: 4826 megabytes
+    Info: Processing ended: Sat Apr  6 08:47:51 2024
+    Info: Elapsed time: 00:00:09
+    Info: Total CPU time (on all processors): 00:00:12
 
 

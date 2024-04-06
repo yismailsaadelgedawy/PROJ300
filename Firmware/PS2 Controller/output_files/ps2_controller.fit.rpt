@@ -1,6 +1,6 @@
 Fitter report for ps2_controller
-Fri Feb 09 21:42:30 2024
-Quartus Prime Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
+Sat Apr  6 08:44:21 2024
+Quartus Prime Version 23.1std.0 Build 991 11/28/2023 SC Lite Edition
 
 
 ---------------------
@@ -44,7 +44,7 @@ Quartus Prime Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
 ----------------
 ; Legal Notice ;
 ----------------
-Copyright (C) 2020  Intel Corporation. All rights reserved.
+Copyright (C) 2023  Intel Corporation. All rights reserved.
 Your use of Intel Corporation's design tools, logic functions 
 and other software and tools, and any partner logic 
 functions, and any output files from any of the foregoing 
@@ -61,30 +61,30 @@ https://fpgasoftware.intel.com/eula.
 
 
 
-+-------------------------------------------------------------------------------+
-; Fitter Summary                                                                ;
-+---------------------------------+---------------------------------------------+
-; Fitter Status                   ; Successful - Fri Feb 09 21:42:30 2024       ;
-; Quartus Prime Version           ; 20.1.1 Build 720 11/11/2020 SJ Lite Edition ;
-; Revision Name                   ; ps2_controller                              ;
-; Top-level Entity Name           ; TopLevel                                    ;
-; Family                          ; Cyclone V                                   ;
-; Device                          ; 5CEBA4F23C7                                 ;
-; Timing Models                   ; Final                                       ;
-; Logic utilization (in ALMs)     ; 31 / 18,480 ( < 1 % )                       ;
-; Total registers                 ; 57                                          ;
-; Total pins                      ; 30 / 224 ( 13 % )                           ;
-; Total virtual pins              ; 0                                           ;
-; Total block memory bits         ; 0 / 3,153,920 ( 0 % )                       ;
-; Total RAM Blocks                ; 0 / 308 ( 0 % )                             ;
-; Total DSP Blocks                ; 0 / 66 ( 0 % )                              ;
-; Total HSSI RX PCSs              ; 0                                           ;
-; Total HSSI PMA RX Deserializers ; 0                                           ;
-; Total HSSI TX PCSs              ; 0                                           ;
-; Total HSSI PMA TX Serializers   ; 0                                           ;
-; Total PLLs                      ; 0 / 4 ( 0 % )                               ;
-; Total DLLs                      ; 0 / 4 ( 0 % )                               ;
-+---------------------------------+---------------------------------------------+
++----------------------------------------------------------------------------------+
+; Fitter Summary                                                                   ;
++---------------------------------+------------------------------------------------+
+; Fitter Status                   ; Successful - Sat Apr  6 08:44:21 2024          ;
+; Quartus Prime Version           ; 23.1std.0 Build 991 11/28/2023 SC Lite Edition ;
+; Revision Name                   ; ps2_controller                                 ;
+; Top-level Entity Name           ; TopLevel                                       ;
+; Family                          ; Cyclone V                                      ;
+; Device                          ; 5CEBA4F23C7                                    ;
+; Timing Models                   ; Final                                          ;
+; Logic utilization (in ALMs)     ; 31 / 18,480 ( < 1 % )                          ;
+; Total registers                 ; 60                                             ;
+; Total pins                      ; 29 / 224 ( 13 % )                              ;
+; Total virtual pins              ; 0                                              ;
+; Total block memory bits         ; 0 / 3,153,920 ( 0 % )                          ;
+; Total RAM Blocks                ; 0 / 308 ( 0 % )                                ;
+; Total DSP Blocks                ; 0 / 66 ( 0 % )                                 ;
+; Total HSSI RX PCSs              ; 0                                              ;
+; Total HSSI PMA RX Deserializers ; 0                                              ;
+; Total HSSI TX PCSs              ; 0                                              ;
+; Total HSSI PMA TX Serializers   ; 0                                              ;
+; Total PLLs                      ; 0 / 4 ( 0 % )                                  ;
+; Total DLLs                      ; 0 / 4 ( 0 % )                                  ;
++---------------------------------+------------------------------------------------+
 
 
 +----------------------------------------------------------------------------------------------------------------------------------------------------+
@@ -151,19 +151,17 @@ https://fpgasoftware.intel.com/eula.
 +----------------------------+-------------+
 ; Processors                 ; Number      ;
 +----------------------------+-------------+
-; Number detected on machine ; 16          ;
-; Maximum allowed            ; 16          ;
+; Number detected on machine ; 8           ;
+; Maximum allowed            ; 4           ;
 ;                            ;             ;
-; Average used               ; 1.03        ;
-; Maximum used               ; 16          ;
+; Average used               ; 1.01        ;
+; Maximum used               ; 4           ;
 ;                            ;             ;
 ; Usage by Processor         ; % Time Used ;
 ;     Processor 1            ; 100.0%      ;
-;     Processor 2            ;   0.3%      ;
-;     Processor 3            ;   0.3%      ;
-;     Processor 4            ;   0.3%      ;
-;     Processor 5            ;   0.3%      ;
-;     Processors 6-16        ;   0.2%      ;
+;     Processor 2            ;   0.5%      ;
+;     Processor 3            ;   0.5%      ;
+;     Processor 4            ;   0.5%      ;
 +----------------------------+-------------+
 
 
@@ -175,15 +173,18 @@ https://fpgasoftware.intel.com/eula.
 ; PS2_CLK~inputCLKENA0                                     ; Created    ; Placement                                         ; Fitter Periphery Placement ;           ;                ;                                                                    ;                  ;                       ;
 ; clk50~inputCLKENA0                                       ; Created    ; Placement                                         ; Fitter Periphery Placement ;           ;                ;                                                                    ;                  ;                       ;
 ; PS2controller:inst8|break_code_detector:inst|counter[0]  ; Duplicated ; Router Logic Cell Insertion and Logic Duplication ; Routability optimization   ;           ;                ; PS2controller:inst8|break_code_detector:inst|counter[0]~DUPLICATE  ;                  ;                       ;
-; PS2controller:inst8|break_code_detector:inst|counter[7]  ; Duplicated ; Router Logic Cell Insertion and Logic Duplication ; Routability optimization   ;           ;                ; PS2controller:inst8|break_code_detector:inst|counter[7]~DUPLICATE  ;                  ;                       ;
 ; PS2controller:inst8|break_code_detector:inst|counter[10] ; Duplicated ; Router Logic Cell Insertion and Logic Duplication ; Routability optimization   ;           ;                ; PS2controller:inst8|break_code_detector:inst|counter[10]~DUPLICATE ;                  ;                       ;
-; PS2controller:inst8|break_code_detector:inst|counter[19] ; Duplicated ; Router Logic Cell Insertion and Logic Duplication ; Routability optimization   ;           ;                ; PS2controller:inst8|break_code_detector:inst|counter[19]~DUPLICATE ;                  ;                       ;
+; PS2controller:inst8|break_code_detector:inst|counter[12] ; Duplicated ; Router Logic Cell Insertion and Logic Duplication ; Routability optimization   ;           ;                ; PS2controller:inst8|break_code_detector:inst|counter[12]~DUPLICATE ;                  ;                       ;
+; PS2controller:inst8|break_code_detector:inst|counter[17] ; Duplicated ; Router Logic Cell Insertion and Logic Duplication ; Routability optimization   ;           ;                ; PS2controller:inst8|break_code_detector:inst|counter[17]~DUPLICATE ;                  ;                       ;
+; PS2controller:inst8|break_code_detector:inst|counter[23] ; Duplicated ; Router Logic Cell Insertion and Logic Duplication ; Routability optimization   ;           ;                ; PS2controller:inst8|break_code_detector:inst|counter[23]~DUPLICATE ;                  ;                       ;
+; PS2controller:inst8|ps2_controller:inst1|count_reg[0]    ; Duplicated ; Router Logic Cell Insertion and Logic Duplication ; Routability optimization   ;           ;                ; PS2controller:inst8|ps2_controller:inst1|count_reg[0]~DUPLICATE    ;                  ;                       ;
 ; PS2controller:inst8|ps2_controller:inst1|count_reg[1]    ; Duplicated ; Router Logic Cell Insertion and Logic Duplication ; Routability optimization   ;           ;                ; PS2controller:inst8|ps2_controller:inst1|count_reg[1]~DUPLICATE    ;                  ;                       ;
 ; PS2controller:inst8|ps2_controller:inst1|count_reg[2]    ; Duplicated ; Router Logic Cell Insertion and Logic Duplication ; Routability optimization   ;           ;                ; PS2controller:inst8|ps2_controller:inst1|count_reg[2]~DUPLICATE    ;                  ;                       ;
 ; PS2controller:inst8|ps2_controller:inst1|count_reg[3]    ; Duplicated ; Router Logic Cell Insertion and Logic Duplication ; Routability optimization   ;           ;                ; PS2controller:inst8|ps2_controller:inst1|count_reg[3]~DUPLICATE    ;                  ;                       ;
+; PS2controller:inst8|ps2_controller:inst1|data_out[1]     ; Duplicated ; Router Logic Cell Insertion and Logic Duplication ; Routability optimization   ;           ;                ; PS2controller:inst8|ps2_controller:inst1|data_out[1]~DUPLICATE     ;                  ;                       ;
+; PS2controller:inst8|ps2_controller:inst1|data_out[2]     ; Duplicated ; Router Logic Cell Insertion and Logic Duplication ; Routability optimization   ;           ;                ; PS2controller:inst8|ps2_controller:inst1|data_out[2]~DUPLICATE     ;                  ;                       ;
 ; PS2controller:inst8|ps2_controller:inst1|data_out[3]     ; Duplicated ; Router Logic Cell Insertion and Logic Duplication ; Routability optimization   ;           ;                ; PS2controller:inst8|ps2_controller:inst1|data_out[3]~DUPLICATE     ;                  ;                       ;
-; PS2controller:inst8|ps2_controller:inst1|data_out[4]     ; Duplicated ; Router Logic Cell Insertion and Logic Duplication ; Routability optimization   ;           ;                ; PS2controller:inst8|ps2_controller:inst1|data_out[4]~DUPLICATE     ;                  ;                       ;
-; PS2controller:inst8|ps2_controller:inst1|data_out[5]     ; Duplicated ; Router Logic Cell Insertion and Logic Duplication ; Routability optimization   ;           ;                ; PS2controller:inst8|ps2_controller:inst1|data_out[5]~DUPLICATE     ;                  ;                       ;
+; PS2controller:inst8|ps2_controller:inst1|data_out[6]     ; Duplicated ; Router Logic Cell Insertion and Logic Duplication ; Routability optimization   ;           ;                ; PS2controller:inst8|ps2_controller:inst1|data_out[6]~DUPLICATE     ;                  ;                       ;
 +----------------------------------------------------------+------------+---------------------------------------------------+----------------------------+-----------+----------------+--------------------------------------------------------------------+------------------+-----------------------+
 
 
@@ -207,6 +208,7 @@ https://fpgasoftware.intel.com/eula.
 ; Location ;                ;              ; disp3[4]   ; PIN_U17       ; QSF Assignment ;
 ; Location ;                ;              ; disp3[5]   ; PIN_V18       ; QSF Assignment ;
 ; Location ;                ;              ; disp3[6]   ; PIN_V19       ; QSF Assignment ;
+; Location ;                ;              ; led1       ; PIN_AA1       ; QSF Assignment ;
 +----------+----------------+--------------+------------+---------------+----------------+
 
 
@@ -216,8 +218,8 @@ https://fpgasoftware.intel.com/eula.
 ; Type                ; Total [A + B]      ; From Design Partitions [A] ; From Rapid Recompile [B] ;
 +---------------------+--------------------+----------------------------+--------------------------+
 ; Placement (by node) ;                    ;                            ;                          ;
-;     -- Requested    ; 0.00 % ( 0 / 164 ) ; 0.00 % ( 0 / 164 )         ; 0.00 % ( 0 / 164 )       ;
-;     -- Achieved     ; 0.00 % ( 0 / 164 ) ; 0.00 % ( 0 / 164 )         ; 0.00 % ( 0 / 164 )       ;
+;     -- Requested    ; 0.00 % ( 0 / 162 ) ; 0.00 % ( 0 / 162 )         ; 0.00 % ( 0 / 162 )       ;
+;     -- Achieved     ; 0.00 % ( 0 / 162 ) ; 0.00 % ( 0 / 162 )         ; 0.00 % ( 0 / 162 )       ;
 ;                     ;                    ;                            ;                          ;
 ; Routing (by net)    ;                    ;                            ;                          ;
 ;     -- Requested    ; 0.00 % ( 0 / 0 )   ; 0.00 % ( 0 / 0 )           ; 0.00 % ( 0 / 0 )         ;
@@ -240,7 +242,7 @@ https://fpgasoftware.intel.com/eula.
 +--------------------------------+-----------------------+-------------------------+-------------------+---------------------+-------+
 ; Partition Name                 ; Preservation Achieved ; Preservation Level Used ; Netlist Type Used ; Preservation Method ; Notes ;
 +--------------------------------+-----------------------+-------------------------+-------------------+---------------------+-------+
-; Top                            ; 0.00 % ( 0 / 164 )    ; N/A                     ; Source File       ; N/A                 ;       ;
+; Top                            ; 0.00 % ( 0 / 162 )    ; N/A                     ; Source File       ; N/A                 ;       ;
 ; hard_block:auto_generated_inst ; 0.00 % ( 0 / 0 )      ; N/A                     ; Source File       ; N/A                 ;       ;
 +--------------------------------+-----------------------+-------------------------+-------------------+---------------------+-------+
 
@@ -248,7 +250,7 @@ https://fpgasoftware.intel.com/eula.
 +--------------+
 ; Pin-Out File ;
 +--------------+
-The pin-out file can be found in C:/Users/minec/Desktop/Work/GitHub Repos/PROJ300/Firmware/PS2 Controller/output_files/ps2_controller.pin.
+The pin-out file can be found in C:/Users/minec/Desktop/github/PROJ300/Firmware/PS2 Controller/output_files/ps2_controller.pin.
 
 
 +------------------------------------------------------------------------------------------+
@@ -258,12 +260,12 @@ The pin-out file can be found in C:/Users/minec/Desktop/Work/GitHub Repos/PROJ30
 +-------------------------------------------------------------+--------------------+-------+
 ; Logic utilization (ALMs needed / total ALMs on device)      ; 31 / 18,480        ; < 1 % ;
 ; ALMs needed [=A-B+C]                                        ; 31                 ;       ;
-;     [A] ALMs used in final placement [=a+b+c+d]             ; 37 / 18,480        ; < 1 % ;
-;         [a] ALMs used for LUT logic and registers           ; 18                 ;       ;
-;         [b] ALMs used for LUT logic                         ; 13                 ;       ;
-;         [c] ALMs used for registers                         ; 6                  ;       ;
+;     [A] ALMs used in final placement [=a+b+c+d]             ; 38 / 18,480        ; < 1 % ;
+;         [a] ALMs used for LUT logic and registers           ; 17                 ;       ;
+;         [b] ALMs used for LUT logic                         ; 14                 ;       ;
+;         [c] ALMs used for registers                         ; 7                  ;       ;
 ;         [d] ALMs used for memory (up to half of total ALMs) ; 0                  ;       ;
-;     [B] Estimate of ALMs recoverable by dense packing       ; 6 / 18,480         ; < 1 % ;
+;     [B] Estimate of ALMs recoverable by dense packing       ; 7 / 18,480         ; < 1 % ;
 ;     [C] Estimate of ALMs unavailable [=a+b+c+d]             ; 0 / 18,480         ; 0 %   ;
 ;         [a] Due to location constrained logic               ; 0                  ;       ;
 ;         [b] Due to LAB-wide signal conflicts                ; 0                  ;       ;
@@ -282,18 +284,18 @@ The pin-out file can be found in C:/Users/minec/Desktop/Work/GitHub Repos/PROJ30
 ;     -- 5 input functions                                    ; 2                  ;       ;
 ;     -- 4 input functions                                    ; 20                 ;       ;
 ;     -- <=3 input functions                                  ; 28                 ;       ;
-; Combinational ALUT usage for route-throughs                 ; 6                  ;       ;
+; Combinational ALUT usage for route-throughs                 ; 9                  ;       ;
 ;                                                             ;                    ;       ;
-; Dedicated logic registers                                   ; 57                 ;       ;
+; Dedicated logic registers                                   ; 60                 ;       ;
 ;     -- By type:                                             ;                    ;       ;
 ;         -- Primary logic registers                          ; 47 / 36,960        ; < 1 % ;
-;         -- Secondary logic registers                        ; 10 / 36,960        ; < 1 % ;
+;         -- Secondary logic registers                        ; 13 / 36,960        ; < 1 % ;
 ;     -- By function:                                         ;                    ;       ;
 ;         -- Design implementation registers                  ; 47                 ;       ;
-;         -- Routing optimization registers                   ; 10                 ;       ;
+;         -- Routing optimization registers                   ; 13                 ;       ;
 ;                                                             ;                    ;       ;
 ; Virtual pins                                                ; 0                  ;       ;
-; I/O pins                                                    ; 30 / 224           ; 13 %  ;
+; I/O pins                                                    ; 29 / 224           ; 13 %  ;
 ;     -- Clock pins                                           ; 1 / 9              ; 11 %  ;
 ;     -- Dedicated input pins                                 ; 0 / 11             ; 0 %   ;
 ;                                                             ;                    ;       ;
@@ -316,12 +318,12 @@ The pin-out file can be found in C:/Users/minec/Desktop/Work/GitHub Repos/PROJ30
 ; Remote update blocks                                        ; 0 / 1              ; 0 %   ;
 ; Oscillator blocks                                           ; 0 / 1              ; 0 %   ;
 ; Impedance control blocks                                    ; 0 / 3              ; 0 %   ;
-; Average interconnect usage (total/H/V)                      ; 0.2% / 0.1% / 0.2% ;       ;
-; Peak interconnect usage (total/H/V)                         ; 1.1% / 1.1% / 1.4% ;       ;
-; Maximum fan-out                                             ; 30                 ;       ;
-; Highest non-global fan-out                                  ; 30                 ;       ;
-; Total fan-out                                               ; 429                ;       ;
-; Average fan-out                                             ; 2.38               ;       ;
+; Average interconnect usage (total/H/V)                      ; 0.2% / 0.2% / 0.2% ;       ;
+; Peak interconnect usage (total/H/V)                         ; 1.5% / 1.5% / 1.7% ;       ;
+; Maximum fan-out                                             ; 31                 ;       ;
+; Highest non-global fan-out                                  ; 31                 ;       ;
+; Total fan-out                                               ; 442                ;       ;
+; Average fan-out                                             ; 2.40               ;       ;
 +-------------------------------------------------------------+--------------------+-------+
 
 
@@ -332,12 +334,12 @@ The pin-out file can be found in C:/Users/minec/Desktop/Work/GitHub Repos/PROJ30
 +-------------------------------------------------------------+----------------------+--------------------------------+
 ; Logic utilization (ALMs needed / total ALMs on device)      ; 31 / 18480 ( < 1 % ) ; 0 / 18480 ( 0 % )              ;
 ; ALMs needed [=A-B+C]                                        ; 31                   ; 0                              ;
-;     [A] ALMs used in final placement [=a+b+c+d]             ; 37 / 18480 ( < 1 % ) ; 0 / 18480 ( 0 % )              ;
-;         [a] ALMs used for LUT logic and registers           ; 18                   ; 0                              ;
-;         [b] ALMs used for LUT logic                         ; 13                   ; 0                              ;
-;         [c] ALMs used for registers                         ; 6                    ; 0                              ;
+;     [A] ALMs used in final placement [=a+b+c+d]             ; 38 / 18480 ( < 1 % ) ; 0 / 18480 ( 0 % )              ;
+;         [a] ALMs used for LUT logic and registers           ; 17                   ; 0                              ;
+;         [b] ALMs used for LUT logic                         ; 14                   ; 0                              ;
+;         [c] ALMs used for registers                         ; 7                    ; 0                              ;
 ;         [d] ALMs used for memory (up to half of total ALMs) ; 0                    ; 0                              ;
-;     [B] Estimate of ALMs recoverable by dense packing       ; 6 / 18480 ( < 1 % )  ; 0 / 18480 ( 0 % )              ;
+;     [B] Estimate of ALMs recoverable by dense packing       ; 7 / 18480 ( < 1 % )  ; 0 / 18480 ( 0 % )              ;
 ;     [C] Estimate of ALMs unavailable [=a+b+c+d]             ; 0 / 18480 ( 0 % )    ; 0 / 18480 ( 0 % )              ;
 ;         [a] Due to location constrained logic               ; 0                    ; 0                              ;
 ;         [b] Due to LAB-wide signal conflicts                ; 0                    ; 0                              ;
@@ -356,7 +358,7 @@ The pin-out file can be found in C:/Users/minec/Desktop/Work/GitHub Repos/PROJ30
 ;     -- 5 input functions                                    ; 2                    ; 0                              ;
 ;     -- 4 input functions                                    ; 20                   ; 0                              ;
 ;     -- <=3 input functions                                  ; 28                   ; 0                              ;
-; Combinational ALUT usage for route-throughs                 ; 6                    ; 0                              ;
+; Combinational ALUT usage for route-throughs                 ; 9                    ; 0                              ;
 ; Memory ALUT usage                                           ; 0                    ; 0                              ;
 ;     -- 64-address deep                                      ; 0                    ; 0                              ;
 ;     -- 32-address deep                                      ; 0                    ; 0                              ;
@@ -364,14 +366,14 @@ The pin-out file can be found in C:/Users/minec/Desktop/Work/GitHub Repos/PROJ30
 ; Dedicated logic registers                                   ; 0                    ; 0                              ;
 ;     -- By type:                                             ;                      ;                                ;
 ;         -- Primary logic registers                          ; 47 / 36960 ( < 1 % ) ; 0 / 36960 ( 0 % )              ;
-;         -- Secondary logic registers                        ; 10 / 36960 ( < 1 % ) ; 0 / 36960 ( 0 % )              ;
+;         -- Secondary logic registers                        ; 13 / 36960 ( < 1 % ) ; 0 / 36960 ( 0 % )              ;
 ;     -- By function:                                         ;                      ;                                ;
 ;         -- Design implementation registers                  ; 47                   ; 0                              ;
-;         -- Routing optimization registers                   ; 10                   ; 0                              ;
+;         -- Routing optimization registers                   ; 13                   ; 0                              ;
 ;                                                             ;                      ;                                ;
 ;                                                             ;                      ;                                ;
 ; Virtual pins                                                ; 0                    ; 0                              ;
-; I/O pins                                                    ; 30                   ; 0                              ;
+; I/O pins                                                    ; 29                   ; 0                              ;
 ; I/O registers                                               ; 0                    ; 0                              ;
 ; Total block memory bits                                     ; 0                    ; 0                              ;
 ; Total block memory implementation bits                      ; 0                    ; 0                              ;
@@ -384,7 +386,7 @@ The pin-out file can be found in C:/Users/minec/Desktop/Work/GitHub Repos/PROJ30
 ;     -- Registered Output Connections                        ; 0                    ; 0                              ;
 ;                                                             ;                      ;                                ;
 ; Internal Connections                                        ;                      ;                                ;
-;     -- Total Connections                                    ; 429                  ; 0                              ;
+;     -- Total Connections                                    ; 442                  ; 0                              ;
 ;     -- Registered Connections                               ; 176                  ; 0                              ;
 ;                                                             ;                      ;                                ;
 ; External Connections                                        ;                      ;                                ;
@@ -393,7 +395,7 @@ The pin-out file can be found in C:/Users/minec/Desktop/Work/GitHub Repos/PROJ30
 ;                                                             ;                      ;                                ;
 ; Partition Interface                                         ;                      ;                                ;
 ;     -- Input Ports                                          ; 4                    ; 0                              ;
-;     -- Output Ports                                         ; 26                   ; 0                              ;
+;     -- Output Ports                                         ; 25                   ; 0                              ;
 ;     -- Bidir Ports                                          ; 0                    ; 0                              ;
 ;                                                             ;                      ;                                ;
 ; Registered Ports                                            ;                      ;                                ;
@@ -417,10 +419,10 @@ The pin-out file can be found in C:/Users/minec/Desktop/Work/GitHub Repos/PROJ30
 +---------+-------+----------+--------------+--------------+--------------+-----------------------+--------------------+--------+----------------+-----------------+----------+--------------+--------------+-------------+---------------------------+----------------------+-----------+
 ; Name    ; Pin # ; I/O Bank ; X coordinate ; Y coordinate ; Z coordinate ; Combinational Fan-Out ; Registered Fan-Out ; Global ; Input Register ; PCI I/O Enabled ; Bus Hold ; Weak Pull Up ; I/O Standard ; Termination ; Termination Control Block ; Location assigned by ; Slew Rate ;
 +---------+-------+----------+--------------+--------------+--------------+-----------------------+--------------------+--------+----------------+-----------------+----------+--------------+--------------+-------------+---------------------------+----------------------+-----------+
-; PS2_CLK ; D3    ; 2A       ; 0            ; 20           ; 3            ; 20                    ; 0                  ; yes    ; no             ; no              ; no       ; Off          ; 2.5 V        ; Off         ; --                        ; User                 ; no        ;
+; PS2_CLK ; D3    ; 2A       ; 0            ; 20           ; 3            ; 22                    ; 0                  ; yes    ; no             ; no              ; no       ; Off          ; 2.5 V        ; Off         ; --                        ; User                 ; no        ;
 ; PS2_DAT ; G2    ; 2A       ; 0            ; 21           ; 3            ; 2                     ; 0                  ; no     ; no             ; no              ; no       ; Off          ; 2.5 V        ; Off         ; --                        ; User                 ; no        ;
-; clk50   ; M9    ; 3B       ; 22           ; 0            ; 0            ; 30                    ; 0                  ; yes    ; no             ; no              ; no       ; Off          ; 2.5 V        ; Off         ; --                        ; User                 ; no        ;
-; sw0     ; U13   ; 4A       ; 33           ; 0            ; 40           ; 21                    ; 0                  ; no     ; no             ; no              ; no       ; Off          ; 2.5 V        ; Off         ; --                        ; User                 ; no        ;
+; clk50   ; M9    ; 3B       ; 22           ; 0            ; 0            ; 31                    ; 0                  ; yes    ; no             ; no              ; no       ; Off          ; 2.5 V        ; Off         ; --                        ; User                 ; no        ;
+; sw0     ; U13   ; 4A       ; 33           ; 0            ; 40           ; 23                    ; 0                  ; no     ; no             ; no              ; no       ; Off          ; 2.5 V        ; Off         ; --                        ; User                 ; no        ;
 +---------+-------+----------+--------------+--------------+--------------+-----------------------+--------------------+--------+----------------+-----------------+----------+--------------+--------------+-------------+---------------------------+----------------------+-----------+
 
 
@@ -444,7 +446,6 @@ The pin-out file can be found in C:/Users/minec/Desktop/Work/GitHub Repos/PROJ30
 ; disp1[5] ; AA17  ; 4A       ; 43           ; 0            ; 51           ; no              ; no                     ; 1         ; no              ; no         ; no            ; no       ; Off          ; 2.5 V        ; Default          ; Series 50 Ohm without Calibration ; --                        ; no                         ; no                          ; 0                   ; Off                         ; User                 ; -                    ; -                   ;
 ; disp1[6] ; U22   ; 4A       ; 51           ; 0            ; 51           ; no              ; no                     ; 1         ; no              ; no         ; no            ; no       ; Off          ; 2.5 V        ; Default          ; Series 50 Ohm without Calibration ; --                        ; no                         ; no                          ; 0                   ; Off                         ; User                 ; -                    ; -                   ;
 ; led0     ; AA2   ; 2A       ; 0            ; 18           ; 77           ; no              ; no                     ; 1         ; no              ; no         ; no            ; no       ; Off          ; 2.5 V        ; Default          ; Series 50 Ohm without Calibration ; --                        ; no                         ; no                          ; 0                   ; Off                         ; User                 ; -                    ; -                   ;
-; led1     ; AA1   ; 2A       ; 0            ; 18           ; 94           ; no              ; no                     ; 1         ; no              ; no         ; no            ; no       ; Off          ; 2.5 V        ; Default          ; Series 50 Ohm without Calibration ; --                        ; no                         ; no                          ; 0                   ; Off                         ; User                 ; -                    ; -                   ;
 ; led[2]   ; W2    ; 2A       ; 0            ; 18           ; 60           ; no              ; no                     ; 1         ; no              ; no         ; no            ; no       ; Off          ; 2.5 V        ; Default          ; Series 50 Ohm without Calibration ; --                        ; no                         ; no                          ; 0                   ; Off                         ; User                 ; -                    ; -                   ;
 ; led[3]   ; Y3    ; 2A       ; 0            ; 18           ; 43           ; no              ; no                     ; 1         ; no              ; no         ; no            ; no       ; Off          ; 2.5 V        ; Default          ; Series 50 Ohm without Calibration ; --                        ; no                         ; no                          ; 0                   ; Off                         ; User                 ; -                    ; -                   ;
 ; led[4]   ; N2    ; 2A       ; 0            ; 19           ; 37           ; no              ; no                     ; 1         ; no              ; no         ; no            ; no       ; Off          ; 2.5 V        ; Default          ; Series 50 Ohm without Calibration ; --                        ; no                         ; no                          ; 0                   ; Off                         ; User                 ; -                    ; -                   ;
@@ -463,7 +464,7 @@ The pin-out file can be found in C:/Users/minec/Desktop/Work/GitHub Repos/PROJ30
 +----------+------------------+---------------+--------------+---------------+
 ; I/O Bank ; Usage            ; VCCIO Voltage ; VREF Voltage ; VCCPD Voltage ;
 +----------+------------------+---------------+--------------+---------------+
-; 2A       ; 12 / 16 ( 75 % ) ; 2.5V          ; --           ; 2.5V          ;
+; 2A       ; 11 / 16 ( 69 % ) ; 2.5V          ; --           ; 2.5V          ;
 ; 3A       ; 0 / 16 ( 0 % )   ; 2.5V          ; --           ; 2.5V          ;
 ; 3B       ; 1 / 32 ( 3 % )   ; 2.5V          ; --           ; 2.5V          ;
 ; 4A       ; 15 / 48 ( 31 % ) ; 2.5V          ; --           ; 2.5V          ;
@@ -501,7 +502,7 @@ The pin-out file can be found in C:/Users/minec/Desktop/Work/GitHub Repos/PROJ30
 ; A20      ;            ;          ; NC                              ;        ;              ;                     ; --           ;                 ; --       ; --           ;
 ; A21      ;            ;          ; GND                             ; gnd    ;              ;                     ; --           ;                 ; --       ; --           ;
 ; A22      ;            ;          ; NC                              ;        ;              ;                     ; --           ;                 ; --       ; --           ;
-; AA1      ; 29         ; 2A       ; led1                            ; output ; 2.5 V        ;                     ; Row I/O      ; Y               ; no       ; Off          ;
+; AA1      ; 29         ; 2A       ; RESERVED_INPUT_WITH_WEAK_PULLUP ;        ;              ;                     ; Row I/O      ;                 ; no       ; On           ;
 ; AA2      ; 31         ; 2A       ; led0                            ; output ; 2.5 V        ;                     ; Row I/O      ; Y               ; no       ; Off          ;
 ; AA3      ;            ;          ; GND                             ; gnd    ;              ;                     ; --           ;                 ; --       ; --           ;
 ; AA4      ;            ;          ; GND                             ; gnd    ;              ;                     ; --           ;                 ; --       ; --           ;
@@ -975,7 +976,6 @@ Note: Pin directions (input, output or bidir) are based on device operating in u
 ; led0     ; Incomplete set of assignments ;
 ; ps2data  ; Incomplete set of assignments ;
 ; ps2clk   ; Incomplete set of assignments ;
-; led1     ; Incomplete set of assignments ;
 ; disp0[0] ; Incomplete set of assignments ;
 ; disp0[1] ; Incomplete set of assignments ;
 ; disp0[2] ; Incomplete set of assignments ;
@@ -1010,12 +1010,12 @@ Note: Pin directions (input, output or bidir) are based on device operating in u
 +----------------------------------+----------------------+----------------------------------+---------------------------------------------------+----------------------------------+----------------------+---------------------+---------------------------+---------------+-------------------+-------+------------+------+--------------+--------------------------------------------------------+----------------------+--------------+
 ; Compilation Hierarchy Node       ; ALMs needed [=A-B+C] ; [A] ALMs used in final placement ; [B] Estimate of ALMs recoverable by dense packing ; [C] Estimate of ALMs unavailable ; ALMs used for memory ; Combinational ALUTs ; Dedicated Logic Registers ; I/O Registers ; Block Memory Bits ; M10Ks ; DSP Blocks ; Pins ; Virtual Pins ; Full Hierarchy Name                                    ; Entity Name          ; Library Name ;
 +----------------------------------+----------------------+----------------------------------+---------------------------------------------------+----------------------------------+----------------------+---------------------+---------------------------+---------------+-------------------+-------+------------+------+--------------+--------------------------------------------------------+----------------------+--------------+
-; |TopLevel                        ; 30.5 (0.5)           ; 36.5 (0.5)                       ; 6.0 (0.0)                                         ; 0.0 (0.0)                        ; 0.0 (0.0)            ; 55 (1)              ; 57 (0)                    ; 0 (0)         ; 0                 ; 0     ; 0          ; 30   ; 0            ; |TopLevel                                              ; TopLevel             ; work         ;
-;    |PS2controller:inst8|         ; 25.3 (0.3)           ; 29.9 (0.3)                       ; 4.7 (0.0)                                         ; 0.0 (0.0)                        ; 0.0 (0.0)            ; 40 (1)              ; 57 (0)                    ; 0 (0)         ; 0                 ; 0     ; 0          ; 0    ; 0            ; |TopLevel|PS2controller:inst8                          ; PS2controller        ; work         ;
-;       |break_code_detector:inst| ; 19.0 (19.0)          ; 19.0 (19.0)                      ; 0.0 (0.0)                                         ; 0.0 (0.0)                        ; 0.0 (0.0)            ; 32 (32)             ; 30 (30)                   ; 0 (0)         ; 0                 ; 0     ; 0          ; 0    ; 0            ; |TopLevel|PS2controller:inst8|break_code_detector:inst ; break_code_detector  ; work         ;
-;       |bsy_detector:inst2|       ; 2.1 (2.1)            ; 3.2 (3.2)                        ; 1.1 (1.1)                                         ; 0.0 (0.0)                        ; 0.0 (0.0)            ; 0 (0)               ; 8 (8)                     ; 0 (0)         ; 0                 ; 0     ; 0          ; 0    ; 0            ; |TopLevel|PS2controller:inst8|bsy_detector:inst2       ; bsy_detector         ; work         ;
-;       |ps2_controller:inst1|     ; 3.7 (3.7)            ; 7.4 (7.4)                        ; 3.8 (3.8)                                         ; 0.0 (0.0)                        ; 0.0 (0.0)            ; 7 (7)               ; 19 (19)                   ; 0 (0)         ; 0                 ; 0     ; 0          ; 0    ; 0            ; |TopLevel|PS2controller:inst8|ps2_controller:inst1     ; ps2_controller       ; work         ;
-;    |seven_seg_controller:inst|   ; 4.8 (4.8)            ; 6.1 (6.1)                        ; 1.3 (1.3)                                         ; 0.0 (0.0)                        ; 0.0 (0.0)            ; 14 (14)             ; 0 (0)                     ; 0 (0)         ; 0                 ; 0     ; 0          ; 0    ; 0            ; |TopLevel|seven_seg_controller:inst                    ; seven_seg_controller ; work         ;
+; |TopLevel                        ; 30.5 (0.5)           ; 37.0 (0.5)                       ; 6.5 (0.0)                                         ; 0.0 (0.0)                        ; 0.0 (0.0)            ; 55 (1)              ; 60 (0)                    ; 0 (0)         ; 0                 ; 0     ; 0          ; 29   ; 0            ; |TopLevel                                              ; TopLevel             ; work         ;
+;    |PS2controller:inst8|         ; 25.4 (0.3)           ; 30.8 (0.3)                       ; 5.4 (0.0)                                         ; 0.0 (0.0)                        ; 0.0 (0.0)            ; 40 (1)              ; 60 (0)                    ; 0 (0)         ; 0                 ; 0     ; 0          ; 0    ; 0            ; |TopLevel|PS2controller:inst8                          ; PS2controller        ; work         ;
+;       |break_code_detector:inst| ; 18.8 (18.8)          ; 18.8 (18.8)                      ; 0.0 (0.0)                                         ; 0.0 (0.0)                        ; 0.0 (0.0)            ; 32 (32)             ; 31 (31)                   ; 0 (0)         ; 0                 ; 0     ; 0          ; 0    ; 0            ; |TopLevel|PS2controller:inst8|break_code_detector:inst ; break_code_detector  ; work         ;
+;       |bsy_detector:inst2|       ; 2.1 (2.1)            ; 3.8 (3.8)                        ; 1.8 (1.8)                                         ; 0.0 (0.0)                        ; 0.0 (0.0)            ; 0 (0)               ; 8 (8)                     ; 0 (0)         ; 0                 ; 0     ; 0          ; 0    ; 0            ; |TopLevel|PS2controller:inst8|bsy_detector:inst2       ; bsy_detector         ; work         ;
+;       |ps2_controller:inst1|     ; 3.8 (3.8)            ; 7.8 (7.8)                        ; 4.0 (4.0)                                         ; 0.0 (0.0)                        ; 0.0 (0.0)            ; 7 (7)               ; 21 (21)                   ; 0 (0)         ; 0                 ; 0     ; 0          ; 0    ; 0            ; |TopLevel|PS2controller:inst8|ps2_controller:inst1     ; ps2_controller       ; work         ;
+;    |seven_seg_controller:inst|   ; 4.6 (4.6)            ; 5.7 (5.7)                        ; 1.1 (1.1)                                         ; 0.0 (0.0)                        ; 0.0 (0.0)            ; 14 (14)             ; 0 (0)                     ; 0 (0)         ; 0                 ; 0     ; 0          ; 0    ; 0            ; |TopLevel|seven_seg_controller:inst                    ; seven_seg_controller ; work         ;
 +----------------------------------+----------------------+----------------------------------+---------------------------------------------------+----------------------------------+----------------------+---------------------+---------------------------+---------------+-------------------+-------+------------+------+--------------+--------------------------------------------------------+----------------------+--------------+
 Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
 
@@ -1028,7 +1028,6 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; led0     ; Output   ; -- ; --   ; --   ; -- ; (0)  ; (31)  ; --     ; --                     ; --                       ;
 ; ps2data  ; Output   ; -- ; --   ; --   ; -- ; (0)  ; (31)  ; --     ; --                     ; --                       ;
 ; ps2clk   ; Output   ; -- ; --   ; --   ; -- ; (0)  ; (31)  ; --     ; --                     ; --                       ;
-; led1     ; Output   ; -- ; --   ; --   ; -- ; (0)  ; (31)  ; --     ; --                     ; --                       ;
 ; disp0[0] ; Output   ; -- ; --   ; --   ; -- ; (0)  ; (31)  ; --     ; --                     ; --                       ;
 ; disp0[1] ; Output   ; -- ; --   ; --   ; -- ; (0)  ; (31)  ; --     ; --                     ; --                       ;
 ; disp0[2] ; Output   ; -- ; --   ; --   ; -- ; (0)  ; (31)  ; --     ; --                     ; --                       ;
@@ -1053,7 +1052,7 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; led[2]   ; Output   ; -- ; --   ; --   ; -- ; (0)  ; (31)  ; --     ; --                     ; --                       ;
 ; sw0      ; Input    ; -- ; (0)  ; --   ; -- ; --   ; --    ; --     ; --                     ; --                       ;
 ; PS2_DAT  ; Input    ; -- ; (0)  ; --   ; -- ; --   ; --    ; --     ; --                     ; --                       ;
-; PS2_CLK  ; Input    ; -- ; (0)  ; --   ; -- ; --   ; --    ; --     ; --                     ; --                       ;
+; PS2_CLK  ; Input    ; -- ; (0)  ; (0)  ; -- ; --   ; --    ; --     ; --                     ; --                       ;
 ; clk50    ; Input    ; -- ; (0)  ; --   ; -- ; --   ; --    ; --     ; --                     ; --                       ;
 +----------+----------+----+------+------+----+------+-------+--------+------------------------+--------------------------+
 
@@ -1079,9 +1078,11 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ;      - PS2controller:inst8|ps2_controller:inst1|count_reg[2]           ; 0                 ; 0       ;
 ;      - PS2controller:inst8|ps2_controller:inst1|count_reg[1]           ; 0                 ; 0       ;
 ;      - led0~output                                                     ; 0                 ; 0       ;
+;      - PS2controller:inst8|ps2_controller:inst1|data_out[1]~DUPLICATE  ; 0                 ; 0       ;
+;      - PS2controller:inst8|ps2_controller:inst1|data_out[2]~DUPLICATE  ; 0                 ; 0       ;
 ;      - PS2controller:inst8|ps2_controller:inst1|data_out[3]~DUPLICATE  ; 0                 ; 0       ;
-;      - PS2controller:inst8|ps2_controller:inst1|data_out[4]~DUPLICATE  ; 0                 ; 0       ;
-;      - PS2controller:inst8|ps2_controller:inst1|data_out[5]~DUPLICATE  ; 0                 ; 0       ;
+;      - PS2controller:inst8|ps2_controller:inst1|data_out[6]~DUPLICATE  ; 0                 ; 0       ;
+;      - PS2controller:inst8|ps2_controller:inst1|count_reg[0]~DUPLICATE ; 0                 ; 0       ;
 ;      - PS2controller:inst8|ps2_controller:inst1|count_reg[3]~DUPLICATE ; 0                 ; 0       ;
 ;      - PS2controller:inst8|ps2_controller:inst1|count_reg[2]~DUPLICATE ; 0                 ; 0       ;
 ;      - PS2controller:inst8|ps2_controller:inst1|count_reg[1]~DUPLICATE ; 0                 ; 0       ;
@@ -1089,7 +1090,7 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ;      - PS2controller:inst8|ps2_controller:inst1|data_out[7]            ; 0                 ; 0       ;
 ;      - ps2data~output                                                  ; 0                 ; 0       ;
 ; PS2_CLK                                                                ;                   ;         ;
-;      - PS2controller:inst8|ps2_controller:inst1|bsy                    ; 0                 ; 0       ;
+;      - PS2controller:inst8|ps2_controller:inst1|bsy                    ; 1                 ; 0       ;
 ;      - PS2_CLK~inputCLKENA0                                            ; 0                 ; 0       ;
 ; clk50                                                                  ;                   ;         ;
 +------------------------------------------------------------------------+-------------------+---------+
@@ -1101,14 +1102,14 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; Name                                                   ; Location            ; Fan-Out ; Usage        ; Global ; Global Resource Used ; Global Line Name ; Enable Signal Source Name ;
 +--------------------------------------------------------+---------------------+---------+--------------+--------+----------------------+------------------+---------------------------+
 ; PS2_CLK                                                ; PIN_D3              ; 2       ; Clock        ; no     ; --                   ; --               ; --                        ;
-; PS2_CLK                                                ; PIN_D3              ; 19      ; Clock        ; yes    ; Global Clock         ; GCLK3            ; --                        ;
-; PS2controller:inst8|break_code_detector:inst|Equal1~4  ; LABCELL_X40_Y9_N12  ; 30      ; Sync. clear  ; no     ; --                   ; --               ; --                        ;
-; PS2controller:inst8|inst5                              ; LABCELL_X41_Y9_N45  ; 8       ; Async. clear ; no     ; --                   ; --               ; --                        ;
-; PS2controller:inst8|ps2_controller:inst1|Equal1~0      ; MLABCELL_X42_Y9_N3  ; 11      ; Sync. clear  ; no     ; --                   ; --               ; --                        ;
-; PS2controller:inst8|ps2_controller:inst1|bsy           ; FF_X42_Y9_N41       ; 8       ; Clock        ; no     ; --                   ; --               ; --                        ;
-; PS2controller:inst8|ps2_controller:inst1|data_out[3]~0 ; MLABCELL_X42_Y9_N36 ; 11      ; Clock enable ; no     ; --                   ; --               ; --                        ;
-; clk50                                                  ; PIN_M9              ; 30      ; Clock        ; yes    ; Global Clock         ; GCLK6            ; --                        ;
-; sw0                                                    ; PIN_U13             ; 21      ; Async. clear ; no     ; --                   ; --               ; --                        ;
+; PS2_CLK                                                ; PIN_D3              ; 21      ; Clock        ; yes    ; Global Clock         ; GCLK2            ; --                        ;
+; PS2controller:inst8|break_code_detector:inst|Equal1~4  ; LABCELL_X35_Y3_N12  ; 31      ; Sync. clear  ; no     ; --                   ; --               ; --                        ;
+; PS2controller:inst8|inst5                              ; LABCELL_X36_Y3_N6   ; 8       ; Async. clear ; no     ; --                   ; --               ; --                        ;
+; PS2controller:inst8|ps2_controller:inst1|Equal1~0      ; MLABCELL_X37_Y3_N36 ; 12      ; Sync. clear  ; no     ; --                   ; --               ; --                        ;
+; PS2controller:inst8|ps2_controller:inst1|bsy           ; FF_X37_Y3_N56       ; 8       ; Clock        ; no     ; --                   ; --               ; --                        ;
+; PS2controller:inst8|ps2_controller:inst1|data_out[3]~0 ; MLABCELL_X37_Y3_N57 ; 12      ; Clock enable ; no     ; --                   ; --               ; --                        ;
+; clk50                                                  ; PIN_M9              ; 31      ; Clock        ; yes    ; Global Clock         ; GCLK4            ; --                        ;
+; sw0                                                    ; PIN_U13             ; 23      ; Async. clear ; no     ; --                   ; --               ; --                        ;
 +--------------------------------------------------------+---------------------+---------+--------------+--------+----------------------+------------------+---------------------------+
 
 
@@ -1117,8 +1118,8 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +---------+----------+---------+----------------------+------------------+---------------------------+
 ; Name    ; Location ; Fan-Out ; Global Resource Used ; Global Line Name ; Enable Signal Source Name ;
 +---------+----------+---------+----------------------+------------------+---------------------------+
-; PS2_CLK ; PIN_D3   ; 19      ; Global Clock         ; GCLK3            ; --                        ;
-; clk50   ; PIN_M9   ; 30      ; Global Clock         ; GCLK6            ; --                        ;
+; PS2_CLK ; PIN_D3   ; 21      ; Global Clock         ; GCLK2            ; --                        ;
+; clk50   ; PIN_M9   ; 31      ; Global Clock         ; GCLK4            ; --                        ;
 +---------+----------+---------+----------------------+------------------+---------------------------+
 
 
@@ -1127,21 +1128,21 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +------------------------------+------------------------+
 ; Routing Resource Type        ; Usage                  ;
 +------------------------------+------------------------+
-; Block interconnects          ; 87 / 140,056 ( < 1 % ) ;
-; C12 interconnects            ; 11 / 6,048 ( < 1 % )   ;
-; C2 interconnects             ; 40 / 54,648 ( < 1 % )  ;
-; C4 interconnects             ; 54 / 25,920 ( < 1 % )  ;
+; Block interconnects          ; 91 / 140,056 ( < 1 % ) ;
+; C12 interconnects            ; 16 / 6,048 ( < 1 % )   ;
+; C2 interconnects             ; 37 / 54,648 ( < 1 % )  ;
+; C4 interconnects             ; 37 / 25,920 ( < 1 % )  ;
 ; DQS bus muxes                ; 0 / 17 ( 0 % )         ;
 ; DQS-18 I/O buses             ; 0 / 17 ( 0 % )         ;
 ; DQS-9 I/O buses              ; 0 / 17 ( 0 % )         ;
-; Direct links                 ; 13 / 140,056 ( < 1 % ) ;
+; Direct links                 ; 20 / 140,056 ( < 1 % ) ;
 ; Global clocks                ; 2 / 16 ( 13 % )        ;
-; Local interconnects          ; 37 / 36,960 ( < 1 % )  ;
+; Local interconnects          ; 34 / 36,960 ( < 1 % )  ;
 ; Quadrant clocks              ; 0 / 88 ( 0 % )         ;
-; R14 interconnects            ; 51 / 5,984 ( < 1 % )   ;
-; R14/C12 interconnect drivers ; 57 / 9,504 ( < 1 % )   ;
-; R3 interconnects             ; 51 / 60,192 ( < 1 % )  ;
-; R6 interconnects             ; 69 / 127,072 ( < 1 % ) ;
+; R14 interconnects            ; 50 / 5,984 ( < 1 % )   ;
+; R14/C12 interconnect drivers ; 59 / 9,504 ( < 1 % )   ;
+; R3 interconnects             ; 49 / 60,192 ( < 1 % )  ;
+; R6 interconnects             ; 66 / 127,072 ( < 1 % ) ;
 ; Spine clocks                 ; 2 / 120 ( 2 % )        ;
 ; Wire stub REs                ; 0 / 7,344 ( 0 % )      ;
 +------------------------------+------------------------+
@@ -1202,14 +1203,13 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +--------------------+-----------+--------------+-----------+--------------+--------------+-----------+-----------+--------------+-----------+-----------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+
 ; Pin/Rules          ; IO_000001 ; IO_000002    ; IO_000003 ; IO_000004    ; IO_000005    ; IO_000006 ; IO_000007 ; IO_000008    ; IO_000009 ; IO_000010 ; IO_000011    ; IO_000012    ; IO_000013    ; IO_000014    ; IO_000015    ; IO_000018    ; IO_000019    ; IO_000020    ; IO_000021    ; IO_000022    ; IO_000023    ; IO_000024    ; IO_000026    ; IO_000027    ; IO_000045    ; IO_000046    ; IO_000047    ; IO_000034    ;
 +--------------------+-----------+--------------+-----------+--------------+--------------+-----------+-----------+--------------+-----------+-----------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+
-; Total Pass         ; 30        ; 0            ; 30        ; 0            ; 0            ; 30        ; 30        ; 0            ; 30        ; 30        ; 0            ; 26           ; 0            ; 0            ; 0            ; 0            ; 26           ; 0            ; 0            ; 0            ; 0            ; 26           ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ;
+; Total Pass         ; 29        ; 0            ; 29        ; 0            ; 0            ; 29        ; 29        ; 0            ; 29        ; 29        ; 0            ; 25           ; 0            ; 0            ; 0            ; 0            ; 25           ; 0            ; 0            ; 0            ; 0            ; 25           ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ;
 ; Total Unchecked    ; 0         ; 0            ; 0         ; 0            ; 0            ; 0         ; 0         ; 0            ; 0         ; 0         ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ;
-; Total Inapplicable ; 0         ; 30           ; 0         ; 30           ; 30           ; 0         ; 0         ; 30           ; 0         ; 0         ; 30           ; 4            ; 30           ; 30           ; 30           ; 30           ; 4            ; 30           ; 30           ; 30           ; 30           ; 4            ; 30           ; 30           ; 30           ; 30           ; 30           ; 30           ;
+; Total Inapplicable ; 0         ; 29           ; 0         ; 29           ; 29           ; 0         ; 0         ; 29           ; 0         ; 0         ; 29           ; 4            ; 29           ; 29           ; 29           ; 29           ; 4            ; 29           ; 29           ; 29           ; 29           ; 4            ; 29           ; 29           ; 29           ; 29           ; 29           ; 29           ;
 ; Total Fail         ; 0         ; 0            ; 0         ; 0            ; 0            ; 0         ; 0         ; 0            ; 0         ; 0         ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ;
 ; led0               ; Pass      ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ;
 ; ps2data            ; Pass      ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ;
 ; ps2clk             ; Pass      ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ;
-; led1               ; Pass      ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ;
 ; disp0[0]           ; Pass      ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ;
 ; disp0[1]           ; Pass      ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ;
 ; disp0[2]           ; Pass      ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ;
@@ -1287,8 +1287,8 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +----------------------------------------------+----------------------+-------------------+
 ; Source Clock(s)                              ; Destination Clock(s) ; Delay Added in ns ;
 +----------------------------------------------+----------------------+-------------------+
-; PS2controller:inst8|ps2_controller:inst1|bsy ; clk50                ; 24.0              ;
-; PS2_CLK                                      ; PS2_CLK              ; 17.4              ;
+; PS2controller:inst8|ps2_controller:inst1|bsy ; clk50                ; 23.8              ;
+; PS2_CLK                                      ; PS2_CLK              ; 21.8              ;
 +----------------------------------------------+----------------------+-------------------+
 Note: For more information on problematic transfers, consider running the Fitter again with the Optimize hold timing option (Settings Menu) turned off.
 This will disable optimization of problematic paths and expose them for further analysis using the Timing Analyzer.
@@ -1299,26 +1299,26 @@ This will disable optimization of problematic paths and expose them for further 
 +-------------------------------------------------------+----------------------------------------------------------+-------------------+
 ; Source Register                                       ; Destination Register                                     ; Delay Added in ns ;
 +-------------------------------------------------------+----------------------------------------------------------+-------------------+
-; PS2controller:inst8|bsy_detector:inst2|data_out[0]    ; PS2controller:inst8|break_code_detector:inst|released    ; 4.115             ;
-; PS2controller:inst8|bsy_detector:inst2|data_out[2]    ; PS2controller:inst8|break_code_detector:inst|released    ; 4.087             ;
-; PS2controller:inst8|bsy_detector:inst2|data_out[1]    ; PS2controller:inst8|break_code_detector:inst|released    ; 4.081             ;
-; PS2controller:inst8|bsy_detector:inst2|data_out[5]    ; PS2controller:inst8|break_code_detector:inst|released    ; 3.973             ;
-; PS2controller:inst8|bsy_detector:inst2|data_out[6]    ; PS2controller:inst8|break_code_detector:inst|released    ; 3.972             ;
-; PS2controller:inst8|bsy_detector:inst2|data_out[4]    ; PS2controller:inst8|break_code_detector:inst|released    ; 3.941             ;
-; PS2controller:inst8|bsy_detector:inst2|data_out[3]    ; PS2controller:inst8|break_code_detector:inst|released    ; 3.916             ;
-; PS2controller:inst8|bsy_detector:inst2|data_out[7]    ; PS2controller:inst8|break_code_detector:inst|released    ; 3.853             ;
-; PS2controller:inst8|ps2_controller:inst1|count_reg[1] ; PS2controller:inst8|ps2_controller:inst1|bsy             ; 1.288             ;
-; PS2controller:inst8|ps2_controller:inst1|count_reg[2] ; PS2controller:inst8|ps2_controller:inst1|bsy             ; 1.283             ;
-; PS2controller:inst8|ps2_controller:inst1|count_reg[0] ; PS2controller:inst8|ps2_controller:inst1|bsy             ; 1.260             ;
-; PS2controller:inst8|ps2_controller:inst1|count_reg[3] ; PS2controller:inst8|ps2_controller:inst1|bsy             ; 1.221             ;
-; PS2controller:inst8|ps2_controller:inst1|data_out[4]  ; PS2controller:inst8|ps2_controller:inst1|data_out[3]     ; 0.703             ;
-; PS2controller:inst8|ps2_controller:inst1|data_out[3]  ; PS2controller:inst8|ps2_controller:inst1|data_out[2]     ; 0.689             ;
-; PS2controller:inst8|ps2_controller:inst1|data_out[7]  ; PS2controller:inst8|ps2_controller:inst1|data_out[6]     ; 0.519             ;
-; PS2controller:inst8|ps2_controller:inst1|data_out[2]  ; PS2controller:inst8|ps2_controller:inst1|data_out[1]     ; 0.519             ;
-; PS2controller:inst8|ps2_controller:inst1|data_out[5]  ; PS2controller:inst8|ps2_controller:inst1|data_out[4]     ; 0.505             ;
-; PS2controller:inst8|ps2_controller:inst1|data_out[1]  ; PS2controller:inst8|ps2_controller:inst1|data_out[0]     ; 0.505             ;
-; PS2controller:inst8|ps2_controller:inst1|data_out[6]  ; PS2controller:inst8|ps2_controller:inst1|data_out[5]     ; 0.501             ;
-; PS2controller:inst8|break_code_detector:inst|released ; PS2controller:inst8|break_code_detector:inst|counter[24] ; 0.323             ;
+; PS2controller:inst8|bsy_detector:inst2|data_out[0]    ; PS2controller:inst8|break_code_detector:inst|released    ; 4.094             ;
+; PS2controller:inst8|bsy_detector:inst2|data_out[2]    ; PS2controller:inst8|break_code_detector:inst|released    ; 4.064             ;
+; PS2controller:inst8|bsy_detector:inst2|data_out[1]    ; PS2controller:inst8|break_code_detector:inst|released    ; 4.061             ;
+; PS2controller:inst8|bsy_detector:inst2|data_out[4]    ; PS2controller:inst8|break_code_detector:inst|released    ; 3.896             ;
+; PS2controller:inst8|bsy_detector:inst2|data_out[5]    ; PS2controller:inst8|break_code_detector:inst|released    ; 3.896             ;
+; PS2controller:inst8|bsy_detector:inst2|data_out[3]    ; PS2controller:inst8|break_code_detector:inst|released    ; 3.877             ;
+; PS2controller:inst8|bsy_detector:inst2|data_out[6]    ; PS2controller:inst8|break_code_detector:inst|released    ; 3.876             ;
+; PS2controller:inst8|bsy_detector:inst2|data_out[7]    ; PS2controller:inst8|break_code_detector:inst|released    ; 3.830             ;
+; PS2controller:inst8|ps2_controller:inst1|count_reg[2] ; PS2controller:inst8|ps2_controller:inst1|bsy             ; 2.076             ;
+; PS2controller:inst8|ps2_controller:inst1|count_reg[1] ; PS2controller:inst8|ps2_controller:inst1|bsy             ; 2.056             ;
+; PS2controller:inst8|ps2_controller:inst1|count_reg[0] ; PS2controller:inst8|ps2_controller:inst1|bsy             ; 2.054             ;
+; PS2controller:inst8|ps2_controller:inst1|count_reg[3] ; PS2controller:inst8|ps2_controller:inst1|bsy             ; 2.014             ;
+; PS2controller:inst8|ps2_controller:inst1|data_out[6]  ; PS2controller:inst8|ps2_controller:inst1|data_out[5]     ; 0.747             ;
+; PS2controller:inst8|ps2_controller:inst1|data_out[1]  ; PS2controller:inst8|ps2_controller:inst1|data_out[0]     ; 0.747             ;
+; PS2controller:inst8|ps2_controller:inst1|data_out[7]  ; PS2controller:inst8|ps2_controller:inst1|data_out[6]     ; 0.734             ;
+; PS2controller:inst8|ps2_controller:inst1|data_out[2]  ; PS2controller:inst8|ps2_controller:inst1|data_out[1]     ; 0.733             ;
+; PS2controller:inst8|ps2_controller:inst1|data_out[4]  ; PS2controller:inst8|ps2_controller:inst1|data_out[3]     ; 0.564             ;
+; PS2controller:inst8|ps2_controller:inst1|data_out[3]  ; PS2controller:inst8|ps2_controller:inst1|data_out[2]     ; 0.548             ;
+; PS2controller:inst8|ps2_controller:inst1|data_out[5]  ; PS2controller:inst8|ps2_controller:inst1|data_out[4]     ; 0.546             ;
+; PS2controller:inst8|break_code_detector:inst|released ; PS2controller:inst8|break_code_detector:inst|counter[24] ; 0.319             ;
 +-------------------------------------------------------+----------------------------------------------------------+-------------------+
 Note: This table only shows the top 20 path(s) that have the largest delay added for hold.
 
@@ -1327,7 +1327,7 @@ Note: This table only shows the top 20 path(s) that have the largest delay added
 ; Fitter Messages ;
 +-----------------+
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
-Info (20030): Parallel compilation is enabled and will use 16 of the 16 processors detected
+Info (20030): Parallel compilation is enabled and will use 4 of the 4 processors detected
 Info (119006): Selected device 5CEBA4F23C7 for design "ps2_controller"
 Info (21077): Low junction temperature is 0 degrees C
 Info (21077): High junction temperature is 85 degrees C
@@ -1336,11 +1336,11 @@ Warning (292013): Feature LogicLock is only available with a valid subscription 
 Warning (15714): Some pins have incomplete I/O assignments. Refer to the I/O Assignment Warnings report for details
 Info (184020): Starting Fitter periphery placement operations
 Info (11191): Automatically promoted 2 clocks (2 global)
-    Info (11162): clk50~inputCLKENA0 with 26 fanout uses global clock CLKCTRL_G6
-    Info (11162): PS2_CLK~inputCLKENA0 with 13 fanout uses global clock CLKCTRL_G2
+    Info (11162): clk50~inputCLKENA0 with 26 fanout uses global clock CLKCTRL_G4
+    Info (11162): PS2_CLK~inputCLKENA0 with 13 fanout uses global clock CLKCTRL_G3
         Info (12525): This signal is driven by core routing -- it may be moved during placement to reduce routing delays
 Warning (16406): 1 global input pin(s) will use non-dedicated clock routing
-    Warning (16407): Source REFCLK I/O is not placed onto a dedicated REFCLK input pin for global clock driver PS2_CLK~inputCLKENA0, placed at CLKCTRL_G2
+    Warning (16407): Source REFCLK I/O is not placed onto a dedicated REFCLK input pin for global clock driver PS2_CLK~inputCLKENA0, placed at CLKCTRL_G3
         Info (179012): Refclk input I/O pad PS2_CLK is placed onto PIN_D3
 Info (184021): Fitter periphery placement operations ending: elapsed time is 00:00:00
 Info (176233): Starting register packing
@@ -1367,38 +1367,38 @@ Warning (15705): Ignored locations or region assignments to the following nodes
     Warning (15706): Node "disp3[4]" is assigned to location or region, but does not exist in design
     Warning (15706): Node "disp3[5]" is assigned to location or region, but does not exist in design
     Warning (15706): Node "disp3[6]" is assigned to location or region, but does not exist in design
+    Warning (15706): Node "led1" is assigned to location or region, but does not exist in design
 Info (11798): Fitter preparation operations ending: elapsed time is 00:00:03
 Info (170189): Fitter placement preparation operations beginning
 Info (14951): The Fitter is using Advanced Physical Optimization.
-Info (170190): Fitter placement preparation operations ending: elapsed time is 00:00:02
+Info (170190): Fitter placement preparation operations ending: elapsed time is 00:00:01
 Info (170191): Fitter placement operations beginning
 Info (170137): Fitter placement was successful
 Info (170192): Fitter placement operations ending: elapsed time is 00:00:01
 Info (170193): Fitter routing operations beginning
 Info (170195): Router estimated average interconnect usage is 0% of the available device resources
-    Info (170196): Router estimated peak interconnect usage is 0% of the available device resources in the region that extends from location X33_Y0 to location X43_Y10
-Info (188005): Design requires adding a large amount of routing delay for some signals to meet hold time requirements, and there is an excessive demand for the available routing resources. The Fitter is reducing the routing delays of some signals to help the routing algorithm converge, but doing so may cause hold time failures. For more information, refer to the "Estimated Delay Added for Hold Timing" section in the Fitter report.
+    Info (170196): Router estimated peak interconnect usage is 1% of the available device resources in the region that extends from location X33_Y0 to location X43_Y10
 Info (170199): The Fitter performed an Auto Fit compilation.  Optimizations were skipped to reduce compilation time.
     Info (170201): Optimizations that may affect the design's routability were skipped
 Info (170194): Fitter routing operations ending: elapsed time is 00:00:02
-Info (11888): Total time spent on timing analysis during the Fitter is 0.26 seconds.
+Info (11888): Total time spent on timing analysis during the Fitter is 0.44 seconds.
 Info (334003): Started post-fitting delay annotation
 Info (334004): Delay annotation completed successfully
 Info (334003): Started post-fitting delay annotation
 Info (334004): Delay annotation completed successfully
-Info (11801): Fitter post-fit operations ending: elapsed time is 00:00:02
+Info (11801): Fitter post-fit operations ending: elapsed time is 00:00:03
 Warning (171167): Found invalid Fitter assignments. See the Ignored Assignments panel in the Fitter Compilation Report for more information.
-Info (144001): Generated suppressed messages file C:/Users/minec/Desktop/Work/GitHub Repos/PROJ300/Firmware/PS2 Controller/output_files/ps2_controller.fit.smsg
-Info: Quartus Prime Fitter was successful. 0 errors, 23 warnings
-    Info: Peak virtual memory: 7547 megabytes
-    Info: Processing ended: Fri Feb 09 21:42:31 2024
+Info (144001): Generated suppressed messages file C:/Users/minec/Desktop/github/PROJ300/Firmware/PS2 Controller/output_files/ps2_controller.fit.smsg
+Info: Quartus Prime Fitter was successful. 0 errors, 24 warnings
+    Info: Peak virtual memory: 6225 megabytes
+    Info: Processing ended: Sat Apr  6 08:44:21 2024
     Info: Elapsed time: 00:00:16
-    Info: Total CPU time (on all processors): 00:00:48
+    Info: Total CPU time (on all processors): 00:00:17
 
 
 +----------------------------+
 ; Fitter Suppressed Messages ;
 +----------------------------+
-The suppressed messages can be found in C:/Users/minec/Desktop/Work/GitHub Repos/PROJ300/Firmware/PS2 Controller/output_files/ps2_controller.fit.smsg.
+The suppressed messages can be found in C:/Users/minec/Desktop/github/PROJ300/Firmware/PS2 Controller/output_files/ps2_controller.fit.smsg.
 
 

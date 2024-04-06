@@ -1,0 +1,693 @@
+------------------------------------------------------------
+Timing Analyzer Summary
+------------------------------------------------------------
+
+Type  : Slow 1100mV 85C Model Setup 'CPU:inst|CU_counter:inst25|counter_reg[0]'
+Slack : -15.690
+TNS   : -2895.869
+
+Type  : Slow 1100mV 85C Model Setup 'clk_50'
+Slack : -14.637
+TNS   : -9201.890
+
+Type  : Slow 1100mV 85C Model Setup 'PS2controller:inst3|ps2_controller:inst1|bsy'
+Slack : -9.546
+TNS   : -68.818
+
+Type  : Slow 1100mV 85C Model Setup 'Memory:inst1|InstructionBuffer:inst6|fine_clk_divN:inst12|clk_out'
+Slack : -8.950
+TNS   : -32731.305
+
+Type  : Slow 1100mV 85C Model Setup 'CPU:inst|CPU_regN:inst|internal_reg[0]'
+Slack : -6.516
+TNS   : -2943.008
+
+Type  : Slow 1100mV 85C Model Setup 'VGA_controller:inst6|clk_divN:inst15|counter[17]'
+Slack : -6.005
+TNS   : -131.805
+
+Type  : Slow 1100mV 85C Model Setup 'VGA_controller:inst6|t_ff:inst|q'
+Slack : -5.102
+TNS   : -263.356
+
+Type  : Slow 1100mV 85C Model Setup 'UART:inst44|uart_controller:inst1|bsy'
+Slack : -4.463
+TNS   : -27.680
+
+Type  : Slow 1100mV 85C Model Setup 'sw_rst'
+Slack : -2.395
+TNS   : -2.395
+
+Type  : Slow 1100mV 85C Model Setup 'UART:inst44|uart_clk_divN:inst|clk_out'
+Slack : -2.326
+TNS   : -31.465
+
+Type  : Slow 1100mV 85C Model Setup 'PS2_DAT'
+Slack : -1.519
+TNS   : -21.355
+
+Type  : Slow 1100mV 85C Model Hold 'CPU:inst|CU_counter:inst25|counter_reg[0]'
+Slack : -1.968
+TNS   : -15.409
+
+Type  : Slow 1100mV 85C Model Hold 'CPU:inst|CPU_regN:inst|internal_reg[0]'
+Slack : -1.895
+TNS   : -15.478
+
+Type  : Slow 1100mV 85C Model Hold 'clk_50'
+Slack : -0.334
+TNS   : -0.658
+
+Type  : Slow 1100mV 85C Model Hold 'sw_rst'
+Slack : -0.215
+TNS   : -0.215
+
+Type  : Slow 1100mV 85C Model Hold 'VGA_controller:inst6|clk_divN:inst15|counter[17]'
+Slack : 0.164
+TNS   : 0.000
+
+Type  : Slow 1100mV 85C Model Hold 'VGA_controller:inst6|t_ff:inst|q'
+Slack : 0.248
+TNS   : 0.000
+
+Type  : Slow 1100mV 85C Model Hold 'PS2_DAT'
+Slack : 0.285
+TNS   : 0.000
+
+Type  : Slow 1100mV 85C Model Hold 'Memory:inst1|InstructionBuffer:inst6|fine_clk_divN:inst12|clk_out'
+Slack : 0.620
+TNS   : 0.000
+
+Type  : Slow 1100mV 85C Model Hold 'UART:inst44|uart_controller:inst1|bsy'
+Slack : 0.688
+TNS   : 0.000
+
+Type  : Slow 1100mV 85C Model Hold 'UART:inst44|uart_clk_divN:inst|clk_out'
+Slack : 0.815
+TNS   : 0.000
+
+Type  : Slow 1100mV 85C Model Hold 'PS2controller:inst3|ps2_controller:inst1|bsy'
+Slack : 4.754
+TNS   : 0.000
+
+Type  : Slow 1100mV 85C Model Recovery 'PS2controller:inst3|ps2_controller:inst1|bsy'
+Slack : -6.325
+TNS   : -44.972
+
+Type  : Slow 1100mV 85C Model Recovery 'PS2_DAT'
+Slack : -6.246
+TNS   : -112.340
+
+Type  : Slow 1100mV 85C Model Recovery 'UART:inst44|uart_controller:inst1|bsy'
+Slack : -5.011
+TNS   : -32.670
+
+Type  : Slow 1100mV 85C Model Recovery 'clk_50'
+Slack : -2.741
+TNS   : -162.603
+
+Type  : Slow 1100mV 85C Model Recovery 'UART:inst44|uart_clk_divN:inst|clk_out'
+Slack : -1.873
+TNS   : -28.012
+
+Type  : Slow 1100mV 85C Model Removal 'UART:inst44|uart_clk_divN:inst|clk_out'
+Slack : 0.842
+TNS   : 0.000
+
+Type  : Slow 1100mV 85C Model Removal 'clk_50'
+Slack : 1.146
+TNS   : 0.000
+
+Type  : Slow 1100mV 85C Model Removal 'UART:inst44|uart_controller:inst1|bsy'
+Slack : 1.902
+TNS   : 0.000
+
+Type  : Slow 1100mV 85C Model Removal 'PS2controller:inst3|ps2_controller:inst1|bsy'
+Slack : 2.724
+TNS   : 0.000
+
+Type  : Slow 1100mV 85C Model Removal 'PS2_DAT'
+Slack : 2.755
+TNS   : 0.000
+
+Type  : Slow 1100mV 85C Model Minimum Pulse Width 'CPU:inst|CPU_regN:inst|internal_reg[0]'
+Slack : -2.222
+TNS   : -2511.969
+
+Type  : Slow 1100mV 85C Model Minimum Pulse Width 'Memory:inst1|InstructionBuffer:inst6|fine_clk_divN:inst12|clk_out'
+Slack : -0.538
+TNS   : -3393.546
+
+Type  : Slow 1100mV 85C Model Minimum Pulse Width 'clk_50'
+Slack : -0.538
+TNS   : -1065.014
+
+Type  : Slow 1100mV 85C Model Minimum Pulse Width 'VGA_controller:inst6|t_ff:inst|q'
+Slack : -0.538
+TNS   : -64.867
+
+Type  : Slow 1100mV 85C Model Minimum Pulse Width 'VGA_controller:inst6|clk_divN:inst15|counter[17]'
+Slack : -0.538
+TNS   : -17.210
+
+Type  : Slow 1100mV 85C Model Minimum Pulse Width 'PS2_DAT'
+Slack : -0.538
+TNS   : -13.917
+
+Type  : Slow 1100mV 85C Model Minimum Pulse Width 'UART:inst44|uart_clk_divN:inst|clk_out'
+Slack : -0.538
+TNS   : -12.641
+
+Type  : Slow 1100mV 85C Model Minimum Pulse Width 'CPU:inst|CU_counter:inst25|counter_reg[0]'
+Slack : -0.285
+TNS   : -22.879
+
+Type  : Slow 1100mV 85C Model Minimum Pulse Width 'sw_rst'
+Slack : 0.281
+TNS   : 0.000
+
+Type  : Slow 1100mV 85C Model Minimum Pulse Width 'PS2controller:inst3|ps2_controller:inst1|bsy'
+Slack : 0.380
+TNS   : 0.000
+
+Type  : Slow 1100mV 85C Model Minimum Pulse Width 'UART:inst44|uart_controller:inst1|bsy'
+Slack : 0.410
+TNS   : 0.000
+
+Type  : Slow 1100mV 0C Model Setup 'CPU:inst|CU_counter:inst25|counter_reg[0]'
+Slack : -15.936
+TNS   : -2927.989
+
+Type  : Slow 1100mV 0C Model Setup 'clk_50'
+Slack : -14.862
+TNS   : -9038.891
+
+Type  : Slow 1100mV 0C Model Setup 'PS2controller:inst3|ps2_controller:inst1|bsy'
+Slack : -9.458
+TNS   : -68.041
+
+Type  : Slow 1100mV 0C Model Setup 'Memory:inst1|InstructionBuffer:inst6|fine_clk_divN:inst12|clk_out'
+Slack : -8.647
+TNS   : -31360.002
+
+Type  : Slow 1100mV 0C Model Setup 'CPU:inst|CPU_regN:inst|internal_reg[0]'
+Slack : -6.540
+TNS   : -2995.456
+
+Type  : Slow 1100mV 0C Model Setup 'VGA_controller:inst6|clk_divN:inst15|counter[17]'
+Slack : -6.066
+TNS   : -133.193
+
+Type  : Slow 1100mV 0C Model Setup 'VGA_controller:inst6|t_ff:inst|q'
+Slack : -5.245
+TNS   : -266.867
+
+Type  : Slow 1100mV 0C Model Setup 'UART:inst44|uart_controller:inst1|bsy'
+Slack : -4.282
+TNS   : -26.893
+
+Type  : Slow 1100mV 0C Model Setup 'UART:inst44|uart_clk_divN:inst|clk_out'
+Slack : -2.302
+TNS   : -29.989
+
+Type  : Slow 1100mV 0C Model Setup 'sw_rst'
+Slack : -2.259
+TNS   : -2.259
+
+Type  : Slow 1100mV 0C Model Setup 'PS2_DAT'
+Slack : -1.473
+TNS   : -20.591
+
+Type  : Slow 1100mV 0C Model Hold 'CPU:inst|CU_counter:inst25|counter_reg[0]'
+Slack : -1.837
+TNS   : -13.554
+
+Type  : Slow 1100mV 0C Model Hold 'CPU:inst|CPU_regN:inst|internal_reg[0]'
+Slack : -1.735
+TNS   : -13.137
+
+Type  : Slow 1100mV 0C Model Hold 'clk_50'
+Slack : -0.532
+TNS   : -1.055
+
+Type  : Slow 1100mV 0C Model Hold 'sw_rst'
+Slack : -0.439
+TNS   : -0.439
+
+Type  : Slow 1100mV 0C Model Hold 'VGA_controller:inst6|clk_divN:inst15|counter[17]'
+Slack : 0.155
+TNS   : 0.000
+
+Type  : Slow 1100mV 0C Model Hold 'VGA_controller:inst6|t_ff:inst|q'
+Slack : 0.230
+TNS   : 0.000
+
+Type  : Slow 1100mV 0C Model Hold 'PS2_DAT'
+Slack : 0.372
+TNS   : 0.000
+
+Type  : Slow 1100mV 0C Model Hold 'UART:inst44|uart_controller:inst1|bsy'
+Slack : 0.569
+TNS   : 0.000
+
+Type  : Slow 1100mV 0C Model Hold 'Memory:inst1|InstructionBuffer:inst6|fine_clk_divN:inst12|clk_out'
+Slack : 0.622
+TNS   : 0.000
+
+Type  : Slow 1100mV 0C Model Hold 'UART:inst44|uart_clk_divN:inst|clk_out'
+Slack : 0.855
+TNS   : 0.000
+
+Type  : Slow 1100mV 0C Model Hold 'PS2controller:inst3|ps2_controller:inst1|bsy'
+Slack : 4.635
+TNS   : 0.000
+
+Type  : Slow 1100mV 0C Model Recovery 'PS2controller:inst3|ps2_controller:inst1|bsy'
+Slack : -6.343
+TNS   : -45.579
+
+Type  : Slow 1100mV 0C Model Recovery 'PS2_DAT'
+Slack : -5.923
+TNS   : -106.544
+
+Type  : Slow 1100mV 0C Model Recovery 'UART:inst44|uart_controller:inst1|bsy'
+Slack : -5.071
+TNS   : -33.036
+
+Type  : Slow 1100mV 0C Model Recovery 'clk_50'
+Slack : -2.540
+TNS   : -150.110
+
+Type  : Slow 1100mV 0C Model Recovery 'UART:inst44|uart_clk_divN:inst|clk_out'
+Slack : -1.846
+TNS   : -27.601
+
+Type  : Slow 1100mV 0C Model Removal 'clk_50'
+Slack : 0.897
+TNS   : 0.000
+
+Type  : Slow 1100mV 0C Model Removal 'UART:inst44|uart_clk_divN:inst|clk_out'
+Slack : 0.964
+TNS   : 0.000
+
+Type  : Slow 1100mV 0C Model Removal 'UART:inst44|uart_controller:inst1|bsy'
+Slack : 1.805
+TNS   : 0.000
+
+Type  : Slow 1100mV 0C Model Removal 'PS2_DAT'
+Slack : 2.178
+TNS   : 0.000
+
+Type  : Slow 1100mV 0C Model Removal 'PS2controller:inst3|ps2_controller:inst1|bsy'
+Slack : 2.665
+TNS   : 0.000
+
+Type  : Slow 1100mV 0C Model Minimum Pulse Width 'CPU:inst|CPU_regN:inst|internal_reg[0]'
+Slack : -2.228
+TNS   : -2538.826
+
+Type  : Slow 1100mV 0C Model Minimum Pulse Width 'Memory:inst1|InstructionBuffer:inst6|fine_clk_divN:inst12|clk_out'
+Slack : -0.538
+TNS   : -3193.649
+
+Type  : Slow 1100mV 0C Model Minimum Pulse Width 'clk_50'
+Slack : -0.538
+TNS   : -1102.332
+
+Type  : Slow 1100mV 0C Model Minimum Pulse Width 'VGA_controller:inst6|t_ff:inst|q'
+Slack : -0.538
+TNS   : -64.193
+
+Type  : Slow 1100mV 0C Model Minimum Pulse Width 'VGA_controller:inst6|clk_divN:inst15|counter[17]'
+Slack : -0.538
+TNS   : -17.134
+
+Type  : Slow 1100mV 0C Model Minimum Pulse Width 'PS2_DAT'
+Slack : -0.538
+TNS   : -13.886
+
+Type  : Slow 1100mV 0C Model Minimum Pulse Width 'UART:inst44|uart_clk_divN:inst|clk_out'
+Slack : -0.538
+TNS   : -12.433
+
+Type  : Slow 1100mV 0C Model Minimum Pulse Width 'CPU:inst|CU_counter:inst25|counter_reg[0]'
+Slack : -0.299
+TNS   : -14.653
+
+Type  : Slow 1100mV 0C Model Minimum Pulse Width 'sw_rst'
+Slack : 0.286
+TNS   : 0.000
+
+Type  : Slow 1100mV 0C Model Minimum Pulse Width 'PS2controller:inst3|ps2_controller:inst1|bsy'
+Slack : 0.376
+TNS   : 0.000
+
+Type  : Slow 1100mV 0C Model Minimum Pulse Width 'UART:inst44|uart_controller:inst1|bsy'
+Slack : 0.383
+TNS   : 0.000
+
+Type  : Fast 1100mV 85C Model Setup 'CPU:inst|CU_counter:inst25|counter_reg[0]'
+Slack : -7.246
+TNS   : -1311.292
+
+Type  : Fast 1100mV 85C Model Setup 'clk_50'
+Slack : -6.772
+TNS   : -4522.058
+
+Type  : Fast 1100mV 85C Model Setup 'Memory:inst1|InstructionBuffer:inst6|fine_clk_divN:inst12|clk_out'
+Slack : -4.914
+TNS   : -17528.385
+
+Type  : Fast 1100mV 85C Model Setup 'PS2controller:inst3|ps2_controller:inst1|bsy'
+Slack : -4.476
+TNS   : -31.620
+
+Type  : Fast 1100mV 85C Model Setup 'CPU:inst|CPU_regN:inst|internal_reg[0]'
+Slack : -3.407
+TNS   : -1355.980
+
+Type  : Fast 1100mV 85C Model Setup 'VGA_controller:inst6|clk_divN:inst15|counter[17]'
+Slack : -2.861
+TNS   : -61.440
+
+Type  : Fast 1100mV 85C Model Setup 'VGA_controller:inst6|t_ff:inst|q'
+Slack : -2.208
+TNS   : -141.449
+
+Type  : Fast 1100mV 85C Model Setup 'UART:inst44|uart_controller:inst1|bsy'
+Slack : -2.070
+TNS   : -11.523
+
+Type  : Fast 1100mV 85C Model Setup 'sw_rst'
+Slack : -1.635
+TNS   : -1.635
+
+Type  : Fast 1100mV 85C Model Setup 'UART:inst44|uart_clk_divN:inst|clk_out'
+Slack : -0.950
+TNS   : -11.584
+
+Type  : Fast 1100mV 85C Model Setup 'PS2_DAT'
+Slack : -0.258
+TNS   : -1.205
+
+Type  : Fast 1100mV 85C Model Hold 'CPU:inst|CU_counter:inst25|counter_reg[0]'
+Slack : -1.187
+TNS   : -9.838
+
+Type  : Fast 1100mV 85C Model Hold 'CPU:inst|CPU_regN:inst|internal_reg[0]'
+Slack : -1.023
+TNS   : -8.298
+
+Type  : Fast 1100mV 85C Model Hold 'clk_50'
+Slack : -0.185
+TNS   : -0.753
+
+Type  : Fast 1100mV 85C Model Hold 'VGA_controller:inst6|t_ff:inst|q'
+Slack : -0.135
+TNS   : -0.403
+
+Type  : Fast 1100mV 85C Model Hold 'VGA_controller:inst6|clk_divN:inst15|counter[17]'
+Slack : 0.025
+TNS   : 0.000
+
+Type  : Fast 1100mV 85C Model Hold 'sw_rst'
+Slack : 0.111
+TNS   : 0.000
+
+Type  : Fast 1100mV 85C Model Hold 'PS2_DAT'
+Slack : 0.158
+TNS   : 0.000
+
+Type  : Fast 1100mV 85C Model Hold 'Memory:inst1|InstructionBuffer:inst6|fine_clk_divN:inst12|clk_out'
+Slack : 0.266
+TNS   : 0.000
+
+Type  : Fast 1100mV 85C Model Hold 'UART:inst44|uart_controller:inst1|bsy'
+Slack : 0.333
+TNS   : 0.000
+
+Type  : Fast 1100mV 85C Model Hold 'UART:inst44|uart_clk_divN:inst|clk_out'
+Slack : 0.410
+TNS   : 0.000
+
+Type  : Fast 1100mV 85C Model Hold 'PS2controller:inst3|ps2_controller:inst1|bsy'
+Slack : 2.889
+TNS   : 0.000
+
+Type  : Fast 1100mV 85C Model Recovery 'PS2_DAT'
+Slack : -3.213
+TNS   : -57.782
+
+Type  : Fast 1100mV 85C Model Recovery 'PS2controller:inst3|ps2_controller:inst1|bsy'
+Slack : -3.166
+TNS   : -21.559
+
+Type  : Fast 1100mV 85C Model Recovery 'UART:inst44|uart_controller:inst1|bsy'
+Slack : -2.280
+TNS   : -13.707
+
+Type  : Fast 1100mV 85C Model Recovery 'clk_50'
+Slack : -1.555
+TNS   : -91.780
+
+Type  : Fast 1100mV 85C Model Recovery 'UART:inst44|uart_clk_divN:inst|clk_out'
+Slack : -0.485
+TNS   : -7.253
+
+Type  : Fast 1100mV 85C Model Removal 'clk_50'
+Slack : 0.314
+TNS   : 0.000
+
+Type  : Fast 1100mV 85C Model Removal 'UART:inst44|uart_clk_divN:inst|clk_out'
+Slack : 0.465
+TNS   : 0.000
+
+Type  : Fast 1100mV 85C Model Removal 'UART:inst44|uart_controller:inst1|bsy'
+Slack : 1.165
+TNS   : 0.000
+
+Type  : Fast 1100mV 85C Model Removal 'PS2_DAT'
+Slack : 1.344
+TNS   : 0.000
+
+Type  : Fast 1100mV 85C Model Removal 'PS2controller:inst3|ps2_controller:inst1|bsy'
+Slack : 1.693
+TNS   : 0.000
+
+Type  : Fast 1100mV 85C Model Minimum Pulse Width 'CPU:inst|CPU_regN:inst|internal_reg[0]'
+Slack : -1.078
+TNS   : -821.215
+
+Type  : Fast 1100mV 85C Model Minimum Pulse Width 'clk_50'
+Slack : -0.364
+TNS   : -120.627
+
+Type  : Fast 1100mV 85C Model Minimum Pulse Width 'PS2_DAT'
+Slack : -0.198
+TNS   : -3.534
+
+Type  : Fast 1100mV 85C Model Minimum Pulse Width 'CPU:inst|CU_counter:inst25|counter_reg[0]'
+Slack : -0.080
+TNS   : -0.390
+
+Type  : Fast 1100mV 85C Model Minimum Pulse Width 'VGA_controller:inst6|t_ff:inst|q'
+Slack : -0.057
+TNS   : -0.502
+
+Type  : Fast 1100mV 85C Model Minimum Pulse Width 'UART:inst44|uart_clk_divN:inst|clk_out'
+Slack : -0.043
+TNS   : -0.633
+
+Type  : Fast 1100mV 85C Model Minimum Pulse Width 'sw_rst'
+Slack : -0.001
+TNS   : -0.001
+
+Type  : Fast 1100mV 85C Model Minimum Pulse Width 'Memory:inst1|InstructionBuffer:inst6|fine_clk_divN:inst12|clk_out'
+Slack : 0.017
+TNS   : 0.000
+
+Type  : Fast 1100mV 85C Model Minimum Pulse Width 'VGA_controller:inst6|clk_divN:inst15|counter[17]'
+Slack : 0.109
+TNS   : 0.000
+
+Type  : Fast 1100mV 85C Model Minimum Pulse Width 'UART:inst44|uart_controller:inst1|bsy'
+Slack : 0.420
+TNS   : 0.000
+
+Type  : Fast 1100mV 85C Model Minimum Pulse Width 'PS2controller:inst3|ps2_controller:inst1|bsy'
+Slack : 0.443
+TNS   : 0.000
+
+Type  : Fast 1100mV 0C Model Setup 'CPU:inst|CU_counter:inst25|counter_reg[0]'
+Slack : -6.732
+TNS   : -1200.528
+
+Type  : Fast 1100mV 0C Model Setup 'clk_50'
+Slack : -6.140
+TNS   : -3959.173
+
+Type  : Fast 1100mV 0C Model Setup 'PS2controller:inst3|ps2_controller:inst1|bsy'
+Slack : -4.284
+TNS   : -30.510
+
+Type  : Fast 1100mV 0C Model Setup 'Memory:inst1|InstructionBuffer:inst6|fine_clk_divN:inst12|clk_out'
+Slack : -4.210
+TNS   : -15137.934
+
+Type  : Fast 1100mV 0C Model Setup 'CPU:inst|CPU_regN:inst|internal_reg[0]'
+Slack : -3.122
+TNS   : -1267.127
+
+Type  : Fast 1100mV 0C Model Setup 'VGA_controller:inst6|clk_divN:inst15|counter[17]'
+Slack : -2.641
+TNS   : -56.722
+
+Type  : Fast 1100mV 0C Model Setup 'VGA_controller:inst6|t_ff:inst|q'
+Slack : -2.021
+TNS   : -137.043
+
+Type  : Fast 1100mV 0C Model Setup 'UART:inst44|uart_controller:inst1|bsy'
+Slack : -1.767
+TNS   : -9.813
+
+Type  : Fast 1100mV 0C Model Setup 'sw_rst'
+Slack : -1.292
+TNS   : -1.292
+
+Type  : Fast 1100mV 0C Model Setup 'UART:inst44|uart_clk_divN:inst|clk_out'
+Slack : -0.779
+TNS   : -9.550
+
+Type  : Fast 1100mV 0C Model Setup 'PS2_DAT'
+Slack : -0.140
+TNS   : -0.381
+
+Type  : Fast 1100mV 0C Model Hold 'CPU:inst|CU_counter:inst25|counter_reg[0]'
+Slack : -0.933
+TNS   : -6.914
+
+Type  : Fast 1100mV 0C Model Hold 'CPU:inst|CPU_regN:inst|internal_reg[0]'
+Slack : -0.788
+TNS   : -5.523
+
+Type  : Fast 1100mV 0C Model Hold 'clk_50'
+Slack : -0.385
+TNS   : -3.422
+
+Type  : Fast 1100mV 0C Model Hold 'VGA_controller:inst6|t_ff:inst|q'
+Slack : -0.168
+TNS   : -0.978
+
+Type  : Fast 1100mV 0C Model Hold 'sw_rst'
+Slack : -0.050
+TNS   : -0.050
+
+Type  : Fast 1100mV 0C Model Hold 'VGA_controller:inst6|clk_divN:inst15|counter[17]'
+Slack : 0.012
+TNS   : 0.000
+
+Type  : Fast 1100mV 0C Model Hold 'PS2_DAT'
+Slack : 0.164
+TNS   : 0.000
+
+Type  : Fast 1100mV 0C Model Hold 'UART:inst44|uart_controller:inst1|bsy'
+Slack : 0.245
+TNS   : 0.000
+
+Type  : Fast 1100mV 0C Model Hold 'Memory:inst1|InstructionBuffer:inst6|fine_clk_divN:inst12|clk_out'
+Slack : 0.256
+TNS   : 0.000
+
+Type  : Fast 1100mV 0C Model Hold 'UART:inst44|uart_clk_divN:inst|clk_out'
+Slack : 0.390
+TNS   : 0.000
+
+Type  : Fast 1100mV 0C Model Hold 'PS2controller:inst3|ps2_controller:inst1|bsy'
+Slack : 2.816
+TNS   : 0.000
+
+Type  : Fast 1100mV 0C Model Recovery 'PS2controller:inst3|ps2_controller:inst1|bsy'
+Slack : -2.965
+TNS   : -20.439
+
+Type  : Fast 1100mV 0C Model Recovery 'PS2_DAT'
+Slack : -2.502
+TNS   : -44.986
+
+Type  : Fast 1100mV 0C Model Recovery 'UART:inst44|uart_controller:inst1|bsy'
+Slack : -2.114
+TNS   : -13.024
+
+Type  : Fast 1100mV 0C Model Recovery 'clk_50'
+Slack : -1.338
+TNS   : -78.886
+
+Type  : Fast 1100mV 0C Model Recovery 'UART:inst44|uart_clk_divN:inst|clk_out'
+Slack : -0.511
+TNS   : -7.648
+
+Type  : Fast 1100mV 0C Model Removal 'clk_50'
+Slack : 0.103
+TNS   : 0.000
+
+Type  : Fast 1100mV 0C Model Removal 'UART:inst44|uart_clk_divN:inst|clk_out'
+Slack : 0.558
+TNS   : 0.000
+
+Type  : Fast 1100mV 0C Model Removal 'PS2_DAT'
+Slack : 0.752
+TNS   : 0.000
+
+Type  : Fast 1100mV 0C Model Removal 'UART:inst44|uart_controller:inst1|bsy'
+Slack : 1.143
+TNS   : 0.000
+
+Type  : Fast 1100mV 0C Model Removal 'PS2controller:inst3|ps2_controller:inst1|bsy'
+Slack : 1.647
+TNS   : 0.000
+
+Type  : Fast 1100mV 0C Model Minimum Pulse Width 'CPU:inst|CPU_regN:inst|internal_reg[0]'
+Slack : -0.868
+TNS   : -594.794
+
+Type  : Fast 1100mV 0C Model Minimum Pulse Width 'clk_50'
+Slack : -0.352
+TNS   : -124.471
+
+Type  : Fast 1100mV 0C Model Minimum Pulse Width 'PS2_DAT'
+Slack : -0.192
+TNS   : -3.426
+
+Type  : Fast 1100mV 0C Model Minimum Pulse Width 'UART:inst44|uart_clk_divN:inst|clk_out'
+Slack : -0.032
+TNS   : -0.467
+
+Type  : Fast 1100mV 0C Model Minimum Pulse Width 'VGA_controller:inst6|t_ff:inst|q'
+Slack : -0.011
+TNS   : -0.020
+
+Type  : Fast 1100mV 0C Model Minimum Pulse Width 'sw_rst'
+Slack : 0.006
+TNS   : 0.000
+
+Type  : Fast 1100mV 0C Model Minimum Pulse Width 'CPU:inst|CU_counter:inst25|counter_reg[0]'
+Slack : 0.046
+TNS   : 0.000
+
+Type  : Fast 1100mV 0C Model Minimum Pulse Width 'Memory:inst1|InstructionBuffer:inst6|fine_clk_divN:inst12|clk_out'
+Slack : 0.071
+TNS   : 0.000
+
+Type  : Fast 1100mV 0C Model Minimum Pulse Width 'VGA_controller:inst6|clk_divN:inst15|counter[17]'
+Slack : 0.123
+TNS   : 0.000
+
+Type  : Fast 1100mV 0C Model Minimum Pulse Width 'UART:inst44|uart_controller:inst1|bsy'
+Slack : 0.426
+TNS   : 0.000
+
+Type  : Fast 1100mV 0C Model Minimum Pulse Width 'PS2controller:inst3|ps2_controller:inst1|bsy'
+Slack : 0.454
+TNS   : 0.000
+
+------------------------------------------------------------

@@ -39,12 +39,159 @@
 
 set_global_assignment -name FAMILY "Cyclone V"
 set_global_assignment -name DEVICE 5CEBA4F23C7
-set_global_assignment -name TOP_LEVEL_ENTITY Computer
+set_global_assignment -name TOP_LEVEL_ENTITY TopLevel
 set_global_assignment -name ORIGINAL_QUARTUS_VERSION 20.1.0
 set_global_assignment -name PROJECT_CREATION_TIME_DATE "21:47:17  APRIL 04, 2024"
-set_global_assignment -name LAST_QUARTUS_VERSION "20.1.0 Lite Edition"
+set_global_assignment -name LAST_QUARTUS_VERSION "23.1std.0 Lite Edition"
 set_global_assignment -name PROJECT_OUTPUT_DIRECTORY output_files
 set_global_assignment -name MIN_CORE_JUNCTION_TEMP 0
 set_global_assignment -name MAX_CORE_JUNCTION_TEMP 85
 set_global_assignment -name ERROR_CHECK_FREQUENCY_DIVISOR 256
+set_global_assignment -name POWER_PRESET_COOLING_SOLUTION "23 MM HEAT SINK WITH 200 LFPM AIRFLOW"
+set_global_assignment -name POWER_BOARD_THERMAL_MODEL "NONE (CONSERVATIVE)"
+set_global_assignment -name PARTITION_NETLIST_TYPE SOURCE -section_id Top
+set_global_assignment -name PARTITION_FITTER_PRESERVATION_LEVEL PLACEMENT_AND_ROUTING -section_id Top
+set_global_assignment -name PARTITION_COLOR 16764057 -section_id Top
+set_global_assignment -name SYSTEMVERILOG_FILE "UART/sv files/bsy_detector.sv"
+set_global_assignment -name SYSTEMVERILOG_FILE "VGA/sv files/mux12.sv"
 set_global_assignment -name BDF_FILE TopLevel.bdf
+set_global_assignment -name BDF_FILE VGA/VGA_controller.bdf
+set_global_assignment -name BDF_FILE VGA/sprites.bdf
+set_global_assignment -name BDF_FILE VGA/rgbMUX.bdf
+set_global_assignment -name SYSTEMVERILOG_FILE "VGA/sv files/xnor_2.sv"
+set_global_assignment -name SYSTEMVERILOG_FILE "VGA/sv files/vsync_cnt.sv"
+set_global_assignment -name SYSTEMVERILOG_FILE "VGA/sv files/t_ff.sv"
+set_global_assignment -name SYSTEMVERILOG_FILE "VGA/sv files/sprite_ROM_square.sv"
+set_global_assignment -name SYSTEMVERILOG_FILE "VGA/sv files/sprite_MUX.sv"
+set_global_assignment -name SYSTEMVERILOG_FILE "VGA/sv files/selector.sv"
+set_global_assignment -name SYSTEMVERILOG_FILE "VGA/sv files/rgb_controller.sv"
+set_global_assignment -name SYSTEMVERILOG_FILE "VGA/sv files/pixel_offset_controller.sv"
+set_global_assignment -name SYSTEMVERILOG_FILE "VGA/sv files/not4.sv"
+set_global_assignment -name SYSTEMVERILOG_FILE "VGA/sv files/hsync_cnt.sv"
+set_global_assignment -name SYSTEMVERILOG_FILE "VGA/sv files/fine_clk_divN.sv"
+set_global_assignment -name SYSTEMVERILOG_FILE "VGA/sv files/clk_divN.sv"
+set_global_assignment -name BDF_FILE UART/UART.bdf
+set_global_assignment -name BDF_FILE UART/InstructionBuffer.bdf
+set_global_assignment -name SYSTEMVERILOG_FILE "UART/sv files/uart_controller.sv"
+set_global_assignment -name SYSTEMVERILOG_FILE "UART/sv files/uart_clk_divN.sv"
+set_global_assignment -name SYSTEMVERILOG_FILE "UART/sv files/seven_seg_controller.sv"
+set_global_assignment -name SYSTEMVERILOG_FILE "UART/sv files/pulse_gen.sv"
+set_global_assignment -name SYSTEMVERILOG_FILE "UART/sv files/intermediaryRAM.sv"
+set_global_assignment -name SYSTEMVERILOG_FILE "UART/sv files/instructionRAM.sv"
+set_global_assignment -name SYSTEMVERILOG_FILE "UART/sv files/debug_address_counterN.sv"
+set_global_assignment -name SYSTEMVERILOG_FILE "UART/sv files/debouncer.sv"
+set_global_assignment -name SYSTEMVERILOG_FILE "UART/sv files/d_ffN.sv"
+set_global_assignment -name BDF_FILE PS2/PS2controller.bdf
+set_global_assignment -name SYSTEMVERILOG_FILE "PS2/sv files/seven_seg_controller.sv"
+set_global_assignment -name SYSTEMVERILOG_FILE "PS2/sv files/ps2_controller.sv"
+set_global_assignment -name SYSTEMVERILOG_FILE "PS2/sv files/break_code_detector.sv"
+set_global_assignment -name BDF_FILE CPU/TestCircuit.bdf
+set_global_assignment -name BDF_FILE CPU/Memory.bdf
+set_global_assignment -name BDF_FILE CPU/GPR_selector.bdf
+set_global_assignment -name BDF_FILE CPU/CPU.bdf
+set_global_assignment -name SYSTEMVERILOG_FILE "CPU/sv files/testROM.sv"
+set_global_assignment -name SYSTEMVERILOG_FILE "CPU/sv files/systemBus_muxN.sv"
+set_global_assignment -name SYSTEMVERILOG_FILE "CPU/sv files/operand_MUX.sv"
+set_global_assignment -name SYSTEMVERILOG_FILE "CPU/sv files/M_RAM.sv"
+set_global_assignment -name SYSTEMVERILOG_FILE "CPU/sv files/M_MUX.sv"
+set_global_assignment -name SYSTEMVERILOG_FILE "CPU/sv files/M_mmr_selector.sv"
+set_global_assignment -name SYSTEMVERILOG_FILE "CPU/sv files/M_mmr_MUX.sv"
+set_global_assignment -name SYSTEMVERILOG_FILE "CPU/sv files/M_mmr_DEMUX.sv"
+set_global_assignment -name SYSTEMVERILOG_FILE "CPU/sv files/M_DEMUX.sv"
+set_global_assignment -name SYSTEMVERILOG_FILE "CPU/sv files/M_addr_checker.sv"
+set_global_assignment -name SYSTEMVERILOG_FILE "CPU/sv files/GPR_MUX.sv"
+set_global_assignment -name SYSTEMVERILOG_FILE "CPU/sv files/GPR_DEMUX.sv"
+set_global_assignment -name SYSTEMVERILOG_FILE "CPU/sv files/flags_setter.sv"
+set_global_assignment -name SYSTEMVERILOG_FILE "CPU/sv files/dest_reg_selector.sv"
+set_global_assignment -name SYSTEMVERILOG_FILE "CPU/sv files/CU_logic.sv"
+set_global_assignment -name SYSTEMVERILOG_FILE "CPU/sv files/CU_decoder.sv"
+set_global_assignment -name SYSTEMVERILOG_FILE "CPU/sv files/CU_counter.sv"
+set_global_assignment -name SYSTEMVERILOG_FILE "CPU/sv files/CPU_regN.sv"
+set_global_assignment -name SYSTEMVERILOG_FILE "CPU/sv files/CPU_latchN.sv"
+set_global_assignment -name SYSTEMVERILOG_FILE "CPU/sv files/conc32.sv"
+set_global_assignment -name SYSTEMVERILOG_FILE "CPU/sv files/ALU.sv"
+set_global_assignment -name BDF_FILE Audio/music_frequencies.bdf
+set_global_assignment -name BDF_FILE Audio/AudioController.bdf
+set_global_assignment -name SYSTEMVERILOG_FILE "Audio/sv files/special_key_detector.sv"
+set_global_assignment -name SYSTEMVERILOG_FILE "Audio/sv files/octave_mux.sv"
+set_global_assignment -name SYSTEMVERILOG_FILE "Audio/sv files/muxN.sv"
+set_global_assignment -name SYSTEMVERILOG_FILE "Audio/sv files/key_detector.sv"
+set_global_assignment -name VERILOG_INPUT_VERSION VERILOG_2001
+set_global_assignment -name VERILOG_SHOW_LMF_MAPPING_MESSAGES OFF
+set_global_assignment -name ALLOW_ANY_RAM_SIZE_FOR_RECOGNITION OFF
+set_location_assignment PIN_K16 -to UART2_data_rx
+set_location_assignment PIN_M9 -to clk_50
+set_location_assignment PIN_U21 -to disp0[0]
+set_location_assignment PIN_V21 -to disp0[1]
+set_location_assignment PIN_W22 -to disp0[2]
+set_location_assignment PIN_W21 -to disp0[3]
+set_location_assignment PIN_Y22 -to disp0[4]
+set_location_assignment PIN_Y21 -to disp0[5]
+set_location_assignment PIN_AA22 -to disp0[6]
+set_location_assignment PIN_AA20 -to disp1[0]
+set_location_assignment PIN_AB20 -to disp1[1]
+set_location_assignment PIN_AA19 -to disp1[2]
+set_location_assignment PIN_AA18 -to disp1[3]
+set_location_assignment PIN_AB18 -to disp1[4]
+set_location_assignment PIN_AA17 -to disp1[5]
+set_location_assignment PIN_U22 -to disp1[6]
+set_location_assignment PIN_Y19 -to disp2[0]
+set_location_assignment PIN_AB17 -to disp2[1]
+set_location_assignment PIN_AA10 -to disp2[2]
+set_location_assignment PIN_Y14 -to disp2[3]
+set_location_assignment PIN_V14 -to disp2[4]
+set_location_assignment PIN_AB22 -to disp2[5]
+set_location_assignment PIN_AB21 -to disp2[6]
+set_location_assignment PIN_Y16 -to disp3[0]
+set_location_assignment PIN_W16 -to disp3[1]
+set_location_assignment PIN_Y17 -to disp3[2]
+set_location_assignment PIN_V16 -to disp3[3]
+set_location_assignment PIN_U17 -to disp3[4]
+set_location_assignment PIN_V18 -to disp3[5]
+set_location_assignment PIN_V19 -to disp3[6]
+set_location_assignment PIN_U20 -to disp4[0]
+set_location_assignment PIN_Y20 -to disp4[1]
+set_location_assignment PIN_V20 -to disp4[2]
+set_location_assignment PIN_U16 -to disp4[3]
+set_location_assignment PIN_U15 -to disp4[4]
+set_location_assignment PIN_Y15 -to disp4[5]
+set_location_assignment PIN_P9 -to disp4[6]
+set_location_assignment PIN_N9 -to disp5[0]
+set_location_assignment PIN_M8 -to disp5[1]
+set_location_assignment PIN_T14 -to disp5[2]
+set_location_assignment PIN_P14 -to disp5[3]
+set_location_assignment PIN_C1 -to disp5[4]
+set_location_assignment PIN_C2 -to disp5[5]
+set_location_assignment PIN_W19 -to disp5[6]
+set_location_assignment PIN_U13 -to sw_rst
+set_location_assignment PIN_V13 -to sw_rst_CPU
+set_location_assignment PIN_U7 -to key0
+set_location_assignment PIN_W9 -to key1
+set_location_assignment PIN_AA2 -to FPGALED0
+set_location_assignment PIN_AA1 -to FPGALED1
+set_location_assignment PIN_L1 -to FPGA_LED[7]
+set_location_assignment PIN_L2 -to FPGA_LED[6]
+set_location_assignment PIN_U1 -to FPGA_LED[5]
+set_location_assignment PIN_U2 -to FPGA_LED[4]
+set_location_assignment PIN_N1 -to FPGA_LED[3]
+set_location_assignment PIN_N2 -to FPGA_LED[2]
+set_location_assignment PIN_Y3 -to FPGA_LED[1]
+set_location_assignment PIN_W2 -to FPGA_LED[0]
+set_location_assignment PIN_D3 -to PS2_CLK
+set_location_assignment PIN_G2 -to PS2_DAT
+set_location_assignment PIN_T18 -to buzzer
+set_location_assignment PIN_A7 -to b[3]
+set_location_assignment PIN_A8 -to b[2]
+set_location_assignment PIN_B7 -to b[1]
+set_location_assignment PIN_B6 -to b[0]
+set_location_assignment PIN_J8 -to g[3]
+set_location_assignment PIN_J7 -to g[2]
+set_location_assignment PIN_K7 -to g[1]
+set_location_assignment PIN_L7 -to g[0]
+set_location_assignment PIN_H8 -to hsync
+set_location_assignment PIN_A5 -to r[3]
+set_location_assignment PIN_C9 -to r[2]
+set_location_assignment PIN_B10 -to r[1]
+set_location_assignment PIN_A9 -to r[0]
+set_location_assignment PIN_G8 -to vsync
+set_instance_assignment -name PARTITION_HIERARCHY root_partition -to | -section_id Top

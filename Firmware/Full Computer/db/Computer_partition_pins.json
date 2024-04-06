@@ -1,0 +1,293 @@
+{
+	"partitions" : [
+		{
+			"name" : "Top",
+			"pins" : [
+				{
+					"name" : "disp0[0]",
+					"strict" : false
+				},
+				{
+					"name" : "disp0[1]",
+					"strict" : false
+				},
+				{
+					"name" : "disp0[2]",
+					"strict" : false
+				},
+				{
+					"name" : "disp0[3]",
+					"strict" : false
+				},
+				{
+					"name" : "disp0[4]",
+					"strict" : false
+				},
+				{
+					"name" : "disp0[5]",
+					"strict" : false
+				},
+				{
+					"name" : "disp0[6]",
+					"strict" : false
+				},
+				{
+					"name" : "disp1[0]",
+					"strict" : false
+				},
+				{
+					"name" : "disp1[1]",
+					"strict" : false
+				},
+				{
+					"name" : "disp1[2]",
+					"strict" : false
+				},
+				{
+					"name" : "disp1[3]",
+					"strict" : false
+				},
+				{
+					"name" : "disp1[4]",
+					"strict" : false
+				},
+				{
+					"name" : "disp1[5]",
+					"strict" : false
+				},
+				{
+					"name" : "disp1[6]",
+					"strict" : false
+				},
+				{
+					"name" : "disp2[0]",
+					"strict" : false
+				},
+				{
+					"name" : "disp2[1]",
+					"strict" : false
+				},
+				{
+					"name" : "disp2[2]",
+					"strict" : false
+				},
+				{
+					"name" : "disp2[3]",
+					"strict" : false
+				},
+				{
+					"name" : "disp2[4]",
+					"strict" : false
+				},
+				{
+					"name" : "disp2[5]",
+					"strict" : false
+				},
+				{
+					"name" : "disp2[6]",
+					"strict" : false
+				},
+				{
+					"name" : "disp3[0]",
+					"strict" : false
+				},
+				{
+					"name" : "disp3[1]",
+					"strict" : false
+				},
+				{
+					"name" : "disp3[2]",
+					"strict" : false
+				},
+				{
+					"name" : "disp3[3]",
+					"strict" : false
+				},
+				{
+					"name" : "disp3[4]",
+					"strict" : false
+				},
+				{
+					"name" : "disp3[5]",
+					"strict" : false
+				},
+				{
+					"name" : "disp3[6]",
+					"strict" : false
+				},
+				{
+					"name" : "disp4[0]",
+					"strict" : false
+				},
+				{
+					"name" : "disp4[1]",
+					"strict" : false
+				},
+				{
+					"name" : "disp4[2]",
+					"strict" : false
+				},
+				{
+					"name" : "disp4[3]",
+					"strict" : false
+				},
+				{
+					"name" : "disp4[4]",
+					"strict" : false
+				},
+				{
+					"name" : "disp4[5]",
+					"strict" : false
+				},
+				{
+					"name" : "disp4[6]",
+					"strict" : false
+				},
+				{
+					"name" : "disp5[0]",
+					"strict" : false
+				},
+				{
+					"name" : "disp5[1]",
+					"strict" : false
+				},
+				{
+					"name" : "disp5[2]",
+					"strict" : false
+				},
+				{
+					"name" : "disp5[3]",
+					"strict" : false
+				},
+				{
+					"name" : "disp5[4]",
+					"strict" : false
+				},
+				{
+					"name" : "disp5[5]",
+					"strict" : false
+				},
+				{
+					"name" : "disp5[6]",
+					"strict" : false
+				},
+				{
+					"name" : "FPGALED1",
+					"strict" : false
+				},
+				{
+					"name" : "hsync",
+					"strict" : false
+				},
+				{
+					"name" : "vsync",
+					"strict" : false
+				},
+				{
+					"name" : "g[3]",
+					"strict" : false
+				},
+				{
+					"name" : "g[2]",
+					"strict" : false
+				},
+				{
+					"name" : "g[1]",
+					"strict" : false
+				},
+				{
+					"name" : "g[0]",
+					"strict" : false
+				},
+				{
+					"name" : "r[3]",
+					"strict" : false
+				},
+				{
+					"name" : "r[2]",
+					"strict" : false
+				},
+				{
+					"name" : "r[1]",
+					"strict" : false
+				},
+				{
+					"name" : "r[0]",
+					"strict" : false
+				},
+				{
+					"name" : "FPGA_LED[2]",
+					"strict" : false
+				},
+				{
+					"name" : "FPGA_LED[1]",
+					"strict" : false
+				},
+				{
+					"name" : "FPGA_LED[0]",
+					"strict" : false
+				},
+				{
+					"name" : "buzzer",
+					"strict" : false
+				},
+				{
+					"name" : "FPGALED0",
+					"strict" : false
+				},
+				{
+					"name" : "FPGA_LED[7]",
+					"strict" : false
+				},
+				{
+					"name" : "FPGA_LED[6]",
+					"strict" : false
+				},
+				{
+					"name" : "FPGA_LED[5]",
+					"strict" : false
+				},
+				{
+					"name" : "FPGA_LED[4]",
+					"strict" : false
+				},
+				{
+					"name" : "FPGA_LED[3]",
+					"strict" : false
+				},
+				{
+					"name" : "sw_rst_CPU",
+					"strict" : false
+				},
+				{
+					"name" : "sw_rst",
+					"strict" : false
+				},
+				{
+					"name" : "clk_50",
+					"strict" : false
+				},
+				{
+					"name" : "key1",
+					"strict" : false
+				},
+				{
+					"name" : "key0",
+					"strict" : false
+				},
+				{
+					"name" : "PS2_DAT",
+					"strict" : false
+				},
+				{
+					"name" : "PS2_CLK",
+					"strict" : false
+				},
+				{
+					"name" : "UART2_data_rx",
+					"strict" : false
+				}
+			]
+		}
+	]
+}
