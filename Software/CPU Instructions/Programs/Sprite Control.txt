@@ -1,0 +1,20 @@
+ldr(r0, "[]", keyboard_input);
+cmp(r0, 0x1D); // if 'W'
+beq(10);
+cmp(r0, 0x1C); // if 'A'
+beq(12);
+cmp(r0, 0x1B); // if 'S'
+beq(14);
+cmp(r0, 0x23); // if 'D'
+beq(16);
+b(18); // if nothing is pressed...
+str(0x08, sprite_mov);  // up
+b(0);
+str(0x02, sprite_mov);  // left
+b(0);
+str(0x04, sprite_mov);  // down
+b(0);
+str(0x01, sprite_mov);  // right
+b(0);
+str(0x00, sprite_mov);  // stationary
+b(0);

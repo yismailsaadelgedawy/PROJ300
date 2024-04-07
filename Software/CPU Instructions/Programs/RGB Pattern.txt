@@ -1,0 +1,34 @@
+str(0x01, vga_sel); // manual rendering mode
+mov(r1, 0xF00); // red
+mov(r2, 0x0F0); // green
+mov(r3, 0x00F); // blue
+ldr(r0, "[]", vga_column);
+cmp(r0, 213); // if column < 213
+blt(11); // if
+cmp(r0, 426); // if column < 426
+blt(13); // if
+cmp(r0, 639); // if column < 639
+blt(15); // if
+str(r1, vga_colour); 
+b(16);
+str(r2, vga_colour); 
+b(16);
+str(r3, vga_colour);
+ldr(r4, "[]", keyboard_input);  // read keyboard input
+cmp(r4, 0x00); // if nothing is pressed
+beq(4); // loop to start
+add(r1, r1,5); // else, r1+=5
+add(r2, r2,10); // r2+=10
+add(r3, r3,15); // r3+=15
+ldr(r4, "[]", keyboard_input); // read keyboard input again
+str(0x1C, audio); // play tune
+cmp(r4, 0x00); // if key released
+str(0x00, audio); // tune off - watch for early return!
+beq(4); // loop to start
+b(22); // else, wait until key released
+
+
+// renders classic RGB pattern
+// changes colour according to any key input
+
+

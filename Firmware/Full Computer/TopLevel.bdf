@@ -158,23 +158,6 @@ https://fpgasoftware.intel.com/eula.
 )
 (pin
 	(output)
-	(rect 392 1488 570 1504)
-	(text "OUTPUT" (rect 1 0 39 10)(font "Arial" (font_size 6)))
-	(text "FPGA_LED[7..0]" (rect 90 0 172 12)(font "Arial" ))
-	(pt 0 8)
-	(drawing
-		(line (pt 0 8)(pt 52 8))
-		(line (pt 52 4)(pt 78 4))
-		(line (pt 52 12)(pt 78 12))
-		(line (pt 52 12)(pt 52 4))
-		(line (pt 78 4)(pt 82 8))
-		(line (pt 82 8)(pt 78 12))
-		(line (pt 78 12)(pt 82 8))
-	)
-	(annotation_block (location)(rect 568 1488 624 1512))
-)
-(pin
-	(output)
 	(rect 520 904 696 920)
 	(text "OUTPUT" (rect 1 0 39 10)(font "Arial" (font_size 6)))
 	(text "hsync" (rect 90 0 120 12)(font "Arial" ))
@@ -410,6 +393,23 @@ https://fpgasoftware.intel.com/eula.
 		(line (pt 78 12)(pt 82 8))
 	)
 	(annotation_block (location)(rect 240 24 304 48))
+)
+(pin
+	(output)
+	(rect 392 1488 570 1504)
+	(text "OUTPUT" (rect 1 0 39 10)(font "Arial" (font_size 6)))
+	(text "FPGA_LED[7..0]" (rect 90 0 172 12)(font "Arial" ))
+	(pt 0 8)
+	(drawing
+		(line (pt 0 8)(pt 52 8))
+		(line (pt 52 4)(pt 78 4))
+		(line (pt 52 12)(pt 78 12))
+		(line (pt 52 12)(pt 52 4))
+		(line (pt 78 4)(pt 82 8))
+		(line (pt 82 8)(pt 78 12))
+		(line (pt 78 12)(pt 82 8))
+	)
+	(annotation_block (location)(rect 696 1480 752 1504))
 )
 (symbol
 	(rect 272 184 504 280)
@@ -2140,11 +2140,6 @@ https://fpgasoftware.intel.com/eula.
 	(pt -200 928)
 )
 (connector
-	(text "mmr_out_A[0]" (rect -262 928 -193 945)(font "Intel Clear" ))
-	(pt -264 944)
-	(pt -200 944)
-)
-(connector
 	(text "sw_rst" (rect -254 944 -224 961)(font "Intel Clear" ))
 	(pt -264 960)
 	(pt -200 960)
@@ -2216,11 +2211,6 @@ https://fpgasoftware.intel.com/eula.
 (connector
 	(pt -200 1144)
 	(pt -280 1144)
-)
-(connector
-	(text "mmr_out_A[0]" (rect -262 1144 -193 1161)(font "Intel Clear" ))
-	(pt -200 1160)
-	(pt -264 1160)
 )
 (connector
 	(text "sw_rst" (rect -254 1160 -224 1177)(font "Intel Clear" ))
@@ -2304,16 +2294,6 @@ https://fpgasoftware.intel.com/eula.
 	(text "clk_50" (rect 114 584 145 601)(font "Intel Clear" ))
 	(pt 152 600)
 	(pt 104 600)
-)
-(connector
-	(text "PS2_CLK" (rect 114 600 158 617)(font "Intel Clear" ))
-	(pt 152 616)
-	(pt 104 616)
-)
-(connector
-	(text "PS2_DAT" (rect 114 616 158 633)(font "Intel Clear" ))
-	(pt 152 632)
-	(pt 104 632)
 )
 (connector
 	(text "sw_rst" (rect 114 632 144 649)(font "Intel Clear" ))
@@ -2787,6 +2767,26 @@ https://fpgasoftware.intel.com/eula.
 	(pt 1000 200)
 	(pt 880 200)
 )
+(connector
+	(text "mmr_out_F[0]" (rect -262 928 -194 945)(font "Intel Clear" ))
+	(pt -264 944)
+	(pt -200 944)
+)
+(connector
+	(text "mmr_out_G[0]" (rect -262 1144 -193 1161)(font "Intel Clear" ))
+	(pt -200 1160)
+	(pt -264 1160)
+)
+(connector
+	(text "PS2_DAT" (rect 114 600 158 617)(font "Intel Clear" ))
+	(pt 152 616)
+	(pt 104 616)
+)
+(connector
+	(text "PS2_CLK" (rect 114 616 158 633)(font "Intel Clear" ))
+	(pt 152 632)
+	(pt 104 632)
+)
 (junction (pt 936 408))
 (junction (pt 936 424))
 (junction (pt 936 440))
@@ -2802,7 +2802,6 @@ https://fpgasoftware.intel.com/eula.
 (text "SW0" (rect -248 -8 -228 8)(font "Intel Clear" (font_size 6)(italic)))
 (text "SW1" (rect -248 8 -228 24)(font "Intel Clear" (font_size 6)(italic)))
 (text "Debug Displays" (rect 1144 952 1238 971)(font "Intel Clear" (font_size 8)(bold)))
-(text "LED[9..2]" (rect 640 1480 680 1496)(font "Intel Clear" (font_size 6)(italic)))
 (text "LED[0]" (rect 312 -32 341 -16)(font "Intel Clear" (font_size 6)(italic)))
 (text "LED[1]" (rect 312 24 341 40)(font "Intel Clear" (font_size 6)(italic)))
 (text "0x401: LED" (rect 752 256 801 272)(font "Intel Clear" (font_size 6)(italic)))
@@ -2821,4 +2820,5 @@ https://fpgasoftware.intel.com/eula.
 (text "0x402: keyboard data (READ ONLY)" (rect 1400 176 1555 192)(font "Intel Clear" (font_size 6)(italic)))
 (text "0x404: row (READ ONLY)" (rect 1400 208 1507 224)(font "Intel Clear" (font_size 6)(italic)))
 (text "0x405: column (READ ONLY)" (rect 1400 224 1523 240)(font "Intel Clear" (font_size 6)(italic)))
+(text "LED[9..2]" (rect 592 1472 632 1488)(font "Intel Clear" (font_size 6)(italic)))
 (rectangle (rect 1144 976 1784 1384)(color 0 0 255)(line_width 2))

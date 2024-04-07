@@ -1,5 +1,5 @@
 Analysis & Synthesis report for ps2_controller
-Sat Apr  6 08:44:04 2024
+Sun Apr  7 07:52:24 2024
 Quartus Prime Version 23.1std.0 Build 991 11/28/2023 SC Lite Edition
 
 
@@ -45,7 +45,7 @@ https://fpgasoftware.intel.com/eula.
 +----------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                     ;
 +---------------------------------+------------------------------------------------+
-; Analysis & Synthesis Status     ; Successful - Sat Apr  6 08:44:04 2024          ;
+; Analysis & Synthesis Status     ; Successful - Sun Apr  7 07:52:24 2024          ;
 ; Quartus Prime Version           ; 23.1std.0 Build 991 11/28/2023 SC Lite Edition ;
 ; Revision Name                   ; ps2_controller                                 ;
 ; Top-level Entity Name           ; TopLevel                                       ;
@@ -301,7 +301,7 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 23.1std.0 Build 991 11/28/2023 SC Lite Edition
-    Info: Processing started: Sat Apr  6 08:43:55 2024
+    Info: Processing started: Sun Apr  7 07:52:15 2024
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off ps2_controller -c ps2_controller
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20030): Parallel compilation is enabled and will use 4 of the 4 processors detected
@@ -334,9 +334,9 @@ Info (21057): Implemented 99 device resources after synthesis - the final resour
     Info (21059): Implemented 25 output pins
     Info (21061): Implemented 70 logic cells
 Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 4 warnings
-    Info: Peak virtual memory: 4820 megabytes
-    Info: Processing ended: Sat Apr  6 08:44:04 2024
+    Info: Peak virtual memory: 4826 megabytes
+    Info: Processing ended: Sun Apr  7 07:52:24 2024
     Info: Elapsed time: 00:00:09
-    Info: Total CPU time (on all processors): 00:00:12
+    Info: Total CPU time (on all processors): 00:00:11
 
 

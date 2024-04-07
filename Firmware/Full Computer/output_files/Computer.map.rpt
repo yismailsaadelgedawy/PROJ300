@@ -1,5 +1,5 @@
 Analysis & Synthesis report for Computer
-Sat Apr  6 09:34:55 2024
+Sun Apr  7 08:24:58 2024
 Quartus Prime Version 23.1std.0 Build 991 11/28/2023 SC Lite Edition
 
 
@@ -17,84 +17,83 @@ Quartus Prime Version 23.1std.0 Build 991 11/28/2023 SC Lite Edition
   9. State Machine - |TopLevel|debouncer:inst14|state_reg
  10. State Machine - |TopLevel|debouncer:inst8|state_reg
  11. User-Specified and Inferred Latches
- 12. Registers Removed During Synthesis
- 13. General Register Statistics
- 14. Inverted Register Statistics
- 15. Multiplexer Restructuring Statistics (Restructuring Performed)
- 16. Parameter Settings for User Entity Instance: VGA_controller:inst6|sprites:inst6|sprite_ROM_square:inst11
- 17. Parameter Settings for User Entity Instance: VGA_controller:inst6|d_ffN:inst18
- 18. Parameter Settings for User Entity Instance: VGA_controller:inst6|d_ffN:inst17
- 19. Parameter Settings for User Entity Instance: VGA_controller:inst6|clk_divN:inst15
- 20. Parameter Settings for User Entity Instance: VGA_controller:inst6|d_ffN:inst14
- 21. Parameter Settings for User Entity Instance: VGA_controller:inst6|d_ffN:inst13
- 22. Parameter Settings for User Entity Instance: CPU_regN:inst27
- 23. Parameter Settings for User Entity Instance: Memory:inst1|InstructionBuffer:inst6|instructionRAM:inst20
- 24. Parameter Settings for User Entity Instance: Memory:inst1|InstructionBuffer:inst6|fine_clk_divN:inst12
- 25. Parameter Settings for User Entity Instance: Memory:inst1|InstructionBuffer:inst6|d_ffN:inst16
- 26. Parameter Settings for User Entity Instance: Memory:inst1|InstructionBuffer:inst6|d_ffN:inst14
- 27. Parameter Settings for User Entity Instance: Memory:inst1|InstructionBuffer:inst6|d_ffN:inst15
- 28. Parameter Settings for User Entity Instance: Memory:inst1|InstructionBuffer:inst6|d_ffN:inst11
- 29. Parameter Settings for User Entity Instance: Memory:inst1|M_RAM:inst4
- 30. Parameter Settings for User Entity Instance: UART:inst44|uart_clk_divN:inst
- 31. Parameter Settings for User Entity Instance: CPU:inst|CU_logic:inst27
- 32. Parameter Settings for User Entity Instance: CPU:inst|ALU:inst19
- 33. Parameter Settings for User Entity Instance: CPU:inst|CPU_latchN:inst11
- 34. Parameter Settings for User Entity Instance: CPU:inst|systemBus_muxN:inst15
- 35. Parameter Settings for User Entity Instance: CPU:inst|CPU_regN:inst6
- 36. Parameter Settings for User Entity Instance: CPU:inst|CPU_regN:inst
- 37. Parameter Settings for User Entity Instance: CPU:inst|CPU_regN:inst4
- 38. Parameter Settings for User Entity Instance: CPU:inst|GPR_selector:inst18|CPU_regN:inst5
- 39. Parameter Settings for User Entity Instance: CPU:inst|GPR_selector:inst18|CPU_regN:inst7
- 40. Parameter Settings for User Entity Instance: CPU:inst|GPR_selector:inst18|CPU_regN:inst9
- 41. Parameter Settings for User Entity Instance: CPU:inst|GPR_selector:inst18|CPU_regN:inst11
- 42. Parameter Settings for User Entity Instance: CPU:inst|GPR_selector:inst18|CPU_regN:inst13
- 43. Parameter Settings for User Entity Instance: CPU:inst|GPR_selector:inst18|CPU_regN:inst15
- 44. Parameter Settings for User Entity Instance: CPU:inst|GPR_selector:inst18|CPU_regN:inst17
- 45. Parameter Settings for User Entity Instance: CPU:inst|GPR_selector:inst18|CPU_regN:inst19
- 46. Parameter Settings for User Entity Instance: CPU:inst|GPR_selector:inst18|CPU_regN:inst21
- 47. Parameter Settings for User Entity Instance: CPU:inst|GPR_selector:inst18|CPU_regN:inst23
- 48. Parameter Settings for User Entity Instance: CPU:inst|GPR_selector:inst18|CPU_regN:inst25
- 49. Parameter Settings for User Entity Instance: CPU:inst|GPR_selector:inst18|CPU_regN:inst27
- 50. Parameter Settings for User Entity Instance: CPU:inst|GPR_selector:inst18|CPU_regN:inst29
- 51. Parameter Settings for User Entity Instance: CPU:inst|CPU_latchN:inst12
- 52. Parameter Settings for User Entity Instance: CPU:inst|CPU_latchN:inst13
- 53. Parameter Settings for User Entity Instance: CPU:inst|CU_decoder:inst26
- 54. Parameter Settings for User Entity Instance: CPU:inst|CU_counter:inst25
- 55. Parameter Settings for User Entity Instance: CPU:inst|CPU_latchN:inst60
- 56. Parameter Settings for User Entity Instance: CPU:inst|CPU_regN:inst2
- 57. Parameter Settings for User Entity Instance: CPU:inst|CPU_regN:inst16
- 58. Parameter Settings for User Entity Instance: CPU_regN:inst24
- 59. Parameter Settings for User Entity Instance: CPU_regN:inst25
- 60. Parameter Settings for User Entity Instance: CPU_regN:inst26
- 61. Parameter Settings for User Entity Instance: CPU_regN:inst28
- 62. Parameter Settings for User Entity Instance: AudioController:inst45|muxN:inst4
- 63. Parameter Settings for User Entity Instance: AudioController:inst45|music_frequencies:inst|fine_clk_divN:inst
- 64. Parameter Settings for User Entity Instance: AudioController:inst45|music_frequencies:inst|fine_clk_divN:inst1
- 65. Parameter Settings for User Entity Instance: AudioController:inst45|music_frequencies:inst|fine_clk_divN:inst2
- 66. Parameter Settings for User Entity Instance: AudioController:inst45|music_frequencies:inst|fine_clk_divN:inst3
- 67. Parameter Settings for User Entity Instance: AudioController:inst45|music_frequencies:inst|fine_clk_divN:inst15
- 68. Parameter Settings for User Entity Instance: AudioController:inst45|music_frequencies:inst|fine_clk_divN:inst4
- 69. Parameter Settings for User Entity Instance: AudioController:inst45|music_frequencies:inst|fine_clk_divN:inst5
- 70. Parameter Settings for User Entity Instance: AudioController:inst45|music_frequencies:inst|fine_clk_divN:inst7
- 71. Parameter Settings for User Entity Instance: AudioController:inst45|music_frequencies:inst|fine_clk_divN:inst16
- 72. Parameter Settings for User Entity Instance: AudioController:inst45|music_frequencies:inst|fine_clk_divN:inst8
- 73. Parameter Settings for User Entity Instance: AudioController:inst45|music_frequencies:inst|fine_clk_divN:inst9
- 74. Parameter Settings for User Entity Instance: AudioController:inst45|music_frequencies:inst|fine_clk_divN:inst10
- 75. Parameter Settings for User Entity Instance: AudioController:inst45|music_frequencies:inst|fine_clk_divN:inst14
- 76. Parameter Settings for User Entity Instance: AudioController:inst45|music_frequencies:inst|fine_clk_divN:inst12
- 77. Parameter Settings for User Entity Instance: AudioController:inst45|music_frequencies:inst|fine_clk_divN:inst13
- 78. Parameter Settings for User Entity Instance: AudioController:inst45|music_frequencies:inst|fine_clk_divN:inst17
- 79. Parameter Settings for User Entity Instance: AudioController:inst45|music_frequencies:inst|fine_clk_divN:inst18
- 80. Parameter Settings for User Entity Instance: AudioController:inst45|music_frequencies:inst|fine_clk_divN:inst19
- 81. Parameter Settings for User Entity Instance: AudioController:inst45|music_frequencies:inst|fine_clk_divN:inst20
- 82. Parameter Settings for User Entity Instance: AudioController:inst45|music_frequencies:inst|fine_clk_divN:inst21
- 83. Parameter Settings for User Entity Instance: AudioController:inst45|music_frequencies:inst|fine_clk_divN:inst22
- 84. Parameter Settings for User Entity Instance: AudioController:inst45|music_frequencies:inst|fine_clk_divN:inst23
- 85. Parameter Settings for User Entity Instance: AudioController:inst45|music_frequencies:inst|fine_clk_divN:inst24
- 86. Parameter Settings for User Entity Instance: AudioController:inst45|music_frequencies:inst|fine_clk_divN:inst25
- 87. Post-Synthesis Netlist Statistics for Top Partition
- 88. Elapsed Time Per Partition
- 89. Analysis & Synthesis Messages
+ 12. General Register Statistics
+ 13. Inverted Register Statistics
+ 14. Multiplexer Restructuring Statistics (Restructuring Performed)
+ 15. Parameter Settings for User Entity Instance: VGA_controller:inst6|sprites:inst6|sprite_ROM_square:inst11
+ 16. Parameter Settings for User Entity Instance: VGA_controller:inst6|d_ffN:inst18
+ 17. Parameter Settings for User Entity Instance: VGA_controller:inst6|d_ffN:inst17
+ 18. Parameter Settings for User Entity Instance: VGA_controller:inst6|clk_divN:inst15
+ 19. Parameter Settings for User Entity Instance: VGA_controller:inst6|d_ffN:inst14
+ 20. Parameter Settings for User Entity Instance: VGA_controller:inst6|d_ffN:inst13
+ 21. Parameter Settings for User Entity Instance: CPU_regN:inst27
+ 22. Parameter Settings for User Entity Instance: Memory:inst1|InstructionBuffer:inst6|instructionRAM:inst20
+ 23. Parameter Settings for User Entity Instance: Memory:inst1|InstructionBuffer:inst6|fine_clk_divN:inst12
+ 24. Parameter Settings for User Entity Instance: Memory:inst1|InstructionBuffer:inst6|d_ffN:inst16
+ 25. Parameter Settings for User Entity Instance: Memory:inst1|InstructionBuffer:inst6|d_ffN:inst14
+ 26. Parameter Settings for User Entity Instance: Memory:inst1|InstructionBuffer:inst6|d_ffN:inst15
+ 27. Parameter Settings for User Entity Instance: Memory:inst1|InstructionBuffer:inst6|d_ffN:inst11
+ 28. Parameter Settings for User Entity Instance: Memory:inst1|M_RAM:inst4
+ 29. Parameter Settings for User Entity Instance: UART:inst44|uart_clk_divN:inst
+ 30. Parameter Settings for User Entity Instance: CPU:inst|CU_logic:inst27
+ 31. Parameter Settings for User Entity Instance: CPU:inst|ALU:inst19
+ 32. Parameter Settings for User Entity Instance: CPU:inst|CPU_latchN:inst11
+ 33. Parameter Settings for User Entity Instance: CPU:inst|systemBus_muxN:inst15
+ 34. Parameter Settings for User Entity Instance: CPU:inst|CPU_regN:inst6
+ 35. Parameter Settings for User Entity Instance: CPU:inst|CPU_regN:inst
+ 36. Parameter Settings for User Entity Instance: CPU:inst|CPU_regN:inst4
+ 37. Parameter Settings for User Entity Instance: CPU:inst|GPR_selector:inst18|CPU_regN:inst5
+ 38. Parameter Settings for User Entity Instance: CPU:inst|GPR_selector:inst18|CPU_regN:inst7
+ 39. Parameter Settings for User Entity Instance: CPU:inst|GPR_selector:inst18|CPU_regN:inst9
+ 40. Parameter Settings for User Entity Instance: CPU:inst|GPR_selector:inst18|CPU_regN:inst11
+ 41. Parameter Settings for User Entity Instance: CPU:inst|GPR_selector:inst18|CPU_regN:inst13
+ 42. Parameter Settings for User Entity Instance: CPU:inst|GPR_selector:inst18|CPU_regN:inst15
+ 43. Parameter Settings for User Entity Instance: CPU:inst|GPR_selector:inst18|CPU_regN:inst17
+ 44. Parameter Settings for User Entity Instance: CPU:inst|GPR_selector:inst18|CPU_regN:inst19
+ 45. Parameter Settings for User Entity Instance: CPU:inst|GPR_selector:inst18|CPU_regN:inst21
+ 46. Parameter Settings for User Entity Instance: CPU:inst|GPR_selector:inst18|CPU_regN:inst23
+ 47. Parameter Settings for User Entity Instance: CPU:inst|GPR_selector:inst18|CPU_regN:inst25
+ 48. Parameter Settings for User Entity Instance: CPU:inst|GPR_selector:inst18|CPU_regN:inst27
+ 49. Parameter Settings for User Entity Instance: CPU:inst|GPR_selector:inst18|CPU_regN:inst29
+ 50. Parameter Settings for User Entity Instance: CPU:inst|CPU_latchN:inst12
+ 51. Parameter Settings for User Entity Instance: CPU:inst|CPU_latchN:inst13
+ 52. Parameter Settings for User Entity Instance: CPU:inst|CU_decoder:inst26
+ 53. Parameter Settings for User Entity Instance: CPU:inst|CU_counter:inst25
+ 54. Parameter Settings for User Entity Instance: CPU:inst|CPU_latchN:inst60
+ 55. Parameter Settings for User Entity Instance: CPU:inst|CPU_regN:inst2
+ 56. Parameter Settings for User Entity Instance: CPU:inst|CPU_regN:inst16
+ 57. Parameter Settings for User Entity Instance: CPU_regN:inst24
+ 58. Parameter Settings for User Entity Instance: CPU_regN:inst25
+ 59. Parameter Settings for User Entity Instance: CPU_regN:inst26
+ 60. Parameter Settings for User Entity Instance: CPU_regN:inst28
+ 61. Parameter Settings for User Entity Instance: AudioController:inst45|muxN:inst4
+ 62. Parameter Settings for User Entity Instance: AudioController:inst45|music_frequencies:inst|fine_clk_divN:inst
+ 63. Parameter Settings for User Entity Instance: AudioController:inst45|music_frequencies:inst|fine_clk_divN:inst1
+ 64. Parameter Settings for User Entity Instance: AudioController:inst45|music_frequencies:inst|fine_clk_divN:inst2
+ 65. Parameter Settings for User Entity Instance: AudioController:inst45|music_frequencies:inst|fine_clk_divN:inst3
+ 66. Parameter Settings for User Entity Instance: AudioController:inst45|music_frequencies:inst|fine_clk_divN:inst15
+ 67. Parameter Settings for User Entity Instance: AudioController:inst45|music_frequencies:inst|fine_clk_divN:inst4
+ 68. Parameter Settings for User Entity Instance: AudioController:inst45|music_frequencies:inst|fine_clk_divN:inst5
+ 69. Parameter Settings for User Entity Instance: AudioController:inst45|music_frequencies:inst|fine_clk_divN:inst7
+ 70. Parameter Settings for User Entity Instance: AudioController:inst45|music_frequencies:inst|fine_clk_divN:inst16
+ 71. Parameter Settings for User Entity Instance: AudioController:inst45|music_frequencies:inst|fine_clk_divN:inst8
+ 72. Parameter Settings for User Entity Instance: AudioController:inst45|music_frequencies:inst|fine_clk_divN:inst9
+ 73. Parameter Settings for User Entity Instance: AudioController:inst45|music_frequencies:inst|fine_clk_divN:inst10
+ 74. Parameter Settings for User Entity Instance: AudioController:inst45|music_frequencies:inst|fine_clk_divN:inst14
+ 75. Parameter Settings for User Entity Instance: AudioController:inst45|music_frequencies:inst|fine_clk_divN:inst12
+ 76. Parameter Settings for User Entity Instance: AudioController:inst45|music_frequencies:inst|fine_clk_divN:inst13
+ 77. Parameter Settings for User Entity Instance: AudioController:inst45|music_frequencies:inst|fine_clk_divN:inst17
+ 78. Parameter Settings for User Entity Instance: AudioController:inst45|music_frequencies:inst|fine_clk_divN:inst18
+ 79. Parameter Settings for User Entity Instance: AudioController:inst45|music_frequencies:inst|fine_clk_divN:inst19
+ 80. Parameter Settings for User Entity Instance: AudioController:inst45|music_frequencies:inst|fine_clk_divN:inst20
+ 81. Parameter Settings for User Entity Instance: AudioController:inst45|music_frequencies:inst|fine_clk_divN:inst21
+ 82. Parameter Settings for User Entity Instance: AudioController:inst45|music_frequencies:inst|fine_clk_divN:inst22
+ 83. Parameter Settings for User Entity Instance: AudioController:inst45|music_frequencies:inst|fine_clk_divN:inst23
+ 84. Parameter Settings for User Entity Instance: AudioController:inst45|music_frequencies:inst|fine_clk_divN:inst24
+ 85. Parameter Settings for User Entity Instance: AudioController:inst45|music_frequencies:inst|fine_clk_divN:inst25
+ 86. Post-Synthesis Netlist Statistics for Top Partition
+ 87. Elapsed Time Per Partition
+ 88. Analysis & Synthesis Messages
 
 
 
@@ -121,13 +120,13 @@ https://fpgasoftware.intel.com/eula.
 +----------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                     ;
 +---------------------------------+------------------------------------------------+
-; Analysis & Synthesis Status     ; Successful - Sat Apr  6 09:34:55 2024          ;
+; Analysis & Synthesis Status     ; Successful - Sun Apr  7 08:24:58 2024          ;
 ; Quartus Prime Version           ; 23.1std.0 Build 991 11/28/2023 SC Lite Edition ;
 ; Revision Name                   ; Computer                                       ;
 ; Top-level Entity Name           ; TopLevel                                       ;
 ; Family                          ; Cyclone V                                      ;
 ; Logic utilization (in ALMs)     ; N/A                                            ;
-; Total registers                 ; 5452                                           ;
+; Total registers                 ; 5465                                           ;
 ; Total pins                      ; 75                                             ;
 ; Total virtual pins              ; 0                                              ;
 ; Total block memory bits         ; 0                                              ;
@@ -237,14 +236,14 @@ https://fpgasoftware.intel.com/eula.
 ; Number detected on machine ; 8           ;
 ; Maximum allowed            ; 4           ;
 ;                            ;             ;
-; Average used               ; 1.59        ;
+; Average used               ; 1.63        ;
 ; Maximum used               ; 4           ;
 ;                            ;             ;
 ; Usage by Processor         ; % Time Used ;
 ;     Processor 1            ; 100.0%      ;
-;     Processor 2            ;  22.1%      ;
-;     Processor 3            ;  18.4%      ;
-;     Processor 4            ;  18.3%      ;
+;     Processor 2            ;  22.3%      ;
+;     Processor 3            ;  22.3%      ;
+;     Processor 4            ;  18.0%      ;
 +----------------------------+-------------+
 
 
@@ -253,6 +252,11 @@ https://fpgasoftware.intel.com/eula.
 +-----------------------------------------+-----------------+------------------------------------+------------------------------------------------------------------------------------------------------+---------+
 ; File Name with User-Entered Path        ; Used in Netlist ; File Type                          ; File Name with Absolute Path                                                                         ; Library ;
 +-----------------------------------------+-----------------+------------------------------------+------------------------------------------------------------------------------------------------------+---------+
+; PS2/sv files/PS2bsy_detector.sv         ; yes             ; User SystemVerilog HDL File        ; C:/Users/minec/Desktop/github/PROJ300/Firmware/Full Computer/PS2/sv files/PS2bsy_detector.sv         ;         ;
+; PS2/PS2controller.bdf                   ; yes             ; User Block Diagram/Schematic File  ; C:/Users/minec/Desktop/github/PROJ300/Firmware/Full Computer/PS2/PS2controller.bdf                   ;         ;
+; PS2/sv files/seven_seg_controller.sv    ; yes             ; User SystemVerilog HDL File        ; C:/Users/minec/Desktop/github/PROJ300/Firmware/Full Computer/PS2/sv files/seven_seg_controller.sv    ;         ;
+; PS2/sv files/ps2_controller.sv          ; yes             ; User SystemVerilog HDL File        ; C:/Users/minec/Desktop/github/PROJ300/Firmware/Full Computer/PS2/sv files/ps2_controller.sv          ;         ;
+; PS2/sv files/break_code_detector.sv     ; yes             ; User SystemVerilog HDL File        ; C:/Users/minec/Desktop/github/PROJ300/Firmware/Full Computer/PS2/sv files/break_code_detector.sv     ;         ;
 ; UART/sv files/bsy_detector.sv           ; yes             ; User SystemVerilog HDL File        ; C:/Users/minec/Desktop/github/PROJ300/Firmware/Full Computer/UART/sv files/bsy_detector.sv           ;         ;
 ; VGA/sv files/mux12.sv                   ; yes             ; User SystemVerilog HDL File        ; C:/Users/minec/Desktop/github/PROJ300/Firmware/Full Computer/VGA/sv files/mux12.sv                   ;         ;
 ; TopLevel.bdf                            ; yes             ; User Block Diagram/Schematic File  ; C:/Users/minec/Desktop/github/PROJ300/Firmware/Full Computer/TopLevel.bdf                            ;         ;
@@ -274,14 +278,10 @@ https://fpgasoftware.intel.com/eula.
 ; UART/InstructionBuffer.bdf              ; yes             ; User Block Diagram/Schematic File  ; C:/Users/minec/Desktop/github/PROJ300/Firmware/Full Computer/UART/InstructionBuffer.bdf              ;         ;
 ; UART/sv files/uart_controller.sv        ; yes             ; User SystemVerilog HDL File        ; C:/Users/minec/Desktop/github/PROJ300/Firmware/Full Computer/UART/sv files/uart_controller.sv        ;         ;
 ; UART/sv files/uart_clk_divN.sv          ; yes             ; User SystemVerilog HDL File        ; C:/Users/minec/Desktop/github/PROJ300/Firmware/Full Computer/UART/sv files/uart_clk_divN.sv          ;         ;
-; UART/sv files/seven_seg_controller.sv   ; yes             ; User SystemVerilog HDL File        ; C:/Users/minec/Desktop/github/PROJ300/Firmware/Full Computer/UART/sv files/seven_seg_controller.sv   ;         ;
 ; UART/sv files/intermediaryRAM.sv        ; yes             ; User SystemVerilog HDL File        ; C:/Users/minec/Desktop/github/PROJ300/Firmware/Full Computer/UART/sv files/intermediaryRAM.sv        ;         ;
 ; UART/sv files/instructionRAM.sv         ; yes             ; User SystemVerilog HDL File        ; C:/Users/minec/Desktop/github/PROJ300/Firmware/Full Computer/UART/sv files/instructionRAM.sv         ;         ;
 ; UART/sv files/debouncer.sv              ; yes             ; User SystemVerilog HDL File        ; C:/Users/minec/Desktop/github/PROJ300/Firmware/Full Computer/UART/sv files/debouncer.sv              ;         ;
 ; UART/sv files/d_ffN.sv                  ; yes             ; User SystemVerilog HDL File        ; C:/Users/minec/Desktop/github/PROJ300/Firmware/Full Computer/UART/sv files/d_ffN.sv                  ;         ;
-; PS2/PS2controller.bdf                   ; yes             ; User Block Diagram/Schematic File  ; C:/Users/minec/Desktop/github/PROJ300/Firmware/Full Computer/PS2/PS2controller.bdf                   ;         ;
-; PS2/sv files/ps2_controller.sv          ; yes             ; User SystemVerilog HDL File        ; C:/Users/minec/Desktop/github/PROJ300/Firmware/Full Computer/PS2/sv files/ps2_controller.sv          ;         ;
-; PS2/sv files/break_code_detector.sv     ; yes             ; User SystemVerilog HDL File        ; C:/Users/minec/Desktop/github/PROJ300/Firmware/Full Computer/PS2/sv files/break_code_detector.sv     ;         ;
 ; CPU/Memory.bdf                          ; yes             ; User Block Diagram/Schematic File  ; C:/Users/minec/Desktop/github/PROJ300/Firmware/Full Computer/CPU/Memory.bdf                          ;         ;
 ; CPU/GPR_selector.bdf                    ; yes             ; User Block Diagram/Schematic File  ; C:/Users/minec/Desktop/github/PROJ300/Firmware/Full Computer/CPU/GPR_selector.bdf                    ;         ;
 ; CPU/CPU.bdf                             ; yes             ; User Block Diagram/Schematic File  ; C:/Users/minec/Desktop/github/PROJ300/Firmware/Full Computer/CPU/CPU.bdf                             ;         ;
@@ -319,25 +319,25 @@ https://fpgasoftware.intel.com/eula.
 +---------------------------------------------+--------------+
 ; Resource                                    ; Usage        ;
 +---------------------------------------------+--------------+
-; Estimate of Logic utilization (ALMs needed) ; 5039         ;
+; Estimate of Logic utilization (ALMs needed) ; 5046         ;
 ;                                             ;              ;
-; Combinational ALUT usage for logic          ; 5958         ;
-;     -- 7 input functions                    ; 217          ;
+; Combinational ALUT usage for logic          ; 5954         ;
+;     -- 7 input functions                    ; 220          ;
 ;     -- 6 input functions                    ; 3260         ;
-;     -- 5 input functions                    ; 301          ;
-;     -- 4 input functions                    ; 268          ;
-;     -- <=3 input functions                  ; 1912         ;
+;     -- 5 input functions                    ; 305          ;
+;     -- 4 input functions                    ; 261          ;
+;     -- <=3 input functions                  ; 1908         ;
 ;                                             ;              ;
-; Dedicated logic registers                   ; 5452         ;
+; Dedicated logic registers                   ; 5465         ;
 ;                                             ;              ;
 ; I/O pins                                    ; 75           ;
 ;                                             ;              ;
 ; Total DSP Blocks                            ; 2            ;
 ;                                             ;              ;
 ; Maximum fan-out node                        ; sw_rst~input ;
-; Maximum fan-out                             ; 4293         ;
-; Total fan-out                               ; 49418        ;
-; Average fan-out                             ; 4.27         ;
+; Maximum fan-out                             ; 4299         ;
+; Total fan-out                               ; 49478        ;
+; Average fan-out                             ; 4.28         ;
 +---------------------------------------------+--------------+
 
 
@@ -346,7 +346,7 @@ https://fpgasoftware.intel.com/eula.
 +---------------------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+------------------------------------------------------------------------------+-------------------------+--------------+
 ; Compilation Hierarchy Node            ; Combinational ALUTs ; Dedicated Logic Registers ; Block Memory Bits ; DSP Blocks ; Pins ; Virtual Pins ; Full Hierarchy Name                                                          ; Entity Name             ; Library Name ;
 +---------------------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+------------------------------------------------------------------------------+-------------------------+--------------+
-; |TopLevel                             ; 5958 (31)           ; 5452 (0)                  ; 0                 ; 2          ; 75   ; 0            ; |TopLevel                                                                    ; TopLevel                ; work         ;
+; |TopLevel                             ; 5954 (31)           ; 5465 (0)                  ; 0                 ; 2          ; 75   ; 0            ; |TopLevel                                                                    ; TopLevel                ; work         ;
 ;    |AudioController:inst45|           ; 779 (0)             ; 630 (0)                   ; 0                 ; 0          ; 0    ; 0            ; |TopLevel|AudioController:inst45                                             ; AudioController         ; work         ;
 ;       |key_detector:inst1|            ; 14 (14)             ; 4 (4)                     ; 0                 ; 0          ; 0    ; 0            ; |TopLevel|AudioController:inst45|key_detector:inst1                          ; key_detector            ; work         ;
 ;       |music_frequencies:inst|        ; 753 (0)             ; 624 (0)                   ; 0                 ; 0          ; 0    ; 0            ; |TopLevel|AudioController:inst45|music_frequencies:inst                      ; music_frequencies       ; work         ;
@@ -377,7 +377,7 @@ https://fpgasoftware.intel.com/eula.
 ;          |octave_mux:inst26|          ; 8 (8)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |TopLevel|AudioController:inst45|music_frequencies:inst|octave_mux:inst26    ; octave_mux              ; work         ;
 ;       |muxN:inst4|                    ; 7 (7)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |TopLevel|AudioController:inst45|muxN:inst4                                  ; muxN                    ; work         ;
 ;       |special_key_detector:inst7|    ; 5 (5)               ; 2 (2)                     ; 0                 ; 0          ; 0    ; 0            ; |TopLevel|AudioController:inst45|special_key_detector:inst7                  ; special_key_detector    ; work         ;
-;    |CPU:inst|                         ; 2207 (0)            ; 548 (0)                   ; 0                 ; 2          ; 0    ; 0            ; |TopLevel|CPU:inst                                                           ; CPU                     ; work         ;
+;    |CPU:inst|                         ; 2205 (0)            ; 548 (0)                   ; 0                 ; 2          ; 0    ; 0            ; |TopLevel|CPU:inst                                                           ; CPU                     ; work         ;
 ;       |ALU:inst19|                    ; 194 (194)           ; 0 (0)                     ; 0                 ; 2          ; 0    ; 0            ; |TopLevel|CPU:inst|ALU:inst19                                                ; ALU                     ; work         ;
 ;       |CPU_latchN:inst11|             ; 2 (2)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |TopLevel|CPU:inst|CPU_latchN:inst11                                         ; CPU_latchN              ; work         ;
 ;       |CPU_latchN:inst12|             ; 16 (16)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |TopLevel|CPU:inst|CPU_latchN:inst12                                         ; CPU_latchN              ; work         ;
@@ -386,7 +386,7 @@ https://fpgasoftware.intel.com/eula.
 ;       |CPU_regN:inst16|               ; 1 (1)               ; 32 (32)                   ; 0                 ; 0          ; 0    ; 0            ; |TopLevel|CPU:inst|CPU_regN:inst16                                           ; CPU_regN                ; work         ;
 ;       |CPU_regN:inst2|                ; 16 (16)             ; 12 (12)                   ; 0                 ; 0          ; 0    ; 0            ; |TopLevel|CPU:inst|CPU_regN:inst2                                            ; CPU_regN                ; work         ;
 ;       |CPU_regN:inst4|                ; 2 (2)               ; 38 (38)                   ; 0                 ; 0          ; 0    ; 0            ; |TopLevel|CPU:inst|CPU_regN:inst4                                            ; CPU_regN                ; work         ;
-;       |CPU_regN:inst6|                ; 60 (60)             ; 32 (32)                   ; 0                 ; 0          ; 0    ; 0            ; |TopLevel|CPU:inst|CPU_regN:inst6                                            ; CPU_regN                ; work         ;
+;       |CPU_regN:inst6|                ; 59 (59)             ; 32 (32)                   ; 0                 ; 0          ; 0    ; 0            ; |TopLevel|CPU:inst|CPU_regN:inst6                                            ; CPU_regN                ; work         ;
 ;       |CPU_regN:inst|                 ; 2 (2)               ; 12 (12)                   ; 0                 ; 0          ; 0    ; 0            ; |TopLevel|CPU:inst|CPU_regN:inst                                             ; CPU_regN                ; work         ;
 ;       |CU_counter:inst25|             ; 17 (17)             ; 6 (6)                     ; 0                 ; 0          ; 0    ; 0            ; |TopLevel|CPU:inst|CU_counter:inst25                                         ; CU_counter              ; work         ;
 ;       |CU_logic:inst27|               ; 16 (16)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |TopLevel|CPU:inst|CU_logic:inst27                                           ; CU_logic                ; work         ;
@@ -406,16 +406,17 @@ https://fpgasoftware.intel.com/eula.
 ;          |CPU_regN:inst9|             ; 2 (2)               ; 32 (32)                   ; 0                 ; 0          ; 0    ; 0            ; |TopLevel|CPU:inst|GPR_selector:inst18|CPU_regN:inst9                        ; CPU_regN                ; work         ;
 ;          |GPR_DEMUX:inst|             ; 2 (2)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |TopLevel|CPU:inst|GPR_selector:inst18|GPR_DEMUX:inst                        ; GPR_DEMUX               ; work         ;
 ;          |GPR_MUX:inst2|              ; 156 (156)           ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |TopLevel|CPU:inst|GPR_selector:inst18|GPR_MUX:inst2                         ; GPR_MUX                 ; work         ;
-;       |dest_reg_selector:inst59|      ; 8 (8)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |TopLevel|CPU:inst|dest_reg_selector:inst59                                  ; dest_reg_selector       ; work         ;
+;       |dest_reg_selector:inst59|      ; 6 (6)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |TopLevel|CPU:inst|dest_reg_selector:inst59                                  ; dest_reg_selector       ; work         ;
 ;       |flags_setter:inst23|           ; 10 (10)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |TopLevel|CPU:inst|flags_setter:inst23                                       ; flags_setter            ; work         ;
 ;       |operand_MUX:inst20|            ; 32 (32)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |TopLevel|CPU:inst|operand_MUX:inst20                                        ; operand_MUX             ; work         ;
-;       |operand_MUX:inst21|            ; 206 (206)           ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |TopLevel|CPU:inst|operand_MUX:inst21                                        ; operand_MUX             ; work         ;
-;       |systemBus_muxN:inst15|         ; 1421 (1421)         ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |TopLevel|CPU:inst|systemBus_muxN:inst15                                     ; systemBus_muxN          ; work         ;
+;       |operand_MUX:inst21|            ; 209 (209)           ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |TopLevel|CPU:inst|operand_MUX:inst21                                        ; operand_MUX             ; work         ;
+;       |systemBus_muxN:inst15|         ; 1419 (1419)         ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |TopLevel|CPU:inst|systemBus_muxN:inst15                                     ; systemBus_muxN          ; work         ;
 ;    |CPU_regN:inst24|                  ; 3 (3)               ; 8 (8)                     ; 0                 ; 0          ; 0    ; 0            ; |TopLevel|CPU_regN:inst24                                                    ; CPU_regN                ; work         ;
 ;    |CPU_regN:inst25|                  ; 2 (2)               ; 8 (8)                     ; 0                 ; 0          ; 0    ; 0            ; |TopLevel|CPU_regN:inst25                                                    ; CPU_regN                ; work         ;
-;    |CPU_regN:inst26|                  ; 4 (4)               ; 4 (4)                     ; 0                 ; 0          ; 0    ; 0            ; |TopLevel|CPU_regN:inst26                                                    ; CPU_regN                ; work         ;
-;    |CPU_regN:inst28|                  ; 2 (2)               ; 12 (12)                   ; 0                 ; 0          ; 0    ; 0            ; |TopLevel|CPU_regN:inst28                                                    ; CPU_regN                ; work         ;
-;    |Memory:inst1|                     ; 2459 (0)            ; 3985 (0)                  ; 0                 ; 0          ; 0    ; 0            ; |TopLevel|Memory:inst1                                                       ; Memory                  ; work         ;
+;    |CPU_regN:inst26|                  ; 5 (5)               ; 4 (4)                     ; 0                 ; 0          ; 0    ; 0            ; |TopLevel|CPU_regN:inst26                                                    ; CPU_regN                ; work         ;
+;    |CPU_regN:inst27|                  ; 1 (1)               ; 1 (1)                     ; 0                 ; 0          ; 0    ; 0            ; |TopLevel|CPU_regN:inst27                                                    ; CPU_regN                ; work         ;
+;    |CPU_regN:inst28|                  ; 3 (3)               ; 12 (12)                   ; 0                 ; 0          ; 0    ; 0            ; |TopLevel|CPU_regN:inst28                                                    ; CPU_regN                ; work         ;
+;    |Memory:inst1|                     ; 2458 (0)            ; 3985 (0)                  ; 0                 ; 0          ; 0    ; 0            ; |TopLevel|Memory:inst1                                                       ; Memory                  ; work         ;
 ;       |InstructionBuffer:inst6|       ; 1624 (0)            ; 3985 (0)                  ; 0                 ; 0          ; 0    ; 0            ; |TopLevel|Memory:inst1|InstructionBuffer:inst6                               ; InstructionBuffer       ; work         ;
 ;          |d_ffN:inst11|               ; 8 (8)               ; 8 (8)                     ; 0                 ; 0          ; 0    ; 0            ; |TopLevel|Memory:inst1|InstructionBuffer:inst6|d_ffN:inst11                  ; d_ffN                   ; work         ;
 ;          |d_ffN:inst14|               ; 1 (1)               ; 1 (1)                     ; 0                 ; 0          ; 0    ; 0            ; |TopLevel|Memory:inst1|InstructionBuffer:inst6|d_ffN:inst14                  ; d_ffN                   ; work         ;
@@ -424,20 +425,22 @@ https://fpgasoftware.intel.com/eula.
 ;          |fine_clk_divN:inst12|       ; 31 (31)             ; 26 (26)                   ; 0                 ; 0          ; 0    ; 0            ; |TopLevel|Memory:inst1|InstructionBuffer:inst6|fine_clk_divN:inst12          ; fine_clk_divN           ; work         ;
 ;          |instructionRAM:inst20|      ; 1546 (1546)         ; 3890 (3890)               ; 0                 ; 0          ; 0    ; 0            ; |TopLevel|Memory:inst1|InstructionBuffer:inst6|instructionRAM:inst20         ; instructionRAM          ; work         ;
 ;          |intermediaryRAM:inst1|      ; 29 (29)             ; 51 (51)                   ; 0                 ; 0          ; 0    ; 0            ; |TopLevel|Memory:inst1|InstructionBuffer:inst6|intermediaryRAM:inst1         ; intermediaryRAM         ; work         ;
-;       |M_DEMUX:inst|                  ; 16 (16)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |TopLevel|Memory:inst1|M_DEMUX:inst                                          ; M_DEMUX                 ; work         ;
-;       |M_MUX:inst5|                   ; 8 (8)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |TopLevel|Memory:inst1|M_MUX:inst5                                           ; M_MUX                   ; work         ;
+;       |M_DEMUX:inst|                  ; 14 (14)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |TopLevel|Memory:inst1|M_DEMUX:inst                                          ; M_DEMUX                 ; work         ;
+;       |M_MUX:inst5|                   ; 5 (5)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |TopLevel|Memory:inst1|M_MUX:inst5                                           ; M_MUX                   ; work         ;
 ;       |M_RAM:inst4|                   ; 800 (800)           ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |TopLevel|Memory:inst1|M_RAM:inst4                                           ; M_RAM                   ; work         ;
 ;       |M_addr_checker:inst1|          ; 9 (9)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |TopLevel|Memory:inst1|M_addr_checker:inst1                                  ; M_addr_checker          ; work         ;
-;       |M_mmr_selector:inst10|         ; 2 (2)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |TopLevel|Memory:inst1|M_mmr_selector:inst10                                 ; M_mmr_selector          ; work         ;
-;    |PS2controller:inst3|              ; 48 (1)              ; 39 (0)                    ; 0                 ; 0          ; 0    ; 0            ; |TopLevel|PS2controller:inst3                                                ; PS2controller           ; work         ;
+;       |M_mmr_DEMUX:inst38|            ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |TopLevel|Memory:inst1|M_mmr_DEMUX:inst38                                    ; M_mmr_DEMUX             ; work         ;
+;       |M_mmr_MUX:inst40|              ; 2 (2)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |TopLevel|Memory:inst1|M_mmr_MUX:inst40                                      ; M_mmr_MUX               ; work         ;
+;       |M_mmr_selector:inst10|         ; 3 (3)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |TopLevel|Memory:inst1|M_mmr_selector:inst10                                 ; M_mmr_selector          ; work         ;
+;    |PS2controller:inst3|              ; 40 (1)              ; 47 (0)                    ; 0                 ; 0          ; 0    ; 0            ; |TopLevel|PS2controller:inst3                                                ; PS2controller           ; work         ;
+;       |PS2bsy_detector:inst2|         ; 0 (0)               ; 8 (8)                     ; 0                 ; 0          ; 0    ; 0            ; |TopLevel|PS2controller:inst3|PS2bsy_detector:inst2                          ; PS2bsy_detector         ; work         ;
 ;       |break_code_detector:inst|      ; 32 (32)             ; 26 (26)                   ; 0                 ; 0          ; 0    ; 0            ; |TopLevel|PS2controller:inst3|break_code_detector:inst                       ; break_code_detector     ; work         ;
-;       |bsy_detector:inst2|            ; 8 (8)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |TopLevel|PS2controller:inst3|bsy_detector:inst2                             ; bsy_detector            ; work         ;
 ;       |ps2_controller:inst1|          ; 7 (7)               ; 13 (13)                   ; 0                 ; 0          ; 0    ; 0            ; |TopLevel|PS2controller:inst3|ps2_controller:inst1                           ; ps2_controller          ; work         ;
 ;    |UART:inst44|                      ; 56 (0)              ; 41 (0)                    ; 0                 ; 0          ; 0    ; 0            ; |TopLevel|UART:inst44                                                        ; UART                    ; work         ;
 ;       |bsy_detector:inst2|            ; 9 (9)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |TopLevel|UART:inst44|bsy_detector:inst2                                     ; bsy_detector            ; work         ;
 ;       |uart_clk_divN:inst|            ; 40 (40)             ; 28 (28)                   ; 0                 ; 0          ; 0    ; 0            ; |TopLevel|UART:inst44|uart_clk_divN:inst                                     ; uart_clk_divN           ; work         ;
 ;       |uart_controller:inst1|         ; 7 (7)               ; 13 (13)                   ; 0                 ; 0          ; 0    ; 0            ; |TopLevel|UART:inst44|uart_controller:inst1                                  ; uart_controller         ; work         ;
-;    |VGA_controller:inst6|             ; 253 (0)             ; 119 (0)                   ; 0                 ; 0          ; 0    ; 0            ; |TopLevel|VGA_controller:inst6                                               ; VGA_controller          ; work         ;
+;    |VGA_controller:inst6|             ; 257 (0)             ; 123 (0)                   ; 0                 ; 0          ; 0    ; 0            ; |TopLevel|VGA_controller:inst6                                               ; VGA_controller          ; work         ;
 ;       |clk_divN:inst15|               ; 18 (18)             ; 18 (18)                   ; 0                 ; 0          ; 0    ; 0            ; |TopLevel|VGA_controller:inst6|clk_divN:inst15                               ; clk_divN                ; work         ;
 ;       |d_ffN:inst13|                  ; 11 (11)             ; 11 (11)                   ; 0                 ; 0          ; 0    ; 0            ; |TopLevel|VGA_controller:inst6|d_ffN:inst13                                  ; d_ffN                   ; work         ;
 ;       |d_ffN:inst14|                  ; 11 (11)             ; 11 (11)                   ; 0                 ; 0          ; 0    ; 0            ; |TopLevel|VGA_controller:inst6|d_ffN:inst14                                  ; d_ffN                   ; work         ;
@@ -445,7 +448,7 @@ https://fpgasoftware.intel.com/eula.
 ;       |d_ffN:inst18|                  ; 11 (11)             ; 11 (11)                   ; 0                 ; 0          ; 0    ; 0            ; |TopLevel|VGA_controller:inst6|d_ffN:inst18                                  ; d_ffN                   ; work         ;
 ;       |hsync_cnt:inst1|               ; 25 (25)             ; 13 (13)                   ; 0                 ; 0          ; 0    ; 0            ; |TopLevel|VGA_controller:inst6|hsync_cnt:inst1                               ; hsync_cnt               ; work         ;
 ;       |pixel_offset_controller:inst7| ; 38 (38)             ; 22 (22)                   ; 0                 ; 0          ; 0    ; 0            ; |TopLevel|VGA_controller:inst6|pixel_offset_controller:inst7                 ; pixel_offset_controller ; work         ;
-;       |rgb_controller:inst4|          ; 1 (1)               ; 8 (8)                     ; 0                 ; 0          ; 0    ; 0            ; |TopLevel|VGA_controller:inst6|rgb_controller:inst4                          ; rgb_controller          ; work         ;
+;       |rgb_controller:inst4|          ; 5 (5)               ; 12 (12)                   ; 0                 ; 0          ; 0    ; 0            ; |TopLevel|VGA_controller:inst6|rgb_controller:inst4                          ; rgb_controller          ; work         ;
 ;       |sprites:inst6|                 ; 96 (0)              ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |TopLevel|VGA_controller:inst6|sprites:inst6                                 ; sprites                 ; work         ;
 ;          |sprite_ROM_square:inst11|   ; 96 (96)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |TopLevel|VGA_controller:inst6|sprites:inst6|sprite_ROM_square:inst11        ; sprite_ROM_square       ; work         ;
 ;       |t_ff:inst|                     ; 1 (1)               ; 1 (1)                     ; 0                 ; 0          ; 0    ; 0            ; |TopLevel|VGA_controller:inst6|t_ff:inst                                     ; t_ff                    ; work         ;
@@ -505,10 +508,10 @@ Encoding Type:  One-Hot
 ; Memory:inst1|M_RAM:inst4|RAM~9                       ; rtl~1               ; yes                    ;
 ; Memory:inst1|M_RAM:inst4|RAM~10                      ; rtl~2               ; yes                    ;
 ; Memory:inst1|M_RAM:inst4|RAM~11                      ; rtl~3               ; yes                    ;
-; Memory:inst1|M_RAM:inst4|RAM~4                       ; rtl~0               ; yes                    ;
-; Memory:inst1|M_RAM:inst4|RAM~5                       ; rtl~1               ; yes                    ;
-; Memory:inst1|M_RAM:inst4|RAM~6                       ; rtl~2               ; yes                    ;
-; Memory:inst1|M_RAM:inst4|RAM~7                       ; rtl~3               ; yes                    ;
+; Memory:inst1|M_RAM:inst4|RAM~0                       ; rtl~0               ; yes                    ;
+; Memory:inst1|M_RAM:inst4|RAM~1                       ; rtl~1               ; yes                    ;
+; Memory:inst1|M_RAM:inst4|RAM~2                       ; rtl~2               ; yes                    ;
+; Memory:inst1|M_RAM:inst4|RAM~3                       ; rtl~3               ; yes                    ;
 ; Memory:inst1|M_RAM:inst4|RAM~24                      ; rtl~0               ; yes                    ;
 ; Memory:inst1|M_RAM:inst4|RAM~25                      ; rtl~1               ; yes                    ;
 ; Memory:inst1|M_RAM:inst4|RAM~26                      ; rtl~2               ; yes                    ;
@@ -517,14 +520,18 @@ Encoding Type:  One-Hot
 ; Memory:inst1|M_RAM:inst4|RAM~13                      ; rtl~1               ; yes                    ;
 ; Memory:inst1|M_RAM:inst4|RAM~14                      ; rtl~2               ; yes                    ;
 ; Memory:inst1|M_RAM:inst4|RAM~15                      ; rtl~3               ; yes                    ;
+; Memory:inst1|M_RAM:inst4|RAM~4                       ; rtl~0               ; yes                    ;
+; Memory:inst1|M_RAM:inst4|RAM~5                       ; rtl~1               ; yes                    ;
+; Memory:inst1|M_RAM:inst4|RAM~6                       ; rtl~2               ; yes                    ;
+; Memory:inst1|M_RAM:inst4|RAM~7                       ; rtl~3               ; yes                    ;
 ; Memory:inst1|M_RAM:inst4|RAM~16                      ; rtl~0               ; yes                    ;
 ; Memory:inst1|M_RAM:inst4|RAM~17                      ; rtl~1               ; yes                    ;
 ; Memory:inst1|M_RAM:inst4|RAM~18                      ; rtl~2               ; yes                    ;
 ; Memory:inst1|M_RAM:inst4|RAM~19                      ; rtl~3               ; yes                    ;
-; Memory:inst1|M_RAM:inst4|RAM~28                      ; rtl~0               ; yes                    ;
-; Memory:inst1|M_RAM:inst4|RAM~29                      ; rtl~1               ; yes                    ;
-; Memory:inst1|M_RAM:inst4|RAM~30                      ; rtl~2               ; yes                    ;
-; Memory:inst1|M_RAM:inst4|RAM~31                      ; rtl~3               ; yes                    ;
+; Memory:inst1|M_RAM:inst4|RAM~20                      ; rtl~0               ; yes                    ;
+; Memory:inst1|M_RAM:inst4|RAM~21                      ; rtl~1               ; yes                    ;
+; Memory:inst1|M_RAM:inst4|RAM~22                      ; rtl~2               ; yes                    ;
+; Memory:inst1|M_RAM:inst4|RAM~23                      ; rtl~3               ; yes                    ;
 ; Memory:inst1|M_RAM:inst4|RAM~32                      ; rtl~0               ; yes                    ;
 ; Memory:inst1|M_RAM:inst4|RAM~33                      ; rtl~1               ; yes                    ;
 ; Memory:inst1|M_RAM:inst4|RAM~34                      ; rtl~2               ; yes                    ;
@@ -533,14 +540,10 @@ Encoding Type:  One-Hot
 ; Memory:inst1|M_RAM:inst4|RAM~37                      ; rtl~1               ; yes                    ;
 ; Memory:inst1|M_RAM:inst4|RAM~38                      ; rtl~2               ; yes                    ;
 ; Memory:inst1|M_RAM:inst4|RAM~39                      ; rtl~3               ; yes                    ;
-; Memory:inst1|M_RAM:inst4|RAM~20                      ; rtl~0               ; yes                    ;
-; Memory:inst1|M_RAM:inst4|RAM~21                      ; rtl~1               ; yes                    ;
-; Memory:inst1|M_RAM:inst4|RAM~22                      ; rtl~2               ; yes                    ;
-; Memory:inst1|M_RAM:inst4|RAM~23                      ; rtl~3               ; yes                    ;
-; Memory:inst1|M_RAM:inst4|RAM~0                       ; rtl~0               ; yes                    ;
-; Memory:inst1|M_RAM:inst4|RAM~1                       ; rtl~1               ; yes                    ;
-; Memory:inst1|M_RAM:inst4|RAM~2                       ; rtl~2               ; yes                    ;
-; Memory:inst1|M_RAM:inst4|RAM~3                       ; rtl~3               ; yes                    ;
+; Memory:inst1|M_RAM:inst4|RAM~28                      ; rtl~0               ; yes                    ;
+; Memory:inst1|M_RAM:inst4|RAM~29                      ; rtl~1               ; yes                    ;
+; Memory:inst1|M_RAM:inst4|RAM~30                      ; rtl~2               ; yes                    ;
+; Memory:inst1|M_RAM:inst4|RAM~31                      ; rtl~3               ; yes                    ;
 ; Memory:inst1|M_RAM:inst4|RAM~40                      ; rtl~0               ; yes                    ;
 ; Memory:inst1|M_RAM:inst4|RAM~41                      ; rtl~1               ; yes                    ;
 ; Memory:inst1|M_RAM:inst4|RAM~42                      ; rtl~2               ; yes                    ;
@@ -557,14 +560,14 @@ Encoding Type:  One-Hot
 ; Memory:inst1|M_RAM:inst4|RAM~149                     ; rtl~9               ; yes                    ;
 ; Memory:inst1|M_RAM:inst4|RAM~150                     ; rtl~10              ; yes                    ;
 ; Memory:inst1|M_RAM:inst4|RAM~151                     ; rtl~11              ; yes                    ;
-; Memory:inst1|M_RAM:inst4|RAM~136                     ; rtl~4               ; yes                    ;
-; Memory:inst1|M_RAM:inst4|RAM~137                     ; rtl~5               ; yes                    ;
-; Memory:inst1|M_RAM:inst4|RAM~138                     ; rtl~6               ; yes                    ;
-; Memory:inst1|M_RAM:inst4|RAM~139                     ; rtl~7               ; yes                    ;
-; Memory:inst1|M_RAM:inst4|RAM~140                     ; rtl~8               ; yes                    ;
-; Memory:inst1|M_RAM:inst4|RAM~141                     ; rtl~9               ; yes                    ;
-; Memory:inst1|M_RAM:inst4|RAM~142                     ; rtl~10              ; yes                    ;
-; Memory:inst1|M_RAM:inst4|RAM~143                     ; rtl~11              ; yes                    ;
+; Memory:inst1|M_RAM:inst4|RAM~128                     ; rtl~4               ; yes                    ;
+; Memory:inst1|M_RAM:inst4|RAM~129                     ; rtl~5               ; yes                    ;
+; Memory:inst1|M_RAM:inst4|RAM~130                     ; rtl~6               ; yes                    ;
+; Memory:inst1|M_RAM:inst4|RAM~131                     ; rtl~7               ; yes                    ;
+; Memory:inst1|M_RAM:inst4|RAM~132                     ; rtl~8               ; yes                    ;
+; Memory:inst1|M_RAM:inst4|RAM~133                     ; rtl~9               ; yes                    ;
+; Memory:inst1|M_RAM:inst4|RAM~134                     ; rtl~10              ; yes                    ;
+; Memory:inst1|M_RAM:inst4|RAM~135                     ; rtl~11              ; yes                    ;
 ; Memory:inst1|M_RAM:inst4|RAM~176                     ; rtl~4               ; yes                    ;
 ; Memory:inst1|M_RAM:inst4|RAM~177                     ; rtl~5               ; yes                    ;
 ; Memory:inst1|M_RAM:inst4|RAM~178                     ; rtl~6               ; yes                    ;
@@ -581,6 +584,14 @@ Encoding Type:  One-Hot
 ; Memory:inst1|M_RAM:inst4|RAM~157                     ; rtl~9               ; yes                    ;
 ; Memory:inst1|M_RAM:inst4|RAM~158                     ; rtl~10              ; yes                    ;
 ; Memory:inst1|M_RAM:inst4|RAM~159                     ; rtl~11              ; yes                    ;
+; Memory:inst1|M_RAM:inst4|RAM~136                     ; rtl~4               ; yes                    ;
+; Memory:inst1|M_RAM:inst4|RAM~137                     ; rtl~5               ; yes                    ;
+; Memory:inst1|M_RAM:inst4|RAM~138                     ; rtl~6               ; yes                    ;
+; Memory:inst1|M_RAM:inst4|RAM~139                     ; rtl~7               ; yes                    ;
+; Memory:inst1|M_RAM:inst4|RAM~140                     ; rtl~8               ; yes                    ;
+; Memory:inst1|M_RAM:inst4|RAM~141                     ; rtl~9               ; yes                    ;
+; Memory:inst1|M_RAM:inst4|RAM~142                     ; rtl~10              ; yes                    ;
+; Memory:inst1|M_RAM:inst4|RAM~143                     ; rtl~11              ; yes                    ;
 ; Memory:inst1|M_RAM:inst4|RAM~160                     ; rtl~4               ; yes                    ;
 ; Memory:inst1|M_RAM:inst4|RAM~161                     ; rtl~5               ; yes                    ;
 ; Memory:inst1|M_RAM:inst4|RAM~162                     ; rtl~6               ; yes                    ;
@@ -589,32 +600,13 @@ Encoding Type:  One-Hot
 ; Memory:inst1|M_RAM:inst4|RAM~165                     ; rtl~9               ; yes                    ;
 ; Memory:inst1|M_RAM:inst4|RAM~166                     ; rtl~10              ; yes                    ;
 ; Memory:inst1|M_RAM:inst4|RAM~167                     ; rtl~11              ; yes                    ;
-; Memory:inst1|M_RAM:inst4|RAM~184                     ; rtl~4               ; yes                    ;
-; Memory:inst1|M_RAM:inst4|RAM~185                     ; rtl~5               ; yes                    ;
-; Memory:inst1|M_RAM:inst4|RAM~186                     ; rtl~6               ; yes                    ;
-; Memory:inst1|M_RAM:inst4|RAM~187                     ; rtl~7               ; yes                    ;
-; Memory:inst1|M_RAM:inst4|RAM~188                     ; rtl~8               ; yes                    ;
-; Memory:inst1|M_RAM:inst4|RAM~189                     ; rtl~9               ; yes                    ;
-; Memory:inst1|M_RAM:inst4|RAM~190                     ; rtl~10              ; yes                    ;
-; Memory:inst1|M_RAM:inst4|RAM~191                     ; rtl~11              ; yes                    ;
-; Memory:inst1|M_RAM:inst4|RAM~192                     ; rtl~4               ; yes                    ;
-; Memory:inst1|M_RAM:inst4|RAM~193                     ; rtl~5               ; yes                    ;
-; Memory:inst1|M_RAM:inst4|RAM~194                     ; rtl~6               ; yes                    ;
-; Memory:inst1|M_RAM:inst4|RAM~195                     ; rtl~7               ; yes                    ;
-; Number of user-specified and inferred latches = 738  ;                     ;                        ;
+; Memory:inst1|M_RAM:inst4|RAM~168                     ; rtl~4               ; yes                    ;
+; Memory:inst1|M_RAM:inst4|RAM~169                     ; rtl~5               ; yes                    ;
+; Memory:inst1|M_RAM:inst4|RAM~170                     ; rtl~6               ; yes                    ;
+; Memory:inst1|M_RAM:inst4|RAM~171                     ; rtl~7               ; yes                    ;
+; Number of user-specified and inferred latches = 730  ;                     ;                        ;
 +------------------------------------------------------+---------------------+------------------------+
 Table restricted to first 100 entries. Note: All latches listed above may not be present at the end of synthesis due to various synthesis optimizations.
-
-
-+-----------------------------------------------------------------------------------------------------+
-; Registers Removed During Synthesis                                                                  ;
-+------------------------------------------------------------+----------------------------------------+
-; Register name                                              ; Reason for Removal                     ;
-+------------------------------------------------------------+----------------------------------------+
-; CPU_regN:inst27|internal_reg[0]                            ; Stuck at GND due to stuck port data_in ;
-; VGA_controller:inst6|rgb_controller:inst4|colour_reg[0..3] ; Stuck at GND due to stuck port data_in ;
-; Total Number of Removed Registers = 5                      ;                                        ;
-+------------------------------------------------------------+----------------------------------------+
 
 
 +------------------------------------------------------+
@@ -622,10 +614,10 @@ Table restricted to first 100 entries. Note: All latches listed above may not be
 +----------------------------------------------+-------+
 ; Statistic                                    ; Value ;
 +----------------------------------------------+-------+
-; Total registers                              ; 5452  ;
+; Total registers                              ; 5465  ;
 ; Number of registers using Synchronous Clear  ; 5340  ;
-; Number of registers using Synchronous Load   ; 12    ;
-; Number of registers using Asynchronous Clear ; 88    ;
+; Number of registers using Synchronous Load   ; 20    ;
+; Number of registers using Asynchronous Clear ; 96    ;
 ; Number of registers using Asynchronous Load  ; 0     ;
 ; Number of registers using Clock Enable       ; 4551  ;
 ; Number of registers using Preset             ; 0     ;
@@ -748,19 +740,19 @@ Table restricted to first 100 entries. Note: All latches listed above may not be
 ; 3:1                ; 38 bits   ; 76 LEs        ; 0 LEs                ; 76 LEs                 ; Yes        ; |TopLevel|Memory:inst1|InstructionBuffer:inst6|instructionRAM:inst20|ram[97][0]              ;
 ; 3:1                ; 38 bits   ; 76 LEs        ; 0 LEs                ; 76 LEs                 ; Yes        ; |TopLevel|Memory:inst1|InstructionBuffer:inst6|instructionRAM:inst20|ram[98][0]              ;
 ; 3:1                ; 38 bits   ; 76 LEs        ; 0 LEs                ; 76 LEs                 ; Yes        ; |TopLevel|Memory:inst1|InstructionBuffer:inst6|instructionRAM:inst20|ram[99][0]              ;
-; 3:1                ; 38 bits   ; 76 LEs        ; 0 LEs                ; 76 LEs                 ; Yes        ; |TopLevel|CPU:inst|CPU_regN:inst4|internal_reg[4]                                            ;
-; 3:1                ; 12 bits   ; 24 LEs        ; 0 LEs                ; 24 LEs                 ; Yes        ; |TopLevel|CPU:inst|CPU_regN:inst|internal_reg[1]                                             ;
-; 4:1                ; 8 bits    ; 16 LEs        ; 0 LEs                ; 16 LEs                 ; Yes        ; |TopLevel|CPU_regN:inst24|internal_reg[0]                                                    ;
-; 4:1                ; 8 bits    ; 16 LEs        ; 0 LEs                ; 16 LEs                 ; Yes        ; |TopLevel|CPU_regN:inst25|internal_reg[5]                                                    ;
-; 4:1                ; 4 bits    ; 8 LEs         ; 8 LEs                ; 0 LEs                  ; Yes        ; |TopLevel|CPU_regN:inst26|internal_reg[2]                                                    ;
-; 4:1                ; 12 bits   ; 24 LEs        ; 0 LEs                ; 24 LEs                 ; Yes        ; |TopLevel|CPU_regN:inst28|internal_reg[10]                                                   ;
-; 4:1                ; 12 bits   ; 24 LEs        ; 0 LEs                ; 24 LEs                 ; Yes        ; |TopLevel|CPU:inst|CPU_regN:inst2|internal_reg[10]                                           ;
-; 3:1                ; 4 bits    ; 8 LEs         ; 8 LEs                ; 0 LEs                  ; No         ; |TopLevel|CPU:inst|dest_reg_selector:inst59|GPR_sel1[3]                                      ;
-; 16:1               ; 32 bits   ; 320 LEs       ; 320 LEs              ; 0 LEs                  ; No         ; |TopLevel|CPU:inst|GPR_selector:inst18|GPR_MUX:inst2|Mux2                                    ;
-; 17:1               ; 3 bits    ; 33 LEs        ; 30 LEs               ; 3 LEs                  ; No         ; |TopLevel|CPU:inst|operand_MUX:inst21|data_out[1]                                            ;
-; 144:1              ; 6 bits    ; 576 LEs       ; 432 LEs              ; 144 LEs                ; No         ; |TopLevel|CPU:inst|systemBus_muxN:inst15|Mux4                                                ;
-; 146:1              ; 16 bits   ; 1552 LEs      ; 1216 LEs             ; 336 LEs                ; No         ; |TopLevel|CPU:inst|systemBus_muxN:inst15|Mux13                                               ;
-; 146:1              ; 4 bits    ; 388 LEs       ; 304 LEs              ; 84 LEs                 ; No         ; |TopLevel|CPU:inst|systemBus_muxN:inst15|Mux22                                               ;
+; 3:1                ; 38 bits   ; 76 LEs        ; 0 LEs                ; 76 LEs                 ; Yes        ; |TopLevel|CPU:inst|CPU_regN:inst4|internal_reg[0]                                            ;
+; 3:1                ; 12 bits   ; 24 LEs        ; 0 LEs                ; 24 LEs                 ; Yes        ; |TopLevel|CPU:inst|CPU_regN:inst|internal_reg[0]                                             ;
+; 4:1                ; 8 bits    ; 16 LEs        ; 0 LEs                ; 16 LEs                 ; Yes        ; |TopLevel|CPU_regN:inst24|internal_reg[7]                                                    ;
+; 4:1                ; 8 bits    ; 16 LEs        ; 0 LEs                ; 16 LEs                 ; Yes        ; |TopLevel|CPU_regN:inst25|internal_reg[0]                                                    ;
+; 4:1                ; 4 bits    ; 8 LEs         ; 8 LEs                ; 0 LEs                  ; Yes        ; |TopLevel|CPU_regN:inst26|internal_reg[3]                                                    ;
+; 4:1                ; 12 bits   ; 24 LEs        ; 0 LEs                ; 24 LEs                 ; Yes        ; |TopLevel|CPU_regN:inst28|internal_reg[0]                                                    ;
+; 4:1                ; 12 bits   ; 24 LEs        ; 0 LEs                ; 24 LEs                 ; Yes        ; |TopLevel|CPU:inst|CPU_regN:inst2|internal_reg[6]                                            ;
+; 3:1                ; 4 bits    ; 8 LEs         ; 8 LEs                ; 0 LEs                  ; No         ; |TopLevel|CPU:inst|dest_reg_selector:inst59|GPR_sel1[0]                                      ;
+; 16:1               ; 32 bits   ; 320 LEs       ; 320 LEs              ; 0 LEs                  ; No         ; |TopLevel|CPU:inst|GPR_selector:inst18|GPR_MUX:inst2|Mux1                                    ;
+; 17:1               ; 2 bits    ; 22 LEs        ; 20 LEs               ; 2 LEs                  ; No         ; |TopLevel|CPU:inst|operand_MUX:inst21|data_out[0]                                            ;
+; 144:1              ; 6 bits    ; 576 LEs       ; 432 LEs              ; 144 LEs                ; No         ; |TopLevel|CPU:inst|systemBus_muxN:inst15|Mux5                                                ;
+; 146:1              ; 16 bits   ; 1552 LEs      ; 1216 LEs             ; 336 LEs                ; No         ; |TopLevel|CPU:inst|systemBus_muxN:inst15|Mux11                                               ;
+; 146:1              ; 4 bits    ; 388 LEs       ; 304 LEs              ; 84 LEs                 ; No         ; |TopLevel|CPU:inst|systemBus_muxN:inst15|Mux24                                               ;
 ; 161:1              ; 3 bits    ; 321 LEs       ; 246 LEs              ; 75 LEs                 ; No         ; |TopLevel|CPU:inst|systemBus_muxN:inst15|Mux27                                               ;
 ; 161:1              ; 4 bits    ; 428 LEs       ; 332 LEs              ; 96 LEs                 ; No         ; |TopLevel|CPU:inst|systemBus_muxN:inst15|Mux30                                               ;
 ; 161:1              ; 3 bits    ; 321 LEs       ; 249 LEs              ; 72 LEs                 ; No         ; |TopLevel|CPU:inst|systemBus_muxN:inst15|Mux34                                               ;
@@ -772,13 +764,13 @@ Table restricted to first 100 entries. Note: All latches listed above may not be
 ; 130:1              ; 10 bits   ; 860 LEs       ; 660 LEs              ; 200 LEs                ; Yes        ; |TopLevel|Memory:inst1|InstructionBuffer:inst6|instructionRAM:inst20|debugA[5]               ;
 ; 257:1              ; 14 bits   ; 2394 LEs      ; 1862 LEs             ; 532 LEs                ; Yes        ; |TopLevel|Memory:inst1|InstructionBuffer:inst6|instructionRAM:inst20|debugC[5]               ;
 ; 6:1                ; 3 bits    ; 12 LEs        ; 6 LEs                ; 6 LEs                  ; No         ; |TopLevel|debouncer:inst14|Selector2                                                         ;
-; 3:1                ; 32 bits   ; 64 LEs        ; 0 LEs                ; 64 LEs                 ; Yes        ; |TopLevel|CPU:inst|CPU_regN:inst16|internal_reg[15]                                          ;
-; 4:1                ; 32 bits   ; 64 LEs        ; 0 LEs                ; 64 LEs                 ; Yes        ; |TopLevel|CPU:inst|GPR_selector:inst18|CPU_regN:inst29|internal_reg[1]                       ;
-; 4:1                ; 32 bits   ; 64 LEs        ; 0 LEs                ; 64 LEs                 ; Yes        ; |TopLevel|CPU:inst|GPR_selector:inst18|CPU_regN:inst27|internal_reg[30]                      ;
+; 3:1                ; 32 bits   ; 64 LEs        ; 0 LEs                ; 64 LEs                 ; Yes        ; |TopLevel|CPU:inst|CPU_regN:inst16|internal_reg[16]                                          ;
+; 4:1                ; 32 bits   ; 64 LEs        ; 0 LEs                ; 64 LEs                 ; Yes        ; |TopLevel|CPU:inst|GPR_selector:inst18|CPU_regN:inst29|internal_reg[16]                      ;
+; 4:1                ; 32 bits   ; 64 LEs        ; 0 LEs                ; 64 LEs                 ; Yes        ; |TopLevel|CPU:inst|GPR_selector:inst18|CPU_regN:inst27|internal_reg[31]                      ;
 ; 4:1                ; 32 bits   ; 64 LEs        ; 0 LEs                ; 64 LEs                 ; Yes        ; |TopLevel|CPU:inst|GPR_selector:inst18|CPU_regN:inst25|internal_reg[0]                       ;
-; 4:1                ; 32 bits   ; 64 LEs        ; 0 LEs                ; 64 LEs                 ; Yes        ; |TopLevel|CPU:inst|GPR_selector:inst18|CPU_regN:inst23|internal_reg[8]                       ;
+; 4:1                ; 32 bits   ; 64 LEs        ; 0 LEs                ; 64 LEs                 ; Yes        ; |TopLevel|CPU:inst|GPR_selector:inst18|CPU_regN:inst23|internal_reg[7]                       ;
 ; 17:1               ; 20 bits   ; 220 LEs       ; 200 LEs              ; 20 LEs                 ; No         ; |TopLevel|CPU:inst|operand_MUX:inst21|data_out[12]                                           ;
-; 17:1               ; 9 bits    ; 99 LEs        ; 90 LEs               ; 9 LEs                  ; No         ; |TopLevel|CPU:inst|operand_MUX:inst21|data_out[6]                                            ;
+; 17:1               ; 10 bits   ; 110 LEs       ; 100 LEs              ; 10 LEs                 ; No         ; |TopLevel|CPU:inst|operand_MUX:inst21|data_out[2]                                            ;
 ; 3:1                ; 12 bits   ; 24 LEs        ; 0 LEs                ; 24 LEs                 ; Yes        ; |TopLevel|CPU:inst|CPU_regN:inst6|internal_reg[7]                                            ;
 ; 4:1                ; 32 bits   ; 64 LEs        ; 0 LEs                ; 64 LEs                 ; Yes        ; |TopLevel|CPU:inst|GPR_selector:inst18|CPU_regN:inst11|internal_reg[5]                       ;
 ; 4:1                ; 32 bits   ; 64 LEs        ; 0 LEs                ; 64 LEs                 ; Yes        ; |TopLevel|CPU:inst|GPR_selector:inst18|CPU_regN:inst9|internal_reg[12]                       ;
@@ -839,7 +831,7 @@ Table restricted to first 100 entries. Note: All latches listed above may not be
 ; 3:1                ; 25 bits   ; 50 LEs        ; 0 LEs                ; 50 LEs                 ; Yes        ; |TopLevel|AudioController:inst45|music_frequencies:inst|fine_clk_divN:inst19|counter_reg[22] ;
 ; 3:1                ; 25 bits   ; 50 LEs        ; 0 LEs                ; 50 LEs                 ; Yes        ; |TopLevel|AudioController:inst45|music_frequencies:inst|fine_clk_divN:inst18|counter_reg[17] ;
 ; 3:1                ; 25 bits   ; 50 LEs        ; 0 LEs                ; 50 LEs                 ; Yes        ; |TopLevel|AudioController:inst45|music_frequencies:inst|fine_clk_divN:inst17|counter_reg[18] ;
-; 3:1                ; 8 bits    ; 16 LEs        ; 0 LEs                ; 16 LEs                 ; Yes        ; |TopLevel|PS2controller:inst3|ps2_controller:inst1|data_out[4]                               ;
+; 3:1                ; 8 bits    ; 16 LEs        ; 0 LEs                ; 16 LEs                 ; Yes        ; |TopLevel|PS2controller:inst3|ps2_controller:inst1|data_out[3]                               ;
 +--------------------+-----------+---------------+----------------------+------------------------+------------+----------------------------------------------------------------------------------------------+
 
 
@@ -1562,27 +1554,27 @@ Note: In order to hide this table in the UI and the text report file, please set
 +-----------------------+-----------------------------+
 ; Type                  ; Count                       ;
 +-----------------------+-----------------------------+
-; arriav_ff             ; 5452                        ;
-;     CLR               ; 22                          ;
+; arriav_ff             ; 5465                        ;
+;     CLR               ; 30                          ;
 ;     ENA               ; 18                          ;
 ;     ENA CLR SCLR      ; 66                          ;
 ;     ENA SCLR          ; 4455                        ;
 ;     ENA SCLR SLD      ; 12                          ;
-;     SCLR              ; 807                         ;
-;     plain             ; 72                          ;
-; arriav_lcell_comb     ; 5965                        ;
+;     SCLR              ; 799                         ;
+;     SCLR SLD          ; 8                           ;
+;     plain             ; 77                          ;
+; arriav_lcell_comb     ; 5960                        ;
 ;     arith             ; 997                         ;
 ;         1 data inputs ; 924                         ;
 ;         2 data inputs ; 73                          ;
-;     extend            ; 217                         ;
-;         7 data inputs ; 217                         ;
-;     normal            ; 4719                        ;
-;         0 data inputs ; 1                           ;
+;     extend            ; 220                         ;
+;         7 data inputs ; 220                         ;
+;     normal            ; 4711                        ;
 ;         1 data inputs ; 8                           ;
-;         2 data inputs ; 142                         ;
-;         3 data inputs ; 739                         ;
-;         4 data inputs ; 268                         ;
-;         5 data inputs ; 301                         ;
+;         2 data inputs ; 137                         ;
+;         3 data inputs ; 740                         ;
+;         4 data inputs ; 261                         ;
+;         5 data inputs ; 305                         ;
 ;         6 data inputs ; 3260                        ;
 ;     shared            ; 32                          ;
 ;         2 data inputs ; 32                          ;
@@ -1590,7 +1582,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 ; boundary_port         ; 75                          ;
 ;                       ;                             ;
 ; Max LUT depth         ; 15.00                       ;
-; Average LUT depth     ; 5.80                        ;
+; Average LUT depth     ; 5.75                        ;
 +-----------------------+-----------------------------+
 
 
@@ -1609,10 +1601,20 @@ Note: In order to hide this table in the UI and the text report file, please set
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 23.1std.0 Build 991 11/28/2023 SC Lite Edition
-    Info: Processing started: Sat Apr  6 09:34:31 2024
+    Info: Processing started: Sun Apr  7 08:24:34 2024
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off Computer -c Computer
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20030): Parallel compilation is enabled and will use 4 of the 4 processors detected
+Info (12021): Found 1 design units, including 1 entities, in source file ps2/sv files/ps2bsy_detector.sv
+    Info (12023): Found entity 1: PS2bsy_detector File: C:/Users/minec/Desktop/github/PROJ300/Firmware/Full Computer/PS2/sv files/PS2bsy_detector.sv Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file ps2/ps2controller.bdf
+    Info (12023): Found entity 1: PS2controller
+Info (12021): Found 1 design units, including 1 entities, in source file ps2/sv files/seven_seg_controller.sv
+    Info (12023): Found entity 1: seven_seg_controller File: C:/Users/minec/Desktop/github/PROJ300/Firmware/Full Computer/PS2/sv files/seven_seg_controller.sv Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file ps2/sv files/ps2_controller.sv
+    Info (12023): Found entity 1: ps2_controller File: C:/Users/minec/Desktop/github/PROJ300/Firmware/Full Computer/PS2/sv files/ps2_controller.sv Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file ps2/sv files/break_code_detector.sv
+    Info (12023): Found entity 1: break_code_detector File: C:/Users/minec/Desktop/github/PROJ300/Firmware/Full Computer/PS2/sv files/break_code_detector.sv Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file uart/sv files/bsy_detector.sv
     Info (12023): Found entity 1: bsy_detector File: C:/Users/minec/Desktop/github/PROJ300/Firmware/Full Computer/UART/sv files/bsy_detector.sv Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file vga/sv files/mux12.sv
@@ -1657,8 +1659,8 @@ Info (12021): Found 1 design units, including 1 entities, in source file uart/sv
     Info (12023): Found entity 1: uart_controller File: C:/Users/minec/Desktop/github/PROJ300/Firmware/Full Computer/UART/sv files/uart_controller.sv Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file uart/sv files/uart_clk_divn.sv
     Info (12023): Found entity 1: uart_clk_divN File: C:/Users/minec/Desktop/github/PROJ300/Firmware/Full Computer/UART/sv files/uart_clk_divN.sv Line: 1
-Info (12021): Found 1 design units, including 1 entities, in source file uart/sv files/seven_seg_controller.sv
-    Info (12023): Found entity 1: seven_seg_controller File: C:/Users/minec/Desktop/github/PROJ300/Firmware/Full Computer/UART/sv files/seven_seg_controller.sv Line: 1
+Info (15248): File "C:/Users/minec/Desktop/github/PROJ300/Firmware/Full Computer/UART/sv files/seven_seg_controller.sv" is a duplicate of already analyzed file "C:/Users/minec/Desktop/github/PROJ300/Firmware/Full Computer/PS2/sv files/seven_seg_controller.sv" (same filename, same library name and same md5 digest). Skipping analysis of this file.
+Info (12021): Found 0 design units, including 0 entities, in source file uart/sv files/seven_seg_controller.sv
 Info (12021): Found 1 design units, including 1 entities, in source file uart/sv files/pulse_gen.sv
     Info (12023): Found entity 1: pulse_gen File: C:/Users/minec/Desktop/github/PROJ300/Firmware/Full Computer/UART/sv files/pulse_gen.sv Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file uart/sv files/intermediaryram.sv
@@ -1671,14 +1673,6 @@ Info (12021): Found 1 design units, including 1 entities, in source file uart/sv
     Info (12023): Found entity 1: debouncer File: C:/Users/minec/Desktop/github/PROJ300/Firmware/Full Computer/UART/sv files/debouncer.sv Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file uart/sv files/d_ffn.sv
     Info (12023): Found entity 1: d_ffN File: C:/Users/minec/Desktop/github/PROJ300/Firmware/Full Computer/UART/sv files/d_ffN.sv Line: 1
-Info (12021): Found 1 design units, including 1 entities, in source file ps2/ps2controller.bdf
-    Info (12023): Found entity 1: PS2controller
-Info (15248): File "C:/Users/minec/Desktop/github/PROJ300/Firmware/Full Computer/PS2/sv files/seven_seg_controller.sv" is a duplicate of already analyzed file "C:/Users/minec/Desktop/github/PROJ300/Firmware/Full Computer/UART/sv files/seven_seg_controller.sv" (same filename, same library name and same md5 digest). Skipping analysis of this file.
-Info (12021): Found 0 design units, including 0 entities, in source file ps2/sv files/seven_seg_controller.sv
-Info (12021): Found 1 design units, including 1 entities, in source file ps2/sv files/ps2_controller.sv
-    Info (12023): Found entity 1: ps2_controller File: C:/Users/minec/Desktop/github/PROJ300/Firmware/Full Computer/PS2/sv files/ps2_controller.sv Line: 1
-Info (12021): Found 1 design units, including 1 entities, in source file ps2/sv files/break_code_detector.sv
-    Info (12023): Found entity 1: break_code_detector File: C:/Users/minec/Desktop/github/PROJ300/Firmware/Full Computer/PS2/sv files/break_code_detector.sv Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file cpu/testcircuit.bdf
     Info (12023): Found entity 1: TestCircuit
 Info (12021): Found 1 design units, including 1 entities, in source file cpu/memory.bdf
@@ -1741,6 +1735,8 @@ Info (12021): Found 1 design units, including 1 entities, in source file audio/s
     Info (12023): Found entity 1: muxN File: C:/Users/minec/Desktop/github/PROJ300/Firmware/Full Computer/Audio/sv files/muxN.sv Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file audio/sv files/key_detector.sv
     Info (12023): Found entity 1: key_detector File: C:/Users/minec/Desktop/github/PROJ300/Firmware/Full Computer/Audio/sv files/key_detector.sv Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file output_files/ps2_test.bdf
+    Info (12023): Found entity 1: PS2_test
 Warning (10222): Verilog HDL Parameter Declaration warning at fine_clk_divN.sv(18): Parameter Declaration in module "fine_clk_divN" behaves as a Local Parameter Declaration because the module has a Module Parameter Port List File: C:/Users/minec/Desktop/github/PROJ300/Firmware/Full Computer/VGA/sv files/fine_clk_divN.sv Line: 18
 Warning (10222): Verilog HDL Parameter Declaration warning at uart_clk_divN.sv(18): Parameter Declaration in module "uart_clk_divN" behaves as a Local Parameter Declaration because the module has a Module Parameter Port List File: C:/Users/minec/Desktop/github/PROJ300/Firmware/Full Computer/UART/sv files/uart_clk_divN.sv Line: 18
 Warning (10222): Verilog HDL Parameter Declaration warning at testROM.sv(8): Parameter Declaration in module "testROM" behaves as a Local Parameter Declaration because the module has a Module Parameter Port List File: C:/Users/minec/Desktop/github/PROJ300/Firmware/Full Computer/CPU/sv files/testROM.sv Line: 8
@@ -1945,6 +1941,7 @@ Info (12128): Elaborating entity "CPU_regN" for hierarchy "CPU_regN:inst24"
 Warning (10230): Verilog HDL assignment warning at CPU_regN.sv(45): truncated value with size 32 to match size of target (8) File: C:/Users/minec/Desktop/github/PROJ300/Firmware/Full Computer/CPU/sv files/CPU_regN.sv Line: 45
 Info (10264): Verilog HDL Case Statement information at CPU_regN.sv(35): all case item expressions in this case statement are onehot File: C:/Users/minec/Desktop/github/PROJ300/Firmware/Full Computer/CPU/sv files/CPU_regN.sv Line: 35
 Info (12128): Elaborating entity "PS2controller" for hierarchy "PS2controller:inst3"
+Info (12128): Elaborating entity "PS2bsy_detector" for hierarchy "PS2controller:inst3|PS2bsy_detector:inst2"
 Info (12128): Elaborating entity "ps2_controller" for hierarchy "PS2controller:inst3|ps2_controller:inst1"
 Warning (10230): Verilog HDL assignment warning at ps2_controller.sv(30): truncated value with size 32 to match size of target (4) File: C:/Users/minec/Desktop/github/PROJ300/Firmware/Full Computer/PS2/sv files/ps2_controller.sv Line: 30
 Info (12128): Elaborating entity "break_code_detector" for hierarchy "PS2controller:inst3|break_code_detector:inst"
@@ -2007,23 +2004,18 @@ Warning (10230): Verilog HDL assignment warning at fine_clk_divN.sv(38): truncat
 Info (12128): Elaborating entity "special_key_detector" for hierarchy "AudioController:inst45|special_key_detector:inst7"
 Info (12128): Elaborating entity "key_detector" for hierarchy "AudioController:inst45|key_detector:inst1"
 Info (12128): Elaborating entity "seven_seg_controller" for hierarchy "seven_seg_controller:inst4"
-Warning (13024): Output pins are stuck at VCC or GND
-    Warning (13410): Pin "b[3]" is stuck at GND
-    Warning (13410): Pin "b[2]" is stuck at GND
-    Warning (13410): Pin "b[1]" is stuck at GND
-    Warning (13410): Pin "b[0]" is stuck at GND
 Info (286030): Timing-Driven Synthesis is running
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
-Info (21057): Implemented 10434 device resources after synthesis - the final resource count might be different
+Info (21057): Implemented 10438 device resources after synthesis - the final resource count might be different
     Info (21058): Implemented 8 input pins
     Info (21059): Implemented 67 output pins
-    Info (21061): Implemented 10357 logic cells
+    Info (21061): Implemented 10361 logic cells
     Info (21062): Implemented 2 DSP elements
-Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 95 warnings
-    Info: Peak virtual memory: 4930 megabytes
-    Info: Processing ended: Sat Apr  6 09:34:55 2024
+Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 90 warnings
+    Info: Peak virtual memory: 4914 megabytes
+    Info: Processing ended: Sun Apr  7 08:24:58 2024
     Info: Elapsed time: 00:00:24
-    Info: Total CPU time (on all processors): 00:00:26
+    Info: Total CPU time (on all processors): 00:00:27
 
 

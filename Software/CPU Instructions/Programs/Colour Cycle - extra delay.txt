@@ -1,0 +1,14 @@
+str(0x01, vga_sel); // manual rendering mode
+mov(r0, 0x000); // r0 init - colour data
+mov(r1, 0x0000); // count1 - for manual delay
+mov(r2, 0x0000); // count2 - for extra delay
+str(r0, vga_colour);
+add(r0, r0, 0x001); // r0++
+add(r1, r1, 0x001); // count1++
+cmp(r1, 0xFFF);    // if r1 = 0xFFF
+beq(10);
+b(6);
+add(r2, r2, 0x001); // count2++
+cmp(r2, 0xFFF);    // if r2 = 0xFFF
+beq(4);
+b(10);

@@ -184,6 +184,22 @@
 					"strict" : false
 				},
 				{
+					"name" : "b[3]",
+					"strict" : false
+				},
+				{
+					"name" : "b[2]",
+					"strict" : false
+				},
+				{
+					"name" : "b[1]",
+					"strict" : false
+				},
+				{
+					"name" : "b[0]",
+					"strict" : false
+				},
+				{
 					"name" : "g[3]",
 					"strict" : false
 				},
@@ -276,11 +292,11 @@
 					"strict" : false
 				},
 				{
-					"name" : "PS2_DAT",
+					"name" : "PS2_CLK",
 					"strict" : false
 				},
 				{
-					"name" : "PS2_CLK",
+					"name" : "PS2_DAT",
 					"strict" : false
 				},
 				{
