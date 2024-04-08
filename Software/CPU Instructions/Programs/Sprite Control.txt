@@ -18,3 +18,5 @@ str(0x01, sprite_mov);  // right
 b(0);
 str(0x00, sprite_mov);  // stationary
 b(0);
+
+// showcase program //

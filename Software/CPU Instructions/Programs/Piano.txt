@@ -1,0 +1,82 @@
+str(0x01, vga_sel); // manual rendering mode
+ldr(r0, "[]", keyboard_input); // read key pressed
+cmp(r0, 0x1C); // A
+beq(5); // if
+b(13); // else
+str(0x1C, audio); // A note
+str(0xF00, vga_colour); // red
+ldr(r0, "[]", keyboard_input); // read key pressed
+cmp(r0, 0x00); // key released
+beq(11); // if
+b(7); // else
+str(0x00, audio); // tune off
+str(0x00, vga_colour); // display off
+cmp(r0, 0x32); // B
+beq(16); // if
+b(24); // else
+str(0x32, audio); // B note
+str(0xE80, vga_colour); // orange
+ldr(r0, "[]", keyboard_input); // read key pressed
+cmp(r0, 0x00); // key released
+beq(22); // if
+b(18); // else
+str(0x00, audio); // tune off
+str(0x00, vga_colour); // display off
+cmp(r0, 0x21); // C
+beq(27); // if
+b(35); // else
+str(0x21, audio); // C note
+str(0xFF0, vga_colour); // yellow
+ldr(r0, "[]", keyboard_input); // read key pressed
+cmp(r0, 0x00); // key released
+beq(33); // if
+b(29); // else
+str(0x00, audio); // tune off
+str(0x00, vga_colour); // display off
+cmp(r0, 0x23); // D
+beq(38); // if
+b(46); // else
+str(0x23, audio); // D note
+str(0x0F0, vga_colour); // green
+ldr(r0, "[]", keyboard_input); // read key pressed
+cmp(r0, 0x00); // key released
+beq(44); // if
+b(40); // else
+str(0x00, audio); // tune off
+str(0x00, vga_colour); // display off
+cmp(r0, 0x24); // E
+beq(49); // if
+b(57); // else
+str(0x24, audio); // E note
+str(0x00F, vga_colour); // blue
+ldr(r0, "[]", keyboard_input); // read key pressed
+cmp(r0, 0x00); // key released
+beq(55); // if
+b(51); // else
+str(0x00, audio); // tune off
+str(0x00, vga_colour); // display off
+cmp(r0, 0x2B); // F
+beq(60); // if
+b(68); // else
+str(0x2B, audio); // F note
+str(0xB3E, vga_colour); // indigo
+ldr(r0, "[]", keyboard_input); // read key pressed
+cmp(r0, 0x00); // key released
+beq(66); // if
+b(62); // else
+str(0x00, audio); // tune off
+str(0x00, vga_colour); // display off
+cmp(r0, 0x34); // G
+beq(71); // if
+b(1); // else
+str(0x34, audio); // G note
+str(0x83F, vga_colour); // violet
+ldr(r0, "[]", keyboard_input); // read key pressed
+cmp(r0, 0x00); // key released
+beq(77); // if
+b(73); // else
+str(0x00, audio); // tune off
+str(0x00, vga_colour); // display off
+b(1);
+
+// showcase program //

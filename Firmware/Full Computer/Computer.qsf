@@ -127,6 +127,11 @@ set_location_assignment PIN_C9 -to r[2]
 set_location_assignment PIN_B10 -to r[1]
 set_location_assignment PIN_A9 -to r[0]
 set_location_assignment PIN_G8 -to vsync
+set_global_assignment -name PARTITION_NETLIST_TYPE SOURCE -section_id Top
+set_global_assignment -name PARTITION_FITTER_PRESERVATION_LEVEL PLACEMENT_AND_ROUTING -section_id Top
+set_global_assignment -name PARTITION_COLOR 16764057 -section_id Top
+set_global_assignment -name BDF_FILE temp.bdf
+set_global_assignment -name SYSTEMVERILOG_FILE "extra modules/CPUTimer.sv"
 set_global_assignment -name SYSTEMVERILOG_FILE "PS2/sv files/PS2bsy_detector.sv"
 set_global_assignment -name BDF_FILE PS2/PS2controller.bdf
 set_global_assignment -name SYSTEMVERILOG_FILE "PS2/sv files/seven_seg_controller.sv"
@@ -193,7 +198,6 @@ set_global_assignment -name SYSTEMVERILOG_FILE "Audio/sv files/octave_mux.sv"
 set_global_assignment -name SYSTEMVERILOG_FILE "Audio/sv files/muxN.sv"
 set_global_assignment -name SYSTEMVERILOG_FILE "Audio/sv files/key_detector.sv"
 set_global_assignment -name BDF_FILE output_files/PS2_test.bdf
-set_global_assignment -name PARTITION_NETLIST_TYPE SOURCE -section_id Top
-set_global_assignment -name PARTITION_FITTER_PRESERVATION_LEVEL PLACEMENT_AND_ROUTING -section_id Top
-set_global_assignment -name PARTITION_COLOR 16764057 -section_id Top
+set_location_assignment PIN_AB12 -to SW[9]
+set_location_assignment PIN_AB13 -to SW[8]
 set_instance_assignment -name PARTITION_HIERARCHY root_partition -to | -section_id Top

@@ -1,0 +1,63 @@
+m255
+K4
+z2
+!s11f vlog 2020.1 2020.02, Feb 28 2020
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z0 dC:/Users/minec/Desktop/github/PROJ300/Firmware/Full Computer/extra modules
+vCPUTimer
+Z1 DXx6 sv_std 3 std 0 22 VYECXdT12H8WgbUP_5Y6:3
+!s110 1712542877
+!i10b 1
+!s100 75B?BNNM;PzRUiL[B;g;n2
+Z2 !s11b Dg1SIo80bB@j0V0VzS_@n1
+ICa_WCGVhETJlPV^z>iljd2
+Z3 VDg1SIo80bB@j0V0VzS_@n1
+S1
+R0
+w1712542792
+8C:/Users/minec/Desktop/github/PROJ300/Firmware/Full Computer/extra modules/CPUTimer.sv
+FC:/Users/minec/Desktop/github/PROJ300/Firmware/Full Computer/extra modules/CPUTimer.sv
+!i122 0
+L0 1 75
+Z4 OV;L;2020.1;71
+r1
+!s85 0
+31
+!s108 1712542877.000000
+!s107 C:/Users/minec/Desktop/github/PROJ300/Firmware/Full Computer/extra modules/CPUTimer.sv|
+!s90 -reportprogress|300|-work|work|C:/Users/minec/Desktop/github/PROJ300/Firmware/Full Computer/extra modules/CPUTimer.sv|
+!i113 1
+Z5 o-work work
+Z6 tCvgOpt 0
+n@c@p@u@timer
+vCPUTimer_tb
+R1
+!s110 1712542987
+!i10b 1
+!s100 8BmKfWGQ5LLao>nBi;VcN3
+R2
+IeHT4Ymfm4<X0adoY]4E3D0
+R3
+S1
+R0
+w1712542980
+8C:/Users/minec/Desktop/github/PROJ300/Firmware/Full Computer/extra modules/CPUTimer_tb.sv
+FC:/Users/minec/Desktop/github/PROJ300/Firmware/Full Computer/extra modules/CPUTimer_tb.sv
+!i122 2
+L0 1 81
+R4
+r1
+!s85 0
+31
+!s108 1712542987.000000
+!s107 C:/Users/minec/Desktop/github/PROJ300/Firmware/Full Computer/extra modules/CPUTimer_tb.sv|
+!s90 -reportprogress|300|-work|work|C:/Users/minec/Desktop/github/PROJ300/Firmware/Full Computer/extra modules/CPUTimer_tb.sv|
+!i113 1
+R5
+R6
+n@c@p@u@timer_tb

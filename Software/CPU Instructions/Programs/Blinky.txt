@@ -1,0 +1,16 @@
+str(0x00, led); // LEDs off initially
+str(100, tmr); // start 100ms tmr
+ldr(r0, "[]", tmr); // timer state
+cmp(r0, 0x01);  // if done
+beq(6); // if
+b(2); // else
+str(0xFF, led); // LEDs on
+str(0x00, tmr); // stop tmr;
+str(100, tmr); // start 100ms timer
+ldr(r0, "[]", tmr); // timer state
+cmp(r0, 0x01);  // if done
+beq(13); // if
+b(9); // else
+str(0x00, led); // LEDs off
+str(0x00, tmr); // stop tmr;
+b(1);

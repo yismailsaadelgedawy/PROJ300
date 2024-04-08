@@ -130,8 +130,8 @@ RESERVED_INPUT_WITH_WEAK_PULLUP : AB8       :        :                   :      
 GND                          : AB9       : gnd    :                   :         :           :                
 RESERVED_INPUT_WITH_WEAK_PULLUP : AB10      :        :                   :         : 3B        :                
 RESERVED_INPUT_WITH_WEAK_PULLUP : AB11      :        :                   :         : 3B        :                
-RESERVED_INPUT_WITH_WEAK_PULLUP : AB12      :        :                   :         : 4A        :                
-RESERVED_INPUT_WITH_WEAK_PULLUP : AB13      :        :                   :         : 4A        :                
+SW[9]                        : AB12      : input  : 2.5 V             :         : 4A        : Y              
+SW[8]                        : AB13      : input  : 2.5 V             :         : 4A        : Y              
 GND                          : AB14      : gnd    :                   :         :           :                
 RESERVED_INPUT_WITH_WEAK_PULLUP : AB15      :        :                   :         : 4A        :                
 VREFB4AN0                    : AB16      : power  :                   :         : 4A        :                

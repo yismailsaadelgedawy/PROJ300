@@ -4,6 +4,9 @@
 // USART2
 UnbufferedSerial uart2(PD_5, PD_6);
 
+// instruction counter
+uint16_t instruction_cnt = 1;
+
 // the 6 bytes to be transmitted
 uint8_t opcode;     // uint8_t = unsigned char
 uint8_t sel;
@@ -24,6 +27,16 @@ uint16_t var_values[2996];
 uint16_t stack_addr[2996]; // stack address counter; starts at boundary address of stack memory
 uint16_t str_idx = 0;
 uint16_t ldr_idx = 0;
+
+void programming_start() {
+    printf("\033[38;5;229m"); // pale yellow
+    printf("\n--------- PROGRAMMING CPU... ---------\n");
+}
+
+void programming_end() {
+    printf("\n--------- PROGRAMMING COMPLETE! ---------\n");
+}
+
 
 void clear_terminal() {
     // clear terminal and move cursor to (0,0)
@@ -136,12 +149,15 @@ void test_instruction(uint8_t opcd, uint8_t select, uint16_t oprnd1, uint16_t op
 
 void print_instruction() {
     
-    printf("\n%04x, ",opcode);            // print 4 digits, with trailing zeros if needed
+    printf("\n%d: ", instruction_cnt);
+    printf("%04x, ",opcode);            // print 4 digits, with trailing zeros if needed
     printf("%02x, ",sel);
     printf("%02x",op1h);
     printf("%02x, ",op1l);
     printf("%02x",op2h);
     printf("%02x\n\n",op2l);
+
+    instruction_cnt++;
 }
 
 // instructions
