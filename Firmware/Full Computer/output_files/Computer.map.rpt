@@ -1,5 +1,5 @@
 Analysis & Synthesis report for Computer
-Mon Apr  8 08:59:24 2024
+Tue Apr  9 02:21:40 2024
 Quartus Prime Version 23.1std.0 Build 991 11/28/2023 SC Lite Edition
 
 
@@ -121,7 +121,7 @@ https://fpgasoftware.intel.com/eula.
 +----------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                     ;
 +---------------------------------+------------------------------------------------+
-; Analysis & Synthesis Status     ; Successful - Mon Apr  8 08:59:24 2024          ;
+; Analysis & Synthesis Status     ; Successful - Tue Apr  9 02:21:40 2024          ;
 ; Quartus Prime Version           ; 23.1std.0 Build 991 11/28/2023 SC Lite Edition ;
 ; Revision Name                   ; Computer                                       ;
 ; Top-level Entity Name           ; TopLevel                                       ;
@@ -237,14 +237,14 @@ https://fpgasoftware.intel.com/eula.
 ; Number detected on machine ; 8           ;
 ; Maximum allowed            ; 4           ;
 ;                            ;             ;
-; Average used               ; 1.57        ;
+; Average used               ; 1.00        ;
 ; Maximum used               ; 4           ;
 ;                            ;             ;
 ; Usage by Processor         ; % Time Used ;
 ;     Processor 1            ; 100.0%      ;
-;     Processor 2            ;  21.8%      ;
-;     Processor 3            ;  17.5%      ;
-;     Processor 4            ;  17.4%      ;
+;     Processor 2            ;   0.1%      ;
+;     Processor 3            ;   0.1%      ;
+;     Processor 4            ;   0.1%      ;
 +----------------------------+-------------+
 
 
@@ -321,14 +321,14 @@ https://fpgasoftware.intel.com/eula.
 +---------------------------------------------+--------------+
 ; Resource                                    ; Usage        ;
 +---------------------------------------------+--------------+
-; Estimate of Logic utilization (ALMs needed) ; 4943         ;
+; Estimate of Logic utilization (ALMs needed) ; 5050         ;
 ;                                             ;              ;
-; Combinational ALUT usage for logic          ; 6026         ;
-;     -- 7 input functions                    ; 227          ;
-;     -- 6 input functions                    ; 3074         ;
-;     -- 5 input functions                    ; 372          ;
-;     -- 4 input functions                    ; 399          ;
-;     -- <=3 input functions                  ; 1954         ;
+; Combinational ALUT usage for logic          ; 6253         ;
+;     -- 7 input functions                    ; 219          ;
+;     -- 6 input functions                    ; 3132         ;
+;     -- 5 input functions                    ; 432          ;
+;     -- 4 input functions                    ; 481          ;
+;     -- <=3 input functions                  ; 1989         ;
 ;                                             ;              ;
 ; Dedicated logic registers                   ; 5507         ;
 ;                                             ;              ;
@@ -337,9 +337,9 @@ https://fpgasoftware.intel.com/eula.
 ; Total DSP Blocks                            ; 3            ;
 ;                                             ;              ;
 ; Maximum fan-out node                        ; sw_rst~input ;
-; Maximum fan-out                             ; 4307         ;
-; Total fan-out                               ; 49581        ;
-; Average fan-out                             ; 4.24         ;
+; Maximum fan-out                             ; 4224         ;
+; Total fan-out                               ; 50600        ;
+; Average fan-out                             ; 4.25         ;
 +---------------------------------------------+--------------+
 
 
@@ -348,14 +348,14 @@ https://fpgasoftware.intel.com/eula.
 +---------------------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+------------------------------------------------------------------------------+-------------------------+--------------+
 ; Compilation Hierarchy Node            ; Combinational ALUTs ; Dedicated Logic Registers ; Block Memory Bits ; DSP Blocks ; Pins ; Virtual Pins ; Full Hierarchy Name                                                          ; Entity Name             ; Library Name ;
 +---------------------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+------------------------------------------------------------------------------+-------------------------+--------------+
-; |TopLevel                             ; 6026 (29)           ; 5507 (0)                  ; 0                 ; 3          ; 77   ; 0            ; |TopLevel                                                                    ; TopLevel                ; work         ;
-;    |AudioController:inst45|           ; 842 (0)             ; 630 (0)                   ; 0                 ; 0          ; 0    ; 0            ; |TopLevel|AudioController:inst45                                             ; AudioController         ; work         ;
+; |TopLevel                             ; 6253 (29)           ; 5507 (0)                  ; 0                 ; 3          ; 77   ; 0            ; |TopLevel                                                                    ; TopLevel                ; work         ;
+;    |AudioController:inst45|           ; 847 (0)             ; 630 (0)                   ; 0                 ; 0          ; 0    ; 0            ; |TopLevel|AudioController:inst45                                             ; AudioController         ; work         ;
 ;       |key_detector:inst1|            ; 14 (14)             ; 4 (4)                     ; 0                 ; 0          ; 0    ; 0            ; |TopLevel|AudioController:inst45|key_detector:inst1                          ; key_detector            ; work         ;
-;       |music_frequencies:inst|        ; 816 (0)             ; 624 (0)                   ; 0                 ; 0          ; 0    ; 0            ; |TopLevel|AudioController:inst45|music_frequencies:inst                      ; music_frequencies       ; work         ;
-;          |fine_clk_divN:inst10|       ; 32 (32)             ; 26 (26)                   ; 0                 ; 0          ; 0    ; 0            ; |TopLevel|AudioController:inst45|music_frequencies:inst|fine_clk_divN:inst10 ; fine_clk_divN           ; work         ;
-;          |fine_clk_divN:inst12|       ; 32 (32)             ; 26 (26)                   ; 0                 ; 0          ; 0    ; 0            ; |TopLevel|AudioController:inst45|music_frequencies:inst|fine_clk_divN:inst12 ; fine_clk_divN           ; work         ;
-;          |fine_clk_divN:inst13|       ; 32 (32)             ; 26 (26)                   ; 0                 ; 0          ; 0    ; 0            ; |TopLevel|AudioController:inst45|music_frequencies:inst|fine_clk_divN:inst13 ; fine_clk_divN           ; work         ;
-;          |fine_clk_divN:inst14|       ; 32 (32)             ; 26 (26)                   ; 0                 ; 0          ; 0    ; 0            ; |TopLevel|AudioController:inst45|music_frequencies:inst|fine_clk_divN:inst14 ; fine_clk_divN           ; work         ;
+;       |music_frequencies:inst|        ; 824 (0)             ; 624 (0)                   ; 0                 ; 0          ; 0    ; 0            ; |TopLevel|AudioController:inst45|music_frequencies:inst                      ; music_frequencies       ; work         ;
+;          |fine_clk_divN:inst10|       ; 34 (34)             ; 26 (26)                   ; 0                 ; 0          ; 0    ; 0            ; |TopLevel|AudioController:inst45|music_frequencies:inst|fine_clk_divN:inst10 ; fine_clk_divN           ; work         ;
+;          |fine_clk_divN:inst12|       ; 34 (34)             ; 26 (26)                   ; 0                 ; 0          ; 0    ; 0            ; |TopLevel|AudioController:inst45|music_frequencies:inst|fine_clk_divN:inst12 ; fine_clk_divN           ; work         ;
+;          |fine_clk_divN:inst13|       ; 34 (34)             ; 26 (26)                   ; 0                 ; 0          ; 0    ; 0            ; |TopLevel|AudioController:inst45|music_frequencies:inst|fine_clk_divN:inst13 ; fine_clk_divN           ; work         ;
+;          |fine_clk_divN:inst14|       ; 34 (34)             ; 26 (26)                   ; 0                 ; 0          ; 0    ; 0            ; |TopLevel|AudioController:inst45|music_frequencies:inst|fine_clk_divN:inst14 ; fine_clk_divN           ; work         ;
 ;          |fine_clk_divN:inst15|       ; 34 (34)             ; 26 (26)                   ; 0                 ; 0          ; 0    ; 0            ; |TopLevel|AudioController:inst45|music_frequencies:inst|fine_clk_divN:inst15 ; fine_clk_divN           ; work         ;
 ;          |fine_clk_divN:inst16|       ; 34 (34)             ; 26 (26)                   ; 0                 ; 0          ; 0    ; 0            ; |TopLevel|AudioController:inst45|music_frequencies:inst|fine_clk_divN:inst16 ; fine_clk_divN           ; work         ;
 ;          |fine_clk_divN:inst17|       ; 34 (34)             ; 26 (26)                   ; 0                 ; 0          ; 0    ; 0            ; |TopLevel|AudioController:inst45|music_frequencies:inst|fine_clk_divN:inst17 ; fine_clk_divN           ; work         ;
@@ -377,61 +377,61 @@ https://fpgasoftware.intel.com/eula.
 ;          |fine_clk_divN:inst9|        ; 34 (34)             ; 26 (26)                   ; 0                 ; 0          ; 0    ; 0            ; |TopLevel|AudioController:inst45|music_frequencies:inst|fine_clk_divN:inst9  ; fine_clk_divN           ; work         ;
 ;          |fine_clk_divN:inst|         ; 34 (34)             ; 26 (26)                   ; 0                 ; 0          ; 0    ; 0            ; |TopLevel|AudioController:inst45|music_frequencies:inst|fine_clk_divN:inst   ; fine_clk_divN           ; work         ;
 ;          |octave_mux:inst26|          ; 8 (8)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |TopLevel|AudioController:inst45|music_frequencies:inst|octave_mux:inst26    ; octave_mux              ; work         ;
-;       |muxN:inst4|                    ; 7 (7)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |TopLevel|AudioController:inst45|muxN:inst4                                  ; muxN                    ; work         ;
-;       |special_key_detector:inst7|    ; 5 (5)               ; 2 (2)                     ; 0                 ; 0          ; 0    ; 0            ; |TopLevel|AudioController:inst45|special_key_detector:inst7                  ; special_key_detector    ; work         ;
-;    |CPU:inst|                         ; 2165 (0)            ; 548 (0)                   ; 0                 ; 2          ; 0    ; 0            ; |TopLevel|CPU:inst                                                           ; CPU                     ; work         ;
-;       |ALU:inst19|                    ; 197 (197)           ; 0 (0)                     ; 0                 ; 2          ; 0    ; 0            ; |TopLevel|CPU:inst|ALU:inst19                                                ; ALU                     ; work         ;
+;       |muxN:inst4|                    ; 6 (6)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |TopLevel|AudioController:inst45|muxN:inst4                                  ; muxN                    ; work         ;
+;       |special_key_detector:inst7|    ; 3 (3)               ; 2 (2)                     ; 0                 ; 0          ; 0    ; 0            ; |TopLevel|AudioController:inst45|special_key_detector:inst7                  ; special_key_detector    ; work         ;
+;    |CPU:inst|                         ; 2340 (0)            ; 548 (0)                   ; 0                 ; 2          ; 0    ; 0            ; |TopLevel|CPU:inst                                                           ; CPU                     ; work         ;
+;       |ALU:inst19|                    ; 190 (190)           ; 0 (0)                     ; 0                 ; 2          ; 0    ; 0            ; |TopLevel|CPU:inst|ALU:inst19                                                ; ALU                     ; work         ;
 ;       |CPU_latchN:inst11|             ; 2 (2)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |TopLevel|CPU:inst|CPU_latchN:inst11                                         ; CPU_latchN              ; work         ;
 ;       |CPU_latchN:inst12|             ; 16 (16)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |TopLevel|CPU:inst|CPU_latchN:inst12                                         ; CPU_latchN              ; work         ;
 ;       |CPU_latchN:inst13|             ; 16 (16)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |TopLevel|CPU:inst|CPU_latchN:inst13                                         ; CPU_latchN              ; work         ;
 ;       |CPU_latchN:inst60|             ; 4 (4)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |TopLevel|CPU:inst|CPU_latchN:inst60                                         ; CPU_latchN              ; work         ;
 ;       |CPU_regN:inst16|               ; 1 (1)               ; 32 (32)                   ; 0                 ; 0          ; 0    ; 0            ; |TopLevel|CPU:inst|CPU_regN:inst16                                           ; CPU_regN                ; work         ;
-;       |CPU_regN:inst2|                ; 15 (15)             ; 12 (12)                   ; 0                 ; 0          ; 0    ; 0            ; |TopLevel|CPU:inst|CPU_regN:inst2                                            ; CPU_regN                ; work         ;
+;       |CPU_regN:inst2|                ; 16 (16)             ; 12 (12)                   ; 0                 ; 0          ; 0    ; 0            ; |TopLevel|CPU:inst|CPU_regN:inst2                                            ; CPU_regN                ; work         ;
 ;       |CPU_regN:inst4|                ; 2 (2)               ; 38 (38)                   ; 0                 ; 0          ; 0    ; 0            ; |TopLevel|CPU:inst|CPU_regN:inst4                                            ; CPU_regN                ; work         ;
-;       |CPU_regN:inst6|                ; 63 (63)             ; 32 (32)                   ; 0                 ; 0          ; 0    ; 0            ; |TopLevel|CPU:inst|CPU_regN:inst6                                            ; CPU_regN                ; work         ;
-;       |CPU_regN:inst|                 ; 1 (1)               ; 12 (12)                   ; 0                 ; 0          ; 0    ; 0            ; |TopLevel|CPU:inst|CPU_regN:inst                                             ; CPU_regN                ; work         ;
-;       |CU_counter:inst25|             ; 20 (20)             ; 6 (6)                     ; 0                 ; 0          ; 0    ; 0            ; |TopLevel|CPU:inst|CU_counter:inst25                                         ; CU_counter              ; work         ;
-;       |CU_logic:inst27|               ; 15 (15)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |TopLevel|CPU:inst|CU_logic:inst27                                           ; CU_logic                ; work         ;
-;       |GPR_selector:inst18|           ; 186 (0)             ; 416 (0)                   ; 0                 ; 0          ; 0    ; 0            ; |TopLevel|CPU:inst|GPR_selector:inst18                                       ; GPR_selector            ; work         ;
+;       |CPU_regN:inst6|                ; 62 (62)             ; 32 (32)                   ; 0                 ; 0          ; 0    ; 0            ; |TopLevel|CPU:inst|CPU_regN:inst6                                            ; CPU_regN                ; work         ;
+;       |CPU_regN:inst|                 ; 2 (2)               ; 12 (12)                   ; 0                 ; 0          ; 0    ; 0            ; |TopLevel|CPU:inst|CPU_regN:inst                                             ; CPU_regN                ; work         ;
+;       |CU_counter:inst25|             ; 13 (13)             ; 6 (6)                     ; 0                 ; 0          ; 0    ; 0            ; |TopLevel|CPU:inst|CU_counter:inst25                                         ; CU_counter              ; work         ;
+;       |CU_decoder:inst26|             ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |TopLevel|CPU:inst|CU_decoder:inst26                                         ; CU_decoder              ; work         ;
+;       |CU_logic:inst27|               ; 19 (19)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |TopLevel|CPU:inst|CU_logic:inst27                                           ; CU_logic                ; work         ;
+;       |GPR_selector:inst18|           ; 199 (0)             ; 416 (0)                   ; 0                 ; 0          ; 0    ; 0            ; |TopLevel|CPU:inst|GPR_selector:inst18                                       ; GPR_selector            ; work         ;
 ;          |CPU_regN:inst11|            ; 2 (2)               ; 32 (32)                   ; 0                 ; 0          ; 0    ; 0            ; |TopLevel|CPU:inst|GPR_selector:inst18|CPU_regN:inst11                       ; CPU_regN                ; work         ;
-;          |CPU_regN:inst13|            ; 2 (2)               ; 32 (32)                   ; 0                 ; 0          ; 0    ; 0            ; |TopLevel|CPU:inst|GPR_selector:inst18|CPU_regN:inst13                       ; CPU_regN                ; work         ;
+;          |CPU_regN:inst13|            ; 4 (4)               ; 32 (32)                   ; 0                 ; 0          ; 0    ; 0            ; |TopLevel|CPU:inst|GPR_selector:inst18|CPU_regN:inst13                       ; CPU_regN                ; work         ;
 ;          |CPU_regN:inst15|            ; 2 (2)               ; 32 (32)                   ; 0                 ; 0          ; 0    ; 0            ; |TopLevel|CPU:inst|GPR_selector:inst18|CPU_regN:inst15                       ; CPU_regN                ; work         ;
 ;          |CPU_regN:inst17|            ; 2 (2)               ; 32 (32)                   ; 0                 ; 0          ; 0    ; 0            ; |TopLevel|CPU:inst|GPR_selector:inst18|CPU_regN:inst17                       ; CPU_regN                ; work         ;
 ;          |CPU_regN:inst19|            ; 2 (2)               ; 32 (32)                   ; 0                 ; 0          ; 0    ; 0            ; |TopLevel|CPU:inst|GPR_selector:inst18|CPU_regN:inst19                       ; CPU_regN                ; work         ;
-;          |CPU_regN:inst21|            ; 2 (2)               ; 32 (32)                   ; 0                 ; 0          ; 0    ; 0            ; |TopLevel|CPU:inst|GPR_selector:inst18|CPU_regN:inst21                       ; CPU_regN                ; work         ;
-;          |CPU_regN:inst23|            ; 2 (2)               ; 32 (32)                   ; 0                 ; 0          ; 0    ; 0            ; |TopLevel|CPU:inst|GPR_selector:inst18|CPU_regN:inst23                       ; CPU_regN                ; work         ;
-;          |CPU_regN:inst25|            ; 2 (2)               ; 32 (32)                   ; 0                 ; 0          ; 0    ; 0            ; |TopLevel|CPU:inst|GPR_selector:inst18|CPU_regN:inst25                       ; CPU_regN                ; work         ;
+;          |CPU_regN:inst21|            ; 3 (3)               ; 32 (32)                   ; 0                 ; 0          ; 0    ; 0            ; |TopLevel|CPU:inst|GPR_selector:inst18|CPU_regN:inst21                       ; CPU_regN                ; work         ;
+;          |CPU_regN:inst23|            ; 3 (3)               ; 32 (32)                   ; 0                 ; 0          ; 0    ; 0            ; |TopLevel|CPU:inst|GPR_selector:inst18|CPU_regN:inst23                       ; CPU_regN                ; work         ;
+;          |CPU_regN:inst25|            ; 3 (3)               ; 32 (32)                   ; 0                 ; 0          ; 0    ; 0            ; |TopLevel|CPU:inst|GPR_selector:inst18|CPU_regN:inst25                       ; CPU_regN                ; work         ;
 ;          |CPU_regN:inst27|            ; 2 (2)               ; 32 (32)                   ; 0                 ; 0          ; 0    ; 0            ; |TopLevel|CPU:inst|GPR_selector:inst18|CPU_regN:inst27                       ; CPU_regN                ; work         ;
 ;          |CPU_regN:inst29|            ; 2 (2)               ; 32 (32)                   ; 0                 ; 0          ; 0    ; 0            ; |TopLevel|CPU:inst|GPR_selector:inst18|CPU_regN:inst29                       ; CPU_regN                ; work         ;
-;          |CPU_regN:inst5|             ; 2 (2)               ; 32 (32)                   ; 0                 ; 0          ; 0    ; 0            ; |TopLevel|CPU:inst|GPR_selector:inst18|CPU_regN:inst5                        ; CPU_regN                ; work         ;
+;          |CPU_regN:inst5|             ; 3 (3)               ; 32 (32)                   ; 0                 ; 0          ; 0    ; 0            ; |TopLevel|CPU:inst|GPR_selector:inst18|CPU_regN:inst5                        ; CPU_regN                ; work         ;
 ;          |CPU_regN:inst7|             ; 2 (2)               ; 32 (32)                   ; 0                 ; 0          ; 0    ; 0            ; |TopLevel|CPU:inst|GPR_selector:inst18|CPU_regN:inst7                        ; CPU_regN                ; work         ;
 ;          |CPU_regN:inst9|             ; 2 (2)               ; 32 (32)                   ; 0                 ; 0          ; 0    ; 0            ; |TopLevel|CPU:inst|GPR_selector:inst18|CPU_regN:inst9                        ; CPU_regN                ; work         ;
-;          |GPR_DEMUX:inst|             ; 5 (5)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |TopLevel|CPU:inst|GPR_selector:inst18|GPR_DEMUX:inst                        ; GPR_DEMUX               ; work         ;
-;          |GPR_MUX:inst2|              ; 155 (155)           ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |TopLevel|CPU:inst|GPR_selector:inst18|GPR_MUX:inst2                         ; GPR_MUX                 ; work         ;
-;       |dest_reg_selector:inst59|      ; 9 (9)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |TopLevel|CPU:inst|dest_reg_selector:inst59                                  ; dest_reg_selector       ; work         ;
-;       |flags_setter:inst23|           ; 10 (10)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |TopLevel|CPU:inst|flags_setter:inst23                                       ; flags_setter            ; work         ;
+;          |GPR_MUX:inst2|              ; 167 (167)           ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |TopLevel|CPU:inst|GPR_selector:inst18|GPR_MUX:inst2                         ; GPR_MUX                 ; work         ;
+;       |dest_reg_selector:inst59|      ; 10 (10)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |TopLevel|CPU:inst|dest_reg_selector:inst59                                  ; dest_reg_selector       ; work         ;
+;       |flags_setter:inst23|           ; 8 (8)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |TopLevel|CPU:inst|flags_setter:inst23                                       ; flags_setter            ; work         ;
 ;       |operand_MUX:inst20|            ; 32 (32)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |TopLevel|CPU:inst|operand_MUX:inst20                                        ; operand_MUX             ; work         ;
-;       |operand_MUX:inst21|            ; 185 (185)           ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |TopLevel|CPU:inst|operand_MUX:inst21                                        ; operand_MUX             ; work         ;
-;       |systemBus_muxN:inst15|         ; 1391 (1391)         ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |TopLevel|CPU:inst|systemBus_muxN:inst15                                     ; systemBus_muxN          ; work         ;
+;       |operand_MUX:inst21|            ; 213 (213)           ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |TopLevel|CPU:inst|operand_MUX:inst21                                        ; operand_MUX             ; work         ;
+;       |systemBus_muxN:inst15|         ; 1534 (1534)         ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |TopLevel|CPU:inst|systemBus_muxN:inst15                                     ; systemBus_muxN          ; work         ;
 ;    |CPUTimer:inst2|                   ; 49 (49)             ; 29 (29)                   ; 0                 ; 1          ; 0    ; 0            ; |TopLevel|CPUTimer:inst2                                                     ; CPUTimer                ; work         ;
-;    |CPU_regN:inst24|                  ; 4 (4)               ; 8 (8)                     ; 0                 ; 0          ; 0    ; 0            ; |TopLevel|CPU_regN:inst24                                                    ; CPU_regN                ; work         ;
-;    |CPU_regN:inst25|                  ; 2 (2)               ; 8 (8)                     ; 0                 ; 0          ; 0    ; 0            ; |TopLevel|CPU_regN:inst25                                                    ; CPU_regN                ; work         ;
+;    |CPU_regN:inst24|                  ; 3 (3)               ; 8 (8)                     ; 0                 ; 0          ; 0    ; 0            ; |TopLevel|CPU_regN:inst24                                                    ; CPU_regN                ; work         ;
+;    |CPU_regN:inst25|                  ; 3 (3)               ; 8 (8)                     ; 0                 ; 0          ; 0    ; 0            ; |TopLevel|CPU_regN:inst25                                                    ; CPU_regN                ; work         ;
 ;    |CPU_regN:inst26|                  ; 5 (5)               ; 4 (4)                     ; 0                 ; 0          ; 0    ; 0            ; |TopLevel|CPU_regN:inst26                                                    ; CPU_regN                ; work         ;
 ;    |CPU_regN:inst27|                  ; 1 (1)               ; 1 (1)                     ; 0                 ; 0          ; 0    ; 0            ; |TopLevel|CPU_regN:inst27                                                    ; CPU_regN                ; work         ;
-;    |CPU_regN:inst28|                  ; 2 (2)               ; 12 (12)                   ; 0                 ; 0          ; 0    ; 0            ; |TopLevel|CPU_regN:inst28                                                    ; CPU_regN                ; work         ;
+;    |CPU_regN:inst28|                  ; 3 (3)               ; 12 (12)                   ; 0                 ; 0          ; 0    ; 0            ; |TopLevel|CPU_regN:inst28                                                    ; CPU_regN                ; work         ;
 ;    |CPU_regN:inst32|                  ; 2 (2)               ; 13 (13)                   ; 0                 ; 0          ; 0    ; 0            ; |TopLevel|CPU_regN:inst32                                                    ; CPU_regN                ; work         ;
-;    |Memory:inst1|                     ; 2502 (0)            ; 3985 (0)                  ; 0                 ; 0          ; 0    ; 0            ; |TopLevel|Memory:inst1                                                       ; Memory                  ; work         ;
-;       |InstructionBuffer:inst6|       ; 1658 (0)            ; 3985 (0)                  ; 0                 ; 0          ; 0    ; 0            ; |TopLevel|Memory:inst1|InstructionBuffer:inst6                               ; InstructionBuffer       ; work         ;
+;    |Memory:inst1|                     ; 2508 (0)            ; 3985 (0)                  ; 0                 ; 0          ; 0    ; 0            ; |TopLevel|Memory:inst1                                                       ; Memory                  ; work         ;
+;       |InstructionBuffer:inst6|       ; 1643 (0)            ; 3985 (0)                  ; 0                 ; 0          ; 0    ; 0            ; |TopLevel|Memory:inst1|InstructionBuffer:inst6                               ; InstructionBuffer       ; work         ;
 ;          |d_ffN:inst11|               ; 8 (8)               ; 8 (8)                     ; 0                 ; 0          ; 0    ; 0            ; |TopLevel|Memory:inst1|InstructionBuffer:inst6|d_ffN:inst11                  ; d_ffN                   ; work         ;
 ;          |d_ffN:inst14|               ; 1 (1)               ; 1 (1)                     ; 0                 ; 0          ; 0    ; 0            ; |TopLevel|Memory:inst1|InstructionBuffer:inst6|d_ffN:inst14                  ; d_ffN                   ; work         ;
 ;          |d_ffN:inst15|               ; 8 (8)               ; 8 (8)                     ; 0                 ; 0          ; 0    ; 0            ; |TopLevel|Memory:inst1|InstructionBuffer:inst6|d_ffN:inst15                  ; d_ffN                   ; work         ;
 ;          |d_ffN:inst16|               ; 1 (1)               ; 1 (1)                     ; 0                 ; 0          ; 0    ; 0            ; |TopLevel|Memory:inst1|InstructionBuffer:inst6|d_ffN:inst16                  ; d_ffN                   ; work         ;
 ;          |fine_clk_divN:inst12|       ; 34 (34)             ; 26 (26)                   ; 0                 ; 0          ; 0    ; 0            ; |TopLevel|Memory:inst1|InstructionBuffer:inst6|fine_clk_divN:inst12          ; fine_clk_divN           ; work         ;
-;          |instructionRAM:inst20|      ; 1576 (1576)         ; 3890 (3890)               ; 0                 ; 0          ; 0    ; 0            ; |TopLevel|Memory:inst1|InstructionBuffer:inst6|instructionRAM:inst20         ; instructionRAM          ; work         ;
-;          |intermediaryRAM:inst1|      ; 30 (30)             ; 51 (51)                   ; 0                 ; 0          ; 0    ; 0            ; |TopLevel|Memory:inst1|InstructionBuffer:inst6|intermediaryRAM:inst1         ; intermediaryRAM         ; work         ;
-;       |M_DEMUX:inst|                  ; 16 (16)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |TopLevel|Memory:inst1|M_DEMUX:inst                                          ; M_DEMUX                 ; work         ;
+;          |instructionRAM:inst20|      ; 1562 (1562)         ; 3890 (3890)               ; 0                 ; 0          ; 0    ; 0            ; |TopLevel|Memory:inst1|InstructionBuffer:inst6|instructionRAM:inst20         ; instructionRAM          ; work         ;
+;          |intermediaryRAM:inst1|      ; 29 (29)             ; 51 (51)                   ; 0                 ; 0          ; 0    ; 0            ; |TopLevel|Memory:inst1|InstructionBuffer:inst6|intermediaryRAM:inst1         ; intermediaryRAM         ; work         ;
+;       |M_DEMUX:inst|                  ; 17 (17)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |TopLevel|Memory:inst1|M_DEMUX:inst                                          ; M_DEMUX                 ; work         ;
 ;       |M_MUX:inst5|                   ; 11 (11)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |TopLevel|Memory:inst1|M_MUX:inst5                                           ; M_MUX                   ; work         ;
-;       |M_RAM:inst4|                   ; 800 (800)           ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |TopLevel|Memory:inst1|M_RAM:inst4                                           ; M_RAM                   ; work         ;
+;       |M_RAM:inst4|                   ; 820 (820)           ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |TopLevel|Memory:inst1|M_RAM:inst4                                           ; M_RAM                   ; work         ;
 ;       |M_addr_checker:inst1|          ; 10 (10)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |TopLevel|Memory:inst1|M_addr_checker:inst1                                  ; M_addr_checker          ; work         ;
 ;       |M_mmr_DEMUX:inst38|            ; 2 (2)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |TopLevel|Memory:inst1|M_mmr_DEMUX:inst38                                    ; M_mmr_DEMUX             ; work         ;
 ;       |M_mmr_MUX:inst40|              ; 3 (3)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |TopLevel|Memory:inst1|M_mmr_MUX:inst40                                      ; M_mmr_MUX               ; work         ;
@@ -444,19 +444,19 @@ https://fpgasoftware.intel.com/eula.
 ;       |bsy_detector:inst2|            ; 9 (9)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |TopLevel|UART:inst44|bsy_detector:inst2                                     ; bsy_detector            ; work         ;
 ;       |uart_clk_divN:inst|            ; 40 (40)             ; 28 (28)                   ; 0                 ; 0          ; 0    ; 0            ; |TopLevel|UART:inst44|uart_clk_divN:inst                                     ; uart_clk_divN           ; work         ;
 ;       |uart_controller:inst1|         ; 7 (7)               ; 13 (13)                   ; 0                 ; 0          ; 0    ; 0            ; |TopLevel|UART:inst44|uart_controller:inst1                                  ; uart_controller         ; work         ;
-;    |VGA_controller:inst6|             ; 213 (0)             ; 123 (0)                   ; 0                 ; 0          ; 0    ; 0            ; |TopLevel|VGA_controller:inst6                                               ; VGA_controller          ; work         ;
+;    |VGA_controller:inst6|             ; 253 (0)             ; 123 (0)                   ; 0                 ; 0          ; 0    ; 0            ; |TopLevel|VGA_controller:inst6                                               ; VGA_controller          ; work         ;
 ;       |clk_divN:inst15|               ; 18 (18)             ; 18 (18)                   ; 0                 ; 0          ; 0    ; 0            ; |TopLevel|VGA_controller:inst6|clk_divN:inst15                               ; clk_divN                ; work         ;
-;       |d_ffN:inst13|                  ; 0 (0)               ; 11 (11)                   ; 0                 ; 0          ; 0    ; 0            ; |TopLevel|VGA_controller:inst6|d_ffN:inst13                                  ; d_ffN                   ; work         ;
-;       |d_ffN:inst14|                  ; 0 (0)               ; 11 (11)                   ; 0                 ; 0          ; 0    ; 0            ; |TopLevel|VGA_controller:inst6|d_ffN:inst14                                  ; d_ffN                   ; work         ;
-;       |d_ffN:inst17|                  ; 0 (0)               ; 11 (11)                   ; 0                 ; 0          ; 0    ; 0            ; |TopLevel|VGA_controller:inst6|d_ffN:inst17                                  ; d_ffN                   ; work         ;
-;       |d_ffN:inst18|                  ; 0 (0)               ; 11 (11)                   ; 0                 ; 0          ; 0    ; 0            ; |TopLevel|VGA_controller:inst6|d_ffN:inst18                                  ; d_ffN                   ; work         ;
-;       |hsync_cnt:inst1|               ; 25 (25)             ; 13 (13)                   ; 0                 ; 0          ; 0    ; 0            ; |TopLevel|VGA_controller:inst6|hsync_cnt:inst1                               ; hsync_cnt               ; work         ;
-;       |pixel_offset_controller:inst7| ; 38 (38)             ; 22 (22)                   ; 0                 ; 0          ; 0    ; 0            ; |TopLevel|VGA_controller:inst6|pixel_offset_controller:inst7                 ; pixel_offset_controller ; work         ;
+;       |d_ffN:inst13|                  ; 11 (11)             ; 11 (11)                   ; 0                 ; 0          ; 0    ; 0            ; |TopLevel|VGA_controller:inst6|d_ffN:inst13                                  ; d_ffN                   ; work         ;
+;       |d_ffN:inst14|                  ; 11 (11)             ; 11 (11)                   ; 0                 ; 0          ; 0    ; 0            ; |TopLevel|VGA_controller:inst6|d_ffN:inst14                                  ; d_ffN                   ; work         ;
+;       |d_ffN:inst17|                  ; 11 (11)             ; 11 (11)                   ; 0                 ; 0          ; 0    ; 0            ; |TopLevel|VGA_controller:inst6|d_ffN:inst17                                  ; d_ffN                   ; work         ;
+;       |d_ffN:inst18|                  ; 11 (11)             ; 11 (11)                   ; 0                 ; 0          ; 0    ; 0            ; |TopLevel|VGA_controller:inst6|d_ffN:inst18                                  ; d_ffN                   ; work         ;
+;       |hsync_cnt:inst1|               ; 26 (26)             ; 13 (13)                   ; 0                 ; 0          ; 0    ; 0            ; |TopLevel|VGA_controller:inst6|hsync_cnt:inst1                               ; hsync_cnt               ; work         ;
+;       |pixel_offset_controller:inst7| ; 34 (34)             ; 22 (22)                   ; 0                 ; 0          ; 0    ; 0            ; |TopLevel|VGA_controller:inst6|pixel_offset_controller:inst7                 ; pixel_offset_controller ; work         ;
 ;       |rgb_controller:inst4|          ; 5 (5)               ; 12 (12)                   ; 0                 ; 0          ; 0    ; 0            ; |TopLevel|VGA_controller:inst6|rgb_controller:inst4                          ; rgb_controller          ; work         ;
 ;       |sprites:inst6|                 ; 96 (0)              ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |TopLevel|VGA_controller:inst6|sprites:inst6                                 ; sprites                 ; work         ;
 ;          |sprite_ROM_square:inst11|   ; 96 (96)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |TopLevel|VGA_controller:inst6|sprites:inst6|sprite_ROM_square:inst11        ; sprite_ROM_square       ; work         ;
 ;       |t_ff:inst|                     ; 1 (1)               ; 1 (1)                     ; 0                 ; 0          ; 0    ; 0            ; |TopLevel|VGA_controller:inst6|t_ff:inst                                     ; t_ff                    ; work         ;
-;       |vsync_cnt:inst2|               ; 30 (30)             ; 13 (13)                   ; 0                 ; 0          ; 0    ; 0            ; |TopLevel|VGA_controller:inst6|vsync_cnt:inst2                               ; vsync_cnt               ; work         ;
+;       |vsync_cnt:inst2|               ; 29 (29)             ; 13 (13)                   ; 0                 ; 0          ; 0    ; 0            ; |TopLevel|VGA_controller:inst6|vsync_cnt:inst2                               ; vsync_cnt               ; work         ;
 ;    |debouncer:inst14|                 ; 36 (36)             ; 29 (29)                   ; 0                 ; 0          ; 0    ; 0            ; |TopLevel|debouncer:inst14                                                   ; debouncer               ; work         ;
 ;    |debouncer:inst8|                  ; 36 (36)             ; 29 (29)                   ; 0                 ; 0          ; 0    ; 0            ; |TopLevel|debouncer:inst8                                                    ; debouncer               ; work         ;
 ;    |seven_seg_controller:inst10|      ; 14 (14)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |TopLevel|seven_seg_controller:inst10                                        ; seven_seg_controller    ; work         ;
@@ -503,113 +503,113 @@ Encoding Type:  One-Hot
 +--------------+--------------+--------------+--------------+
 
 
-+-----------------------------------------------------------------------------------------------------+
-; User-Specified and Inferred Latches                                                                 ;
-+------------------------------------------------------+---------------------+------------------------+
-; Latch Name                                           ; Latch Enable Signal ; Free of Timing Hazards ;
-+------------------------------------------------------+---------------------+------------------------+
-; CPU:inst|CU_decoder:inst26|CPU_state[2]              ; GND                 ; yes                    ;
-; CPU:inst|CU_decoder:inst26|CPU_state[1]              ; GND                 ; yes                    ;
-; CPU:inst|CU_decoder:inst26|CPU_state[0]              ; GND                 ; yes                    ;
-; CPU:inst|CU_decoder:inst26|CPU_state[3]              ; GND                 ; yes                    ;
-; CPU:inst|CU_decoder:inst26|CPU_state[4]              ; GND                 ; yes                    ;
-; CPU:inst|CU_decoder:inst26|CPU_state[5]              ; GND                 ; yes                    ;
-; Memory:inst1|M_RAM:inst4|RAM~28                      ; rtl~0               ; yes                    ;
-; Memory:inst1|M_RAM:inst4|RAM~29                      ; rtl~1               ; yes                    ;
-; Memory:inst1|M_RAM:inst4|RAM~30                      ; rtl~2               ; yes                    ;
-; Memory:inst1|M_RAM:inst4|RAM~31                      ; rtl~3               ; yes                    ;
-; Memory:inst1|M_RAM:inst4|RAM~24                      ; rtl~0               ; yes                    ;
-; Memory:inst1|M_RAM:inst4|RAM~25                      ; rtl~1               ; yes                    ;
-; Memory:inst1|M_RAM:inst4|RAM~26                      ; rtl~2               ; yes                    ;
-; Memory:inst1|M_RAM:inst4|RAM~27                      ; rtl~3               ; yes                    ;
-; Memory:inst1|M_RAM:inst4|RAM~20                      ; rtl~0               ; yes                    ;
-; Memory:inst1|M_RAM:inst4|RAM~21                      ; rtl~1               ; yes                    ;
-; Memory:inst1|M_RAM:inst4|RAM~22                      ; rtl~2               ; yes                    ;
-; Memory:inst1|M_RAM:inst4|RAM~23                      ; rtl~3               ; yes                    ;
-; Memory:inst1|M_RAM:inst4|RAM~16                      ; rtl~0               ; yes                    ;
-; Memory:inst1|M_RAM:inst4|RAM~17                      ; rtl~1               ; yes                    ;
-; Memory:inst1|M_RAM:inst4|RAM~18                      ; rtl~2               ; yes                    ;
-; Memory:inst1|M_RAM:inst4|RAM~19                      ; rtl~3               ; yes                    ;
-; Memory:inst1|M_RAM:inst4|RAM~12                      ; rtl~0               ; yes                    ;
-; Memory:inst1|M_RAM:inst4|RAM~13                      ; rtl~1               ; yes                    ;
-; Memory:inst1|M_RAM:inst4|RAM~14                      ; rtl~2               ; yes                    ;
-; Memory:inst1|M_RAM:inst4|RAM~15                      ; rtl~3               ; yes                    ;
-; Memory:inst1|M_RAM:inst4|RAM~8                       ; rtl~0               ; yes                    ;
-; Memory:inst1|M_RAM:inst4|RAM~9                       ; rtl~1               ; yes                    ;
-; Memory:inst1|M_RAM:inst4|RAM~10                      ; rtl~2               ; yes                    ;
-; Memory:inst1|M_RAM:inst4|RAM~11                      ; rtl~3               ; yes                    ;
-; Memory:inst1|M_RAM:inst4|RAM~4                       ; rtl~0               ; yes                    ;
-; Memory:inst1|M_RAM:inst4|RAM~5                       ; rtl~1               ; yes                    ;
-; Memory:inst1|M_RAM:inst4|RAM~6                       ; rtl~2               ; yes                    ;
-; Memory:inst1|M_RAM:inst4|RAM~7                       ; rtl~3               ; yes                    ;
-; Memory:inst1|M_RAM:inst4|RAM~0                       ; rtl~0               ; yes                    ;
-; Memory:inst1|M_RAM:inst4|RAM~1                       ; rtl~1               ; yes                    ;
-; Memory:inst1|M_RAM:inst4|RAM~2                       ; rtl~2               ; yes                    ;
-; Memory:inst1|M_RAM:inst4|RAM~3                       ; rtl~3               ; yes                    ;
-; Memory:inst1|M_RAM:inst4|RAM~184                     ; rtl~4               ; yes                    ;
-; Memory:inst1|M_RAM:inst4|RAM~185                     ; rtl~5               ; yes                    ;
-; Memory:inst1|M_RAM:inst4|RAM~186                     ; rtl~6               ; yes                    ;
-; Memory:inst1|M_RAM:inst4|RAM~187                     ; rtl~7               ; yes                    ;
-; Memory:inst1|M_RAM:inst4|RAM~188                     ; rtl~8               ; yes                    ;
-; Memory:inst1|M_RAM:inst4|RAM~189                     ; rtl~9               ; yes                    ;
-; Memory:inst1|M_RAM:inst4|RAM~190                     ; rtl~10              ; yes                    ;
-; Memory:inst1|M_RAM:inst4|RAM~191                     ; rtl~11              ; yes                    ;
-; CPU:inst|CU_decoder:inst26|CPU_state[6]              ; GND                 ; yes                    ;
-; CPU:inst|CU_decoder:inst26|CPU_state[7]              ; GND                 ; yes                    ;
-; CPU:inst|CU_decoder:inst26|CPU_state[8]              ; GND                 ; yes                    ;
-; CPU:inst|CU_decoder:inst26|CPU_state[9]              ; GND                 ; yes                    ;
-; CPU:inst|CU_decoder:inst26|CPU_state[10]             ; GND                 ; yes                    ;
-; CPU:inst|CU_decoder:inst26|CPU_state[11]             ; GND                 ; yes                    ;
-; CPU:inst|CU_decoder:inst26|CPU_state[12]             ; GND                 ; yes                    ;
-; CPU:inst|CU_decoder:inst26|CPU_state[13]             ; GND                 ; yes                    ;
-; CPU:inst|CU_decoder:inst26|CPU_state[14]             ; GND                 ; yes                    ;
-; CPU:inst|CU_decoder:inst26|CPU_state[15]             ; GND                 ; yes                    ;
-; CPU:inst|CU_decoder:inst26|CPU_state[16]             ; GND                 ; yes                    ;
-; CPU:inst|CU_decoder:inst26|CPU_state[17]             ; GND                 ; yes                    ;
-; CPU:inst|CU_decoder:inst26|CPU_state[18]             ; GND                 ; yes                    ;
-; CPU:inst|CU_decoder:inst26|CPU_state[19]             ; GND                 ; yes                    ;
-; CPU:inst|CU_decoder:inst26|CPU_state[20]             ; GND                 ; yes                    ;
-; CPU:inst|CU_decoder:inst26|CPU_state[21]             ; GND                 ; yes                    ;
-; CPU:inst|CU_decoder:inst26|CPU_state[22]             ; GND                 ; yes                    ;
-; CPU:inst|CU_decoder:inst26|CPU_state[23]             ; GND                 ; yes                    ;
-; CPU:inst|CU_decoder:inst26|CPU_state[24]             ; GND                 ; yes                    ;
-; CPU:inst|CU_decoder:inst26|CPU_state[25]             ; GND                 ; yes                    ;
-; CPU:inst|CU_decoder:inst26|CPU_state[26]             ; GND                 ; yes                    ;
-; CPU:inst|CU_decoder:inst26|CPU_state[27]             ; GND                 ; yes                    ;
-; CPU:inst|CU_decoder:inst26|CPU_state[28]             ; GND                 ; yes                    ;
-; CPU:inst|CU_decoder:inst26|CPU_state[29]             ; GND                 ; yes                    ;
-; CPU:inst|CU_decoder:inst26|CPU_state[30]             ; GND                 ; yes                    ;
-; CPU:inst|CU_decoder:inst26|CPU_state[31]             ; GND                 ; yes                    ;
-; CPU:inst|CU_decoder:inst26|CPU_state[32]             ; GND                 ; yes                    ;
-; CPU:inst|CU_decoder:inst26|CPU_state[33]             ; GND                 ; yes                    ;
-; CPU:inst|CU_decoder:inst26|CPU_state[34]             ; GND                 ; yes                    ;
-; CPU:inst|CU_decoder:inst26|CPU_state[35]             ; GND                 ; yes                    ;
-; CPU:inst|CU_decoder:inst26|CPU_state[36]             ; GND                 ; yes                    ;
-; CPU:inst|CU_decoder:inst26|CPU_state[37]             ; GND                 ; yes                    ;
-; CPU:inst|CU_decoder:inst26|CPU_state[38]             ; GND                 ; yes                    ;
-; CPU:inst|CU_decoder:inst26|CPU_state[39]             ; GND                 ; yes                    ;
-; Memory:inst1|M_RAM:inst4|RAM~176                     ; rtl~4               ; yes                    ;
-; Memory:inst1|M_RAM:inst4|RAM~177                     ; rtl~5               ; yes                    ;
-; Memory:inst1|M_RAM:inst4|RAM~178                     ; rtl~6               ; yes                    ;
-; Memory:inst1|M_RAM:inst4|RAM~179                     ; rtl~7               ; yes                    ;
-; Memory:inst1|M_RAM:inst4|RAM~180                     ; rtl~8               ; yes                    ;
-; Memory:inst1|M_RAM:inst4|RAM~181                     ; rtl~9               ; yes                    ;
-; Memory:inst1|M_RAM:inst4|RAM~182                     ; rtl~10              ; yes                    ;
-; Memory:inst1|M_RAM:inst4|RAM~183                     ; rtl~11              ; yes                    ;
-; Memory:inst1|M_RAM:inst4|RAM~168                     ; rtl~4               ; yes                    ;
-; Memory:inst1|M_RAM:inst4|RAM~169                     ; rtl~5               ; yes                    ;
-; Memory:inst1|M_RAM:inst4|RAM~170                     ; rtl~6               ; yes                    ;
-; Memory:inst1|M_RAM:inst4|RAM~171                     ; rtl~7               ; yes                    ;
-; Memory:inst1|M_RAM:inst4|RAM~172                     ; rtl~8               ; yes                    ;
-; Memory:inst1|M_RAM:inst4|RAM~173                     ; rtl~9               ; yes                    ;
-; Memory:inst1|M_RAM:inst4|RAM~174                     ; rtl~10              ; yes                    ;
-; Memory:inst1|M_RAM:inst4|RAM~175                     ; rtl~11              ; yes                    ;
-; Memory:inst1|M_RAM:inst4|RAM~160                     ; rtl~4               ; yes                    ;
-; Memory:inst1|M_RAM:inst4|RAM~161                     ; rtl~5               ; yes                    ;
-; Memory:inst1|M_RAM:inst4|RAM~162                     ; rtl~6               ; yes                    ;
-; Memory:inst1|M_RAM:inst4|RAM~163                     ; rtl~7               ; yes                    ;
-; Number of user-specified and inferred latches = 730  ;                     ;                        ;
-+------------------------------------------------------+---------------------+------------------------+
++-----------------------------------------------------------------------------------------------------------------+
+; User-Specified and Inferred Latches                                                                             ;
++------------------------------------------------------+---------------------------------+------------------------+
+; Latch Name                                           ; Latch Enable Signal             ; Free of Timing Hazards ;
++------------------------------------------------------+---------------------------------+------------------------+
+; CPU:inst|CPU_latchN:inst12|internal_reg[12]          ; CPU:inst|CU_logic:inst27|Equal2 ; yes                    ;
+; CPU:inst|CPU_latchN:inst13|internal_reg[12]          ; CPU:inst|CU_logic:inst27|Equal2 ; yes                    ;
+; CPU:inst|CPU_latchN:inst12|internal_reg[8]           ; CPU:inst|CU_logic:inst27|Equal2 ; yes                    ;
+; CPU:inst|CPU_latchN:inst12|internal_reg[13]          ; CPU:inst|CU_logic:inst27|Equal2 ; yes                    ;
+; CPU:inst|CPU_latchN:inst13|internal_reg[13]          ; CPU:inst|CU_logic:inst27|Equal2 ; yes                    ;
+; CPU:inst|CPU_latchN:inst12|internal_reg[9]           ; CPU:inst|CU_logic:inst27|Equal2 ; yes                    ;
+; CPU:inst|CPU_latchN:inst12|internal_reg[14]          ; CPU:inst|CU_logic:inst27|Equal2 ; yes                    ;
+; CPU:inst|CPU_latchN:inst13|internal_reg[14]          ; CPU:inst|CU_logic:inst27|Equal2 ; yes                    ;
+; CPU:inst|CPU_latchN:inst12|internal_reg[10]          ; CPU:inst|CU_logic:inst27|Equal2 ; yes                    ;
+; CPU:inst|CPU_latchN:inst12|internal_reg[15]          ; CPU:inst|CU_logic:inst27|Equal2 ; yes                    ;
+; CPU:inst|CPU_latchN:inst13|internal_reg[15]          ; CPU:inst|CU_logic:inst27|Equal2 ; yes                    ;
+; CPU:inst|CPU_latchN:inst12|internal_reg[11]          ; CPU:inst|CU_logic:inst27|Equal2 ; yes                    ;
+; Memory:inst1|M_RAM:inst4|RAM~519                     ; rtl~0                           ; yes                    ;
+; Memory:inst1|M_RAM:inst4|RAM~551                     ; rtl~1                           ; yes                    ;
+; Memory:inst1|M_RAM:inst4|RAM~583                     ; rtl~2                           ; yes                    ;
+; Memory:inst1|M_RAM:inst4|RAM~615                     ; rtl~3                           ; yes                    ;
+; CPU:inst|CPU_latchN:inst12|internal_reg[7]           ; CPU:inst|CU_logic:inst27|Equal2 ; yes                    ;
+; CPU:inst|CPU_latchN:inst13|internal_reg[7]           ; CPU:inst|CU_logic:inst27|Equal2 ; yes                    ;
+; CPU:inst|CPU_latchN:inst13|internal_reg[1]           ; CPU:inst|CU_logic:inst27|Equal2 ; yes                    ;
+; Memory:inst1|M_RAM:inst4|RAM~513                     ; rtl~0                           ; yes                    ;
+; Memory:inst1|M_RAM:inst4|RAM~545                     ; rtl~1                           ; yes                    ;
+; Memory:inst1|M_RAM:inst4|RAM~577                     ; rtl~2                           ; yes                    ;
+; Memory:inst1|M_RAM:inst4|RAM~609                     ; rtl~3                           ; yes                    ;
+; CPU:inst|CPU_latchN:inst12|internal_reg[1]           ; CPU:inst|CU_logic:inst27|Equal2 ; yes                    ;
+; CPU:inst|CPU_latchN:inst13|internal_reg[2]           ; CPU:inst|CU_logic:inst27|Equal2 ; yes                    ;
+; CPU:inst|CPU_latchN:inst12|internal_reg[2]           ; CPU:inst|CU_logic:inst27|Equal2 ; yes                    ;
+; Memory:inst1|M_RAM:inst4|RAM~514                     ; rtl~0                           ; yes                    ;
+; Memory:inst1|M_RAM:inst4|RAM~546                     ; rtl~1                           ; yes                    ;
+; Memory:inst1|M_RAM:inst4|RAM~578                     ; rtl~2                           ; yes                    ;
+; Memory:inst1|M_RAM:inst4|RAM~610                     ; rtl~3                           ; yes                    ;
+; Memory:inst1|M_RAM:inst4|RAM~521                     ; rtl~0                           ; yes                    ;
+; Memory:inst1|M_RAM:inst4|RAM~553                     ; rtl~1                           ; yes                    ;
+; Memory:inst1|M_RAM:inst4|RAM~585                     ; rtl~2                           ; yes                    ;
+; Memory:inst1|M_RAM:inst4|RAM~617                     ; rtl~3                           ; yes                    ;
+; CPU:inst|CPU_latchN:inst13|internal_reg[9]           ; CPU:inst|CU_logic:inst27|Equal2 ; yes                    ;
+; Memory:inst1|M_RAM:inst4|RAM~520                     ; rtl~0                           ; yes                    ;
+; Memory:inst1|M_RAM:inst4|RAM~552                     ; rtl~1                           ; yes                    ;
+; Memory:inst1|M_RAM:inst4|RAM~584                     ; rtl~2                           ; yes                    ;
+; Memory:inst1|M_RAM:inst4|RAM~616                     ; rtl~3                           ; yes                    ;
+; CPU:inst|CPU_latchN:inst13|internal_reg[8]           ; CPU:inst|CU_logic:inst27|Equal2 ; yes                    ;
+; CPU:inst|CPU_latchN:inst13|internal_reg[3]           ; CPU:inst|CU_logic:inst27|Equal2 ; yes                    ;
+; CPU:inst|CPU_latchN:inst12|internal_reg[3]           ; CPU:inst|CU_logic:inst27|Equal2 ; yes                    ;
+; Memory:inst1|M_RAM:inst4|RAM~515                     ; rtl~0                           ; yes                    ;
+; Memory:inst1|M_RAM:inst4|RAM~547                     ; rtl~1                           ; yes                    ;
+; Memory:inst1|M_RAM:inst4|RAM~579                     ; rtl~2                           ; yes                    ;
+; Memory:inst1|M_RAM:inst4|RAM~611                     ; rtl~3                           ; yes                    ;
+; Memory:inst1|M_RAM:inst4|RAM~517                     ; rtl~0                           ; yes                    ;
+; Memory:inst1|M_RAM:inst4|RAM~549                     ; rtl~1                           ; yes                    ;
+; Memory:inst1|M_RAM:inst4|RAM~581                     ; rtl~2                           ; yes                    ;
+; Memory:inst1|M_RAM:inst4|RAM~613                     ; rtl~3                           ; yes                    ;
+; CPU:inst|CPU_latchN:inst12|internal_reg[5]           ; CPU:inst|CU_logic:inst27|Equal2 ; yes                    ;
+; CPU:inst|CPU_latchN:inst13|internal_reg[5]           ; CPU:inst|CU_logic:inst27|Equal2 ; yes                    ;
+; Memory:inst1|M_RAM:inst4|RAM~516                     ; rtl~0                           ; yes                    ;
+; Memory:inst1|M_RAM:inst4|RAM~548                     ; rtl~1                           ; yes                    ;
+; Memory:inst1|M_RAM:inst4|RAM~580                     ; rtl~2                           ; yes                    ;
+; Memory:inst1|M_RAM:inst4|RAM~612                     ; rtl~3                           ; yes                    ;
+; CPU:inst|CPU_latchN:inst12|internal_reg[4]           ; CPU:inst|CU_logic:inst27|Equal2 ; yes                    ;
+; CPU:inst|CPU_latchN:inst13|internal_reg[4]           ; CPU:inst|CU_logic:inst27|Equal2 ; yes                    ;
+; Memory:inst1|M_RAM:inst4|RAM~518                     ; rtl~0                           ; yes                    ;
+; Memory:inst1|M_RAM:inst4|RAM~550                     ; rtl~1                           ; yes                    ;
+; Memory:inst1|M_RAM:inst4|RAM~582                     ; rtl~2                           ; yes                    ;
+; Memory:inst1|M_RAM:inst4|RAM~614                     ; rtl~3                           ; yes                    ;
+; CPU:inst|CPU_latchN:inst12|internal_reg[6]           ; CPU:inst|CU_logic:inst27|Equal2 ; yes                    ;
+; CPU:inst|CPU_latchN:inst13|internal_reg[6]           ; CPU:inst|CU_logic:inst27|Equal2 ; yes                    ;
+; CPU:inst|CPU_latchN:inst13|internal_reg[0]           ; CPU:inst|CU_logic:inst27|Equal2 ; yes                    ;
+; Memory:inst1|M_RAM:inst4|RAM~512                     ; rtl~0                           ; yes                    ;
+; Memory:inst1|M_RAM:inst4|RAM~544                     ; rtl~1                           ; yes                    ;
+; Memory:inst1|M_RAM:inst4|RAM~576                     ; rtl~2                           ; yes                    ;
+; Memory:inst1|M_RAM:inst4|RAM~608                     ; rtl~3                           ; yes                    ;
+; CPU:inst|CPU_latchN:inst12|internal_reg[0]           ; CPU:inst|CU_logic:inst27|Equal2 ; yes                    ;
+; Memory:inst1|M_RAM:inst4|RAM~522                     ; rtl~0                           ; yes                    ;
+; Memory:inst1|M_RAM:inst4|RAM~554                     ; rtl~1                           ; yes                    ;
+; Memory:inst1|M_RAM:inst4|RAM~586                     ; rtl~2                           ; yes                    ;
+; Memory:inst1|M_RAM:inst4|RAM~618                     ; rtl~3                           ; yes                    ;
+; CPU:inst|CPU_latchN:inst13|internal_reg[10]          ; CPU:inst|CU_logic:inst27|Equal2 ; yes                    ;
+; CPU:inst|CPU_latchN:inst13|internal_reg[11]          ; CPU:inst|CU_logic:inst27|Equal2 ; yes                    ;
+; Memory:inst1|M_RAM:inst4|RAM~523                     ; rtl~0                           ; yes                    ;
+; Memory:inst1|M_RAM:inst4|RAM~555                     ; rtl~1                           ; yes                    ;
+; Memory:inst1|M_RAM:inst4|RAM~587                     ; rtl~2                           ; yes                    ;
+; Memory:inst1|M_RAM:inst4|RAM~619                     ; rtl~3                           ; yes                    ;
+; CPU:inst|CPU_latchN:inst60|internal_reg[1]           ; CPU:inst|CU_logic:inst27|Equal2 ; yes                    ;
+; CPU:inst|CPU_latchN:inst60|internal_reg[2]           ; CPU:inst|CU_logic:inst27|Equal2 ; yes                    ;
+; CPU:inst|CPU_latchN:inst60|internal_reg[3]           ; CPU:inst|CU_logic:inst27|Equal2 ; yes                    ;
+; CPU:inst|CPU_latchN:inst11|internal_reg[0]           ; CPU:inst|CU_logic:inst27|Equal2 ; yes                    ;
+; CPU:inst|CPU_latchN:inst60|internal_reg[0]           ; CPU:inst|CU_logic:inst27|Equal2 ; yes                    ;
+; Memory:inst1|M_RAM:inst4|RAM~540                     ; rtl~0                           ; yes                    ;
+; Memory:inst1|M_RAM:inst4|RAM~572                     ; rtl~1                           ; yes                    ;
+; Memory:inst1|M_RAM:inst4|RAM~604                     ; rtl~2                           ; yes                    ;
+; Memory:inst1|M_RAM:inst4|RAM~636                     ; rtl~3                           ; yes                    ;
+; Memory:inst1|M_RAM:inst4|RAM~524                     ; rtl~0                           ; yes                    ;
+; Memory:inst1|M_RAM:inst4|RAM~556                     ; rtl~1                           ; yes                    ;
+; Memory:inst1|M_RAM:inst4|RAM~588                     ; rtl~2                           ; yes                    ;
+; Memory:inst1|M_RAM:inst4|RAM~620                     ; rtl~3                           ; yes                    ;
+; Memory:inst1|M_RAM:inst4|RAM~536                     ; rtl~0                           ; yes                    ;
+; Memory:inst1|M_RAM:inst4|RAM~568                     ; rtl~1                           ; yes                    ;
+; Memory:inst1|M_RAM:inst4|RAM~600                     ; rtl~2                           ; yes                    ;
+; Memory:inst1|M_RAM:inst4|RAM~632                     ; rtl~3                           ; yes                    ;
+; Memory:inst1|M_RAM:inst4|RAM~541                     ; rtl~0                           ; yes                    ;
+; Memory:inst1|M_RAM:inst4|RAM~573                     ; rtl~1                           ; yes                    ;
+; Memory:inst1|M_RAM:inst4|RAM~605                     ; rtl~2                           ; yes                    ;
+; Number of user-specified and inferred latches = 690  ;                                 ;                        ;
++------------------------------------------------------+---------------------------------+------------------------+
 Table restricted to first 100 entries. Note: All latches listed above may not be present at the end of synthesis due to various synthesis optimizations.
 
 
@@ -619,11 +619,11 @@ Table restricted to first 100 entries. Note: All latches listed above may not be
 ; Statistic                                    ; Value ;
 +----------------------------------------------+-------+
 ; Total registers                              ; 5507  ;
-; Number of registers using Synchronous Clear  ; 5417  ;
+; Number of registers using Synchronous Clear  ; 1519  ;
 ; Number of registers using Synchronous Load   ; 20    ;
-; Number of registers using Asynchronous Clear ; 96    ;
+; Number of registers using Asynchronous Clear ; 3986  ;
 ; Number of registers using Asynchronous Load  ; 0     ;
-; Number of registers using Clock Enable       ; 4564  ;
+; Number of registers using Clock Enable       ; 4593  ;
 ; Number of registers using Preset             ; 0     ;
 +----------------------------------------------+-------+
 
@@ -644,200 +644,99 @@ Table restricted to first 100 entries. Note: All latches listed above may not be
 +--------------------+-----------+---------------+----------------------+------------------------+------------+----------------------------------------------------------------------------------------------+
 ; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output                                                                   ;
 +--------------------+-----------+---------------+----------------------+------------------------+------------+----------------------------------------------------------------------------------------------+
-; 3:1                ; 38 bits   ; 76 LEs        ; 0 LEs                ; 76 LEs                 ; Yes        ; |TopLevel|Memory:inst1|InstructionBuffer:inst6|instructionRAM:inst20|ram[0][16]              ;
-; 3:1                ; 38 bits   ; 76 LEs        ; 0 LEs                ; 76 LEs                 ; Yes        ; |TopLevel|Memory:inst1|InstructionBuffer:inst6|instructionRAM:inst20|ram[1][0]               ;
-; 3:1                ; 38 bits   ; 76 LEs        ; 0 LEs                ; 76 LEs                 ; Yes        ; |TopLevel|Memory:inst1|InstructionBuffer:inst6|instructionRAM:inst20|ram[2][0]               ;
-; 3:1                ; 38 bits   ; 76 LEs        ; 0 LEs                ; 76 LEs                 ; Yes        ; |TopLevel|Memory:inst1|InstructionBuffer:inst6|instructionRAM:inst20|ram[3][0]               ;
-; 3:1                ; 38 bits   ; 76 LEs        ; 0 LEs                ; 76 LEs                 ; Yes        ; |TopLevel|Memory:inst1|InstructionBuffer:inst6|instructionRAM:inst20|ram[4][0]               ;
-; 3:1                ; 38 bits   ; 76 LEs        ; 0 LEs                ; 76 LEs                 ; Yes        ; |TopLevel|Memory:inst1|InstructionBuffer:inst6|instructionRAM:inst20|ram[5][0]               ;
-; 3:1                ; 38 bits   ; 76 LEs        ; 0 LEs                ; 76 LEs                 ; Yes        ; |TopLevel|Memory:inst1|InstructionBuffer:inst6|instructionRAM:inst20|ram[6][0]               ;
-; 3:1                ; 38 bits   ; 76 LEs        ; 0 LEs                ; 76 LEs                 ; Yes        ; |TopLevel|Memory:inst1|InstructionBuffer:inst6|instructionRAM:inst20|ram[7][0]               ;
-; 3:1                ; 38 bits   ; 76 LEs        ; 0 LEs                ; 76 LEs                 ; Yes        ; |TopLevel|Memory:inst1|InstructionBuffer:inst6|instructionRAM:inst20|ram[8][0]               ;
-; 3:1                ; 38 bits   ; 76 LEs        ; 0 LEs                ; 76 LEs                 ; Yes        ; |TopLevel|Memory:inst1|InstructionBuffer:inst6|instructionRAM:inst20|ram[9][0]               ;
-; 3:1                ; 38 bits   ; 76 LEs        ; 0 LEs                ; 76 LEs                 ; Yes        ; |TopLevel|Memory:inst1|InstructionBuffer:inst6|instructionRAM:inst20|ram[10][0]              ;
-; 3:1                ; 38 bits   ; 76 LEs        ; 0 LEs                ; 76 LEs                 ; Yes        ; |TopLevel|Memory:inst1|InstructionBuffer:inst6|instructionRAM:inst20|ram[11][0]              ;
-; 3:1                ; 38 bits   ; 76 LEs        ; 0 LEs                ; 76 LEs                 ; Yes        ; |TopLevel|Memory:inst1|InstructionBuffer:inst6|instructionRAM:inst20|ram[12][0]              ;
-; 3:1                ; 38 bits   ; 76 LEs        ; 0 LEs                ; 76 LEs                 ; Yes        ; |TopLevel|Memory:inst1|InstructionBuffer:inst6|instructionRAM:inst20|ram[13][0]              ;
-; 3:1                ; 38 bits   ; 76 LEs        ; 0 LEs                ; 76 LEs                 ; Yes        ; |TopLevel|Memory:inst1|InstructionBuffer:inst6|instructionRAM:inst20|ram[14][0]              ;
-; 3:1                ; 38 bits   ; 76 LEs        ; 0 LEs                ; 76 LEs                 ; Yes        ; |TopLevel|Memory:inst1|InstructionBuffer:inst6|instructionRAM:inst20|ram[15][0]              ;
-; 3:1                ; 38 bits   ; 76 LEs        ; 0 LEs                ; 76 LEs                 ; Yes        ; |TopLevel|Memory:inst1|InstructionBuffer:inst6|instructionRAM:inst20|ram[16][0]              ;
-; 3:1                ; 38 bits   ; 76 LEs        ; 0 LEs                ; 76 LEs                 ; Yes        ; |TopLevel|Memory:inst1|InstructionBuffer:inst6|instructionRAM:inst20|ram[17][0]              ;
-; 3:1                ; 38 bits   ; 76 LEs        ; 0 LEs                ; 76 LEs                 ; Yes        ; |TopLevel|Memory:inst1|InstructionBuffer:inst6|instructionRAM:inst20|ram[18][0]              ;
-; 3:1                ; 38 bits   ; 76 LEs        ; 0 LEs                ; 76 LEs                 ; Yes        ; |TopLevel|Memory:inst1|InstructionBuffer:inst6|instructionRAM:inst20|ram[19][0]              ;
-; 3:1                ; 38 bits   ; 76 LEs        ; 0 LEs                ; 76 LEs                 ; Yes        ; |TopLevel|Memory:inst1|InstructionBuffer:inst6|instructionRAM:inst20|ram[20][0]              ;
-; 3:1                ; 38 bits   ; 76 LEs        ; 0 LEs                ; 76 LEs                 ; Yes        ; |TopLevel|Memory:inst1|InstructionBuffer:inst6|instructionRAM:inst20|ram[21][0]              ;
-; 3:1                ; 38 bits   ; 76 LEs        ; 0 LEs                ; 76 LEs                 ; Yes        ; |TopLevel|Memory:inst1|InstructionBuffer:inst6|instructionRAM:inst20|ram[22][0]              ;
-; 3:1                ; 38 bits   ; 76 LEs        ; 0 LEs                ; 76 LEs                 ; Yes        ; |TopLevel|Memory:inst1|InstructionBuffer:inst6|instructionRAM:inst20|ram[23][0]              ;
-; 3:1                ; 38 bits   ; 76 LEs        ; 0 LEs                ; 76 LEs                 ; Yes        ; |TopLevel|Memory:inst1|InstructionBuffer:inst6|instructionRAM:inst20|ram[24][0]              ;
-; 3:1                ; 38 bits   ; 76 LEs        ; 0 LEs                ; 76 LEs                 ; Yes        ; |TopLevel|Memory:inst1|InstructionBuffer:inst6|instructionRAM:inst20|ram[25][0]              ;
-; 3:1                ; 38 bits   ; 76 LEs        ; 0 LEs                ; 76 LEs                 ; Yes        ; |TopLevel|Memory:inst1|InstructionBuffer:inst6|instructionRAM:inst20|ram[26][0]              ;
-; 3:1                ; 38 bits   ; 76 LEs        ; 0 LEs                ; 76 LEs                 ; Yes        ; |TopLevel|Memory:inst1|InstructionBuffer:inst6|instructionRAM:inst20|ram[27][0]              ;
-; 3:1                ; 38 bits   ; 76 LEs        ; 0 LEs                ; 76 LEs                 ; Yes        ; |TopLevel|Memory:inst1|InstructionBuffer:inst6|instructionRAM:inst20|ram[28][0]              ;
-; 3:1                ; 38 bits   ; 76 LEs        ; 0 LEs                ; 76 LEs                 ; Yes        ; |TopLevel|Memory:inst1|InstructionBuffer:inst6|instructionRAM:inst20|ram[29][0]              ;
-; 3:1                ; 38 bits   ; 76 LEs        ; 0 LEs                ; 76 LEs                 ; Yes        ; |TopLevel|Memory:inst1|InstructionBuffer:inst6|instructionRAM:inst20|ram[30][0]              ;
-; 3:1                ; 38 bits   ; 76 LEs        ; 0 LEs                ; 76 LEs                 ; Yes        ; |TopLevel|Memory:inst1|InstructionBuffer:inst6|instructionRAM:inst20|ram[31][0]              ;
-; 3:1                ; 38 bits   ; 76 LEs        ; 0 LEs                ; 76 LEs                 ; Yes        ; |TopLevel|Memory:inst1|InstructionBuffer:inst6|instructionRAM:inst20|ram[32][0]              ;
-; 3:1                ; 38 bits   ; 76 LEs        ; 0 LEs                ; 76 LEs                 ; Yes        ; |TopLevel|Memory:inst1|InstructionBuffer:inst6|instructionRAM:inst20|ram[33][0]              ;
-; 3:1                ; 38 bits   ; 76 LEs        ; 0 LEs                ; 76 LEs                 ; Yes        ; |TopLevel|Memory:inst1|InstructionBuffer:inst6|instructionRAM:inst20|ram[34][0]              ;
-; 3:1                ; 38 bits   ; 76 LEs        ; 0 LEs                ; 76 LEs                 ; Yes        ; |TopLevel|Memory:inst1|InstructionBuffer:inst6|instructionRAM:inst20|ram[35][0]              ;
-; 3:1                ; 38 bits   ; 76 LEs        ; 0 LEs                ; 76 LEs                 ; Yes        ; |TopLevel|Memory:inst1|InstructionBuffer:inst6|instructionRAM:inst20|ram[36][0]              ;
-; 3:1                ; 38 bits   ; 76 LEs        ; 0 LEs                ; 76 LEs                 ; Yes        ; |TopLevel|Memory:inst1|InstructionBuffer:inst6|instructionRAM:inst20|ram[37][0]              ;
-; 3:1                ; 38 bits   ; 76 LEs        ; 0 LEs                ; 76 LEs                 ; Yes        ; |TopLevel|Memory:inst1|InstructionBuffer:inst6|instructionRAM:inst20|ram[38][0]              ;
-; 3:1                ; 38 bits   ; 76 LEs        ; 0 LEs                ; 76 LEs                 ; Yes        ; |TopLevel|Memory:inst1|InstructionBuffer:inst6|instructionRAM:inst20|ram[39][0]              ;
-; 3:1                ; 38 bits   ; 76 LEs        ; 0 LEs                ; 76 LEs                 ; Yes        ; |TopLevel|Memory:inst1|InstructionBuffer:inst6|instructionRAM:inst20|ram[40][0]              ;
-; 3:1                ; 38 bits   ; 76 LEs        ; 0 LEs                ; 76 LEs                 ; Yes        ; |TopLevel|Memory:inst1|InstructionBuffer:inst6|instructionRAM:inst20|ram[41][0]              ;
-; 3:1                ; 38 bits   ; 76 LEs        ; 0 LEs                ; 76 LEs                 ; Yes        ; |TopLevel|Memory:inst1|InstructionBuffer:inst6|instructionRAM:inst20|ram[42][0]              ;
-; 3:1                ; 38 bits   ; 76 LEs        ; 0 LEs                ; 76 LEs                 ; Yes        ; |TopLevel|Memory:inst1|InstructionBuffer:inst6|instructionRAM:inst20|ram[43][0]              ;
-; 3:1                ; 38 bits   ; 76 LEs        ; 0 LEs                ; 76 LEs                 ; Yes        ; |TopLevel|Memory:inst1|InstructionBuffer:inst6|instructionRAM:inst20|ram[44][0]              ;
-; 3:1                ; 38 bits   ; 76 LEs        ; 0 LEs                ; 76 LEs                 ; Yes        ; |TopLevel|Memory:inst1|InstructionBuffer:inst6|instructionRAM:inst20|ram[45][0]              ;
-; 3:1                ; 38 bits   ; 76 LEs        ; 0 LEs                ; 76 LEs                 ; Yes        ; |TopLevel|Memory:inst1|InstructionBuffer:inst6|instructionRAM:inst20|ram[46][0]              ;
-; 3:1                ; 38 bits   ; 76 LEs        ; 0 LEs                ; 76 LEs                 ; Yes        ; |TopLevel|Memory:inst1|InstructionBuffer:inst6|instructionRAM:inst20|ram[47][0]              ;
-; 3:1                ; 38 bits   ; 76 LEs        ; 0 LEs                ; 76 LEs                 ; Yes        ; |TopLevel|Memory:inst1|InstructionBuffer:inst6|instructionRAM:inst20|ram[48][0]              ;
-; 3:1                ; 38 bits   ; 76 LEs        ; 0 LEs                ; 76 LEs                 ; Yes        ; |TopLevel|Memory:inst1|InstructionBuffer:inst6|instructionRAM:inst20|ram[49][0]              ;
-; 3:1                ; 38 bits   ; 76 LEs        ; 0 LEs                ; 76 LEs                 ; Yes        ; |TopLevel|Memory:inst1|InstructionBuffer:inst6|instructionRAM:inst20|ram[50][0]              ;
-; 3:1                ; 38 bits   ; 76 LEs        ; 0 LEs                ; 76 LEs                 ; Yes        ; |TopLevel|Memory:inst1|InstructionBuffer:inst6|instructionRAM:inst20|ram[51][0]              ;
-; 3:1                ; 38 bits   ; 76 LEs        ; 0 LEs                ; 76 LEs                 ; Yes        ; |TopLevel|Memory:inst1|InstructionBuffer:inst6|instructionRAM:inst20|ram[52][0]              ;
-; 3:1                ; 38 bits   ; 76 LEs        ; 0 LEs                ; 76 LEs                 ; Yes        ; |TopLevel|Memory:inst1|InstructionBuffer:inst6|instructionRAM:inst20|ram[53][0]              ;
-; 3:1                ; 38 bits   ; 76 LEs        ; 0 LEs                ; 76 LEs                 ; Yes        ; |TopLevel|Memory:inst1|InstructionBuffer:inst6|instructionRAM:inst20|ram[54][0]              ;
-; 3:1                ; 38 bits   ; 76 LEs        ; 0 LEs                ; 76 LEs                 ; Yes        ; |TopLevel|Memory:inst1|InstructionBuffer:inst6|instructionRAM:inst20|ram[55][0]              ;
-; 3:1                ; 38 bits   ; 76 LEs        ; 0 LEs                ; 76 LEs                 ; Yes        ; |TopLevel|Memory:inst1|InstructionBuffer:inst6|instructionRAM:inst20|ram[56][0]              ;
-; 3:1                ; 38 bits   ; 76 LEs        ; 0 LEs                ; 76 LEs                 ; Yes        ; |TopLevel|Memory:inst1|InstructionBuffer:inst6|instructionRAM:inst20|ram[57][0]              ;
-; 3:1                ; 38 bits   ; 76 LEs        ; 0 LEs                ; 76 LEs                 ; Yes        ; |TopLevel|Memory:inst1|InstructionBuffer:inst6|instructionRAM:inst20|ram[58][0]              ;
-; 3:1                ; 38 bits   ; 76 LEs        ; 0 LEs                ; 76 LEs                 ; Yes        ; |TopLevel|Memory:inst1|InstructionBuffer:inst6|instructionRAM:inst20|ram[59][0]              ;
-; 3:1                ; 38 bits   ; 76 LEs        ; 0 LEs                ; 76 LEs                 ; Yes        ; |TopLevel|Memory:inst1|InstructionBuffer:inst6|instructionRAM:inst20|ram[60][0]              ;
-; 3:1                ; 38 bits   ; 76 LEs        ; 0 LEs                ; 76 LEs                 ; Yes        ; |TopLevel|Memory:inst1|InstructionBuffer:inst6|instructionRAM:inst20|ram[61][0]              ;
-; 3:1                ; 38 bits   ; 76 LEs        ; 0 LEs                ; 76 LEs                 ; Yes        ; |TopLevel|Memory:inst1|InstructionBuffer:inst6|instructionRAM:inst20|ram[62][0]              ;
-; 3:1                ; 38 bits   ; 76 LEs        ; 0 LEs                ; 76 LEs                 ; Yes        ; |TopLevel|Memory:inst1|InstructionBuffer:inst6|instructionRAM:inst20|ram[63][0]              ;
-; 3:1                ; 38 bits   ; 76 LEs        ; 0 LEs                ; 76 LEs                 ; Yes        ; |TopLevel|Memory:inst1|InstructionBuffer:inst6|instructionRAM:inst20|ram[64][0]              ;
-; 3:1                ; 38 bits   ; 76 LEs        ; 0 LEs                ; 76 LEs                 ; Yes        ; |TopLevel|Memory:inst1|InstructionBuffer:inst6|instructionRAM:inst20|ram[65][0]              ;
-; 3:1                ; 38 bits   ; 76 LEs        ; 0 LEs                ; 76 LEs                 ; Yes        ; |TopLevel|Memory:inst1|InstructionBuffer:inst6|instructionRAM:inst20|ram[66][0]              ;
-; 3:1                ; 38 bits   ; 76 LEs        ; 0 LEs                ; 76 LEs                 ; Yes        ; |TopLevel|Memory:inst1|InstructionBuffer:inst6|instructionRAM:inst20|ram[67][0]              ;
-; 3:1                ; 38 bits   ; 76 LEs        ; 0 LEs                ; 76 LEs                 ; Yes        ; |TopLevel|Memory:inst1|InstructionBuffer:inst6|instructionRAM:inst20|ram[68][0]              ;
-; 3:1                ; 38 bits   ; 76 LEs        ; 0 LEs                ; 76 LEs                 ; Yes        ; |TopLevel|Memory:inst1|InstructionBuffer:inst6|instructionRAM:inst20|ram[69][0]              ;
-; 3:1                ; 38 bits   ; 76 LEs        ; 0 LEs                ; 76 LEs                 ; Yes        ; |TopLevel|Memory:inst1|InstructionBuffer:inst6|instructionRAM:inst20|ram[70][0]              ;
-; 3:1                ; 38 bits   ; 76 LEs        ; 0 LEs                ; 76 LEs                 ; Yes        ; |TopLevel|Memory:inst1|InstructionBuffer:inst6|instructionRAM:inst20|ram[71][0]              ;
-; 3:1                ; 38 bits   ; 76 LEs        ; 0 LEs                ; 76 LEs                 ; Yes        ; |TopLevel|Memory:inst1|InstructionBuffer:inst6|instructionRAM:inst20|ram[72][0]              ;
-; 3:1                ; 38 bits   ; 76 LEs        ; 0 LEs                ; 76 LEs                 ; Yes        ; |TopLevel|Memory:inst1|InstructionBuffer:inst6|instructionRAM:inst20|ram[73][0]              ;
-; 3:1                ; 38 bits   ; 76 LEs        ; 0 LEs                ; 76 LEs                 ; Yes        ; |TopLevel|Memory:inst1|InstructionBuffer:inst6|instructionRAM:inst20|ram[74][0]              ;
-; 3:1                ; 38 bits   ; 76 LEs        ; 0 LEs                ; 76 LEs                 ; Yes        ; |TopLevel|Memory:inst1|InstructionBuffer:inst6|instructionRAM:inst20|ram[75][0]              ;
-; 3:1                ; 38 bits   ; 76 LEs        ; 0 LEs                ; 76 LEs                 ; Yes        ; |TopLevel|Memory:inst1|InstructionBuffer:inst6|instructionRAM:inst20|ram[76][0]              ;
-; 3:1                ; 38 bits   ; 76 LEs        ; 0 LEs                ; 76 LEs                 ; Yes        ; |TopLevel|Memory:inst1|InstructionBuffer:inst6|instructionRAM:inst20|ram[77][0]              ;
-; 3:1                ; 38 bits   ; 76 LEs        ; 0 LEs                ; 76 LEs                 ; Yes        ; |TopLevel|Memory:inst1|InstructionBuffer:inst6|instructionRAM:inst20|ram[78][0]              ;
-; 3:1                ; 38 bits   ; 76 LEs        ; 0 LEs                ; 76 LEs                 ; Yes        ; |TopLevel|Memory:inst1|InstructionBuffer:inst6|instructionRAM:inst20|ram[79][0]              ;
-; 3:1                ; 38 bits   ; 76 LEs        ; 0 LEs                ; 76 LEs                 ; Yes        ; |TopLevel|Memory:inst1|InstructionBuffer:inst6|instructionRAM:inst20|ram[80][0]              ;
-; 3:1                ; 38 bits   ; 76 LEs        ; 0 LEs                ; 76 LEs                 ; Yes        ; |TopLevel|Memory:inst1|InstructionBuffer:inst6|instructionRAM:inst20|ram[81][0]              ;
-; 3:1                ; 38 bits   ; 76 LEs        ; 0 LEs                ; 76 LEs                 ; Yes        ; |TopLevel|Memory:inst1|InstructionBuffer:inst6|instructionRAM:inst20|ram[82][0]              ;
-; 3:1                ; 38 bits   ; 76 LEs        ; 0 LEs                ; 76 LEs                 ; Yes        ; |TopLevel|Memory:inst1|InstructionBuffer:inst6|instructionRAM:inst20|ram[83][0]              ;
-; 3:1                ; 38 bits   ; 76 LEs        ; 0 LEs                ; 76 LEs                 ; Yes        ; |TopLevel|Memory:inst1|InstructionBuffer:inst6|instructionRAM:inst20|ram[84][0]              ;
-; 3:1                ; 38 bits   ; 76 LEs        ; 0 LEs                ; 76 LEs                 ; Yes        ; |TopLevel|Memory:inst1|InstructionBuffer:inst6|instructionRAM:inst20|ram[85][0]              ;
-; 3:1                ; 38 bits   ; 76 LEs        ; 0 LEs                ; 76 LEs                 ; Yes        ; |TopLevel|Memory:inst1|InstructionBuffer:inst6|instructionRAM:inst20|ram[86][0]              ;
-; 3:1                ; 38 bits   ; 76 LEs        ; 0 LEs                ; 76 LEs                 ; Yes        ; |TopLevel|Memory:inst1|InstructionBuffer:inst6|instructionRAM:inst20|ram[87][0]              ;
-; 3:1                ; 38 bits   ; 76 LEs        ; 0 LEs                ; 76 LEs                 ; Yes        ; |TopLevel|Memory:inst1|InstructionBuffer:inst6|instructionRAM:inst20|ram[88][0]              ;
-; 3:1                ; 38 bits   ; 76 LEs        ; 0 LEs                ; 76 LEs                 ; Yes        ; |TopLevel|Memory:inst1|InstructionBuffer:inst6|instructionRAM:inst20|ram[89][0]              ;
-; 3:1                ; 38 bits   ; 76 LEs        ; 0 LEs                ; 76 LEs                 ; Yes        ; |TopLevel|Memory:inst1|InstructionBuffer:inst6|instructionRAM:inst20|ram[90][0]              ;
-; 3:1                ; 38 bits   ; 76 LEs        ; 0 LEs                ; 76 LEs                 ; Yes        ; |TopLevel|Memory:inst1|InstructionBuffer:inst6|instructionRAM:inst20|ram[91][0]              ;
-; 3:1                ; 38 bits   ; 76 LEs        ; 0 LEs                ; 76 LEs                 ; Yes        ; |TopLevel|Memory:inst1|InstructionBuffer:inst6|instructionRAM:inst20|ram[92][0]              ;
-; 3:1                ; 38 bits   ; 76 LEs        ; 0 LEs                ; 76 LEs                 ; Yes        ; |TopLevel|Memory:inst1|InstructionBuffer:inst6|instructionRAM:inst20|ram[93][0]              ;
-; 3:1                ; 38 bits   ; 76 LEs        ; 0 LEs                ; 76 LEs                 ; Yes        ; |TopLevel|Memory:inst1|InstructionBuffer:inst6|instructionRAM:inst20|ram[94][0]              ;
-; 3:1                ; 38 bits   ; 76 LEs        ; 0 LEs                ; 76 LEs                 ; Yes        ; |TopLevel|Memory:inst1|InstructionBuffer:inst6|instructionRAM:inst20|ram[95][0]              ;
-; 3:1                ; 38 bits   ; 76 LEs        ; 0 LEs                ; 76 LEs                 ; Yes        ; |TopLevel|Memory:inst1|InstructionBuffer:inst6|instructionRAM:inst20|ram[96][0]              ;
-; 3:1                ; 38 bits   ; 76 LEs        ; 0 LEs                ; 76 LEs                 ; Yes        ; |TopLevel|Memory:inst1|InstructionBuffer:inst6|instructionRAM:inst20|ram[97][0]              ;
-; 3:1                ; 38 bits   ; 76 LEs        ; 0 LEs                ; 76 LEs                 ; Yes        ; |TopLevel|Memory:inst1|InstructionBuffer:inst6|instructionRAM:inst20|ram[98][0]              ;
-; 3:1                ; 38 bits   ; 76 LEs        ; 0 LEs                ; 76 LEs                 ; Yes        ; |TopLevel|Memory:inst1|InstructionBuffer:inst6|instructionRAM:inst20|ram[99][0]              ;
-; 3:1                ; 38 bits   ; 76 LEs        ; 0 LEs                ; 76 LEs                 ; Yes        ; |TopLevel|CPU:inst|CPU_regN:inst4|internal_reg[0]                                            ;
-; 4:1                ; 8 bits    ; 16 LEs        ; 0 LEs                ; 16 LEs                 ; Yes        ; |TopLevel|CPU_regN:inst24|internal_reg[2]                                                    ;
-; 4:1                ; 8 bits    ; 16 LEs        ; 0 LEs                ; 16 LEs                 ; Yes        ; |TopLevel|CPU_regN:inst25|internal_reg[0]                                                    ;
-; 4:1                ; 4 bits    ; 8 LEs         ; 8 LEs                ; 0 LEs                  ; Yes        ; |TopLevel|CPU_regN:inst26|internal_reg[0]                                                    ;
-; 3:1                ; 4 bits    ; 8 LEs         ; 8 LEs                ; 0 LEs                  ; No         ; |TopLevel|CPU:inst|dest_reg_selector:inst59|GPR_sel1[3]                                      ;
-; 16:1               ; 32 bits   ; 320 LEs       ; 320 LEs              ; 0 LEs                  ; No         ; |TopLevel|CPU:inst|GPR_selector:inst18|GPR_MUX:inst2|Mux0                                    ;
-; 17:1               ; 20 bits   ; 220 LEs       ; 200 LEs              ; 20 LEs                 ; No         ; |TopLevel|CPU:inst|operand_MUX:inst21|data_out[14]                                           ;
-; 17:1               ; 12 bits   ; 132 LEs       ; 120 LEs              ; 12 LEs                 ; No         ; |TopLevel|CPU:inst|operand_MUX:inst21|data_out[1]                                            ;
-; 144:1              ; 6 bits    ; 576 LEs       ; 432 LEs              ; 144 LEs                ; No         ; |TopLevel|CPU:inst|systemBus_muxN:inst15|Mux2                                                ;
-; 146:1              ; 16 bits   ; 1552 LEs      ; 1216 LEs             ; 336 LEs                ; No         ; |TopLevel|CPU:inst|systemBus_muxN:inst15|Mux18                                               ;
-; 146:1              ; 4 bits    ; 388 LEs       ; 304 LEs              ; 84 LEs                 ; No         ; |TopLevel|CPU:inst|systemBus_muxN:inst15|Mux25                                               ;
-; 161:1              ; 3 bits    ; 321 LEs       ; 246 LEs              ; 75 LEs                 ; No         ; |TopLevel|CPU:inst|systemBus_muxN:inst15|Mux27                                               ;
-; 161:1              ; 4 bits    ; 428 LEs       ; 332 LEs              ; 96 LEs                 ; No         ; |TopLevel|CPU:inst|systemBus_muxN:inst15|Mux30                                               ;
-; 161:1              ; 2 bits    ; 214 LEs       ; 166 LEs              ; 48 LEs                 ; No         ; |TopLevel|CPU:inst|systemBus_muxN:inst15|Mux34                                               ;
-; 3:1                ; 32 bits   ; 64 LEs        ; 0 LEs                ; 64 LEs                 ; Yes        ; |TopLevel|Memory:inst1|InstructionBuffer:inst6|instructionRAM:inst20|debug_address_cnt[10]   ;
-; 3:1                ; 25 bits   ; 50 LEs        ; 0 LEs                ; 50 LEs                 ; Yes        ; |TopLevel|AudioController:inst45|music_frequencies:inst|fine_clk_divN:inst4|counter_reg[20]  ;
-; 3:1                ; 25 bits   ; 50 LEs        ; 0 LEs                ; 50 LEs                 ; Yes        ; |TopLevel|AudioController:inst45|music_frequencies:inst|fine_clk_divN:inst15|counter_reg[22] ;
+; 3:1                ; 11 bits   ; 22 LEs        ; 0 LEs                ; 22 LEs                 ; Yes        ; |TopLevel|VGA_controller:inst6|hsync_cnt:inst1|count_reg[9]                                  ;
+; 3:1                ; 38 bits   ; 76 LEs        ; 0 LEs                ; 76 LEs                 ; Yes        ; |TopLevel|CPU:inst|CPU_regN:inst4|internal_reg[15]                                           ;
+; 3:1                ; 12 bits   ; 24 LEs        ; 0 LEs                ; 24 LEs                 ; Yes        ; |TopLevel|CPU:inst|CPU_regN:inst|internal_reg[2]                                             ;
+; 3:1                ; 4 bits    ; 8 LEs         ; 4 LEs                ; 4 LEs                  ; Yes        ; |TopLevel|Memory:inst1|InstructionBuffer:inst6|intermediaryRAM:inst1|ram[0][2]               ;
+; 3:1                ; 2 bits    ; 4 LEs         ; 2 LEs                ; 2 LEs                  ; Yes        ; |TopLevel|Memory:inst1|InstructionBuffer:inst6|intermediaryRAM:inst1|ram[1][1]               ;
+; 3:1                ; 8 bits    ; 16 LEs        ; 0 LEs                ; 16 LEs                 ; Yes        ; |TopLevel|Memory:inst1|InstructionBuffer:inst6|intermediaryRAM:inst1|ram[2][0]               ;
+; 3:1                ; 8 bits    ; 16 LEs        ; 0 LEs                ; 16 LEs                 ; Yes        ; |TopLevel|Memory:inst1|InstructionBuffer:inst6|intermediaryRAM:inst1|ram[3][6]               ;
+; 3:1                ; 8 bits    ; 16 LEs        ; 0 LEs                ; 16 LEs                 ; Yes        ; |TopLevel|Memory:inst1|InstructionBuffer:inst6|intermediaryRAM:inst1|ram[4][5]               ;
+; 3:1                ; 8 bits    ; 16 LEs        ; 0 LEs                ; 16 LEs                 ; Yes        ; |TopLevel|Memory:inst1|InstructionBuffer:inst6|intermediaryRAM:inst1|ram[5][0]               ;
+; 3:1                ; 12 bits   ; 24 LEs        ; 0 LEs                ; 24 LEs                 ; Yes        ; |TopLevel|Memory:inst1|InstructionBuffer:inst6|intermediaryRAM:inst1|addressWRITE_reg[0]     ;
+; 3:1                ; 12 bits   ; 24 LEs        ; 0 LEs                ; 24 LEs                 ; Yes        ; |TopLevel|CPU:inst|CPU_regN:inst6|internal_reg[6]                                            ;
+; 3:1                ; 32 bits   ; 64 LEs        ; 0 LEs                ; 64 LEs                 ; Yes        ; |TopLevel|CPU:inst|CPU_regN:inst16|internal_reg[1]                                           ;
+; 3:1                ; 25 bits   ; 50 LEs        ; 0 LEs                ; 50 LEs                 ; Yes        ; |TopLevel|AudioController:inst45|music_frequencies:inst|fine_clk_divN:inst10|counter_reg[14] ;
+; 3:1                ; 25 bits   ; 50 LEs        ; 0 LEs                ; 50 LEs                 ; Yes        ; |TopLevel|AudioController:inst45|music_frequencies:inst|fine_clk_divN:inst25|counter_reg[5]  ;
+; 3:1                ; 25 bits   ; 50 LEs        ; 0 LEs                ; 50 LEs                 ; Yes        ; |TopLevel|AudioController:inst45|music_frequencies:inst|fine_clk_divN:inst9|counter_reg[5]   ;
+; 3:1                ; 25 bits   ; 50 LEs        ; 0 LEs                ; 50 LEs                 ; Yes        ; |TopLevel|AudioController:inst45|music_frequencies:inst|fine_clk_divN:inst24|counter_reg[19] ;
+; 3:1                ; 25 bits   ; 50 LEs        ; 0 LEs                ; 50 LEs                 ; Yes        ; |TopLevel|AudioController:inst45|music_frequencies:inst|fine_clk_divN:inst8|counter_reg[21]  ;
+; 3:1                ; 25 bits   ; 50 LEs        ; 0 LEs                ; 50 LEs                 ; Yes        ; |TopLevel|AudioController:inst45|music_frequencies:inst|fine_clk_divN:inst23|counter_reg[21] ;
+; 3:1                ; 25 bits   ; 50 LEs        ; 0 LEs                ; 50 LEs                 ; Yes        ; |TopLevel|AudioController:inst45|music_frequencies:inst|fine_clk_divN:inst16|counter_reg[17] ;
+; 3:1                ; 25 bits   ; 50 LEs        ; 0 LEs                ; 50 LEs                 ; Yes        ; |TopLevel|AudioController:inst45|music_frequencies:inst|fine_clk_divN:inst22|counter_reg[17] ;
+; 3:1                ; 25 bits   ; 50 LEs        ; 0 LEs                ; 50 LEs                 ; Yes        ; |TopLevel|AudioController:inst45|music_frequencies:inst|fine_clk_divN:inst7|counter_reg[17]  ;
+; 3:1                ; 25 bits   ; 50 LEs        ; 0 LEs                ; 50 LEs                 ; Yes        ; |TopLevel|AudioController:inst45|music_frequencies:inst|fine_clk_divN:inst21|counter_reg[17] ;
+; 3:1                ; 25 bits   ; 50 LEs        ; 0 LEs                ; 50 LEs                 ; Yes        ; |TopLevel|AudioController:inst45|music_frequencies:inst|fine_clk_divN:inst5|counter_reg[14]  ;
+; 3:1                ; 25 bits   ; 50 LEs        ; 0 LEs                ; 50 LEs                 ; Yes        ; |TopLevel|AudioController:inst45|music_frequencies:inst|fine_clk_divN:inst20|counter_reg[14] ;
+; 3:1                ; 25 bits   ; 50 LEs        ; 0 LEs                ; 50 LEs                 ; Yes        ; |TopLevel|AudioController:inst45|music_frequencies:inst|fine_clk_divN:inst4|counter_reg[16]  ;
+; 3:1                ; 25 bits   ; 50 LEs        ; 0 LEs                ; 50 LEs                 ; Yes        ; |TopLevel|AudioController:inst45|music_frequencies:inst|fine_clk_divN:inst19|counter_reg[4]  ;
+; 3:1                ; 25 bits   ; 50 LEs        ; 0 LEs                ; 50 LEs                 ; Yes        ; |TopLevel|AudioController:inst45|music_frequencies:inst|fine_clk_divN:inst15|counter_reg[4]  ;
+; 3:1                ; 25 bits   ; 50 LEs        ; 0 LEs                ; 50 LEs                 ; Yes        ; |TopLevel|AudioController:inst45|music_frequencies:inst|fine_clk_divN:inst18|counter_reg[7]  ;
 ; 3:1                ; 25 bits   ; 50 LEs        ; 0 LEs                ; 50 LEs                 ; Yes        ; |TopLevel|AudioController:inst45|music_frequencies:inst|fine_clk_divN:inst3|counter_reg[24]  ;
-; 6:1                ; 25 bits   ; 100 LEs       ; 0 LEs                ; 100 LEs                ; Yes        ; |TopLevel|debouncer:inst14|counter_reg[2]                                                    ;
-; 130:1              ; 10 bits   ; 860 LEs       ; 660 LEs              ; 200 LEs                ; Yes        ; |TopLevel|Memory:inst1|InstructionBuffer:inst6|instructionRAM:inst20|debugA[5]               ;
-; 257:1              ; 14 bits   ; 2394 LEs      ; 1862 LEs             ; 532 LEs                ; Yes        ; |TopLevel|Memory:inst1|InstructionBuffer:inst6|instructionRAM:inst20|debugC[5]               ;
-; 6:1                ; 3 bits    ; 12 LEs        ; 6 LEs                ; 6 LEs                  ; No         ; |TopLevel|debouncer:inst14|Selector2                                                         ;
-; 3:1                ; 12 bits   ; 24 LEs        ; 0 LEs                ; 24 LEs                 ; Yes        ; |TopLevel|CPU:inst|CPU_regN:inst|internal_reg[1]                                             ;
-; 3:1                ; 12 bits   ; 24 LEs        ; 0 LEs                ; 24 LEs                 ; Yes        ; |TopLevel|CPU:inst|CPU_regN:inst6|internal_reg[11]                                           ;
-; 4:1                ; 32 bits   ; 64 LEs        ; 0 LEs                ; 64 LEs                 ; Yes        ; |TopLevel|CPU:inst|GPR_selector:inst18|CPU_regN:inst9|internal_reg[11]                       ;
-; 4:1                ; 32 bits   ; 64 LEs        ; 0 LEs                ; 64 LEs                 ; Yes        ; |TopLevel|CPU:inst|GPR_selector:inst18|CPU_regN:inst7|internal_reg[12]                       ;
-; 4:1                ; 32 bits   ; 64 LEs        ; 0 LEs                ; 64 LEs                 ; Yes        ; |TopLevel|CPU:inst|GPR_selector:inst18|CPU_regN:inst5|internal_reg[12]                       ;
-; 4:1                ; 12 bits   ; 24 LEs        ; 0 LEs                ; 24 LEs                 ; Yes        ; |TopLevel|CPU:inst|CPU_regN:inst2|internal_reg[0]                                            ;
-; 12:1               ; 16 bits   ; 128 LEs       ; 64 LEs               ; 64 LEs                 ; Yes        ; |TopLevel|CPU:inst|CPU_regN:inst6|internal_reg[28]                                           ;
-; 15:1               ; 4 bits    ; 40 LEs        ; 32 LEs               ; 8 LEs                  ; Yes        ; |TopLevel|CPU:inst|CPU_regN:inst6|internal_reg[12]                                           ;
+; 3:1                ; 25 bits   ; 50 LEs        ; 0 LEs                ; 50 LEs                 ; Yes        ; |TopLevel|AudioController:inst45|music_frequencies:inst|fine_clk_divN:inst17|counter_reg[2]  ;
+; 3:1                ; 25 bits   ; 50 LEs        ; 0 LEs                ; 50 LEs                 ; Yes        ; |TopLevel|AudioController:inst45|music_frequencies:inst|fine_clk_divN:inst2|counter_reg[9]   ;
+; 3:1                ; 25 bits   ; 50 LEs        ; 0 LEs                ; 50 LEs                 ; Yes        ; |TopLevel|AudioController:inst45|music_frequencies:inst|fine_clk_divN:inst13|counter_reg[0]  ;
+; 3:1                ; 25 bits   ; 50 LEs        ; 0 LEs                ; 50 LEs                 ; Yes        ; |TopLevel|AudioController:inst45|music_frequencies:inst|fine_clk_divN:inst1|counter_reg[1]   ;
+; 3:1                ; 25 bits   ; 50 LEs        ; 0 LEs                ; 50 LEs                 ; Yes        ; |TopLevel|AudioController:inst45|music_frequencies:inst|fine_clk_divN:inst12|counter_reg[6]  ;
+; 3:1                ; 25 bits   ; 50 LEs        ; 0 LEs                ; 50 LEs                 ; Yes        ; |TopLevel|AudioController:inst45|music_frequencies:inst|fine_clk_divN:inst|counter_reg[3]    ;
+; 3:1                ; 25 bits   ; 50 LEs        ; 0 LEs                ; 50 LEs                 ; Yes        ; |TopLevel|AudioController:inst45|music_frequencies:inst|fine_clk_divN:inst14|counter_reg[23] ;
+; 3:1                ; 4 bits    ; 8 LEs         ; 8 LEs                ; 0 LEs                  ; Yes        ; |TopLevel|VGA_controller:inst6|rgb_controller:inst4|colour_reg[3]                            ;
+; 3:1                ; 8 bits    ; 16 LEs        ; 0 LEs                ; 16 LEs                 ; Yes        ; |TopLevel|VGA_controller:inst6|rgb_controller:inst4|colour_reg[5]                            ;
+; 3:1                ; 25 bits   ; 50 LEs        ; 0 LEs                ; 50 LEs                 ; Yes        ; |TopLevel|Memory:inst1|InstructionBuffer:inst6|fine_clk_divN:inst12|counter_reg[0]           ;
+; 3:1                ; 8 bits    ; 16 LEs        ; 0 LEs                ; 16 LEs                 ; Yes        ; |TopLevel|PS2controller:inst3|ps2_controller:inst1|data_out[1]                               ;
+; 3:1                ; 8 bits    ; 16 LEs        ; 0 LEs                ; 16 LEs                 ; Yes        ; |TopLevel|UART:inst44|uart_controller:inst1|shift_reg[3]                                     ;
+; 4:1                ; 11 bits   ; 22 LEs        ; 0 LEs                ; 22 LEs                 ; Yes        ; |TopLevel|VGA_controller:inst6|vsync_cnt:inst2|count_reg[4]                                  ;
+; 4:1                ; 8 bits    ; 16 LEs        ; 0 LEs                ; 16 LEs                 ; Yes        ; |TopLevel|CPU_regN:inst24|internal_reg[6]                                                    ;
+; 4:1                ; 8 bits    ; 16 LEs        ; 0 LEs                ; 16 LEs                 ; Yes        ; |TopLevel|CPU_regN:inst25|internal_reg[1]                                                    ;
+; 4:1                ; 4 bits    ; 8 LEs         ; 8 LEs                ; 0 LEs                  ; Yes        ; |TopLevel|CPU_regN:inst26|internal_reg[1]                                                    ;
+; 4:1                ; 12 bits   ; 24 LEs        ; 0 LEs                ; 24 LEs                 ; Yes        ; |TopLevel|CPU_regN:inst28|internal_reg[2]                                                    ;
+; 4:1                ; 13 bits   ; 26 LEs        ; 0 LEs                ; 26 LEs                 ; Yes        ; |TopLevel|CPU_regN:inst32|internal_reg[9]                                                    ;
+; 4:1                ; 32 bits   ; 64 LEs        ; 0 LEs                ; 64 LEs                 ; Yes        ; |TopLevel|CPU:inst|GPR_selector:inst18|CPU_regN:inst5|internal_reg[28]                       ;
+; 4:1                ; 32 bits   ; 64 LEs        ; 0 LEs                ; 64 LEs                 ; Yes        ; |TopLevel|CPU:inst|GPR_selector:inst18|CPU_regN:inst7|internal_reg[30]                       ;
+; 4:1                ; 32 bits   ; 64 LEs        ; 0 LEs                ; 64 LEs                 ; Yes        ; |TopLevel|CPU:inst|GPR_selector:inst18|CPU_regN:inst9|internal_reg[3]                        ;
+; 4:1                ; 32 bits   ; 64 LEs        ; 0 LEs                ; 64 LEs                 ; Yes        ; |TopLevel|CPU:inst|GPR_selector:inst18|CPU_regN:inst11|internal_reg[15]                      ;
+; 4:1                ; 32 bits   ; 64 LEs        ; 0 LEs                ; 64 LEs                 ; Yes        ; |TopLevel|CPU:inst|GPR_selector:inst18|CPU_regN:inst13|internal_reg[5]                       ;
+; 4:1                ; 32 bits   ; 64 LEs        ; 0 LEs                ; 64 LEs                 ; Yes        ; |TopLevel|CPU:inst|GPR_selector:inst18|CPU_regN:inst15|internal_reg[7]                       ;
+; 4:1                ; 32 bits   ; 64 LEs        ; 0 LEs                ; 64 LEs                 ; Yes        ; |TopLevel|CPU:inst|GPR_selector:inst18|CPU_regN:inst17|internal_reg[27]                      ;
+; 4:1                ; 32 bits   ; 64 LEs        ; 0 LEs                ; 64 LEs                 ; Yes        ; |TopLevel|CPU:inst|GPR_selector:inst18|CPU_regN:inst19|internal_reg[12]                      ;
+; 4:1                ; 32 bits   ; 64 LEs        ; 0 LEs                ; 64 LEs                 ; Yes        ; |TopLevel|CPU:inst|GPR_selector:inst18|CPU_regN:inst21|internal_reg[18]                      ;
+; 4:1                ; 32 bits   ; 64 LEs        ; 0 LEs                ; 64 LEs                 ; Yes        ; |TopLevel|CPU:inst|GPR_selector:inst18|CPU_regN:inst23|internal_reg[18]                      ;
+; 4:1                ; 32 bits   ; 64 LEs        ; 0 LEs                ; 64 LEs                 ; Yes        ; |TopLevel|CPU:inst|GPR_selector:inst18|CPU_regN:inst25|internal_reg[14]                      ;
+; 4:1                ; 32 bits   ; 64 LEs        ; 0 LEs                ; 64 LEs                 ; Yes        ; |TopLevel|CPU:inst|GPR_selector:inst18|CPU_regN:inst27|internal_reg[7]                       ;
+; 4:1                ; 32 bits   ; 64 LEs        ; 0 LEs                ; 64 LEs                 ; Yes        ; |TopLevel|CPU:inst|GPR_selector:inst18|CPU_regN:inst29|internal_reg[22]                      ;
+; 4:1                ; 28 bits   ; 56 LEs        ; 0 LEs                ; 56 LEs                 ; Yes        ; |TopLevel|CPUTimer:inst2|count_reg[22]                                                       ;
+; 4:1                ; 6 bits    ; 12 LEs        ; 12 LEs               ; 0 LEs                  ; Yes        ; |TopLevel|UART:inst44|uart_clk_divN:inst|counter_reg[3]                                      ;
+; 4:1                ; 19 bits   ; 38 LEs        ; 0 LEs                ; 38 LEs                 ; Yes        ; |TopLevel|UART:inst44|uart_clk_divN:inst|counter_reg[12]                                     ;
+; 4:1                ; 12 bits   ; 24 LEs        ; 0 LEs                ; 24 LEs                 ; Yes        ; |TopLevel|CPU:inst|CPU_regN:inst2|internal_reg[7]                                            ;
+; 7:1                ; 2 bits    ; 8 LEs         ; 8 LEs                ; 0 LEs                  ; Yes        ; |TopLevel|VGA_controller:inst6|hsync_cnt:inst1|hsync                                         ;
+; 7:1                ; 2 bits    ; 8 LEs         ; 8 LEs                ; 0 LEs                  ; Yes        ; |TopLevel|VGA_controller:inst6|vsync_cnt:inst2|vsync                                         ;
+; 6:1                ; 25 bits   ; 100 LEs       ; 0 LEs                ; 100 LEs                ; Yes        ; |TopLevel|debouncer:inst14|counter_reg[21]                                                   ;
+; 6:1                ; 25 bits   ; 100 LEs       ; 0 LEs                ; 100 LEs                ; Yes        ; |TopLevel|debouncer:inst8|counter_reg[21]                                                    ;
+; 12:1               ; 16 bits   ; 128 LEs       ; 64 LEs               ; 64 LEs                 ; Yes        ; |TopLevel|CPU:inst|CPU_regN:inst6|internal_reg[27]                                           ;
+; 34:1               ; 11 bits   ; 242 LEs       ; 11 LEs               ; 231 LEs                ; Yes        ; |TopLevel|VGA_controller:inst6|pixel_offset_controller:inst7|row_offset_reg[5]               ;
+; 34:1               ; 11 bits   ; 242 LEs       ; 11 LEs               ; 231 LEs                ; Yes        ; |TopLevel|VGA_controller:inst6|pixel_offset_controller:inst7|column_offset_reg[7]            ;
+; 129:1              ; 10 bits   ; 860 LEs       ; 660 LEs              ; 200 LEs                ; Yes        ; |TopLevel|Memory:inst1|InstructionBuffer:inst6|instructionRAM:inst20|debugA[6]               ;
+; 15:1               ; 4 bits    ; 40 LEs        ; 32 LEs               ; 8 LEs                  ; Yes        ; |TopLevel|CPU:inst|CPU_regN:inst6|internal_reg[15]                                           ;
+; 256:1              ; 14 bits   ; 2380 LEs      ; 1862 LEs             ; 518 LEs                ; Yes        ; |TopLevel|Memory:inst1|InstructionBuffer:inst6|instructionRAM:inst20|debugC[0]               ;
+; 3:1                ; 4 bits    ; 8 LEs         ; 8 LEs                ; 0 LEs                  ; No         ; |TopLevel|CPU:inst|dest_reg_selector:inst59|GPR_sel1[2]                                      ;
 ; 4:1                ; 4 bits    ; 8 LEs         ; 8 LEs                ; 0 LEs                  ; No         ; |TopLevel|CPU:inst|ALU:inst19|ShiftRight0                                                    ;
 ; 4:1                ; 4 bits    ; 8 LEs         ; 8 LEs                ; 0 LEs                  ; No         ; |TopLevel|CPU:inst|ALU:inst19|ShiftRight0                                                    ;
 ; 4:1                ; 4 bits    ; 8 LEs         ; 8 LEs                ; 0 LEs                  ; No         ; |TopLevel|CPU:inst|ALU:inst19|ShiftRight0                                                    ;
 ; 4:1                ; 25 bits   ; 50 LEs        ; 50 LEs               ; 0 LEs                  ; No         ; |TopLevel|CPU:inst|ALU:inst19|ShiftRight0                                                    ;
+; 16:1               ; 32 bits   ; 320 LEs       ; 320 LEs              ; 0 LEs                  ; No         ; |TopLevel|CPU:inst|GPR_selector:inst18|GPR_MUX:inst2|Mux22                                   ;
 ; 3:1                ; 2 bits    ; 4 LEs         ; 0 LEs                ; 4 LEs                  ; No         ; |TopLevel|CPU:inst|flags_setter:inst23|Mux3                                                  ;
-; 13:1               ; 8 bits    ; 64 LEs        ; 64 LEs               ; 0 LEs                  ; No         ; |TopLevel|CPU:inst|ALU:inst19|Mux23                                                          ;
-; 16:1               ; 4 bits    ; 40 LEs        ; 40 LEs               ; 0 LEs                  ; No         ; |TopLevel|CPU:inst|ALU:inst19|Mux30                                                          ;
-; 3:1                ; 32 bits   ; 64 LEs        ; 0 LEs                ; 64 LEs                 ; Yes        ; |TopLevel|CPU:inst|CPU_regN:inst16|internal_reg[0]                                           ;
-; 4:1                ; 32 bits   ; 64 LEs        ; 0 LEs                ; 64 LEs                 ; Yes        ; |TopLevel|CPU:inst|GPR_selector:inst18|CPU_regN:inst19|internal_reg[0]                       ;
-; 4:1                ; 32 bits   ; 64 LEs        ; 0 LEs                ; 64 LEs                 ; Yes        ; |TopLevel|CPU:inst|GPR_selector:inst18|CPU_regN:inst17|internal_reg[0]                       ;
-; 4:1                ; 32 bits   ; 64 LEs        ; 0 LEs                ; 64 LEs                 ; Yes        ; |TopLevel|CPU:inst|GPR_selector:inst18|CPU_regN:inst15|internal_reg[0]                       ;
-; 4:1                ; 32 bits   ; 64 LEs        ; 0 LEs                ; 64 LEs                 ; Yes        ; |TopLevel|CPU:inst|GPR_selector:inst18|CPU_regN:inst13|internal_reg[0]                       ;
-; 4:1                ; 32 bits   ; 64 LEs        ; 0 LEs                ; 64 LEs                 ; Yes        ; |TopLevel|CPU:inst|GPR_selector:inst18|CPU_regN:inst11|internal_reg[0]                       ;
-; 3:1                ; 4 bits    ; 8 LEs         ; 4 LEs                ; 4 LEs                  ; Yes        ; |TopLevel|Memory:inst1|InstructionBuffer:inst6|intermediaryRAM:inst1|ram[0][3]               ;
-; 3:1                ; 2 bits    ; 4 LEs         ; 2 LEs                ; 2 LEs                  ; Yes        ; |TopLevel|Memory:inst1|InstructionBuffer:inst6|intermediaryRAM:inst1|ram[1][1]               ;
-; 3:1                ; 8 bits    ; 16 LEs        ; 0 LEs                ; 16 LEs                 ; Yes        ; |TopLevel|Memory:inst1|InstructionBuffer:inst6|intermediaryRAM:inst1|ram[2][5]               ;
-; 3:1                ; 8 bits    ; 16 LEs        ; 0 LEs                ; 16 LEs                 ; Yes        ; |TopLevel|Memory:inst1|InstructionBuffer:inst6|intermediaryRAM:inst1|ram[3][3]               ;
-; 3:1                ; 8 bits    ; 16 LEs        ; 0 LEs                ; 16 LEs                 ; Yes        ; |TopLevel|Memory:inst1|InstructionBuffer:inst6|intermediaryRAM:inst1|ram[4][7]               ;
-; 3:1                ; 8 bits    ; 16 LEs        ; 0 LEs                ; 16 LEs                 ; Yes        ; |TopLevel|Memory:inst1|InstructionBuffer:inst6|intermediaryRAM:inst1|ram[5][1]               ;
-; 3:1                ; 12 bits   ; 24 LEs        ; 0 LEs                ; 24 LEs                 ; Yes        ; |TopLevel|Memory:inst1|InstructionBuffer:inst6|intermediaryRAM:inst1|addressWRITE_reg[1]     ;
-; 3:1                ; 25 bits   ; 50 LEs        ; 0 LEs                ; 50 LEs                 ; Yes        ; |TopLevel|AudioController:inst45|music_frequencies:inst|fine_clk_divN:inst9|counter_reg[9]   ;
-; 3:1                ; 25 bits   ; 50 LEs        ; 0 LEs                ; 50 LEs                 ; Yes        ; |TopLevel|AudioController:inst45|music_frequencies:inst|fine_clk_divN:inst8|counter_reg[9]   ;
-; 3:1                ; 25 bits   ; 50 LEs        ; 0 LEs                ; 50 LEs                 ; Yes        ; |TopLevel|AudioController:inst45|music_frequencies:inst|fine_clk_divN:inst16|counter_reg[9]  ;
-; 3:1                ; 25 bits   ; 50 LEs        ; 0 LEs                ; 50 LEs                 ; Yes        ; |TopLevel|AudioController:inst45|music_frequencies:inst|fine_clk_divN:inst7|counter_reg[7]   ;
-; 3:1                ; 25 bits   ; 50 LEs        ; 0 LEs                ; 50 LEs                 ; Yes        ; |TopLevel|AudioController:inst45|music_frequencies:inst|fine_clk_divN:inst5|counter_reg[17]  ;
-; 4:1                ; 32 bits   ; 64 LEs        ; 0 LEs                ; 64 LEs                 ; Yes        ; |TopLevel|CPU:inst|GPR_selector:inst18|CPU_regN:inst29|internal_reg[0]                       ;
-; 4:1                ; 32 bits   ; 64 LEs        ; 0 LEs                ; 64 LEs                 ; Yes        ; |TopLevel|CPU:inst|GPR_selector:inst18|CPU_regN:inst27|internal_reg[0]                       ;
-; 4:1                ; 32 bits   ; 64 LEs        ; 0 LEs                ; 64 LEs                 ; Yes        ; |TopLevel|CPU:inst|GPR_selector:inst18|CPU_regN:inst25|internal_reg[0]                       ;
-; 4:1                ; 32 bits   ; 64 LEs        ; 0 LEs                ; 64 LEs                 ; Yes        ; |TopLevel|CPU:inst|GPR_selector:inst18|CPU_regN:inst23|internal_reg[0]                       ;
-; 4:1                ; 32 bits   ; 64 LEs        ; 0 LEs                ; 64 LEs                 ; Yes        ; |TopLevel|CPU:inst|GPR_selector:inst18|CPU_regN:inst21|internal_reg[0]                       ;
-; 3:1                ; 25 bits   ; 50 LEs        ; 0 LEs                ; 50 LEs                 ; Yes        ; |TopLevel|AudioController:inst45|music_frequencies:inst|fine_clk_divN:inst2|counter_reg[2]   ;
-; 3:1                ; 25 bits   ; 50 LEs        ; 0 LEs                ; 50 LEs                 ; Yes        ; |TopLevel|AudioController:inst45|music_frequencies:inst|fine_clk_divN:inst1|counter_reg[20]  ;
-; 3:1                ; 25 bits   ; 50 LEs        ; 0 LEs                ; 50 LEs                 ; Yes        ; |TopLevel|AudioController:inst45|music_frequencies:inst|fine_clk_divN:inst|counter_reg[19]   ;
-; 3:1                ; 25 bits   ; 50 LEs        ; 0 LEs                ; 50 LEs                 ; Yes        ; |TopLevel|Memory:inst1|InstructionBuffer:inst6|fine_clk_divN:inst12|counter_reg[12]          ;
-; 3:1                ; 8 bits    ; 16 LEs        ; 0 LEs                ; 16 LEs                 ; Yes        ; |TopLevel|PS2controller:inst3|ps2_controller:inst1|data_out[3]                               ;
-; 3:1                ; 8 bits    ; 16 LEs        ; 0 LEs                ; 16 LEs                 ; Yes        ; |TopLevel|UART:inst44|uart_controller:inst1|shift_reg[1]                                     ;
-; 4:1                ; 6 bits    ; 12 LEs        ; 12 LEs               ; 0 LEs                  ; Yes        ; |TopLevel|UART:inst44|uart_clk_divN:inst|counter_reg[11]                                     ;
-; 4:1                ; 19 bits   ; 38 LEs        ; 0 LEs                ; 38 LEs                 ; Yes        ; |TopLevel|UART:inst44|uart_clk_divN:inst|counter_reg[8]                                      ;
-; 6:1                ; 25 bits   ; 100 LEs       ; 0 LEs                ; 100 LEs                ; Yes        ; |TopLevel|debouncer:inst8|counter_reg[14]                                                    ;
+; 17:1               ; 20 bits   ; 220 LEs       ; 200 LEs              ; 20 LEs                 ; No         ; |TopLevel|CPU:inst|operand_MUX:inst21|data_out[23]                                           ;
+; 17:1               ; 12 bits   ; 132 LEs       ; 120 LEs              ; 12 LEs                 ; No         ; |TopLevel|CPU:inst|operand_MUX:inst21|data_out[11]                                           ;
+; 6:1                ; 3 bits    ; 12 LEs        ; 6 LEs                ; 6 LEs                  ; No         ; |TopLevel|debouncer:inst14|Selector2                                                         ;
 ; 6:1                ; 3 bits    ; 12 LEs        ; 6 LEs                ; 6 LEs                  ; No         ; |TopLevel|debouncer:inst8|Selector2                                                          ;
-; 3:1                ; 25 bits   ; 50 LEs        ; 0 LEs                ; 50 LEs                 ; Yes        ; |TopLevel|AudioController:inst45|music_frequencies:inst|fine_clk_divN:inst25|counter_reg[19] ;
-; 3:1                ; 25 bits   ; 50 LEs        ; 0 LEs                ; 50 LEs                 ; Yes        ; |TopLevel|AudioController:inst45|music_frequencies:inst|fine_clk_divN:inst24|counter_reg[1]  ;
-; 3:1                ; 25 bits   ; 50 LEs        ; 0 LEs                ; 50 LEs                 ; Yes        ; |TopLevel|AudioController:inst45|music_frequencies:inst|fine_clk_divN:inst23|counter_reg[0]  ;
-; 3:1                ; 25 bits   ; 50 LEs        ; 0 LEs                ; 50 LEs                 ; Yes        ; |TopLevel|AudioController:inst45|music_frequencies:inst|fine_clk_divN:inst22|counter_reg[19] ;
-; 3:1                ; 25 bits   ; 50 LEs        ; 0 LEs                ; 50 LEs                 ; Yes        ; |TopLevel|AudioController:inst45|music_frequencies:inst|fine_clk_divN:inst21|counter_reg[19] ;
-; 3:1                ; 25 bits   ; 50 LEs        ; 0 LEs                ; 50 LEs                 ; Yes        ; |TopLevel|AudioController:inst45|music_frequencies:inst|fine_clk_divN:inst20|counter_reg[21] ;
-; 3:1                ; 25 bits   ; 50 LEs        ; 0 LEs                ; 50 LEs                 ; Yes        ; |TopLevel|AudioController:inst45|music_frequencies:inst|fine_clk_divN:inst19|counter_reg[21] ;
-; 3:1                ; 25 bits   ; 50 LEs        ; 0 LEs                ; 50 LEs                 ; Yes        ; |TopLevel|AudioController:inst45|music_frequencies:inst|fine_clk_divN:inst18|counter_reg[22] ;
-; 3:1                ; 25 bits   ; 50 LEs        ; 0 LEs                ; 50 LEs                 ; Yes        ; |TopLevel|AudioController:inst45|music_frequencies:inst|fine_clk_divN:inst17|counter_reg[17] ;
-; 3:1                ; 11 bits   ; 22 LEs        ; 0 LEs                ; 22 LEs                 ; Yes        ; |TopLevel|VGA_controller:inst6|hsync_cnt:inst1|count_reg[0]                                  ;
-; 3:1                ; 4 bits    ; 8 LEs         ; 8 LEs                ; 0 LEs                  ; Yes        ; |TopLevel|VGA_controller:inst6|rgb_controller:inst4|colour_reg[3]                            ;
-; 3:1                ; 8 bits    ; 16 LEs        ; 0 LEs                ; 16 LEs                 ; Yes        ; |TopLevel|VGA_controller:inst6|rgb_controller:inst4|colour_reg[6]                            ;
-; 4:1                ; 11 bits   ; 22 LEs        ; 0 LEs                ; 22 LEs                 ; Yes        ; |TopLevel|VGA_controller:inst6|vsync_cnt:inst2|count_reg[7]                                  ;
-; 4:1                ; 12 bits   ; 24 LEs        ; 0 LEs                ; 24 LEs                 ; Yes        ; |TopLevel|CPU_regN:inst28|internal_reg[0]                                                    ;
-; 4:1                ; 13 bits   ; 26 LEs        ; 0 LEs                ; 26 LEs                 ; Yes        ; |TopLevel|CPU_regN:inst32|internal_reg[3]                                                    ;
-; 4:1                ; 28 bits   ; 56 LEs        ; 0 LEs                ; 56 LEs                 ; Yes        ; |TopLevel|CPUTimer:inst2|count_reg[18]                                                       ;
-; 7:1                ; 2 bits    ; 8 LEs         ; 8 LEs                ; 0 LEs                  ; Yes        ; |TopLevel|VGA_controller:inst6|hsync_cnt:inst1|rgb_en                                        ;
-; 7:1                ; 2 bits    ; 8 LEs         ; 8 LEs                ; 0 LEs                  ; Yes        ; |TopLevel|VGA_controller:inst6|vsync_cnt:inst2|vsync                                         ;
-; 34:1               ; 11 bits   ; 242 LEs       ; 11 LEs               ; 231 LEs                ; Yes        ; |TopLevel|VGA_controller:inst6|pixel_offset_controller:inst7|row_offset_reg[6]               ;
-; 34:1               ; 11 bits   ; 242 LEs       ; 11 LEs               ; 231 LEs                ; Yes        ; |TopLevel|VGA_controller:inst6|pixel_offset_controller:inst7|column_offset_reg[6]            ;
-; 3:1                ; 25 bits   ; 50 LEs        ; 0 LEs                ; 50 LEs                 ; Yes        ; |TopLevel|AudioController:inst45|music_frequencies:inst|fine_clk_divN:inst13|counter_reg[8]  ;
-; 3:1                ; 25 bits   ; 50 LEs        ; 0 LEs                ; 50 LEs                 ; Yes        ; |TopLevel|AudioController:inst45|music_frequencies:inst|fine_clk_divN:inst12|counter_reg[22] ;
-; 3:1                ; 25 bits   ; 50 LEs        ; 0 LEs                ; 50 LEs                 ; Yes        ; |TopLevel|AudioController:inst45|music_frequencies:inst|fine_clk_divN:inst14|counter_reg[23] ;
-; 3:1                ; 25 bits   ; 50 LEs        ; 0 LEs                ; 50 LEs                 ; Yes        ; |TopLevel|AudioController:inst45|music_frequencies:inst|fine_clk_divN:inst10|counter_reg[17] ;
+; 13:1               ; 8 bits    ; 64 LEs        ; 64 LEs               ; 0 LEs                  ; No         ; |TopLevel|CPU:inst|ALU:inst19|Mux26                                                          ;
+; 16:1               ; 4 bits    ; 40 LEs        ; 40 LEs               ; 0 LEs                  ; No         ; |TopLevel|CPU:inst|ALU:inst19|Mux30                                                          ;
+; 144:1              ; 6 bits    ; 576 LEs       ; 432 LEs              ; 144 LEs                ; No         ; |TopLevel|CPU:inst|systemBus_muxN:inst15|Mux1                                                ;
+; 146:1              ; 16 bits   ; 1552 LEs      ; 1216 LEs             ; 336 LEs                ; No         ; |TopLevel|CPU:inst|systemBus_muxN:inst15|Mux20                                               ;
+; 146:1              ; 4 bits    ; 388 LEs       ; 304 LEs              ; 84 LEs                 ; No         ; |TopLevel|CPU:inst|systemBus_muxN:inst15|Mux24                                               ;
+; 161:1              ; 3 bits    ; 321 LEs       ; 246 LEs              ; 75 LEs                 ; No         ; |TopLevel|CPU:inst|systemBus_muxN:inst15|Mux28                                               ;
+; 161:1              ; 4 bits    ; 428 LEs       ; 332 LEs              ; 96 LEs                 ; No         ; |TopLevel|CPU:inst|systemBus_muxN:inst15|Mux31                                               ;
+; 161:1              ; 2 bits    ; 214 LEs       ; 166 LEs              ; 48 LEs                 ; No         ; |TopLevel|CPU:inst|systemBus_muxN:inst15|Mux34                                               ;
 +--------------------+-----------+---------------+----------------------+------------------------+------------+----------------------------------------------------------------------------------------------+
 
 
@@ -1571,34 +1470,37 @@ Note: In order to hide this table in the UI and the text report file, please set
 ; Type                  ; Count                       ;
 +-----------------------+-----------------------------+
 ; arriav_ff             ; 5507                        ;
-;     CLR               ; 30                          ;
-;     ENA               ; 18                          ;
+;     CLR               ; 33                          ;
+;     CLR SCLR          ; 24                          ;
+;     ENA               ; 16                          ;
+;     ENA CLR           ; 3863                        ;
 ;     ENA CLR SCLR      ; 66                          ;
-;     ENA SCLR          ; 4468                        ;
+;     ENA SCLR          ; 636                         ;
 ;     ENA SCLR SLD      ; 12                          ;
-;     SCLR              ; 863                         ;
+;     SCLR              ; 773                         ;
 ;     SCLR SLD          ; 8                           ;
-;     plain             ; 42                          ;
-; arriav_lcell_comb     ; 6032                        ;
-;     arith             ; 1025                        ;
-;         1 data inputs ; 952                         ;
-;         2 data inputs ; 73                          ;
-;     extend            ; 227                         ;
-;         7 data inputs ; 227                         ;
-;     normal            ; 4748                        ;
-;         1 data inputs ; 8                           ;
-;         2 data inputs ; 141                         ;
-;         3 data inputs ; 754                         ;
-;         4 data inputs ; 399                         ;
-;         5 data inputs ; 372                         ;
-;         6 data inputs ; 3074                        ;
-;     shared            ; 32                          ;
-;         2 data inputs ; 32                          ;
+;     plain             ; 76                          ;
+; arriav_lcell_comb     ; 6259                        ;
+;     arith             ; 1056                        ;
+;         0 data inputs ; 1                           ;
+;         1 data inputs ; 949                         ;
+;         2 data inputs ; 42                          ;
+;         4 data inputs ; 24                          ;
+;         5 data inputs ; 40                          ;
+;     extend            ; 219                         ;
+;         7 data inputs ; 219                         ;
+;     normal            ; 4984                        ;
+;         1 data inputs ; 7                           ;
+;         2 data inputs ; 235                         ;
+;         3 data inputs ; 761                         ;
+;         4 data inputs ; 457                         ;
+;         5 data inputs ; 392                         ;
+;         6 data inputs ; 3132                        ;
 ; arriav_mac            ; 3                           ;
 ; boundary_port         ; 77                          ;
 ;                       ;                             ;
-; Max LUT depth         ; 15.00                       ;
-; Average LUT depth     ; 5.85                        ;
+; Max LUT depth         ; 13.00                       ;
+; Average LUT depth     ; 5.84                        ;
 +-----------------------+-----------------------------+
 
 
@@ -1607,7 +1509,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 +----------------+--------------+
 ; Partition Name ; Elapsed Time ;
 +----------------+--------------+
-; Top            ; 00:00:14     ;
+; Top            ; 00:00:15     ;
 +----------------+--------------+
 
 
@@ -1617,7 +1519,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 23.1std.0 Build 991 11/28/2023 SC Lite Edition
-    Info: Processing started: Mon Apr  8 08:59:00 2024
+    Info: Processing started: Tue Apr  9 02:21:05 2024
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off Computer -c Computer
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20030): Parallel compilation is enabled and will use 4 of the 4 processors detected
@@ -1799,6 +1701,7 @@ Warning (275011): Block or symbol "d_ffN" of instance "inst15" overlaps another 
 Warning (275011): Block or symbol "d_ffN" of instance "inst16" overlaps another block or symbol
 Warning (275009): Pin "debug_sw" not connected
 Info (12128): Elaborating entity "instructionRAM" for hierarchy "Memory:inst1|InstructionBuffer:inst6|instructionRAM:inst20"
+Warning (10240): Verilog HDL Always Construct warning at instructionRAM.sv(35): inferring latch(es) for variable "i", which holds its previous value in one or more paths through the always construct File: C:/Users/minec/Desktop/github/PROJ300/Firmware/Full Computer/UART/sv files/instructionRAM.sv Line: 35
 Info (12128): Elaborating entity "intermediaryRAM" for hierarchy "Memory:inst1|InstructionBuffer:inst6|intermediaryRAM:inst1"
 Warning (10036): Verilog HDL or VHDL warning at intermediaryRAM.sv(39): object "current_data_reg" assigned a value but never read File: C:/Users/minec/Desktop/github/PROJ300/Firmware/Full Computer/UART/sv files/intermediaryRAM.sv Line: 39
 Warning (10036): Verilog HDL or VHDL warning at intermediaryRAM.sv(40): object "prev_data_reg" assigned a value but never read File: C:/Users/minec/Desktop/github/PROJ300/Firmware/Full Computer/UART/sv files/intermediaryRAM.sv Line: 40
@@ -2030,26 +1933,100 @@ Warning (10230): Verilog HDL assignment warning at fine_clk_divN.sv(38): truncat
 Info (12128): Elaborating entity "special_key_detector" for hierarchy "AudioController:inst45|special_key_detector:inst7"
 Info (12128): Elaborating entity "key_detector" for hierarchy "AudioController:inst45|key_detector:inst1"
 Info (12128): Elaborating entity "seven_seg_controller" for hierarchy "seven_seg_controller:inst4"
-Warning (13012): Latch CPU:inst|CPU_latchN:inst60|internal_reg[0] has unsafe behavior File: C:/Users/minec/Desktop/github/PROJ300/Firmware/Full Computer/CPU/sv files/CPU_latchN.sv Line: 25
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal CPU:inst|CU_decoder:inst26|CPU_state[2] File: C:/Users/minec/Desktop/github/PROJ300/Firmware/Full Computer/CPU/sv files/CU_decoder.sv Line: 18
+Warning (13012): Latch CPU:inst|CPU_latchN:inst12|internal_reg[12] has unsafe behavior File: C:/Users/minec/Desktop/github/PROJ300/Firmware/Full Computer/CPU/sv files/CPU_latchN.sv Line: 25
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal CPU:inst|CU_counter:inst25|counter_reg[3] File: C:/Users/minec/Desktop/github/PROJ300/Firmware/Full Computer/CPU/sv files/CU_counter.sv Line: 90
+Warning (13012): Latch CPU:inst|CPU_latchN:inst13|internal_reg[12] has unsafe behavior File: C:/Users/minec/Desktop/github/PROJ300/Firmware/Full Computer/CPU/sv files/CPU_latchN.sv Line: 25
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal CPU:inst|CU_counter:inst25|counter_reg[3] File: C:/Users/minec/Desktop/github/PROJ300/Firmware/Full Computer/CPU/sv files/CU_counter.sv Line: 90
+Warning (13012): Latch CPU:inst|CPU_latchN:inst12|internal_reg[8] has unsafe behavior File: C:/Users/minec/Desktop/github/PROJ300/Firmware/Full Computer/CPU/sv files/CPU_latchN.sv Line: 25
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal CPU:inst|CU_counter:inst25|counter_reg[3] File: C:/Users/minec/Desktop/github/PROJ300/Firmware/Full Computer/CPU/sv files/CU_counter.sv Line: 90
+Warning (13012): Latch CPU:inst|CPU_latchN:inst12|internal_reg[13] has unsafe behavior File: C:/Users/minec/Desktop/github/PROJ300/Firmware/Full Computer/CPU/sv files/CPU_latchN.sv Line: 25
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal CPU:inst|CU_counter:inst25|counter_reg[3] File: C:/Users/minec/Desktop/github/PROJ300/Firmware/Full Computer/CPU/sv files/CU_counter.sv Line: 90
+Warning (13012): Latch CPU:inst|CPU_latchN:inst13|internal_reg[13] has unsafe behavior File: C:/Users/minec/Desktop/github/PROJ300/Firmware/Full Computer/CPU/sv files/CPU_latchN.sv Line: 25
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal CPU:inst|CU_counter:inst25|counter_reg[3] File: C:/Users/minec/Desktop/github/PROJ300/Firmware/Full Computer/CPU/sv files/CU_counter.sv Line: 90
+Warning (13012): Latch CPU:inst|CPU_latchN:inst12|internal_reg[9] has unsafe behavior File: C:/Users/minec/Desktop/github/PROJ300/Firmware/Full Computer/CPU/sv files/CPU_latchN.sv Line: 25
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal CPU:inst|CU_counter:inst25|counter_reg[3] File: C:/Users/minec/Desktop/github/PROJ300/Firmware/Full Computer/CPU/sv files/CU_counter.sv Line: 90
+Warning (13012): Latch CPU:inst|CPU_latchN:inst12|internal_reg[14] has unsafe behavior File: C:/Users/minec/Desktop/github/PROJ300/Firmware/Full Computer/CPU/sv files/CPU_latchN.sv Line: 25
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal CPU:inst|CU_counter:inst25|counter_reg[3] File: C:/Users/minec/Desktop/github/PROJ300/Firmware/Full Computer/CPU/sv files/CU_counter.sv Line: 90
+Warning (13012): Latch CPU:inst|CPU_latchN:inst13|internal_reg[14] has unsafe behavior File: C:/Users/minec/Desktop/github/PROJ300/Firmware/Full Computer/CPU/sv files/CPU_latchN.sv Line: 25
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal CPU:inst|CU_counter:inst25|counter_reg[3] File: C:/Users/minec/Desktop/github/PROJ300/Firmware/Full Computer/CPU/sv files/CU_counter.sv Line: 90
+Warning (13012): Latch CPU:inst|CPU_latchN:inst12|internal_reg[10] has unsafe behavior File: C:/Users/minec/Desktop/github/PROJ300/Firmware/Full Computer/CPU/sv files/CPU_latchN.sv Line: 25
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal CPU:inst|CU_counter:inst25|counter_reg[3] File: C:/Users/minec/Desktop/github/PROJ300/Firmware/Full Computer/CPU/sv files/CU_counter.sv Line: 90
+Warning (13012): Latch CPU:inst|CPU_latchN:inst12|internal_reg[15] has unsafe behavior File: C:/Users/minec/Desktop/github/PROJ300/Firmware/Full Computer/CPU/sv files/CPU_latchN.sv Line: 25
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal CPU:inst|CU_counter:inst25|counter_reg[3] File: C:/Users/minec/Desktop/github/PROJ300/Firmware/Full Computer/CPU/sv files/CU_counter.sv Line: 90
+Warning (13012): Latch CPU:inst|CPU_latchN:inst13|internal_reg[15] has unsafe behavior File: C:/Users/minec/Desktop/github/PROJ300/Firmware/Full Computer/CPU/sv files/CPU_latchN.sv Line: 25
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal CPU:inst|CU_counter:inst25|counter_reg[3] File: C:/Users/minec/Desktop/github/PROJ300/Firmware/Full Computer/CPU/sv files/CU_counter.sv Line: 90
+Warning (13012): Latch CPU:inst|CPU_latchN:inst12|internal_reg[11] has unsafe behavior File: C:/Users/minec/Desktop/github/PROJ300/Firmware/Full Computer/CPU/sv files/CPU_latchN.sv Line: 25
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal CPU:inst|CU_counter:inst25|counter_reg[3] File: C:/Users/minec/Desktop/github/PROJ300/Firmware/Full Computer/CPU/sv files/CU_counter.sv Line: 90
+Warning (13012): Latch CPU:inst|CPU_latchN:inst12|internal_reg[7] has unsafe behavior File: C:/Users/minec/Desktop/github/PROJ300/Firmware/Full Computer/CPU/sv files/CPU_latchN.sv Line: 25
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal CPU:inst|CU_counter:inst25|counter_reg[3] File: C:/Users/minec/Desktop/github/PROJ300/Firmware/Full Computer/CPU/sv files/CU_counter.sv Line: 90
+Warning (13012): Latch CPU:inst|CPU_latchN:inst13|internal_reg[7] has unsafe behavior File: C:/Users/minec/Desktop/github/PROJ300/Firmware/Full Computer/CPU/sv files/CPU_latchN.sv Line: 25
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal CPU:inst|CU_counter:inst25|counter_reg[3] File: C:/Users/minec/Desktop/github/PROJ300/Firmware/Full Computer/CPU/sv files/CU_counter.sv Line: 90
+Warning (13012): Latch CPU:inst|CPU_latchN:inst13|internal_reg[1] has unsafe behavior File: C:/Users/minec/Desktop/github/PROJ300/Firmware/Full Computer/CPU/sv files/CPU_latchN.sv Line: 25
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal CPU:inst|CU_counter:inst25|counter_reg[3] File: C:/Users/minec/Desktop/github/PROJ300/Firmware/Full Computer/CPU/sv files/CU_counter.sv Line: 90
+Warning (13012): Latch CPU:inst|CPU_latchN:inst12|internal_reg[1] has unsafe behavior File: C:/Users/minec/Desktop/github/PROJ300/Firmware/Full Computer/CPU/sv files/CPU_latchN.sv Line: 25
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal CPU:inst|CU_counter:inst25|counter_reg[3] File: C:/Users/minec/Desktop/github/PROJ300/Firmware/Full Computer/CPU/sv files/CU_counter.sv Line: 90
+Warning (13012): Latch CPU:inst|CPU_latchN:inst13|internal_reg[2] has unsafe behavior File: C:/Users/minec/Desktop/github/PROJ300/Firmware/Full Computer/CPU/sv files/CPU_latchN.sv Line: 25
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal CPU:inst|CU_counter:inst25|counter_reg[3] File: C:/Users/minec/Desktop/github/PROJ300/Firmware/Full Computer/CPU/sv files/CU_counter.sv Line: 90
+Warning (13012): Latch CPU:inst|CPU_latchN:inst12|internal_reg[2] has unsafe behavior File: C:/Users/minec/Desktop/github/PROJ300/Firmware/Full Computer/CPU/sv files/CPU_latchN.sv Line: 25
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal CPU:inst|CU_counter:inst25|counter_reg[3] File: C:/Users/minec/Desktop/github/PROJ300/Firmware/Full Computer/CPU/sv files/CU_counter.sv Line: 90
+Warning (13012): Latch CPU:inst|CPU_latchN:inst13|internal_reg[9] has unsafe behavior File: C:/Users/minec/Desktop/github/PROJ300/Firmware/Full Computer/CPU/sv files/CPU_latchN.sv Line: 25
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal CPU:inst|CU_counter:inst25|counter_reg[3] File: C:/Users/minec/Desktop/github/PROJ300/Firmware/Full Computer/CPU/sv files/CU_counter.sv Line: 90
+Warning (13012): Latch CPU:inst|CPU_latchN:inst13|internal_reg[8] has unsafe behavior File: C:/Users/minec/Desktop/github/PROJ300/Firmware/Full Computer/CPU/sv files/CPU_latchN.sv Line: 25
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal CPU:inst|CU_counter:inst25|counter_reg[3] File: C:/Users/minec/Desktop/github/PROJ300/Firmware/Full Computer/CPU/sv files/CU_counter.sv Line: 90
+Warning (13012): Latch CPU:inst|CPU_latchN:inst13|internal_reg[3] has unsafe behavior File: C:/Users/minec/Desktop/github/PROJ300/Firmware/Full Computer/CPU/sv files/CPU_latchN.sv Line: 25
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal CPU:inst|CU_counter:inst25|counter_reg[3] File: C:/Users/minec/Desktop/github/PROJ300/Firmware/Full Computer/CPU/sv files/CU_counter.sv Line: 90
+Warning (13012): Latch CPU:inst|CPU_latchN:inst12|internal_reg[3] has unsafe behavior File: C:/Users/minec/Desktop/github/PROJ300/Firmware/Full Computer/CPU/sv files/CPU_latchN.sv Line: 25
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal CPU:inst|CU_counter:inst25|counter_reg[3] File: C:/Users/minec/Desktop/github/PROJ300/Firmware/Full Computer/CPU/sv files/CU_counter.sv Line: 90
+Warning (13012): Latch CPU:inst|CPU_latchN:inst12|internal_reg[5] has unsafe behavior File: C:/Users/minec/Desktop/github/PROJ300/Firmware/Full Computer/CPU/sv files/CPU_latchN.sv Line: 25
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal CPU:inst|CU_counter:inst25|counter_reg[3] File: C:/Users/minec/Desktop/github/PROJ300/Firmware/Full Computer/CPU/sv files/CU_counter.sv Line: 90
+Warning (13012): Latch CPU:inst|CPU_latchN:inst13|internal_reg[5] has unsafe behavior File: C:/Users/minec/Desktop/github/PROJ300/Firmware/Full Computer/CPU/sv files/CPU_latchN.sv Line: 25
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal CPU:inst|CU_counter:inst25|counter_reg[3] File: C:/Users/minec/Desktop/github/PROJ300/Firmware/Full Computer/CPU/sv files/CU_counter.sv Line: 90
+Warning (13012): Latch CPU:inst|CPU_latchN:inst12|internal_reg[4] has unsafe behavior File: C:/Users/minec/Desktop/github/PROJ300/Firmware/Full Computer/CPU/sv files/CPU_latchN.sv Line: 25
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal CPU:inst|CU_counter:inst25|counter_reg[3] File: C:/Users/minec/Desktop/github/PROJ300/Firmware/Full Computer/CPU/sv files/CU_counter.sv Line: 90
+Warning (13012): Latch CPU:inst|CPU_latchN:inst13|internal_reg[4] has unsafe behavior File: C:/Users/minec/Desktop/github/PROJ300/Firmware/Full Computer/CPU/sv files/CPU_latchN.sv Line: 25
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal CPU:inst|CU_counter:inst25|counter_reg[3] File: C:/Users/minec/Desktop/github/PROJ300/Firmware/Full Computer/CPU/sv files/CU_counter.sv Line: 90
+Warning (13012): Latch CPU:inst|CPU_latchN:inst12|internal_reg[6] has unsafe behavior File: C:/Users/minec/Desktop/github/PROJ300/Firmware/Full Computer/CPU/sv files/CPU_latchN.sv Line: 25
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal CPU:inst|CU_counter:inst25|counter_reg[3] File: C:/Users/minec/Desktop/github/PROJ300/Firmware/Full Computer/CPU/sv files/CU_counter.sv Line: 90
+Warning (13012): Latch CPU:inst|CPU_latchN:inst13|internal_reg[6] has unsafe behavior File: C:/Users/minec/Desktop/github/PROJ300/Firmware/Full Computer/CPU/sv files/CPU_latchN.sv Line: 25
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal CPU:inst|CU_counter:inst25|counter_reg[3] File: C:/Users/minec/Desktop/github/PROJ300/Firmware/Full Computer/CPU/sv files/CU_counter.sv Line: 90
+Warning (13012): Latch CPU:inst|CPU_latchN:inst13|internal_reg[0] has unsafe behavior File: C:/Users/minec/Desktop/github/PROJ300/Firmware/Full Computer/CPU/sv files/CPU_latchN.sv Line: 25
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal CPU:inst|CU_counter:inst25|counter_reg[3] File: C:/Users/minec/Desktop/github/PROJ300/Firmware/Full Computer/CPU/sv files/CU_counter.sv Line: 90
+Warning (13012): Latch CPU:inst|CPU_latchN:inst12|internal_reg[0] has unsafe behavior File: C:/Users/minec/Desktop/github/PROJ300/Firmware/Full Computer/CPU/sv files/CPU_latchN.sv Line: 25
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal CPU:inst|CU_counter:inst25|counter_reg[3] File: C:/Users/minec/Desktop/github/PROJ300/Firmware/Full Computer/CPU/sv files/CU_counter.sv Line: 90
+Warning (13012): Latch CPU:inst|CPU_latchN:inst13|internal_reg[10] has unsafe behavior File: C:/Users/minec/Desktop/github/PROJ300/Firmware/Full Computer/CPU/sv files/CPU_latchN.sv Line: 25
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal CPU:inst|CU_counter:inst25|counter_reg[3] File: C:/Users/minec/Desktop/github/PROJ300/Firmware/Full Computer/CPU/sv files/CU_counter.sv Line: 90
+Warning (13012): Latch CPU:inst|CPU_latchN:inst13|internal_reg[11] has unsafe behavior File: C:/Users/minec/Desktop/github/PROJ300/Firmware/Full Computer/CPU/sv files/CPU_latchN.sv Line: 25
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal CPU:inst|CU_counter:inst25|counter_reg[3] File: C:/Users/minec/Desktop/github/PROJ300/Firmware/Full Computer/CPU/sv files/CU_counter.sv Line: 90
 Warning (13012): Latch CPU:inst|CPU_latchN:inst60|internal_reg[1] has unsafe behavior File: C:/Users/minec/Desktop/github/PROJ300/Firmware/Full Computer/CPU/sv files/CPU_latchN.sv Line: 25
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal CPU:inst|CU_decoder:inst26|CPU_state[2] File: C:/Users/minec/Desktop/github/PROJ300/Firmware/Full Computer/CPU/sv files/CU_decoder.sv Line: 18
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal CPU:inst|CU_counter:inst25|counter_reg[3] File: C:/Users/minec/Desktop/github/PROJ300/Firmware/Full Computer/CPU/sv files/CU_counter.sv Line: 90
 Warning (13012): Latch CPU:inst|CPU_latchN:inst60|internal_reg[2] has unsafe behavior File: C:/Users/minec/Desktop/github/PROJ300/Firmware/Full Computer/CPU/sv files/CPU_latchN.sv Line: 25
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal CPU:inst|CU_decoder:inst26|CPU_state[2] File: C:/Users/minec/Desktop/github/PROJ300/Firmware/Full Computer/CPU/sv files/CU_decoder.sv Line: 18
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal CPU:inst|CU_counter:inst25|counter_reg[3] File: C:/Users/minec/Desktop/github/PROJ300/Firmware/Full Computer/CPU/sv files/CU_counter.sv Line: 90
 Warning (13012): Latch CPU:inst|CPU_latchN:inst60|internal_reg[3] has unsafe behavior File: C:/Users/minec/Desktop/github/PROJ300/Firmware/Full Computer/CPU/sv files/CPU_latchN.sv Line: 25
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal CPU:inst|CU_decoder:inst26|CPU_state[2] File: C:/Users/minec/Desktop/github/PROJ300/Firmware/Full Computer/CPU/sv files/CU_decoder.sv Line: 18
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal CPU:inst|CU_counter:inst25|counter_reg[3] File: C:/Users/minec/Desktop/github/PROJ300/Firmware/Full Computer/CPU/sv files/CU_counter.sv Line: 90
+Warning (13012): Latch CPU:inst|CPU_latchN:inst11|internal_reg[0] has unsafe behavior File: C:/Users/minec/Desktop/github/PROJ300/Firmware/Full Computer/CPU/sv files/CPU_latchN.sv Line: 25
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal CPU:inst|CU_counter:inst25|counter_reg[3] File: C:/Users/minec/Desktop/github/PROJ300/Firmware/Full Computer/CPU/sv files/CU_counter.sv Line: 90
+Warning (13012): Latch CPU:inst|CPU_latchN:inst60|internal_reg[0] has unsafe behavior File: C:/Users/minec/Desktop/github/PROJ300/Firmware/Full Computer/CPU/sv files/CPU_latchN.sv Line: 25
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal CPU:inst|CU_counter:inst25|counter_reg[3] File: C:/Users/minec/Desktop/github/PROJ300/Firmware/Full Computer/CPU/sv files/CU_counter.sv Line: 90
+Warning (13012): Latch CPU:inst|CPU_latchN:inst11|internal_reg[1] has unsafe behavior File: C:/Users/minec/Desktop/github/PROJ300/Firmware/Full Computer/CPU/sv files/CPU_latchN.sv Line: 25
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal CPU:inst|CU_counter:inst25|counter_reg[3] File: C:/Users/minec/Desktop/github/PROJ300/Firmware/Full Computer/CPU/sv files/CU_counter.sv Line: 90
+Warning (13012): Latch CPU:inst|flags_setter:inst23|Z has unsafe behavior File: C:/Users/minec/Desktop/github/PROJ300/Firmware/Full Computer/CPU/sv files/flags_setter.sv Line: 3
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal CPU:inst|CU_counter:inst25|counter_reg[3] File: C:/Users/minec/Desktop/github/PROJ300/Firmware/Full Computer/CPU/sv files/CU_counter.sv Line: 90
+Warning (13012): Latch CPU:inst|flags_setter:inst23|V has unsafe behavior File: C:/Users/minec/Desktop/github/PROJ300/Firmware/Full Computer/CPU/sv files/flags_setter.sv Line: 3
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal CPU:inst|CPU_latchN:inst60|internal_reg[0] File: C:/Users/minec/Desktop/github/PROJ300/Firmware/Full Computer/CPU/sv files/CPU_latchN.sv Line: 25
+Warning (13012): Latch CPU:inst|flags_setter:inst23|N has unsafe behavior File: C:/Users/minec/Desktop/github/PROJ300/Firmware/Full Computer/CPU/sv files/flags_setter.sv Line: 3
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal CPU:inst|CU_counter:inst25|counter_reg[3] File: C:/Users/minec/Desktop/github/PROJ300/Firmware/Full Computer/CPU/sv files/CU_counter.sv Line: 90
 Info (286030): Timing-Driven Synthesis is running
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
-Info (21057): Implemented 10565 device resources after synthesis - the final resource count might be different
+Info (21057): Implemented 10748 device resources after synthesis - the final resource count might be different
     Info (21058): Implemented 10 input pins
     Info (21059): Implemented 67 output pins
-    Info (21061): Implemented 10485 logic cells
+    Info (21061): Implemented 10668 logic cells
     Info (21062): Implemented 3 DSP elements
-Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 101 warnings
-    Info: Peak virtual memory: 4923 megabytes
-    Info: Processing ended: Mon Apr  8 08:59:24 2024
-    Info: Elapsed time: 00:00:24
-    Info: Total CPU time (on all processors): 00:00:27
+Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 176 warnings
+    Info: Peak virtual memory: 4900 megabytes
+    Info: Processing ended: Tue Apr  9 02:21:40 2024
+    Info: Elapsed time: 00:00:35
+    Info: Total CPU time (on all processors): 00:00:26
 
 

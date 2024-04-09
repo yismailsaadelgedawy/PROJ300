@@ -32,7 +32,7 @@ assign instruction = ram[addr];
 // always_comb and always_latch update when any input CHANGES
 // which is why if load is held high, the count does not keep counting!
 // equivalent to verilog's always @(*) where * is a wildcard meaning any input change!
-always_ff @(posedge clk or posedge rst) begin
+always_ff @(posedge clk) begin
 
     if(rst) begin
 

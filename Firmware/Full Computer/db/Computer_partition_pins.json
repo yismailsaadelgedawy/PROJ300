@@ -4,35 +4,39 @@
 			"name" : "Top",
 			"pins" : [
 				{
-					"name" : "FPGA_LED[7]",
+					"name" : "hsync",
 					"strict" : false
 				},
 				{
-					"name" : "FPGA_LED[6]",
+					"name" : "vsync",
 					"strict" : false
 				},
 				{
-					"name" : "FPGA_LED[5]",
+					"name" : "buzzer",
 					"strict" : false
 				},
 				{
-					"name" : "FPGA_LED[4]",
+					"name" : "FPGALED0",
 					"strict" : false
 				},
 				{
-					"name" : "FPGA_LED[3]",
+					"name" : "FPGALED1",
 					"strict" : false
 				},
 				{
-					"name" : "FPGA_LED[2]",
+					"name" : "b[3]",
 					"strict" : false
 				},
 				{
-					"name" : "FPGA_LED[1]",
+					"name" : "b[2]",
 					"strict" : false
 				},
 				{
-					"name" : "FPGA_LED[0]",
+					"name" : "b[1]",
+					"strict" : false
+				},
+				{
+					"name" : "b[0]",
 					"strict" : false
 				},
 				{
@@ -204,35 +208,35 @@
 					"strict" : false
 				},
 				{
-					"name" : "FPGALED1",
+					"name" : "FPGA_LED[7]",
 					"strict" : false
 				},
 				{
-					"name" : "FPGALED0",
+					"name" : "FPGA_LED[6]",
 					"strict" : false
 				},
 				{
-					"name" : "hsync",
+					"name" : "FPGA_LED[5]",
 					"strict" : false
 				},
 				{
-					"name" : "vsync",
+					"name" : "FPGA_LED[4]",
 					"strict" : false
 				},
 				{
-					"name" : "b[3]",
+					"name" : "FPGA_LED[3]",
 					"strict" : false
 				},
 				{
-					"name" : "b[2]",
+					"name" : "FPGA_LED[2]",
 					"strict" : false
 				},
 				{
-					"name" : "b[1]",
+					"name" : "FPGA_LED[1]",
 					"strict" : false
 				},
 				{
-					"name" : "b[0]",
+					"name" : "FPGA_LED[0]",
 					"strict" : false
 				},
 				{
@@ -268,7 +272,7 @@
 					"strict" : false
 				},
 				{
-					"name" : "buzzer",
+					"name" : "sw_rst",
 					"strict" : false
 				},
 				{
@@ -276,11 +280,15 @@
 					"strict" : false
 				},
 				{
-					"name" : "sw_rst",
+					"name" : "clk_50",
 					"strict" : false
 				},
 				{
-					"name" : "clk_50",
+					"name" : "key0",
+					"strict" : false
+				},
+				{
+					"name" : "key1",
 					"strict" : false
 				},
 				{
@@ -289,14 +297,6 @@
 				},
 				{
 					"name" : "SW[8]",
-					"strict" : false
-				},
-				{
-					"name" : "key1",
-					"strict" : false
-				},
-				{
-					"name" : "key0",
 					"strict" : false
 				},
 				{
