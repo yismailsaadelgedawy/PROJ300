@@ -1,0 +1,63 @@
+m255
+K4
+z2
+!s11f vlog 2020.1 2020.02, Feb 28 2020
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z0 dC:/Users/minec/Desktop/github/PROJ300/Firmware/WS2812B Controller/sv files
+vWS2812B_controller
+Z1 DXx6 sv_std 3 std 0 22 VYECXdT12H8WgbUP_5Y6:3
+!s110 1712752141
+!i10b 1
+!s100 C6hj>zD`gkNAW<Sa0Y6nJ3
+Z2 !s11b Dg1SIo80bB@j0V0VzS_@n1
+I5La110XE:Zm:i<nmYlY2[3
+Z3 VDg1SIo80bB@j0V0VzS_@n1
+S1
+R0
+w1712752136
+8C:/Users/minec/Desktop/github/PROJ300/Firmware/WS2812B Controller/sv files/WS2812B_controller.sv
+FC:/Users/minec/Desktop/github/PROJ300/Firmware/WS2812B Controller/sv files/WS2812B_controller.sv
+!i122 67
+L0 1 261
+Z4 OV;L;2020.1;71
+r1
+!s85 0
+31
+!s108 1712752141.000000
+!s107 C:/Users/minec/Desktop/github/PROJ300/Firmware/WS2812B Controller/sv files/WS2812B_controller.sv|
+!s90 -reportprogress|300|-work|work|C:/Users/minec/Desktop/github/PROJ300/Firmware/WS2812B Controller/sv files/WS2812B_controller.sv|
+!i113 1
+Z5 o-work work
+Z6 tCvgOpt 0
+n@w@s2812@b_controller
+vWS2812B_controller_tb
+R1
+!s110 1712752300
+!i10b 1
+!s100 3NUQQS_W:APEWdJ1b?]9X0
+R2
+IRCAN2z4LodMh_jhGBgzK23
+R3
+S1
+R0
+w1712752296
+8C:/Users/minec/Desktop/github/PROJ300/Firmware/WS2812B Controller/sv files/WS2812B_controller_tb.sv
+FC:/Users/minec/Desktop/github/PROJ300/Firmware/WS2812B Controller/sv files/WS2812B_controller_tb.sv
+!i122 68
+L0 2 65
+R4
+r1
+!s85 0
+31
+!s108 1712752300.000000
+!s107 C:/Users/minec/Desktop/github/PROJ300/Firmware/WS2812B Controller/sv files/WS2812B_controller_tb.sv|
+!s90 -reportprogress|300|-work|work|C:/Users/minec/Desktop/github/PROJ300/Firmware/WS2812B Controller/sv files/WS2812B_controller_tb.sv|
+!i113 1
+R5
+R6
+n@w@s2812@b_controller_tb
