@@ -181,6 +181,8 @@ always_ff @(posedge clk_50) begin
                 prev_reg <= curr_reg;
 
                 // underflow check
+                // syntax note: == -sd1, despite being equivalent, won't work
+                // since the datatype of the register is not signed...
                 if(counterGRB_reg == 'd31 && (curr_reg != prev_reg)) begin
 
                     counterGRB_reg <= 'd23;
