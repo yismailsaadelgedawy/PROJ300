@@ -1,4 +1,4 @@
-module WS2812B_controller #(parameter N=32) (
+module WS2812B_controller #(parameter N=32, GRB_colour = 24'hFF0000) (
 
     output logic data_out,
 
@@ -19,7 +19,7 @@ logic [N-1:0] prev_data_reg;
 
 // register to hold colour data for A SINGLE LED
 // drawback: each strip will be the same colour
-logic [23:0] GRB_reg = 24'hFF0000; // green
+logic [23:0] GRB_reg = GRB_colour;  // green by default
 logic [23:0] OFF_reg = 24'h000000; // off
 
 // register timers

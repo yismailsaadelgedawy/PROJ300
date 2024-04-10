@@ -3,6 +3,7 @@ module WS2812B_controller_tb;
 
 // params
 parameter N=32;
+parameter colour = 24'hFF0000;
 
 // internal wires
 
