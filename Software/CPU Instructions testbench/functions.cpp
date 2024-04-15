@@ -16,6 +16,9 @@ uint8_t op2l;
 uint16_t op1;
 uint16_t op2;
 
+// instruction counter
+uint16_t instruction_cnt = 1;
+
 
 
 // stack releated section
@@ -136,14 +139,16 @@ void test_instruction(uint8_t opcd, uint8_t select, uint16_t oprnd1, uint16_t op
 
 void print_instruction() {
     
-    printf("\n%04x, ",opcode);            // print 4 digits, with trailing zeros if needed
+    printf("\n%d: ", instruction_cnt);
+    printf("%04x, ",opcode);            // print 4 digits, with trailing zeros if needed
     printf("%02x, ",sel);
     printf("%02x",op1h);
     printf("%02x, ",op1l);
     printf("%02x",op2h);
     printf("%02x\n\n",op2l);
-}
 
+    instruction_cnt++;
+}
 // instructions
 // will make heavy use of function overloading - redefinition of function
 // with differing arguments
