@@ -1,11 +1,11 @@
-Analysis & Synthesis Status : Successful - Fri Apr 19 16:16:43 2024
+Analysis & Synthesis Status : Successful - Fri Apr 19 23:24:39 2024
 Quartus Prime Version : 23.1std.0 Build 991 11/28/2023 SC Lite Edition
 Revision Name : WS2812BCONTROLLER
 Top-level Entity Name : WS2812BCONTROLLER
 Family : Cyclone V
 Logic utilization (in ALMs) : N/A
-Total registers : 54
-Total pins : 3
+Total registers : 89
+Total pins : 25
 Total virtual pins : 0
 Total block memory bits : 0
 Total DSP Blocks : 0

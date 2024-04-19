@@ -56,5 +56,27 @@ set_global_assignment -name PARTITION_FITTER_PRESERVATION_LEVEL PLACEMENT_AND_RO
 set_global_assignment -name PARTITION_COLOR 16764057 -section_id Top
 set_location_assignment PIN_M9 -to clk_50
 set_location_assignment PIN_U13 -to sw_rst
-set_location_assignment PIN_G12 -to led_strip_A
+set_location_assignment PIN_H16 -to led_strip_A
+set_location_assignment PIN_H15 -to led_strip_A1
+set_location_assignment PIN_A13 -to led_strip_A2
+set_location_assignment PIN_C13 -to led_strip_A3
+set_location_assignment PIN_G18 -to led_strip_A4
+set_location_assignment PIN_H18 -to led_strip_A5
+set_location_assignment PIN_J19 -to led_strip_A6
+set_location_assignment PIN_H10 -to led_strip_A7
+set_location_assignment PIN_H14 -to led_strip_A8
+set_location_assignment PIN_J13 -to led_strip_A9
+set_location_assignment PIN_A14 -to led_strip_A10
+set_location_assignment PIN_C15 -to led_strip_A11
+set_location_assignment PIN_E15 -to led_strip_A12
+set_location_assignment PIN_A15 -to led_strip_A13
+set_location_assignment PIN_L8 -to led_strip_A14
+set_location_assignment PIN_B15 -to led_strip_A15
+set_location_assignment PIN_E14 -to led_strip_A16
+set_location_assignment PIN_E16 -to led_strip_A17
+set_location_assignment PIN_F15 -to led_strip_A18
+set_location_assignment PIN_F12 -to led_strip_A19
+set_location_assignment PIN_G15 -to led_strip_A20
+set_location_assignment PIN_G12 -to led_strip_A21
+set_location_assignment PIN_K16 -to led_strip_A22
 set_instance_assignment -name PARTITION_HIERARCHY root_partition -to | -section_id Top

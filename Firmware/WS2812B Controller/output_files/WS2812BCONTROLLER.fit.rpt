@@ -1,5 +1,5 @@
 Fitter report for WS2812BCONTROLLER
-Fri Apr 19 16:17:17 2024
+Fri Apr 19 23:25:17 2024
 Quartus Prime Version 23.1std.0 Build 991 11/28/2023 SC Lite Edition
 
 
@@ -63,16 +63,16 @@ https://fpgasoftware.intel.com/eula.
 +----------------------------------------------------------------------------------+
 ; Fitter Summary                                                                   ;
 +---------------------------------+------------------------------------------------+
-; Fitter Status                   ; Successful - Fri Apr 19 16:17:17 2024          ;
+; Fitter Status                   ; Successful - Fri Apr 19 23:25:17 2024          ;
 ; Quartus Prime Version           ; 23.1std.0 Build 991 11/28/2023 SC Lite Edition ;
 ; Revision Name                   ; WS2812BCONTROLLER                              ;
 ; Top-level Entity Name           ; WS2812BCONTROLLER                              ;
 ; Family                          ; Cyclone V                                      ;
 ; Device                          ; 5CEBA4F23C7                                    ;
 ; Timing Models                   ; Final                                          ;
-; Logic utilization (in ALMs)     ; 62 / 18,480 ( < 1 % )                          ;
-; Total registers                 ; 54                                             ;
-; Total pins                      ; 3 / 224 ( 1 % )                                ;
+; Logic utilization (in ALMs)     ; 105 / 18,480 ( < 1 % )                         ;
+; Total registers                 ; 89                                             ;
+; Total pins                      ; 25 / 224 ( 11 % )                              ;
 ; Total virtual pins              ; 0                                              ;
 ; Total block memory bits         ; 0 / 3,153,920 ( 0 % )                          ;
 ; Total RAM Blocks                ; 0 / 308 ( 0 % )                                ;
@@ -153,7 +153,7 @@ https://fpgasoftware.intel.com/eula.
 ; Number detected on machine ; 16          ;
 ; Maximum allowed            ; 16          ;
 ;                            ;             ;
-; Average used               ; 1.02        ;
+; Average used               ; 1.03        ;
 ; Maximum used               ; 16          ;
 ;                            ;             ;
 ; Usage by Processor         ; % Time Used ;
@@ -163,10 +163,16 @@ https://fpgasoftware.intel.com/eula.
 ;     Processor 4            ;   0.2%      ;
 ;     Processor 5            ;   0.2%      ;
 ;     Processor 6            ;   0.2%      ;
-;     Processor 7            ;   0.1%      ;
-;     Processor 8            ;   0.1%      ;
-;     Processor 9            ;   0.1%      ;
-;     Processors 10-16       ;   0.1%      ;
+;     Processor 7            ;   0.2%      ;
+;     Processor 8            ;   0.2%      ;
+;     Processor 9            ;   0.2%      ;
+;     Processor 10           ;   0.2%      ;
+;     Processor 11           ;   0.2%      ;
+;     Processor 12           ;   0.2%      ;
+;     Processor 13           ;   0.2%      ;
+;     Processor 14           ;   0.2%      ;
+;     Processor 15           ;   0.2%      ;
+;     Processor 16           ;   0.2%      ;
 +----------------------------+-------------+
 
 
@@ -185,8 +191,8 @@ https://fpgasoftware.intel.com/eula.
 ; Type                ; Total [A + B]      ; From Design Partitions [A] ; From Rapid Recompile [B] ;
 +---------------------+--------------------+----------------------------+--------------------------+
 ; Placement (by node) ;                    ;                            ;                          ;
-;     -- Requested    ; 0.00 % ( 0 / 161 ) ; 0.00 % ( 0 / 161 )         ; 0.00 % ( 0 / 161 )       ;
-;     -- Achieved     ; 0.00 % ( 0 / 161 ) ; 0.00 % ( 0 / 161 )         ; 0.00 % ( 0 / 161 )       ;
+;     -- Requested    ; 0.00 % ( 0 / 307 ) ; 0.00 % ( 0 / 307 )         ; 0.00 % ( 0 / 307 )       ;
+;     -- Achieved     ; 0.00 % ( 0 / 307 ) ; 0.00 % ( 0 / 307 )         ; 0.00 % ( 0 / 307 )       ;
 ;                     ;                    ;                            ;                          ;
 ; Routing (by net)    ;                    ;                            ;                          ;
 ;     -- Requested    ; 0.00 % ( 0 / 0 )   ; 0.00 % ( 0 / 0 )           ; 0.00 % ( 0 / 0 )         ;
@@ -209,7 +215,7 @@ https://fpgasoftware.intel.com/eula.
 +--------------------------------+-----------------------+-------------------------+-------------------+---------------------+-------+
 ; Partition Name                 ; Preservation Achieved ; Preservation Level Used ; Netlist Type Used ; Preservation Method ; Notes ;
 +--------------------------------+-----------------------+-------------------------+-------------------+---------------------+-------+
-; Top                            ; 0.00 % ( 0 / 161 )    ; N/A                     ; Source File       ; N/A                 ;       ;
+; Top                            ; 0.00 % ( 0 / 307 )    ; N/A                     ; Source File       ; N/A                 ;       ;
 ; hard_block:auto_generated_inst ; 0.00 % ( 0 / 0 )      ; N/A                     ; Source File       ; N/A                 ;       ;
 +--------------------------------+-----------------------+-------------------------+-------------------+---------------------+-------+
 
@@ -225,14 +231,14 @@ The pin-out file can be found in C:/Users/minec/Desktop/Work/GitHub Repos/PROJ30
 +-------------------------------------------------------------+--------------------+-------+
 ; Resource                                                    ; Usage              ; %     ;
 +-------------------------------------------------------------+--------------------+-------+
-; Logic utilization (ALMs needed / total ALMs on device)      ; 62 / 18,480        ; < 1 % ;
-; ALMs needed [=A-B+C]                                        ; 62                 ;       ;
-;     [A] ALMs used in final placement [=a+b+c+d]             ; 65 / 18,480        ; < 1 % ;
-;         [a] ALMs used for LUT logic and registers           ; 25                 ;       ;
-;         [b] ALMs used for LUT logic                         ; 37                 ;       ;
-;         [c] ALMs used for registers                         ; 3                  ;       ;
+; Logic utilization (ALMs needed / total ALMs on device)      ; 105 / 18,480       ; < 1 % ;
+; ALMs needed [=A-B+C]                                        ; 105                ;       ;
+;     [A] ALMs used in final placement [=a+b+c+d]             ; 111 / 18,480       ; < 1 % ;
+;         [a] ALMs used for LUT logic and registers           ; 40                 ;       ;
+;         [b] ALMs used for LUT logic                         ; 66                 ;       ;
+;         [c] ALMs used for registers                         ; 5                  ;       ;
 ;         [d] ALMs used for memory (up to half of total ALMs) ; 0                  ;       ;
-;     [B] Estimate of ALMs recoverable by dense packing       ; 3 / 18,480         ; < 1 % ;
+;     [B] Estimate of ALMs recoverable by dense packing       ; 6 / 18,480         ; < 1 % ;
 ;     [C] Estimate of ALMs unavailable [=a+b+c+d]             ; 0 / 18,480         ; 0 %   ;
 ;         [a] Due to location constrained logic               ; 0                  ;       ;
 ;         [b] Due to LAB-wide signal conflicts                ; 0                  ;       ;
@@ -241,29 +247,29 @@ The pin-out file can be found in C:/Users/minec/Desktop/Work/GitHub Repos/PROJ30
 ;                                                             ;                    ;       ;
 ; Difficulty packing design                                   ; Low                ;       ;
 ;                                                             ;                    ;       ;
-; Total LABs:  partially or completely used                   ; 9 / 1,848          ; < 1 % ;
-;     -- Logic LABs                                           ; 9                  ;       ;
+; Total LABs:  partially or completely used                   ; 15 / 1,848         ; < 1 % ;
+;     -- Logic LABs                                           ; 15                 ;       ;
 ;     -- Memory LABs (up to half of total LABs)               ; 0                  ;       ;
 ;                                                             ;                    ;       ;
-; Combinational ALUT usage for logic                          ; 100                ;       ;
+; Combinational ALUT usage for logic                          ; 167                ;       ;
 ;     -- 7 input functions                                    ; 0                  ;       ;
-;     -- 6 input functions                                    ; 38                 ;       ;
-;     -- 5 input functions                                    ; 11                 ;       ;
-;     -- 4 input functions                                    ; 12                 ;       ;
-;     -- <=3 input functions                                  ; 39                 ;       ;
+;     -- 6 input functions                                    ; 68                 ;       ;
+;     -- 5 input functions                                    ; 27                 ;       ;
+;     -- 4 input functions                                    ; 17                 ;       ;
+;     -- <=3 input functions                                  ; 55                 ;       ;
 ; Combinational ALUT usage for route-throughs                 ; 0                  ;       ;
 ;                                                             ;                    ;       ;
-; Dedicated logic registers                                   ; 54                 ;       ;
+; Dedicated logic registers                                   ; 89                 ;       ;
 ;     -- By type:                                             ;                    ;       ;
-;         -- Primary logic registers                          ; 54 / 36,960        ; < 1 % ;
+;         -- Primary logic registers                          ; 89 / 36,960        ; < 1 % ;
 ;         -- Secondary logic registers                        ; 0 / 36,960         ; 0 %   ;
 ;     -- By function:                                         ;                    ;       ;
-;         -- Design implementation registers                  ; 54                 ;       ;
+;         -- Design implementation registers                  ; 89                 ;       ;
 ;         -- Routing optimization registers                   ; 0                  ;       ;
 ;                                                             ;                    ;       ;
 ; Virtual pins                                                ; 0                  ;       ;
-; I/O pins                                                    ; 3 / 224            ; 1 %   ;
-;     -- Clock pins                                           ; 1 / 9              ; 11 %  ;
+; I/O pins                                                    ; 25 / 224           ; 11 %  ;
+;     -- Clock pins                                           ; 2 / 9              ; 22 %  ;
 ;     -- Dedicated input pins                                 ; 0 / 11             ; 0 %   ;
 ;                                                             ;                    ;       ;
 ; M10K blocks                                                 ; 0 / 308            ; 0 %   ;
@@ -285,100 +291,100 @@ The pin-out file can be found in C:/Users/minec/Desktop/Work/GitHub Repos/PROJ30
 ; Remote update blocks                                        ; 0 / 1              ; 0 %   ;
 ; Oscillator blocks                                           ; 0 / 1              ; 0 %   ;
 ; Impedance control blocks                                    ; 0 / 3              ; 0 %   ;
-; Average interconnect usage (total/H/V)                      ; 0.1% / 0.1% / 0.0% ;       ;
-; Peak interconnect usage (total/H/V)                         ; 1.0% / 1.2% / 0.5% ;       ;
-; Maximum fan-out                                             ; 54                 ;       ;
-; Highest non-global fan-out                                  ; 44                 ;       ;
-; Total fan-out                                               ; 596                ;       ;
-; Average fan-out                                             ; 3.70               ;       ;
+; Average interconnect usage (total/H/V)                      ; 0.1% / 0.1% / 0.1% ;       ;
+; Peak interconnect usage (total/H/V)                         ; 1.9% / 1.9% / 1.6% ;       ;
+; Maximum fan-out                                             ; 89                 ;       ;
+; Highest non-global fan-out                                  ; 83                 ;       ;
+; Total fan-out                                               ; 1065               ;       ;
+; Average fan-out                                             ; 3.47               ;       ;
 +-------------------------------------------------------------+--------------------+-------+
 
 
-+---------------------------------------------------------------------------------------------------------------------+
-; Fitter Partition Statistics                                                                                         ;
-+-------------------------------------------------------------+----------------------+--------------------------------+
-; Statistic                                                   ; Top                  ; hard_block:auto_generated_inst ;
-+-------------------------------------------------------------+----------------------+--------------------------------+
-; Logic utilization (ALMs needed / total ALMs on device)      ; 62 / 18480 ( < 1 % ) ; 0 / 18480 ( 0 % )              ;
-; ALMs needed [=A-B+C]                                        ; 62                   ; 0                              ;
-;     [A] ALMs used in final placement [=a+b+c+d]             ; 65 / 18480 ( < 1 % ) ; 0 / 18480 ( 0 % )              ;
-;         [a] ALMs used for LUT logic and registers           ; 25                   ; 0                              ;
-;         [b] ALMs used for LUT logic                         ; 37                   ; 0                              ;
-;         [c] ALMs used for registers                         ; 3                    ; 0                              ;
-;         [d] ALMs used for memory (up to half of total ALMs) ; 0                    ; 0                              ;
-;     [B] Estimate of ALMs recoverable by dense packing       ; 3 / 18480 ( < 1 % )  ; 0 / 18480 ( 0 % )              ;
-;     [C] Estimate of ALMs unavailable [=a+b+c+d]             ; 0 / 18480 ( 0 % )    ; 0 / 18480 ( 0 % )              ;
-;         [a] Due to location constrained logic               ; 0                    ; 0                              ;
-;         [b] Due to LAB-wide signal conflicts                ; 0                    ; 0                              ;
-;         [c] Due to LAB input limits                         ; 0                    ; 0                              ;
-;         [d] Due to virtual I/Os                             ; 0                    ; 0                              ;
-;                                                             ;                      ;                                ;
-; Difficulty packing design                                   ; Low                  ; Low                            ;
-;                                                             ;                      ;                                ;
-; Total LABs:  partially or completely used                   ; 9 / 1848 ( < 1 % )   ; 0 / 1848 ( 0 % )               ;
-;     -- Logic LABs                                           ; 9                    ; 0                              ;
-;     -- Memory LABs (up to half of total LABs)               ; 0                    ; 0                              ;
-;                                                             ;                      ;                                ;
-; Combinational ALUT usage for logic                          ; 100                  ; 0                              ;
-;     -- 7 input functions                                    ; 0                    ; 0                              ;
-;     -- 6 input functions                                    ; 38                   ; 0                              ;
-;     -- 5 input functions                                    ; 11                   ; 0                              ;
-;     -- 4 input functions                                    ; 12                   ; 0                              ;
-;     -- <=3 input functions                                  ; 39                   ; 0                              ;
-; Combinational ALUT usage for route-throughs                 ; 0                    ; 0                              ;
-; Memory ALUT usage                                           ; 0                    ; 0                              ;
-;     -- 64-address deep                                      ; 0                    ; 0                              ;
-;     -- 32-address deep                                      ; 0                    ; 0                              ;
-;                                                             ;                      ;                                ;
-; Dedicated logic registers                                   ; 0                    ; 0                              ;
-;     -- By type:                                             ;                      ;                                ;
-;         -- Primary logic registers                          ; 54 / 36960 ( < 1 % ) ; 0 / 36960 ( 0 % )              ;
-;         -- Secondary logic registers                        ; 0 / 36960 ( 0 % )    ; 0 / 36960 ( 0 % )              ;
-;     -- By function:                                         ;                      ;                                ;
-;         -- Design implementation registers                  ; 54                   ; 0                              ;
-;         -- Routing optimization registers                   ; 0                    ; 0                              ;
-;                                                             ;                      ;                                ;
-;                                                             ;                      ;                                ;
-; Virtual pins                                                ; 0                    ; 0                              ;
-; I/O pins                                                    ; 3                    ; 0                              ;
-; I/O registers                                               ; 0                    ; 0                              ;
-; Total block memory bits                                     ; 0                    ; 0                              ;
-; Total block memory implementation bits                      ; 0                    ; 0                              ;
-; Clock enable block                                          ; 1 / 104 ( < 1 % )    ; 0 / 104 ( 0 % )                ;
-;                                                             ;                      ;                                ;
-; Connections                                                 ;                      ;                                ;
-;     -- Input Connections                                    ; 0                    ; 0                              ;
-;     -- Registered Input Connections                         ; 0                    ; 0                              ;
-;     -- Output Connections                                   ; 0                    ; 0                              ;
-;     -- Registered Output Connections                        ; 0                    ; 0                              ;
-;                                                             ;                      ;                                ;
-; Internal Connections                                        ;                      ;                                ;
-;     -- Total Connections                                    ; 596                  ; 0                              ;
-;     -- Registered Connections                               ; 229                  ; 0                              ;
-;                                                             ;                      ;                                ;
-; External Connections                                        ;                      ;                                ;
-;     -- Top                                                  ; 0                    ; 0                              ;
-;     -- hard_block:auto_generated_inst                       ; 0                    ; 0                              ;
-;                                                             ;                      ;                                ;
-; Partition Interface                                         ;                      ;                                ;
-;     -- Input Ports                                          ; 2                    ; 0                              ;
-;     -- Output Ports                                         ; 1                    ; 0                              ;
-;     -- Bidir Ports                                          ; 0                    ; 0                              ;
-;                                                             ;                      ;                                ;
-; Registered Ports                                            ;                      ;                                ;
-;     -- Registered Input Ports                               ; 0                    ; 0                              ;
-;     -- Registered Output Ports                              ; 0                    ; 0                              ;
-;                                                             ;                      ;                                ;
-; Port Connectivity                                           ;                      ;                                ;
-;     -- Input Ports driven by GND                            ; 0                    ; 0                              ;
-;     -- Output Ports driven by GND                           ; 0                    ; 0                              ;
-;     -- Input Ports driven by VCC                            ; 0                    ; 0                              ;
-;     -- Output Ports driven by VCC                           ; 0                    ; 0                              ;
-;     -- Input Ports with no Source                           ; 0                    ; 0                              ;
-;     -- Output Ports with no Source                          ; 0                    ; 0                              ;
-;     -- Input Ports with no Fanout                           ; 0                    ; 0                              ;
-;     -- Output Ports with no Fanout                          ; 0                    ; 0                              ;
-+-------------------------------------------------------------+----------------------+--------------------------------+
++----------------------------------------------------------------------------------------------------------------------+
+; Fitter Partition Statistics                                                                                          ;
++-------------------------------------------------------------+-----------------------+--------------------------------+
+; Statistic                                                   ; Top                   ; hard_block:auto_generated_inst ;
++-------------------------------------------------------------+-----------------------+--------------------------------+
+; Logic utilization (ALMs needed / total ALMs on device)      ; 105 / 18480 ( < 1 % ) ; 0 / 18480 ( 0 % )              ;
+; ALMs needed [=A-B+C]                                        ; 105                   ; 0                              ;
+;     [A] ALMs used in final placement [=a+b+c+d]             ; 111 / 18480 ( < 1 % ) ; 0 / 18480 ( 0 % )              ;
+;         [a] ALMs used for LUT logic and registers           ; 40                    ; 0                              ;
+;         [b] ALMs used for LUT logic                         ; 66                    ; 0                              ;
+;         [c] ALMs used for registers                         ; 5                     ; 0                              ;
+;         [d] ALMs used for memory (up to half of total ALMs) ; 0                     ; 0                              ;
+;     [B] Estimate of ALMs recoverable by dense packing       ; 6 / 18480 ( < 1 % )   ; 0 / 18480 ( 0 % )              ;
+;     [C] Estimate of ALMs unavailable [=a+b+c+d]             ; 0 / 18480 ( 0 % )     ; 0 / 18480 ( 0 % )              ;
+;         [a] Due to location constrained logic               ; 0                     ; 0                              ;
+;         [b] Due to LAB-wide signal conflicts                ; 0                     ; 0                              ;
+;         [c] Due to LAB input limits                         ; 0                     ; 0                              ;
+;         [d] Due to virtual I/Os                             ; 0                     ; 0                              ;
+;                                                             ;                       ;                                ;
+; Difficulty packing design                                   ; Low                   ; Low                            ;
+;                                                             ;                       ;                                ;
+; Total LABs:  partially or completely used                   ; 15 / 1848 ( < 1 % )   ; 0 / 1848 ( 0 % )               ;
+;     -- Logic LABs                                           ; 15                    ; 0                              ;
+;     -- Memory LABs (up to half of total LABs)               ; 0                     ; 0                              ;
+;                                                             ;                       ;                                ;
+; Combinational ALUT usage for logic                          ; 167                   ; 0                              ;
+;     -- 7 input functions                                    ; 0                     ; 0                              ;
+;     -- 6 input functions                                    ; 68                    ; 0                              ;
+;     -- 5 input functions                                    ; 27                    ; 0                              ;
+;     -- 4 input functions                                    ; 17                    ; 0                              ;
+;     -- <=3 input functions                                  ; 55                    ; 0                              ;
+; Combinational ALUT usage for route-throughs                 ; 0                     ; 0                              ;
+; Memory ALUT usage                                           ; 0                     ; 0                              ;
+;     -- 64-address deep                                      ; 0                     ; 0                              ;
+;     -- 32-address deep                                      ; 0                     ; 0                              ;
+;                                                             ;                       ;                                ;
+; Dedicated logic registers                                   ; 0                     ; 0                              ;
+;     -- By type:                                             ;                       ;                                ;
+;         -- Primary logic registers                          ; 89 / 36960 ( < 1 % )  ; 0 / 36960 ( 0 % )              ;
+;         -- Secondary logic registers                        ; 0 / 36960 ( 0 % )     ; 0 / 36960 ( 0 % )              ;
+;     -- By function:                                         ;                       ;                                ;
+;         -- Design implementation registers                  ; 89                    ; 0                              ;
+;         -- Routing optimization registers                   ; 0                     ; 0                              ;
+;                                                             ;                       ;                                ;
+;                                                             ;                       ;                                ;
+; Virtual pins                                                ; 0                     ; 0                              ;
+; I/O pins                                                    ; 25                    ; 0                              ;
+; I/O registers                                               ; 0                     ; 0                              ;
+; Total block memory bits                                     ; 0                     ; 0                              ;
+; Total block memory implementation bits                      ; 0                     ; 0                              ;
+; Clock enable block                                          ; 1 / 104 ( < 1 % )     ; 0 / 104 ( 0 % )                ;
+;                                                             ;                       ;                                ;
+; Connections                                                 ;                       ;                                ;
+;     -- Input Connections                                    ; 0                     ; 0                              ;
+;     -- Registered Input Connections                         ; 0                     ; 0                              ;
+;     -- Output Connections                                   ; 0                     ; 0                              ;
+;     -- Registered Output Connections                        ; 0                     ; 0                              ;
+;                                                             ;                       ;                                ;
+; Internal Connections                                        ;                       ;                                ;
+;     -- Total Connections                                    ; 1065                  ; 0                              ;
+;     -- Registered Connections                               ; 406                   ; 0                              ;
+;                                                             ;                       ;                                ;
+; External Connections                                        ;                       ;                                ;
+;     -- Top                                                  ; 0                     ; 0                              ;
+;     -- hard_block:auto_generated_inst                       ; 0                     ; 0                              ;
+;                                                             ;                       ;                                ;
+; Partition Interface                                         ;                       ;                                ;
+;     -- Input Ports                                          ; 2                     ; 0                              ;
+;     -- Output Ports                                         ; 23                    ; 0                              ;
+;     -- Bidir Ports                                          ; 0                     ; 0                              ;
+;                                                             ;                       ;                                ;
+; Registered Ports                                            ;                       ;                                ;
+;     -- Registered Input Ports                               ; 0                     ; 0                              ;
+;     -- Registered Output Ports                              ; 0                     ; 0                              ;
+;                                                             ;                       ;                                ;
+; Port Connectivity                                           ;                       ;                                ;
+;     -- Input Ports driven by GND                            ; 0                     ; 0                              ;
+;     -- Output Ports driven by GND                           ; 0                     ; 0                              ;
+;     -- Input Ports driven by VCC                            ; 0                     ; 0                              ;
+;     -- Output Ports driven by VCC                           ; 0                     ; 0                              ;
+;     -- Input Ports with no Source                           ; 0                     ; 0                              ;
+;     -- Output Ports with no Source                          ; 0                     ; 0                              ;
+;     -- Input Ports with no Fanout                           ; 0                     ; 0                              ;
+;     -- Output Ports with no Fanout                          ; 0                     ; 0                              ;
++-------------------------------------------------------------+-----------------------+--------------------------------+
 
 
 +---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
@@ -386,34 +392,56 @@ The pin-out file can be found in C:/Users/minec/Desktop/Work/GitHub Repos/PROJ30
 +--------+-------+----------+--------------+--------------+--------------+-----------------------+--------------------+--------+----------------+-----------------+----------+--------------+--------------+-------------+---------------------------+----------------------+-----------+
 ; Name   ; Pin # ; I/O Bank ; X coordinate ; Y coordinate ; Z coordinate ; Combinational Fan-Out ; Registered Fan-Out ; Global ; Input Register ; PCI I/O Enabled ; Bus Hold ; Weak Pull Up ; I/O Standard ; Termination ; Termination Control Block ; Location assigned by ; Slew Rate ;
 +--------+-------+----------+--------------+--------------+--------------+-----------------------+--------------------+--------+----------------+-----------------+----------+--------------+--------------+-------------+---------------------------+----------------------+-----------+
-; clk_50 ; M9    ; 3B       ; 22           ; 0            ; 0            ; 54                    ; 0                  ; yes    ; no             ; no              ; no       ; Off          ; 2.5 V        ; Off         ; --                        ; User                 ; no        ;
-; sw_rst ; U13   ; 4A       ; 33           ; 0            ; 40           ; 44                    ; 0                  ; no     ; no             ; no              ; no       ; Off          ; 2.5 V        ; Off         ; --                        ; User                 ; no        ;
+; clk_50 ; M9    ; 3B       ; 22           ; 0            ; 0            ; 89                    ; 0                  ; yes    ; no             ; no              ; no       ; Off          ; 2.5 V        ; Off         ; --                        ; User                 ; no        ;
+; sw_rst ; U13   ; 4A       ; 33           ; 0            ; 40           ; 83                    ; 0                  ; no     ; no             ; no              ; no       ; Off          ; 2.5 V        ; Off         ; --                        ; User                 ; no        ;
 +--------+-------+----------+--------------+--------------+--------------+-----------------------+--------------------+--------+----------------+-----------------+----------+--------------+--------------+-------------+---------------------------+----------------------+-----------+
 
 
-+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Output Pins                                                                                                                                                                                                                                                                                                                                                                                                                                                                                      ;
-+-------------+-------+----------+--------------+--------------+--------------+-----------------+------------------------+-----------+-----------------+------------+---------------+----------+--------------+--------------+------------------+-----------------------------------+---------------------------+----------------------------+-----------------------------+---------------------+-----------------------------+----------------------+----------------------+---------------------+
-; Name        ; Pin # ; I/O Bank ; X coordinate ; Y coordinate ; Z coordinate ; Output Register ; Output Enable Register ; Slew Rate ; PCI I/O Enabled ; Open Drain ; TRI Primitive ; Bus Hold ; Weak Pull Up ; I/O Standard ; Current Strength ; Termination                       ; Termination Control Block ; Output Buffer Pre-emphasis ; Voltage Output Differential ; Output Buffer Delay ; Output Buffer Delay Control ; Location assigned by ; Output Enable Source ; Output Enable Group ;
-+-------------+-------+----------+--------------+--------------+--------------+-----------------+------------------------+-----------+-----------------+------------+---------------+----------+--------------+--------------+------------------+-----------------------------------+---------------------------+----------------------------+-----------------------------+---------------------+-----------------------------+----------------------+----------------------+---------------------+
-; led_strip_A ; G12   ; 7A       ; 34           ; 45           ; 17           ; no              ; no                     ; 1         ; no              ; no         ; no            ; no       ; Off          ; 2.5 V        ; Default          ; Series 50 Ohm without Calibration ; --                        ; no                         ; no                          ; 0                   ; Off                         ; User                 ; -                    ; -                   ;
-+-------------+-------+----------+--------------+--------------+--------------+-----------------+------------------------+-----------+-----------------+------------+---------------+----------+--------------+--------------+------------------+-----------------------------------+---------------------------+----------------------------+-----------------------------+---------------------+-----------------------------+----------------------+----------------------+---------------------+
++----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Output Pins                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        ;
++---------------+-------+----------+--------------+--------------+--------------+-----------------+------------------------+-----------+-----------------+------------+---------------+----------+--------------+--------------+------------------+-----------------------------------+---------------------------+----------------------------+-----------------------------+---------------------+-----------------------------+----------------------+----------------------+---------------------+
+; Name          ; Pin # ; I/O Bank ; X coordinate ; Y coordinate ; Z coordinate ; Output Register ; Output Enable Register ; Slew Rate ; PCI I/O Enabled ; Open Drain ; TRI Primitive ; Bus Hold ; Weak Pull Up ; I/O Standard ; Current Strength ; Termination                       ; Termination Control Block ; Output Buffer Pre-emphasis ; Voltage Output Differential ; Output Buffer Delay ; Output Buffer Delay Control ; Location assigned by ; Output Enable Source ; Output Enable Group ;
++---------------+-------+----------+--------------+--------------+--------------+-----------------+------------------------+-----------+-----------------+------------+---------------+----------+--------------+--------------+------------------+-----------------------------------+---------------------------+----------------------------+-----------------------------+---------------------+-----------------------------+----------------------+----------------------+---------------------+
+; led_strip_A   ; H16   ; 7A       ; 44           ; 45           ; 0            ; no              ; no                     ; 1         ; no              ; no         ; no            ; no       ; Off          ; 2.5 V        ; Default          ; Series 50 Ohm without Calibration ; --                        ; no                         ; no                          ; 0                   ; Off                         ; User                 ; -                    ; -                   ;
+; led_strip_A1  ; H15   ; 7A       ; 44           ; 45           ; 17           ; no              ; no                     ; 1         ; no              ; no         ; no            ; no       ; Off          ; 2.5 V        ; Default          ; Series 50 Ohm without Calibration ; --                        ; no                         ; no                          ; 0                   ; Off                         ; User                 ; -                    ; -                   ;
+; led_strip_A10 ; A14   ; 7A       ; 46           ; 45           ; 91           ; no              ; no                     ; 1         ; no              ; no         ; no            ; no       ; Off          ; 2.5 V        ; Default          ; Series 50 Ohm without Calibration ; --                        ; no                         ; no                          ; 0                   ; Off                         ; User                 ; -                    ; -                   ;
+; led_strip_A11 ; C15   ; 7A       ; 43           ; 45           ; 0            ; no              ; no                     ; 1         ; no              ; no         ; no            ; no       ; Off          ; 2.5 V        ; Default          ; Series 50 Ohm without Calibration ; --                        ; no                         ; no                          ; 0                   ; Off                         ; User                 ; -                    ; -                   ;
+; led_strip_A12 ; E15   ; 7A       ; 46           ; 45           ; 40           ; no              ; no                     ; 1         ; no              ; no         ; no            ; no       ; Off          ; 2.5 V        ; Default          ; Series 50 Ohm without Calibration ; --                        ; no                         ; no                          ; 0                   ; Off                         ; User                 ; -                    ; -                   ;
+; led_strip_A13 ; A15   ; 7A       ; 46           ; 45           ; 74           ; no              ; no                     ; 1         ; no              ; no         ; no            ; no       ; Off          ; 2.5 V        ; Default          ; Series 50 Ohm without Calibration ; --                        ; no                         ; no                          ; 0                   ; Off                         ; User                 ; -                    ; -                   ;
+; led_strip_A14 ; L8    ; 7A       ; 34           ; 45           ; 34           ; no              ; no                     ; 1         ; no              ; no         ; no            ; no       ; Off          ; 2.5 V        ; Default          ; Series 50 Ohm without Calibration ; --                        ; no                         ; no                          ; 0                   ; Off                         ; User                 ; -                    ; -                   ;
+; led_strip_A15 ; B15   ; 7A       ; 43           ; 45           ; 17           ; no              ; no                     ; 1         ; no              ; no         ; no            ; no       ; Off          ; 2.5 V        ; Default          ; Series 50 Ohm without Calibration ; --                        ; no                         ; no                          ; 0                   ; Off                         ; User                 ; -                    ; -                   ;
+; led_strip_A16 ; E14   ; 7A       ; 40           ; 45           ; 40           ; no              ; no                     ; 1         ; no              ; no         ; no            ; no       ; Off          ; 2.5 V        ; Default          ; Series 50 Ohm without Calibration ; --                        ; no                         ; no                          ; 0                   ; Off                         ; User                 ; -                    ; -                   ;
+; led_strip_A17 ; E16   ; 7A       ; 50           ; 45           ; 17           ; no              ; no                     ; 1         ; no              ; no         ; no            ; no       ; Off          ; 2.5 V        ; Default          ; Series 50 Ohm without Calibration ; --                        ; no                         ; no                          ; 0                   ; Off                         ; User                 ; -                    ; -                   ;
+; led_strip_A18 ; F15   ; 7A       ; 46           ; 45           ; 57           ; no              ; no                     ; 1         ; no              ; no         ; no            ; no       ; Off          ; 2.5 V        ; Default          ; Series 50 Ohm without Calibration ; --                        ; no                         ; no                          ; 0                   ; Off                         ; User                 ; -                    ; -                   ;
+; led_strip_A19 ; F12   ; 7A       ; 38           ; 45           ; 51           ; no              ; no                     ; 1         ; no              ; no         ; no            ; no       ; Off          ; 2.5 V        ; Default          ; Series 50 Ohm without Calibration ; --                        ; no                         ; no                          ; 0                   ; Off                         ; User                 ; -                    ; -                   ;
+; led_strip_A2  ; A13   ; 7A       ; 42           ; 45           ; 51           ; no              ; no                     ; 1         ; no              ; no         ; no            ; no       ; Off          ; 2.5 V        ; Default          ; Series 50 Ohm without Calibration ; --                        ; no                         ; no                          ; 0                   ; Off                         ; User                 ; -                    ; -                   ;
+; led_strip_A20 ; G15   ; 7A       ; 43           ; 45           ; 34           ; no              ; no                     ; 1         ; no              ; no         ; no            ; no       ; Off          ; 2.5 V        ; Default          ; Series 50 Ohm without Calibration ; --                        ; no                         ; no                          ; 0                   ; Off                         ; User                 ; -                    ; -                   ;
+; led_strip_A21 ; G12   ; 7A       ; 34           ; 45           ; 17           ; no              ; no                     ; 1         ; no              ; no         ; no            ; no       ; Off          ; 2.5 V        ; Default          ; Series 50 Ohm without Calibration ; --                        ; no                         ; no                          ; 0                   ; Off                         ; User                 ; -                    ; -                   ;
+; led_strip_A22 ; K16   ; 7A       ; 44           ; 45           ; 51           ; no              ; no                     ; 1         ; no              ; no         ; no            ; no       ; Off          ; 2.5 V        ; Default          ; Series 50 Ohm without Calibration ; --                        ; no                         ; no                          ; 0                   ; Off                         ; User                 ; -                    ; -                   ;
+; led_strip_A3  ; C13   ; 7A       ; 36           ; 45           ; 17           ; no              ; no                     ; 1         ; no              ; no         ; no            ; no       ; Off          ; 2.5 V        ; Default          ; Series 50 Ohm without Calibration ; --                        ; no                         ; no                          ; 0                   ; Off                         ; User                 ; -                    ; -                   ;
+; led_strip_A4  ; G18   ; 7A       ; 48           ; 45           ; 0            ; no              ; no                     ; 1         ; no              ; no         ; no            ; no       ; Off          ; 2.5 V        ; Default          ; Series 50 Ohm without Calibration ; --                        ; no                         ; no                          ; 0                   ; Off                         ; User                 ; -                    ; -                   ;
+; led_strip_A5  ; H18   ; 7A       ; 48           ; 45           ; 17           ; no              ; no                     ; 1         ; no              ; no         ; no            ; no       ; Off          ; 2.5 V        ; Default          ; Series 50 Ohm without Calibration ; --                        ; no                         ; no                          ; 0                   ; Off                         ; User                 ; -                    ; -                   ;
+; led_strip_A6  ; J19   ; 7A       ; 48           ; 45           ; 34           ; no              ; no                     ; 1         ; no              ; no         ; no            ; no       ; Off          ; 2.5 V        ; Default          ; Series 50 Ohm without Calibration ; --                        ; no                         ; no                          ; 0                   ; Off                         ; User                 ; -                    ; -                   ;
+; led_strip_A7  ; H10   ; 7A       ; 40           ; 45           ; 91           ; no              ; no                     ; 1         ; no              ; no         ; no            ; no       ; Off          ; 2.5 V        ; Default          ; Series 50 Ohm without Calibration ; --                        ; no                         ; no                          ; 0                   ; Off                         ; User                 ; -                    ; -                   ;
+; led_strip_A8  ; H14   ; 7A       ; 42           ; 45           ; 0            ; no              ; no                     ; 1         ; no              ; no         ; no            ; no       ; Off          ; 2.5 V        ; Default          ; Series 50 Ohm without Calibration ; --                        ; no                         ; no                          ; 0                   ; Off                         ; User                 ; -                    ; -                   ;
+; led_strip_A9  ; J13   ; 7A       ; 42           ; 45           ; 17           ; no              ; no                     ; 1         ; no              ; no         ; no            ; no       ; Off          ; 2.5 V        ; Default          ; Series 50 Ohm without Calibration ; --                        ; no                         ; no                          ; 0                   ; Off                         ; User                 ; -                    ; -                   ;
++---------------+-------+----------+--------------+--------------+--------------+-----------------+------------------------+-----------+-----------------+------------+---------------+----------+--------------+--------------+------------------+-----------------------------------+---------------------------+----------------------------+-----------------------------+---------------------+-----------------------------+----------------------+----------------------+---------------------+
 
 
-+--------------------------------------------------------------------------+
-; I/O Bank Usage                                                           ;
-+----------+----------------+---------------+--------------+---------------+
-; I/O Bank ; Usage          ; VCCIO Voltage ; VREF Voltage ; VCCPD Voltage ;
-+----------+----------------+---------------+--------------+---------------+
-; 2A       ; 0 / 16 ( 0 % ) ; 2.5V          ; --           ; 2.5V          ;
-; 3A       ; 0 / 16 ( 0 % ) ; 2.5V          ; --           ; 2.5V          ;
-; 3B       ; 1 / 32 ( 3 % ) ; 2.5V          ; --           ; 2.5V          ;
-; 4A       ; 1 / 48 ( 2 % ) ; 2.5V          ; --           ; 2.5V          ;
-; 5A       ; 0 / 16 ( 0 % ) ; 2.5V          ; --           ; 2.5V          ;
-; 5B       ; 0 / 16 ( 0 % ) ; 2.5V          ; --           ; 2.5V          ;
-; 7A       ; 1 / 48 ( 2 % ) ; 2.5V          ; --           ; 2.5V          ;
-; 8A       ; 0 / 32 ( 0 % ) ; 2.5V          ; --           ; 2.5V          ;
-+----------+----------------+---------------+--------------+---------------+
++----------------------------------------------------------------------------+
+; I/O Bank Usage                                                             ;
++----------+------------------+---------------+--------------+---------------+
+; I/O Bank ; Usage            ; VCCIO Voltage ; VREF Voltage ; VCCPD Voltage ;
++----------+------------------+---------------+--------------+---------------+
+; 2A       ; 0 / 16 ( 0 % )   ; 2.5V          ; --           ; 2.5V          ;
+; 3A       ; 0 / 16 ( 0 % )   ; 2.5V          ; --           ; 2.5V          ;
+; 3B       ; 1 / 32 ( 3 % )   ; 2.5V          ; --           ; 2.5V          ;
+; 4A       ; 1 / 48 ( 2 % )   ; 2.5V          ; --           ; 2.5V          ;
+; 5A       ; 0 / 16 ( 0 % )   ; 2.5V          ; --           ; 2.5V          ;
+; 5B       ; 0 / 16 ( 0 % )   ; 2.5V          ; --           ; 2.5V          ;
+; 7A       ; 23 / 48 ( 48 % ) ; 2.5V          ; --           ; 2.5V          ;
+; 8A       ; 0 / 32 ( 0 % )   ; 2.5V          ; --           ; 2.5V          ;
++----------+------------------+---------------+--------------+---------------+
 
 
 +-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
@@ -433,9 +461,9 @@ The pin-out file can be found in C:/Users/minec/Desktop/Work/GitHub Repos/PROJ30
 ; A10      ; 260        ; 8A       ; RESERVED_INPUT_WITH_WEAK_PULLUP ;        ;              ;                     ; Column I/O   ;                 ; no       ; On           ;
 ; A11      ;            ;          ; GND                             ; gnd    ;              ;                     ; --           ;                 ; --       ; --           ;
 ; A12      ; 242        ; 7A       ; RESERVED_INPUT_WITH_WEAK_PULLUP ;        ;              ;                     ; Column I/O   ;                 ; no       ; On           ;
-; A13      ; 230        ; 7A       ; RESERVED_INPUT_WITH_WEAK_PULLUP ;        ;              ;                     ; Column I/O   ;                 ; no       ; On           ;
-; A14      ; 218        ; 7A       ; RESERVED_INPUT_WITH_WEAK_PULLUP ;        ;              ;                     ; Column I/O   ;                 ; no       ; On           ;
-; A15      ; 216        ; 7A       ; RESERVED_INPUT_WITH_WEAK_PULLUP ;        ;              ;                     ; Column I/O   ;                 ; no       ; On           ;
+; A13      ; 230        ; 7A       ; led_strip_A2                    ; output ; 2.5 V        ;                     ; Column I/O   ; Y               ; no       ; Off          ;
+; A14      ; 218        ; 7A       ; led_strip_A10                   ; output ; 2.5 V        ;                     ; Column I/O   ; Y               ; no       ; Off          ;
+; A15      ; 216        ; 7A       ; led_strip_A13                   ; output ; 2.5 V        ;                     ; Column I/O   ; Y               ; no       ; Off          ;
 ; A16      ;            ; 7A       ; VCCIO7A                         ; power  ;              ; 2.5V                ; --           ;                 ; --       ; --           ;
 ; A17      ;            ;          ; NC                              ;        ;              ;                     ; --           ;                 ; --       ; --           ;
 ; A18      ;            ;          ; NC                              ;        ;              ;                     ; --           ;                 ; --       ; --           ;
@@ -501,7 +529,7 @@ The pin-out file can be found in C:/Users/minec/Desktop/Work/GitHub Repos/PROJ30
 ; B12      ; 240        ; 7A       ; RESERVED_INPUT_WITH_WEAK_PULLUP ;        ;              ;                     ; Column I/O   ;                 ; no       ; On           ;
 ; B13      ; 228        ; 7A       ; RESERVED_INPUT_WITH_WEAK_PULLUP ;        ;              ;                     ; Column I/O   ;                 ; no       ; On           ;
 ; B14      ;            ;          ; GND                             ; gnd    ;              ;                     ; --           ;                 ; --       ; --           ;
-; B15      ; 225        ; 7A       ; RESERVED_INPUT_WITH_WEAK_PULLUP ;        ;              ;                     ; Column I/O   ;                 ; no       ; On           ;
+; B15      ; 225        ; 7A       ; led_strip_A15                   ; output ; 2.5 V        ;                     ; Column I/O   ; Y               ; no       ; Off          ;
 ; B16      ; 204        ; 7A       ; RESERVED_INPUT_WITH_WEAK_PULLUP ;        ;              ;                     ; Column I/O   ;                 ; no       ; On           ;
 ; B17      ;            ;          ; NC                              ;        ;              ;                     ; --           ;                 ; --       ; --           ;
 ; B18      ;            ;          ; NC                              ;        ;              ;                     ; --           ;                 ; --       ; --           ;
@@ -521,9 +549,9 @@ The pin-out file can be found in C:/Users/minec/Desktop/Work/GitHub Repos/PROJ30
 ; C10      ;            ; 7A, 8A   ; VCCPD7A8A                       ; power  ;              ; 2.5V                ; --           ;                 ; --       ; --           ;
 ; C11      ; 248        ; 7A       ; RESERVED_INPUT_WITH_WEAK_PULLUP ;        ;              ;                     ; Column I/O   ;                 ; no       ; On           ;
 ; C12      ;            ; 7A       ; VCCIO7A                         ; power  ;              ; 2.5V                ; --           ;                 ; --       ; --           ;
-; C13      ; 241        ; 7A       ; RESERVED_INPUT_WITH_WEAK_PULLUP ;        ;              ;                     ; Column I/O   ;                 ; no       ; On           ;
+; C13      ; 241        ; 7A       ; led_strip_A3                    ; output ; 2.5 V        ;                     ; Column I/O   ; Y               ; no       ; Off          ;
 ; C14      ;            ; 7A       ; VREFB7AN0                       ; power  ;              ;                     ; --           ;                 ; --       ; --           ;
-; C15      ; 223        ; 7A       ; RESERVED_INPUT_WITH_WEAK_PULLUP ;        ;              ;                     ; Column I/O   ;                 ; no       ; On           ;
+; C15      ; 223        ; 7A       ; led_strip_A11                   ; output ; 2.5 V        ;                     ; Column I/O   ; Y               ; no       ; Off          ;
 ; C16      ; 206        ; 7A       ; RESERVED_INPUT_WITH_WEAK_PULLUP ;        ;              ;                     ; Column I/O   ;                 ; no       ; On           ;
 ; C17      ;            ;          ; GND                             ; gnd    ;              ;                     ; --           ;                 ; --       ; --           ;
 ; C18      ;            ;          ; NC                              ;        ;              ;                     ; --           ;                 ; --       ; --           ;
@@ -566,9 +594,9 @@ The pin-out file can be found in C:/Users/minec/Desktop/Work/GitHub Repos/PROJ30
 ; E11      ;            ; 7A, 8A   ; VCCPD7A8A                       ; power  ;              ; 2.5V                ; --           ;                 ; --       ; --           ;
 ; E12      ; 249        ; 7A       ; RESERVED_INPUT_WITH_WEAK_PULLUP ;        ;              ;                     ; Column I/O   ;                 ; no       ; On           ;
 ; E13      ;            ;          ; GND                             ; gnd    ;              ;                     ; --           ;                 ; --       ; --           ;
-; E14      ; 231        ; 7A       ; RESERVED_INPUT_WITH_WEAK_PULLUP ;        ;              ;                     ; Column I/O   ;                 ; no       ; On           ;
-; E15      ; 215        ; 7A       ; RESERVED_INPUT_WITH_WEAK_PULLUP ;        ;              ;                     ; Column I/O   ;                 ; no       ; On           ;
-; E16      ; 209        ; 7A       ; RESERVED_INPUT_WITH_WEAK_PULLUP ;        ;              ;                     ; Column I/O   ;                 ; no       ; On           ;
+; E14      ; 231        ; 7A       ; led_strip_A16                   ; output ; 2.5 V        ;                     ; Column I/O   ; Y               ; no       ; Off          ;
+; E15      ; 215        ; 7A       ; led_strip_A12                   ; output ; 2.5 V        ;                     ; Column I/O   ; Y               ; no       ; Off          ;
+; E16      ; 209        ; 7A       ; led_strip_A17                   ; output ; 2.5 V        ;                     ; Column I/O   ; Y               ; no       ; Off          ;
 ; E17      ;            ;          ; DNU                             ;        ;              ;                     ; --           ;                 ; --       ; --           ;
 ; E18      ;            ; 7A       ; VCCIO7A                         ; power  ;              ; 2.5V                ; --           ;                 ; --       ; --           ;
 ; E19      ;            ;          ; NC                              ;        ;              ;                     ; --           ;                 ; --       ; --           ;
@@ -586,10 +614,10 @@ The pin-out file can be found in C:/Users/minec/Desktop/Work/GitHub Repos/PROJ30
 ; F9       ; 269        ; 8A       ; RESERVED_INPUT_WITH_WEAK_PULLUP ;        ;              ;                     ; Column I/O   ;                 ; no       ; On           ;
 ; F10      ; 253        ; 8A       ; RESERVED_INPUT_WITH_WEAK_PULLUP ;        ;              ;                     ; Column I/O   ;                 ; no       ; On           ;
 ; F11      ;            ; 7A       ; VCCIO7A                         ; power  ;              ; 2.5V                ; --           ;                 ; --       ; --           ;
-; F12      ; 238        ; 7A       ; RESERVED_INPUT_WITH_WEAK_PULLUP ;        ;              ;                     ; Column I/O   ;                 ; no       ; On           ;
+; F12      ; 238        ; 7A       ; led_strip_A19                   ; output ; 2.5 V        ;                     ; Column I/O   ; Y               ; no       ; Off          ;
 ; F13      ; 233        ; 7A       ; RESERVED_INPUT_WITH_WEAK_PULLUP ;        ;              ;                     ; Column I/O   ;                 ; no       ; On           ;
 ; F14      ; 226        ; 7A       ; RESERVED_INPUT_WITH_WEAK_PULLUP ;        ;              ;                     ; Column I/O   ;                 ; no       ; On           ;
-; F15      ; 217        ; 7A       ; RESERVED_INPUT_WITH_WEAK_PULLUP ;        ;              ;                     ; Column I/O   ;                 ; no       ; On           ;
+; F15      ; 217        ; 7A       ; led_strip_A18                   ; output ; 2.5 V        ;                     ; Column I/O   ; Y               ; no       ; Off          ;
 ; F16      ;            ;          ; GND                             ; gnd    ;              ;                     ; --           ;                 ; --       ; --           ;
 ; F17      ; 202        ; 7A       ; ^GND                            ;        ;              ;                     ; --           ;                 ; --       ; --           ;
 ; F18      ;            ;          ; NC                              ;        ;              ;                     ; --           ;                 ; --       ; --           ;
@@ -608,13 +636,13 @@ The pin-out file can be found in C:/Users/minec/Desktop/Work/GitHub Repos/PROJ30
 ; G9       ;            ;          ; GND                             ; gnd    ;              ;                     ; --           ;                 ; --       ; --           ;
 ; G10      ; 251        ; 8A       ; RESERVED_INPUT_WITH_WEAK_PULLUP ;        ;              ;                     ; Column I/O   ;                 ; no       ; On           ;
 ; G11      ; 236        ; 7A       ; RESERVED_INPUT_WITH_WEAK_PULLUP ;        ;              ;                     ; Column I/O   ;                 ; no       ; On           ;
-; G12      ; 245        ; 7A       ; led_strip_A                     ; output ; 2.5 V        ;                     ; Column I/O   ; Y               ; no       ; Off          ;
+; G12      ; 245        ; 7A       ; led_strip_A21                   ; output ; 2.5 V        ;                     ; Column I/O   ; Y               ; no       ; Off          ;
 ; G13      ; 237        ; 7A       ; RESERVED_INPUT_WITH_WEAK_PULLUP ;        ;              ;                     ; Column I/O   ;                 ; no       ; On           ;
 ; G14      ;            ; 7A       ; VCCIO7A                         ; power  ;              ; 2.5V                ; --           ;                 ; --       ; --           ;
-; G15      ; 224        ; 7A       ; RESERVED_INPUT_WITH_WEAK_PULLUP ;        ;              ;                     ; Column I/O   ;                 ; no       ; On           ;
+; G15      ; 224        ; 7A       ; led_strip_A20                   ; output ; 2.5 V        ;                     ; Column I/O   ; Y               ; no       ; Off          ;
 ; G16      ; 210        ; 7A       ; RESERVED_INPUT_WITH_WEAK_PULLUP ;        ;              ;                     ; Column I/O   ;                 ; no       ; On           ;
 ; G17      ; 208        ; 7A       ; RESERVED_INPUT_WITH_WEAK_PULLUP ;        ;              ;                     ; Column I/O   ;                 ; no       ; On           ;
-; G18      ; 211        ; 7A       ; RESERVED_INPUT_WITH_WEAK_PULLUP ;        ;              ;                     ; Column I/O   ;                 ; no       ; On           ;
+; G18      ; 211        ; 7A       ; led_strip_A4                    ; output ; 2.5 V        ;                     ; Column I/O   ; Y               ; no       ; Off          ;
 ; G19      ;            ;          ; GND                             ; gnd    ;              ;                     ; --           ;                 ; --       ; --           ;
 ; G20      ;            ;          ; NC                              ;        ;              ;                     ; --           ;                 ; --       ; --           ;
 ; G21      ;            ;          ; NC                              ;        ;              ;                     ; --           ;                 ; --       ; --           ;
@@ -628,15 +656,15 @@ The pin-out file can be found in C:/Users/minec/Desktop/Work/GitHub Repos/PROJ30
 ; H7       ;            ;          ; GND                             ; gnd    ;              ;                     ; --           ;                 ; --       ; --           ;
 ; H8       ; 256        ; 8A       ; RESERVED_INPUT_WITH_WEAK_PULLUP ;        ;              ;                     ; Column I/O   ;                 ; no       ; On           ;
 ; H9       ; 261        ; 8A       ; RESERVED_INPUT_WITH_WEAK_PULLUP ;        ;              ;                     ; Column I/O   ;                 ; no       ; On           ;
-; H10      ; 234        ; 7A       ; RESERVED_INPUT_WITH_WEAK_PULLUP ;        ;              ;                     ; Column I/O   ;                 ; no       ; On           ;
+; H10      ; 234        ; 7A       ; led_strip_A7                    ; output ; 2.5 V        ;                     ; Column I/O   ; Y               ; no       ; Off          ;
 ; H11      ; 243        ; 7A       ; RESERVED_INPUT_WITH_WEAK_PULLUP ;        ;              ;                     ; Column I/O   ;                 ; no       ; On           ;
 ; H12      ;            ;          ; GND                             ; gnd    ;              ;                     ; --           ;                 ; --       ; --           ;
 ; H13      ; 235        ; 7A       ; RESERVED_INPUT_WITH_WEAK_PULLUP ;        ;              ;                     ; Column I/O   ;                 ; no       ; On           ;
-; H14      ; 227        ; 7A       ; RESERVED_INPUT_WITH_WEAK_PULLUP ;        ;              ;                     ; Column I/O   ;                 ; no       ; On           ;
-; H15      ; 221        ; 7A       ; RESERVED_INPUT_WITH_WEAK_PULLUP ;        ;              ;                     ; Column I/O   ;                 ; no       ; On           ;
-; H16      ; 219        ; 7A       ; RESERVED_INPUT_WITH_WEAK_PULLUP ;        ;              ;                     ; Column I/O   ;                 ; no       ; On           ;
+; H14      ; 227        ; 7A       ; led_strip_A8                    ; output ; 2.5 V        ;                     ; Column I/O   ; Y               ; no       ; Off          ;
+; H15      ; 221        ; 7A       ; led_strip_A1                    ; output ; 2.5 V        ;                     ; Column I/O   ; Y               ; no       ; Off          ;
+; H16      ; 219        ; 7A       ; led_strip_A                     ; output ; 2.5 V        ;                     ; Column I/O   ; Y               ; no       ; Off          ;
 ; H17      ;            ; 7A       ; VCCIO7A                         ; power  ;              ; 2.5V                ; --           ;                 ; --       ; --           ;
-; H18      ; 213        ; 7A       ; RESERVED_INPUT_WITH_WEAK_PULLUP ;        ;              ;                     ; Column I/O   ;                 ; no       ; On           ;
+; H18      ; 213        ; 7A       ; led_strip_A5                    ; output ; 2.5 V        ;                     ; Column I/O   ; Y               ; no       ; Off          ;
 ; H19      ;            ; --       ; VCCA_FPLL                       ; power  ;              ; 2.5V                ; --           ;                 ; --       ; --           ;
 ; H20      ;            ;          ; NC                              ;        ;              ;                     ; --           ;                 ; --       ; --           ;
 ; H21      ;            ;          ; NC                              ;        ;              ;                     ; --           ;                 ; --       ; --           ;
@@ -653,13 +681,13 @@ The pin-out file can be found in C:/Users/minec/Desktop/Work/GitHub Repos/PROJ30
 ; J10      ;            ; --       ; VCC                             ; power  ;              ; 1.1V                ; --           ;                 ; --       ; --           ;
 ; J11      ; 232        ; 7A       ; RESERVED_INPUT_WITH_WEAK_PULLUP ;        ;              ;                     ; Column I/O   ;                 ; no       ; On           ;
 ; J12      ;            ; --       ; VCC                             ; power  ;              ; 1.1V                ; --           ;                 ; --       ; --           ;
-; J13      ; 229        ; 7A       ; RESERVED_INPUT_WITH_WEAK_PULLUP ;        ;              ;                     ; Column I/O   ;                 ; no       ; On           ;
+; J13      ; 229        ; 7A       ; led_strip_A9                    ; output ; 2.5 V        ;                     ; Column I/O   ; Y               ; no       ; Off          ;
 ; J14      ;            ; --       ; VCC                             ; power  ;              ; 1.1V                ; --           ;                 ; --       ; --           ;
 ; J15      ;            ;          ; GND                             ; gnd    ;              ;                     ; --           ;                 ; --       ; --           ;
 ; J16      ;            ; --       ; VCC                             ; power  ;              ; 1.1V                ; --           ;                 ; --       ; --           ;
 ; J17      ; 220        ; 7A       ; RESERVED_INPUT_WITH_WEAK_PULLUP ;        ;              ;                     ; Column I/O   ;                 ; no       ; On           ;
 ; J18      ; 214        ; 7A       ; RESERVED_INPUT_WITH_WEAK_PULLUP ;        ;              ;                     ; Column I/O   ;                 ; no       ; On           ;
-; J19      ; 212        ; 7A       ; RESERVED_INPUT_WITH_WEAK_PULLUP ;        ;              ;                     ; Column I/O   ;                 ; no       ; On           ;
+; J19      ; 212        ; 7A       ; led_strip_A6                    ; output ; 2.5 V        ;                     ; Column I/O   ; Y               ; no       ; Off          ;
 ; J20      ;            ;          ; GND                             ; gnd    ;              ;                     ; --           ;                 ; --       ; --           ;
 ; J21      ;            ;          ; NC                              ;        ;              ;                     ; --           ;                 ; --       ; --           ;
 ; J22      ;            ;          ; NC                              ;        ;              ;                     ; --           ;                 ; --       ; --           ;
@@ -678,7 +706,7 @@ The pin-out file can be found in C:/Users/minec/Desktop/Work/GitHub Repos/PROJ30
 ; K13      ;            ; --       ; VCC                             ; power  ;              ; 1.1V                ; --           ;                 ; --       ; --           ;
 ; K14      ;            ;          ; GND                             ; gnd    ;              ;                     ; --           ;                 ; --       ; --           ;
 ; K15      ;            ; --       ; VCC                             ; power  ;              ; 1.1V                ; --           ;                 ; --       ; --           ;
-; K16      ; 222        ; 7A       ; RESERVED_INPUT_WITH_WEAK_PULLUP ;        ;              ;                     ; Column I/O   ;                 ; no       ; On           ;
+; K16      ; 222        ; 7A       ; led_strip_A22                   ; output ; 2.5 V        ;                     ; Column I/O   ; Y               ; no       ; Off          ;
 ; K17      ; 178        ; 5B       ; RESERVED_INPUT_WITH_WEAK_PULLUP ;        ;              ;                     ; Row I/O      ;                 ; no       ; On           ;
 ; K18      ;            ; 5B       ; VCCIO5B                         ; power  ;              ; 2.5V                ; --           ;                 ; --       ; --           ;
 ; K19      ; 205        ; 7A       ; RESERVED_INPUT_WITH_WEAK_PULLUP ;        ;              ;                     ; Column I/O   ;                 ; no       ; On           ;
@@ -692,7 +720,7 @@ The pin-out file can be found in C:/Users/minec/Desktop/Work/GitHub Repos/PROJ30
 ; L5       ;            ;          ; GND                             ; gnd    ;              ;                     ; --           ;                 ; --       ; --           ;
 ; L6       ; 283        ; 9A       ; ^MSEL0                          ;        ;              ;                     ; --           ;                 ; --       ; --           ;
 ; L7       ; 252        ; 8A       ; RESERVED_INPUT_WITH_WEAK_PULLUP ;        ;              ;                     ; Column I/O   ;                 ; no       ; On           ;
-; L8       ; 244        ; 7A       ; RESERVED_INPUT_WITH_WEAK_PULLUP ;        ;              ;                     ; Column I/O   ;                 ; no       ; On           ;
+; L8       ; 244        ; 7A       ; led_strip_A14                   ; output ; 2.5 V        ;                     ; Column I/O   ; Y               ; no       ; Off          ;
 ; L9       ;            ;          ; DNU                             ;        ;              ;                     ; --           ;                 ; --       ; --           ;
 ; L10      ;            ; --       ; VCC                             ; power  ;              ; 1.1V                ; --           ;                 ; --       ; --           ;
 ; L11      ;            ;          ; GND                             ; gnd    ;              ;                     ; --           ;                 ; --       ; --           ;
@@ -909,107 +937,196 @@ The pin-out file can be found in C:/Users/minec/Desktop/Work/GitHub Repos/PROJ30
 Note: Pin directions (input, output or bidir) are based on device operating in user mode.
 
 
-+---------------------------------------------+
-; I/O Assignment Warnings                     ;
-+-------------+-------------------------------+
-; Pin Name    ; Reason                        ;
-+-------------+-------------------------------+
-; led_strip_A ; Incomplete set of assignments ;
-; clk_50      ; Incomplete set of assignments ;
-; sw_rst      ; Incomplete set of assignments ;
-+-------------+-------------------------------+
++-----------------------------------------------+
+; I/O Assignment Warnings                       ;
++---------------+-------------------------------+
+; Pin Name      ; Reason                        ;
++---------------+-------------------------------+
+; led_strip_A   ; Incomplete set of assignments ;
+; led_strip_A1  ; Incomplete set of assignments ;
+; led_strip_A4  ; Incomplete set of assignments ;
+; led_strip_A2  ; Incomplete set of assignments ;
+; led_strip_A6  ; Incomplete set of assignments ;
+; led_strip_A3  ; Incomplete set of assignments ;
+; led_strip_A5  ; Incomplete set of assignments ;
+; led_strip_A7  ; Incomplete set of assignments ;
+; led_strip_A8  ; Incomplete set of assignments ;
+; led_strip_A9  ; Incomplete set of assignments ;
+; led_strip_A10 ; Incomplete set of assignments ;
+; led_strip_A11 ; Incomplete set of assignments ;
+; led_strip_A12 ; Incomplete set of assignments ;
+; led_strip_A13 ; Incomplete set of assignments ;
+; led_strip_A14 ; Incomplete set of assignments ;
+; led_strip_A15 ; Incomplete set of assignments ;
+; led_strip_A16 ; Incomplete set of assignments ;
+; led_strip_A17 ; Incomplete set of assignments ;
+; led_strip_A18 ; Incomplete set of assignments ;
+; led_strip_A19 ; Incomplete set of assignments ;
+; led_strip_A20 ; Incomplete set of assignments ;
+; led_strip_A21 ; Incomplete set of assignments ;
+; led_strip_A22 ; Incomplete set of assignments ;
+; clk_50        ; Incomplete set of assignments ;
+; sw_rst        ; Incomplete set of assignments ;
++---------------+-------------------------------+
 
 
-+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Fitter Resource Utilization by Entity                                                                                                                                                                                                                                                                                                                                                                                  ;
-+------------------------------+----------------------+----------------------------------+---------------------------------------------------+----------------------------------+----------------------+---------------------+---------------------------+---------------+-------------------+-------+------------+------+--------------+--------------------------------------------+--------------------+--------------+
-; Compilation Hierarchy Node   ; ALMs needed [=A-B+C] ; [A] ALMs used in final placement ; [B] Estimate of ALMs recoverable by dense packing ; [C] Estimate of ALMs unavailable ; ALMs used for memory ; Combinational ALUTs ; Dedicated Logic Registers ; I/O Registers ; Block Memory Bits ; M10Ks ; DSP Blocks ; Pins ; Virtual Pins ; Full Hierarchy Name                        ; Entity Name        ; Library Name ;
-+------------------------------+----------------------+----------------------------------+---------------------------------------------------+----------------------------------+----------------------+---------------------+---------------------------+---------------+-------------------+-------+------------+------+--------------+--------------------------------------------+--------------------+--------------+
-; |WS2812BCONTROLLER           ; 62.0 (0.5)           ; 64.0 (0.5)                       ; 2.0 (0.0)                                         ; 0.0 (0.0)                        ; 0.0 (0.0)            ; 100 (1)             ; 54 (0)                    ; 0 (0)         ; 0                 ; 0     ; 0          ; 3    ; 0            ; |WS2812BCONTROLLER                         ; WS2812BCONTROLLER  ; work         ;
-;    |WS2812B_controller:inst| ; 61.5 (61.5)          ; 63.5 (63.5)                      ; 2.0 (2.0)                                         ; 0.0 (0.0)                        ; 0.0 (0.0)            ; 99 (99)             ; 54 (54)                   ; 0 (0)         ; 0                 ; 0     ; 0          ; 0    ; 0            ; |WS2812BCONTROLLER|WS2812B_controller:inst ; WS2812B_controller ; work         ;
-+------------------------------+----------------------+----------------------------------+---------------------------------------------------+----------------------------------+----------------------+---------------------+---------------------------+---------------+-------------------+-------+------------+------+--------------+--------------------------------------------+--------------------+--------------+
++----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Fitter Resource Utilization by Entity                                                                                                                                                                                                                                                                                                                                                                                      ;
++--------------------------------+----------------------+----------------------------------+---------------------------------------------------+----------------------------------+----------------------+---------------------+---------------------------+---------------+-------------------+-------+------------+------+--------------+----------------------------------------------+--------------------+--------------+
+; Compilation Hierarchy Node     ; ALMs needed [=A-B+C] ; [A] ALMs used in final placement ; [B] Estimate of ALMs recoverable by dense packing ; [C] Estimate of ALMs unavailable ; ALMs used for memory ; Combinational ALUTs ; Dedicated Logic Registers ; I/O Registers ; Block Memory Bits ; M10Ks ; DSP Blocks ; Pins ; Virtual Pins ; Full Hierarchy Name                          ; Entity Name        ; Library Name ;
++--------------------------------+----------------------+----------------------------------+---------------------------------------------------+----------------------------------+----------------------+---------------------+---------------------------+---------------+-------------------+-------+------------+------+--------------+----------------------------------------------+--------------------+--------------+
+; |WS2812BCONTROLLER             ; 104.5 (0.5)          ; 110.5 (0.5)                      ; 6.0 (0.0)                                         ; 0.0 (0.0)                        ; 0.0 (0.0)            ; 167 (1)             ; 89 (0)                    ; 0 (0)         ; 0                 ; 0     ; 0          ; 25   ; 0            ; |WS2812BCONTROLLER                           ; WS2812BCONTROLLER  ; work         ;
+;    |WS2812B_controller:inst|   ; 2.3 (2.3)            ; 2.8 (2.8)                        ; 0.5 (0.5)                                         ; 0.0 (0.0)                        ; 0.0 (0.0)            ; 4 (4)               ; 0 (0)                     ; 0 (0)         ; 0                 ; 0     ; 0          ; 0    ; 0            ; |WS2812BCONTROLLER|WS2812B_controller:inst   ; WS2812B_controller ; work         ;
+;    |WS2812B_controller:inst10| ; 58.3 (58.3)          ; 60.3 (60.3)                      ; 2.0 (2.0)                                         ; 0.0 (0.0)                        ; 0.0 (0.0)            ; 94 (94)             ; 54 (54)                   ; 0 (0)         ; 0                 ; 0     ; 0          ; 0    ; 0            ; |WS2812BCONTROLLER|WS2812B_controller:inst10 ; WS2812B_controller ; work         ;
+;    |WS2812B_controller:inst15| ; 43.3 (43.3)          ; 46.8 (46.8)                      ; 3.5 (3.5)                                         ; 0.0 (0.0)                        ; 0.0 (0.0)            ; 68 (68)             ; 35 (35)                   ; 0 (0)         ; 0                 ; 0     ; 0          ; 0    ; 0            ; |WS2812BCONTROLLER|WS2812B_controller:inst15 ; WS2812B_controller ; work         ;
++--------------------------------+----------------------+----------------------------------+---------------------------------------------------+----------------------------------+----------------------+---------------------+---------------------------+---------------+-------------------+-------+------------+------+--------------+----------------------------------------------+--------------------+--------------+
 Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
 
 
-+----------------------------------------------------------------------------------------------------------------------------+
-; Delay Chain Summary                                                                                                        ;
-+-------------+----------+----+------+------+----+------+-------+--------+------------------------+--------------------------+
-; Name        ; Pin Type ; D1 ; D3_0 ; D3_1 ; D4 ; D5   ; D5 OE ; D5 OCT ; T11 (Postamble Gating) ; T11 (Postamble Ungating) ;
-+-------------+----------+----+------+------+----+------+-------+--------+------------------------+--------------------------+
-; led_strip_A ; Output   ; -- ; --   ; --   ; -- ; (0)  ; (31)  ; --     ; --                     ; --                       ;
-; clk_50      ; Input    ; -- ; (0)  ; --   ; -- ; --   ; --    ; --     ; --                     ; --                       ;
-; sw_rst      ; Input    ; -- ; (0)  ; --   ; -- ; --   ; --    ; --     ; --                     ; --                       ;
-+-------------+----------+----+------+------+----+------+-------+--------+------------------------+--------------------------+
++------------------------------------------------------------------------------------------------------------------------------+
+; Delay Chain Summary                                                                                                          ;
++---------------+----------+----+------+------+----+------+-------+--------+------------------------+--------------------------+
+; Name          ; Pin Type ; D1 ; D3_0 ; D3_1 ; D4 ; D5   ; D5 OE ; D5 OCT ; T11 (Postamble Gating) ; T11 (Postamble Ungating) ;
++---------------+----------+----+------+------+----+------+-------+--------+------------------------+--------------------------+
+; led_strip_A   ; Output   ; -- ; --   ; --   ; -- ; (0)  ; (31)  ; --     ; --                     ; --                       ;
+; led_strip_A1  ; Output   ; -- ; --   ; --   ; -- ; (0)  ; (31)  ; --     ; --                     ; --                       ;
+; led_strip_A4  ; Output   ; -- ; --   ; --   ; -- ; (0)  ; (31)  ; --     ; --                     ; --                       ;
+; led_strip_A2  ; Output   ; -- ; --   ; --   ; -- ; (0)  ; (31)  ; --     ; --                     ; --                       ;
+; led_strip_A6  ; Output   ; -- ; --   ; --   ; -- ; (0)  ; (31)  ; --     ; --                     ; --                       ;
+; led_strip_A3  ; Output   ; -- ; --   ; --   ; -- ; (0)  ; (31)  ; --     ; --                     ; --                       ;
+; led_strip_A5  ; Output   ; -- ; --   ; --   ; -- ; (0)  ; (31)  ; --     ; --                     ; --                       ;
+; led_strip_A7  ; Output   ; -- ; --   ; --   ; -- ; (0)  ; (31)  ; --     ; --                     ; --                       ;
+; led_strip_A8  ; Output   ; -- ; --   ; --   ; -- ; (0)  ; (31)  ; --     ; --                     ; --                       ;
+; led_strip_A9  ; Output   ; -- ; --   ; --   ; -- ; (0)  ; (31)  ; --     ; --                     ; --                       ;
+; led_strip_A10 ; Output   ; -- ; --   ; --   ; -- ; (0)  ; (31)  ; --     ; --                     ; --                       ;
+; led_strip_A11 ; Output   ; -- ; --   ; --   ; -- ; (0)  ; (31)  ; --     ; --                     ; --                       ;
+; led_strip_A12 ; Output   ; -- ; --   ; --   ; -- ; (0)  ; (31)  ; --     ; --                     ; --                       ;
+; led_strip_A13 ; Output   ; -- ; --   ; --   ; -- ; (0)  ; (31)  ; --     ; --                     ; --                       ;
+; led_strip_A14 ; Output   ; -- ; --   ; --   ; -- ; (0)  ; (31)  ; --     ; --                     ; --                       ;
+; led_strip_A15 ; Output   ; -- ; --   ; --   ; -- ; (0)  ; (31)  ; --     ; --                     ; --                       ;
+; led_strip_A16 ; Output   ; -- ; --   ; --   ; -- ; (0)  ; (31)  ; --     ; --                     ; --                       ;
+; led_strip_A17 ; Output   ; -- ; --   ; --   ; -- ; (0)  ; (31)  ; --     ; --                     ; --                       ;
+; led_strip_A18 ; Output   ; -- ; --   ; --   ; -- ; (0)  ; (31)  ; --     ; --                     ; --                       ;
+; led_strip_A19 ; Output   ; -- ; --   ; --   ; -- ; (0)  ; (31)  ; --     ; --                     ; --                       ;
+; led_strip_A20 ; Output   ; -- ; --   ; --   ; -- ; (0)  ; (31)  ; --     ; --                     ; --                       ;
+; led_strip_A21 ; Output   ; -- ; --   ; --   ; -- ; (0)  ; (31)  ; --     ; --                     ; --                       ;
+; led_strip_A22 ; Output   ; -- ; --   ; --   ; -- ; (0)  ; (31)  ; --     ; --                     ; --                       ;
+; clk_50        ; Input    ; -- ; (0)  ; --   ; -- ; --   ; --    ; --     ; --                     ; --                       ;
+; sw_rst        ; Input    ; -- ; --   ; (0)  ; -- ; --   ; --    ; --     ; --                     ; --                       ;
++---------------+----------+----+------+------+----+------+-------+--------+------------------------+--------------------------+
 
 
-+--------------------------------------------------------------------------------------+
-; Pad To Core Delay Chain Fanout                                                       ;
-+--------------------------------------------------------+-------------------+---------+
-; Source Pin / Fanout                                    ; Pad To Core Index ; Setting ;
-+--------------------------------------------------------+-------------------+---------+
-; clk_50                                                 ;                   ;         ;
-; sw_rst                                                 ;                   ;         ;
-;      - WS2812B_controller:inst|prev_reg[0]             ; 0                 ; 0       ;
-;      - WS2812B_controller:inst|prev_reg[1]             ; 0                 ; 0       ;
-;      - WS2812B_controller:inst|prev_reg[2]             ; 0                 ; 0       ;
-;      - WS2812B_controller:inst|prev_reg[4]             ; 0                 ; 0       ;
-;      - WS2812B_controller:inst|prev_reg[3]             ; 0                 ; 0       ;
-;      - WS2812B_controller:inst|curr_reg[0]             ; 0                 ; 0       ;
-;      - WS2812B_controller:inst|curr_reg[1]             ; 0                 ; 0       ;
-;      - WS2812B_controller:inst|curr_reg[2]             ; 0                 ; 0       ;
-;      - WS2812B_controller:inst|curr_reg[3]             ; 0                 ; 0       ;
-;      - WS2812B_controller:inst|curr_reg[4]             ; 0                 ; 0       ;
-;      - WS2812B_controller:inst|data_out                ; 0                 ; 0       ;
-;      - WS2812B_controller:inst|counterGRB_reg[3]       ; 0                 ; 0       ;
-;      - WS2812B_controller:inst|eot                     ; 0                 ; 0       ;
-;      - WS2812B_controller:inst|rst_flag                ; 0                 ; 0       ;
-;      - WS2812B_controller:inst|idx_reg[5]              ; 0                 ; 0       ;
-;      - WS2812B_controller:inst|counter_reset_reg[15]~0 ; 0                 ; 0       ;
-;      - WS2812B_controller:inst|counter_reset_reg[15]~1 ; 0                 ; 0       ;
-;      - WS2812B_controller:inst|counter2_reg~4          ; 0                 ; 0       ;
-;      - WS2812B_controller:inst|counter2_reg[4]~5       ; 0                 ; 0       ;
-;      - WS2812B_controller:inst|counter2_reg~6          ; 0                 ; 0       ;
-;      - WS2812B_controller:inst|counterGRB_reg[4]~2     ; 0                 ; 0       ;
-;      - WS2812B_controller:inst|idx_reg~0               ; 0                 ; 0       ;
-;      - WS2812B_controller:inst|idx_reg[0]~1            ; 0                 ; 0       ;
-;      - WS2812B_controller:inst|idx_reg~2               ; 0                 ; 0       ;
-;      - WS2812B_controller:inst|counter2_reg~7          ; 0                 ; 0       ;
-;      - WS2812B_controller:inst|counter2_reg~8          ; 0                 ; 0       ;
-;      - WS2812B_controller:inst|counter2_reg~9          ; 0                 ; 0       ;
-;      - WS2812B_controller:inst|counter2_reg~10         ; 0                 ; 0       ;
-;      - WS2812B_controller:inst|counter1_reg~2          ; 0                 ; 0       ;
-;      - WS2812B_controller:inst|counter1_reg[2]~3       ; 0                 ; 0       ;
-;      - WS2812B_controller:inst|counter1_reg~4          ; 0                 ; 0       ;
-;      - WS2812B_controller:inst|counter1_reg~5          ; 0                 ; 0       ;
-;      - WS2812B_controller:inst|counter1_reg~6          ; 0                 ; 0       ;
-;      - WS2812B_controller:inst|counter1_reg~7          ; 0                 ; 0       ;
-;      - WS2812B_controller:inst|counter1_reg~8          ; 0                 ; 0       ;
-;      - WS2812B_controller:inst|prev_data_reg~0         ; 0                 ; 0       ;
-;      - WS2812B_controller:inst|prev_reg[0]~0           ; 0                 ; 0       ;
-;      - WS2812B_controller:inst|counterGRB_reg[0]~3     ; 0                 ; 0       ;
-;      - WS2812B_controller:inst|counterGRB_reg[1]~4     ; 0                 ; 0       ;
-;      - WS2812B_controller:inst|counterGRB_reg[2]~5     ; 0                 ; 0       ;
-;      - WS2812B_controller:inst|idx_reg~3               ; 0                 ; 0       ;
-;      - WS2812B_controller:inst|idx_reg~4               ; 0                 ; 0       ;
-;      - WS2812B_controller:inst|idx_reg~5               ; 0                 ; 0       ;
-;      - WS2812B_controller:inst|data_reg[0]~0           ; 0                 ; 0       ;
-+--------------------------------------------------------+-------------------+---------+
++----------------------------------------------------------------------------------------+
+; Pad To Core Delay Chain Fanout                                                         ;
++----------------------------------------------------------+-------------------+---------+
+; Source Pin / Fanout                                      ; Pad To Core Index ; Setting ;
++----------------------------------------------------------+-------------------+---------+
+; clk_50                                                   ;                   ;         ;
+; sw_rst                                                   ;                   ;         ;
+;      - WS2812B_controller:inst10|curr_reg[4]             ; 1                 ; 0       ;
+;      - WS2812B_controller:inst10|curr_reg[3]             ; 1                 ; 0       ;
+;      - WS2812B_controller:inst10|curr_reg[2]             ; 1                 ; 0       ;
+;      - WS2812B_controller:inst10|curr_reg[1]             ; 1                 ; 0       ;
+;      - WS2812B_controller:inst10|curr_reg[0]             ; 1                 ; 0       ;
+;      - WS2812B_controller:inst10|prev_reg[4]             ; 1                 ; 0       ;
+;      - WS2812B_controller:inst10|prev_reg[3]             ; 1                 ; 0       ;
+;      - WS2812B_controller:inst10|prev_reg[2]             ; 1                 ; 0       ;
+;      - WS2812B_controller:inst10|prev_reg[1]             ; 1                 ; 0       ;
+;      - WS2812B_controller:inst10|prev_reg[0]             ; 1                 ; 0       ;
+;      - WS2812B_controller:inst15|curr_reg[4]             ; 1                 ; 0       ;
+;      - WS2812B_controller:inst15|curr_reg[3]             ; 1                 ; 0       ;
+;      - WS2812B_controller:inst15|prev_reg[3]             ; 1                 ; 0       ;
+;      - WS2812B_controller:inst15|prev_reg[2]             ; 1                 ; 0       ;
+;      - WS2812B_controller:inst15|prev_reg[1]             ; 1                 ; 0       ;
+;      - WS2812B_controller:inst15|prev_reg[0]             ; 1                 ; 0       ;
+;      - WS2812B_controller:inst15|curr_reg[2]             ; 1                 ; 0       ;
+;      - WS2812B_controller:inst15|curr_reg[1]             ; 1                 ; 0       ;
+;      - WS2812B_controller:inst15|curr_reg[0]             ; 1                 ; 0       ;
+;      - WS2812B_controller:inst15|prev_reg[4]             ; 1                 ; 0       ;
+;      - WS2812B_controller:inst10|data_out                ; 1                 ; 0       ;
+;      - WS2812B_controller:inst15|data_out                ; 1                 ; 0       ;
+;      - WS2812B_controller:inst10|rst_flag                ; 1                 ; 0       ;
+;      - WS2812B_controller:inst10|counterGRB_reg[3]       ; 1                 ; 0       ;
+;      - WS2812B_controller:inst10|eot                     ; 1                 ; 0       ;
+;      - WS2812B_controller:inst15|counterGRB_reg[3]       ; 1                 ; 0       ;
+;      - WS2812B_controller:inst15|eot                     ; 1                 ; 0       ;
+;      - WS2812B_controller:inst10|idx_reg[5]              ; 1                 ; 0       ;
+;      - WS2812B_controller:inst10|counter2_reg~4          ; 1                 ; 0       ;
+;      - WS2812B_controller:inst10|counter2_reg[3]~5       ; 1                 ; 0       ;
+;      - WS2812B_controller:inst10|counter2_reg~6          ; 1                 ; 0       ;
+;      - WS2812B_controller:inst10|counterGRB_reg[4]~2     ; 1                 ; 0       ;
+;      - WS2812B_controller:inst10|idx_reg~0               ; 1                 ; 0       ;
+;      - WS2812B_controller:inst10|idx_reg[3]~1            ; 1                 ; 0       ;
+;      - WS2812B_controller:inst10|idx_reg~2               ; 1                 ; 0       ;
+;      - WS2812B_controller:inst10|counter2_reg~7          ; 1                 ; 0       ;
+;      - WS2812B_controller:inst10|counter2_reg~8          ; 1                 ; 0       ;
+;      - WS2812B_controller:inst10|counter2_reg~9          ; 1                 ; 0       ;
+;      - WS2812B_controller:inst10|counter2_reg~10         ; 1                 ; 0       ;
+;      - WS2812B_controller:inst10|counter_reset_reg[12]~0 ; 1                 ; 0       ;
+;      - WS2812B_controller:inst10|counter_reset_reg[12]~1 ; 1                 ; 0       ;
+;      - WS2812B_controller:inst10|counter1_reg~2          ; 1                 ; 0       ;
+;      - WS2812B_controller:inst10|counter1_reg[3]~3       ; 1                 ; 0       ;
+;      - WS2812B_controller:inst10|counter1_reg~4          ; 1                 ; 0       ;
+;      - WS2812B_controller:inst10|counter1_reg~5          ; 1                 ; 0       ;
+;      - WS2812B_controller:inst10|counter1_reg~6          ; 1                 ; 0       ;
+;      - WS2812B_controller:inst10|counter1_reg~7          ; 1                 ; 0       ;
+;      - WS2812B_controller:inst10|counter1_reg~8          ; 1                 ; 0       ;
+;      - WS2812B_controller:inst15|counter2_reg~2          ; 1                 ; 0       ;
+;      - WS2812B_controller:inst15|counter2_reg[1]~3       ; 1                 ; 0       ;
+;      - WS2812B_controller:inst15|counter2_reg~4          ; 1                 ; 0       ;
+;      - WS2812B_controller:inst15|counterGRB_reg[4]~2     ; 1                 ; 0       ;
+;      - WS2812B_controller:inst15|idx_reg~0               ; 1                 ; 0       ;
+;      - WS2812B_controller:inst15|idx_reg[0]~1            ; 1                 ; 0       ;
+;      - WS2812B_controller:inst15|counter2_reg~5          ; 1                 ; 0       ;
+;      - WS2812B_controller:inst15|counter2_reg~6          ; 1                 ; 0       ;
+;      - WS2812B_controller:inst15|counter2_reg~7          ; 1                 ; 0       ;
+;      - WS2812B_controller:inst15|counter2_reg~8          ; 1                 ; 0       ;
+;      - WS2812B_controller:inst15|counter1_reg~0          ; 1                 ; 0       ;
+;      - WS2812B_controller:inst15|counter1_reg[5]~1       ; 1                 ; 0       ;
+;      - WS2812B_controller:inst15|counter1_reg~2          ; 1                 ; 0       ;
+;      - WS2812B_controller:inst15|counter1_reg~3          ; 1                 ; 0       ;
+;      - WS2812B_controller:inst15|counter1_reg~4          ; 1                 ; 0       ;
+;      - WS2812B_controller:inst15|counter1_reg~5          ; 1                 ; 0       ;
+;      - WS2812B_controller:inst15|counter1_reg~6          ; 1                 ; 0       ;
+;      - WS2812B_controller:inst10|prev_data_reg~0         ; 1                 ; 0       ;
+;      - WS2812B_controller:inst10|curr_reg[4]~0           ; 1                 ; 0       ;
+;      - WS2812B_controller:inst10|counterGRB_reg[0]~3     ; 1                 ; 0       ;
+;      - WS2812B_controller:inst10|counterGRB_reg[1]~4     ; 1                 ; 0       ;
+;      - WS2812B_controller:inst10|counterGRB_reg[2]~5     ; 1                 ; 0       ;
+;      - WS2812B_controller:inst10|idx_reg~3               ; 1                 ; 0       ;
+;      - WS2812B_controller:inst10|idx_reg~4               ; 1                 ; 0       ;
+;      - WS2812B_controller:inst10|idx_reg~5               ; 1                 ; 0       ;
+;      - WS2812B_controller:inst15|curr_reg[4]~0           ; 1                 ; 0       ;
+;      - WS2812B_controller:inst15|counterGRB_reg[0]~4     ; 1                 ; 0       ;
+;      - WS2812B_controller:inst15|counterGRB_reg[1]~5     ; 1                 ; 0       ;
+;      - WS2812B_controller:inst15|counterGRB_reg[2]~6     ; 1                 ; 0       ;
+;      - WS2812B_controller:inst15|idx_reg~2               ; 1                 ; 0       ;
+;      - WS2812B_controller:inst15|idx_reg~3               ; 1                 ; 0       ;
+;      - WS2812B_controller:inst15|idx_reg~4               ; 1                 ; 0       ;
+;      - WS2812B_controller:inst15|idx_reg~5               ; 1                 ; 0       ;
+;      - WS2812B_controller:inst15|idx_reg~6               ; 1                 ; 0       ;
+;      - WS2812B_controller:inst10|data_reg[0]~0           ; 1                 ; 0       ;
++----------------------------------------------------------+-------------------+---------+
 
 
-+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Control Signals                                                                                                                                                                          ;
-+-------------------------------------------------+---------------------+---------+-------------------------+--------+----------------------+------------------+---------------------------+
-; Name                                            ; Location            ; Fan-Out ; Usage                   ; Global ; Global Resource Used ; Global Line Name ; Enable Signal Source Name ;
-+-------------------------------------------------+---------------------+---------+-------------------------+--------+----------------------+------------------+---------------------------+
-; WS2812B_controller:inst|counter1_reg[2]~3       ; LABCELL_X35_Y2_N45  ; 6       ; Clock enable            ; no     ; --                   ; --               ; --                        ;
-; WS2812B_controller:inst|counter2_reg[4]~5       ; MLABCELL_X37_Y2_N6  ; 6       ; Clock enable            ; no     ; --                   ; --               ; --                        ;
-; WS2812B_controller:inst|counter_reset_reg[15]~0 ; LABCELL_X35_Y3_N54  ; 16      ; Sync. clear             ; no     ; --                   ; --               ; --                        ;
-; WS2812B_controller:inst|counter_reset_reg[15]~1 ; LABCELL_X32_Y2_N51  ; 16      ; Clock enable            ; no     ; --                   ; --               ; --                        ;
-; WS2812B_controller:inst|idx_reg[0]~1            ; MLABCELL_X37_Y2_N42 ; 5       ; Clock enable            ; no     ; --                   ; --               ; --                        ;
-; WS2812B_controller:inst|prev_reg[0]~0           ; LABCELL_X31_Y2_N15  ; 10      ; Clock enable            ; no     ; --                   ; --               ; --                        ;
-; clk_50                                          ; PIN_M9              ; 54      ; Clock                   ; yes    ; Global Clock         ; GCLK4            ; --                        ;
-; sw_rst                                          ; PIN_U13             ; 44      ; Sync. clear, Sync. load ; no     ; --                   ; --               ; --                        ;
-+-------------------------------------------------+---------------------+---------+-------------------------+--------+----------------------+------------------+---------------------------+
++---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Control Signals                                                                                                                                                                             ;
++---------------------------------------------------+----------------------+---------+-------------------------+--------+----------------------+------------------+---------------------------+
+; Name                                              ; Location             ; Fan-Out ; Usage                   ; Global ; Global Resource Used ; Global Line Name ; Enable Signal Source Name ;
++---------------------------------------------------+----------------------+---------+-------------------------+--------+----------------------+------------------+---------------------------+
+; WS2812B_controller:inst10|counter1_reg[3]~3       ; MLABCELL_X37_Y37_N54 ; 6       ; Clock enable            ; no     ; --                   ; --               ; --                        ;
+; WS2812B_controller:inst10|counter2_reg[3]~5       ; LABCELL_X36_Y39_N0   ; 6       ; Clock enable            ; no     ; --                   ; --               ; --                        ;
+; WS2812B_controller:inst10|counter_reset_reg[12]~0 ; LABCELL_X36_Y38_N27  ; 16      ; Sync. clear             ; no     ; --                   ; --               ; --                        ;
+; WS2812B_controller:inst10|counter_reset_reg[12]~1 ; LABCELL_X36_Y38_N0   ; 16      ; Clock enable            ; no     ; --                   ; --               ; --                        ;
+; WS2812B_controller:inst10|curr_reg[4]~0           ; MLABCELL_X34_Y37_N30 ; 10      ; Clock enable            ; no     ; --                   ; --               ; --                        ;
+; WS2812B_controller:inst10|idx_reg[3]~1            ; LABCELL_X35_Y37_N42  ; 5       ; Clock enable            ; no     ; --                   ; --               ; --                        ;
+; WS2812B_controller:inst15|counter1_reg[5]~1       ; LABCELL_X35_Y39_N6   ; 6       ; Clock enable            ; no     ; --                   ; --               ; --                        ;
+; WS2812B_controller:inst15|counter2_reg[1]~3       ; LABCELL_X36_Y39_N3   ; 6       ; Clock enable            ; no     ; --                   ; --               ; --                        ;
+; WS2812B_controller:inst15|curr_reg[4]~0           ; LABCELL_X36_Y38_N54  ; 10      ; Clock enable            ; no     ; --                   ; --               ; --                        ;
+; WS2812B_controller:inst15|idx_reg[0]~1            ; LABCELL_X36_Y40_N48  ; 6       ; Clock enable            ; no     ; --                   ; --               ; --                        ;
+; clk_50                                            ; PIN_M9               ; 89      ; Clock                   ; yes    ; Global Clock         ; GCLK4            ; --                        ;
+; sw_rst                                            ; PIN_U13              ; 83      ; Sync. clear, Sync. load ; no     ; --                   ; --               ; --                        ;
++---------------------------------------------------+----------------------+---------+-------------------------+--------+----------------------+------------------+---------------------------+
 
 
 +---------------------------------------------------------------------------------------------------+
@@ -1017,7 +1134,7 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +--------+----------+---------+----------------------+------------------+---------------------------+
 ; Name   ; Location ; Fan-Out ; Global Resource Used ; Global Line Name ; Enable Signal Source Name ;
 +--------+----------+---------+----------------------+------------------+---------------------------+
-; clk_50 ; PIN_M9   ; 54      ; Global Clock         ; GCLK4            ; --                        ;
+; clk_50 ; PIN_M9   ; 89      ; Global Clock         ; GCLK4            ; --                        ;
 +--------+----------+---------+----------------------+------------------+---------------------------+
 
 
@@ -1026,21 +1143,21 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +------------------------------+-------------------------+
 ; Routing Resource Type        ; Usage                   ;
 +------------------------------+-------------------------+
-; Block interconnects          ; 165 / 140,056 ( < 1 % ) ;
-; C12 interconnects            ; 0 / 6,048 ( 0 % )       ;
-; C2 interconnects             ; 26 / 54,648 ( < 1 % )   ;
-; C4 interconnects             ; 15 / 25,920 ( < 1 % )   ;
+; Block interconnects          ; 267 / 140,056 ( < 1 % ) ;
+; C12 interconnects            ; 4 / 6,048 ( < 1 % )     ;
+; C2 interconnects             ; 66 / 54,648 ( < 1 % )   ;
+; C4 interconnects             ; 28 / 25,920 ( < 1 % )   ;
 ; DQS bus muxes                ; 0 / 17 ( 0 % )          ;
 ; DQS-18 I/O buses             ; 0 / 17 ( 0 % )          ;
 ; DQS-9 I/O buses              ; 0 / 17 ( 0 % )          ;
-; Direct links                 ; 41 / 140,056 ( < 1 % )  ;
+; Direct links                 ; 58 / 140,056 ( < 1 % )  ;
 ; Global clocks                ; 1 / 16 ( 6 % )          ;
-; Local interconnects          ; 66 / 36,960 ( < 1 % )   ;
+; Local interconnects          ; 126 / 36,960 ( < 1 % )  ;
 ; Quadrant clocks              ; 0 / 88 ( 0 % )          ;
-; R14 interconnects            ; 1 / 5,984 ( < 1 % )     ;
-; R14/C12 interconnect drivers ; 1 / 9,504 ( < 1 % )     ;
-; R3 interconnects             ; 53 / 60,192 ( < 1 % )   ;
-; R6 interconnects             ; 62 / 127,072 ( < 1 % )  ;
+; R14 interconnects            ; 6 / 5,984 ( < 1 % )     ;
+; R14/C12 interconnect drivers ; 9 / 9,504 ( < 1 % )     ;
+; R3 interconnects             ; 117 / 60,192 ( < 1 % )  ;
+; R6 interconnects             ; 76 / 127,072 ( < 1 % )  ;
 ; Spine clocks                 ; 1 / 120 ( < 1 % )       ;
 ; Wire stub REs                ; 0 / 7,344 ( 0 % )       ;
 +------------------------------+-------------------------+
@@ -1101,11 +1218,33 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +--------------------+-----------+--------------+-----------+--------------+--------------+-----------+-----------+--------------+-----------+-----------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+
 ; Pin/Rules          ; IO_000001 ; IO_000002    ; IO_000003 ; IO_000004    ; IO_000005    ; IO_000006 ; IO_000007 ; IO_000008    ; IO_000009 ; IO_000010 ; IO_000011    ; IO_000012    ; IO_000013    ; IO_000014    ; IO_000015    ; IO_000018    ; IO_000019    ; IO_000020    ; IO_000021    ; IO_000022    ; IO_000023    ; IO_000024    ; IO_000026    ; IO_000027    ; IO_000045    ; IO_000046    ; IO_000047    ; IO_000034    ;
 +--------------------+-----------+--------------+-----------+--------------+--------------+-----------+-----------+--------------+-----------+-----------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+
-; Total Pass         ; 3         ; 0            ; 3         ; 0            ; 0            ; 3         ; 3         ; 0            ; 3         ; 3         ; 0            ; 1            ; 0            ; 0            ; 0            ; 0            ; 1            ; 0            ; 0            ; 0            ; 0            ; 1            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ;
+; Total Pass         ; 25        ; 0            ; 25        ; 0            ; 0            ; 25        ; 25        ; 0            ; 25        ; 25        ; 0            ; 23           ; 0            ; 0            ; 0            ; 0            ; 23           ; 0            ; 0            ; 0            ; 0            ; 23           ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ;
 ; Total Unchecked    ; 0         ; 0            ; 0         ; 0            ; 0            ; 0         ; 0         ; 0            ; 0         ; 0         ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ;
-; Total Inapplicable ; 0         ; 3            ; 0         ; 3            ; 3            ; 0         ; 0         ; 3            ; 0         ; 0         ; 3            ; 2            ; 3            ; 3            ; 3            ; 3            ; 2            ; 3            ; 3            ; 3            ; 3            ; 2            ; 3            ; 3            ; 3            ; 3            ; 3            ; 3            ;
+; Total Inapplicable ; 0         ; 25           ; 0         ; 25           ; 25           ; 0         ; 0         ; 25           ; 0         ; 0         ; 25           ; 2            ; 25           ; 25           ; 25           ; 25           ; 2            ; 25           ; 25           ; 25           ; 25           ; 2            ; 25           ; 25           ; 25           ; 25           ; 25           ; 25           ;
 ; Total Fail         ; 0         ; 0            ; 0         ; 0            ; 0            ; 0         ; 0         ; 0            ; 0         ; 0         ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ;
 ; led_strip_A        ; Pass      ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ;
+; led_strip_A1       ; Pass      ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ;
+; led_strip_A4       ; Pass      ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ;
+; led_strip_A2       ; Pass      ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ;
+; led_strip_A6       ; Pass      ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ;
+; led_strip_A3       ; Pass      ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ;
+; led_strip_A5       ; Pass      ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ;
+; led_strip_A7       ; Pass      ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ;
+; led_strip_A8       ; Pass      ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ;
+; led_strip_A9       ; Pass      ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ;
+; led_strip_A10      ; Pass      ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ;
+; led_strip_A11      ; Pass      ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ;
+; led_strip_A12      ; Pass      ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ;
+; led_strip_A13      ; Pass      ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ;
+; led_strip_A14      ; Pass      ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ;
+; led_strip_A15      ; Pass      ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ;
+; led_strip_A16      ; Pass      ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ;
+; led_strip_A17      ; Pass      ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ;
+; led_strip_A18      ; Pass      ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ;
+; led_strip_A19      ; Pass      ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ;
+; led_strip_A20      ; Pass      ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ;
+; led_strip_A21      ; Pass      ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ;
+; led_strip_A22      ; Pass      ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ;
 ; clk_50             ; Pass      ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ;
 ; sw_rst             ; Pass      ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ;
 +--------------------+-----------+--------------+-----------+--------------+--------------+-----------+-----------+--------------+-----------+-----------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+
@@ -1159,70 +1298,96 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +-----------------+----------------------+-------------------+
 ; Source Clock(s) ; Destination Clock(s) ; Delay Added in ns ;
 +-----------------+----------------------+-------------------+
-; clk_50          ; clk_50               ; 2.0               ;
+; clk_50          ; clk_50               ; 9.8               ;
 +-----------------+----------------------+-------------------+
 Note: For more information on problematic transfers, consider running the Fitter again with the Optimize hold timing option (Settings Menu) turned off.
 This will disable optimization of problematic paths and expose them for further analysis using the Timing Analyzer.
 
 
-+---------------------------------------------------------------------------------------------------------------+
-; Estimated Delay Added for Hold Timing Details                                                                 ;
-+-----------------------------------------------+-------------------------------------------+-------------------+
-; Source Register                               ; Destination Register                      ; Delay Added in ns ;
-+-----------------------------------------------+-------------------------------------------+-------------------+
-; WS2812B_controller:inst|counter2_reg[2]       ; WS2812B_controller:inst|counterGRB_reg[0] ; 0.262             ;
-; WS2812B_controller:inst|counter2_reg[3]       ; WS2812B_controller:inst|counterGRB_reg[0] ; 0.245             ;
-; WS2812B_controller:inst|counter2_reg[5]       ; WS2812B_controller:inst|counterGRB_reg[0] ; 0.208             ;
-; WS2812B_controller:inst|counterGRB_reg[4]     ; WS2812B_controller:inst|idx_reg[3]        ; 0.202             ;
-; WS2812B_controller:inst|rst_flag              ; WS2812B_controller:inst|eot               ; 0.197             ;
-; WS2812B_controller:inst|counterGRB_reg[1]     ; WS2812B_controller:inst|idx_reg[3]        ; 0.164             ;
-; WS2812B_controller:inst|counter2_reg[4]       ; WS2812B_controller:inst|counterGRB_reg[0] ; 0.162             ;
-; WS2812B_controller:inst|counter2_reg[0]       ; WS2812B_controller:inst|counterGRB_reg[0] ; 0.162             ;
-; WS2812B_controller:inst|idx_reg[4]            ; WS2812B_controller:inst|counterGRB_reg[0] ; 0.162             ;
-; WS2812B_controller:inst|idx_reg[3]            ; WS2812B_controller:inst|counterGRB_reg[0] ; 0.162             ;
-; WS2812B_controller:inst|data_reg[0]           ; WS2812B_controller:inst|counterGRB_reg[0] ; 0.162             ;
-; WS2812B_controller:inst|counter2_reg[1]       ; WS2812B_controller:inst|counterGRB_reg[0] ; 0.162             ;
-; WS2812B_controller:inst|counter1_reg[2]       ; WS2812B_controller:inst|counter2_reg[0]   ; 0.156             ;
-; WS2812B_controller:inst|counter1_reg[3]       ; WS2812B_controller:inst|counter2_reg[0]   ; 0.156             ;
-; WS2812B_controller:inst|counter1_reg[0]       ; WS2812B_controller:inst|counter2_reg[0]   ; 0.156             ;
-; WS2812B_controller:inst|counter1_reg[1]       ; WS2812B_controller:inst|counter2_reg[0]   ; 0.156             ;
-; WS2812B_controller:inst|counter1_reg[4]       ; WS2812B_controller:inst|counter2_reg[0]   ; 0.156             ;
-; WS2812B_controller:inst|counter1_reg[5]       ; WS2812B_controller:inst|counter2_reg[0]   ; 0.156             ;
-; WS2812B_controller:inst|idx_reg[1]            ; WS2812B_controller:inst|idx_reg[1]        ; 0.121             ;
-; WS2812B_controller:inst|idx_reg[0]            ; WS2812B_controller:inst|idx_reg[1]        ; 0.121             ;
-; WS2812B_controller:inst|counterGRB_reg[0]     ; WS2812B_controller:inst|idx_reg[3]        ; 0.091             ;
-; WS2812B_controller:inst|counterGRB_reg[2]     ; WS2812B_controller:inst|idx_reg[3]        ; 0.091             ;
-; WS2812B_controller:inst|counterGRB_reg[3]     ; WS2812B_controller:inst|idx_reg[3]        ; 0.091             ;
-; WS2812B_controller:inst|prev_data_reg[0]      ; WS2812B_controller:inst|counterGRB_reg[0] ; 0.076             ;
-; WS2812B_controller:inst|prev_reg[3]           ; WS2812B_controller:inst|counterGRB_reg[2] ; 0.052             ;
-; WS2812B_controller:inst|curr_reg[3]           ; WS2812B_controller:inst|counterGRB_reg[2] ; 0.052             ;
-; WS2812B_controller:inst|prev_reg[4]           ; WS2812B_controller:inst|counterGRB_reg[2] ; 0.052             ;
-; WS2812B_controller:inst|prev_reg[0]           ; WS2812B_controller:inst|counterGRB_reg[2] ; 0.052             ;
-; WS2812B_controller:inst|curr_reg[0]           ; WS2812B_controller:inst|counterGRB_reg[2] ; 0.052             ;
-; WS2812B_controller:inst|prev_reg[1]           ; WS2812B_controller:inst|counterGRB_reg[2] ; 0.052             ;
-; WS2812B_controller:inst|curr_reg[1]           ; WS2812B_controller:inst|counterGRB_reg[2] ; 0.052             ;
-; WS2812B_controller:inst|prev_reg[2]           ; WS2812B_controller:inst|counterGRB_reg[2] ; 0.052             ;
-; WS2812B_controller:inst|curr_reg[2]           ; WS2812B_controller:inst|counterGRB_reg[2] ; 0.052             ;
-; WS2812B_controller:inst|curr_reg[4]           ; WS2812B_controller:inst|counterGRB_reg[2] ; 0.052             ;
-; WS2812B_controller:inst|eot                   ; WS2812B_controller:inst|counterGRB_reg[2] ; 0.052             ;
-; WS2812B_controller:inst|counter_reset_reg[14] ; WS2812B_controller:inst|data_out          ; 0.035             ;
-; WS2812B_controller:inst|counter_reset_reg[13] ; WS2812B_controller:inst|data_out          ; 0.035             ;
-; WS2812B_controller:inst|counter_reset_reg[12] ; WS2812B_controller:inst|data_out          ; 0.035             ;
-; WS2812B_controller:inst|counter_reset_reg[15] ; WS2812B_controller:inst|data_out          ; 0.035             ;
-; WS2812B_controller:inst|counter_reset_reg[11] ; WS2812B_controller:inst|data_out          ; 0.035             ;
-; WS2812B_controller:inst|counter_reset_reg[10] ; WS2812B_controller:inst|data_out          ; 0.035             ;
-; WS2812B_controller:inst|counter_reset_reg[9]  ; WS2812B_controller:inst|data_out          ; 0.035             ;
-; WS2812B_controller:inst|counter_reset_reg[7]  ; WS2812B_controller:inst|data_out          ; 0.035             ;
-; WS2812B_controller:inst|counter_reset_reg[6]  ; WS2812B_controller:inst|data_out          ; 0.035             ;
-; WS2812B_controller:inst|counter_reset_reg[5]  ; WS2812B_controller:inst|data_out          ; 0.035             ;
-; WS2812B_controller:inst|counter_reset_reg[4]  ; WS2812B_controller:inst|data_out          ; 0.035             ;
-; WS2812B_controller:inst|counter_reset_reg[2]  ; WS2812B_controller:inst|data_out          ; 0.035             ;
-; WS2812B_controller:inst|counter_reset_reg[1]  ; WS2812B_controller:inst|data_out          ; 0.035             ;
-; WS2812B_controller:inst|counter_reset_reg[0]  ; WS2812B_controller:inst|data_out          ; 0.035             ;
-; WS2812B_controller:inst|counter_reset_reg[8]  ; WS2812B_controller:inst|data_out          ; 0.035             ;
-; WS2812B_controller:inst|counter_reset_reg[3]  ; WS2812B_controller:inst|data_out          ; 0.035             ;
-+-----------------------------------------------+-------------------------------------------+-------------------+
-Note: This table only shows the top 51 path(s) that have the largest delay added for hold.
++-------------------------------------------------------------------------------------------------------------------+
+; Estimated Delay Added for Hold Timing Details                                                                     ;
++-------------------------------------------------+---------------------------------------------+-------------------+
+; Source Register                                 ; Destination Register                        ; Delay Added in ns ;
++-------------------------------------------------+---------------------------------------------+-------------------+
+; WS2812B_controller:inst10|counter2_reg[3]       ; WS2812B_controller:inst10|counterGRB_reg[0] ; 0.360             ;
+; WS2812B_controller:inst10|idx_reg[5]            ; WS2812B_controller:inst10|eot               ; 0.333             ;
+; WS2812B_controller:inst15|counterGRB_reg[0]     ; WS2812B_controller:inst15|counterGRB_reg[1] ; 0.330             ;
+; WS2812B_controller:inst10|counter2_reg[5]       ; WS2812B_controller:inst10|counterGRB_reg[0] ; 0.326             ;
+; WS2812B_controller:inst15|counter2_reg[0]       ; WS2812B_controller:inst15|counter2_reg[1]   ; 0.284             ;
+; WS2812B_controller:inst10|idx_reg[3]            ; WS2812B_controller:inst10|counterGRB_reg[0] ; 0.267             ;
+; WS2812B_controller:inst10|idx_reg[4]            ; WS2812B_controller:inst10|counterGRB_reg[0] ; 0.265             ;
+; WS2812B_controller:inst10|counter2_reg[4]       ; WS2812B_controller:inst10|counterGRB_reg[0] ; 0.261             ;
+; WS2812B_controller:inst10|counter1_reg[2]       ; WS2812B_controller:inst10|counter1_reg[2]   ; 0.260             ;
+; WS2812B_controller:inst10|data_reg[0]           ; WS2812B_controller:inst15|counterGRB_reg[3] ; 0.260             ;
+; WS2812B_controller:inst10|prev_data_reg[0]      ; WS2812B_controller:inst15|counterGRB_reg[3] ; 0.260             ;
+; WS2812B_controller:inst15|counter2_reg[4]       ; WS2812B_controller:inst15|counterGRB_reg[3] ; 0.258             ;
+; WS2812B_controller:inst15|idx_reg[5]            ; WS2812B_controller:inst15|eot               ; 0.255             ;
+; WS2812B_controller:inst15|counterGRB_reg[3]     ; WS2812B_controller:inst15|data_out          ; 0.250             ;
+; WS2812B_controller:inst15|counter1_reg[2]       ; WS2812B_controller:inst15|counter1_reg[3]   ; 0.235             ;
+; WS2812B_controller:inst15|counter1_reg[3]       ; WS2812B_controller:inst15|counter1_reg[3]   ; 0.235             ;
+; WS2812B_controller:inst15|counter1_reg[4]       ; WS2812B_controller:inst15|counter1_reg[3]   ; 0.235             ;
+; WS2812B_controller:inst15|counter1_reg[5]       ; WS2812B_controller:inst15|counter1_reg[3]   ; 0.235             ;
+; WS2812B_controller:inst15|counter1_reg[0]       ; WS2812B_controller:inst15|counter1_reg[3]   ; 0.235             ;
+; WS2812B_controller:inst15|counter2_reg[3]       ; WS2812B_controller:inst15|counter1_reg[3]   ; 0.235             ;
+; WS2812B_controller:inst15|counter2_reg[5]       ; WS2812B_controller:inst15|counter1_reg[3]   ; 0.235             ;
+; WS2812B_controller:inst15|counter1_reg[1]       ; WS2812B_controller:inst15|counter1_reg[3]   ; 0.235             ;
+; WS2812B_controller:inst15|counter2_reg[1]       ; WS2812B_controller:inst15|counter1_reg[3]   ; 0.235             ;
+; WS2812B_controller:inst15|counter2_reg[2]       ; WS2812B_controller:inst15|counter1_reg[3]   ; 0.235             ;
+; WS2812B_controller:inst15|counterGRB_reg[4]     ; WS2812B_controller:inst15|counter1_reg[3]   ; 0.235             ;
+; WS2812B_controller:inst10|counter1_reg[0]       ; WS2812B_controller:inst10|counter2_reg[0]   ; 0.234             ;
+; WS2812B_controller:inst10|curr_reg[1]           ; WS2812B_controller:inst10|counterGRB_reg[2] ; 0.232             ;
+; WS2812B_controller:inst10|counter2_reg[2]       ; WS2812B_controller:inst10|counterGRB_reg[0] ; 0.232             ;
+; WS2812B_controller:inst10|counter2_reg[0]       ; WS2812B_controller:inst10|counterGRB_reg[0] ; 0.232             ;
+; WS2812B_controller:inst10|counterGRB_reg[4]     ; WS2812B_controller:inst10|counterGRB_reg[0] ; 0.232             ;
+; WS2812B_controller:inst10|counter2_reg[1]       ; WS2812B_controller:inst10|counterGRB_reg[0] ; 0.232             ;
+; WS2812B_controller:inst10|prev_reg[1]           ; WS2812B_controller:inst10|counterGRB_reg[2] ; 0.231             ;
+; WS2812B_controller:inst10|counter1_reg[1]       ; WS2812B_controller:inst10|counter1_reg[2]   ; 0.221             ;
+; WS2812B_controller:inst10|eot                   ; WS2812B_controller:inst10|counterGRB_reg[2] ; 0.219             ;
+; WS2812B_controller:inst15|counterGRB_reg[1]     ; WS2812B_controller:inst15|counterGRB_reg[4] ; 0.195             ;
+; WS2812B_controller:inst15|counterGRB_reg[2]     ; WS2812B_controller:inst15|counterGRB_reg[4] ; 0.195             ;
+; WS2812B_controller:inst10|counterGRB_reg[0]     ; WS2812B_controller:inst10|counterGRB_reg[1] ; 0.195             ;
+; WS2812B_controller:inst10|counter1_reg[3]       ; WS2812B_controller:inst10|counter2_reg[0]   ; 0.193             ;
+; WS2812B_controller:inst10|counter1_reg[4]       ; WS2812B_controller:inst10|counter2_reg[0]   ; 0.193             ;
+; WS2812B_controller:inst10|counter1_reg[5]       ; WS2812B_controller:inst10|counter2_reg[0]   ; 0.193             ;
+; WS2812B_controller:inst10|curr_reg[3]           ; WS2812B_controller:inst10|counterGRB_reg[2] ; 0.192             ;
+; WS2812B_controller:inst15|idx_reg[2]            ; WS2812B_controller:inst15|eot               ; 0.189             ;
+; WS2812B_controller:inst15|idx_reg[1]            ; WS2812B_controller:inst15|eot               ; 0.189             ;
+; WS2812B_controller:inst15|idx_reg[0]            ; WS2812B_controller:inst15|eot               ; 0.189             ;
+; WS2812B_controller:inst15|idx_reg[3]            ; WS2812B_controller:inst15|eot               ; 0.189             ;
+; WS2812B_controller:inst15|idx_reg[4]            ; WS2812B_controller:inst15|eot               ; 0.189             ;
+; WS2812B_controller:inst15|eot                   ; WS2812B_controller:inst15|idx_reg[5]        ; 0.176             ;
+; WS2812B_controller:inst10|idx_reg[2]            ; WS2812B_controller:inst10|idx_reg[5]        ; 0.174             ;
+; WS2812B_controller:inst10|idx_reg[1]            ; WS2812B_controller:inst10|idx_reg[5]        ; 0.174             ;
+; WS2812B_controller:inst10|idx_reg[0]            ; WS2812B_controller:inst10|idx_reg[5]        ; 0.174             ;
+; WS2812B_controller:inst10|prev_reg[0]           ; WS2812B_controller:inst10|counterGRB_reg[2] ; 0.165             ;
+; WS2812B_controller:inst10|counterGRB_reg[1]     ; WS2812B_controller:inst10|idx_reg[2]        ; 0.160             ;
+; WS2812B_controller:inst10|counterGRB_reg[2]     ; WS2812B_controller:inst10|idx_reg[2]        ; 0.159             ;
+; WS2812B_controller:inst10|prev_reg[3]           ; WS2812B_controller:inst10|counterGRB_reg[2] ; 0.157             ;
+; WS2812B_controller:inst10|curr_reg[4]           ; WS2812B_controller:inst10|counterGRB_reg[2] ; 0.150             ;
+; WS2812B_controller:inst10|prev_reg[4]           ; WS2812B_controller:inst10|counterGRB_reg[2] ; 0.145             ;
+; WS2812B_controller:inst10|rst_flag              ; WS2812B_controller:inst15|idx_reg[5]        ; 0.128             ;
+; WS2812B_controller:inst10|counterGRB_reg[3]     ; WS2812B_controller:inst10|idx_reg[2]        ; 0.113             ;
+; WS2812B_controller:inst10|curr_reg[0]           ; WS2812B_controller:inst10|counterGRB_reg[2] ; 0.095             ;
+; WS2812B_controller:inst10|curr_reg[2]           ; WS2812B_controller:inst10|counterGRB_reg[2] ; 0.095             ;
+; WS2812B_controller:inst10|prev_reg[2]           ; WS2812B_controller:inst10|counterGRB_reg[2] ; 0.095             ;
+; WS2812B_controller:inst10|counter_reset_reg[13] ; WS2812B_controller:inst10|data_out          ; 0.093             ;
+; WS2812B_controller:inst10|counter_reset_reg[11] ; WS2812B_controller:inst10|data_out          ; 0.081             ;
+; WS2812B_controller:inst10|counter_reset_reg[10] ; WS2812B_controller:inst10|data_out          ; 0.081             ;
+; WS2812B_controller:inst10|counter_reset_reg[9]  ; WS2812B_controller:inst10|data_out          ; 0.081             ;
+; WS2812B_controller:inst10|counter_reset_reg[8]  ; WS2812B_controller:inst10|data_out          ; 0.081             ;
+; WS2812B_controller:inst10|counter_reset_reg[7]  ; WS2812B_controller:inst10|data_out          ; 0.081             ;
+; WS2812B_controller:inst10|counter_reset_reg[6]  ; WS2812B_controller:inst10|data_out          ; 0.081             ;
+; WS2812B_controller:inst10|counter_reset_reg[15] ; WS2812B_controller:inst10|data_out          ; 0.060             ;
+; WS2812B_controller:inst10|counter_reset_reg[12] ; WS2812B_controller:inst10|data_out          ; 0.060             ;
+; WS2812B_controller:inst10|counter_reset_reg[2]  ; WS2812B_controller:inst10|data_out          ; 0.060             ;
+; WS2812B_controller:inst10|counter_reset_reg[1]  ; WS2812B_controller:inst10|data_out          ; 0.060             ;
+; WS2812B_controller:inst10|counter_reset_reg[14] ; WS2812B_controller:inst10|data_out          ; 0.060             ;
+; WS2812B_controller:inst10|counter_reset_reg[5]  ; WS2812B_controller:inst10|data_out          ; 0.038             ;
+; WS2812B_controller:inst10|counter_reset_reg[4]  ; WS2812B_controller:inst10|data_out          ; 0.038             ;
+; WS2812B_controller:inst10|counter_reset_reg[3]  ; WS2812B_controller:inst10|data_out          ; 0.038             ;
+; WS2812B_controller:inst10|counter_reset_reg[0]  ; WS2812B_controller:inst10|data_out          ; 0.038             ;
++-------------------------------------------------+---------------------------------------------+-------------------+
+Note: This table only shows the top 77 path(s) that have the largest delay added for hold.
 
 
 +-----------------+
@@ -1238,7 +1403,7 @@ Warning (292013): Feature LogicLock is only available with a valid subscription 
 Warning (15714): Some pins have incomplete I/O assignments. Refer to the I/O Assignment Warnings report for details
 Info (184020): Starting Fitter periphery placement operations
 Info (11191): Automatically promoted 1 clock (1 global)
-    Info (11162): clk_50~inputCLKENA0 with 54 fanout uses global clock CLKCTRL_G4
+    Info (11162): clk_50~inputCLKENA0 with 89 fanout uses global clock CLKCTRL_G4
 Info (184021): Fitter periphery placement operations ending: elapsed time is 00:00:00
 Info (176233): Starting register packing
 Critical Warning (332012): Synopsys Design Constraints File file not found: 'WS2812BCONTROLLER.sdc'. A Synopsys Design Constraints File is required by the Timing Analyzer to get proper timing constraints. Without it, the Compiler will not properly optimize the design.
@@ -1251,17 +1416,17 @@ Info (176235): Finished register packing
 Info (11798): Fitter preparation operations ending: elapsed time is 00:00:03
 Info (170189): Fitter placement preparation operations beginning
 Info (14951): The Fitter is using Advanced Physical Optimization.
-Info (170190): Fitter placement preparation operations ending: elapsed time is 00:00:16
+Info (170190): Fitter placement preparation operations ending: elapsed time is 00:00:11
 Info (170191): Fitter placement operations beginning
 Info (170137): Fitter placement was successful
 Info (170192): Fitter placement operations ending: elapsed time is 00:00:01
 Info (170193): Fitter routing operations beginning
 Info (170195): Router estimated average interconnect usage is 0% of the available device resources
-    Info (170196): Router estimated peak interconnect usage is 0% of the available device resources in the region that extends from location X33_Y0 to location X43_Y10
+    Info (170196): Router estimated peak interconnect usage is 1% of the available device resources in the region that extends from location X33_Y34 to location X43_Y45
 Info (170199): The Fitter performed an Auto Fit compilation.  Optimizations were skipped to reduce compilation time.
     Info (170201): Optimizations that may affect the design's routability were skipped
 Info (170194): Fitter routing operations ending: elapsed time is 00:00:01
-Info (11888): Total time spent on timing analysis during the Fitter is 0.33 seconds.
+Info (11888): Total time spent on timing analysis during the Fitter is 0.39 seconds.
 Info (334003): Started post-fitting delay annotation
 Info (334004): Delay annotation completed successfully
 Info (334003): Started post-fitting delay annotation
@@ -1269,10 +1434,10 @@ Info (334004): Delay annotation completed successfully
 Info (11801): Fitter post-fit operations ending: elapsed time is 00:00:02
 Info (144001): Generated suppressed messages file C:/Users/minec/Desktop/Work/GitHub Repos/PROJ300/Firmware/WS2812B Controller/output_files/WS2812BCONTROLLER.fit.smsg
 Info: Quartus Prime Fitter was successful. 0 errors, 4 warnings
-    Info: Peak virtual memory: 7581 megabytes
-    Info: Processing ended: Fri Apr 19 16:17:17 2024
-    Info: Elapsed time: 00:00:33
-    Info: Total CPU time (on all processors): 00:01:07
+    Info: Peak virtual memory: 7564 megabytes
+    Info: Processing ended: Fri Apr 19 23:25:17 2024
+    Info: Elapsed time: 00:00:37
+    Info: Total CPU time (on all processors): 00:01:19
 
 
 +----------------------------+

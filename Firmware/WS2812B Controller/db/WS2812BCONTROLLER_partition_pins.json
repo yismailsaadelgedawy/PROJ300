@@ -8,6 +8,94 @@
 					"strict" : false
 				},
 				{
+					"name" : "led_strip_A1",
+					"strict" : false
+				},
+				{
+					"name" : "led_strip_A4",
+					"strict" : false
+				},
+				{
+					"name" : "led_strip_A2",
+					"strict" : false
+				},
+				{
+					"name" : "led_strip_A6",
+					"strict" : false
+				},
+				{
+					"name" : "led_strip_A3",
+					"strict" : false
+				},
+				{
+					"name" : "led_strip_A5",
+					"strict" : false
+				},
+				{
+					"name" : "led_strip_A7",
+					"strict" : false
+				},
+				{
+					"name" : "led_strip_A8",
+					"strict" : false
+				},
+				{
+					"name" : "led_strip_A9",
+					"strict" : false
+				},
+				{
+					"name" : "led_strip_A10",
+					"strict" : false
+				},
+				{
+					"name" : "led_strip_A11",
+					"strict" : false
+				},
+				{
+					"name" : "led_strip_A12",
+					"strict" : false
+				},
+				{
+					"name" : "led_strip_A13",
+					"strict" : false
+				},
+				{
+					"name" : "led_strip_A14",
+					"strict" : false
+				},
+				{
+					"name" : "led_strip_A15",
+					"strict" : false
+				},
+				{
+					"name" : "led_strip_A16",
+					"strict" : false
+				},
+				{
+					"name" : "led_strip_A17",
+					"strict" : false
+				},
+				{
+					"name" : "led_strip_A18",
+					"strict" : false
+				},
+				{
+					"name" : "led_strip_A19",
+					"strict" : false
+				},
+				{
+					"name" : "led_strip_A20",
+					"strict" : false
+				},
+				{
+					"name" : "led_strip_A21",
+					"strict" : false
+				},
+				{
+					"name" : "led_strip_A22",
+					"strict" : false
+				},
+				{
 					"name" : "clk_50",
 					"strict" : false
 				},
