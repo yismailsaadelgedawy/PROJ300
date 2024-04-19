@@ -25,7 +25,7 @@ logic [23:0] OFF_reg = 24'h000000; // off
 // register timers
 logic [5:0] counter1_reg;
 logic [5:0] counter2_reg;
-logic [11:0] counter_reset_reg;
+logic [15:0] counter_reset_reg;
 
 // counter that counts from 24
 // each led needs 24 bits of data (GRB) - MSB FIRST
@@ -43,8 +43,12 @@ logic [5:0] idx_reg = (N-1);
 // value(0.8us) = 40
 parameter N_400ns = 20;
 parameter N_800ns = 40;
-parameter N_55us = 2750;
+parameter N_55us = 25000;
 logic rst_flag = 0;
+
+
+// eot flag once last LED received its data
+logic eot;
 
 
 // 50MHz clk
@@ -52,7 +56,8 @@ always_ff @(posedge clk_50) begin
     
     if(rst) begin
         
-        rst_flag <= 0;
+        rst_flag <= 1;
+        eot <= 0;
         data_reg <= 'd0;
         counter1_reg <= 'd0; counter2_reg <= 'd0; counter_reset_reg <='d0; counterGRB_reg <= 'd23; idx_reg <= (N-1);   // all the counters
         curr_reg <= 'd0; prev_reg <= 'd0;
@@ -72,6 +77,7 @@ always_ff @(posedge clk_50) begin
         if(data_reg != prev_data_reg) begin
 
             rst_flag <= 1;
+            eot <= 0;   // reset eot flag
 
             // clear counters
             counter1_reg <= 'd0; counter2_reg <= 'd0; counter_reset_reg <='d0; counterGRB_reg <= 'd23; idx_reg <= (N-1);   // all the counters
@@ -99,157 +105,169 @@ always_ff @(posedge clk_50) begin
 
         else begin
 
-            // both high and low codes: high voltage comes first
-            // also MSB SENT FIRST (in order of: GRB)           
+            // data should only be sent of eot is low!
 
-            // LED will be on a certain colour
-            if(data_reg[idx_reg]) begin
+            if(!eot) begin
 
-                // low code
-                if(!GRB_reg[counterGRB_reg]) begin
+                // both high and low codes: high voltage comes first
+                // also MSB SENT FIRST (in order of: GRB)           
 
-                    // T0H = 0.4us
-                    if(counter1_reg != N_400ns && counter2_reg == 'd0) begin
+                // LED will be on a certain colour
+                if(data_reg[idx_reg]) begin
 
-                        counter2_reg <= 'd0; // reset other timer
+                    // low code
+                    if(!GRB_reg[counterGRB_reg]) begin
 
-                        data_out <= 1;
-                        counter1_reg <= counter1_reg + 1;
+                        // T0H = 0.4us
+                        if(counter1_reg != N_400ns && counter2_reg == 'd0) begin
+
+                            counter2_reg <= 'd0; // reset other timer
+
+                            data_out <= 1;
+                            counter1_reg <= counter1_reg + 1;
+
+                        end
+
+                        // when first timer completed...
+                        // T0L = 0.8us
+                        else if(counter2_reg != N_800ns) begin    
+
+                            counter1_reg <= 'd0; // reset other timer                
+
+                            data_out <= 0;
+                            counter2_reg <= counter2_reg + 1;
+
+                        end
+
+                        // whens second timer completed...
+                        else begin
+
+                            counter2_reg <= 'd0; // reset other timer
+                            counterGRB_reg <= counterGRB_reg - 1;
+
+                        end
+
 
                     end
 
-                    // when first timer completed...
-                    // T0L = 0.8us
-                    else if(counter2_reg != N_800ns) begin    
-
-                        counter1_reg <= 'd0; // reset other timer                
-
-                        data_out <= 0;
-                        counter2_reg <= counter2_reg + 1;
-
-                    end
-
-                    // whens second timer completed...
+                    // high code
                     else begin
 
-                        counter2_reg <= 'd0; // reset other timer
-                        counterGRB_reg <= counterGRB_reg - 1;
+                        // T0H = 0.8us
+                        if(counter1_reg != N_800ns && counter2_reg == 'd0) begin
+
+                            counter2_reg <= 'd0; // reset other timer
+
+                            data_out <= 1;
+                            counter1_reg <= counter1_reg + 1;
+
+                        end
+
+                        // when first timer completed...
+                        // T0L = 0.4us
+                        else if(counter2_reg != N_400ns) begin    
+
+                            counter1_reg <= 'd0; // reset other timer                
+
+                            data_out <= 0;
+                            counter2_reg <= counter2_reg + 1;
+
+                        end
+
+                        // whens second timer completed...
+                        else begin
+
+                            counter2_reg <= 'd0; // reset other timer
+                            counterGRB_reg <= counterGRB_reg - 1;
+
+                        end
+
 
                     end
+
+
+
+                    curr_reg <= counterGRB_reg;
+                    prev_reg <= curr_reg;
+
+                    // underflow check
+                    // syntax note: == -sd1, despite being equivalent, won't work
+                    // since the datatype of the register is not signed...
+                    if(counterGRB_reg == 'd31 && (curr_reg != prev_reg)) begin
+
+                        counterGRB_reg <= 'd23;
+                        idx_reg <= idx_reg - 1;
+                        
+
+                    end
+
+                    // if(idx_reg == 'd2**6-1) idx_reg <= (N-1); // underflow check
+                    if(idx_reg == 'd2**6-1) eot <= 1; // underflow check
+
 
 
                 end
 
-                // high code
+                // LED will be off
                 else begin
 
-                    // T0H = 0.8us
-                    if(counter1_reg != N_800ns && counter2_reg == 'd0) begin
+                    // low code
+                    if(!OFF_reg[counterGRB_reg]) begin
 
-                        counter2_reg <= 'd0; // reset other timer
+                        // T0H = 0.4us
+                        if(counter1_reg != N_400ns && counter2_reg == 'd0) begin
 
-                        data_out <= 1;
-                        counter1_reg <= counter1_reg + 1;
+                            counter2_reg <= 'd0; // reset other timer
+
+                            data_out <= 1;
+                            counter1_reg <= counter1_reg + 1;
+
+                        end
+
+                        // when first timer completed...
+                        // T0L = 0.8us
+                        else if(counter2_reg != N_800ns) begin    
+
+                            counter1_reg <= 'd0; // reset other timer                
+
+                            data_out <= 0;
+                            counter2_reg <= counter2_reg + 1;
+
+                        end
+
+                        // whens second timer completed...
+                        else begin
+
+                            counter2_reg <= 'd0; // reset other timer
+                            counterGRB_reg <= counterGRB_reg - 1;
+
+                        end
+
 
                     end
 
-                    // when first timer completed...
-                    // T0L = 0.4us
-                    else if(counter2_reg != N_400ns) begin    
-
-                        counter1_reg <= 'd0; // reset other timer                
-
-                        data_out <= 0;
-                        counter2_reg <= counter2_reg + 1;
-
-                    end
-
-                    // whens second timer completed...
-                    else begin
-
-                        counter2_reg <= 'd0; // reset other timer
-                        counterGRB_reg <= counterGRB_reg - 1;
-
-                    end
 
 
-                end
-
-
-
-                curr_reg <= counterGRB_reg;
-                prev_reg <= curr_reg;
-
-                // underflow check
-                // syntax note: == -sd1, despite being equivalent, won't work
-                // since the datatype of the register is not signed...
-                if(counterGRB_reg == 'd31 && (curr_reg != prev_reg)) begin
-
-                    counterGRB_reg <= 'd23;
-                    idx_reg <= idx_reg - 1;
+                    curr_reg <= counterGRB_reg;
+                    prev_reg <= curr_reg;
                     
+                    // underflow check
+                    if(counterGRB_reg == 'd31 && (curr_reg != prev_reg)) begin
+
+                        counterGRB_reg <= 'd23;
+                        idx_reg <= idx_reg - 1;            
+
+                    end
+
+                    // if(idx_reg == 'd2**6-1) idx_reg <= (N-1); // underflow check
+                    if(idx_reg == 'd2**6-1) eot <= 1; // underflow check
 
                 end
-
-                if(idx_reg == 'd2**6-1) idx_reg <= (N-1); // underflow check
 
 
             end
 
-            // LED will be off
-            else begin
-
-                // low code
-                if(!OFF_reg[counterGRB_reg]) begin
-
-                    // T0H = 0.4us
-                    if(counter1_reg != N_400ns && counter2_reg == 'd0) begin
-
-                        counter2_reg <= 'd0; // reset other timer
-
-                        data_out <= 1;
-                        counter1_reg <= counter1_reg + 1;
-
-                    end
-
-                    // when first timer completed...
-                    // T0L = 0.8us
-                    else if(counter2_reg != N_800ns) begin    
-
-                        counter1_reg <= 'd0; // reset other timer                
-
-                        data_out <= 0;
-                        counter2_reg <= counter2_reg + 1;
-
-                    end
-
-                    // whens second timer completed...
-                    else begin
-
-                        counter2_reg <= 'd0; // reset other timer
-                        counterGRB_reg <= counterGRB_reg - 1;
-
-                    end
-
-
-                end
-
-
-
-                curr_reg <= counterGRB_reg;
-                prev_reg <= curr_reg;
-                
-                // underflow check
-                if(counterGRB_reg == 'd31 && (curr_reg != prev_reg)) begin
-
-                    counterGRB_reg <= 'd23;
-                    idx_reg <= idx_reg - 1;            
-
-                end
-
-                if(idx_reg == 'd2**6-1) idx_reg <= (N-1); // underflow check
-
-            end
+            else data_out <= 0; // when eot is reached, output 0
 
         end
 

@@ -1,5 +1,5 @@
 Analysis & Synthesis report for WS2812BCONTROLLER
-Wed Apr 10 16:17:36 2024
+Fri Apr 19 16:16:43 2024
 Quartus Prime Version 23.1std.0 Build 991 11/28/2023 SC Lite Edition
 
 
@@ -49,13 +49,13 @@ https://fpgasoftware.intel.com/eula.
 +----------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                     ;
 +---------------------------------+------------------------------------------------+
-; Analysis & Synthesis Status     ; Successful - Wed Apr 10 16:17:36 2024          ;
+; Analysis & Synthesis Status     ; Successful - Fri Apr 19 16:16:43 2024          ;
 ; Quartus Prime Version           ; 23.1std.0 Build 991 11/28/2023 SC Lite Edition ;
 ; Revision Name                   ; WS2812BCONTROLLER                              ;
 ; Top-level Entity Name           ; WS2812BCONTROLLER                              ;
 ; Family                          ; Cyclone V                                      ;
 ; Logic utilization (in ALMs)     ; N/A                                            ;
-; Total registers                 ; 49                                             ;
+; Total registers                 ; 54                                             ;
 ; Total pins                      ; 3                                              ;
 ; Total virtual pins              ; 0                                              ;
 ; Total block memory bits         ; 0                                              ;
@@ -161,28 +161,28 @@ https://fpgasoftware.intel.com/eula.
 +----------------------------+-------------+
 ; Processors                 ; Number      ;
 +----------------------------+-------------+
-; Number detected on machine ; 8           ;
-; Maximum allowed            ; 4           ;
+; Number detected on machine ; 16          ;
+; Maximum allowed            ; 16          ;
 ;                            ;             ;
 ; Average used               ; 1.00        ;
-; Maximum used               ; 4           ;
+; Maximum used               ; 16          ;
 ;                            ;             ;
 ; Usage by Processor         ; % Time Used ;
 ;     Processor 1            ; 100.0%      ;
-;     Processors 2-4         ;   0.0%      ;
+;     Processors 2-16        ;   0.0%      ;
 +----------------------------+-------------+
 
 
-+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Source Files Read                                                                                                                                                               ;
-+----------------------------------+-----------------+------------------------------------+--------------------------------------------------------------------------------------------------+---------+
-; File Name with User-Entered Path ; Used in Netlist ; File Type                          ; File Name with Absolute Path                                                                     ; Library ;
-+----------------------------------+-----------------+------------------------------------+--------------------------------------------------------------------------------------------------+---------+
-; sv files/WS2812B_controller.sv   ; yes             ; User SystemVerilog HDL File        ; C:/Users/minec/Desktop/github/PROJ300/Firmware/WS2812B Controller/sv files/WS2812B_controller.sv ;         ;
-; WS2812BCONTROLLER.bdf            ; yes             ; User Block Diagram/Schematic File  ; C:/Users/minec/Desktop/github/PROJ300/Firmware/WS2812B Controller/WS2812BCONTROLLER.bdf          ;         ;
-; lpm_constant.tdf                 ; yes             ; Megafunction                       ; c:/intelfpga_lite/23.1std/quartus/libraries/megafunctions/lpm_constant.tdf                       ;         ;
-; db/lpm_constant_cm4.tdf          ; yes             ; Auto-Generated Megafunction        ; C:/Users/minec/Desktop/github/PROJ300/Firmware/WS2812B Controller/db/lpm_constant_cm4.tdf        ;         ;
-+----------------------------------+-----------------+------------------------------------+--------------------------------------------------------------------------------------------------+---------+
++-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Source Files Read                                                                                                                                                                          ;
++----------------------------------+-----------------+------------------------------------+-------------------------------------------------------------------------------------------------------------+---------+
+; File Name with User-Entered Path ; Used in Netlist ; File Type                          ; File Name with Absolute Path                                                                                ; Library ;
++----------------------------------+-----------------+------------------------------------+-------------------------------------------------------------------------------------------------------------+---------+
+; sv files/WS2812B_controller.sv   ; yes             ; User SystemVerilog HDL File        ; C:/Users/minec/Desktop/Work/GitHub Repos/PROJ300/Firmware/WS2812B Controller/sv files/WS2812B_controller.sv ;         ;
+; WS2812BCONTROLLER.bdf            ; yes             ; User Block Diagram/Schematic File  ; C:/Users/minec/Desktop/Work/GitHub Repos/PROJ300/Firmware/WS2812B Controller/WS2812BCONTROLLER.bdf          ;         ;
+; lpm_constant.tdf                 ; yes             ; Megafunction                       ; c:/intelfpga_lite/23.1std/quartus/libraries/megafunctions/lpm_constant.tdf                                  ;         ;
+; db/lpm_constant_cm4.tdf          ; yes             ; Auto-Generated Megafunction        ; C:/Users/minec/Desktop/Work/GitHub Repos/PROJ300/Firmware/WS2812B Controller/db/lpm_constant_cm4.tdf        ;         ;
++----------------------------------+-----------------+------------------------------------+-------------------------------------------------------------------------------------------------------------+---------+
 
 
 +------------------------------------------------------------+
@@ -190,25 +190,25 @@ https://fpgasoftware.intel.com/eula.
 +---------------------------------------------+--------------+
 ; Resource                                    ; Usage        ;
 +---------------------------------------------+--------------+
-; Estimate of Logic utilization (ALMs needed) ; 62           ;
+; Estimate of Logic utilization (ALMs needed) ; 69           ;
 ;                                             ;              ;
-; Combinational ALUT usage for logic          ; 90           ;
+; Combinational ALUT usage for logic          ; 99           ;
 ;     -- 7 input functions                    ; 0            ;
-;     -- 6 input functions                    ; 32           ;
-;     -- 5 input functions                    ; 13           ;
+;     -- 6 input functions                    ; 38           ;
+;     -- 5 input functions                    ; 11           ;
 ;     -- 4 input functions                    ; 12           ;
-;     -- <=3 input functions                  ; 33           ;
+;     -- <=3 input functions                  ; 38           ;
 ;                                             ;              ;
-; Dedicated logic registers                   ; 49           ;
+; Dedicated logic registers                   ; 54           ;
 ;                                             ;              ;
 ; I/O pins                                    ; 3            ;
 ;                                             ;              ;
 ; Total DSP Blocks                            ; 0            ;
 ;                                             ;              ;
 ; Maximum fan-out node                        ; clk_50~input ;
-; Maximum fan-out                             ; 49           ;
-; Total fan-out                               ; 535          ;
-; Average fan-out                             ; 3.69         ;
+; Maximum fan-out                             ; 54           ;
+; Total fan-out                               ; 595          ;
+; Average fan-out                             ; 3.74         ;
 +---------------------------------------------+--------------+
 
 
@@ -217,8 +217,8 @@ https://fpgasoftware.intel.com/eula.
 +------------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+--------------------------------------------+--------------------+--------------+
 ; Compilation Hierarchy Node   ; Combinational ALUTs ; Dedicated Logic Registers ; Block Memory Bits ; DSP Blocks ; Pins ; Virtual Pins ; Full Hierarchy Name                        ; Entity Name        ; Library Name ;
 +------------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+--------------------------------------------+--------------------+--------------+
-; |WS2812BCONTROLLER           ; 90 (0)              ; 49 (0)                    ; 0                 ; 0          ; 3    ; 0            ; |WS2812BCONTROLLER                         ; WS2812BCONTROLLER  ; work         ;
-;    |WS2812B_controller:inst| ; 90 (90)             ; 49 (49)                   ; 0                 ; 0          ; 0    ; 0            ; |WS2812BCONTROLLER|WS2812B_controller:inst ; WS2812B_controller ; work         ;
+; |WS2812BCONTROLLER           ; 99 (0)              ; 54 (0)                    ; 0                 ; 0          ; 3    ; 0            ; |WS2812BCONTROLLER                         ; WS2812BCONTROLLER  ; work         ;
+;    |WS2812B_controller:inst| ; 99 (99)             ; 54 (54)                   ; 0                 ; 0          ; 0    ; 0            ; |WS2812BCONTROLLER|WS2812B_controller:inst ; WS2812B_controller ; work         ;
 +------------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+--------------------------------------------+--------------------+--------------+
 Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
 
@@ -297,12 +297,12 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +----------------------------------------------+-------+
 ; Statistic                                    ; Value ;
 +----------------------------------------------+-------+
-; Total registers                              ; 49    ;
-; Number of registers using Synchronous Clear  ; 26    ;
-; Number of registers using Synchronous Load   ; 0     ;
+; Total registers                              ; 54    ;
+; Number of registers using Synchronous Clear  ; 30    ;
+; Number of registers using Synchronous Load   ; 1     ;
 ; Number of registers using Asynchronous Clear ; 0     ;
 ; Number of registers using Asynchronous Load  ; 0     ;
-; Number of registers using Clock Enable       ; 34    ;
+; Number of registers using Clock Enable       ; 43    ;
 ; Number of registers using Preset             ; 0     ;
 +----------------------------------------------+-------+
 
@@ -312,31 +312,31 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +-------------------------------------------+---------+
 ; Inverted Register                         ; Fan out ;
 +-------------------------------------------+---------+
-; WS2812B_controller:inst|idx_reg[4]        ; 6       ;
-; WS2812B_controller:inst|idx_reg[3]        ; 7       ;
 ; WS2812B_controller:inst|counterGRB_reg[4] ; 7       ;
-; WS2812B_controller:inst|counterGRB_reg[0] ; 6       ;
-; WS2812B_controller:inst|counterGRB_reg[1] ; 5       ;
-; WS2812B_controller:inst|counterGRB_reg[2] ; 4       ;
-; WS2812B_controller:inst|idx_reg[2]        ; 6       ;
-; WS2812B_controller:inst|idx_reg[1]        ; 7       ;
-; WS2812B_controller:inst|idx_reg[0]        ; 8       ;
+; WS2812B_controller:inst|idx_reg[4]        ; 5       ;
+; WS2812B_controller:inst|idx_reg[3]        ; 6       ;
+; WS2812B_controller:inst|counterGRB_reg[0] ; 7       ;
+; WS2812B_controller:inst|counterGRB_reg[1] ; 6       ;
+; WS2812B_controller:inst|counterGRB_reg[2] ; 5       ;
+; WS2812B_controller:inst|idx_reg[2]        ; 5       ;
+; WS2812B_controller:inst|idx_reg[1]        ; 6       ;
+; WS2812B_controller:inst|idx_reg[0]        ; 7       ;
 ; Total number of inverted registers = 9    ;         ;
 +-------------------------------------------+---------+
 
 
-+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Multiplexer Restructuring Statistics (Restructuring Performed)                                                                                                                ;
-+--------------------+-----------+---------------+----------------------+------------------------+------------+-----------------------------------------------------------------+
-; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output                                      ;
-+--------------------+-----------+---------------+----------------------+------------------------+------------+-----------------------------------------------------------------+
-; 3:1                ; 10 bits   ; 20 LEs        ; 0 LEs                ; 20 LEs                 ; Yes        ; |WS2812BCONTROLLER|WS2812B_controller:inst|curr_reg[4]          ;
-; 5:1                ; 12 bits   ; 36 LEs        ; 0 LEs                ; 36 LEs                 ; Yes        ; |WS2812BCONTROLLER|WS2812B_controller:inst|counter_reset_reg[0] ;
-; 7:1                ; 6 bits    ; 24 LEs        ; 12 LEs               ; 12 LEs                 ; Yes        ; |WS2812BCONTROLLER|WS2812B_controller:inst|counter1_reg[4]      ;
-; 10:1               ; 6 bits    ; 36 LEs        ; 18 LEs               ; 18 LEs                 ; Yes        ; |WS2812BCONTROLLER|WS2812B_controller:inst|counter2_reg[5]      ;
-; 5:1                ; 5 bits    ; 15 LEs        ; 10 LEs               ; 5 LEs                  ; Yes        ; |WS2812BCONTROLLER|WS2812B_controller:inst|idx_reg[3]           ;
-; 7:1                ; 4 bits    ; 16 LEs        ; 8 LEs                ; 8 LEs                  ; Yes        ; |WS2812BCONTROLLER|WS2812B_controller:inst|counterGRB_reg[2]    ;
-+--------------------+-----------+---------------+----------------------+------------------------+------------+-----------------------------------------------------------------+
++--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Multiplexer Restructuring Statistics (Restructuring Performed)                                                                                                                 ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+------------------------------------------------------------------+
+; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output                                       ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+------------------------------------------------------------------+
+; 3:1                ; 10 bits   ; 20 LEs        ; 0 LEs                ; 20 LEs                 ; Yes        ; |WS2812BCONTROLLER|WS2812B_controller:inst|prev_reg[0]           ;
+; 5:1                ; 16 bits   ; 48 LEs        ; 0 LEs                ; 48 LEs                 ; Yes        ; |WS2812BCONTROLLER|WS2812B_controller:inst|counter_reset_reg[15] ;
+; 7:1                ; 6 bits    ; 24 LEs        ; 12 LEs               ; 12 LEs                 ; Yes        ; |WS2812BCONTROLLER|WS2812B_controller:inst|counter1_reg[2]       ;
+; 10:1               ; 6 bits    ; 36 LEs        ; 18 LEs               ; 18 LEs                 ; Yes        ; |WS2812BCONTROLLER|WS2812B_controller:inst|counter2_reg[4]       ;
+; 4:1                ; 5 bits    ; 10 LEs        ; 10 LEs               ; 0 LEs                  ; Yes        ; |WS2812BCONTROLLER|WS2812B_controller:inst|idx_reg[0]            ;
+; 7:1                ; 4 bits    ; 16 LEs        ; 8 LEs                ; 8 LEs                  ; Yes        ; |WS2812BCONTROLLER|WS2812B_controller:inst|counterGRB_reg[4]     ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+------------------------------------------------------------------+
 
 
 +----------------------------------------------------------------------+
@@ -368,25 +368,26 @@ Note: In order to hide this table in the UI and the text report file, please set
 +-----------------------+-----------------------------+
 ; Type                  ; Count                       ;
 +-----------------------+-----------------------------+
-; arriav_ff             ; 49                          ;
-;     ENA               ; 12                          ;
-;     ENA SCLR          ; 22                          ;
+; arriav_ff             ; 54                          ;
+;     ENA               ; 17                          ;
+;     ENA SCLR          ; 26                          ;
 ;     SCLR              ; 4                           ;
-;     plain             ; 11                          ;
-; arriav_lcell_comb     ; 90                          ;
-;     arith             ; 12                          ;
-;         1 data inputs ; 12                          ;
-;     normal            ; 78                          ;
+;     SLD               ; 1                           ;
+;     plain             ; 6                           ;
+; arriav_lcell_comb     ; 99                          ;
+;     arith             ; 16                          ;
+;         1 data inputs ; 16                          ;
+;     normal            ; 83                          ;
 ;         1 data inputs ; 5                           ;
-;         2 data inputs ; 8                           ;
+;         2 data inputs ; 9                           ;
 ;         3 data inputs ; 8                           ;
 ;         4 data inputs ; 12                          ;
-;         5 data inputs ; 13                          ;
-;         6 data inputs ; 32                          ;
+;         5 data inputs ; 11                          ;
+;         6 data inputs ; 38                          ;
 ; boundary_port         ; 3                           ;
 ;                       ;                             ;
 ; Max LUT depth         ; 4.00                        ;
-; Average LUT depth     ; 2.54                        ;
+; Average LUT depth     ; 2.56                        ;
 +-----------------------+-----------------------------+
 
 
@@ -405,55 +406,53 @@ Note: In order to hide this table in the UI and the text report file, please set
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 23.1std.0 Build 991 11/28/2023 SC Lite Edition
-    Info: Processing started: Wed Apr 10 16:17:27 2024
+    Info: Processing started: Fri Apr 19 16:16:37 2024
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off WS2812BCONTROLLER -c WS2812BCONTROLLER
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
-Info (20030): Parallel compilation is enabled and will use 4 of the 4 processors detected
+Info (20030): Parallel compilation is enabled and will use 16 of the 16 processors detected
 Info (12021): Found 1 design units, including 1 entities, in source file sv files/ws2812b_controller.sv
-    Info (12023): Found entity 1: WS2812B_controller File: C:/Users/minec/Desktop/github/PROJ300/Firmware/WS2812B Controller/sv files/WS2812B_controller.sv Line: 1
+    Info (12023): Found entity 1: WS2812B_controller File: C:/Users/minec/Desktop/Work/GitHub Repos/PROJ300/Firmware/WS2812B Controller/sv files/WS2812B_controller.sv Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file ws2812bcontroller.bdf
     Info (12023): Found entity 1: WS2812BCONTROLLER
-Warning (10222): Verilog HDL Parameter Declaration warning at WS2812B_controller.sv(44): Parameter Declaration in module "WS2812B_controller" behaves as a Local Parameter Declaration because the module has a Module Parameter Port List File: C:/Users/minec/Desktop/github/PROJ300/Firmware/WS2812B Controller/sv files/WS2812B_controller.sv Line: 44
-Warning (10222): Verilog HDL Parameter Declaration warning at WS2812B_controller.sv(45): Parameter Declaration in module "WS2812B_controller" behaves as a Local Parameter Declaration because the module has a Module Parameter Port List File: C:/Users/minec/Desktop/github/PROJ300/Firmware/WS2812B Controller/sv files/WS2812B_controller.sv Line: 45
-Warning (10222): Verilog HDL Parameter Declaration warning at WS2812B_controller.sv(46): Parameter Declaration in module "WS2812B_controller" behaves as a Local Parameter Declaration because the module has a Module Parameter Port List File: C:/Users/minec/Desktop/github/PROJ300/Firmware/WS2812B Controller/sv files/WS2812B_controller.sv Line: 46
+Warning (10222): Verilog HDL Parameter Declaration warning at WS2812B_controller.sv(44): Parameter Declaration in module "WS2812B_controller" behaves as a Local Parameter Declaration because the module has a Module Parameter Port List File: C:/Users/minec/Desktop/Work/GitHub Repos/PROJ300/Firmware/WS2812B Controller/sv files/WS2812B_controller.sv Line: 44
+Warning (10222): Verilog HDL Parameter Declaration warning at WS2812B_controller.sv(45): Parameter Declaration in module "WS2812B_controller" behaves as a Local Parameter Declaration because the module has a Module Parameter Port List File: C:/Users/minec/Desktop/Work/GitHub Repos/PROJ300/Firmware/WS2812B Controller/sv files/WS2812B_controller.sv Line: 45
+Warning (10222): Verilog HDL Parameter Declaration warning at WS2812B_controller.sv(46): Parameter Declaration in module "WS2812B_controller" behaves as a Local Parameter Declaration because the module has a Module Parameter Port List File: C:/Users/minec/Desktop/Work/GitHub Repos/PROJ300/Firmware/WS2812B Controller/sv files/WS2812B_controller.sv Line: 46
 Info (12127): Elaborating entity "WS2812BCONTROLLER" for the top level hierarchy
 Info (12128): Elaborating entity "WS2812B_controller" for hierarchy "WS2812B_controller:inst"
-Warning (10230): Verilog HDL assignment warning at WS2812B_controller.sv(37): truncated value with size 32 to match size of target (6) File: C:/Users/minec/Desktop/github/PROJ300/Firmware/WS2812B Controller/sv files/WS2812B_controller.sv Line: 37
-Warning (10230): Verilog HDL assignment warning at WS2812B_controller.sv(57): truncated value with size 32 to match size of target (6) File: C:/Users/minec/Desktop/github/PROJ300/Firmware/WS2812B Controller/sv files/WS2812B_controller.sv Line: 57
-Warning (10230): Verilog HDL assignment warning at WS2812B_controller.sv(77): truncated value with size 32 to match size of target (6) File: C:/Users/minec/Desktop/github/PROJ300/Firmware/WS2812B Controller/sv files/WS2812B_controller.sv Line: 77
-Warning (10230): Verilog HDL assignment warning at WS2812B_controller.sv(88): truncated value with size 32 to match size of target (12) File: C:/Users/minec/Desktop/github/PROJ300/Firmware/WS2812B Controller/sv files/WS2812B_controller.sv Line: 88
-Warning (10230): Verilog HDL assignment warning at WS2812B_controller.sv(117): truncated value with size 32 to match size of target (6) File: C:/Users/minec/Desktop/github/PROJ300/Firmware/WS2812B Controller/sv files/WS2812B_controller.sv Line: 117
-Warning (10230): Verilog HDL assignment warning at WS2812B_controller.sv(128): truncated value with size 32 to match size of target (6) File: C:/Users/minec/Desktop/github/PROJ300/Firmware/WS2812B Controller/sv files/WS2812B_controller.sv Line: 128
-Warning (10230): Verilog HDL assignment warning at WS2812B_controller.sv(136): truncated value with size 32 to match size of target (5) File: C:/Users/minec/Desktop/github/PROJ300/Firmware/WS2812B Controller/sv files/WS2812B_controller.sv Line: 136
-Warning (10230): Verilog HDL assignment warning at WS2812B_controller.sv(152): truncated value with size 32 to match size of target (6) File: C:/Users/minec/Desktop/github/PROJ300/Firmware/WS2812B Controller/sv files/WS2812B_controller.sv Line: 152
-Warning (10230): Verilog HDL assignment warning at WS2812B_controller.sv(163): truncated value with size 32 to match size of target (6) File: C:/Users/minec/Desktop/github/PROJ300/Firmware/WS2812B Controller/sv files/WS2812B_controller.sv Line: 163
-Warning (10230): Verilog HDL assignment warning at WS2812B_controller.sv(171): truncated value with size 32 to match size of target (5) File: C:/Users/minec/Desktop/github/PROJ300/Firmware/WS2812B Controller/sv files/WS2812B_controller.sv Line: 171
-Warning (10230): Verilog HDL assignment warning at WS2812B_controller.sv(187): truncated value with size 32 to match size of target (6) File: C:/Users/minec/Desktop/github/PROJ300/Firmware/WS2812B Controller/sv files/WS2812B_controller.sv Line: 187
-Warning (10230): Verilog HDL assignment warning at WS2812B_controller.sv(192): truncated value with size 32 to match size of target (6) File: C:/Users/minec/Desktop/github/PROJ300/Firmware/WS2812B Controller/sv files/WS2812B_controller.sv Line: 192
-Warning (10230): Verilog HDL assignment warning at WS2812B_controller.sv(209): truncated value with size 32 to match size of target (6) File: C:/Users/minec/Desktop/github/PROJ300/Firmware/WS2812B Controller/sv files/WS2812B_controller.sv Line: 209
-Warning (10230): Verilog HDL assignment warning at WS2812B_controller.sv(220): truncated value with size 32 to match size of target (6) File: C:/Users/minec/Desktop/github/PROJ300/Firmware/WS2812B Controller/sv files/WS2812B_controller.sv Line: 220
-Warning (10230): Verilog HDL assignment warning at WS2812B_controller.sv(228): truncated value with size 32 to match size of target (5) File: C:/Users/minec/Desktop/github/PROJ300/Firmware/WS2812B Controller/sv files/WS2812B_controller.sv Line: 228
-Warning (10230): Verilog HDL assignment warning at WS2812B_controller.sv(244): truncated value with size 32 to match size of target (6) File: C:/Users/minec/Desktop/github/PROJ300/Firmware/WS2812B Controller/sv files/WS2812B_controller.sv Line: 244
-Warning (10230): Verilog HDL assignment warning at WS2812B_controller.sv(248): truncated value with size 32 to match size of target (6) File: C:/Users/minec/Desktop/github/PROJ300/Firmware/WS2812B Controller/sv files/WS2812B_controller.sv Line: 248
+Warning (10230): Verilog HDL assignment warning at WS2812B_controller.sv(37): truncated value with size 32 to match size of target (6) File: C:/Users/minec/Desktop/Work/GitHub Repos/PROJ300/Firmware/WS2812B Controller/sv files/WS2812B_controller.sv Line: 37
+Warning (10230): Verilog HDL assignment warning at WS2812B_controller.sv(62): truncated value with size 32 to match size of target (6) File: C:/Users/minec/Desktop/Work/GitHub Repos/PROJ300/Firmware/WS2812B Controller/sv files/WS2812B_controller.sv Line: 62
+Warning (10230): Verilog HDL assignment warning at WS2812B_controller.sv(83): truncated value with size 32 to match size of target (6) File: C:/Users/minec/Desktop/Work/GitHub Repos/PROJ300/Firmware/WS2812B Controller/sv files/WS2812B_controller.sv Line: 83
+Warning (10230): Verilog HDL assignment warning at WS2812B_controller.sv(94): truncated value with size 32 to match size of target (16) File: C:/Users/minec/Desktop/Work/GitHub Repos/PROJ300/Firmware/WS2812B Controller/sv files/WS2812B_controller.sv Line: 94
+Warning (10230): Verilog HDL assignment warning at WS2812B_controller.sv(127): truncated value with size 32 to match size of target (6) File: C:/Users/minec/Desktop/Work/GitHub Repos/PROJ300/Firmware/WS2812B Controller/sv files/WS2812B_controller.sv Line: 127
+Warning (10230): Verilog HDL assignment warning at WS2812B_controller.sv(138): truncated value with size 32 to match size of target (6) File: C:/Users/minec/Desktop/Work/GitHub Repos/PROJ300/Firmware/WS2812B Controller/sv files/WS2812B_controller.sv Line: 138
+Warning (10230): Verilog HDL assignment warning at WS2812B_controller.sv(146): truncated value with size 32 to match size of target (5) File: C:/Users/minec/Desktop/Work/GitHub Repos/PROJ300/Firmware/WS2812B Controller/sv files/WS2812B_controller.sv Line: 146
+Warning (10230): Verilog HDL assignment warning at WS2812B_controller.sv(162): truncated value with size 32 to match size of target (6) File: C:/Users/minec/Desktop/Work/GitHub Repos/PROJ300/Firmware/WS2812B Controller/sv files/WS2812B_controller.sv Line: 162
+Warning (10230): Verilog HDL assignment warning at WS2812B_controller.sv(173): truncated value with size 32 to match size of target (6) File: C:/Users/minec/Desktop/Work/GitHub Repos/PROJ300/Firmware/WS2812B Controller/sv files/WS2812B_controller.sv Line: 173
+Warning (10230): Verilog HDL assignment warning at WS2812B_controller.sv(181): truncated value with size 32 to match size of target (5) File: C:/Users/minec/Desktop/Work/GitHub Repos/PROJ300/Firmware/WS2812B Controller/sv files/WS2812B_controller.sv Line: 181
+Warning (10230): Verilog HDL assignment warning at WS2812B_controller.sv(199): truncated value with size 32 to match size of target (6) File: C:/Users/minec/Desktop/Work/GitHub Repos/PROJ300/Firmware/WS2812B Controller/sv files/WS2812B_controller.sv Line: 199
+Warning (10230): Verilog HDL assignment warning at WS2812B_controller.sv(223): truncated value with size 32 to match size of target (6) File: C:/Users/minec/Desktop/Work/GitHub Repos/PROJ300/Firmware/WS2812B Controller/sv files/WS2812B_controller.sv Line: 223
+Warning (10230): Verilog HDL assignment warning at WS2812B_controller.sv(234): truncated value with size 32 to match size of target (6) File: C:/Users/minec/Desktop/Work/GitHub Repos/PROJ300/Firmware/WS2812B Controller/sv files/WS2812B_controller.sv Line: 234
+Warning (10230): Verilog HDL assignment warning at WS2812B_controller.sv(242): truncated value with size 32 to match size of target (5) File: C:/Users/minec/Desktop/Work/GitHub Repos/PROJ300/Firmware/WS2812B Controller/sv files/WS2812B_controller.sv Line: 242
+Warning (10230): Verilog HDL assignment warning at WS2812B_controller.sv(258): truncated value with size 32 to match size of target (6) File: C:/Users/minec/Desktop/Work/GitHub Repos/PROJ300/Firmware/WS2812B Controller/sv files/WS2812B_controller.sv Line: 258
 Info (12128): Elaborating entity "LPM_CONSTANT" for hierarchy "LPM_CONSTANT:inst2"
 Info (12130): Elaborated megafunction instantiation "LPM_CONSTANT:inst2"
 Info (12133): Instantiated megafunction "LPM_CONSTANT:inst2" with the following parameter:
     Info (12134): Parameter "LPM_CVALUE" = "255"
     Info (12134): Parameter "LPM_WIDTH" = "32"
 Info (12021): Found 1 design units, including 1 entities, in source file db/lpm_constant_cm4.tdf
-    Info (12023): Found entity 1: lpm_constant_cm4 File: C:/Users/minec/Desktop/github/PROJ300/Firmware/WS2812B Controller/db/lpm_constant_cm4.tdf Line: 23
+    Info (12023): Found entity 1: lpm_constant_cm4 File: C:/Users/minec/Desktop/Work/GitHub Repos/PROJ300/Firmware/WS2812B Controller/db/lpm_constant_cm4.tdf Line: 23
 Info (12128): Elaborating entity "lpm_constant_cm4" for hierarchy "LPM_CONSTANT:inst2|lpm_constant_cm4:ag" File: c:/intelfpga_lite/23.1std/quartus/libraries/megafunctions/lpm_constant.tdf Line: 46
 Info (286030): Timing-Driven Synthesis is running
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
-Info (21057): Implemented 99 device resources after synthesis - the final resource count might be different
+Info (21057): Implemented 108 device resources after synthesis - the final resource count might be different
     Info (21058): Implemented 2 input pins
     Info (21059): Implemented 1 output pins
-    Info (21061): Implemented 96 logic cells
-Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 21 warnings
-    Info: Peak virtual memory: 4831 megabytes
-    Info: Processing ended: Wed Apr 10 16:17:36 2024
-    Info: Elapsed time: 00:00:09
-    Info: Total CPU time (on all processors): 00:00:11
+    Info (21061): Implemented 105 logic cells
+Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 19 warnings
+    Info: Peak virtual memory: 4866 megabytes
+    Info: Processing ended: Fri Apr 19 16:16:43 2024
+    Info: Elapsed time: 00:00:06
+    Info: Total CPU time (on all processors): 00:00:07
 
 
