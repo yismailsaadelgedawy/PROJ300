@@ -47,14 +47,14 @@ initial begin
 
     rst = 0;
 
-    #55us;       // account for possible reset code initially
+    #500us;       // account for possible reset code initially
     #921600ns;   //24*(400ns+800ns)*32LEDs
 
     #1000us;    // test eot condition
 
     // data change
     data_in = 32'b11110010101010101010101010101010;
-    #55us;    
+    #500us;    
     #921600ns;
 
     #1000us;    // test eot condition

@@ -41,9 +41,9 @@ logic [5:0] idx_reg = (N-1);
 // two times we care about: 0.4us, 0.8us and 55us so,
 // value(0.4us) = 20
 // value(0.8us) = 40
-parameter N_400ns = 20;
+parameter N_300ns = 15;
 parameter N_800ns = 40;
-parameter N_55us = 25000;
+parameter N_500us = 25000;
 logic rst_flag = 0;
 
 
@@ -88,7 +88,7 @@ always_ff @(posedge clk_50) begin
         // reset code
         if(rst_flag) begin
 
-            if(counter_reset_reg != N_55us) begin
+            if(counter_reset_reg != N_500us) begin
 
                 data_out <= 0;
                 counter_reset_reg <= counter_reset_reg + 1;
@@ -119,7 +119,7 @@ always_ff @(posedge clk_50) begin
                     if(!GRB_reg[counterGRB_reg]) begin
 
                         // T0H = 0.4us
-                        if(counter1_reg != N_400ns && counter2_reg == 'd0) begin
+                        if(counter1_reg != N_300ns && counter2_reg == 'd0) begin
 
                             counter2_reg <= 'd0; // reset other timer
 
@@ -165,7 +165,7 @@ always_ff @(posedge clk_50) begin
 
                         // when first timer completed...
                         // T0L = 0.4us
-                        else if(counter2_reg != N_400ns) begin    
+                        else if(counter2_reg != N_300ns) begin    
 
                             counter1_reg <= 'd0; // reset other timer                
 
@@ -202,7 +202,7 @@ always_ff @(posedge clk_50) begin
                     end
 
                     // if(idx_reg == 'd2**6-1) idx_reg <= (N-1); // underflow check
-                    if(idx_reg == 'd2**6-1) eot <= 1; // underflow check
+                    if(idx_reg == 'd2**6-1) begin eot <= 1; data_out <= 0; end // underflow check
 
 
 
@@ -215,7 +215,7 @@ always_ff @(posedge clk_50) begin
                     if(!OFF_reg[counterGRB_reg]) begin
 
                         // T0H = 0.4us
-                        if(counter1_reg != N_400ns && counter2_reg == 'd0) begin
+                        if(counter1_reg != N_300ns && counter2_reg == 'd0) begin
 
                             counter2_reg <= 'd0; // reset other timer
 
@@ -260,7 +260,7 @@ always_ff @(posedge clk_50) begin
                     end
 
                     // if(idx_reg == 'd2**6-1) idx_reg <= (N-1); // underflow check
-                    if(idx_reg == 'd2**6-1) eot <= 1; // underflow check
+                    if(idx_reg == 'd2**6-1) begin eot <= 1; data_out <= 0; end // underflow check
 
                 end
 

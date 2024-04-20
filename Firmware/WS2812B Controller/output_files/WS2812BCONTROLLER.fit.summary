@@ -1,11 +1,11 @@
-Fitter Status : Successful - Fri Apr 19 23:25:17 2024
+Fitter Status : Successful - Sat Apr 20 11:43:49 2024
 Quartus Prime Version : 23.1std.0 Build 991 11/28/2023 SC Lite Edition
 Revision Name : WS2812BCONTROLLER
 Top-level Entity Name : WS2812BCONTROLLER
 Family : Cyclone V
 Device : 5CEBA4F23C7
 Timing Models : Final
-Logic utilization (in ALMs) : 105 / 18,480 ( < 1 % )
+Logic utilization (in ALMs) : 104 / 18,480 ( < 1 % )
 Total registers : 89
 Total pins : 25 / 224 ( 11 % )
 Total virtual pins : 0

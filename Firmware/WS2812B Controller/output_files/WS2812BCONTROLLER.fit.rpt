@@ -1,5 +1,5 @@
 Fitter report for WS2812BCONTROLLER
-Fri Apr 19 23:25:17 2024
+Sat Apr 20 11:43:49 2024
 Quartus Prime Version 23.1std.0 Build 991 11/28/2023 SC Lite Edition
 
 
@@ -63,14 +63,14 @@ https://fpgasoftware.intel.com/eula.
 +----------------------------------------------------------------------------------+
 ; Fitter Summary                                                                   ;
 +---------------------------------+------------------------------------------------+
-; Fitter Status                   ; Successful - Fri Apr 19 23:25:17 2024          ;
+; Fitter Status                   ; Successful - Sat Apr 20 11:43:49 2024          ;
 ; Quartus Prime Version           ; 23.1std.0 Build 991 11/28/2023 SC Lite Edition ;
 ; Revision Name                   ; WS2812BCONTROLLER                              ;
 ; Top-level Entity Name           ; WS2812BCONTROLLER                              ;
 ; Family                          ; Cyclone V                                      ;
 ; Device                          ; 5CEBA4F23C7                                    ;
 ; Timing Models                   ; Final                                          ;
-; Logic utilization (in ALMs)     ; 105 / 18,480 ( < 1 % )                         ;
+; Logic utilization (in ALMs)     ; 104 / 18,480 ( < 1 % )                         ;
 ; Total registers                 ; 89                                             ;
 ; Total pins                      ; 25 / 224 ( 11 % )                              ;
 ; Total virtual pins              ; 0                                              ;
@@ -171,8 +171,7 @@ https://fpgasoftware.intel.com/eula.
 ;     Processor 12           ;   0.2%      ;
 ;     Processor 13           ;   0.2%      ;
 ;     Processor 14           ;   0.2%      ;
-;     Processor 15           ;   0.2%      ;
-;     Processor 16           ;   0.2%      ;
+;     Processors 15-16       ;   0.2%      ;
 +----------------------------+-------------+
 
 
@@ -191,8 +190,8 @@ https://fpgasoftware.intel.com/eula.
 ; Type                ; Total [A + B]      ; From Design Partitions [A] ; From Rapid Recompile [B] ;
 +---------------------+--------------------+----------------------------+--------------------------+
 ; Placement (by node) ;                    ;                            ;                          ;
-;     -- Requested    ; 0.00 % ( 0 / 307 ) ; 0.00 % ( 0 / 307 )         ; 0.00 % ( 0 / 307 )       ;
-;     -- Achieved     ; 0.00 % ( 0 / 307 ) ; 0.00 % ( 0 / 307 )         ; 0.00 % ( 0 / 307 )       ;
+;     -- Requested    ; 0.00 % ( 0 / 306 ) ; 0.00 % ( 0 / 306 )         ; 0.00 % ( 0 / 306 )       ;
+;     -- Achieved     ; 0.00 % ( 0 / 306 ) ; 0.00 % ( 0 / 306 )         ; 0.00 % ( 0 / 306 )       ;
 ;                     ;                    ;                            ;                          ;
 ; Routing (by net)    ;                    ;                            ;                          ;
 ;     -- Requested    ; 0.00 % ( 0 / 0 )   ; 0.00 % ( 0 / 0 )           ; 0.00 % ( 0 / 0 )         ;
@@ -215,7 +214,7 @@ https://fpgasoftware.intel.com/eula.
 +--------------------------------+-----------------------+-------------------------+-------------------+---------------------+-------+
 ; Partition Name                 ; Preservation Achieved ; Preservation Level Used ; Netlist Type Used ; Preservation Method ; Notes ;
 +--------------------------------+-----------------------+-------------------------+-------------------+---------------------+-------+
-; Top                            ; 0.00 % ( 0 / 307 )    ; N/A                     ; Source File       ; N/A                 ;       ;
+; Top                            ; 0.00 % ( 0 / 306 )    ; N/A                     ; Source File       ; N/A                 ;       ;
 ; hard_block:auto_generated_inst ; 0.00 % ( 0 / 0 )      ; N/A                     ; Source File       ; N/A                 ;       ;
 +--------------------------------+-----------------------+-------------------------+-------------------+---------------------+-------+
 
@@ -231,14 +230,14 @@ The pin-out file can be found in C:/Users/minec/Desktop/Work/GitHub Repos/PROJ30
 +-------------------------------------------------------------+--------------------+-------+
 ; Resource                                                    ; Usage              ; %     ;
 +-------------------------------------------------------------+--------------------+-------+
-; Logic utilization (ALMs needed / total ALMs on device)      ; 105 / 18,480       ; < 1 % ;
-; ALMs needed [=A-B+C]                                        ; 105                ;       ;
-;     [A] ALMs used in final placement [=a+b+c+d]             ; 111 / 18,480       ; < 1 % ;
+; Logic utilization (ALMs needed / total ALMs on device)      ; 104 / 18,480       ; < 1 % ;
+; ALMs needed [=A-B+C]                                        ; 104                ;       ;
+;     [A] ALMs used in final placement [=a+b+c+d]             ; 109 / 18,480       ; < 1 % ;
 ;         [a] ALMs used for LUT logic and registers           ; 40                 ;       ;
-;         [b] ALMs used for LUT logic                         ; 66                 ;       ;
+;         [b] ALMs used for LUT logic                         ; 64                 ;       ;
 ;         [c] ALMs used for registers                         ; 5                  ;       ;
 ;         [d] ALMs used for memory (up to half of total ALMs) ; 0                  ;       ;
-;     [B] Estimate of ALMs recoverable by dense packing       ; 6 / 18,480         ; < 1 % ;
+;     [B] Estimate of ALMs recoverable by dense packing       ; 5 / 18,480         ; < 1 % ;
 ;     [C] Estimate of ALMs unavailable [=a+b+c+d]             ; 0 / 18,480         ; 0 %   ;
 ;         [a] Due to location constrained logic               ; 0                  ;       ;
 ;         [b] Due to LAB-wide signal conflicts                ; 0                  ;       ;
@@ -247,16 +246,16 @@ The pin-out file can be found in C:/Users/minec/Desktop/Work/GitHub Repos/PROJ30
 ;                                                             ;                    ;       ;
 ; Difficulty packing design                                   ; Low                ;       ;
 ;                                                             ;                    ;       ;
-; Total LABs:  partially or completely used                   ; 15 / 1,848         ; < 1 % ;
-;     -- Logic LABs                                           ; 15                 ;       ;
+; Total LABs:  partially or completely used                   ; 14 / 1,848         ; < 1 % ;
+;     -- Logic LABs                                           ; 14                 ;       ;
 ;     -- Memory LABs (up to half of total LABs)               ; 0                  ;       ;
 ;                                                             ;                    ;       ;
-; Combinational ALUT usage for logic                          ; 167                ;       ;
+; Combinational ALUT usage for logic                          ; 166                ;       ;
 ;     -- 7 input functions                                    ; 0                  ;       ;
-;     -- 6 input functions                                    ; 68                 ;       ;
-;     -- 5 input functions                                    ; 27                 ;       ;
-;     -- 4 input functions                                    ; 17                 ;       ;
-;     -- <=3 input functions                                  ; 55                 ;       ;
+;     -- 6 input functions                                    ; 66                 ;       ;
+;     -- 5 input functions                                    ; 30                 ;       ;
+;     -- 4 input functions                                    ; 16                 ;       ;
+;     -- <=3 input functions                                  ; 54                 ;       ;
 ; Combinational ALUT usage for route-throughs                 ; 0                  ;       ;
 ;                                                             ;                    ;       ;
 ; Dedicated logic registers                                   ; 89                 ;       ;
@@ -292,11 +291,11 @@ The pin-out file can be found in C:/Users/minec/Desktop/Work/GitHub Repos/PROJ30
 ; Oscillator blocks                                           ; 0 / 1              ; 0 %   ;
 ; Impedance control blocks                                    ; 0 / 3              ; 0 %   ;
 ; Average interconnect usage (total/H/V)                      ; 0.1% / 0.1% / 0.1% ;       ;
-; Peak interconnect usage (total/H/V)                         ; 1.9% / 1.9% / 1.6% ;       ;
+; Peak interconnect usage (total/H/V)                         ; 1.7% / 1.8% / 1.6% ;       ;
 ; Maximum fan-out                                             ; 89                 ;       ;
 ; Highest non-global fan-out                                  ; 83                 ;       ;
-; Total fan-out                                               ; 1065               ;       ;
-; Average fan-out                                             ; 3.47               ;       ;
+; Total fan-out                                               ; 1064               ;       ;
+; Average fan-out                                             ; 3.48               ;       ;
 +-------------------------------------------------------------+--------------------+-------+
 
 
@@ -305,14 +304,14 @@ The pin-out file can be found in C:/Users/minec/Desktop/Work/GitHub Repos/PROJ30
 +-------------------------------------------------------------+-----------------------+--------------------------------+
 ; Statistic                                                   ; Top                   ; hard_block:auto_generated_inst ;
 +-------------------------------------------------------------+-----------------------+--------------------------------+
-; Logic utilization (ALMs needed / total ALMs on device)      ; 105 / 18480 ( < 1 % ) ; 0 / 18480 ( 0 % )              ;
-; ALMs needed [=A-B+C]                                        ; 105                   ; 0                              ;
-;     [A] ALMs used in final placement [=a+b+c+d]             ; 111 / 18480 ( < 1 % ) ; 0 / 18480 ( 0 % )              ;
+; Logic utilization (ALMs needed / total ALMs on device)      ; 104 / 18480 ( < 1 % ) ; 0 / 18480 ( 0 % )              ;
+; ALMs needed [=A-B+C]                                        ; 104                   ; 0                              ;
+;     [A] ALMs used in final placement [=a+b+c+d]             ; 109 / 18480 ( < 1 % ) ; 0 / 18480 ( 0 % )              ;
 ;         [a] ALMs used for LUT logic and registers           ; 40                    ; 0                              ;
-;         [b] ALMs used for LUT logic                         ; 66                    ; 0                              ;
+;         [b] ALMs used for LUT logic                         ; 64                    ; 0                              ;
 ;         [c] ALMs used for registers                         ; 5                     ; 0                              ;
 ;         [d] ALMs used for memory (up to half of total ALMs) ; 0                     ; 0                              ;
-;     [B] Estimate of ALMs recoverable by dense packing       ; 6 / 18480 ( < 1 % )   ; 0 / 18480 ( 0 % )              ;
+;     [B] Estimate of ALMs recoverable by dense packing       ; 5 / 18480 ( < 1 % )   ; 0 / 18480 ( 0 % )              ;
 ;     [C] Estimate of ALMs unavailable [=a+b+c+d]             ; 0 / 18480 ( 0 % )     ; 0 / 18480 ( 0 % )              ;
 ;         [a] Due to location constrained logic               ; 0                     ; 0                              ;
 ;         [b] Due to LAB-wide signal conflicts                ; 0                     ; 0                              ;
@@ -321,16 +320,16 @@ The pin-out file can be found in C:/Users/minec/Desktop/Work/GitHub Repos/PROJ30
 ;                                                             ;                       ;                                ;
 ; Difficulty packing design                                   ; Low                   ; Low                            ;
 ;                                                             ;                       ;                                ;
-; Total LABs:  partially or completely used                   ; 15 / 1848 ( < 1 % )   ; 0 / 1848 ( 0 % )               ;
-;     -- Logic LABs                                           ; 15                    ; 0                              ;
+; Total LABs:  partially or completely used                   ; 14 / 1848 ( < 1 % )   ; 0 / 1848 ( 0 % )               ;
+;     -- Logic LABs                                           ; 14                    ; 0                              ;
 ;     -- Memory LABs (up to half of total LABs)               ; 0                     ; 0                              ;
 ;                                                             ;                       ;                                ;
-; Combinational ALUT usage for logic                          ; 167                   ; 0                              ;
+; Combinational ALUT usage for logic                          ; 166                   ; 0                              ;
 ;     -- 7 input functions                                    ; 0                     ; 0                              ;
-;     -- 6 input functions                                    ; 68                    ; 0                              ;
-;     -- 5 input functions                                    ; 27                    ; 0                              ;
-;     -- 4 input functions                                    ; 17                    ; 0                              ;
-;     -- <=3 input functions                                  ; 55                    ; 0                              ;
+;     -- 6 input functions                                    ; 66                    ; 0                              ;
+;     -- 5 input functions                                    ; 30                    ; 0                              ;
+;     -- 4 input functions                                    ; 16                    ; 0                              ;
+;     -- <=3 input functions                                  ; 54                    ; 0                              ;
 ; Combinational ALUT usage for route-throughs                 ; 0                     ; 0                              ;
 ; Memory ALUT usage                                           ; 0                     ; 0                              ;
 ;     -- 64-address deep                                      ; 0                     ; 0                              ;
@@ -359,8 +358,8 @@ The pin-out file can be found in C:/Users/minec/Desktop/Work/GitHub Repos/PROJ30
 ;     -- Registered Output Connections                        ; 0                     ; 0                              ;
 ;                                                             ;                       ;                                ;
 ; Internal Connections                                        ;                       ;                                ;
-;     -- Total Connections                                    ; 1065                  ; 0                              ;
-;     -- Registered Connections                               ; 406                   ; 0                              ;
+;     -- Total Connections                                    ; 1064                  ; 0                              ;
+;     -- Registered Connections                               ; 421                   ; 0                              ;
 ;                                                             ;                       ;                                ;
 ; External Connections                                        ;                       ;                                ;
 ;     -- Top                                                  ; 0                     ; 0                              ;
@@ -975,10 +974,10 @@ Note: Pin directions (input, output or bidir) are based on device operating in u
 +--------------------------------+----------------------+----------------------------------+---------------------------------------------------+----------------------------------+----------------------+---------------------+---------------------------+---------------+-------------------+-------+------------+------+--------------+----------------------------------------------+--------------------+--------------+
 ; Compilation Hierarchy Node     ; ALMs needed [=A-B+C] ; [A] ALMs used in final placement ; [B] Estimate of ALMs recoverable by dense packing ; [C] Estimate of ALMs unavailable ; ALMs used for memory ; Combinational ALUTs ; Dedicated Logic Registers ; I/O Registers ; Block Memory Bits ; M10Ks ; DSP Blocks ; Pins ; Virtual Pins ; Full Hierarchy Name                          ; Entity Name        ; Library Name ;
 +--------------------------------+----------------------+----------------------------------+---------------------------------------------------+----------------------------------+----------------------+---------------------+---------------------------+---------------+-------------------+-------+------------+------+--------------+----------------------------------------------+--------------------+--------------+
-; |WS2812BCONTROLLER             ; 104.5 (0.5)          ; 110.5 (0.5)                      ; 6.0 (0.0)                                         ; 0.0 (0.0)                        ; 0.0 (0.0)            ; 167 (1)             ; 89 (0)                    ; 0 (0)         ; 0                 ; 0     ; 0          ; 25   ; 0            ; |WS2812BCONTROLLER                           ; WS2812BCONTROLLER  ; work         ;
-;    |WS2812B_controller:inst|   ; 2.3 (2.3)            ; 2.8 (2.8)                        ; 0.5 (0.5)                                         ; 0.0 (0.0)                        ; 0.0 (0.0)            ; 4 (4)               ; 0 (0)                     ; 0 (0)         ; 0                 ; 0     ; 0          ; 0    ; 0            ; |WS2812BCONTROLLER|WS2812B_controller:inst   ; WS2812B_controller ; work         ;
-;    |WS2812B_controller:inst10| ; 58.3 (58.3)          ; 60.3 (60.3)                      ; 2.0 (2.0)                                         ; 0.0 (0.0)                        ; 0.0 (0.0)            ; 94 (94)             ; 54 (54)                   ; 0 (0)         ; 0                 ; 0     ; 0          ; 0    ; 0            ; |WS2812BCONTROLLER|WS2812B_controller:inst10 ; WS2812B_controller ; work         ;
-;    |WS2812B_controller:inst15| ; 43.3 (43.3)          ; 46.8 (46.8)                      ; 3.5 (3.5)                                         ; 0.0 (0.0)                        ; 0.0 (0.0)            ; 68 (68)             ; 35 (35)                   ; 0 (0)         ; 0                 ; 0     ; 0          ; 0    ; 0            ; |WS2812BCONTROLLER|WS2812B_controller:inst15 ; WS2812B_controller ; work         ;
+; |WS2812BCONTROLLER             ; 104.0 (0.5)          ; 108.0 (0.5)                      ; 4.0 (0.0)                                         ; 0.0 (0.0)                        ; 0.0 (0.0)            ; 166 (1)             ; 89 (0)                    ; 0 (0)         ; 0                 ; 0     ; 0          ; 25   ; 0            ; |WS2812BCONTROLLER                           ; WS2812BCONTROLLER  ; work         ;
+;    |WS2812B_controller:inst|   ; 3.0 (3.0)            ; 3.0 (3.0)                        ; 0.0 (0.0)                                         ; 0.0 (0.0)                        ; 0.0 (0.0)            ; 4 (4)               ; 0 (0)                     ; 0 (0)         ; 0                 ; 0     ; 0          ; 0    ; 0            ; |WS2812BCONTROLLER|WS2812B_controller:inst   ; WS2812B_controller ; work         ;
+;    |WS2812B_controller:inst10| ; 57.8 (57.8)          ; 60.7 (60.7)                      ; 2.9 (2.9)                                         ; 0.0 (0.0)                        ; 0.0 (0.0)            ; 93 (93)             ; 54 (54)                   ; 0 (0)         ; 0                 ; 0     ; 0          ; 0    ; 0            ; |WS2812BCONTROLLER|WS2812B_controller:inst10 ; WS2812B_controller ; work         ;
+;    |WS2812B_controller:inst15| ; 42.7 (42.7)          ; 43.7 (43.7)                      ; 1.1 (1.1)                                         ; 0.0 (0.0)                        ; 0.0 (0.0)            ; 68 (68)             ; 35 (35)                   ; 0 (0)         ; 0                 ; 0     ; 0          ; 0    ; 0            ; |WS2812BCONTROLLER|WS2812B_controller:inst15 ; WS2812B_controller ; work         ;
 +--------------------------------+----------------------+----------------------------------+---------------------------------------------------+----------------------------------+----------------------+---------------------+---------------------------+---------------+-------------------+-------+------------+------+--------------+----------------------------------------------+--------------------+--------------+
 Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
 
@@ -1012,121 +1011,121 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; led_strip_A21 ; Output   ; -- ; --   ; --   ; -- ; (0)  ; (31)  ; --     ; --                     ; --                       ;
 ; led_strip_A22 ; Output   ; -- ; --   ; --   ; -- ; (0)  ; (31)  ; --     ; --                     ; --                       ;
 ; clk_50        ; Input    ; -- ; (0)  ; --   ; -- ; --   ; --    ; --     ; --                     ; --                       ;
-; sw_rst        ; Input    ; -- ; --   ; (0)  ; -- ; --   ; --    ; --     ; --                     ; --                       ;
+; sw_rst        ; Input    ; -- ; (0)  ; --   ; -- ; --   ; --    ; --     ; --                     ; --                       ;
 +---------------+----------+----+------+------+----+------+-------+--------+------------------------+--------------------------+
 
 
-+----------------------------------------------------------------------------------------+
-; Pad To Core Delay Chain Fanout                                                         ;
-+----------------------------------------------------------+-------------------+---------+
-; Source Pin / Fanout                                      ; Pad To Core Index ; Setting ;
-+----------------------------------------------------------+-------------------+---------+
-; clk_50                                                   ;                   ;         ;
-; sw_rst                                                   ;                   ;         ;
-;      - WS2812B_controller:inst10|curr_reg[4]             ; 1                 ; 0       ;
-;      - WS2812B_controller:inst10|curr_reg[3]             ; 1                 ; 0       ;
-;      - WS2812B_controller:inst10|curr_reg[2]             ; 1                 ; 0       ;
-;      - WS2812B_controller:inst10|curr_reg[1]             ; 1                 ; 0       ;
-;      - WS2812B_controller:inst10|curr_reg[0]             ; 1                 ; 0       ;
-;      - WS2812B_controller:inst10|prev_reg[4]             ; 1                 ; 0       ;
-;      - WS2812B_controller:inst10|prev_reg[3]             ; 1                 ; 0       ;
-;      - WS2812B_controller:inst10|prev_reg[2]             ; 1                 ; 0       ;
-;      - WS2812B_controller:inst10|prev_reg[1]             ; 1                 ; 0       ;
-;      - WS2812B_controller:inst10|prev_reg[0]             ; 1                 ; 0       ;
-;      - WS2812B_controller:inst15|curr_reg[4]             ; 1                 ; 0       ;
-;      - WS2812B_controller:inst15|curr_reg[3]             ; 1                 ; 0       ;
-;      - WS2812B_controller:inst15|prev_reg[3]             ; 1                 ; 0       ;
-;      - WS2812B_controller:inst15|prev_reg[2]             ; 1                 ; 0       ;
-;      - WS2812B_controller:inst15|prev_reg[1]             ; 1                 ; 0       ;
-;      - WS2812B_controller:inst15|prev_reg[0]             ; 1                 ; 0       ;
-;      - WS2812B_controller:inst15|curr_reg[2]             ; 1                 ; 0       ;
-;      - WS2812B_controller:inst15|curr_reg[1]             ; 1                 ; 0       ;
-;      - WS2812B_controller:inst15|curr_reg[0]             ; 1                 ; 0       ;
-;      - WS2812B_controller:inst15|prev_reg[4]             ; 1                 ; 0       ;
-;      - WS2812B_controller:inst10|data_out                ; 1                 ; 0       ;
-;      - WS2812B_controller:inst15|data_out                ; 1                 ; 0       ;
-;      - WS2812B_controller:inst10|rst_flag                ; 1                 ; 0       ;
-;      - WS2812B_controller:inst10|counterGRB_reg[3]       ; 1                 ; 0       ;
-;      - WS2812B_controller:inst10|eot                     ; 1                 ; 0       ;
-;      - WS2812B_controller:inst15|counterGRB_reg[3]       ; 1                 ; 0       ;
-;      - WS2812B_controller:inst15|eot                     ; 1                 ; 0       ;
-;      - WS2812B_controller:inst10|idx_reg[5]              ; 1                 ; 0       ;
-;      - WS2812B_controller:inst10|counter2_reg~4          ; 1                 ; 0       ;
-;      - WS2812B_controller:inst10|counter2_reg[3]~5       ; 1                 ; 0       ;
-;      - WS2812B_controller:inst10|counter2_reg~6          ; 1                 ; 0       ;
-;      - WS2812B_controller:inst10|counterGRB_reg[4]~2     ; 1                 ; 0       ;
-;      - WS2812B_controller:inst10|idx_reg~0               ; 1                 ; 0       ;
-;      - WS2812B_controller:inst10|idx_reg[3]~1            ; 1                 ; 0       ;
-;      - WS2812B_controller:inst10|idx_reg~2               ; 1                 ; 0       ;
-;      - WS2812B_controller:inst10|counter2_reg~7          ; 1                 ; 0       ;
-;      - WS2812B_controller:inst10|counter2_reg~8          ; 1                 ; 0       ;
-;      - WS2812B_controller:inst10|counter2_reg~9          ; 1                 ; 0       ;
-;      - WS2812B_controller:inst10|counter2_reg~10         ; 1                 ; 0       ;
-;      - WS2812B_controller:inst10|counter_reset_reg[12]~0 ; 1                 ; 0       ;
-;      - WS2812B_controller:inst10|counter_reset_reg[12]~1 ; 1                 ; 0       ;
-;      - WS2812B_controller:inst10|counter1_reg~2          ; 1                 ; 0       ;
-;      - WS2812B_controller:inst10|counter1_reg[3]~3       ; 1                 ; 0       ;
-;      - WS2812B_controller:inst10|counter1_reg~4          ; 1                 ; 0       ;
-;      - WS2812B_controller:inst10|counter1_reg~5          ; 1                 ; 0       ;
-;      - WS2812B_controller:inst10|counter1_reg~6          ; 1                 ; 0       ;
-;      - WS2812B_controller:inst10|counter1_reg~7          ; 1                 ; 0       ;
-;      - WS2812B_controller:inst10|counter1_reg~8          ; 1                 ; 0       ;
-;      - WS2812B_controller:inst15|counter2_reg~2          ; 1                 ; 0       ;
-;      - WS2812B_controller:inst15|counter2_reg[1]~3       ; 1                 ; 0       ;
-;      - WS2812B_controller:inst15|counter2_reg~4          ; 1                 ; 0       ;
-;      - WS2812B_controller:inst15|counterGRB_reg[4]~2     ; 1                 ; 0       ;
-;      - WS2812B_controller:inst15|idx_reg~0               ; 1                 ; 0       ;
-;      - WS2812B_controller:inst15|idx_reg[0]~1            ; 1                 ; 0       ;
-;      - WS2812B_controller:inst15|counter2_reg~5          ; 1                 ; 0       ;
-;      - WS2812B_controller:inst15|counter2_reg~6          ; 1                 ; 0       ;
-;      - WS2812B_controller:inst15|counter2_reg~7          ; 1                 ; 0       ;
-;      - WS2812B_controller:inst15|counter2_reg~8          ; 1                 ; 0       ;
-;      - WS2812B_controller:inst15|counter1_reg~0          ; 1                 ; 0       ;
-;      - WS2812B_controller:inst15|counter1_reg[5]~1       ; 1                 ; 0       ;
-;      - WS2812B_controller:inst15|counter1_reg~2          ; 1                 ; 0       ;
-;      - WS2812B_controller:inst15|counter1_reg~3          ; 1                 ; 0       ;
-;      - WS2812B_controller:inst15|counter1_reg~4          ; 1                 ; 0       ;
-;      - WS2812B_controller:inst15|counter1_reg~5          ; 1                 ; 0       ;
-;      - WS2812B_controller:inst15|counter1_reg~6          ; 1                 ; 0       ;
-;      - WS2812B_controller:inst10|prev_data_reg~0         ; 1                 ; 0       ;
-;      - WS2812B_controller:inst10|curr_reg[4]~0           ; 1                 ; 0       ;
-;      - WS2812B_controller:inst10|counterGRB_reg[0]~3     ; 1                 ; 0       ;
-;      - WS2812B_controller:inst10|counterGRB_reg[1]~4     ; 1                 ; 0       ;
-;      - WS2812B_controller:inst10|counterGRB_reg[2]~5     ; 1                 ; 0       ;
-;      - WS2812B_controller:inst10|idx_reg~3               ; 1                 ; 0       ;
-;      - WS2812B_controller:inst10|idx_reg~4               ; 1                 ; 0       ;
-;      - WS2812B_controller:inst10|idx_reg~5               ; 1                 ; 0       ;
-;      - WS2812B_controller:inst15|curr_reg[4]~0           ; 1                 ; 0       ;
-;      - WS2812B_controller:inst15|counterGRB_reg[0]~4     ; 1                 ; 0       ;
-;      - WS2812B_controller:inst15|counterGRB_reg[1]~5     ; 1                 ; 0       ;
-;      - WS2812B_controller:inst15|counterGRB_reg[2]~6     ; 1                 ; 0       ;
-;      - WS2812B_controller:inst15|idx_reg~2               ; 1                 ; 0       ;
-;      - WS2812B_controller:inst15|idx_reg~3               ; 1                 ; 0       ;
-;      - WS2812B_controller:inst15|idx_reg~4               ; 1                 ; 0       ;
-;      - WS2812B_controller:inst15|idx_reg~5               ; 1                 ; 0       ;
-;      - WS2812B_controller:inst15|idx_reg~6               ; 1                 ; 0       ;
-;      - WS2812B_controller:inst10|data_reg[0]~0           ; 1                 ; 0       ;
-+----------------------------------------------------------+-------------------+---------+
++---------------------------------------------------------------------------------------+
+; Pad To Core Delay Chain Fanout                                                        ;
++---------------------------------------------------------+-------------------+---------+
+; Source Pin / Fanout                                     ; Pad To Core Index ; Setting ;
++---------------------------------------------------------+-------------------+---------+
+; clk_50                                                  ;                   ;         ;
+; sw_rst                                                  ;                   ;         ;
+;      - WS2812B_controller:inst10|curr_reg[0]            ; 0                 ; 0       ;
+;      - WS2812B_controller:inst10|prev_reg[2]            ; 0                 ; 0       ;
+;      - WS2812B_controller:inst10|prev_reg[0]            ; 0                 ; 0       ;
+;      - WS2812B_controller:inst10|curr_reg[3]            ; 0                 ; 0       ;
+;      - WS2812B_controller:inst10|curr_reg[2]            ; 0                 ; 0       ;
+;      - WS2812B_controller:inst10|prev_reg[1]            ; 0                 ; 0       ;
+;      - WS2812B_controller:inst10|curr_reg[1]            ; 0                 ; 0       ;
+;      - WS2812B_controller:inst10|prev_reg[3]            ; 0                 ; 0       ;
+;      - WS2812B_controller:inst10|prev_reg[4]            ; 0                 ; 0       ;
+;      - WS2812B_controller:inst10|curr_reg[4]            ; 0                 ; 0       ;
+;      - WS2812B_controller:inst15|prev_reg[0]            ; 0                 ; 0       ;
+;      - WS2812B_controller:inst15|curr_reg[2]            ; 0                 ; 0       ;
+;      - WS2812B_controller:inst15|curr_reg[1]            ; 0                 ; 0       ;
+;      - WS2812B_controller:inst15|curr_reg[0]            ; 0                 ; 0       ;
+;      - WS2812B_controller:inst15|prev_reg[3]            ; 0                 ; 0       ;
+;      - WS2812B_controller:inst15|curr_reg[4]            ; 0                 ; 0       ;
+;      - WS2812B_controller:inst15|prev_reg[2]            ; 0                 ; 0       ;
+;      - WS2812B_controller:inst15|curr_reg[3]            ; 0                 ; 0       ;
+;      - WS2812B_controller:inst15|prev_reg[1]            ; 0                 ; 0       ;
+;      - WS2812B_controller:inst15|prev_reg[4]            ; 0                 ; 0       ;
+;      - WS2812B_controller:inst10|data_out               ; 0                 ; 0       ;
+;      - WS2812B_controller:inst15|data_out               ; 0                 ; 0       ;
+;      - WS2812B_controller:inst10|rst_flag               ; 0                 ; 0       ;
+;      - WS2812B_controller:inst10|idx_reg[5]             ; 0                 ; 0       ;
+;      - WS2812B_controller:inst10|counterGRB_reg[3]      ; 0                 ; 0       ;
+;      - WS2812B_controller:inst10|eot                    ; 0                 ; 0       ;
+;      - WS2812B_controller:inst15|counterGRB_reg[3]      ; 0                 ; 0       ;
+;      - WS2812B_controller:inst15|eot                    ; 0                 ; 0       ;
+;      - WS2812B_controller:inst10|idx_reg~2              ; 0                 ; 0       ;
+;      - WS2812B_controller:inst10|idx_reg[4]~3           ; 0                 ; 0       ;
+;      - WS2812B_controller:inst10|idx_reg~4              ; 0                 ; 0       ;
+;      - WS2812B_controller:inst10|idx_reg~5              ; 0                 ; 0       ;
+;      - WS2812B_controller:inst10|idx_reg~6              ; 0                 ; 0       ;
+;      - WS2812B_controller:inst10|idx_reg~7              ; 0                 ; 0       ;
+;      - WS2812B_controller:inst10|counter_reset_reg[7]~0 ; 0                 ; 0       ;
+;      - WS2812B_controller:inst10|counter_reset_reg[7]~1 ; 0                 ; 0       ;
+;      - WS2812B_controller:inst10|counter2_reg~4         ; 0                 ; 0       ;
+;      - WS2812B_controller:inst10|counter2_reg[3]~5      ; 0                 ; 0       ;
+;      - WS2812B_controller:inst10|counterGRB_reg[4]~2    ; 0                 ; 0       ;
+;      - WS2812B_controller:inst10|counter2_reg~6         ; 0                 ; 0       ;
+;      - WS2812B_controller:inst10|counter2_reg~7         ; 0                 ; 0       ;
+;      - WS2812B_controller:inst10|counter2_reg~8         ; 0                 ; 0       ;
+;      - WS2812B_controller:inst10|counter2_reg~9         ; 0                 ; 0       ;
+;      - WS2812B_controller:inst10|counter2_reg~10        ; 0                 ; 0       ;
+;      - WS2812B_controller:inst10|counter1_reg~0         ; 0                 ; 0       ;
+;      - WS2812B_controller:inst10|counter1_reg[3]~1      ; 0                 ; 0       ;
+;      - WS2812B_controller:inst10|counter1_reg~2         ; 0                 ; 0       ;
+;      - WS2812B_controller:inst10|counter1_reg~3         ; 0                 ; 0       ;
+;      - WS2812B_controller:inst10|counter1_reg~4         ; 0                 ; 0       ;
+;      - WS2812B_controller:inst10|counter1_reg~5         ; 0                 ; 0       ;
+;      - WS2812B_controller:inst10|counter1_reg~6         ; 0                 ; 0       ;
+;      - WS2812B_controller:inst15|idx_reg~0              ; 0                 ; 0       ;
+;      - WS2812B_controller:inst15|idx_reg[4]~1           ; 0                 ; 0       ;
+;      - WS2812B_controller:inst15|counterGRB_reg[4]~2    ; 0                 ; 0       ;
+;      - WS2812B_controller:inst15|counter2_reg~2         ; 0                 ; 0       ;
+;      - WS2812B_controller:inst15|counter2_reg[1]~3      ; 0                 ; 0       ;
+;      - WS2812B_controller:inst15|counter2_reg~4         ; 0                 ; 0       ;
+;      - WS2812B_controller:inst15|counter2_reg~5         ; 0                 ; 0       ;
+;      - WS2812B_controller:inst15|counter2_reg~6         ; 0                 ; 0       ;
+;      - WS2812B_controller:inst15|counter2_reg~7         ; 0                 ; 0       ;
+;      - WS2812B_controller:inst15|counter2_reg~8         ; 0                 ; 0       ;
+;      - WS2812B_controller:inst15|counter1_reg~0         ; 0                 ; 0       ;
+;      - WS2812B_controller:inst15|counter1_reg[0]~1      ; 0                 ; 0       ;
+;      - WS2812B_controller:inst15|counter1_reg~2         ; 0                 ; 0       ;
+;      - WS2812B_controller:inst15|counter1_reg~3         ; 0                 ; 0       ;
+;      - WS2812B_controller:inst15|counter1_reg~4         ; 0                 ; 0       ;
+;      - WS2812B_controller:inst15|counter1_reg~5         ; 0                 ; 0       ;
+;      - WS2812B_controller:inst15|counter1_reg~6         ; 0                 ; 0       ;
+;      - WS2812B_controller:inst15|idx_reg~2              ; 0                 ; 0       ;
+;      - WS2812B_controller:inst15|idx_reg~3              ; 0                 ; 0       ;
+;      - WS2812B_controller:inst15|idx_reg~4              ; 0                 ; 0       ;
+;      - WS2812B_controller:inst15|idx_reg~5              ; 0                 ; 0       ;
+;      - WS2812B_controller:inst15|idx_reg~6              ; 0                 ; 0       ;
+;      - WS2812B_controller:inst10|curr_reg[0]~0          ; 0                 ; 0       ;
+;      - WS2812B_controller:inst10|counterGRB_reg[0]~3    ; 0                 ; 0       ;
+;      - WS2812B_controller:inst10|counterGRB_reg[1]~4    ; 0                 ; 0       ;
+;      - WS2812B_controller:inst10|counterGRB_reg[2]~5    ; 0                 ; 0       ;
+;      - WS2812B_controller:inst10|prev_data_reg~0        ; 0                 ; 0       ;
+;      - WS2812B_controller:inst15|prev_reg[0]~0          ; 0                 ; 0       ;
+;      - WS2812B_controller:inst15|counterGRB_reg[0]~4    ; 0                 ; 0       ;
+;      - WS2812B_controller:inst15|counterGRB_reg[1]~5    ; 0                 ; 0       ;
+;      - WS2812B_controller:inst15|counterGRB_reg[2]~6    ; 0                 ; 0       ;
+;      - WS2812B_controller:inst10|data_reg[0]~0          ; 0                 ; 0       ;
++---------------------------------------------------------+-------------------+---------+
 
 
-+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Control Signals                                                                                                                                                                             ;
-+---------------------------------------------------+----------------------+---------+-------------------------+--------+----------------------+------------------+---------------------------+
-; Name                                              ; Location             ; Fan-Out ; Usage                   ; Global ; Global Resource Used ; Global Line Name ; Enable Signal Source Name ;
-+---------------------------------------------------+----------------------+---------+-------------------------+--------+----------------------+------------------+---------------------------+
-; WS2812B_controller:inst10|counter1_reg[3]~3       ; MLABCELL_X37_Y37_N54 ; 6       ; Clock enable            ; no     ; --                   ; --               ; --                        ;
-; WS2812B_controller:inst10|counter2_reg[3]~5       ; LABCELL_X36_Y39_N0   ; 6       ; Clock enable            ; no     ; --                   ; --               ; --                        ;
-; WS2812B_controller:inst10|counter_reset_reg[12]~0 ; LABCELL_X36_Y38_N27  ; 16      ; Sync. clear             ; no     ; --                   ; --               ; --                        ;
-; WS2812B_controller:inst10|counter_reset_reg[12]~1 ; LABCELL_X36_Y38_N0   ; 16      ; Clock enable            ; no     ; --                   ; --               ; --                        ;
-; WS2812B_controller:inst10|curr_reg[4]~0           ; MLABCELL_X34_Y37_N30 ; 10      ; Clock enable            ; no     ; --                   ; --               ; --                        ;
-; WS2812B_controller:inst10|idx_reg[3]~1            ; LABCELL_X35_Y37_N42  ; 5       ; Clock enable            ; no     ; --                   ; --               ; --                        ;
-; WS2812B_controller:inst15|counter1_reg[5]~1       ; LABCELL_X35_Y39_N6   ; 6       ; Clock enable            ; no     ; --                   ; --               ; --                        ;
-; WS2812B_controller:inst15|counter2_reg[1]~3       ; LABCELL_X36_Y39_N3   ; 6       ; Clock enable            ; no     ; --                   ; --               ; --                        ;
-; WS2812B_controller:inst15|curr_reg[4]~0           ; LABCELL_X36_Y38_N54  ; 10      ; Clock enable            ; no     ; --                   ; --               ; --                        ;
-; WS2812B_controller:inst15|idx_reg[0]~1            ; LABCELL_X36_Y40_N48  ; 6       ; Clock enable            ; no     ; --                   ; --               ; --                        ;
-; clk_50                                            ; PIN_M9               ; 89      ; Clock                   ; yes    ; Global Clock         ; GCLK4            ; --                        ;
-; sw_rst                                            ; PIN_U13              ; 83      ; Sync. clear, Sync. load ; no     ; --                   ; --               ; --                        ;
-+---------------------------------------------------+----------------------+---------+-------------------------+--------+----------------------+------------------+---------------------------+
++--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Control Signals                                                                                                                                                                            ;
++--------------------------------------------------+----------------------+---------+-------------------------+--------+----------------------+------------------+---------------------------+
+; Name                                             ; Location             ; Fan-Out ; Usage                   ; Global ; Global Resource Used ; Global Line Name ; Enable Signal Source Name ;
++--------------------------------------------------+----------------------+---------+-------------------------+--------+----------------------+------------------+---------------------------+
+; WS2812B_controller:inst10|counter1_reg[3]~1      ; LABCELL_X35_Y20_N6   ; 6       ; Clock enable            ; no     ; --                   ; --               ; --                        ;
+; WS2812B_controller:inst10|counter2_reg[3]~5      ; LABCELL_X35_Y18_N9   ; 6       ; Clock enable            ; no     ; --                   ; --               ; --                        ;
+; WS2812B_controller:inst10|counter_reset_reg[7]~0 ; MLABCELL_X34_Y18_N54 ; 16      ; Sync. clear             ; no     ; --                   ; --               ; --                        ;
+; WS2812B_controller:inst10|counter_reset_reg[7]~1 ; LABCELL_X35_Y18_N0   ; 16      ; Clock enable            ; no     ; --                   ; --               ; --                        ;
+; WS2812B_controller:inst10|curr_reg[0]~0          ; LABCELL_X36_Y16_N45  ; 10      ; Clock enable            ; no     ; --                   ; --               ; --                        ;
+; WS2812B_controller:inst10|idx_reg[4]~3           ; MLABCELL_X37_Y18_N24 ; 5       ; Clock enable            ; no     ; --                   ; --               ; --                        ;
+; WS2812B_controller:inst15|counter1_reg[0]~1      ; LABCELL_X35_Y17_N12  ; 6       ; Clock enable            ; no     ; --                   ; --               ; --                        ;
+; WS2812B_controller:inst15|counter2_reg[1]~3      ; LABCELL_X36_Y16_N39  ; 6       ; Clock enable            ; no     ; --                   ; --               ; --                        ;
+; WS2812B_controller:inst15|idx_reg[4]~1           ; LABCELL_X36_Y19_N54  ; 6       ; Clock enable            ; no     ; --                   ; --               ; --                        ;
+; WS2812B_controller:inst15|prev_reg[0]~0          ; LABCELL_X36_Y16_N33  ; 10      ; Clock enable            ; no     ; --                   ; --               ; --                        ;
+; clk_50                                           ; PIN_M9               ; 89      ; Clock                   ; yes    ; Global Clock         ; GCLK4            ; --                        ;
+; sw_rst                                           ; PIN_U13              ; 83      ; Sync. clear, Sync. load ; no     ; --                   ; --               ; --                        ;
++--------------------------------------------------+----------------------+---------+-------------------------+--------+----------------------+------------------+---------------------------+
 
 
 +---------------------------------------------------------------------------------------------------+
@@ -1143,21 +1142,21 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +------------------------------+-------------------------+
 ; Routing Resource Type        ; Usage                   ;
 +------------------------------+-------------------------+
-; Block interconnects          ; 267 / 140,056 ( < 1 % ) ;
+; Block interconnects          ; 271 / 140,056 ( < 1 % ) ;
 ; C12 interconnects            ; 4 / 6,048 ( < 1 % )     ;
-; C2 interconnects             ; 66 / 54,648 ( < 1 % )   ;
-; C4 interconnects             ; 28 / 25,920 ( < 1 % )   ;
+; C2 interconnects             ; 72 / 54,648 ( < 1 % )   ;
+; C4 interconnects             ; 35 / 25,920 ( < 1 % )   ;
 ; DQS bus muxes                ; 0 / 17 ( 0 % )          ;
 ; DQS-18 I/O buses             ; 0 / 17 ( 0 % )          ;
 ; DQS-9 I/O buses              ; 0 / 17 ( 0 % )          ;
-; Direct links                 ; 58 / 140,056 ( < 1 % )  ;
+; Direct links                 ; 46 / 140,056 ( < 1 % )  ;
 ; Global clocks                ; 1 / 16 ( 6 % )          ;
-; Local interconnects          ; 126 / 36,960 ( < 1 % )  ;
+; Local interconnects          ; 115 / 36,960 ( < 1 % )  ;
 ; Quadrant clocks              ; 0 / 88 ( 0 % )          ;
-; R14 interconnects            ; 6 / 5,984 ( < 1 % )     ;
-; R14/C12 interconnect drivers ; 9 / 9,504 ( < 1 % )     ;
-; R3 interconnects             ; 117 / 60,192 ( < 1 % )  ;
-; R6 interconnects             ; 76 / 127,072 ( < 1 % )  ;
+; R14 interconnects            ; 2 / 5,984 ( < 1 % )     ;
+; R14/C12 interconnect drivers ; 4 / 9,504 ( < 1 % )     ;
+; R3 interconnects             ; 108 / 60,192 ( < 1 % )  ;
+; R6 interconnects             ; 97 / 127,072 ( < 1 % )  ;
 ; Spine clocks                 ; 1 / 120 ( < 1 % )       ;
 ; Wire stub REs                ; 0 / 7,344 ( 0 % )       ;
 +------------------------------+-------------------------+
@@ -1298,7 +1297,7 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +-----------------+----------------------+-------------------+
 ; Source Clock(s) ; Destination Clock(s) ; Delay Added in ns ;
 +-----------------+----------------------+-------------------+
-; clk_50          ; clk_50               ; 9.8               ;
+; clk_50          ; clk_50               ; 8.0               ;
 +-----------------+----------------------+-------------------+
 Note: For more information on problematic transfers, consider running the Fitter again with the Optimize hold timing option (Settings Menu) turned off.
 This will disable optimization of problematic paths and expose them for further analysis using the Timing Analyzer.
@@ -1309,85 +1308,95 @@ This will disable optimization of problematic paths and expose them for further 
 +-------------------------------------------------+---------------------------------------------+-------------------+
 ; Source Register                                 ; Destination Register                        ; Delay Added in ns ;
 +-------------------------------------------------+---------------------------------------------+-------------------+
-; WS2812B_controller:inst10|counter2_reg[3]       ; WS2812B_controller:inst10|counterGRB_reg[0] ; 0.360             ;
-; WS2812B_controller:inst10|idx_reg[5]            ; WS2812B_controller:inst10|eot               ; 0.333             ;
-; WS2812B_controller:inst15|counterGRB_reg[0]     ; WS2812B_controller:inst15|counterGRB_reg[1] ; 0.330             ;
-; WS2812B_controller:inst10|counter2_reg[5]       ; WS2812B_controller:inst10|counterGRB_reg[0] ; 0.326             ;
-; WS2812B_controller:inst15|counter2_reg[0]       ; WS2812B_controller:inst15|counter2_reg[1]   ; 0.284             ;
-; WS2812B_controller:inst10|idx_reg[3]            ; WS2812B_controller:inst10|counterGRB_reg[0] ; 0.267             ;
-; WS2812B_controller:inst10|idx_reg[4]            ; WS2812B_controller:inst10|counterGRB_reg[0] ; 0.265             ;
-; WS2812B_controller:inst10|counter2_reg[4]       ; WS2812B_controller:inst10|counterGRB_reg[0] ; 0.261             ;
-; WS2812B_controller:inst10|counter1_reg[2]       ; WS2812B_controller:inst10|counter1_reg[2]   ; 0.260             ;
-; WS2812B_controller:inst10|data_reg[0]           ; WS2812B_controller:inst15|counterGRB_reg[3] ; 0.260             ;
-; WS2812B_controller:inst10|prev_data_reg[0]      ; WS2812B_controller:inst15|counterGRB_reg[3] ; 0.260             ;
-; WS2812B_controller:inst15|counter2_reg[4]       ; WS2812B_controller:inst15|counterGRB_reg[3] ; 0.258             ;
-; WS2812B_controller:inst15|idx_reg[5]            ; WS2812B_controller:inst15|eot               ; 0.255             ;
-; WS2812B_controller:inst15|counterGRB_reg[3]     ; WS2812B_controller:inst15|data_out          ; 0.250             ;
-; WS2812B_controller:inst15|counter1_reg[2]       ; WS2812B_controller:inst15|counter1_reg[3]   ; 0.235             ;
-; WS2812B_controller:inst15|counter1_reg[3]       ; WS2812B_controller:inst15|counter1_reg[3]   ; 0.235             ;
-; WS2812B_controller:inst15|counter1_reg[4]       ; WS2812B_controller:inst15|counter1_reg[3]   ; 0.235             ;
-; WS2812B_controller:inst15|counter1_reg[5]       ; WS2812B_controller:inst15|counter1_reg[3]   ; 0.235             ;
-; WS2812B_controller:inst15|counter1_reg[0]       ; WS2812B_controller:inst15|counter1_reg[3]   ; 0.235             ;
-; WS2812B_controller:inst15|counter2_reg[3]       ; WS2812B_controller:inst15|counter1_reg[3]   ; 0.235             ;
-; WS2812B_controller:inst15|counter2_reg[5]       ; WS2812B_controller:inst15|counter1_reg[3]   ; 0.235             ;
-; WS2812B_controller:inst15|counter1_reg[1]       ; WS2812B_controller:inst15|counter1_reg[3]   ; 0.235             ;
-; WS2812B_controller:inst15|counter2_reg[1]       ; WS2812B_controller:inst15|counter1_reg[3]   ; 0.235             ;
-; WS2812B_controller:inst15|counter2_reg[2]       ; WS2812B_controller:inst15|counter1_reg[3]   ; 0.235             ;
-; WS2812B_controller:inst15|counterGRB_reg[4]     ; WS2812B_controller:inst15|counter1_reg[3]   ; 0.235             ;
-; WS2812B_controller:inst10|counter1_reg[0]       ; WS2812B_controller:inst10|counter2_reg[0]   ; 0.234             ;
-; WS2812B_controller:inst10|curr_reg[1]           ; WS2812B_controller:inst10|counterGRB_reg[2] ; 0.232             ;
-; WS2812B_controller:inst10|counter2_reg[2]       ; WS2812B_controller:inst10|counterGRB_reg[0] ; 0.232             ;
-; WS2812B_controller:inst10|counter2_reg[0]       ; WS2812B_controller:inst10|counterGRB_reg[0] ; 0.232             ;
-; WS2812B_controller:inst10|counterGRB_reg[4]     ; WS2812B_controller:inst10|counterGRB_reg[0] ; 0.232             ;
-; WS2812B_controller:inst10|counter2_reg[1]       ; WS2812B_controller:inst10|counterGRB_reg[0] ; 0.232             ;
-; WS2812B_controller:inst10|prev_reg[1]           ; WS2812B_controller:inst10|counterGRB_reg[2] ; 0.231             ;
-; WS2812B_controller:inst10|counter1_reg[1]       ; WS2812B_controller:inst10|counter1_reg[2]   ; 0.221             ;
-; WS2812B_controller:inst10|eot                   ; WS2812B_controller:inst10|counterGRB_reg[2] ; 0.219             ;
-; WS2812B_controller:inst15|counterGRB_reg[1]     ; WS2812B_controller:inst15|counterGRB_reg[4] ; 0.195             ;
-; WS2812B_controller:inst15|counterGRB_reg[2]     ; WS2812B_controller:inst15|counterGRB_reg[4] ; 0.195             ;
-; WS2812B_controller:inst10|counterGRB_reg[0]     ; WS2812B_controller:inst10|counterGRB_reg[1] ; 0.195             ;
-; WS2812B_controller:inst10|counter1_reg[3]       ; WS2812B_controller:inst10|counter2_reg[0]   ; 0.193             ;
-; WS2812B_controller:inst10|counter1_reg[4]       ; WS2812B_controller:inst10|counter2_reg[0]   ; 0.193             ;
-; WS2812B_controller:inst10|counter1_reg[5]       ; WS2812B_controller:inst10|counter2_reg[0]   ; 0.193             ;
-; WS2812B_controller:inst10|curr_reg[3]           ; WS2812B_controller:inst10|counterGRB_reg[2] ; 0.192             ;
-; WS2812B_controller:inst15|idx_reg[2]            ; WS2812B_controller:inst15|eot               ; 0.189             ;
-; WS2812B_controller:inst15|idx_reg[1]            ; WS2812B_controller:inst15|eot               ; 0.189             ;
-; WS2812B_controller:inst15|idx_reg[0]            ; WS2812B_controller:inst15|eot               ; 0.189             ;
-; WS2812B_controller:inst15|idx_reg[3]            ; WS2812B_controller:inst15|eot               ; 0.189             ;
-; WS2812B_controller:inst15|idx_reg[4]            ; WS2812B_controller:inst15|eot               ; 0.189             ;
-; WS2812B_controller:inst15|eot                   ; WS2812B_controller:inst15|idx_reg[5]        ; 0.176             ;
-; WS2812B_controller:inst10|idx_reg[2]            ; WS2812B_controller:inst10|idx_reg[5]        ; 0.174             ;
-; WS2812B_controller:inst10|idx_reg[1]            ; WS2812B_controller:inst10|idx_reg[5]        ; 0.174             ;
-; WS2812B_controller:inst10|idx_reg[0]            ; WS2812B_controller:inst10|idx_reg[5]        ; 0.174             ;
-; WS2812B_controller:inst10|prev_reg[0]           ; WS2812B_controller:inst10|counterGRB_reg[2] ; 0.165             ;
-; WS2812B_controller:inst10|counterGRB_reg[1]     ; WS2812B_controller:inst10|idx_reg[2]        ; 0.160             ;
-; WS2812B_controller:inst10|counterGRB_reg[2]     ; WS2812B_controller:inst10|idx_reg[2]        ; 0.159             ;
-; WS2812B_controller:inst10|prev_reg[3]           ; WS2812B_controller:inst10|counterGRB_reg[2] ; 0.157             ;
-; WS2812B_controller:inst10|curr_reg[4]           ; WS2812B_controller:inst10|counterGRB_reg[2] ; 0.150             ;
-; WS2812B_controller:inst10|prev_reg[4]           ; WS2812B_controller:inst10|counterGRB_reg[2] ; 0.145             ;
-; WS2812B_controller:inst10|rst_flag              ; WS2812B_controller:inst15|idx_reg[5]        ; 0.128             ;
-; WS2812B_controller:inst10|counterGRB_reg[3]     ; WS2812B_controller:inst10|idx_reg[2]        ; 0.113             ;
-; WS2812B_controller:inst10|curr_reg[0]           ; WS2812B_controller:inst10|counterGRB_reg[2] ; 0.095             ;
-; WS2812B_controller:inst10|curr_reg[2]           ; WS2812B_controller:inst10|counterGRB_reg[2] ; 0.095             ;
-; WS2812B_controller:inst10|prev_reg[2]           ; WS2812B_controller:inst10|counterGRB_reg[2] ; 0.095             ;
-; WS2812B_controller:inst10|counter_reset_reg[13] ; WS2812B_controller:inst10|data_out          ; 0.093             ;
-; WS2812B_controller:inst10|counter_reset_reg[11] ; WS2812B_controller:inst10|data_out          ; 0.081             ;
-; WS2812B_controller:inst10|counter_reset_reg[10] ; WS2812B_controller:inst10|data_out          ; 0.081             ;
-; WS2812B_controller:inst10|counter_reset_reg[9]  ; WS2812B_controller:inst10|data_out          ; 0.081             ;
-; WS2812B_controller:inst10|counter_reset_reg[8]  ; WS2812B_controller:inst10|data_out          ; 0.081             ;
-; WS2812B_controller:inst10|counter_reset_reg[7]  ; WS2812B_controller:inst10|data_out          ; 0.081             ;
-; WS2812B_controller:inst10|counter_reset_reg[6]  ; WS2812B_controller:inst10|data_out          ; 0.081             ;
-; WS2812B_controller:inst10|counter_reset_reg[15] ; WS2812B_controller:inst10|data_out          ; 0.060             ;
-; WS2812B_controller:inst10|counter_reset_reg[12] ; WS2812B_controller:inst10|data_out          ; 0.060             ;
-; WS2812B_controller:inst10|counter_reset_reg[2]  ; WS2812B_controller:inst10|data_out          ; 0.060             ;
-; WS2812B_controller:inst10|counter_reset_reg[1]  ; WS2812B_controller:inst10|data_out          ; 0.060             ;
-; WS2812B_controller:inst10|counter_reset_reg[14] ; WS2812B_controller:inst10|data_out          ; 0.060             ;
-; WS2812B_controller:inst10|counter_reset_reg[5]  ; WS2812B_controller:inst10|data_out          ; 0.038             ;
-; WS2812B_controller:inst10|counter_reset_reg[4]  ; WS2812B_controller:inst10|data_out          ; 0.038             ;
-; WS2812B_controller:inst10|counter_reset_reg[3]  ; WS2812B_controller:inst10|data_out          ; 0.038             ;
-; WS2812B_controller:inst10|counter_reset_reg[0]  ; WS2812B_controller:inst10|data_out          ; 0.038             ;
+; WS2812B_controller:inst10|rst_flag              ; WS2812B_controller:inst10|counter2_reg[4]   ; 0.332             ;
+; WS2812B_controller:inst10|counter1_reg[0]       ; WS2812B_controller:inst10|counter1_reg[1]   ; 0.305             ;
+; WS2812B_controller:inst15|counter2_reg[5]       ; WS2812B_controller:inst15|counterGRB_reg[4] ; 0.254             ;
+; WS2812B_controller:inst10|counter1_reg[5]       ; WS2812B_controller:inst10|counter1_reg[3]   ; 0.254             ;
+; WS2812B_controller:inst10|counterGRB_reg[0]     ; WS2812B_controller:inst10|idx_reg[5]        ; 0.251             ;
+; WS2812B_controller:inst15|idx_reg[4]            ; WS2812B_controller:inst15|idx_reg[4]        ; 0.250             ;
+; WS2812B_controller:inst15|counter1_reg[2]       ; WS2812B_controller:inst15|counter1_reg[3]   ; 0.236             ;
+; WS2812B_controller:inst10|counter1_reg[4]       ; WS2812B_controller:inst10|counter1_reg[3]   ; 0.236             ;
+; WS2812B_controller:inst10|counter1_reg[3]       ; WS2812B_controller:inst10|counter1_reg[3]   ; 0.236             ;
+; WS2812B_controller:inst10|counter1_reg[2]       ; WS2812B_controller:inst10|counter1_reg[3]   ; 0.236             ;
+; WS2812B_controller:inst10|counter1_reg[1]       ; WS2812B_controller:inst10|counter1_reg[3]   ; 0.236             ;
+; WS2812B_controller:inst15|counter1_reg[3]       ; WS2812B_controller:inst15|counter1_reg[3]   ; 0.234             ;
+; WS2812B_controller:inst10|data_reg[0]           ; WS2812B_controller:inst15|eot               ; 0.232             ;
+; WS2812B_controller:inst10|prev_data_reg[0]      ; WS2812B_controller:inst15|eot               ; 0.232             ;
+; WS2812B_controller:inst15|idx_reg[3]            ; WS2812B_controller:inst15|idx_reg[4]        ; 0.220             ;
+; WS2812B_controller:inst15|counter2_reg[3]       ; WS2812B_controller:inst15|counter2_reg[3]   ; 0.219             ;
+; WS2812B_controller:inst10|counterGRB_reg[3]     ; WS2812B_controller:inst10|idx_reg[5]        ; 0.212             ;
+; WS2812B_controller:inst15|counter1_reg[4]       ; WS2812B_controller:inst15|counter1_reg[3]   ; 0.211             ;
+; WS2812B_controller:inst15|idx_reg[2]            ; WS2812B_controller:inst15|idx_reg[4]        ; 0.211             ;
+; WS2812B_controller:inst15|idx_reg[1]            ; WS2812B_controller:inst15|idx_reg[4]        ; 0.209             ;
+; WS2812B_controller:inst10|idx_reg[1]            ; WS2812B_controller:inst10|idx_reg[5]        ; 0.207             ;
+; WS2812B_controller:inst10|idx_reg[2]            ; WS2812B_controller:inst10|idx_reg[5]        ; 0.206             ;
+; WS2812B_controller:inst15|counter2_reg[0]       ; WS2812B_controller:inst15|counter2_reg[2]   ; 0.205             ;
+; WS2812B_controller:inst15|counter2_reg[1]       ; WS2812B_controller:inst15|counter2_reg[2]   ; 0.205             ;
+; WS2812B_controller:inst15|counter2_reg[2]       ; WS2812B_controller:inst15|counter2_reg[2]   ; 0.205             ;
+; WS2812B_controller:inst10|idx_reg[5]            ; WS2812B_controller:inst10|idx_reg[5]        ; 0.195             ;
+; WS2812B_controller:inst10|idx_reg[4]            ; WS2812B_controller:inst10|idx_reg[5]        ; 0.195             ;
+; WS2812B_controller:inst10|idx_reg[3]            ; WS2812B_controller:inst10|idx_reg[5]        ; 0.195             ;
+; WS2812B_controller:inst10|idx_reg[0]            ; WS2812B_controller:inst10|idx_reg[5]        ; 0.195             ;
+; WS2812B_controller:inst10|eot                   ; WS2812B_controller:inst10|idx_reg[5]        ; 0.194             ;
+; WS2812B_controller:inst15|counterGRB_reg[3]     ; WS2812B_controller:inst15|counterGRB_reg[4] ; 0.194             ;
+; WS2812B_controller:inst15|counterGRB_reg[0]     ; WS2812B_controller:inst15|counterGRB_reg[4] ; 0.194             ;
+; WS2812B_controller:inst15|counterGRB_reg[1]     ; WS2812B_controller:inst15|counterGRB_reg[4] ; 0.194             ;
+; WS2812B_controller:inst15|counterGRB_reg[2]     ; WS2812B_controller:inst15|counterGRB_reg[4] ; 0.194             ;
+; WS2812B_controller:inst15|counter1_reg[5]       ; WS2812B_controller:inst15|counter1_reg[3]   ; 0.191             ;
+; WS2812B_controller:inst15|counter1_reg[0]       ; WS2812B_controller:inst15|counter1_reg[3]   ; 0.191             ;
+; WS2812B_controller:inst15|counter2_reg[4]       ; WS2812B_controller:inst15|counter1_reg[3]   ; 0.191             ;
+; WS2812B_controller:inst15|counter1_reg[1]       ; WS2812B_controller:inst15|counter1_reg[3]   ; 0.191             ;
+; WS2812B_controller:inst15|counterGRB_reg[4]     ; WS2812B_controller:inst15|counter1_reg[3]   ; 0.191             ;
+; WS2812B_controller:inst15|idx_reg[0]            ; WS2812B_controller:inst15|idx_reg[4]        ; 0.179             ;
+; WS2812B_controller:inst10|counter2_reg[5]       ; WS2812B_controller:inst10|counter1_reg[3]   ; 0.166             ;
+; WS2812B_controller:inst10|counter2_reg[3]       ; WS2812B_controller:inst10|counter1_reg[3]   ; 0.166             ;
+; WS2812B_controller:inst10|counter2_reg[4]       ; WS2812B_controller:inst10|counter1_reg[3]   ; 0.166             ;
+; WS2812B_controller:inst10|counter2_reg[0]       ; WS2812B_controller:inst10|counter1_reg[3]   ; 0.166             ;
+; WS2812B_controller:inst10|counter2_reg[1]       ; WS2812B_controller:inst10|counter1_reg[3]   ; 0.166             ;
+; WS2812B_controller:inst10|counterGRB_reg[4]     ; WS2812B_controller:inst10|counter1_reg[3]   ; 0.166             ;
+; WS2812B_controller:inst10|counter2_reg[2]       ; WS2812B_controller:inst10|counter1_reg[3]   ; 0.166             ;
+; WS2812B_controller:inst10|counter_reset_reg[14] ; WS2812B_controller:inst10|data_out          ; 0.164             ;
+; WS2812B_controller:inst10|counter_reset_reg[13] ; WS2812B_controller:inst10|data_out          ; 0.164             ;
+; WS2812B_controller:inst10|counter_reset_reg[12] ; WS2812B_controller:inst10|data_out          ; 0.164             ;
+; WS2812B_controller:inst10|counter_reset_reg[11] ; WS2812B_controller:inst10|data_out          ; 0.164             ;
+; WS2812B_controller:inst10|counter_reset_reg[9]  ; WS2812B_controller:inst10|data_out          ; 0.164             ;
+; WS2812B_controller:inst10|counter_reset_reg[15] ; WS2812B_controller:inst10|data_out          ; 0.164             ;
+; WS2812B_controller:inst10|counter_reset_reg[7]  ; WS2812B_controller:inst10|data_out          ; 0.164             ;
+; WS2812B_controller:inst10|counter_reset_reg[6]  ; WS2812B_controller:inst10|data_out          ; 0.164             ;
+; WS2812B_controller:inst10|counter_reset_reg[5]  ; WS2812B_controller:inst10|data_out          ; 0.164             ;
+; WS2812B_controller:inst10|counter_reset_reg[4]  ; WS2812B_controller:inst10|data_out          ; 0.164             ;
+; WS2812B_controller:inst10|counter_reset_reg[3]  ; WS2812B_controller:inst10|data_out          ; 0.164             ;
+; WS2812B_controller:inst10|counter_reset_reg[2]  ; WS2812B_controller:inst10|data_out          ; 0.164             ;
+; WS2812B_controller:inst10|counter_reset_reg[1]  ; WS2812B_controller:inst10|data_out          ; 0.164             ;
+; WS2812B_controller:inst10|counter_reset_reg[0]  ; WS2812B_controller:inst10|data_out          ; 0.164             ;
+; WS2812B_controller:inst10|counter_reset_reg[8]  ; WS2812B_controller:inst10|data_out          ; 0.164             ;
+; WS2812B_controller:inst10|counter_reset_reg[10] ; WS2812B_controller:inst10|data_out          ; 0.164             ;
+; WS2812B_controller:inst15|idx_reg[5]            ; WS2812B_controller:inst15|idx_reg[5]        ; 0.160             ;
+; WS2812B_controller:inst10|counterGRB_reg[1]     ; WS2812B_controller:inst10|idx_reg[5]        ; 0.158             ;
+; WS2812B_controller:inst10|counterGRB_reg[2]     ; WS2812B_controller:inst10|idx_reg[5]        ; 0.158             ;
+; WS2812B_controller:inst15|prev_reg[1]           ; WS2812B_controller:inst15|counterGRB_reg[4] ; 0.132             ;
+; WS2812B_controller:inst15|prev_reg[0]           ; WS2812B_controller:inst15|counterGRB_reg[4] ; 0.116             ;
+; WS2812B_controller:inst15|prev_reg[3]           ; WS2812B_controller:inst15|counterGRB_reg[4] ; 0.103             ;
+; WS2812B_controller:inst15|curr_reg[3]           ; WS2812B_controller:inst15|counterGRB_reg[4] ; 0.068             ;
+; WS2812B_controller:inst15|curr_reg[4]           ; WS2812B_controller:inst15|counterGRB_reg[4] ; 0.068             ;
+; WS2812B_controller:inst15|prev_reg[4]           ; WS2812B_controller:inst15|counterGRB_reg[4] ; 0.068             ;
+; WS2812B_controller:inst15|curr_reg[0]           ; WS2812B_controller:inst15|counterGRB_reg[4] ; 0.059             ;
+; WS2812B_controller:inst15|curr_reg[1]           ; WS2812B_controller:inst15|counterGRB_reg[4] ; 0.059             ;
+; WS2812B_controller:inst15|curr_reg[2]           ; WS2812B_controller:inst15|counterGRB_reg[4] ; 0.059             ;
+; WS2812B_controller:inst15|prev_reg[2]           ; WS2812B_controller:inst15|counterGRB_reg[4] ; 0.059             ;
+; WS2812B_controller:inst15|eot                   ; WS2812B_controller:inst15|counterGRB_reg[4] ; 0.046             ;
+; WS2812B_controller:inst10|curr_reg[3]           ; WS2812B_controller:inst10|counterGRB_reg[1] ; 0.035             ;
+; WS2812B_controller:inst10|prev_reg[3]           ; WS2812B_controller:inst10|counterGRB_reg[1] ; 0.035             ;
+; WS2812B_controller:inst10|prev_reg[4]           ; WS2812B_controller:inst10|counterGRB_reg[1] ; 0.035             ;
+; WS2812B_controller:inst10|curr_reg[0]           ; WS2812B_controller:inst10|counterGRB_reg[1] ; 0.035             ;
+; WS2812B_controller:inst10|prev_reg[0]           ; WS2812B_controller:inst10|counterGRB_reg[1] ; 0.035             ;
+; WS2812B_controller:inst10|prev_reg[1]           ; WS2812B_controller:inst10|counterGRB_reg[1] ; 0.035             ;
+; WS2812B_controller:inst10|curr_reg[1]           ; WS2812B_controller:inst10|counterGRB_reg[1] ; 0.035             ;
+; WS2812B_controller:inst10|prev_reg[2]           ; WS2812B_controller:inst10|counterGRB_reg[1] ; 0.035             ;
+; WS2812B_controller:inst10|curr_reg[2]           ; WS2812B_controller:inst10|counterGRB_reg[1] ; 0.035             ;
+; WS2812B_controller:inst10|curr_reg[4]           ; WS2812B_controller:inst10|counterGRB_reg[1] ; 0.035             ;
 +-------------------------------------------------+---------------------------------------------+-------------------+
-Note: This table only shows the top 77 path(s) that have the largest delay added for hold.
+Note: This table only shows the top 87 path(s) that have the largest delay added for hold.
 
 
 +-----------------+
@@ -1416,17 +1425,17 @@ Info (176235): Finished register packing
 Info (11798): Fitter preparation operations ending: elapsed time is 00:00:03
 Info (170189): Fitter placement preparation operations beginning
 Info (14951): The Fitter is using Advanced Physical Optimization.
-Info (170190): Fitter placement preparation operations ending: elapsed time is 00:00:11
+Info (170190): Fitter placement preparation operations ending: elapsed time is 00:00:16
 Info (170191): Fitter placement operations beginning
 Info (170137): Fitter placement was successful
 Info (170192): Fitter placement operations ending: elapsed time is 00:00:01
 Info (170193): Fitter routing operations beginning
 Info (170195): Router estimated average interconnect usage is 0% of the available device resources
-    Info (170196): Router estimated peak interconnect usage is 1% of the available device resources in the region that extends from location X33_Y34 to location X43_Y45
+    Info (170196): Router estimated peak interconnect usage is 1% of the available device resources in the region that extends from location X33_Y11 to location X43_Y22
 Info (170199): The Fitter performed an Auto Fit compilation.  Optimizations were skipped to reduce compilation time.
     Info (170201): Optimizations that may affect the design's routability were skipped
 Info (170194): Fitter routing operations ending: elapsed time is 00:00:01
-Info (11888): Total time spent on timing analysis during the Fitter is 0.39 seconds.
+Info (11888): Total time spent on timing analysis during the Fitter is 0.40 seconds.
 Info (334003): Started post-fitting delay annotation
 Info (334004): Delay annotation completed successfully
 Info (334003): Started post-fitting delay annotation
@@ -1434,10 +1443,10 @@ Info (334004): Delay annotation completed successfully
 Info (11801): Fitter post-fit operations ending: elapsed time is 00:00:02
 Info (144001): Generated suppressed messages file C:/Users/minec/Desktop/Work/GitHub Repos/PROJ300/Firmware/WS2812B Controller/output_files/WS2812BCONTROLLER.fit.smsg
 Info: Quartus Prime Fitter was successful. 0 errors, 4 warnings
-    Info: Peak virtual memory: 7564 megabytes
-    Info: Processing ended: Fri Apr 19 23:25:17 2024
-    Info: Elapsed time: 00:00:37
-    Info: Total CPU time (on all processors): 00:01:19
+    Info: Peak virtual memory: 7551 megabytes
+    Info: Processing ended: Sat Apr 20 11:43:49 2024
+    Info: Elapsed time: 00:00:35
+    Info: Total CPU time (on all processors): 00:01:12
 
 
 +----------------------------+
