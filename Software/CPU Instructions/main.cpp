@@ -16,26 +16,32 @@ int main()
     //////////// program start ////////////
     programming_start();
 
- str(0x01, vga_sel); // manual rendering mode
-    mov(r1, 0xF00); // red
-    mov(r2, 0x0F0); // green
-    mov(r3, 0x00F); // blue
-    ldr(r0, "[]", vga_column);
-    cmp(r0, 213); // if column < 213
-    blt(11); // if
-    cmp(r0, 426); // if column < 426
-    blt(13); // if
-    cmp(r0, 639); // if column < 639
-    blt(15); // if
-    str(r1, vga_colour); 
-    b(4);
-    str(r2, vga_colour); 
-    b(4);
-    str(r3, vga_colour);
-    b(4);
+    str(0x01, vga_sel); // manual rendering mode
+    mov(r0, 0x000); // r0 init - colour data
+    str(0, tmr); // make sure timer is stopped
+    str(r0, vga_colour);
+    str(70, tmr); // tmr start 70ms
+    ldr(r1, "[]", tmr); // tmr state
+    cmp(r1, 1); // is timer done
+    beq(9); // if
+    b(5); // else
+    add(r0, r0,1);   
+    add(r1, r1,2);   
+    add(r2, r2,3);   
+    add(r3, r3,4);   
+    add(r4, r4,5);   
+    add(r5, r5,6);   
+    add(r6, r6,7);   
+    add(r7, r7,8);   
+    add(r8, r8,9);   
+    add(r9, r9,10);
+    add(r10, r10,11);
+    add(r11, r11,12);
+    add(r12, r12,r0);
+    str(r0, led); // leds on
+    b(2); // back to start
 
     stack_usage();
-
     programming_end();
     //////////// program end ////////////
    

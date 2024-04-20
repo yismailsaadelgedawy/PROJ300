@@ -4,7 +4,7 @@ JedecChain;
 	DefaultMfr(6E);
 
 	P ActionCode(Cfg)
-		Device PartName(5CEBA4F23) Path("C:/Users/minec/Desktop/github/PROJ300/Firmware/Full Computer/output_files/") File("Computer.sof") MfrSpec(OpMask(1));
+		Device PartName(5CEBA4F23) Path("C:/Users/minec/Desktop/Work/GitHub Repos/PROJ300/Firmware/Full Computer/output_files/") File("Computer.sof") MfrSpec(OpMask(1));
 
 ChainEnd;
 

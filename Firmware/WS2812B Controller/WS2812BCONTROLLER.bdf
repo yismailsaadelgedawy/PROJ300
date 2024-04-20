@@ -86,7 +86,7 @@ https://fpgasoftware.intel.com/eula.
 		(line (pt 82 8)(pt 78 12))
 		(line (pt 78 12)(pt 82 8))
 	)
-	(annotation_block (location)(rect 1064 440 1128 464))
+	(annotation_block (location)(rect 952 400 1016 424))
 )
 (pin
 	(output)
@@ -103,7 +103,7 @@ https://fpgasoftware.intel.com/eula.
 		(line (pt 82 8)(pt 78 12))
 		(line (pt 78 12)(pt 82 8))
 	)
-	(annotation_block (location)(rect 1504 568 1568 592))
+	(annotation_block (location)(rect 920 576 984 600))
 )
 (pin
 	(output)
@@ -120,7 +120,7 @@ https://fpgasoftware.intel.com/eula.
 		(line (pt 82 8)(pt 78 12))
 		(line (pt 78 12)(pt 82 8))
 	)
-	(annotation_block (location)(rect 1656 784 1720 808))
+	(annotation_block (location)(rect 920 752 984 776))
 )
 (pin
 	(output)
@@ -137,7 +137,7 @@ https://fpgasoftware.intel.com/eula.
 		(line (pt 82 8)(pt 78 12))
 		(line (pt 78 12)(pt 82 8))
 	)
-	(annotation_block (location)(rect 1816 696 1880 720))
+	(annotation_block (location)(rect 920 912 984 936))
 )
 (pin
 	(output)
@@ -154,7 +154,7 @@ https://fpgasoftware.intel.com/eula.
 		(line (pt 82 8)(pt 78 12))
 		(line (pt 78 12)(pt 82 8))
 	)
-	(annotation_block (location)(rect 1968 912 2032 936))
+	(annotation_block (location)(rect 920 1096 984 1120))
 )
 (pin
 	(output)
@@ -171,7 +171,7 @@ https://fpgasoftware.intel.com/eula.
 		(line (pt 82 8)(pt 78 12))
 		(line (pt 78 12)(pt 82 8))
 	)
-	(annotation_block (location)(rect 2408 1040 2472 1064))
+	(annotation_block (location)(rect 904 1272 968 1296))
 )
 (pin
 	(output)
@@ -188,7 +188,7 @@ https://fpgasoftware.intel.com/eula.
 		(line (pt 82 8)(pt 78 12))
 		(line (pt 78 12)(pt 82 8))
 	)
-	(annotation_block (location)(rect 2560 1256 2624 1280))
+	(annotation_block (location)(rect 920 1456 984 1480))
 )
 (pin
 	(output)
@@ -205,7 +205,7 @@ https://fpgasoftware.intel.com/eula.
 		(line (pt 82 8)(pt 78 12))
 		(line (pt 78 12)(pt 82 8))
 	)
-	(annotation_block (location)(rect 2312 952 2376 976))
+	(annotation_block (location)(rect 920 1624 984 1648))
 )
 (pin
 	(output)
@@ -222,7 +222,7 @@ https://fpgasoftware.intel.com/eula.
 		(line (pt 82 8)(pt 78 12))
 		(line (pt 78 12)(pt 82 8))
 	)
-	(annotation_block (location)(rect 2464 1168 2528 1192))
+	(annotation_block (location)(rect 912 1800 976 1824))
 )
 (pin
 	(output)
@@ -239,7 +239,7 @@ https://fpgasoftware.intel.com/eula.
 		(line (pt 82 8)(pt 78 12))
 		(line (pt 78 12)(pt 82 8))
 	)
-	(annotation_block (location)(rect 2904 1296 2968 1320))
+	(annotation_block (location)(rect 912 1984 976 2008))
 )
 (pin
 	(output)
@@ -256,7 +256,7 @@ https://fpgasoftware.intel.com/eula.
 		(line (pt 82 8)(pt 78 12))
 		(line (pt 78 12)(pt 82 8))
 	)
-	(annotation_block (location)(rect 3056 1512 3120 1536))
+	(annotation_block (location)(rect 912 2160 976 2184))
 )
 (pin
 	(output)
@@ -273,7 +273,7 @@ https://fpgasoftware.intel.com/eula.
 		(line (pt 82 8)(pt 78 12))
 		(line (pt 78 12)(pt 82 8))
 	)
-	(annotation_block (location)(rect 3216 1424 3280 1448))
+	(annotation_block (location)(rect 912 2336 976 2360))
 )
 (pin
 	(output)
@@ -290,7 +290,7 @@ https://fpgasoftware.intel.com/eula.
 		(line (pt 82 8)(pt 78 12))
 		(line (pt 78 12)(pt 82 8))
 	)
-	(annotation_block (location)(rect 3456 840 3520 864))
+	(annotation_block (location)(rect 1840 248 1904 272))
 )
 (pin
 	(output)
@@ -307,7 +307,7 @@ https://fpgasoftware.intel.com/eula.
 		(line (pt 82 8)(pt 78 12))
 		(line (pt 78 12)(pt 82 8))
 	)
-	(annotation_block (location)(rect 3872 1096 3936 1120))
+	(annotation_block (location)(rect 1832 408 1896 432))
 )
 (pin
 	(output)
@@ -324,7 +324,7 @@ https://fpgasoftware.intel.com/eula.
 		(line (pt 82 8)(pt 78 12))
 		(line (pt 78 12)(pt 82 8))
 	)
-	(annotation_block (location)(rect 4088 1144 4152 1168))
+	(annotation_block (location)(rect 1824 576 1888 600))
 )
 (pin
 	(output)
@@ -341,7 +341,7 @@ https://fpgasoftware.intel.com/eula.
 		(line (pt 82 8)(pt 78 12))
 		(line (pt 78 12)(pt 82 8))
 	)
-	(annotation_block (location)(rect 4504 1400 4568 1424))
+	(annotation_block (location)(rect 1832 736 1896 760))
 )
 (pin
 	(output)
@@ -358,7 +358,7 @@ https://fpgasoftware.intel.com/eula.
 		(line (pt 82 8)(pt 78 12))
 		(line (pt 78 12)(pt 82 8))
 	)
-	(annotation_block (location)(rect 4440 1064 4504 1088))
+	(annotation_block (location)(rect 1832 920 1896 944))
 )
 (pin
 	(output)
@@ -375,7 +375,7 @@ https://fpgasoftware.intel.com/eula.
 		(line (pt 82 8)(pt 78 12))
 		(line (pt 78 12)(pt 82 8))
 	)
-	(annotation_block (location)(rect 4856 1320 4920 1344))
+	(annotation_block (location)(rect 1824 1088 1888 1112))
 )
 (pin
 	(output)
@@ -392,7 +392,7 @@ https://fpgasoftware.intel.com/eula.
 		(line (pt 82 8)(pt 78 12))
 		(line (pt 78 12)(pt 82 8))
 	)
-	(annotation_block (location)(rect 5072 1368 5136 1392))
+	(annotation_block (location)(rect 1832 1248 1896 1272))
 )
 (pin
 	(output)
@@ -409,7 +409,7 @@ https://fpgasoftware.intel.com/eula.
 		(line (pt 82 8)(pt 78 12))
 		(line (pt 78 12)(pt 82 8))
 	)
-	(annotation_block (location)(rect 5488 1624 5552 1648))
+	(annotation_block (location)(rect 1824 1424 1888 1448))
 )
 (pin
 	(output)
@@ -426,7 +426,7 @@ https://fpgasoftware.intel.com/eula.
 		(line (pt 82 8)(pt 78 12))
 		(line (pt 78 12)(pt 82 8))
 	)
-	(annotation_block (location)(rect 5624 1648 5688 1672))
+	(annotation_block (location)(rect 1832 1584 1896 1608))
 )
 (pin
 	(output)
@@ -443,7 +443,7 @@ https://fpgasoftware.intel.com/eula.
 		(line (pt 82 8)(pt 78 12))
 		(line (pt 78 12)(pt 82 8))
 	)
-	(annotation_block (location)(rect 6040 1904 6104 1928))
+	(annotation_block (location)(rect 1832 1760 1896 1784))
 )
 (symbol
 	(rect 40 -56 152 -8)

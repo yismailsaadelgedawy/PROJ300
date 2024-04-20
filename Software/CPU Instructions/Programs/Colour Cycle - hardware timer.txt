@@ -19,7 +19,7 @@ add(r8, r8,9);
 add(r9, r9,10);
 add(r10, r10,11);
 add(r11, r11,12);
-add(r12, r12,13);
+add(r12, r12,r0);
 str(r0, led); // leds on
 b(2); // back to start
 

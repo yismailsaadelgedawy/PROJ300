@@ -4,23 +4,15 @@
 			"name" : "Top",
 			"pins" : [
 				{
+					"name" : "FPGALED1",
+					"strict" : false
+				},
+				{
 					"name" : "hsync",
 					"strict" : false
 				},
 				{
 					"name" : "vsync",
-					"strict" : false
-				},
-				{
-					"name" : "buzzer",
-					"strict" : false
-				},
-				{
-					"name" : "FPGALED0",
-					"strict" : false
-				},
-				{
-					"name" : "FPGALED1",
 					"strict" : false
 				},
 				{
@@ -37,6 +29,114 @@
 				},
 				{
 					"name" : "b[0]",
+					"strict" : false
+				},
+				{
+					"name" : "g[3]",
+					"strict" : false
+				},
+				{
+					"name" : "g[2]",
+					"strict" : false
+				},
+				{
+					"name" : "g[1]",
+					"strict" : false
+				},
+				{
+					"name" : "g[0]",
+					"strict" : false
+				},
+				{
+					"name" : "r[3]",
+					"strict" : false
+				},
+				{
+					"name" : "r[2]",
+					"strict" : false
+				},
+				{
+					"name" : "r[1]",
+					"strict" : false
+				},
+				{
+					"name" : "r[0]",
+					"strict" : false
+				},
+				{
+					"name" : "gpr_strip_H",
+					"strict" : false
+				},
+				{
+					"name" : "gpr_strip_I",
+					"strict" : false
+				},
+				{
+					"name" : "gpr_strip_J",
+					"strict" : false
+				},
+				{
+					"name" : "gpr_strip_K",
+					"strict" : false
+				},
+				{
+					"name" : "gpr_strip_L",
+					"strict" : false
+				},
+				{
+					"name" : "gpr_strip_M",
+					"strict" : false
+				},
+				{
+					"name" : "FPGALED0",
+					"strict" : false
+				},
+				{
+					"name" : "gpr_strip_C",
+					"strict" : false
+				},
+				{
+					"name" : "FPGA_LED[7]",
+					"strict" : false
+				},
+				{
+					"name" : "FPGA_LED[6]",
+					"strict" : false
+				},
+				{
+					"name" : "FPGA_LED[5]",
+					"strict" : false
+				},
+				{
+					"name" : "FPGA_LED[4]",
+					"strict" : false
+				},
+				{
+					"name" : "FPGA_LED[3]",
+					"strict" : false
+				},
+				{
+					"name" : "FPGA_LED[2]",
+					"strict" : false
+				},
+				{
+					"name" : "FPGA_LED[1]",
+					"strict" : false
+				},
+				{
+					"name" : "FPGA_LED[0]",
+					"strict" : false
+				},
+				{
+					"name" : "gpr_strip_A",
+					"strict" : false
+				},
+				{
+					"name" : "buzzer",
+					"strict" : false
+				},
+				{
+					"name" : "gpr_strip_D",
 					"strict" : false
 				},
 				{
@@ -96,6 +196,14 @@
 					"strict" : false
 				},
 				{
+					"name" : "gpr_strip_B",
+					"strict" : false
+				},
+				{
+					"name" : "gpr_strip_E",
+					"strict" : false
+				},
+				{
 					"name" : "disp2[0]",
 					"strict" : false
 				},
@@ -149,6 +257,10 @@
 				},
 				{
 					"name" : "disp3[6]",
+					"strict" : false
+				},
+				{
+					"name" : "gpr_strip_F",
 					"strict" : false
 				},
 				{
@@ -208,71 +320,47 @@
 					"strict" : false
 				},
 				{
-					"name" : "FPGA_LED[7]",
+					"name" : "mmr_strip_I",
 					"strict" : false
 				},
 				{
-					"name" : "FPGA_LED[6]",
+					"name" : "gpr_strip_G",
 					"strict" : false
 				},
 				{
-					"name" : "FPGA_LED[5]",
+					"name" : "mmr_strip_H",
 					"strict" : false
 				},
 				{
-					"name" : "FPGA_LED[4]",
+					"name" : "mmr_strip_D",
 					"strict" : false
 				},
 				{
-					"name" : "FPGA_LED[3]",
+					"name" : "mmr_strip_E",
 					"strict" : false
 				},
 				{
-					"name" : "FPGA_LED[2]",
+					"name" : "mmr_strip_B",
 					"strict" : false
 				},
 				{
-					"name" : "FPGA_LED[1]",
+					"name" : "mmr_strip_C",
 					"strict" : false
 				},
 				{
-					"name" : "FPGA_LED[0]",
+					"name" : "mmr_strip_A",
 					"strict" : false
 				},
 				{
-					"name" : "g[3]",
+					"name" : "mmr_strip_F",
 					"strict" : false
 				},
 				{
-					"name" : "g[2]",
+					"name" : "mmr_strip_J",
 					"strict" : false
 				},
 				{
-					"name" : "g[1]",
-					"strict" : false
-				},
-				{
-					"name" : "g[0]",
-					"strict" : false
-				},
-				{
-					"name" : "r[3]",
-					"strict" : false
-				},
-				{
-					"name" : "r[2]",
-					"strict" : false
-				},
-				{
-					"name" : "r[1]",
-					"strict" : false
-				},
-				{
-					"name" : "r[0]",
-					"strict" : false
-				},
-				{
-					"name" : "sw_rst",
+					"name" : "mmr_strip_G",
 					"strict" : false
 				},
 				{
@@ -280,15 +368,19 @@
 					"strict" : false
 				},
 				{
+					"name" : "sw_rst",
+					"strict" : false
+				},
+				{
 					"name" : "clk_50",
 					"strict" : false
 				},
 				{
-					"name" : "key0",
+					"name" : "key1",
 					"strict" : false
 				},
 				{
-					"name" : "key1",
+					"name" : "key0",
 					"strict" : false
 				},
 				{
