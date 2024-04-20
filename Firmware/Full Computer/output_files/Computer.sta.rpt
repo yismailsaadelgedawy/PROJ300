@@ -1,5 +1,5 @@
 Timing Analyzer report for Computer
-Sat Apr 20 13:42:26 2024
+Sun Apr 21 00:24:24 2024
 Quartus Prime Version 23.1std.0 Build 991 11/28/2023 SC Lite Edition
 
 
@@ -102,26 +102,26 @@ https://fpgasoftware.intel.com/eula.
 ; Number detected on machine ; 16          ;
 ; Maximum allowed            ; 16          ;
 ;                            ;             ;
-; Average used               ; 5.09        ;
+; Average used               ; 5.30        ;
 ; Maximum used               ; 16          ;
 ;                            ;             ;
 ; Usage by Processor         ; % Time Used ;
 ;     Processor 1            ; 100.0%      ;
-;     Processor 2            ;  31.3%      ;
-;     Processor 3            ;  30.9%      ;
-;     Processor 4            ;  30.5%      ;
-;     Processor 5            ;  26.4%      ;
-;     Processor 6            ;  26.4%      ;
-;     Processor 7            ;  26.4%      ;
-;     Processor 8            ;  26.4%      ;
-;     Processor 9            ;  26.4%      ;
-;     Processor 10           ;  26.4%      ;
-;     Processor 11           ;  26.4%      ;
-;     Processor 12           ;  26.4%      ;
-;     Processor 13           ;  26.4%      ;
-;     Processor 14           ;  26.3%      ;
-;     Processor 15           ;  26.3%      ;
-;     Processor 16           ;  26.3%      ;
+;     Processor 2            ;  32.8%      ;
+;     Processor 3            ;  32.3%      ;
+;     Processor 4            ;  32.1%      ;
+;     Processor 5            ;  27.8%      ;
+;     Processor 6            ;  27.8%      ;
+;     Processor 7            ;  27.8%      ;
+;     Processor 8            ;  27.8%      ;
+;     Processor 9            ;  27.8%      ;
+;     Processor 10           ;  27.8%      ;
+;     Processor 11           ;  27.8%      ;
+;     Processor 12           ;  27.7%      ;
+;     Processor 13           ;  27.7%      ;
+;     Processor 14           ;  27.7%      ;
+;     Processor 15           ;  27.7%      ;
+;     Processor 16           ;  27.7%      ;
 +----------------------------+-------------+
 
 
@@ -150,13 +150,13 @@ https://fpgasoftware.intel.com/eula.
 +------------+-----------------+-------------------------------------------------------------------+------+
 ; Fmax       ; Restricted Fmax ; Clock Name                                                        ; Note ;
 +------------+-----------------+-------------------------------------------------------------------+------+
-; 35.25 MHz  ; 35.25 MHz       ; CPU:inst|CU_counter:inst25|counter_reg[0]                         ;      ;
-; 60.6 MHz   ; 60.6 MHz        ; clk_50                                                            ;      ;
-; 117.92 MHz ; 117.92 MHz      ; Memory:inst1|InstructionBuffer:inst6|fine_clk_divN:inst12|clk_out ;      ;
-; 168.18 MHz ; 168.18 MHz      ; VGA_controller:inst6|t_ff:inst|q                                  ;      ;
-; 185.36 MHz ; 185.36 MHz      ; PS2_CLK                                                           ;      ;
-; 273.9 MHz  ; 273.9 MHz       ; UART:inst44|uart_clk_divN:inst|clk_out                            ;      ;
-; 332.12 MHz ; 332.12 MHz      ; VGA_controller:inst6|clk_divN:inst15|counter[17]                  ;      ;
+; 37.26 MHz  ; 37.26 MHz       ; CPU:inst|CU_counter:inst25|counter_reg[0]                         ;      ;
+; 64.91 MHz  ; 64.91 MHz       ; clk_50                                                            ;      ;
+; 122.94 MHz ; 122.94 MHz      ; Memory:inst1|InstructionBuffer:inst6|fine_clk_divN:inst12|clk_out ;      ;
+; 167.36 MHz ; 167.36 MHz      ; VGA_controller:inst6|t_ff:inst|q                                  ;      ;
+; 175.72 MHz ; 175.72 MHz      ; PS2_CLK                                                           ;      ;
+; 223.31 MHz ; 223.31 MHz      ; UART:inst44|uart_clk_divN:inst|clk_out                            ;      ;
+; 331.9 MHz  ; 331.9 MHz       ; VGA_controller:inst6|clk_divN:inst15|counter[17]                  ;      ;
 +------------+-----------------+-------------------------------------------------------------------+------+
 This panel reports FMAX for every clock in the design, regardless of the user-specified clock periods.  FMAX is only computed for paths where the source and destination registers or ports are driven by the same clock.  Paths of different clocks, including generated clocks, are ignored.  For paths between a clock and its inversion, FMAX is computed as if the rising and falling edges are scaled along with FMAX, such that the duty cycle (in terms of a percentage) is maintained. Altera recommends that you always use clock constraints and other slack reports for sign-off analysis.
 
@@ -172,18 +172,18 @@ HTML report is unavailable in plain text report export.
 +-------------------------------------------------------------------+---------+---------------+
 ; Clock                                                             ; Slack   ; End Point TNS ;
 +-------------------------------------------------------------------+---------+---------------+
-; CPU:inst|CU_counter:inst25|counter_reg[0]                         ; -15.511 ; -2978.919     ;
-; clk_50                                                            ; -15.501 ; -18401.922    ;
-; Memory:inst1|InstructionBuffer:inst6|fine_clk_divN:inst12|clk_out ; -8.022  ; -26792.524    ;
-; PS2controller:inst3|ps2_controller:inst1|bsy                      ; -7.855  ; -61.852       ;
-; CPU:inst|CPU_regN:inst|internal_reg[0]                            ; -7.791  ; -3415.172     ;
-; VGA_controller:inst6|clk_divN:inst15|counter[17]                  ; -5.466  ; -118.810      ;
-; VGA_controller:inst6|t_ff:inst|q                                  ; -4.946  ; -261.082      ;
-; fine_clk_divN:inst100|clk_out                                     ; -4.505  ; -1510.090     ;
-; PS2_CLK                                                           ; -4.395  ; -45.554       ;
-; sw_rst                                                            ; -4.389  ; -4.389        ;
-; UART:inst44|uart_clk_divN:inst|clk_out                            ; -2.651  ; -47.231       ;
-; UART:inst44|uart_controller:inst1|bsy                             ; -2.636  ; -19.224       ;
+; CPU:inst|CU_counter:inst25|counter_reg[0]                         ; -16.129 ; -2684.373     ;
+; clk_50                                                            ; -14.405 ; -19547.067    ;
+; PS2controller:inst3|ps2_controller:inst1|bsy                      ; -8.363  ; -64.993       ;
+; Memory:inst1|InstructionBuffer:inst6|fine_clk_divN:inst12|clk_out ; -7.699  ; -27584.110    ;
+; CPU:inst|CPU_regN:inst|internal_reg[0]                            ; -6.410  ; -2711.652     ;
+; VGA_controller:inst6|clk_divN:inst15|counter[17]                  ; -5.162  ; -112.005      ;
+; VGA_controller:inst6|t_ff:inst|q                                  ; -4.975  ; -268.179      ;
+; PS2_CLK                                                           ; -4.691  ; -48.050       ;
+; fine_clk_divN:inst100|clk_out                                     ; -4.582  ; -1628.272     ;
+; sw_rst                                                            ; -3.676  ; -3.676        ;
+; UART:inst44|uart_clk_divN:inst|clk_out                            ; -3.478  ; -43.739       ;
+; UART:inst44|uart_controller:inst1|bsy                             ; -3.308  ; -23.259       ;
 +-------------------------------------------------------------------+---------+---------------+
 
 
@@ -192,18 +192,18 @@ HTML report is unavailable in plain text report export.
 +-------------------------------------------------------------------+--------+---------------+
 ; Clock                                                             ; Slack  ; End Point TNS ;
 +-------------------------------------------------------------------+--------+---------------+
-; CPU:inst|CPU_regN:inst|internal_reg[0]                            ; -2.014 ; -15.642       ;
-; CPU:inst|CU_counter:inst25|counter_reg[0]                         ; -1.057 ; -5.521        ;
-; clk_50                                                            ; -0.117 ; -0.319        ;
+; CPU:inst|CPU_regN:inst|internal_reg[0]                            ; -2.129 ; -13.164       ;
+; CPU:inst|CU_counter:inst25|counter_reg[0]                         ; -1.976 ; -13.426       ;
+; clk_50                                                            ; -0.245 ; -0.245        ;
+; VGA_controller:inst6|t_ff:inst|q                                  ; 0.137  ; 0.000         ;
 ; PS2_CLK                                                           ; 0.287  ; 0.000         ;
-; VGA_controller:inst6|t_ff:inst|q                                  ; 0.403  ; 0.000         ;
-; UART:inst44|uart_clk_divN:inst|clk_out                            ; 0.451  ; 0.000         ;
-; UART:inst44|uart_controller:inst1|bsy                             ; 0.493  ; 0.000         ;
-; VGA_controller:inst6|clk_divN:inst15|counter[17]                  ; 0.504  ; 0.000         ;
-; Memory:inst1|InstructionBuffer:inst6|fine_clk_divN:inst12|clk_out ; 0.548  ; 0.000         ;
-; fine_clk_divN:inst100|clk_out                                     ; 0.652  ; 0.000         ;
-; sw_rst                                                            ; 0.788  ; 0.000         ;
-; PS2controller:inst3|ps2_controller:inst1|bsy                      ; 4.305  ; 0.000         ;
+; VGA_controller:inst6|clk_divN:inst15|counter[17]                  ; 0.323  ; 0.000         ;
+; fine_clk_divN:inst100|clk_out                                     ; 0.351  ; 0.000         ;
+; Memory:inst1|InstructionBuffer:inst6|fine_clk_divN:inst12|clk_out ; 0.450  ; 0.000         ;
+; UART:inst44|uart_controller:inst1|bsy                             ; 0.645  ; 0.000         ;
+; sw_rst                                                            ; 0.645  ; 0.000         ;
+; UART:inst44|uart_clk_divN:inst|clk_out                            ; 0.905  ; 0.000         ;
+; PS2controller:inst3|ps2_controller:inst1|bsy                      ; 4.839  ; 0.000         ;
 +-------------------------------------------------------------------+--------+---------------+
 
 
@@ -212,12 +212,12 @@ HTML report is unavailable in plain text report export.
 +-------------------------------------------------------------------+--------+---------------+
 ; Clock                                                             ; Slack  ; End Point TNS ;
 +-------------------------------------------------------------------+--------+---------------+
-; UART:inst44|uart_clk_divN:inst|clk_out                            ; -6.782 ; -133.326      ;
-; UART:inst44|uart_controller:inst1|bsy                             ; -4.699 ; -34.650       ;
-; clk_50                                                            ; -4.466 ; -280.455      ;
-; PS2controller:inst3|ps2_controller:inst1|bsy                      ; -4.314 ; -31.662       ;
-; Memory:inst1|InstructionBuffer:inst6|fine_clk_divN:inst12|clk_out ; -4.177 ; -20572.191    ;
-; PS2_CLK                                                           ; -3.687 ; -54.563       ;
+; UART:inst44|uart_clk_divN:inst|clk_out                            ; -5.952 ; -105.850      ;
+; PS2controller:inst3|ps2_controller:inst1|bsy                      ; -4.401 ; -33.208       ;
+; clk_50                                                            ; -4.376 ; -274.209      ;
+; UART:inst44|uart_controller:inst1|bsy                             ; -3.784 ; -29.178       ;
+; Memory:inst1|InstructionBuffer:inst6|fine_clk_divN:inst12|clk_out ; -3.678 ; -18361.461    ;
+; PS2_CLK                                                           ; -3.106 ; -40.277       ;
 +-------------------------------------------------------------------+--------+---------------+
 
 
@@ -226,12 +226,12 @@ HTML report is unavailable in plain text report export.
 +-------------------------------------------------------------------+--------+---------------+
 ; Clock                                                             ; Slack  ; End Point TNS ;
 +-------------------------------------------------------------------+--------+---------------+
-; PS2_CLK                                                           ; -2.555 ; -51.076       ;
-; Memory:inst1|InstructionBuffer:inst6|fine_clk_divN:inst12|clk_out ; -0.537 ; -2445.883     ;
-; clk_50                                                            ; 1.687  ; 0.000         ;
-; PS2controller:inst3|ps2_controller:inst1|bsy                      ; 2.467  ; 0.000         ;
-; UART:inst44|uart_controller:inst1|bsy                             ; 2.540  ; 0.000         ;
-; UART:inst44|uart_clk_divN:inst|clk_out                            ; 3.394  ; 0.000         ;
+; PS2_CLK                                                           ; -3.115 ; -56.046       ;
+; Memory:inst1|InstructionBuffer:inst6|fine_clk_divN:inst12|clk_out ; -1.126 ; -5452.656     ;
+; clk_50                                                            ; 1.593  ; 0.000         ;
+; UART:inst44|uart_controller:inst1|bsy                             ; 1.754  ; 0.000         ;
+; PS2controller:inst3|ps2_controller:inst1|bsy                      ; 2.395  ; 0.000         ;
+; UART:inst44|uart_clk_divN:inst|clk_out                            ; 2.615  ; 0.000         ;
 +-------------------------------------------------------------------+--------+---------------+
 
 
@@ -240,18 +240,18 @@ HTML report is unavailable in plain text report export.
 +-------------------------------------------------------------------+--------+---------------+
 ; Clock                                                             ; Slack  ; End Point TNS ;
 +-------------------------------------------------------------------+--------+---------------+
-; CPU:inst|CPU_regN:inst|internal_reg[0]                            ; -3.773 ; -5119.219     ;
-; clk_50                                                            ; -2.225 ; -2825.982     ;
-; fine_clk_divN:inst100|clk_out                                     ; -0.694 ; -451.099      ;
-; Memory:inst1|InstructionBuffer:inst6|fine_clk_divN:inst12|clk_out ; -0.538 ; -4129.102     ;
-; VGA_controller:inst6|t_ff:inst|q                                  ; -0.538 ; -66.923       ;
-; VGA_controller:inst6|clk_divN:inst15|counter[17]                  ; -0.538 ; -17.512       ;
-; PS2_CLK                                                           ; -0.538 ; -16.401       ;
-; UART:inst44|uart_clk_divN:inst|clk_out                            ; -0.538 ; -15.933       ;
-; PS2controller:inst3|ps2_controller:inst1|bsy                      ; -0.538 ; -6.748        ;
-; CPU:inst|CU_counter:inst25|counter_reg[0]                         ; -0.390 ; -98.417       ;
-; sw_rst                                                            ; 0.218  ; 0.000         ;
-; UART:inst44|uart_controller:inst1|bsy                             ; 0.414  ; 0.000         ;
+; CPU:inst|CPU_regN:inst|internal_reg[0]                            ; -2.348 ; -2773.250     ;
+; clk_50                                                            ; -2.225 ; -2826.000     ;
+; fine_clk_divN:inst100|clk_out                                     ; -0.677 ; -464.449      ;
+; PS2_CLK                                                           ; -0.575 ; -16.164       ;
+; Memory:inst1|InstructionBuffer:inst6|fine_clk_divN:inst12|clk_out ; -0.538 ; -4723.644     ;
+; VGA_controller:inst6|t_ff:inst|q                                  ; -0.538 ; -73.435       ;
+; VGA_controller:inst6|clk_divN:inst15|counter[17]                  ; -0.538 ; -18.622       ;
+; UART:inst44|uart_clk_divN:inst|clk_out                            ; -0.538 ; -15.730       ;
+; PS2controller:inst3|ps2_controller:inst1|bsy                      ; -0.538 ; -6.693        ;
+; CPU:inst|CU_counter:inst25|counter_reg[0]                         ; -0.199 ; -0.939        ;
+; UART:inst44|uart_controller:inst1|bsy                             ; 0.327  ; 0.000         ;
+; sw_rst                                                            ; 0.392  ; 0.000         ;
 +-------------------------------------------------------------------+--------+---------------+
 
 
@@ -266,12 +266,12 @@ No synchronizer chains to report.
 +------------+-----------------+-------------------------------------------------------------------+------+
 ; Fmax       ; Restricted Fmax ; Clock Name                                                        ; Note ;
 +------------+-----------------+-------------------------------------------------------------------+------+
-; 36.11 MHz  ; 36.11 MHz       ; CPU:inst|CU_counter:inst25|counter_reg[0]                         ;      ;
-; 60.78 MHz  ; 60.78 MHz       ; clk_50                                                            ;      ;
-; 118.57 MHz ; 118.57 MHz      ; Memory:inst1|InstructionBuffer:inst6|fine_clk_divN:inst12|clk_out ;      ;
-; 163.19 MHz ; 163.19 MHz      ; VGA_controller:inst6|t_ff:inst|q                                  ;      ;
-; 189.97 MHz ; 189.97 MHz      ; PS2_CLK                                                           ;      ;
-; 286.37 MHz ; 286.37 MHz      ; UART:inst44|uart_clk_divN:inst|clk_out                            ;      ;
+; 37.55 MHz  ; 37.55 MHz       ; CPU:inst|CU_counter:inst25|counter_reg[0]                         ;      ;
+; 64.84 MHz  ; 64.84 MHz       ; clk_50                                                            ;      ;
+; 124.3 MHz  ; 124.3 MHz       ; Memory:inst1|InstructionBuffer:inst6|fine_clk_divN:inst12|clk_out ;      ;
+; 163.37 MHz ; 163.37 MHz      ; VGA_controller:inst6|t_ff:inst|q                                  ;      ;
+; 177.12 MHz ; 177.12 MHz      ; PS2_CLK                                                           ;      ;
+; 226.86 MHz ; 226.86 MHz      ; UART:inst44|uart_clk_divN:inst|clk_out                            ;      ;
 ; 317.56 MHz ; 317.56 MHz      ; VGA_controller:inst6|clk_divN:inst15|counter[17]                  ;      ;
 +------------+-----------------+-------------------------------------------------------------------+------+
 This panel reports FMAX for every clock in the design, regardless of the user-specified clock periods.  FMAX is only computed for paths where the source and destination registers or ports are driven by the same clock.  Paths of different clocks, including generated clocks, are ignored.  For paths between a clock and its inversion, FMAX is computed as if the rising and falling edges are scaled along with FMAX, such that the duty cycle (in terms of a percentage) is maintained. Altera recommends that you always use clock constraints and other slack reports for sign-off analysis.
@@ -282,18 +282,18 @@ This panel reports FMAX for every clock in the design, regardless of the user-sp
 +-------------------------------------------------------------------+---------+---------------+
 ; Clock                                                             ; Slack   ; End Point TNS ;
 +-------------------------------------------------------------------+---------+---------------+
-; CPU:inst|CU_counter:inst25|counter_reg[0]                         ; -15.509 ; -3019.502     ;
-; clk_50                                                            ; -15.454 ; -17838.607    ;
-; Memory:inst1|InstructionBuffer:inst6|fine_clk_divN:inst12|clk_out ; -7.837  ; -25757.418    ;
-; PS2controller:inst3|ps2_controller:inst1|bsy                      ; -7.767  ; -61.096       ;
-; CPU:inst|CPU_regN:inst|internal_reg[0]                            ; -7.740  ; -3440.438     ;
-; VGA_controller:inst6|clk_divN:inst15|counter[17]                  ; -5.585  ; -120.928      ;
-; VGA_controller:inst6|t_ff:inst|q                                  ; -5.128  ; -265.719      ;
-; fine_clk_divN:inst100|clk_out                                     ; -4.660  ; -1552.015     ;
-; PS2_CLK                                                           ; -4.264  ; -42.235       ;
-; sw_rst                                                            ; -4.243  ; -4.243        ;
-; UART:inst44|uart_controller:inst1|bsy                             ; -2.689  ; -19.324       ;
-; UART:inst44|uart_clk_divN:inst|clk_out                            ; -2.492  ; -45.343       ;
+; CPU:inst|CU_counter:inst25|counter_reg[0]                         ; -15.837 ; -2760.351     ;
+; clk_50                                                            ; -14.423 ; -18865.891    ;
+; PS2controller:inst3|ps2_controller:inst1|bsy                      ; -8.241  ; -64.055       ;
+; Memory:inst1|InstructionBuffer:inst6|fine_clk_divN:inst12|clk_out ; -7.503  ; -26275.383    ;
+; CPU:inst|CPU_regN:inst|internal_reg[0]                            ; -6.417  ; -2784.659     ;
+; VGA_controller:inst6|clk_divN:inst15|counter[17]                  ; -5.361  ; -115.824      ;
+; VGA_controller:inst6|t_ff:inst|q                                  ; -5.121  ; -271.561      ;
+; PS2_CLK                                                           ; -4.646  ; -44.931       ;
+; fine_clk_divN:inst100|clk_out                                     ; -4.597  ; -1656.526     ;
+; sw_rst                                                            ; -3.577  ; -3.577        ;
+; UART:inst44|uart_clk_divN:inst|clk_out                            ; -3.408  ; -42.188       ;
+; UART:inst44|uart_controller:inst1|bsy                             ; -3.201  ; -22.584       ;
 +-------------------------------------------------------------------+---------+---------------+
 
 
@@ -302,18 +302,18 @@ This panel reports FMAX for every clock in the design, regardless of the user-sp
 +-------------------------------------------------------------------+--------+---------------+
 ; Clock                                                             ; Slack  ; End Point TNS ;
 +-------------------------------------------------------------------+--------+---------------+
-; CPU:inst|CPU_regN:inst|internal_reg[0]                            ; -1.796 ; -12.412       ;
-; CPU:inst|CU_counter:inst25|counter_reg[0]                         ; -0.953 ; -4.570        ;
-; clk_50                                                            ; -0.303 ; -1.017        ;
+; CPU:inst|CPU_regN:inst|internal_reg[0]                            ; -2.038 ; -11.565       ;
+; CPU:inst|CU_counter:inst25|counter_reg[0]                         ; -1.867 ; -11.505       ;
+; clk_50                                                            ; -0.505 ; -2.905        ;
+; VGA_controller:inst6|t_ff:inst|q                                  ; 0.049  ; 0.000         ;
+; sw_rst                                                            ; 0.315  ; 0.000         ;
+; VGA_controller:inst6|clk_divN:inst15|counter[17]                  ; 0.337  ; 0.000         ;
 ; PS2_CLK                                                           ; 0.375  ; 0.000         ;
-; UART:inst44|uart_controller:inst1|bsy                             ; 0.403  ; 0.000         ;
-; VGA_controller:inst6|t_ff:inst|q                                  ; 0.410  ; 0.000         ;
-; UART:inst44|uart_clk_divN:inst|clk_out                            ; 0.539  ; 0.000         ;
-; VGA_controller:inst6|clk_divN:inst15|counter[17]                  ; 0.540  ; 0.000         ;
-; sw_rst                                                            ; 0.561  ; 0.000         ;
-; fine_clk_divN:inst100|clk_out                                     ; 0.577  ; 0.000         ;
-; Memory:inst1|InstructionBuffer:inst6|fine_clk_divN:inst12|clk_out ; 0.580  ; 0.000         ;
-; PS2controller:inst3|ps2_controller:inst1|bsy                      ; 4.327  ; 0.000         ;
+; fine_clk_divN:inst100|clk_out                                     ; 0.458  ; 0.000         ;
+; Memory:inst1|InstructionBuffer:inst6|fine_clk_divN:inst12|clk_out ; 0.473  ; 0.000         ;
+; UART:inst44|uart_controller:inst1|bsy                             ; 0.546  ; 0.000         ;
+; UART:inst44|uart_clk_divN:inst|clk_out                            ; 0.880  ; 0.000         ;
+; PS2controller:inst3|ps2_controller:inst1|bsy                      ; 4.863  ; 0.000         ;
 +-------------------------------------------------------------------+--------+---------------+
 
 
@@ -322,12 +322,12 @@ This panel reports FMAX for every clock in the design, regardless of the user-sp
 +-------------------------------------------------------------------+--------+---------------+
 ; Clock                                                             ; Slack  ; End Point TNS ;
 +-------------------------------------------------------------------+--------+---------------+
-; UART:inst44|uart_clk_divN:inst|clk_out                            ; -6.750 ; -133.165      ;
-; UART:inst44|uart_controller:inst1|bsy                             ; -4.683 ; -34.670       ;
-; PS2controller:inst3|ps2_controller:inst1|bsy                      ; -4.471 ; -32.815       ;
-; clk_50                                                            ; -4.284 ; -268.641      ;
-; Memory:inst1|InstructionBuffer:inst6|fine_clk_divN:inst12|clk_out ; -4.105 ; -20262.358    ;
-; PS2_CLK                                                           ; -3.569 ; -55.067       ;
+; UART:inst44|uart_clk_divN:inst|clk_out                            ; -5.991 ; -105.846      ;
+; PS2controller:inst3|ps2_controller:inst1|bsy                      ; -4.437 ; -33.644       ;
+; clk_50                                                            ; -4.190 ; -262.517      ;
+; UART:inst44|uart_controller:inst1|bsy                             ; -3.881 ; -29.869       ;
+; Memory:inst1|InstructionBuffer:inst6|fine_clk_divN:inst12|clk_out ; -3.666 ; -18362.403    ;
+; PS2_CLK                                                           ; -3.012 ; -41.064       ;
 +-------------------------------------------------------------------+--------+---------------+
 
 
@@ -336,12 +336,12 @@ This panel reports FMAX for every clock in the design, regardless of the user-sp
 +-------------------------------------------------------------------+--------+---------------+
 ; Clock                                                             ; Slack  ; End Point TNS ;
 +-------------------------------------------------------------------+--------+---------------+
-; PS2_CLK                                                           ; -2.415 ; -48.276       ;
-; Memory:inst1|InstructionBuffer:inst6|fine_clk_divN:inst12|clk_out ; -0.479 ; -2153.523     ;
-; clk_50                                                            ; 1.608  ; 0.000         ;
-; UART:inst44|uart_controller:inst1|bsy                             ; 2.436  ; 0.000         ;
-; PS2controller:inst3|ps2_controller:inst1|bsy                      ; 2.450  ; 0.000         ;
-; UART:inst44|uart_clk_divN:inst|clk_out                            ; 3.496  ; 0.000         ;
+; PS2_CLK                                                           ; -2.954 ; -53.151       ;
+; Memory:inst1|InstructionBuffer:inst6|fine_clk_divN:inst12|clk_out ; -0.993 ; -4810.349     ;
+; clk_50                                                            ; 1.520  ; 0.000         ;
+; UART:inst44|uart_controller:inst1|bsy                             ; 1.678  ; 0.000         ;
+; PS2controller:inst3|ps2_controller:inst1|bsy                      ; 2.368  ; 0.000         ;
+; UART:inst44|uart_clk_divN:inst|clk_out                            ; 2.684  ; 0.000         ;
 +-------------------------------------------------------------------+--------+---------------+
 
 
@@ -350,18 +350,18 @@ This panel reports FMAX for every clock in the design, regardless of the user-sp
 +-------------------------------------------------------------------+--------+---------------+
 ; Clock                                                             ; Slack  ; End Point TNS ;
 +-------------------------------------------------------------------+--------+---------------+
-; CPU:inst|CPU_regN:inst|internal_reg[0]                            ; -3.607 ; -4962.051     ;
-; clk_50                                                            ; -2.225 ; -2912.975     ;
-; fine_clk_divN:inst100|clk_out                                     ; -0.658 ; -443.233      ;
-; Memory:inst1|InstructionBuffer:inst6|fine_clk_divN:inst12|clk_out ; -0.538 ; -4106.038     ;
-; VGA_controller:inst6|t_ff:inst|q                                  ; -0.538 ; -66.043       ;
-; VGA_controller:inst6|clk_divN:inst15|counter[17]                  ; -0.538 ; -17.413       ;
-; PS2_CLK                                                           ; -0.538 ; -16.377       ;
-; UART:inst44|uart_clk_divN:inst|clk_out                            ; -0.538 ; -15.914       ;
-; PS2controller:inst3|ps2_controller:inst1|bsy                      ; -0.538 ; -6.646        ;
-; CPU:inst|CU_counter:inst25|counter_reg[0]                         ; -0.423 ; -137.049      ;
-; sw_rst                                                            ; 0.187  ; 0.000         ;
-; UART:inst44|uart_controller:inst1|bsy                             ; 0.371  ; 0.000         ;
+; CPU:inst|CPU_regN:inst|internal_reg[0]                            ; -2.427 ; -2897.427     ;
+; clk_50                                                            ; -2.225 ; -2913.721     ;
+; fine_clk_divN:inst100|clk_out                                     ; -0.642 ; -455.769      ;
+; PS2_CLK                                                           ; -0.577 ; -15.130       ;
+; Memory:inst1|InstructionBuffer:inst6|fine_clk_divN:inst12|clk_out ; -0.538 ; -4376.321     ;
+; VGA_controller:inst6|t_ff:inst|q                                  ; -0.538 ; -71.721       ;
+; VGA_controller:inst6|clk_divN:inst15|counter[17]                  ; -0.538 ; -18.310       ;
+; UART:inst44|uart_clk_divN:inst|clk_out                            ; -0.538 ; -16.288       ;
+; PS2controller:inst3|ps2_controller:inst1|bsy                      ; -0.538 ; -6.595        ;
+; CPU:inst|CU_counter:inst25|counter_reg[0]                         ; -0.164 ; -0.825        ;
+; UART:inst44|uart_controller:inst1|bsy                             ; 0.319  ; 0.000         ;
+; sw_rst                                                            ; 0.376  ; 0.000         ;
 +-------------------------------------------------------------------+--------+---------------+
 
 
@@ -376,18 +376,18 @@ No synchronizer chains to report.
 +-------------------------------------------------------------------+--------+---------------+
 ; Clock                                                             ; Slack  ; End Point TNS ;
 +-------------------------------------------------------------------+--------+---------------+
-; CPU:inst|CU_counter:inst25|counter_reg[0]                         ; -8.405 ; -1324.249     ;
-; clk_50                                                            ; -7.822 ; -8910.849     ;
-; Memory:inst1|InstructionBuffer:inst6|fine_clk_divN:inst12|clk_out ; -4.825 ; -13819.000    ;
-; CPU:inst|CPU_regN:inst|internal_reg[0]                            ; -4.332 ; -1694.465     ;
-; PS2controller:inst3|ps2_controller:inst1|bsy                      ; -4.139 ; -32.705       ;
-; sw_rst                                                            ; -3.142 ; -3.142        ;
-; fine_clk_divN:inst100|clk_out                                     ; -2.597 ; -888.494      ;
-; VGA_controller:inst6|clk_divN:inst15|counter[17]                  ; -2.487 ; -54.379       ;
-; VGA_controller:inst6|t_ff:inst|q                                  ; -2.116 ; -140.331      ;
-; PS2_CLK                                                           ; -1.672 ; -12.832       ;
-; UART:inst44|uart_clk_divN:inst|clk_out                            ; -1.054 ; -15.246       ;
-; UART:inst44|uart_controller:inst1|bsy                             ; -0.840 ; -5.884        ;
+; CPU:inst|CU_counter:inst25|counter_reg[0]                         ; -8.729 ; -1219.705     ;
+; clk_50                                                            ; -7.067 ; -9741.634     ;
+; Memory:inst1|InstructionBuffer:inst6|fine_clk_divN:inst12|clk_out ; -4.507 ; -14186.774    ;
+; PS2controller:inst3|ps2_controller:inst1|bsy                      ; -4.473 ; -34.643       ;
+; CPU:inst|CPU_regN:inst|internal_reg[0]                            ; -3.269 ; -1289.482     ;
+; fine_clk_divN:inst100|clk_out                                     ; -2.874 ; -971.703      ;
+; VGA_controller:inst6|clk_divN:inst15|counter[17]                  ; -2.618 ; -56.303       ;
+; sw_rst                                                            ; -2.365 ; -2.365        ;
+; VGA_controller:inst6|t_ff:inst|q                                  ; -2.257 ; -150.017      ;
+; PS2_CLK                                                           ; -1.751 ; -15.575       ;
+; UART:inst44|uart_clk_divN:inst|clk_out                            ; -1.495 ; -16.394       ;
+; UART:inst44|uart_controller:inst1|bsy                             ; -1.466 ; -9.403        ;
 +-------------------------------------------------------------------+--------+---------------+
 
 
@@ -396,18 +396,18 @@ No synchronizer chains to report.
 +-------------------------------------------------------------------+--------+---------------+
 ; Clock                                                             ; Slack  ; End Point TNS ;
 +-------------------------------------------------------------------+--------+---------------+
-; CPU:inst|CPU_regN:inst|internal_reg[0]                            ; -1.056 ; -5.746        ;
-; CPU:inst|CU_counter:inst25|counter_reg[0]                         ; -0.672 ; -4.772        ;
-; clk_50                                                            ; -0.103 ; -0.642        ;
-; VGA_controller:inst6|t_ff:inst|q                                  ; -0.101 ; -0.378        ;
-; fine_clk_divN:inst100|clk_out                                     ; 0.047  ; 0.000         ;
-; UART:inst44|uart_controller:inst1|bsy                             ; 0.118  ; 0.000         ;
-; VGA_controller:inst6|clk_divN:inst15|counter[17]                  ; 0.154  ; 0.000         ;
+; CPU:inst|CU_counter:inst25|counter_reg[0]                         ; -1.016 ; -8.507        ;
+; CPU:inst|CPU_regN:inst|internal_reg[0]                            ; -0.935 ; -6.231        ;
+; VGA_controller:inst6|t_ff:inst|q                                  ; -0.188 ; -1.688        ;
+; clk_50                                                            ; -0.168 ; -2.076        ;
+; fine_clk_divN:inst100|clk_out                                     ; -0.104 ; -0.200        ;
+; VGA_controller:inst6|clk_divN:inst15|counter[17]                  ; 0.086  ; 0.000         ;
 ; PS2_CLK                                                           ; 0.157  ; 0.000         ;
-; Memory:inst1|InstructionBuffer:inst6|fine_clk_divN:inst12|clk_out ; 0.210  ; 0.000         ;
-; UART:inst44|uart_clk_divN:inst|clk_out                            ; 0.268  ; 0.000         ;
-; sw_rst                                                            ; 0.952  ; 0.000         ;
-; PS2controller:inst3|ps2_controller:inst1|bsy                      ; 2.742  ; 0.000         ;
+; Memory:inst1|InstructionBuffer:inst6|fine_clk_divN:inst12|clk_out ; 0.178  ; 0.000         ;
+; UART:inst44|uart_controller:inst1|bsy                             ; 0.361  ; 0.000         ;
+; UART:inst44|uart_clk_divN:inst|clk_out                            ; 0.436  ; 0.000         ;
+; sw_rst                                                            ; 0.662  ; 0.000         ;
+; PS2controller:inst3|ps2_controller:inst1|bsy                      ; 3.060  ; 0.000         ;
 +-------------------------------------------------------------------+--------+---------------+
 
 
@@ -416,12 +416,12 @@ No synchronizer chains to report.
 +-------------------------------------------------------------------+--------+---------------+
 ; Clock                                                             ; Slack  ; End Point TNS ;
 +-------------------------------------------------------------------+--------+---------------+
-; UART:inst44|uart_clk_divN:inst|clk_out                            ; -3.087 ; -60.735       ;
-; PS2controller:inst3|ps2_controller:inst1|bsy                      ; -2.592 ; -18.866       ;
-; clk_50                                                            ; -2.237 ; -140.409      ;
-; UART:inst44|uart_controller:inst1|bsy                             ; -2.072 ; -15.250       ;
-; Memory:inst1|InstructionBuffer:inst6|fine_clk_divN:inst12|clk_out ; -2.016 ; -9948.140     ;
-; PS2_CLK                                                           ; -1.962 ; -11.987       ;
+; UART:inst44|uart_clk_divN:inst|clk_out                            ; -2.586 ; -45.164       ;
+; PS2controller:inst3|ps2_controller:inst1|bsy                      ; -2.284 ; -17.258       ;
+; clk_50                                                            ; -2.217 ; -138.848      ;
+; Memory:inst1|InstructionBuffer:inst6|fine_clk_divN:inst12|clk_out ; -1.782 ; -8909.447     ;
+; UART:inst44|uart_controller:inst1|bsy                             ; -1.464 ; -11.143       ;
+; PS2_CLK                                                           ; -1.337 ; -5.212        ;
 +-------------------------------------------------------------------+--------+---------------+
 
 
@@ -430,12 +430,12 @@ No synchronizer chains to report.
 +-------------------------------------------------------------------+--------+---------------+
 ; Clock                                                             ; Slack  ; End Point TNS ;
 +-------------------------------------------------------------------+--------+---------------+
-; PS2_CLK                                                           ; -1.106 ; -22.085       ;
-; Memory:inst1|InstructionBuffer:inst6|fine_clk_divN:inst12|clk_out ; -0.354 ; -1641.389     ;
-; clk_50                                                            ; 0.694  ; 0.000         ;
-; PS2controller:inst3|ps2_controller:inst1|bsy                      ; 1.048  ; 0.000         ;
-; UART:inst44|uart_controller:inst1|bsy                             ; 1.474  ; 0.000         ;
-; UART:inst44|uart_clk_divN:inst|clk_out                            ; 2.060  ; 0.000         ;
+; PS2_CLK                                                           ; -1.461 ; -26.266       ;
+; Memory:inst1|InstructionBuffer:inst6|fine_clk_divN:inst12|clk_out ; -0.647 ; -3147.211     ;
+; clk_50                                                            ; 0.674  ; 0.000         ;
+; PS2controller:inst3|ps2_controller:inst1|bsy                      ; 0.937  ; 0.000         ;
+; UART:inst44|uart_controller:inst1|bsy                             ; 1.074  ; 0.000         ;
+; UART:inst44|uart_clk_divN:inst|clk_out                            ; 1.490  ; 0.000         ;
 +-------------------------------------------------------------------+--------+---------------+
 
 
@@ -444,18 +444,18 @@ No synchronizer chains to report.
 +-------------------------------------------------------------------+--------+---------------+
 ; Clock                                                             ; Slack  ; End Point TNS ;
 +-------------------------------------------------------------------+--------+---------------+
-; CPU:inst|CPU_regN:inst|internal_reg[0]                            ; -1.927 ; -2095.225     ;
-; clk_50                                                            ; -1.702 ; -341.812      ;
-; PS2_CLK                                                           ; -0.416 ; -3.637        ;
-; fine_clk_divN:inst100|clk_out                                     ; -0.310 ; -35.530       ;
-; CPU:inst|CU_counter:inst25|counter_reg[0]                         ; -0.214 ; -34.239       ;
-; sw_rst                                                            ; -0.098 ; -0.189        ;
-; PS2controller:inst3|ps2_controller:inst1|bsy                      ; -0.044 ; -0.044        ;
-; VGA_controller:inst6|t_ff:inst|q                                  ; 0.004  ; 0.000         ;
-; Memory:inst1|InstructionBuffer:inst6|fine_clk_divN:inst12|clk_out ; 0.036  ; 0.000         ;
-; VGA_controller:inst6|clk_divN:inst15|counter[17]                  ; 0.049  ; 0.000         ;
-; UART:inst44|uart_clk_divN:inst|clk_out                            ; 0.072  ; 0.000         ;
-; UART:inst44|uart_controller:inst1|bsy                             ; 0.414  ; 0.000         ;
+; clk_50                                                            ; -1.702 ; -342.234      ;
+; CPU:inst|CPU_regN:inst|internal_reg[0]                            ; -0.967 ; -714.723      ;
+; PS2_CLK                                                           ; -0.560 ; -5.783        ;
+; fine_clk_divN:inst100|clk_out                                     ; -0.287 ; -43.430       ;
+; VGA_controller:inst6|t_ff:inst|q                                  ; -0.134 ; -3.443        ;
+; UART:inst44|uart_clk_divN:inst|clk_out                            ; -0.117 ; -1.876        ;
+; CPU:inst|CU_counter:inst25|counter_reg[0]                         ; -0.077 ; -0.231        ;
+; Memory:inst1|InstructionBuffer:inst6|fine_clk_divN:inst12|clk_out ; -0.064 ; -265.357      ;
+; VGA_controller:inst6|clk_divN:inst15|counter[17]                  ; -0.023 ; -0.243        ;
+; PS2controller:inst3|ps2_controller:inst1|bsy                      ; -0.011 ; -0.022        ;
+; sw_rst                                                            ; 0.042  ; 0.000         ;
+; UART:inst44|uart_controller:inst1|bsy                             ; 0.380  ; 0.000         ;
 +-------------------------------------------------------------------+--------+---------------+
 
 
@@ -470,18 +470,18 @@ No synchronizer chains to report.
 +-------------------------------------------------------------------+--------+---------------+
 ; Clock                                                             ; Slack  ; End Point TNS ;
 +-------------------------------------------------------------------+--------+---------------+
-; CPU:inst|CU_counter:inst25|counter_reg[0]                         ; -7.531 ; -1217.497     ;
-; clk_50                                                            ; -6.798 ; -7730.412     ;
-; Memory:inst1|InstructionBuffer:inst6|fine_clk_divN:inst12|clk_out ; -4.179 ; -11776.016    ;
-; PS2controller:inst3|ps2_controller:inst1|bsy                      ; -4.078 ; -32.225       ;
-; CPU:inst|CPU_regN:inst|internal_reg[0]                            ; -3.903 ; -1559.287     ;
-; sw_rst                                                            ; -2.615 ; -2.615        ;
-; fine_clk_divN:inst100|clk_out                                     ; -2.458 ; -859.135      ;
-; VGA_controller:inst6|clk_divN:inst15|counter[17]                  ; -2.362 ; -51.350       ;
-; VGA_controller:inst6|t_ff:inst|q                                  ; -1.930 ; -135.740      ;
-; PS2_CLK                                                           ; -1.621 ; -10.078       ;
-; UART:inst44|uart_clk_divN:inst|clk_out                            ; -0.852 ; -12.678       ;
-; UART:inst44|uart_controller:inst1|bsy                             ; -0.699 ; -4.969        ;
+; CPU:inst|CU_counter:inst25|counter_reg[0]                         ; -7.824 ; -1112.153     ;
+; clk_50                                                            ; -6.344 ; -8444.591     ;
+; PS2controller:inst3|ps2_controller:inst1|bsy                      ; -4.352 ; -33.843       ;
+; Memory:inst1|InstructionBuffer:inst6|fine_clk_divN:inst12|clk_out ; -3.949 ; -11974.406    ;
+; CPU:inst|CPU_regN:inst|internal_reg[0]                            ; -2.953 ; -1213.370     ;
+; fine_clk_divN:inst100|clk_out                                     ; -2.667 ; -928.671      ;
+; VGA_controller:inst6|clk_divN:inst15|counter[17]                  ; -2.480 ; -53.378       ;
+; VGA_controller:inst6|t_ff:inst|q                                  ; -2.094 ; -143.963      ;
+; sw_rst                                                            ; -1.939 ; -1.939        ;
+; PS2_CLK                                                           ; -1.712 ; -12.776       ;
+; UART:inst44|uart_clk_divN:inst|clk_out                            ; -1.288 ; -13.675       ;
+; UART:inst44|uart_controller:inst1|bsy                             ; -1.238 ; -7.869        ;
 +-------------------------------------------------------------------+--------+---------------+
 
 
@@ -490,18 +490,18 @@ No synchronizer chains to report.
 +-------------------------------------------------------------------+--------+---------------+
 ; Clock                                                             ; Slack  ; End Point TNS ;
 +-------------------------------------------------------------------+--------+---------------+
-; CPU:inst|CPU_regN:inst|internal_reg[0]                            ; -0.838 ; -4.245        ;
-; CPU:inst|CU_counter:inst25|counter_reg[0]                         ; -0.482 ; -2.616        ;
-; clk_50                                                            ; -0.374 ; -31.508       ;
-; VGA_controller:inst6|t_ff:inst|q                                  ; -0.129 ; -0.813        ;
-; fine_clk_divN:inst100|clk_out                                     ; -0.013 ; -0.013        ;
-; UART:inst44|uart_controller:inst1|bsy                             ; 0.059  ; 0.000         ;
-; VGA_controller:inst6|clk_divN:inst15|counter[17]                  ; 0.141  ; 0.000         ;
+; CPU:inst|CU_counter:inst25|counter_reg[0]                         ; -0.823 ; -5.916        ;
+; CPU:inst|CPU_regN:inst|internal_reg[0]                            ; -0.701 ; -4.029        ;
+; clk_50                                                            ; -0.366 ; -48.000       ;
+; VGA_controller:inst6|t_ff:inst|q                                  ; -0.225 ; -2.205        ;
+; fine_clk_divN:inst100|clk_out                                     ; -0.132 ; -0.400        ;
+; VGA_controller:inst6|clk_divN:inst15|counter[17]                  ; 0.075  ; 0.000         ;
 ; PS2_CLK                                                           ; 0.165  ; 0.000         ;
-; Memory:inst1|InstructionBuffer:inst6|fine_clk_divN:inst12|clk_out ; 0.202  ; 0.000         ;
-; UART:inst44|uart_clk_divN:inst|clk_out                            ; 0.255  ; 0.000         ;
-; sw_rst                                                            ; 0.706  ; 0.000         ;
-; PS2controller:inst3|ps2_controller:inst1|bsy                      ; 2.737  ; 0.000         ;
+; Memory:inst1|InstructionBuffer:inst6|fine_clk_divN:inst12|clk_out ; 0.170  ; 0.000         ;
+; UART:inst44|uart_controller:inst1|bsy                             ; 0.256  ; 0.000         ;
+; sw_rst                                                            ; 0.382  ; 0.000         ;
+; UART:inst44|uart_clk_divN:inst|clk_out                            ; 0.401  ; 0.000         ;
+; PS2controller:inst3|ps2_controller:inst1|bsy                      ; 3.021  ; 0.000         ;
 +-------------------------------------------------------------------+--------+---------------+
 
 
@@ -510,12 +510,12 @@ No synchronizer chains to report.
 +-------------------------------------------------------------------+--------+---------------+
 ; Clock                                                             ; Slack  ; End Point TNS ;
 +-------------------------------------------------------------------+--------+---------------+
-; UART:inst44|uart_clk_divN:inst|clk_out                            ; -3.041 ; -60.017       ;
-; PS2controller:inst3|ps2_controller:inst1|bsy                      ; -2.418 ; -17.747       ;
-; clk_50                                                            ; -2.172 ; -136.294      ;
-; Memory:inst1|InstructionBuffer:inst6|fine_clk_divN:inst12|clk_out ; -2.018 ; -9962.059     ;
-; UART:inst44|uart_controller:inst1|bsy                             ; -1.927 ; -14.235       ;
-; PS2_CLK                                                           ; -1.584 ; -10.758       ;
+; UART:inst44|uart_clk_divN:inst|clk_out                            ; -2.622 ; -45.859       ;
+; PS2controller:inst3|ps2_controller:inst1|bsy                      ; -2.152 ; -16.311       ;
+; clk_50                                                            ; -2.141 ; -134.171      ;
+; Memory:inst1|InstructionBuffer:inst6|fine_clk_divN:inst12|clk_out ; -1.814 ; -9089.772     ;
+; UART:inst44|uart_controller:inst1|bsy                             ; -1.416 ; -10.843       ;
+; PS2_CLK                                                           ; -1.035 ; -4.847        ;
 +-------------------------------------------------------------------+--------+---------------+
 
 
@@ -524,12 +524,12 @@ No synchronizer chains to report.
 +-------------------------------------------------------------------+--------+---------------+
 ; Clock                                                             ; Slack  ; End Point TNS ;
 +-------------------------------------------------------------------+--------+---------------+
-; PS2_CLK                                                           ; -1.122 ; -22.418       ;
-; Memory:inst1|InstructionBuffer:inst6|fine_clk_divN:inst12|clk_out ; -0.328 ; -1525.778     ;
-; clk_50                                                            ; 0.646  ; 0.000         ;
-; PS2controller:inst3|ps2_controller:inst1|bsy                      ; 1.004  ; 0.000         ;
-; UART:inst44|uart_controller:inst1|bsy                             ; 1.400  ; 0.000         ;
-; UART:inst44|uart_clk_divN:inst|clk_out                            ; 2.077  ; 0.000         ;
+; PS2_CLK                                                           ; -1.430 ; -25.720       ;
+; Memory:inst1|InstructionBuffer:inst6|fine_clk_divN:inst12|clk_out ; -0.564 ; -2751.264     ;
+; clk_50                                                            ; 0.629  ; 0.000         ;
+; PS2controller:inst3|ps2_controller:inst1|bsy                      ; 0.886  ; 0.000         ;
+; UART:inst44|uart_controller:inst1|bsy                             ; 1.074  ; 0.000         ;
+; UART:inst44|uart_clk_divN:inst|clk_out                            ; 1.575  ; 0.000         ;
 +-------------------------------------------------------------------+--------+---------------+
 
 
@@ -538,18 +538,18 @@ No synchronizer chains to report.
 +-------------------------------------------------------------------+--------+---------------+
 ; Clock                                                             ; Slack  ; End Point TNS ;
 +-------------------------------------------------------------------+--------+---------------+
-; clk_50                                                            ; -1.702 ; -350.978      ;
-; CPU:inst|CPU_regN:inst|internal_reg[0]                            ; -1.640 ; -1792.679     ;
-; PS2_CLK                                                           ; -0.454 ; -3.773        ;
-; fine_clk_divN:inst100|clk_out                                     ; -0.199 ; -15.494       ;
-; sw_rst                                                            ; -0.104 ; -0.193        ;
-; CPU:inst|CU_counter:inst25|counter_reg[0]                         ; -0.087 ; -2.084        ;
-; PS2controller:inst3|ps2_controller:inst1|bsy                      ; -0.010 ; -0.010        ;
-; VGA_controller:inst6|t_ff:inst|q                                  ; 0.043  ; 0.000         ;
-; Memory:inst1|InstructionBuffer:inst6|fine_clk_divN:inst12|clk_out ; 0.076  ; 0.000         ;
-; VGA_controller:inst6|clk_divN:inst15|counter[17]                  ; 0.079  ; 0.000         ;
-; UART:inst44|uart_clk_divN:inst|clk_out                            ; 0.080  ; 0.000         ;
-; UART:inst44|uart_controller:inst1|bsy                             ; 0.424  ; 0.000         ;
+; clk_50                                                            ; -1.702 ; -351.417      ;
+; CPU:inst|CPU_regN:inst|internal_reg[0]                            ; -0.830 ; -578.727      ;
+; PS2_CLK                                                           ; -0.527 ; -5.299        ;
+; fine_clk_divN:inst100|clk_out                                     ; -0.196 ; -21.405       ;
+; UART:inst44|uart_clk_divN:inst|clk_out                            ; -0.077 ; -1.171        ;
+; VGA_controller:inst6|t_ff:inst|q                                  ; -0.062 ; -0.855        ;
+; Memory:inst1|InstructionBuffer:inst6|fine_clk_divN:inst12|clk_out ; -0.016 ; -26.496       ;
+; VGA_controller:inst6|clk_divN:inst15|counter[17]                  ; 0.017  ; 0.000         ;
+; PS2controller:inst3|ps2_controller:inst1|bsy                      ; 0.026  ; 0.000         ;
+; sw_rst                                                            ; 0.034  ; 0.000         ;
+; CPU:inst|CU_counter:inst25|counter_reg[0]                         ; 0.041  ; 0.000         ;
+; UART:inst44|uart_controller:inst1|bsy                             ; 0.398  ; 0.000         ;
 +-------------------------------------------------------------------+--------+---------------+
 
 
@@ -564,32 +564,32 @@ No synchronizer chains to report.
 +--------------------------------------------------------------------+------------+---------+------------+-----------+---------------------+
 ; Clock                                                              ; Setup      ; Hold    ; Recovery   ; Removal   ; Minimum Pulse Width ;
 +--------------------------------------------------------------------+------------+---------+------------+-----------+---------------------+
-; Worst-case Slack                                                   ; -15.511    ; -2.014  ; -6.782     ; -2.555    ; -3.773              ;
-;  CPU:inst|CPU_regN:inst|internal_reg[0]                            ; -7.791     ; -2.014  ; N/A        ; N/A       ; -3.773              ;
-;  CPU:inst|CU_counter:inst25|counter_reg[0]                         ; -15.511    ; -1.057  ; N/A        ; N/A       ; -0.423              ;
-;  Memory:inst1|InstructionBuffer:inst6|fine_clk_divN:inst12|clk_out ; -8.022     ; 0.202   ; -4.177     ; -0.537    ; -0.538              ;
-;  PS2_CLK                                                           ; -4.395     ; 0.157   ; -3.687     ; -2.555    ; -0.538              ;
-;  PS2controller:inst3|ps2_controller:inst1|bsy                      ; -7.855     ; 2.737   ; -4.471     ; 1.004     ; -0.538              ;
-;  UART:inst44|uart_clk_divN:inst|clk_out                            ; -2.651     ; 0.255   ; -6.782     ; 2.060     ; -0.538              ;
-;  UART:inst44|uart_controller:inst1|bsy                             ; -2.689     ; 0.059   ; -4.699     ; 1.400     ; 0.371               ;
-;  VGA_controller:inst6|clk_divN:inst15|counter[17]                  ; -5.585     ; 0.141   ; N/A        ; N/A       ; -0.538              ;
-;  VGA_controller:inst6|t_ff:inst|q                                  ; -5.128     ; -0.129  ; N/A        ; N/A       ; -0.538              ;
-;  clk_50                                                            ; -15.501    ; -0.374  ; -4.466     ; 0.646     ; -2.225              ;
-;  fine_clk_divN:inst100|clk_out                                     ; -4.660     ; -0.013  ; N/A        ; N/A       ; -0.694              ;
-;  sw_rst                                                            ; -4.389     ; 0.561   ; N/A        ; N/A       ; -0.104              ;
-; Design-wide TNS                                                    ; -53656.769 ; -39.195 ; -21106.847 ; -2496.959 ; -12747.336          ;
-;  CPU:inst|CPU_regN:inst|internal_reg[0]                            ; -3440.438  ; -15.642 ; N/A        ; N/A       ; -5119.219           ;
-;  CPU:inst|CU_counter:inst25|counter_reg[0]                         ; -3019.502  ; -5.521  ; N/A        ; N/A       ; -137.049            ;
-;  Memory:inst1|InstructionBuffer:inst6|fine_clk_divN:inst12|clk_out ; -26792.524 ; 0.000   ; -20572.191 ; -2445.883 ; -4129.102           ;
-;  PS2_CLK                                                           ; -45.554    ; 0.000   ; -55.067    ; -51.076   ; -16.401             ;
-;  PS2controller:inst3|ps2_controller:inst1|bsy                      ; -61.852    ; 0.000   ; -32.815    ; 0.000     ; -6.748              ;
-;  UART:inst44|uart_clk_divN:inst|clk_out                            ; -47.231    ; 0.000   ; -133.326   ; 0.000     ; -15.933             ;
-;  UART:inst44|uart_controller:inst1|bsy                             ; -19.324    ; 0.000   ; -34.670    ; 0.000     ; 0.000               ;
-;  VGA_controller:inst6|clk_divN:inst15|counter[17]                  ; -120.928   ; 0.000   ; N/A        ; N/A       ; -17.512             ;
-;  VGA_controller:inst6|t_ff:inst|q                                  ; -265.719   ; -0.813  ; N/A        ; N/A       ; -66.923             ;
-;  clk_50                                                            ; -18401.922 ; -31.508 ; -280.455   ; 0.000     ; -2912.975           ;
-;  fine_clk_divN:inst100|clk_out                                     ; -1552.015  ; -0.013  ; N/A        ; N/A       ; -451.099            ;
-;  sw_rst                                                            ; -4.389     ; 0.000   ; N/A        ; N/A       ; -0.193              ;
+; Worst-case Slack                                                   ; -16.129    ; -2.129  ; -5.991     ; -3.115    ; -2.427              ;
+;  CPU:inst|CPU_regN:inst|internal_reg[0]                            ; -6.417     ; -2.129  ; N/A        ; N/A       ; -2.427              ;
+;  CPU:inst|CU_counter:inst25|counter_reg[0]                         ; -16.129    ; -1.976  ; N/A        ; N/A       ; -0.199              ;
+;  Memory:inst1|InstructionBuffer:inst6|fine_clk_divN:inst12|clk_out ; -7.699     ; 0.170   ; -3.678     ; -1.126    ; -0.538              ;
+;  PS2_CLK                                                           ; -4.691     ; 0.157   ; -3.106     ; -3.115    ; -0.577              ;
+;  PS2controller:inst3|ps2_controller:inst1|bsy                      ; -8.363     ; 3.021   ; -4.437     ; 0.886     ; -0.538              ;
+;  UART:inst44|uart_clk_divN:inst|clk_out                            ; -3.478     ; 0.401   ; -5.991     ; 1.490     ; -0.538              ;
+;  UART:inst44|uart_controller:inst1|bsy                             ; -3.308     ; 0.256   ; -3.881     ; 1.074     ; 0.319               ;
+;  VGA_controller:inst6|clk_divN:inst15|counter[17]                  ; -5.361     ; 0.075   ; N/A        ; N/A       ; -0.538              ;
+;  VGA_controller:inst6|t_ff:inst|q                                  ; -5.121     ; -0.225  ; N/A        ; N/A       ; -0.538              ;
+;  clk_50                                                            ; -14.423    ; -0.505  ; -4.376     ; 0.629     ; -2.225              ;
+;  fine_clk_divN:inst100|clk_out                                     ; -4.597     ; -0.132  ; N/A        ; N/A       ; -0.677              ;
+;  sw_rst                                                            ; -3.676     ; 0.315   ; N/A        ; N/A       ; 0.034               ;
+; Design-wide TNS                                                    ; -54719.375 ; -60.55  ; -18844.183 ; -5508.702 ; -10918.926          ;
+;  CPU:inst|CPU_regN:inst|internal_reg[0]                            ; -2784.659  ; -13.164 ; N/A        ; N/A       ; -2897.427           ;
+;  CPU:inst|CU_counter:inst25|counter_reg[0]                         ; -2760.351  ; -13.426 ; N/A        ; N/A       ; -0.939              ;
+;  Memory:inst1|InstructionBuffer:inst6|fine_clk_divN:inst12|clk_out ; -27584.110 ; 0.000   ; -18362.403 ; -5452.656 ; -4723.644           ;
+;  PS2_CLK                                                           ; -48.050    ; 0.000   ; -41.064    ; -56.046   ; -16.164             ;
+;  PS2controller:inst3|ps2_controller:inst1|bsy                      ; -64.993    ; 0.000   ; -33.644    ; 0.000     ; -6.693              ;
+;  UART:inst44|uart_clk_divN:inst|clk_out                            ; -43.739    ; 0.000   ; -105.850   ; 0.000     ; -16.288             ;
+;  UART:inst44|uart_controller:inst1|bsy                             ; -23.259    ; 0.000   ; -29.869    ; 0.000     ; 0.000               ;
+;  VGA_controller:inst6|clk_divN:inst15|counter[17]                  ; -115.824   ; 0.000   ; N/A        ; N/A       ; -18.622             ;
+;  VGA_controller:inst6|t_ff:inst|q                                  ; -271.561   ; -2.205  ; N/A        ; N/A       ; -73.435             ;
+;  clk_50                                                            ; -19547.067 ; -48.000 ; -274.209   ; 0.000     ; -2913.721           ;
+;  fine_clk_divN:inst100|clk_out                                     ; -1656.526  ; -0.400  ; N/A        ; N/A       ; -464.449            ;
+;  sw_rst                                                            ; -3.676     ; 0.000   ; N/A        ; N/A       ; 0.000               ;
 +--------------------------------------------------------------------+------------+---------+------------+-----------+---------------------+
 
 
@@ -802,7 +802,7 @@ No synchronizer chains to report.
 ; mmr_strip_C ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 1.88e-07 V                   ; 2.35 V              ; -0.0185 V           ; 0.153 V                              ; 0.099 V                              ; 4.6e-10 s                   ; 4.48e-10 s                  ; No                         ; Yes                        ; 2.32 V                      ; 1.88e-07 V                  ; 2.35 V             ; -0.0185 V          ; 0.153 V                             ; 0.099 V                             ; 4.6e-10 s                  ; 4.48e-10 s                 ; No                        ; Yes                       ;
 ; mmr_strip_A ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 2.15e-07 V                   ; 2.41 V              ; -0.0492 V           ; 0.181 V                              ; 0.116 V                              ; 4.54e-10 s                  ; 4.44e-10 s                  ; No                         ; Yes                        ; 2.32 V                      ; 2.15e-07 V                  ; 2.41 V             ; -0.0492 V          ; 0.181 V                             ; 0.116 V                             ; 4.54e-10 s                 ; 4.44e-10 s                 ; No                        ; Yes                       ;
 ; mmr_strip_F ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 1.88e-07 V                   ; 2.35 V              ; -0.0185 V           ; 0.153 V                              ; 0.099 V                              ; 4.6e-10 s                   ; 4.48e-10 s                  ; No                         ; Yes                        ; 2.32 V                      ; 1.88e-07 V                  ; 2.35 V             ; -0.0185 V          ; 0.153 V                             ; 0.099 V                             ; 4.6e-10 s                  ; 4.48e-10 s                 ; No                        ; Yes                       ;
-; mmr_strip_J ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 2.15e-07 V                   ; 2.41 V              ; -0.0495 V           ; 0.18 V                               ; 0.115 V                              ; 4.54e-10 s                  ; 4.44e-10 s                  ; No                         ; Yes                        ; 2.32 V                      ; 2.15e-07 V                  ; 2.41 V             ; -0.0495 V          ; 0.18 V                              ; 0.115 V                             ; 4.54e-10 s                 ; 4.44e-10 s                 ; No                        ; Yes                       ;
+; mmr_strip_J ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 2.19e-07 V                   ; 2.4 V               ; -0.039 V            ; 0.21 V                               ; 0.145 V                              ; 4.67e-10 s                  ; 4.63e-10 s                  ; No                         ; Yes                        ; 2.32 V                      ; 2.19e-07 V                  ; 2.4 V              ; -0.039 V           ; 0.21 V                              ; 0.145 V                             ; 4.67e-10 s                 ; 4.63e-10 s                 ; No                        ; Yes                       ;
 ; mmr_strip_G ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 2.15e-07 V                   ; 2.41 V              ; -0.0495 V           ; 0.18 V                               ; 0.115 V                              ; 4.54e-10 s                  ; 4.44e-10 s                  ; No                         ; Yes                        ; 2.32 V                      ; 2.15e-07 V                  ; 2.41 V             ; -0.0495 V          ; 0.18 V                              ; 0.115 V                             ; 4.54e-10 s                 ; 4.44e-10 s                 ; No                        ; Yes                       ;
 +-------------+--------------+---------------------+---------------------+------------------------------+------------------------------+---------------------+---------------------+--------------------------------------+--------------------------------------+-----------------------------+-----------------------------+----------------------------+----------------------------+-----------------------------+-----------------------------+--------------------+--------------------+-------------------------------------+-------------------------------------+----------------------------+----------------------------+---------------------------+---------------------------+
 
@@ -900,7 +900,7 @@ No synchronizer chains to report.
 ; mmr_strip_C ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 2.27e-05 V                   ; 2.34 V              ; -0.0089 V           ; 0.206 V                              ; 0.058 V                              ; 4.97e-10 s                  ; 5.13e-10 s                  ; Yes                        ; Yes                        ; 2.32 V                      ; 2.27e-05 V                  ; 2.34 V             ; -0.0089 V          ; 0.206 V                             ; 0.058 V                             ; 4.97e-10 s                 ; 5.13e-10 s                 ; Yes                       ; Yes                       ;
 ; mmr_strip_A ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 2.52e-05 V                   ; 2.38 V              ; -0.032 V            ; 0.204 V                              ; 0.181 V                              ; 4.74e-10 s                  ; 4.85e-10 s                  ; No                         ; Yes                        ; 2.32 V                      ; 2.52e-05 V                  ; 2.38 V             ; -0.032 V           ; 0.204 V                             ; 0.181 V                             ; 4.74e-10 s                 ; 4.85e-10 s                 ; No                        ; Yes                       ;
 ; mmr_strip_F ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 2.27e-05 V                   ; 2.34 V              ; -0.0089 V           ; 0.206 V                              ; 0.058 V                              ; 4.97e-10 s                  ; 5.13e-10 s                  ; Yes                        ; Yes                        ; 2.32 V                      ; 2.27e-05 V                  ; 2.34 V             ; -0.0089 V          ; 0.206 V                             ; 0.058 V                             ; 4.97e-10 s                 ; 5.13e-10 s                 ; Yes                       ; Yes                       ;
-; mmr_strip_J ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 2.52e-05 V                   ; 2.38 V              ; -0.0315 V           ; 0.205 V                              ; 0.182 V                              ; 4.74e-10 s                  ; 4.85e-10 s                  ; No                         ; Yes                        ; 2.32 V                      ; 2.52e-05 V                  ; 2.38 V             ; -0.0315 V          ; 0.205 V                             ; 0.182 V                             ; 4.74e-10 s                 ; 4.85e-10 s                 ; No                        ; Yes                       ;
+; mmr_strip_J ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 2.56e-05 V                   ; 2.38 V              ; -0.026 V            ; 0.249 V                              ; 0.089 V                              ; 4.95e-10 s                  ; 6.01e-10 s                  ; No                         ; Yes                        ; 2.32 V                      ; 2.56e-05 V                  ; 2.38 V             ; -0.026 V           ; 0.249 V                             ; 0.089 V                             ; 4.95e-10 s                 ; 6.01e-10 s                 ; No                        ; Yes                       ;
 ; mmr_strip_G ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 2.52e-05 V                   ; 2.38 V              ; -0.0315 V           ; 0.205 V                              ; 0.182 V                              ; 4.74e-10 s                  ; 4.85e-10 s                  ; No                         ; Yes                        ; 2.32 V                      ; 2.52e-05 V                  ; 2.38 V             ; -0.0315 V          ; 0.205 V                             ; 0.182 V                             ; 4.74e-10 s                 ; 4.85e-10 s                 ; No                        ; Yes                       ;
 +-------------+--------------+---------------------+---------------------+------------------------------+------------------------------+---------------------+---------------------+--------------------------------------+--------------------------------------+-----------------------------+-----------------------------+----------------------------+----------------------------+-----------------------------+-----------------------------+--------------------+--------------------+-------------------------------------+-------------------------------------+----------------------------+----------------------------+---------------------------+---------------------------+
 
@@ -998,7 +998,7 @@ No synchronizer chains to report.
 ; mmr_strip_C ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.75 V                       ; 3.54e-06 V                   ; 2.81 V              ; -0.0578 V           ; 0.303 V                              ; 0.28 V                               ; 2.93e-10 s                  ; 3.01e-10 s                  ; No                         ; No                         ; 2.75 V                      ; 3.54e-06 V                  ; 2.81 V             ; -0.0578 V          ; 0.303 V                             ; 0.28 V                              ; 2.93e-10 s                 ; 3.01e-10 s                 ; No                        ; No                        ;
 ; mmr_strip_A ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.75 V                       ; 4.14e-06 V                   ; 2.91 V              ; -0.119 V            ; 0.326 V                              ; 0.298 V                              ; 2.74e-10 s                  ; 2.8e-10 s                   ; No                         ; No                         ; 2.75 V                      ; 4.14e-06 V                  ; 2.91 V             ; -0.119 V           ; 0.326 V                             ; 0.298 V                             ; 2.74e-10 s                 ; 2.8e-10 s                  ; No                        ; No                        ;
 ; mmr_strip_F ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.75 V                       ; 3.54e-06 V                   ; 2.81 V              ; -0.0578 V           ; 0.303 V                              ; 0.28 V                               ; 2.93e-10 s                  ; 3.01e-10 s                  ; No                         ; No                         ; 2.75 V                      ; 3.54e-06 V                  ; 2.81 V             ; -0.0578 V          ; 0.303 V                             ; 0.28 V                              ; 2.93e-10 s                 ; 3.01e-10 s                 ; No                        ; No                        ;
-; mmr_strip_J ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.75 V                       ; 4.14e-06 V                   ; 2.91 V              ; -0.121 V            ; 0.326 V                              ; 0.297 V                              ; 2.74e-10 s                  ; 2.8e-10 s                   ; No                         ; No                         ; 2.75 V                      ; 4.14e-06 V                  ; 2.91 V             ; -0.121 V           ; 0.326 V                             ; 0.297 V                             ; 2.74e-10 s                 ; 2.8e-10 s                  ; No                        ; No                        ;
+; mmr_strip_J ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.75 V                       ; 4.25e-06 V                   ; 2.9 V               ; -0.107 V            ; 0.378 V                              ; 0.16 V                               ; 2.87e-10 s                  ; 4.28e-10 s                  ; No                         ; No                         ; 2.75 V                      ; 4.25e-06 V                  ; 2.9 V              ; -0.107 V           ; 0.378 V                             ; 0.16 V                              ; 2.87e-10 s                 ; 4.28e-10 s                 ; No                        ; No                        ;
 ; mmr_strip_G ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.75 V                       ; 4.14e-06 V                   ; 2.91 V              ; -0.121 V            ; 0.326 V                              ; 0.297 V                              ; 2.74e-10 s                  ; 2.8e-10 s                   ; No                         ; No                         ; 2.75 V                      ; 4.14e-06 V                  ; 2.91 V             ; -0.121 V           ; 0.326 V                             ; 0.297 V                             ; 2.74e-10 s                 ; 2.8e-10 s                  ; No                        ; No                        ;
 +-------------+--------------+---------------------+---------------------+------------------------------+------------------------------+---------------------+---------------------+--------------------------------------+--------------------------------------+-----------------------------+-----------------------------+----------------------------+----------------------------+-----------------------------+-----------------------------+--------------------+--------------------+-------------------------------------+-------------------------------------+----------------------------+----------------------------+---------------------------+---------------------------+
 
@@ -1096,7 +1096,7 @@ No synchronizer chains to report.
 ; mmr_strip_C ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.75 V                       ; 0.000213 V                   ; 2.79 V              ; -0.0324 V           ; 0.139 V                              ; 0.119 V                              ; 4.42e-10 s                  ; 4.33e-10 s                  ; No                         ; Yes                        ; 2.75 V                      ; 0.000213 V                  ; 2.79 V             ; -0.0324 V          ; 0.139 V                             ; 0.119 V                             ; 4.42e-10 s                 ; 4.33e-10 s                 ; No                        ; Yes                       ;
 ; mmr_strip_A ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.75 V                       ; 0.000242 V                   ; 2.86 V              ; -0.0805 V           ; 0.358 V                              ; 0.156 V                              ; 3.01e-10 s                  ; 4.34e-10 s                  ; No                         ; No                         ; 2.75 V                      ; 0.000242 V                  ; 2.86 V             ; -0.0805 V          ; 0.358 V                             ; 0.156 V                             ; 3.01e-10 s                 ; 4.34e-10 s                 ; No                        ; No                        ;
 ; mmr_strip_F ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.75 V                       ; 0.000213 V                   ; 2.79 V              ; -0.0324 V           ; 0.139 V                              ; 0.119 V                              ; 4.42e-10 s                  ; 4.33e-10 s                  ; No                         ; Yes                        ; 2.75 V                      ; 0.000213 V                  ; 2.79 V             ; -0.0324 V          ; 0.139 V                             ; 0.119 V                             ; 4.42e-10 s                 ; 4.33e-10 s                 ; No                        ; Yes                       ;
-; mmr_strip_J ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.75 V                       ; 0.000242 V                   ; 2.86 V              ; -0.0814 V           ; 0.36 V                               ; 0.156 V                              ; 3e-10 s                     ; 4.34e-10 s                  ; No                         ; No                         ; 2.75 V                      ; 0.000242 V                  ; 2.86 V             ; -0.0814 V          ; 0.36 V                              ; 0.156 V                             ; 3e-10 s                    ; 4.34e-10 s                 ; No                        ; No                        ;
+; mmr_strip_J ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.75 V                       ; 0.000247 V                   ; 2.85 V              ; -0.0711 V           ; 0.204 V                              ; 0.181 V                              ; 4.55e-10 s                  ; 4.49e-10 s                  ; No                         ; No                         ; 2.75 V                      ; 0.000247 V                  ; 2.85 V             ; -0.0711 V          ; 0.204 V                             ; 0.181 V                             ; 4.55e-10 s                 ; 4.49e-10 s                 ; No                        ; No                        ;
 ; mmr_strip_G ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.75 V                       ; 0.000242 V                   ; 2.86 V              ; -0.0814 V           ; 0.36 V                               ; 0.156 V                              ; 3e-10 s                     ; 4.34e-10 s                  ; No                         ; No                         ; 2.75 V                      ; 0.000242 V                  ; 2.86 V             ; -0.0814 V          ; 0.36 V                              ; 0.156 V                             ; 3e-10 s                    ; 4.34e-10 s                 ; No                        ; No                        ;
 +-------------+--------------+---------------------+---------------------+------------------------------+------------------------------+---------------------+---------------------+--------------------------------------+--------------------------------------+-----------------------------+-----------------------------+----------------------------+----------------------------+-----------------------------+-----------------------------+--------------------+--------------------+-------------------------------------+-------------------------------------+----------------------------+----------------------------+---------------------------+---------------------------+
 
@@ -1106,7 +1106,7 @@ No synchronizer chains to report.
 +-------------------------------------------------------------------+-------------------------------------------------------------------+----------+----------+----------+----------+
 ; From Clock                                                        ; To Clock                                                          ; RR Paths ; FR Paths ; RF Paths ; FF Paths ;
 +-------------------------------------------------------------------+-------------------------------------------------------------------+----------+----------+----------+----------+
-; clk_50                                                            ; clk_50                                                            ; 3279050  ; 5        ; 24       ; 3        ;
+; clk_50                                                            ; clk_50                                                            ; 3279032  ; 5        ; 24       ; 3        ;
 ; CPU:inst|CPU_regN:inst|internal_reg[0]                            ; clk_50                                                            ; 55502    ; 58616    ; 0        ; 0        ;
 ; CPU:inst|CU_counter:inst25|counter_reg[0]                         ; clk_50                                                            ; 1283886  ; 462089   ; 0        ; 0        ;
 ; fine_clk_divN:inst100|clk_out                                     ; clk_50                                                            ; 483      ; 1        ; 0        ; 0        ;
@@ -1129,13 +1129,13 @@ No synchronizer chains to report.
 ; sw_rst                                                            ; fine_clk_divN:inst100|clk_out                                     ; 482      ; 482      ; 0        ; 0        ;
 ; VGA_controller:inst6|t_ff:inst|q                                  ; fine_clk_divN:inst100|clk_out                                     ; 22       ; 0        ; 0        ; 0        ;
 ; clk_50                                                            ; Memory:inst1|InstructionBuffer:inst6|fine_clk_divN:inst12|clk_out ; 25       ; 0        ; 0        ; 0        ;
-; Memory:inst1|InstructionBuffer:inst6|fine_clk_divN:inst12|clk_out ; Memory:inst1|InstructionBuffer:inst6|fine_clk_divN:inst12|clk_out ; 176060   ; 0        ; 0        ; 0        ;
+; Memory:inst1|InstructionBuffer:inst6|fine_clk_divN:inst12|clk_out ; Memory:inst1|InstructionBuffer:inst6|fine_clk_divN:inst12|clk_out ; 179303   ; 0        ; 0        ; 0        ;
 ; sw_rst                                                            ; Memory:inst1|InstructionBuffer:inst6|fine_clk_divN:inst12|clk_out ; 108      ; 107      ; 0        ; 0        ;
 ; UART:inst44|uart_controller:inst1|bsy                             ; Memory:inst1|InstructionBuffer:inst6|fine_clk_divN:inst12|clk_out ; 0        ; 8        ; 0        ; 0        ;
-; PS2_CLK                                                           ; PS2_CLK                                                           ; 0        ; 0        ; 0        ; 139      ;
+; PS2_CLK                                                           ; PS2_CLK                                                           ; 0        ; 0        ; 0        ; 131      ;
 ; PS2_CLK                                                           ; PS2controller:inst3|ps2_controller:inst1|bsy                      ; 0        ; 8        ; 0        ; 0        ;
 ; UART:inst44|uart_controller:inst1|bsy                             ; sw_rst                                                            ; 1        ; 1        ; 0        ; 0        ;
-; UART:inst44|uart_clk_divN:inst|clk_out                            ; UART:inst44|uart_clk_divN:inst|clk_out                            ; 0        ; 0        ; 0        ; 132      ;
+; UART:inst44|uart_clk_divN:inst|clk_out                            ; UART:inst44|uart_clk_divN:inst|clk_out                            ; 0        ; 0        ; 0        ; 130      ;
 ; UART:inst44|uart_clk_divN:inst|clk_out                            ; UART:inst44|uart_controller:inst1|bsy                             ; 0        ; 0        ; 0        ; 8        ;
 ; clk_50                                                            ; VGA_controller:inst6|clk_divN:inst15|counter[17]                  ; 242      ; 0        ; 0        ; 0        ;
 ; sw_rst                                                            ; VGA_controller:inst6|clk_divN:inst15|counter[17]                  ; 88       ; 88       ; 0        ; 0        ;
@@ -1154,7 +1154,7 @@ Entries labeled "false path" only account for clock-to-clock false paths and not
 +-------------------------------------------------------------------+-------------------------------------------------------------------+----------+----------+----------+----------+
 ; From Clock                                                        ; To Clock                                                          ; RR Paths ; FR Paths ; RF Paths ; FF Paths ;
 +-------------------------------------------------------------------+-------------------------------------------------------------------+----------+----------+----------+----------+
-; clk_50                                                            ; clk_50                                                            ; 3279050  ; 5        ; 24       ; 3        ;
+; clk_50                                                            ; clk_50                                                            ; 3279032  ; 5        ; 24       ; 3        ;
 ; CPU:inst|CPU_regN:inst|internal_reg[0]                            ; clk_50                                                            ; 55502    ; 58616    ; 0        ; 0        ;
 ; CPU:inst|CU_counter:inst25|counter_reg[0]                         ; clk_50                                                            ; 1283886  ; 462089   ; 0        ; 0        ;
 ; fine_clk_divN:inst100|clk_out                                     ; clk_50                                                            ; 483      ; 1        ; 0        ; 0        ;
@@ -1177,13 +1177,13 @@ Entries labeled "false path" only account for clock-to-clock false paths and not
 ; sw_rst                                                            ; fine_clk_divN:inst100|clk_out                                     ; 482      ; 482      ; 0        ; 0        ;
 ; VGA_controller:inst6|t_ff:inst|q                                  ; fine_clk_divN:inst100|clk_out                                     ; 22       ; 0        ; 0        ; 0        ;
 ; clk_50                                                            ; Memory:inst1|InstructionBuffer:inst6|fine_clk_divN:inst12|clk_out ; 25       ; 0        ; 0        ; 0        ;
-; Memory:inst1|InstructionBuffer:inst6|fine_clk_divN:inst12|clk_out ; Memory:inst1|InstructionBuffer:inst6|fine_clk_divN:inst12|clk_out ; 176060   ; 0        ; 0        ; 0        ;
+; Memory:inst1|InstructionBuffer:inst6|fine_clk_divN:inst12|clk_out ; Memory:inst1|InstructionBuffer:inst6|fine_clk_divN:inst12|clk_out ; 179303   ; 0        ; 0        ; 0        ;
 ; sw_rst                                                            ; Memory:inst1|InstructionBuffer:inst6|fine_clk_divN:inst12|clk_out ; 108      ; 107      ; 0        ; 0        ;
 ; UART:inst44|uart_controller:inst1|bsy                             ; Memory:inst1|InstructionBuffer:inst6|fine_clk_divN:inst12|clk_out ; 0        ; 8        ; 0        ; 0        ;
-; PS2_CLK                                                           ; PS2_CLK                                                           ; 0        ; 0        ; 0        ; 139      ;
+; PS2_CLK                                                           ; PS2_CLK                                                           ; 0        ; 0        ; 0        ; 131      ;
 ; PS2_CLK                                                           ; PS2controller:inst3|ps2_controller:inst1|bsy                      ; 0        ; 8        ; 0        ; 0        ;
 ; UART:inst44|uart_controller:inst1|bsy                             ; sw_rst                                                            ; 1        ; 1        ; 0        ; 0        ;
-; UART:inst44|uart_clk_divN:inst|clk_out                            ; UART:inst44|uart_clk_divN:inst|clk_out                            ; 0        ; 0        ; 0        ; 132      ;
+; UART:inst44|uart_clk_divN:inst|clk_out                            ; UART:inst44|uart_clk_divN:inst|clk_out                            ; 0        ; 0        ; 0        ; 130      ;
 ; UART:inst44|uart_clk_divN:inst|clk_out                            ; UART:inst44|uart_controller:inst1|bsy                             ; 0        ; 0        ; 0        ; 8        ;
 ; clk_50                                                            ; VGA_controller:inst6|clk_divN:inst15|counter[17]                  ; 242      ; 0        ; 0        ; 0        ;
 ; sw_rst                                                            ; VGA_controller:inst6|clk_divN:inst15|counter[17]                  ; 88       ; 88       ; 0        ; 0        ;
@@ -1203,11 +1203,11 @@ Entries labeled "false path" only account for clock-to-clock false paths and not
 ; From Clock ; To Clock                                                          ; RR Paths ; FR Paths ; RF Paths ; FF Paths ;
 +------------+-------------------------------------------------------------------+----------+----------+----------+----------+
 ; sw_rst     ; clk_50                                                            ; 63       ; 63       ; 0        ; 0        ;
-; sw_rst     ; Memory:inst1|InstructionBuffer:inst6|fine_clk_divN:inst12|clk_out ; 4998     ; 4998     ; 0        ; 0        ;
-; sw_rst     ; PS2_CLK                                                           ; 0        ; 0        ; 21       ; 21       ;
+; sw_rst     ; Memory:inst1|InstructionBuffer:inst6|fine_clk_divN:inst12|clk_out ; 5092     ; 5092     ; 0        ; 0        ;
+; sw_rst     ; PS2_CLK                                                           ; 0        ; 0        ; 19       ; 19       ;
 ; clk_50     ; PS2controller:inst3|ps2_controller:inst1|bsy                      ; 8        ; 0        ; 0        ; 0        ;
 ; sw_rst     ; PS2controller:inst3|ps2_controller:inst1|bsy                      ; 8        ; 8        ; 0        ; 0        ;
-; sw_rst     ; UART:inst44|uart_clk_divN:inst|clk_out                            ; 0        ; 0        ; 20       ; 20       ;
+; sw_rst     ; UART:inst44|uart_clk_divN:inst|clk_out                            ; 0        ; 0        ; 18       ; 18       ;
 ; sw_rst     ; UART:inst44|uart_controller:inst1|bsy                             ; 0        ; 0        ; 8        ; 8        ;
 +------------+-------------------------------------------------------------------+----------+----------+----------+----------+
 Entries labeled "false path" only account for clock-to-clock false paths and not path-based false paths. As a result, actual path counts may be lower than reported.
@@ -1219,11 +1219,11 @@ Entries labeled "false path" only account for clock-to-clock false paths and not
 ; From Clock ; To Clock                                                          ; RR Paths ; FR Paths ; RF Paths ; FF Paths ;
 +------------+-------------------------------------------------------------------+----------+----------+----------+----------+
 ; sw_rst     ; clk_50                                                            ; 63       ; 63       ; 0        ; 0        ;
-; sw_rst     ; Memory:inst1|InstructionBuffer:inst6|fine_clk_divN:inst12|clk_out ; 4998     ; 4998     ; 0        ; 0        ;
-; sw_rst     ; PS2_CLK                                                           ; 0        ; 0        ; 21       ; 21       ;
+; sw_rst     ; Memory:inst1|InstructionBuffer:inst6|fine_clk_divN:inst12|clk_out ; 5092     ; 5092     ; 0        ; 0        ;
+; sw_rst     ; PS2_CLK                                                           ; 0        ; 0        ; 19       ; 19       ;
 ; clk_50     ; PS2controller:inst3|ps2_controller:inst1|bsy                      ; 8        ; 0        ; 0        ; 0        ;
 ; sw_rst     ; PS2controller:inst3|ps2_controller:inst1|bsy                      ; 8        ; 8        ; 0        ; 0        ;
-; sw_rst     ; UART:inst44|uart_clk_divN:inst|clk_out                            ; 0        ; 0        ; 20       ; 20       ;
+; sw_rst     ; UART:inst44|uart_clk_divN:inst|clk_out                            ; 0        ; 0        ; 18       ; 18       ;
 ; sw_rst     ; UART:inst44|uart_controller:inst1|bsy                             ; 0        ; 0        ; 8        ; 8        ;
 +------------+-------------------------------------------------------------------+----------+----------+----------+----------+
 Entries labeled "false path" only account for clock-to-clock false paths and not path-based false paths. As a result, actual path counts may be lower than reported.
@@ -1509,7 +1509,7 @@ No non-DPA dedicated SERDES Receiver circuitry present in device or used in desi
 Info: *******************************************************************
 Info: Running Quartus Prime Timing Analyzer
     Info: Version 23.1std.0 Build 991 11/28/2023 SC Lite Edition
-    Info: Processing started: Sat Apr 20 13:42:13 2024
+    Info: Processing started: Sun Apr 21 00:24:11 2024
 Info: Command: quartus_sta Computer -c Computer
 Info: qsta_default_script.tcl version: #1
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
@@ -1527,299 +1527,299 @@ Info (332105): Deriving Clocks
     Info (332105): create_clock -period 1.000 -name Memory:inst1|InstructionBuffer:inst6|fine_clk_divN:inst12|clk_out Memory:inst1|InstructionBuffer:inst6|fine_clk_divN:inst12|clk_out
     Info (332105): create_clock -period 1.000 -name UART:inst44|uart_controller:inst1|bsy UART:inst44|uart_controller:inst1|bsy
     Info (332105): create_clock -period 1.000 -name UART:inst44|uart_clk_divN:inst|clk_out UART:inst44|uart_clk_divN:inst|clk_out
-    Info (332105): create_clock -period 1.000 -name sw_rst sw_rst
+    Info (332105): create_clock -period 1.000 -name CPU:inst|CU_counter:inst25|counter_reg[0] CPU:inst|CU_counter:inst25|counter_reg[0]
     Info (332105): create_clock -period 1.000 -name PS2controller:inst3|ps2_controller:inst1|bsy PS2controller:inst3|ps2_controller:inst1|bsy
     Info (332105): create_clock -period 1.000 -name PS2_CLK PS2_CLK
-    Info (332105): create_clock -period 1.000 -name CPU:inst|CU_counter:inst25|counter_reg[0] CPU:inst|CU_counter:inst25|counter_reg[0]
+    Info (332105): create_clock -period 1.000 -name sw_rst sw_rst
     Info (332105): create_clock -period 1.000 -name fine_clk_divN:inst100|clk_out fine_clk_divN:inst100|clk_out
 Info (332097): The following timing edges are non-unate.  The Timing Analyzer will assume pos-unate behavior for these edges in the clock network.
-    Info (332098): Cell: inst|inst27|WideOr5  from: datac  to: combout
+    Info (332098): Cell: inst|inst27|WideOr5  from: datae  to: combout
 Info (332143): No user constrained clock uncertainty found in the design. Calling "derive_clock_uncertainty"
 Info (332123): Deriving Clock Uncertainty. Please refer to report_sdc in the Timing Analyzer to see clock uncertainties.
 Info: Found TIMING_ANALYZER_REPORT_SCRIPT_INCLUDE_DEFAULT_ANALYSIS = ON
 Info: Analyzing Slow 1100mV 85C Model
 Critical Warning (332148): Timing requirements not met
     Info (11105): For recommendations on closing timing, run Report Timing Closure Recommendations in the Timing Analyzer.
-Info (332146): Worst-case setup slack is -15.511
+Info (332146): Worst-case setup slack is -16.129
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):   -15.511           -2978.919 CPU:inst|CU_counter:inst25|counter_reg[0] 
-    Info (332119):   -15.501          -18401.922 clk_50 
-    Info (332119):    -8.022          -26792.524 Memory:inst1|InstructionBuffer:inst6|fine_clk_divN:inst12|clk_out 
-    Info (332119):    -7.855             -61.852 PS2controller:inst3|ps2_controller:inst1|bsy 
-    Info (332119):    -7.791           -3415.172 CPU:inst|CPU_regN:inst|internal_reg[0] 
-    Info (332119):    -5.466            -118.810 VGA_controller:inst6|clk_divN:inst15|counter[17] 
-    Info (332119):    -4.946            -261.082 VGA_controller:inst6|t_ff:inst|q 
-    Info (332119):    -4.505           -1510.090 fine_clk_divN:inst100|clk_out 
-    Info (332119):    -4.395             -45.554 PS2_CLK 
-    Info (332119):    -4.389              -4.389 sw_rst 
-    Info (332119):    -2.651             -47.231 UART:inst44|uart_clk_divN:inst|clk_out 
-    Info (332119):    -2.636             -19.224 UART:inst44|uart_controller:inst1|bsy 
-Info (332146): Worst-case hold slack is -2.014
+    Info (332119):   -16.129           -2684.373 CPU:inst|CU_counter:inst25|counter_reg[0] 
+    Info (332119):   -14.405          -19547.067 clk_50 
+    Info (332119):    -8.363             -64.993 PS2controller:inst3|ps2_controller:inst1|bsy 
+    Info (332119):    -7.699          -27584.110 Memory:inst1|InstructionBuffer:inst6|fine_clk_divN:inst12|clk_out 
+    Info (332119):    -6.410           -2711.652 CPU:inst|CPU_regN:inst|internal_reg[0] 
+    Info (332119):    -5.162            -112.005 VGA_controller:inst6|clk_divN:inst15|counter[17] 
+    Info (332119):    -4.975            -268.179 VGA_controller:inst6|t_ff:inst|q 
+    Info (332119):    -4.691             -48.050 PS2_CLK 
+    Info (332119):    -4.582           -1628.272 fine_clk_divN:inst100|clk_out 
+    Info (332119):    -3.676              -3.676 sw_rst 
+    Info (332119):    -3.478             -43.739 UART:inst44|uart_clk_divN:inst|clk_out 
+    Info (332119):    -3.308             -23.259 UART:inst44|uart_controller:inst1|bsy 
+Info (332146): Worst-case hold slack is -2.129
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):    -2.014             -15.642 CPU:inst|CPU_regN:inst|internal_reg[0] 
-    Info (332119):    -1.057              -5.521 CPU:inst|CU_counter:inst25|counter_reg[0] 
-    Info (332119):    -0.117              -0.319 clk_50 
+    Info (332119):    -2.129             -13.164 CPU:inst|CPU_regN:inst|internal_reg[0] 
+    Info (332119):    -1.976             -13.426 CPU:inst|CU_counter:inst25|counter_reg[0] 
+    Info (332119):    -0.245              -0.245 clk_50 
+    Info (332119):     0.137               0.000 VGA_controller:inst6|t_ff:inst|q 
     Info (332119):     0.287               0.000 PS2_CLK 
-    Info (332119):     0.403               0.000 VGA_controller:inst6|t_ff:inst|q 
-    Info (332119):     0.451               0.000 UART:inst44|uart_clk_divN:inst|clk_out 
-    Info (332119):     0.493               0.000 UART:inst44|uart_controller:inst1|bsy 
-    Info (332119):     0.504               0.000 VGA_controller:inst6|clk_divN:inst15|counter[17] 
-    Info (332119):     0.548               0.000 Memory:inst1|InstructionBuffer:inst6|fine_clk_divN:inst12|clk_out 
-    Info (332119):     0.652               0.000 fine_clk_divN:inst100|clk_out 
-    Info (332119):     0.788               0.000 sw_rst 
-    Info (332119):     4.305               0.000 PS2controller:inst3|ps2_controller:inst1|bsy 
-Info (332146): Worst-case recovery slack is -6.782
+    Info (332119):     0.323               0.000 VGA_controller:inst6|clk_divN:inst15|counter[17] 
+    Info (332119):     0.351               0.000 fine_clk_divN:inst100|clk_out 
+    Info (332119):     0.450               0.000 Memory:inst1|InstructionBuffer:inst6|fine_clk_divN:inst12|clk_out 
+    Info (332119):     0.645               0.000 UART:inst44|uart_controller:inst1|bsy 
+    Info (332119):     0.645               0.000 sw_rst 
+    Info (332119):     0.905               0.000 UART:inst44|uart_clk_divN:inst|clk_out 
+    Info (332119):     4.839               0.000 PS2controller:inst3|ps2_controller:inst1|bsy 
+Info (332146): Worst-case recovery slack is -5.952
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):    -6.782            -133.326 UART:inst44|uart_clk_divN:inst|clk_out 
-    Info (332119):    -4.699             -34.650 UART:inst44|uart_controller:inst1|bsy 
-    Info (332119):    -4.466            -280.455 clk_50 
-    Info (332119):    -4.314             -31.662 PS2controller:inst3|ps2_controller:inst1|bsy 
-    Info (332119):    -4.177          -20572.191 Memory:inst1|InstructionBuffer:inst6|fine_clk_divN:inst12|clk_out 
-    Info (332119):    -3.687             -54.563 PS2_CLK 
-Info (332146): Worst-case removal slack is -2.555
+    Info (332119):    -5.952            -105.850 UART:inst44|uart_clk_divN:inst|clk_out 
+    Info (332119):    -4.401             -33.208 PS2controller:inst3|ps2_controller:inst1|bsy 
+    Info (332119):    -4.376            -274.209 clk_50 
+    Info (332119):    -3.784             -29.178 UART:inst44|uart_controller:inst1|bsy 
+    Info (332119):    -3.678          -18361.461 Memory:inst1|InstructionBuffer:inst6|fine_clk_divN:inst12|clk_out 
+    Info (332119):    -3.106             -40.277 PS2_CLK 
+Info (332146): Worst-case removal slack is -3.115
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):    -2.555             -51.076 PS2_CLK 
-    Info (332119):    -0.537           -2445.883 Memory:inst1|InstructionBuffer:inst6|fine_clk_divN:inst12|clk_out 
-    Info (332119):     1.687               0.000 clk_50 
-    Info (332119):     2.467               0.000 PS2controller:inst3|ps2_controller:inst1|bsy 
-    Info (332119):     2.540               0.000 UART:inst44|uart_controller:inst1|bsy 
-    Info (332119):     3.394               0.000 UART:inst44|uart_clk_divN:inst|clk_out 
-Info (332146): Worst-case minimum pulse width slack is -3.773
+    Info (332119):    -3.115             -56.046 PS2_CLK 
+    Info (332119):    -1.126           -5452.656 Memory:inst1|InstructionBuffer:inst6|fine_clk_divN:inst12|clk_out 
+    Info (332119):     1.593               0.000 clk_50 
+    Info (332119):     1.754               0.000 UART:inst44|uart_controller:inst1|bsy 
+    Info (332119):     2.395               0.000 PS2controller:inst3|ps2_controller:inst1|bsy 
+    Info (332119):     2.615               0.000 UART:inst44|uart_clk_divN:inst|clk_out 
+Info (332146): Worst-case minimum pulse width slack is -2.348
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):    -3.773           -5119.219 CPU:inst|CPU_regN:inst|internal_reg[0] 
-    Info (332119):    -2.225           -2825.982 clk_50 
-    Info (332119):    -0.694            -451.099 fine_clk_divN:inst100|clk_out 
-    Info (332119):    -0.538           -4129.102 Memory:inst1|InstructionBuffer:inst6|fine_clk_divN:inst12|clk_out 
-    Info (332119):    -0.538             -66.923 VGA_controller:inst6|t_ff:inst|q 
-    Info (332119):    -0.538             -17.512 VGA_controller:inst6|clk_divN:inst15|counter[17] 
-    Info (332119):    -0.538             -16.401 PS2_CLK 
-    Info (332119):    -0.538             -15.933 UART:inst44|uart_clk_divN:inst|clk_out 
-    Info (332119):    -0.538              -6.748 PS2controller:inst3|ps2_controller:inst1|bsy 
-    Info (332119):    -0.390             -98.417 CPU:inst|CU_counter:inst25|counter_reg[0] 
-    Info (332119):     0.218               0.000 sw_rst 
-    Info (332119):     0.414               0.000 UART:inst44|uart_controller:inst1|bsy 
+    Info (332119):    -2.348           -2773.250 CPU:inst|CPU_regN:inst|internal_reg[0] 
+    Info (332119):    -2.225           -2826.000 clk_50 
+    Info (332119):    -0.677            -464.449 fine_clk_divN:inst100|clk_out 
+    Info (332119):    -0.575             -16.164 PS2_CLK 
+    Info (332119):    -0.538           -4723.644 Memory:inst1|InstructionBuffer:inst6|fine_clk_divN:inst12|clk_out 
+    Info (332119):    -0.538             -73.435 VGA_controller:inst6|t_ff:inst|q 
+    Info (332119):    -0.538             -18.622 VGA_controller:inst6|clk_divN:inst15|counter[17] 
+    Info (332119):    -0.538             -15.730 UART:inst44|uart_clk_divN:inst|clk_out 
+    Info (332119):    -0.538              -6.693 PS2controller:inst3|ps2_controller:inst1|bsy 
+    Info (332119):    -0.199              -0.939 CPU:inst|CU_counter:inst25|counter_reg[0] 
+    Info (332119):     0.327               0.000 UART:inst44|uart_controller:inst1|bsy 
+    Info (332119):     0.392               0.000 sw_rst 
 Info: Analyzing Slow 1100mV 0C Model
 Info (334003): Started post-fitting delay annotation
 Info (334004): Delay annotation completed successfully
 Info (332097): The following timing edges are non-unate.  The Timing Analyzer will assume pos-unate behavior for these edges in the clock network.
-    Info (332098): Cell: inst|inst27|WideOr5  from: datac  to: combout
+    Info (332098): Cell: inst|inst27|WideOr5  from: datae  to: combout
 Info (332123): Deriving Clock Uncertainty. Please refer to report_sdc in the Timing Analyzer to see clock uncertainties.
 Critical Warning (332148): Timing requirements not met
     Info (11105): For recommendations on closing timing, run Report Timing Closure Recommendations in the Timing Analyzer.
-Info (332146): Worst-case setup slack is -15.509
+Info (332146): Worst-case setup slack is -15.837
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):   -15.509           -3019.502 CPU:inst|CU_counter:inst25|counter_reg[0] 
-    Info (332119):   -15.454          -17838.607 clk_50 
-    Info (332119):    -7.837          -25757.418 Memory:inst1|InstructionBuffer:inst6|fine_clk_divN:inst12|clk_out 
-    Info (332119):    -7.767             -61.096 PS2controller:inst3|ps2_controller:inst1|bsy 
-    Info (332119):    -7.740           -3440.438 CPU:inst|CPU_regN:inst|internal_reg[0] 
-    Info (332119):    -5.585            -120.928 VGA_controller:inst6|clk_divN:inst15|counter[17] 
-    Info (332119):    -5.128            -265.719 VGA_controller:inst6|t_ff:inst|q 
-    Info (332119):    -4.660           -1552.015 fine_clk_divN:inst100|clk_out 
-    Info (332119):    -4.264             -42.235 PS2_CLK 
-    Info (332119):    -4.243              -4.243 sw_rst 
-    Info (332119):    -2.689             -19.324 UART:inst44|uart_controller:inst1|bsy 
-    Info (332119):    -2.492             -45.343 UART:inst44|uart_clk_divN:inst|clk_out 
-Info (332146): Worst-case hold slack is -1.796
+    Info (332119):   -15.837           -2760.351 CPU:inst|CU_counter:inst25|counter_reg[0] 
+    Info (332119):   -14.423          -18865.891 clk_50 
+    Info (332119):    -8.241             -64.055 PS2controller:inst3|ps2_controller:inst1|bsy 
+    Info (332119):    -7.503          -26275.383 Memory:inst1|InstructionBuffer:inst6|fine_clk_divN:inst12|clk_out 
+    Info (332119):    -6.417           -2784.659 CPU:inst|CPU_regN:inst|internal_reg[0] 
+    Info (332119):    -5.361            -115.824 VGA_controller:inst6|clk_divN:inst15|counter[17] 
+    Info (332119):    -5.121            -271.561 VGA_controller:inst6|t_ff:inst|q 
+    Info (332119):    -4.646             -44.931 PS2_CLK 
+    Info (332119):    -4.597           -1656.526 fine_clk_divN:inst100|clk_out 
+    Info (332119):    -3.577              -3.577 sw_rst 
+    Info (332119):    -3.408             -42.188 UART:inst44|uart_clk_divN:inst|clk_out 
+    Info (332119):    -3.201             -22.584 UART:inst44|uart_controller:inst1|bsy 
+Info (332146): Worst-case hold slack is -2.038
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):    -1.796             -12.412 CPU:inst|CPU_regN:inst|internal_reg[0] 
-    Info (332119):    -0.953              -4.570 CPU:inst|CU_counter:inst25|counter_reg[0] 
-    Info (332119):    -0.303              -1.017 clk_50 
+    Info (332119):    -2.038             -11.565 CPU:inst|CPU_regN:inst|internal_reg[0] 
+    Info (332119):    -1.867             -11.505 CPU:inst|CU_counter:inst25|counter_reg[0] 
+    Info (332119):    -0.505              -2.905 clk_50 
+    Info (332119):     0.049               0.000 VGA_controller:inst6|t_ff:inst|q 
+    Info (332119):     0.315               0.000 sw_rst 
+    Info (332119):     0.337               0.000 VGA_controller:inst6|clk_divN:inst15|counter[17] 
     Info (332119):     0.375               0.000 PS2_CLK 
-    Info (332119):     0.403               0.000 UART:inst44|uart_controller:inst1|bsy 
-    Info (332119):     0.410               0.000 VGA_controller:inst6|t_ff:inst|q 
-    Info (332119):     0.539               0.000 UART:inst44|uart_clk_divN:inst|clk_out 
-    Info (332119):     0.540               0.000 VGA_controller:inst6|clk_divN:inst15|counter[17] 
-    Info (332119):     0.561               0.000 sw_rst 
-    Info (332119):     0.577               0.000 fine_clk_divN:inst100|clk_out 
-    Info (332119):     0.580               0.000 Memory:inst1|InstructionBuffer:inst6|fine_clk_divN:inst12|clk_out 
-    Info (332119):     4.327               0.000 PS2controller:inst3|ps2_controller:inst1|bsy 
-Info (332146): Worst-case recovery slack is -6.750
+    Info (332119):     0.458               0.000 fine_clk_divN:inst100|clk_out 
+    Info (332119):     0.473               0.000 Memory:inst1|InstructionBuffer:inst6|fine_clk_divN:inst12|clk_out 
+    Info (332119):     0.546               0.000 UART:inst44|uart_controller:inst1|bsy 
+    Info (332119):     0.880               0.000 UART:inst44|uart_clk_divN:inst|clk_out 
+    Info (332119):     4.863               0.000 PS2controller:inst3|ps2_controller:inst1|bsy 
+Info (332146): Worst-case recovery slack is -5.991
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):    -6.750            -133.165 UART:inst44|uart_clk_divN:inst|clk_out 
-    Info (332119):    -4.683             -34.670 UART:inst44|uart_controller:inst1|bsy 
-    Info (332119):    -4.471             -32.815 PS2controller:inst3|ps2_controller:inst1|bsy 
-    Info (332119):    -4.284            -268.641 clk_50 
-    Info (332119):    -4.105          -20262.358 Memory:inst1|InstructionBuffer:inst6|fine_clk_divN:inst12|clk_out 
-    Info (332119):    -3.569             -55.067 PS2_CLK 
-Info (332146): Worst-case removal slack is -2.415
+    Info (332119):    -5.991            -105.846 UART:inst44|uart_clk_divN:inst|clk_out 
+    Info (332119):    -4.437             -33.644 PS2controller:inst3|ps2_controller:inst1|bsy 
+    Info (332119):    -4.190            -262.517 clk_50 
+    Info (332119):    -3.881             -29.869 UART:inst44|uart_controller:inst1|bsy 
+    Info (332119):    -3.666          -18362.403 Memory:inst1|InstructionBuffer:inst6|fine_clk_divN:inst12|clk_out 
+    Info (332119):    -3.012             -41.064 PS2_CLK 
+Info (332146): Worst-case removal slack is -2.954
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):    -2.415             -48.276 PS2_CLK 
-    Info (332119):    -0.479           -2153.523 Memory:inst1|InstructionBuffer:inst6|fine_clk_divN:inst12|clk_out 
-    Info (332119):     1.608               0.000 clk_50 
-    Info (332119):     2.436               0.000 UART:inst44|uart_controller:inst1|bsy 
-    Info (332119):     2.450               0.000 PS2controller:inst3|ps2_controller:inst1|bsy 
-    Info (332119):     3.496               0.000 UART:inst44|uart_clk_divN:inst|clk_out 
-Info (332146): Worst-case minimum pulse width slack is -3.607
+    Info (332119):    -2.954             -53.151 PS2_CLK 
+    Info (332119):    -0.993           -4810.349 Memory:inst1|InstructionBuffer:inst6|fine_clk_divN:inst12|clk_out 
+    Info (332119):     1.520               0.000 clk_50 
+    Info (332119):     1.678               0.000 UART:inst44|uart_controller:inst1|bsy 
+    Info (332119):     2.368               0.000 PS2controller:inst3|ps2_controller:inst1|bsy 
+    Info (332119):     2.684               0.000 UART:inst44|uart_clk_divN:inst|clk_out 
+Info (332146): Worst-case minimum pulse width slack is -2.427
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):    -3.607           -4962.051 CPU:inst|CPU_regN:inst|internal_reg[0] 
-    Info (332119):    -2.225           -2912.975 clk_50 
-    Info (332119):    -0.658            -443.233 fine_clk_divN:inst100|clk_out 
-    Info (332119):    -0.538           -4106.038 Memory:inst1|InstructionBuffer:inst6|fine_clk_divN:inst12|clk_out 
-    Info (332119):    -0.538             -66.043 VGA_controller:inst6|t_ff:inst|q 
-    Info (332119):    -0.538             -17.413 VGA_controller:inst6|clk_divN:inst15|counter[17] 
-    Info (332119):    -0.538             -16.377 PS2_CLK 
-    Info (332119):    -0.538             -15.914 UART:inst44|uart_clk_divN:inst|clk_out 
-    Info (332119):    -0.538              -6.646 PS2controller:inst3|ps2_controller:inst1|bsy 
-    Info (332119):    -0.423            -137.049 CPU:inst|CU_counter:inst25|counter_reg[0] 
-    Info (332119):     0.187               0.000 sw_rst 
-    Info (332119):     0.371               0.000 UART:inst44|uart_controller:inst1|bsy 
+    Info (332119):    -2.427           -2897.427 CPU:inst|CPU_regN:inst|internal_reg[0] 
+    Info (332119):    -2.225           -2913.721 clk_50 
+    Info (332119):    -0.642            -455.769 fine_clk_divN:inst100|clk_out 
+    Info (332119):    -0.577             -15.130 PS2_CLK 
+    Info (332119):    -0.538           -4376.321 Memory:inst1|InstructionBuffer:inst6|fine_clk_divN:inst12|clk_out 
+    Info (332119):    -0.538             -71.721 VGA_controller:inst6|t_ff:inst|q 
+    Info (332119):    -0.538             -18.310 VGA_controller:inst6|clk_divN:inst15|counter[17] 
+    Info (332119):    -0.538             -16.288 UART:inst44|uart_clk_divN:inst|clk_out 
+    Info (332119):    -0.538              -6.595 PS2controller:inst3|ps2_controller:inst1|bsy 
+    Info (332119):    -0.164              -0.825 CPU:inst|CU_counter:inst25|counter_reg[0] 
+    Info (332119):     0.319               0.000 UART:inst44|uart_controller:inst1|bsy 
+    Info (332119):     0.376               0.000 sw_rst 
 Info: Analyzing Fast 1100mV 85C Model
 Info (334003): Started post-fitting delay annotation
 Info (334004): Delay annotation completed successfully
 Info (332097): The following timing edges are non-unate.  The Timing Analyzer will assume pos-unate behavior for these edges in the clock network.
-    Info (332098): Cell: inst|inst27|WideOr5  from: datac  to: combout
+    Info (332098): Cell: inst|inst27|WideOr5  from: datae  to: combout
 Info (332123): Deriving Clock Uncertainty. Please refer to report_sdc in the Timing Analyzer to see clock uncertainties.
 Critical Warning (332148): Timing requirements not met
     Info (11105): For recommendations on closing timing, run Report Timing Closure Recommendations in the Timing Analyzer.
-Info (332146): Worst-case setup slack is -8.405
+Info (332146): Worst-case setup slack is -8.729
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):    -8.405           -1324.249 CPU:inst|CU_counter:inst25|counter_reg[0] 
-    Info (332119):    -7.822           -8910.849 clk_50 
-    Info (332119):    -4.825          -13819.000 Memory:inst1|InstructionBuffer:inst6|fine_clk_divN:inst12|clk_out 
-    Info (332119):    -4.332           -1694.465 CPU:inst|CPU_regN:inst|internal_reg[0] 
-    Info (332119):    -4.139             -32.705 PS2controller:inst3|ps2_controller:inst1|bsy 
-    Info (332119):    -3.142              -3.142 sw_rst 
-    Info (332119):    -2.597            -888.494 fine_clk_divN:inst100|clk_out 
-    Info (332119):    -2.487             -54.379 VGA_controller:inst6|clk_divN:inst15|counter[17] 
-    Info (332119):    -2.116            -140.331 VGA_controller:inst6|t_ff:inst|q 
-    Info (332119):    -1.672             -12.832 PS2_CLK 
-    Info (332119):    -1.054             -15.246 UART:inst44|uart_clk_divN:inst|clk_out 
-    Info (332119):    -0.840              -5.884 UART:inst44|uart_controller:inst1|bsy 
-Info (332146): Worst-case hold slack is -1.056
+    Info (332119):    -8.729           -1219.705 CPU:inst|CU_counter:inst25|counter_reg[0] 
+    Info (332119):    -7.067           -9741.634 clk_50 
+    Info (332119):    -4.507          -14186.774 Memory:inst1|InstructionBuffer:inst6|fine_clk_divN:inst12|clk_out 
+    Info (332119):    -4.473             -34.643 PS2controller:inst3|ps2_controller:inst1|bsy 
+    Info (332119):    -3.269           -1289.482 CPU:inst|CPU_regN:inst|internal_reg[0] 
+    Info (332119):    -2.874            -971.703 fine_clk_divN:inst100|clk_out 
+    Info (332119):    -2.618             -56.303 VGA_controller:inst6|clk_divN:inst15|counter[17] 
+    Info (332119):    -2.365              -2.365 sw_rst 
+    Info (332119):    -2.257            -150.017 VGA_controller:inst6|t_ff:inst|q 
+    Info (332119):    -1.751             -15.575 PS2_CLK 
+    Info (332119):    -1.495             -16.394 UART:inst44|uart_clk_divN:inst|clk_out 
+    Info (332119):    -1.466              -9.403 UART:inst44|uart_controller:inst1|bsy 
+Info (332146): Worst-case hold slack is -1.016
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):    -1.056              -5.746 CPU:inst|CPU_regN:inst|internal_reg[0] 
-    Info (332119):    -0.672              -4.772 CPU:inst|CU_counter:inst25|counter_reg[0] 
-    Info (332119):    -0.103              -0.642 clk_50 
-    Info (332119):    -0.101              -0.378 VGA_controller:inst6|t_ff:inst|q 
-    Info (332119):     0.047               0.000 fine_clk_divN:inst100|clk_out 
-    Info (332119):     0.118               0.000 UART:inst44|uart_controller:inst1|bsy 
-    Info (332119):     0.154               0.000 VGA_controller:inst6|clk_divN:inst15|counter[17] 
+    Info (332119):    -1.016              -8.507 CPU:inst|CU_counter:inst25|counter_reg[0] 
+    Info (332119):    -0.935              -6.231 CPU:inst|CPU_regN:inst|internal_reg[0] 
+    Info (332119):    -0.188              -1.688 VGA_controller:inst6|t_ff:inst|q 
+    Info (332119):    -0.168              -2.076 clk_50 
+    Info (332119):    -0.104              -0.200 fine_clk_divN:inst100|clk_out 
+    Info (332119):     0.086               0.000 VGA_controller:inst6|clk_divN:inst15|counter[17] 
     Info (332119):     0.157               0.000 PS2_CLK 
-    Info (332119):     0.210               0.000 Memory:inst1|InstructionBuffer:inst6|fine_clk_divN:inst12|clk_out 
-    Info (332119):     0.268               0.000 UART:inst44|uart_clk_divN:inst|clk_out 
-    Info (332119):     0.952               0.000 sw_rst 
-    Info (332119):     2.742               0.000 PS2controller:inst3|ps2_controller:inst1|bsy 
-Info (332146): Worst-case recovery slack is -3.087
+    Info (332119):     0.178               0.000 Memory:inst1|InstructionBuffer:inst6|fine_clk_divN:inst12|clk_out 
+    Info (332119):     0.361               0.000 UART:inst44|uart_controller:inst1|bsy 
+    Info (332119):     0.436               0.000 UART:inst44|uart_clk_divN:inst|clk_out 
+    Info (332119):     0.662               0.000 sw_rst 
+    Info (332119):     3.060               0.000 PS2controller:inst3|ps2_controller:inst1|bsy 
+Info (332146): Worst-case recovery slack is -2.586
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):    -3.087             -60.735 UART:inst44|uart_clk_divN:inst|clk_out 
-    Info (332119):    -2.592             -18.866 PS2controller:inst3|ps2_controller:inst1|bsy 
-    Info (332119):    -2.237            -140.409 clk_50 
-    Info (332119):    -2.072             -15.250 UART:inst44|uart_controller:inst1|bsy 
-    Info (332119):    -2.016           -9948.140 Memory:inst1|InstructionBuffer:inst6|fine_clk_divN:inst12|clk_out 
-    Info (332119):    -1.962             -11.987 PS2_CLK 
-Info (332146): Worst-case removal slack is -1.106
+    Info (332119):    -2.586             -45.164 UART:inst44|uart_clk_divN:inst|clk_out 
+    Info (332119):    -2.284             -17.258 PS2controller:inst3|ps2_controller:inst1|bsy 
+    Info (332119):    -2.217            -138.848 clk_50 
+    Info (332119):    -1.782           -8909.447 Memory:inst1|InstructionBuffer:inst6|fine_clk_divN:inst12|clk_out 
+    Info (332119):    -1.464             -11.143 UART:inst44|uart_controller:inst1|bsy 
+    Info (332119):    -1.337              -5.212 PS2_CLK 
+Info (332146): Worst-case removal slack is -1.461
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):    -1.106             -22.085 PS2_CLK 
-    Info (332119):    -0.354           -1641.389 Memory:inst1|InstructionBuffer:inst6|fine_clk_divN:inst12|clk_out 
-    Info (332119):     0.694               0.000 clk_50 
-    Info (332119):     1.048               0.000 PS2controller:inst3|ps2_controller:inst1|bsy 
-    Info (332119):     1.474               0.000 UART:inst44|uart_controller:inst1|bsy 
-    Info (332119):     2.060               0.000 UART:inst44|uart_clk_divN:inst|clk_out 
-Info (332146): Worst-case minimum pulse width slack is -1.927
-    Info (332119):     Slack       End Point TNS Clock 
-    Info (332119): ========= =================== =====================
-    Info (332119):    -1.927           -2095.225 CPU:inst|CPU_regN:inst|internal_reg[0] 
-    Info (332119):    -1.702            -341.812 clk_50 
-    Info (332119):    -0.416              -3.637 PS2_CLK 
-    Info (332119):    -0.310             -35.530 fine_clk_divN:inst100|clk_out 
-    Info (332119):    -0.214             -34.239 CPU:inst|CU_counter:inst25|counter_reg[0] 
-    Info (332119):    -0.098              -0.189 sw_rst 
-    Info (332119):    -0.044              -0.044 PS2controller:inst3|ps2_controller:inst1|bsy 
-    Info (332119):     0.004               0.000 VGA_controller:inst6|t_ff:inst|q 
-    Info (332119):     0.036               0.000 Memory:inst1|InstructionBuffer:inst6|fine_clk_divN:inst12|clk_out 
-    Info (332119):     0.049               0.000 VGA_controller:inst6|clk_divN:inst15|counter[17] 
-    Info (332119):     0.072               0.000 UART:inst44|uart_clk_divN:inst|clk_out 
-    Info (332119):     0.414               0.000 UART:inst44|uart_controller:inst1|bsy 
-Info: Analyzing Fast 1100mV 0C Model
-Info (332097): The following timing edges are non-unate.  The Timing Analyzer will assume pos-unate behavior for these edges in the clock network.
-    Info (332098): Cell: inst|inst27|WideOr5  from: datac  to: combout
-Info (332123): Deriving Clock Uncertainty. Please refer to report_sdc in the Timing Analyzer to see clock uncertainties.
-Critical Warning (332148): Timing requirements not met
-    Info (11105): For recommendations on closing timing, run Report Timing Closure Recommendations in the Timing Analyzer.
-Info (332146): Worst-case setup slack is -7.531
-    Info (332119):     Slack       End Point TNS Clock 
-    Info (332119): ========= =================== =====================
-    Info (332119):    -7.531           -1217.497 CPU:inst|CU_counter:inst25|counter_reg[0] 
-    Info (332119):    -6.798           -7730.412 clk_50 
-    Info (332119):    -4.179          -11776.016 Memory:inst1|InstructionBuffer:inst6|fine_clk_divN:inst12|clk_out 
-    Info (332119):    -4.078             -32.225 PS2controller:inst3|ps2_controller:inst1|bsy 
-    Info (332119):    -3.903           -1559.287 CPU:inst|CPU_regN:inst|internal_reg[0] 
-    Info (332119):    -2.615              -2.615 sw_rst 
-    Info (332119):    -2.458            -859.135 fine_clk_divN:inst100|clk_out 
-    Info (332119):    -2.362             -51.350 VGA_controller:inst6|clk_divN:inst15|counter[17] 
-    Info (332119):    -1.930            -135.740 VGA_controller:inst6|t_ff:inst|q 
-    Info (332119):    -1.621             -10.078 PS2_CLK 
-    Info (332119):    -0.852             -12.678 UART:inst44|uart_clk_divN:inst|clk_out 
-    Info (332119):    -0.699              -4.969 UART:inst44|uart_controller:inst1|bsy 
-Info (332146): Worst-case hold slack is -0.838
-    Info (332119):     Slack       End Point TNS Clock 
-    Info (332119): ========= =================== =====================
-    Info (332119):    -0.838              -4.245 CPU:inst|CPU_regN:inst|internal_reg[0] 
-    Info (332119):    -0.482              -2.616 CPU:inst|CU_counter:inst25|counter_reg[0] 
-    Info (332119):    -0.374             -31.508 clk_50 
-    Info (332119):    -0.129              -0.813 VGA_controller:inst6|t_ff:inst|q 
-    Info (332119):    -0.013              -0.013 fine_clk_divN:inst100|clk_out 
-    Info (332119):     0.059               0.000 UART:inst44|uart_controller:inst1|bsy 
-    Info (332119):     0.141               0.000 VGA_controller:inst6|clk_divN:inst15|counter[17] 
-    Info (332119):     0.165               0.000 PS2_CLK 
-    Info (332119):     0.202               0.000 Memory:inst1|InstructionBuffer:inst6|fine_clk_divN:inst12|clk_out 
-    Info (332119):     0.255               0.000 UART:inst44|uart_clk_divN:inst|clk_out 
-    Info (332119):     0.706               0.000 sw_rst 
-    Info (332119):     2.737               0.000 PS2controller:inst3|ps2_controller:inst1|bsy 
-Info (332146): Worst-case recovery slack is -3.041
-    Info (332119):     Slack       End Point TNS Clock 
-    Info (332119): ========= =================== =====================
-    Info (332119):    -3.041             -60.017 UART:inst44|uart_clk_divN:inst|clk_out 
-    Info (332119):    -2.418             -17.747 PS2controller:inst3|ps2_controller:inst1|bsy 
-    Info (332119):    -2.172            -136.294 clk_50 
-    Info (332119):    -2.018           -9962.059 Memory:inst1|InstructionBuffer:inst6|fine_clk_divN:inst12|clk_out 
-    Info (332119):    -1.927             -14.235 UART:inst44|uart_controller:inst1|bsy 
-    Info (332119):    -1.584             -10.758 PS2_CLK 
-Info (332146): Worst-case removal slack is -1.122
-    Info (332119):     Slack       End Point TNS Clock 
-    Info (332119): ========= =================== =====================
-    Info (332119):    -1.122             -22.418 PS2_CLK 
-    Info (332119):    -0.328           -1525.778 Memory:inst1|InstructionBuffer:inst6|fine_clk_divN:inst12|clk_out 
-    Info (332119):     0.646               0.000 clk_50 
-    Info (332119):     1.004               0.000 PS2controller:inst3|ps2_controller:inst1|bsy 
-    Info (332119):     1.400               0.000 UART:inst44|uart_controller:inst1|bsy 
-    Info (332119):     2.077               0.000 UART:inst44|uart_clk_divN:inst|clk_out 
+    Info (332119):    -1.461             -26.266 PS2_CLK 
+    Info (332119):    -0.647           -3147.211 Memory:inst1|InstructionBuffer:inst6|fine_clk_divN:inst12|clk_out 
+    Info (332119):     0.674               0.000 clk_50 
+    Info (332119):     0.937               0.000 PS2controller:inst3|ps2_controller:inst1|bsy 
+    Info (332119):     1.074               0.000 UART:inst44|uart_controller:inst1|bsy 
+    Info (332119):     1.490               0.000 UART:inst44|uart_clk_divN:inst|clk_out 
 Info (332146): Worst-case minimum pulse width slack is -1.702
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):    -1.702            -350.978 clk_50 
-    Info (332119):    -1.640           -1792.679 CPU:inst|CPU_regN:inst|internal_reg[0] 
-    Info (332119):    -0.454              -3.773 PS2_CLK 
-    Info (332119):    -0.199             -15.494 fine_clk_divN:inst100|clk_out 
-    Info (332119):    -0.104              -0.193 sw_rst 
-    Info (332119):    -0.087              -2.084 CPU:inst|CU_counter:inst25|counter_reg[0] 
-    Info (332119):    -0.010              -0.010 PS2controller:inst3|ps2_controller:inst1|bsy 
-    Info (332119):     0.043               0.000 VGA_controller:inst6|t_ff:inst|q 
-    Info (332119):     0.076               0.000 Memory:inst1|InstructionBuffer:inst6|fine_clk_divN:inst12|clk_out 
-    Info (332119):     0.079               0.000 VGA_controller:inst6|clk_divN:inst15|counter[17] 
-    Info (332119):     0.080               0.000 UART:inst44|uart_clk_divN:inst|clk_out 
-    Info (332119):     0.424               0.000 UART:inst44|uart_controller:inst1|bsy 
+    Info (332119):    -1.702            -342.234 clk_50 
+    Info (332119):    -0.967            -714.723 CPU:inst|CPU_regN:inst|internal_reg[0] 
+    Info (332119):    -0.560              -5.783 PS2_CLK 
+    Info (332119):    -0.287             -43.430 fine_clk_divN:inst100|clk_out 
+    Info (332119):    -0.134              -3.443 VGA_controller:inst6|t_ff:inst|q 
+    Info (332119):    -0.117              -1.876 UART:inst44|uart_clk_divN:inst|clk_out 
+    Info (332119):    -0.077              -0.231 CPU:inst|CU_counter:inst25|counter_reg[0] 
+    Info (332119):    -0.064            -265.357 Memory:inst1|InstructionBuffer:inst6|fine_clk_divN:inst12|clk_out 
+    Info (332119):    -0.023              -0.243 VGA_controller:inst6|clk_divN:inst15|counter[17] 
+    Info (332119):    -0.011              -0.022 PS2controller:inst3|ps2_controller:inst1|bsy 
+    Info (332119):     0.042               0.000 sw_rst 
+    Info (332119):     0.380               0.000 UART:inst44|uart_controller:inst1|bsy 
+Info: Analyzing Fast 1100mV 0C Model
+Info (332097): The following timing edges are non-unate.  The Timing Analyzer will assume pos-unate behavior for these edges in the clock network.
+    Info (332098): Cell: inst|inst27|WideOr5  from: datae  to: combout
+Info (332123): Deriving Clock Uncertainty. Please refer to report_sdc in the Timing Analyzer to see clock uncertainties.
+Critical Warning (332148): Timing requirements not met
+    Info (11105): For recommendations on closing timing, run Report Timing Closure Recommendations in the Timing Analyzer.
+Info (332146): Worst-case setup slack is -7.824
+    Info (332119):     Slack       End Point TNS Clock 
+    Info (332119): ========= =================== =====================
+    Info (332119):    -7.824           -1112.153 CPU:inst|CU_counter:inst25|counter_reg[0] 
+    Info (332119):    -6.344           -8444.591 clk_50 
+    Info (332119):    -4.352             -33.843 PS2controller:inst3|ps2_controller:inst1|bsy 
+    Info (332119):    -3.949          -11974.406 Memory:inst1|InstructionBuffer:inst6|fine_clk_divN:inst12|clk_out 
+    Info (332119):    -2.953           -1213.370 CPU:inst|CPU_regN:inst|internal_reg[0] 
+    Info (332119):    -2.667            -928.671 fine_clk_divN:inst100|clk_out 
+    Info (332119):    -2.480             -53.378 VGA_controller:inst6|clk_divN:inst15|counter[17] 
+    Info (332119):    -2.094            -143.963 VGA_controller:inst6|t_ff:inst|q 
+    Info (332119):    -1.939              -1.939 sw_rst 
+    Info (332119):    -1.712             -12.776 PS2_CLK 
+    Info (332119):    -1.288             -13.675 UART:inst44|uart_clk_divN:inst|clk_out 
+    Info (332119):    -1.238              -7.869 UART:inst44|uart_controller:inst1|bsy 
+Info (332146): Worst-case hold slack is -0.823
+    Info (332119):     Slack       End Point TNS Clock 
+    Info (332119): ========= =================== =====================
+    Info (332119):    -0.823              -5.916 CPU:inst|CU_counter:inst25|counter_reg[0] 
+    Info (332119):    -0.701              -4.029 CPU:inst|CPU_regN:inst|internal_reg[0] 
+    Info (332119):    -0.366             -48.000 clk_50 
+    Info (332119):    -0.225              -2.205 VGA_controller:inst6|t_ff:inst|q 
+    Info (332119):    -0.132              -0.400 fine_clk_divN:inst100|clk_out 
+    Info (332119):     0.075               0.000 VGA_controller:inst6|clk_divN:inst15|counter[17] 
+    Info (332119):     0.165               0.000 PS2_CLK 
+    Info (332119):     0.170               0.000 Memory:inst1|InstructionBuffer:inst6|fine_clk_divN:inst12|clk_out 
+    Info (332119):     0.256               0.000 UART:inst44|uart_controller:inst1|bsy 
+    Info (332119):     0.382               0.000 sw_rst 
+    Info (332119):     0.401               0.000 UART:inst44|uart_clk_divN:inst|clk_out 
+    Info (332119):     3.021               0.000 PS2controller:inst3|ps2_controller:inst1|bsy 
+Info (332146): Worst-case recovery slack is -2.622
+    Info (332119):     Slack       End Point TNS Clock 
+    Info (332119): ========= =================== =====================
+    Info (332119):    -2.622             -45.859 UART:inst44|uart_clk_divN:inst|clk_out 
+    Info (332119):    -2.152             -16.311 PS2controller:inst3|ps2_controller:inst1|bsy 
+    Info (332119):    -2.141            -134.171 clk_50 
+    Info (332119):    -1.814           -9089.772 Memory:inst1|InstructionBuffer:inst6|fine_clk_divN:inst12|clk_out 
+    Info (332119):    -1.416             -10.843 UART:inst44|uart_controller:inst1|bsy 
+    Info (332119):    -1.035              -4.847 PS2_CLK 
+Info (332146): Worst-case removal slack is -1.430
+    Info (332119):     Slack       End Point TNS Clock 
+    Info (332119): ========= =================== =====================
+    Info (332119):    -1.430             -25.720 PS2_CLK 
+    Info (332119):    -0.564           -2751.264 Memory:inst1|InstructionBuffer:inst6|fine_clk_divN:inst12|clk_out 
+    Info (332119):     0.629               0.000 clk_50 
+    Info (332119):     0.886               0.000 PS2controller:inst3|ps2_controller:inst1|bsy 
+    Info (332119):     1.074               0.000 UART:inst44|uart_controller:inst1|bsy 
+    Info (332119):     1.575               0.000 UART:inst44|uart_clk_divN:inst|clk_out 
+Info (332146): Worst-case minimum pulse width slack is -1.702
+    Info (332119):     Slack       End Point TNS Clock 
+    Info (332119): ========= =================== =====================
+    Info (332119):    -1.702            -351.417 clk_50 
+    Info (332119):    -0.830            -578.727 CPU:inst|CPU_regN:inst|internal_reg[0] 
+    Info (332119):    -0.527              -5.299 PS2_CLK 
+    Info (332119):    -0.196             -21.405 fine_clk_divN:inst100|clk_out 
+    Info (332119):    -0.077              -1.171 UART:inst44|uart_clk_divN:inst|clk_out 
+    Info (332119):    -0.062              -0.855 VGA_controller:inst6|t_ff:inst|q 
+    Info (332119):    -0.016             -26.496 Memory:inst1|InstructionBuffer:inst6|fine_clk_divN:inst12|clk_out 
+    Info (332119):     0.017               0.000 VGA_controller:inst6|clk_divN:inst15|counter[17] 
+    Info (332119):     0.026               0.000 PS2controller:inst3|ps2_controller:inst1|bsy 
+    Info (332119):     0.034               0.000 sw_rst 
+    Info (332119):     0.041               0.000 CPU:inst|CU_counter:inst25|counter_reg[0] 
+    Info (332119):     0.398               0.000 UART:inst44|uart_controller:inst1|bsy 
 Info (332102): Design is not fully constrained for setup requirements
 Info (332102): Design is not fully constrained for hold requirements
 Info: Quartus Prime Timing Analyzer was successful. 0 errors, 7 warnings
-    Info: Peak virtual memory: 5460 megabytes
-    Info: Processing ended: Sat Apr 20 13:42:26 2024
+    Info: Peak virtual memory: 5463 megabytes
+    Info: Processing ended: Sun Apr 21 00:24:24 2024
     Info: Elapsed time: 00:00:13
-    Info: Total CPU time (on all processors): 00:00:46
+    Info: Total CPU time (on all processors): 00:00:48
 
 

@@ -52,7 +52,7 @@ set_global_assignment -name POWER_BOARD_THERMAL_MODEL "NONE (CONSERVATIVE)"
 set_global_assignment -name VERILOG_INPUT_VERSION VERILOG_2001
 set_global_assignment -name VERILOG_SHOW_LMF_MAPPING_MESSAGES OFF
 set_global_assignment -name ALLOW_ANY_RAM_SIZE_FOR_RECOGNITION OFF
-set_location_assignment PIN_T15 -to UART2_data_rx
+set_location_assignment PIN_K16 -to UART2_data_rx
 set_location_assignment PIN_M9 -to clk_50
 set_location_assignment PIN_U21 -to disp0[0]
 set_location_assignment PIN_V21 -to disp0[1]
@@ -214,7 +214,6 @@ set_location_assignment PIN_J13 -to gpr_strip_J
 set_location_assignment PIN_A14 -to gpr_strip_K
 set_location_assignment PIN_C15 -to gpr_strip_L
 set_location_assignment PIN_E15 -to gpr_strip_M
-set_location_assignment PIN_K16 -to mmr_strip_J
 set_location_assignment PIN_G12 -to mmr_strip_I
 set_location_assignment PIN_G15 -to mmr_strip_H
 set_location_assignment PIN_F12 -to mmr_strip_G
