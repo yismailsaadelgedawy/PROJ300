@@ -46,7 +46,7 @@ void clear_terminal() {
 void stack_usage() {
 
     cout << "\n////////////////////////////////////////////////////////" << endl << endl;
-    cout << "\nThe variables stored on the stack are:" << endl << endl;
+    cout << "\nThe variables stored on the stack are:" << endl;
 
     for(int i=0;i<str_idx;i++) {
 
@@ -54,7 +54,7 @@ void stack_usage() {
 
     }
 
-    cout << "\nTheir values: " << endl;
+    cout << "\n\nTheir values: " << endl;
 
     for(int i=0;i<str_idx;i++) {
 
@@ -62,7 +62,7 @@ void stack_usage() {
 
     }
 
-    cout << "\nTheir addresses: " << endl;
+    cout << "\n\nTheir addresses: " << endl;
 
     for(int i=0;i<str_idx;i++) {
 

@@ -1,0 +1,5 @@
+word("num1", 1);    // variables stored on stack
+word("num2", 2);    //
+ldr(r0, "num1");
+ldr(r1, "num2");
+add(r2, r0,r1);
