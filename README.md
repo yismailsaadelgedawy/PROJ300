@@ -3,7 +3,7 @@
 ## Introduction
 
 Here, you will find some media to showcase the workings/feautures of the project.
-For detail on how all of this works, see my LinkedIn profile post at: https://www.linkedin.com/in/youssef-el-geddawy-ab2085292/
+For detail on how all of this works, see my LinkedIn profile post at: [https://www.linkedin.com/in/youssef-el-geddawy-ab2085292/](https://www.linkedin.com/feed/update/urn:li:activity:7228014319110664192/)
 
 ### Overall System Running
 
