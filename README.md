@@ -9,6 +9,9 @@ For detail on how all of this works, see my LinkedIn profile post at: [https://w
 
 https://github.com/user-attachments/assets/22ee120e-133d-488a-b780-022c8d299afa
 
+Green LEDs: general purpose registers, r0-r12.
+Red LEDs: memory mapped registers.
+
 The assembly program running is the following:
 
 ```
